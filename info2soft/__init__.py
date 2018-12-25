@@ -14,3 +14,9 @@ __version__ = 'v20181218'
 from info2soft.common.Auth import Auth, RequestsAuth
 
 from .config import set_default
+
+from .system.v20181224.User import User
+
+from .resource.v20181218.Node import Node
+
+from .resource.v20181218.Cluster import Cluster

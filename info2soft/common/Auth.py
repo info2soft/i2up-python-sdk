@@ -21,6 +21,9 @@ class Auth(object):
         self.__checkKey(username, pwd)
         self.__username = username
         self.__pwd = b(pwd)
+        self._token = ''
+        self.__ssoToken = ''
+        self.token()
 
     def get_username(self):
         return self.__username
@@ -32,19 +35,35 @@ class Auth(object):
             'pwd': self.__pwd
         }
         r = https._post(url, data)
-        return r[0]['data']['token']
+        self._token = r[0]['data']['token']
+        self.__ssoToken = r[0]['data']['sso_token']
+        return r[0]
+
+    def describePhoneCode(self):
+        url = '{0}/auth/getPhoneCode'.format(config.get_default('default_api_host'))
+        r = https._post(url)
+        return r[0]['data']
+
+    def regAccount(self):
+        url = '{0}/auth/register'.format(config.get_default('default_api_host'))
+        r = https._post(url)
+        return r[0]['data']
+
+    def resetPwd(self):
+        url = '{0}/auth/reset/password'.format(config.get_default('default_api_host'))
+        r = https._post(url, None, self)
+        return r[0]['data']
+
+    def checkLoginStatus(self):
+        url = '{0}/auth/token'.format(config.get_default('default_api_host'))
+        data = {
+            'access_token': self.__ssoToken
+        }
+        r = https._get(url, data, self)
+        print(r)
+        return r[0]['data']
 
     def token_of_request(self, url, body=None, content_type=None):
-        """带请求体的签名（本质上是管理凭证的签名）
-
-        Args:
-            url:          待签名请求的url
-            body:         待签名请求的body
-            content_type: 待签名请求的body的Content-Type
-
-        Returns:
-            管理凭证
-        """
         parsed_url = urlparse(url)
         query = parsed_url.query
         path = parsed_url.path
@@ -60,7 +79,7 @@ class Auth(object):
             if content_type in mimes:
                 data += body
 
-        return '{0}:{1}'.format(self.__username, self._tokenStr)
+        return '{0}'.format(self._token)
 
     @staticmethod
     def __checkKey(username, pwd):
@@ -93,5 +112,5 @@ class RequestsAuth(AuthBase):
             token = self.auth.token_of_request(r.url, r.body, 'application/x-www-form-urlencoded')
         else:
             token = self.auth.token_of_request(r.url)
-        r.headers['Authorization'] = 'QBox {0}'.format(token)
+        r.headers['Authorization'] = '{0}'.format(token)
         return r

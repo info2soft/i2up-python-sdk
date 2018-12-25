@@ -25,7 +25,10 @@ _python_ver = platform.python_version()
 USER_AGENT = 'info2softPython/{0} ({1}; ) Python/{2}'.format(__version__, _sys_info, _python_ver)
 
 
-_headers = {'User-Agent': USER_AGENT}
+_headers = {
+    'User-Agent': USER_AGENT,
+    'Accept': 'application/json'
+    }
 
 
 def __return_wrapper(resp):
@@ -36,14 +39,15 @@ def __return_wrapper(resp):
     return ret, ResponseInfo(resp)
 
 
-def _post(url, data, files=None, auth=None, headers=None):
+def _post(url, data, auth=None, headers=None):
     try:
         post_headers = _headers.copy()
         if headers is not None:
             for k, v in headers.items():
                 post_headers.update({k: v})
         r = requests.post(
-            url, data=data, files=files, auth=auth, headers=post_headers,
+            url, data=data, auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
+            headers=post_headers,
             timeout=config.get_default('connection_timeout'))
     except Exception as e:
         return None, ResponseInfo(None, e)
@@ -60,29 +64,51 @@ def _get(url, params, auth):
     return __return_wrapper(r)
 
 
+def _put(url, data, auth=None, headers=None):
+    try:
+        post_headers = _headers.copy()
+        if headers is not None:
+            for k, v in headers.items():
+                post_headers.update({k: v})
+        r = requests.put(
+            url, data=data, auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
+            headers=post_headers,
+            timeout=config.get_default('connection_timeout'))
+    except Exception as e:
+        return None, ResponseInfo(None, e)
+    return __return_wrapper(r)
+
+
+def _delete(url, data, auth=None, headers=None):
+    try:
+        post_headers = _headers.copy()
+        if headers is not None:
+            for k, v in headers.items():
+                post_headers.update({k: v})
+        r = requests.delete(
+            url, data=data, auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
+            headers=post_headers,
+            timeout=config.get_default('connection_timeout'))
+    except Exception as e:
+        return None, ResponseInfo(None, e)
+    return __return_wrapper(r)
+
+
 class _TokenAuth(AuthBase):
     def __init__(self, token):
         self.token = token
 
     def __call__(self, r):
-        r.headers['Authorization'] = 'UpToken {0}'.format(self.token)
+        r.headers['Authorization'] = '{0}'.format(self.token)
         return r
 
 
 def _post_with_token(url, data, token):
-    return _post(url, data, None, _TokenAuth(token))
-
-
-def _post_file(url, data, files):
-    return _post(url, data, files, None)
+    return _post(url, data, _TokenAuth(token))
 
 
 def _post_with_auth(url, data, auth):
-    return _post(url, data, None, info2soft.common.Auth.RequestsAuth(auth))
-
-
-def _post_with_auth_and_headers(url, data, auth, headers):
-    return _post(url, data, None, info2soft.common.Auth.RequestsAuth(auth), headers)
+    return _post(url, data, info2soft.common.Auth.RequestsAuth(auth))
 
 
 class ResponseInfo(object):
