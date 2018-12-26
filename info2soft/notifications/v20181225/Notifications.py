@@ -26,8 +26,8 @@ class Notifications (object):
      * @return array
      '''
     def describeNotifications(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/notifications/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -38,11 +38,11 @@ class Notifications (object):
      * 
      * @return array
      '''
-    def describeNotificationsCount(self, ):
+    def describeNotificationsCount(self):
         
         url = '{0}/notifications/count'.format(config.get_default('default_api_host'))
         
-        res = 
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -51,10 +51,17 @@ class Notifications (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def tempFuncName(self, body):
+    def deleteNotifications(self, body):
         
         url = '{0}/notifications/operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    def readNotifications(self, body):
+
+        url = '{0}/notifications/operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -67,7 +74,7 @@ class Notifications (object):
         
         url = '{0}/notifications/config'.format(config.get_default('default_api_host'))
         
-        res = 
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -105,6 +112,6 @@ class Notifications (object):
         
         url = '{0}/notifications/reset_notify_times'.format(config.get_default('default_api_host'))
         
-        res = 
+        res = https._get(url, None, self.auth)
         return res
 

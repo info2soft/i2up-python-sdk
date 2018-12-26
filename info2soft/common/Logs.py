@@ -38,7 +38,7 @@ class Logs (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def tempFuncName(self, body):
+    def downloadOpLog(self, body):
         
         url = '{0}/op_log/download'.format(config.get_default('default_api_host'))
         

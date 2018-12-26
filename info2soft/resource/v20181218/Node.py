@@ -85,7 +85,7 @@ class Node(object):
      '''
 
     def describeNode(self, body):
-        if body is None or body.has_key('uuid'):
+        if body is None or 'uuid' not in body:
             pass
         url = '{0}/node/{1}'.format(config.get_default('default_api_host'), body['uuid'])
 
@@ -114,7 +114,7 @@ class Node(object):
      '''
 
     def describeDeviceInfo(self, body):
-        if body is None or body.has_key('uuid'):
+        if body is None or 'uuid' not in body:
             pass
         url = '{0}/node//device_info{1}'.format(config.get_default('default_api_host'), body['uuid'])
 
@@ -142,7 +142,7 @@ class Node(object):
      * @return array
      '''
 
-    def tempFuncName(self, body):
+    def upgradeNode(self, body):
 
         url = '{0}/node/operate'.format(config.get_default('default_api_host'))
 

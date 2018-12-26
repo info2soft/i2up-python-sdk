@@ -26,8 +26,8 @@ class RepRecovery (object):
      * @return array
      '''
     def describeRepRecovery(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/rep/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -65,10 +65,24 @@ class RepRecovery (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def tempFuncName(self, body):
+    def startRepRecovery(self, body):
         
         url = '{0}/rep/recovery/operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    def stopRepRecovery(self, body):
+
+        url = '{0}/rep/recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    def clearFinishRepRecovery(self, body):
+
+        url = '{0}/rep/recovery/operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 

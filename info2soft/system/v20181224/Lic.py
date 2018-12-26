@@ -26,8 +26,8 @@ class Lic (object):
      * @return array
      '''
     def downloadLicInfo(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/lic//download_lic_info{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -42,7 +42,7 @@ class Lic (object):
         
         url = '{0}/lic/cc_hw_code'.format(config.get_default('default_api_host'))
         
-        res = 
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -67,7 +67,7 @@ class Lic (object):
         
         url = '{0}/lic/activate'.format(config.get_default('default_api_host'))
         
-        res = 
+        res = https._put(url, None, self.auth)
         return res
 
     '''
@@ -117,8 +117,8 @@ class Lic (object):
      * @return array
      '''
     def describeLic(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/lic/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)

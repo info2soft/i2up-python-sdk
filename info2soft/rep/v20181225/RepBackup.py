@@ -26,8 +26,8 @@ class RepBackup (object):
      * @return array
      '''
     def describeRepBackup(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/rep/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -66,10 +66,17 @@ class RepBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def tempFuncName(self, body):
+    def startRepBackup(self, body):
         
         url = '{0}/rep/backup/operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    def stopRepBackup(self, body):
+
+        url = '{0}/rep/backup/operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -190,8 +197,8 @@ class RepBackup (object):
      * @return array
      '''
     def createRepBackupSnapshot(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/rep/backup//snapshot_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._post(url, None, self.auth)

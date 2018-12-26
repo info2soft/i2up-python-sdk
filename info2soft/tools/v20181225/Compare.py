@@ -26,8 +26,8 @@ class Compare (object):
      * @return array
      '''
     def describeCompare(self, body):
-        if body is None or body.has_key('uuid'):
-                         pass
+        if body is None or 'uuid' not in body:
+            pass
         url = '{0}/compare/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -42,7 +42,7 @@ class Compare (object):
         
         url = '{0}/logs'.format(config.get_default('default_api_host'))
         
-        res = 
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -77,7 +77,7 @@ class Compare (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def tempFuncName(self, body):
+    def downloadCompare(self, body):
         
         url = '{0}/compare/operate'.format(config.get_default('default_api_host'))
         

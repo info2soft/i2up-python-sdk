@@ -1,23 +1,10 @@
-
 from info2soft import config
 from info2soft import https
 
 
-class FspBackup (object):
+class FspBackup(object):
     def __init__(self, auth):
         self.auth = auth
-    '''
-     * 0 获取两节点网卡列表
-     * 
-     * @param array $body  参数详见 API 手册
-     * @return array
-     '''
-    def listFspBackupNic(self, body):
-        
-        url = '{0}/fsp/backup/nic_list'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, body, self.auth)
-        return res
 
     '''
      * 0 获取源节点磁盘和文件列表
@@ -25,36 +12,53 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def listFspBackupDir(self, body):
-        
-        url = '{0}/fsp/backup/dir_list'.format(config.get_default('default_api_host'))
-        
+
+    def listFspRecoveryDir(self, body):
+
+        url = '{0}/fsp/recovery/dir_list'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
     '''
-     * 1 检测条件-备份空间
+     * 0 获取两节点网卡列表
      * 
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def verifyFspBackupCoopySpace(self, body):
-        
-        url = '{0}/fsp/backup/verify_coopy_space'.format(config.get_default('default_api_host'))
-        
-        res = https._post(url, body, self.auth)
+
+    def listFspRecoveryNic(self, body):
+
+        url = '{0}/fsp/recovery/nic_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
         return res
 
     '''
-     * 1 检测条件-license
+     * 0 获取还原点
      * 
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def verifyFspBackupLicense(self, body):
-        
-        url = '{0}/fsp/backup/verify_license'.format(config.get_default('default_api_host'))
-        
+
+    def listFspRecoveryPoint(self, body):
+
+        url = '{0}/fsp/recovery/point_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 1 检测条件-磁盘空间
+     * 
+     * @param array $body  参数详见 API 手册
+     * @return array
+     '''
+
+    def verifyFspRecoveryVolumeSpace(self, body):
+
+        url = '{0}/fsp/recovery/verify_volume_space'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -64,10 +68,25 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def verifyFspBackupOldRule(self, body):
-        
-        url = '{0}/fsp/backup/verify_old_rule'.format(config.get_default('default_api_host'))
-        
+
+    def verifyFspRecoveryOldRule(self, body):
+
+        url = '{0}/fsp/recovery/verify_old_rule'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 1 检测条件-license
+     * 
+     * @param array $body  参数详见 API 手册
+     * @return array
+     '''
+
+    def verifyFspRecoveryLicense(self, body):
+
+        url = '{0}/fsp/recovery/verify_license'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -77,10 +96,11 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def verifyFspBackupOsVersion(self, body):
-        
-        url = '{0}/fsp/backup/verify_os_version'.format(config.get_default('default_api_host'))
-        
+
+    def verifyFspRecoveryOsVersion(self, body):
+
+        url = '{0}/fsp/recovery/verify_os_version'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -90,10 +110,11 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def createFspBackup(self, body):
-        
-        url = '{0}/fsp/backup'.format(config.get_default('default_api_host'))
-        
+
+    def createFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -104,9 +125,10 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def modifyFspBackup(self, body):
-        
-        url = '{0}/fsp/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+
+    def modifyFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._put(url, body, self.auth)
         return res
@@ -117,11 +139,12 @@ class FspBackup (object):
      * @body['uuid'] String  必填 节点uuid
      * @return array
      '''
-    def describeFspBackup(self, body):
+
+    def desribeFspRecovery(self, body):
         if body is None or 'uuid' not in body:
             pass
-        url = '{0}/fsp/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        
+        url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+
         res = https._get(url, None, self.auth)
         return res
 
@@ -131,10 +154,11 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def deleteFspBackup(self, body):
-        
-        url = '{0}/fsp/backup'.format(config.get_default('default_api_host'))
-        
+
+    def deleteFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery'.format(config.get_default('default_api_host'))
+
         res = https._delete(url, body, self.auth)
         return res
 
@@ -144,10 +168,11 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def listFspBackup(self, body):
-        
-        url = '{0}/fsp/backup'.format(config.get_default('default_api_host'))
-        
+
+    def listFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
@@ -157,21 +182,31 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def startFspBackup(self, body):
-        
-        url = '{0}/fsp/backup/operate'.format(config.get_default('default_api_host'))
-        
-        res = https._post(url, body, self.auth)
-        return res
 
-    def stopFspBackup(self, body):
-        url = '{0}/fsp/backup/operate'.format(config.get_default('default_api_host'))
+    def startFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
 
-    def finishFspBackup(self, body):
-        url = '{0}/fsp/backup/operate'.format(config.get_default('default_api_host'))
+    def stopFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    def moveFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    def rebootFspRecovery(self, body):
+
+        url = '{0}/fsp/recovery/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
@@ -182,10 +217,11 @@ class FspBackup (object):
      * @param array $body  参数详见 API 手册
      * @return array
      '''
-    def listFspBackupStatus(self, body):
-        
-        url = '{0}/fsp/backup/status'.format(config.get_default('default_api_host'))
-        
+
+    def listFspRecoveryStatus(self, body):
+
+        url = '{0}/fsp/recovery/status'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 

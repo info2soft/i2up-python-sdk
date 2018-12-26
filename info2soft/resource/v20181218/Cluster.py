@@ -53,7 +53,7 @@ class Cluster(object):
      '''
 
     def describeCls(self, body):
-        if body is None or body.has_key('uuid'):
+        if body is None or 'uuid' not in body:
             pass
         url = '{0}/cls/{1}'.format(config.get_default('default_api_host'), body['uuid'])
 
