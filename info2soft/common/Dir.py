@@ -9,7 +9,7 @@ class Dir (object):
     '''
      * 列举（子）目录结构（节点已注册）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listDir(self, body):
@@ -22,7 +22,7 @@ class Dir (object):
     '''
      * 创建目录
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createDir(self, body):
@@ -35,7 +35,7 @@ class Dir (object):
     '''
      * 检查路径
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def checkDir(self, body):
@@ -48,7 +48,7 @@ class Dir (object):
     '''
      * 列举（子）目录结构（节点未注册）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listDir(self, body):

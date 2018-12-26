@@ -9,7 +9,7 @@ class FspBackup(object):
     '''
      * 0 获取源节点磁盘和文件列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -23,7 +23,7 @@ class FspBackup(object):
     '''
      * 0 获取两节点网卡列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -37,7 +37,7 @@ class FspBackup(object):
     '''
      * 0 获取还原点
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -51,7 +51,7 @@ class FspBackup(object):
     '''
      * 1 检测条件-磁盘空间
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -65,7 +65,7 @@ class FspBackup(object):
     '''
      * 1 检测条件-旧规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -79,7 +79,7 @@ class FspBackup(object):
     '''
      * 1 检测条件-license
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -93,7 +93,7 @@ class FspBackup(object):
     '''
      * 1 检测条件-系统版本
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -107,7 +107,7 @@ class FspBackup(object):
     '''
      * 2 新建规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -122,7 +122,7 @@ class FspBackup(object):
      * 2 修改规则
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -151,7 +151,7 @@ class FspBackup(object):
     '''
      * 3 删除规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -165,7 +165,7 @@ class FspBackup(object):
     '''
      * 3 获取规则列表（基本信息）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -179,7 +179,7 @@ class FspBackup(object):
     '''
      * 3 规则操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -214,7 +214,7 @@ class FspBackup(object):
     '''
      * 3 规则状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 

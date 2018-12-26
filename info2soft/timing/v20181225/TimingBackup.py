@@ -9,7 +9,7 @@ class TimingBackup (object):
     '''
      * 1 备份 准备-4 备份 获取MsSql数据源
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeTimingBackupMssqlSource(self, body):
@@ -22,7 +22,7 @@ class TimingBackup (object):
     '''
      * 1 备份 准备-1 备份/恢复 认证Oracle信息（目前未使用）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyTimingBackupOracleInfo(self, body):
@@ -35,7 +35,7 @@ class TimingBackup (object):
     '''
      * 1 备份 准备-2 备份/恢复 获取Oracle表空间（目前未使用）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeTimingBackupOracleContent(self, body):
@@ -48,7 +48,7 @@ class TimingBackup (object):
     '''
      * 1 备份 准备-3 备份 获取Oracle脚本路径
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def descibeTimingBackupOracleSriptPath(self, body):
@@ -61,7 +61,7 @@ class TimingBackup (object):
     '''
      * 1 备份 准备-5 备份 获取MsSql数据库列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listTimingBackupMssqlDbList(self, body):
@@ -78,7 +78,7 @@ class TimingBackup (object):
      
      * 2 备份 新建/编辑-1 备份 新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createTimingBackup(self, body):
@@ -106,7 +106,7 @@ class TimingBackup (object):
      * 2 备份 新建/编辑-3 备份 修改
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyTimingBackup(self, body):
@@ -119,7 +119,7 @@ class TimingBackup (object):
     '''
      * 3 备份 列表-1 备份 获取列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listTimingBackup(self, body):
@@ -132,7 +132,7 @@ class TimingBackup (object):
     '''
      * 3 备份 列表-2 备份 状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listTimingBackupStatus(self, body):
@@ -145,7 +145,7 @@ class TimingBackup (object):
     '''
      * 3 备份 列表-3 备份 删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteTimingBackup(self, body):
@@ -158,7 +158,7 @@ class TimingBackup (object):
     '''
      * 3 备份 列表-4 备份 操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def startTimingBackup(self, body):

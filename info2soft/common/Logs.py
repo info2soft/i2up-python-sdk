@@ -9,7 +9,7 @@ class Logs (object):
     '''
      * 规则/任务日志（uuid）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listTaskLog(self, body):
@@ -22,7 +22,7 @@ class Logs (object):
     '''
      * HA日志（uuid_m_uuid）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def list(self, body):
@@ -35,7 +35,7 @@ class Logs (object):
     '''
      * 节点日志（m_uuid）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listNodeLog(self, body):
@@ -60,7 +60,7 @@ class Logs (object):
     '''
      * logs.traffic
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listTrafficLog(self, body):

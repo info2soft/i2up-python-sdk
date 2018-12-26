@@ -9,7 +9,7 @@ class FspMove (object):
     '''
      * 获取两节点网卡列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspMoveNic(self, body):
@@ -22,7 +22,7 @@ class FspMove (object):
     '''
      * 获取源节点磁盘和文件列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspMoveDir(self, body):
@@ -35,7 +35,7 @@ class FspMove (object):
     '''
      * 检测迁移条件-license
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspMoveLicense(self, body):
@@ -48,7 +48,7 @@ class FspMove (object):
     '''
      * 检测迁移条件-旧规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspMoveOldRule(self, body):
@@ -61,7 +61,7 @@ class FspMove (object):
     '''
      * 检测迁移条件-磁盘
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspMoveVolumeSpace(self, body):
@@ -74,7 +74,7 @@ class FspMove (object):
     '''
      * 检测迁移条件-系统版本
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspMoveOsVersion(self, body):
@@ -87,7 +87,7 @@ class FspMove (object):
     '''
      * 新建规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createFspMove(self, body):
@@ -100,7 +100,7 @@ class FspMove (object):
     '''
      * 修改规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyFspMove(self, body):
@@ -126,7 +126,7 @@ class FspMove (object):
     '''
      * 删除规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteFspMove(self, body):
@@ -139,7 +139,7 @@ class FspMove (object):
     '''
      * 获取规则列表（基本信息）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspMove(self, body):
@@ -152,7 +152,7 @@ class FspMove (object):
     '''
      * 规则操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def startFspMove(self, body):
@@ -183,7 +183,7 @@ class FspMove (object):
     '''
      * 规则状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspMoveStatus(self, body):

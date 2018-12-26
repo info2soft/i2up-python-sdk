@@ -9,7 +9,7 @@ class Permission (object):
     '''
      * categories
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listCategory(self, body):

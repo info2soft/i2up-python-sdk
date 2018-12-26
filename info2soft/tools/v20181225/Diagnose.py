@@ -9,7 +9,7 @@ class Diagnose (object):
     '''
      *  新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createDiagnose(self, body):
@@ -22,7 +22,7 @@ class Diagnose (object):
     '''
      *  删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteDiagnose(self, body):
@@ -35,7 +35,7 @@ class Diagnose (object):
     '''
      *  获取列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listDiagnose(self, body):
@@ -48,7 +48,7 @@ class Diagnose (object):
     '''
      *  下载结果
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def downloadDiagnoseResult(self, body):

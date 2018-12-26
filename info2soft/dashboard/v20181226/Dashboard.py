@@ -9,7 +9,7 @@ class Dashboard (object):
     '''
      *  虚机规则 成功率
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeVpRuleRate(self, body):
@@ -22,7 +22,7 @@ class Dashboard (object):
     '''
      *  虚机 保护率
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeVmProtectRate(self, body):

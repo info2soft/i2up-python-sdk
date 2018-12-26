@@ -9,7 +9,7 @@ class Qr (object):
     '''
      * 1.时间戳
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeTimeStamp(self, body):
@@ -22,7 +22,7 @@ class Qr (object):
     '''
      * 3.生成二维码图片
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createQrPic(self, body):
@@ -35,7 +35,7 @@ class Qr (object):
     '''
      * 4.确认/取消登
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def confirmLogin(self, body):
@@ -48,7 +48,7 @@ class Qr (object):
     '''
      * 2.获取二维码内容
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def obtainQrContent(self, body):
@@ -61,7 +61,7 @@ class Qr (object):
     '''
      * 5.检查二维码状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def checkQrStatus(self, body):

@@ -9,7 +9,7 @@ class TimingRecovery(object):
     '''
      * 1 恢复 准备-2 恢复 获取还原时间点 - Mssql
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -23,7 +23,7 @@ class TimingRecovery(object):
     '''
      * 1 恢复 准备-3 恢复 获取Mssql初始信息
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -37,7 +37,7 @@ class TimingRecovery(object):
     '''
      * 1 恢复 准备-1 恢复 获取还原时间点 - 文件
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -51,7 +51,7 @@ class TimingRecovery(object):
     '''
      * 1 恢复 准备-4 恢复 认证MsSql数据库
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -71,7 +71,7 @@ class TimingRecovery(object):
     '''
      * 2 恢复 新建/编辑-1 恢复 新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -86,7 +86,7 @@ class TimingRecovery(object):
      * 2 恢复 新建/编辑-3 恢复 修改
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -115,7 +115,7 @@ class TimingRecovery(object):
     '''
      * 3 恢复 列表-1 恢复 获取列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -129,7 +129,7 @@ class TimingRecovery(object):
     '''
      * 3 恢复 列表-2 恢复 状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -143,7 +143,7 @@ class TimingRecovery(object):
     '''
      * 3 恢复 列表-3 恢复 删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -157,7 +157,7 @@ class TimingRecovery(object):
     '''
      * 3 恢复 列表-4 恢复 操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 

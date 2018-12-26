@@ -33,7 +33,7 @@ class GeneralInterface (object):
     '''
      * 统计报表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listStatistics(self, body):
@@ -58,7 +58,7 @@ class GeneralInterface (object):
     '''
      * 标为已读
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def readStatistics(self, body):

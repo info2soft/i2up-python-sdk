@@ -9,7 +9,7 @@ class FspBackup (object):
     '''
      * 0 获取两节点网卡列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspBackupNic(self, body):
@@ -22,7 +22,7 @@ class FspBackup (object):
     '''
      * 0 获取源节点磁盘和文件列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspBackupDir(self, body):
@@ -35,7 +35,7 @@ class FspBackup (object):
     '''
      * 1 检测条件-备份空间
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspBackupCoopySpace(self, body):
@@ -48,7 +48,7 @@ class FspBackup (object):
     '''
      * 1 检测条件-license
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspBackupLicense(self, body):
@@ -61,7 +61,7 @@ class FspBackup (object):
     '''
      * 1 检测条件-旧规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspBackupOldRule(self, body):
@@ -74,7 +74,7 @@ class FspBackup (object):
     '''
      * 1 检测条件-系统版本
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def verifyFspBackupOsVersion(self, body):
@@ -87,7 +87,7 @@ class FspBackup (object):
     '''
      * 2 新建规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createFspBackup(self, body):
@@ -101,7 +101,7 @@ class FspBackup (object):
      * 2 修改规则
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyFspBackup(self, body):
@@ -128,7 +128,7 @@ class FspBackup (object):
     '''
      * 3 删除规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteFspBackup(self, body):
@@ -141,7 +141,7 @@ class FspBackup (object):
     '''
      * 3 获取规则列表（基本信息）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspBackup(self, body):
@@ -154,7 +154,7 @@ class FspBackup (object):
     '''
      * 3 规则操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def startFspBackup(self, body):
@@ -179,7 +179,7 @@ class FspBackup (object):
     '''
      * 3 规则状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listFspBackupStatus(self, body):

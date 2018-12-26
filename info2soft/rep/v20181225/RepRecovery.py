@@ -9,7 +9,7 @@ class RepRecovery (object):
     '''
      * 1 新建任务
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createRepRecovery(self, body):
@@ -36,7 +36,7 @@ class RepRecovery (object):
     '''
      * 2 删除任务
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteRepRecovery(self, body):
@@ -49,7 +49,7 @@ class RepRecovery (object):
     '''
      * 2 获取任务列表（基本信息）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepRecovery(self, body):
@@ -62,7 +62,7 @@ class RepRecovery (object):
     '''
      * 2 任务操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def startRepRecovery(self, body):
@@ -89,7 +89,7 @@ class RepRecovery (object):
     '''
      * 2 任务状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepRecoveryStatus(self, body):
@@ -102,7 +102,7 @@ class RepRecovery (object):
     '''
      * 1 获取CDP时间范围
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepRecoveryCdpRange(self, body):
@@ -115,7 +115,7 @@ class RepRecovery (object):
     '''
      * 1 获取CDP日志列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepRecoveryCdpLog(self, body):

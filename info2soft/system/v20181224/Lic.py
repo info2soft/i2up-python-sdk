@@ -9,7 +9,7 @@ class Lic (object):
     '''
      * 1 获取激活所需信息（组激活，离线激活）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeActivateInfo(self, body):
@@ -48,7 +48,7 @@ class Lic (object):
     '''
      * 4 获取节点识别码
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeLicObjHwCode(self, body):
@@ -73,7 +73,7 @@ class Lic (object):
     '''
      * 1 添加 lic
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createLic(self, body):
@@ -87,7 +87,7 @@ class Lic (object):
      * 2 更新 lic
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def updateLic(self, body):
@@ -100,7 +100,7 @@ class Lic (object):
     '''
      * 2 更新 lic（批量，离线）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def updateBatchLic(self, body):
@@ -127,7 +127,7 @@ class Lic (object):
     '''
      * 6 获取 lic 列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listLic(self, body):
@@ -140,7 +140,7 @@ class Lic (object):
     '''
      * 7 删除 lic
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteLic(self, body):
@@ -153,7 +153,7 @@ class Lic (object):
     '''
      * 2 获取 Lic 绑定情况 列表（节点/VP管理）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listLicObjBind(self, body):
@@ -166,7 +166,7 @@ class Lic (object):
     '''
      * 2 获取 Lic 绑定情况 列表（许可管理）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listLicBind(self, body):
@@ -179,7 +179,7 @@ class Lic (object):
     '''
      * 1 更新绑定（许可管理）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def updateLicBind(self, body):
@@ -192,7 +192,7 @@ class Lic (object):
     '''
      * 1 获取 Obj 列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listLicObj(self, body):

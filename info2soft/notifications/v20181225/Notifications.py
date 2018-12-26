@@ -9,7 +9,7 @@ class Notifications (object):
     '''
      * 消息 列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listNotifications(self, body):
@@ -48,7 +48,7 @@ class Notifications (object):
     '''
      * 消息 操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteNotifications(self, body):
@@ -80,7 +80,7 @@ class Notifications (object):
     '''
      * 配置 更新
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def updateNotificationsConfig(self, body):
@@ -93,7 +93,7 @@ class Notifications (object):
     '''
      * 邮件测试
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def testNotificationsEmail(self, body):

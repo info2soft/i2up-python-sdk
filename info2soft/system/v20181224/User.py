@@ -9,7 +9,7 @@ class User (object):
     '''
      * 新增用户
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createUser(self, body):
@@ -22,7 +22,7 @@ class User (object):
     '''
      * 用户列表(admin)
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listUser(self, body):
@@ -47,7 +47,7 @@ class User (object):
     '''
      * 删除账户
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteUser(self, body):
@@ -60,7 +60,7 @@ class User (object):
     '''
      * 修改用户信息
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyUser(self, body):
@@ -73,7 +73,7 @@ class User (object):
     '''
      * 修改密码
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyUserPwd(self, body):
@@ -98,7 +98,7 @@ class User (object):
     '''
      * 修改Profile
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyProfile(self, body):
@@ -123,7 +123,7 @@ class User (object):
     '''
      * 更新配置
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def updateSetting(self, body):

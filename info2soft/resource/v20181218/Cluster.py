@@ -9,7 +9,7 @@ class Cluster(object):
     '''
      * 1 集群认证
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -22,7 +22,7 @@ class Cluster(object):
     '''
      * 2 集群节点验证
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -35,7 +35,7 @@ class Cluster(object):
     '''
      * 1 新建集群
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -64,7 +64,7 @@ class Cluster(object):
      * 3 修改集群
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -77,7 +77,7 @@ class Cluster(object):
     '''
      * 1 获取集群列表（基本信息）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -90,7 +90,7 @@ class Cluster(object):
     '''
      * 2 集群状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -103,7 +103,7 @@ class Cluster(object):
     '''
      * 3 删除集群
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -116,7 +116,7 @@ class Cluster(object):
     '''
      * 4 集群操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 

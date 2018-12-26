@@ -9,7 +9,7 @@ class Compare (object):
     '''
      * 1 新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createCompare(self, body):
@@ -48,7 +48,7 @@ class Compare (object):
     '''
      * 1 获取列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listCompare(self, body):
@@ -61,7 +61,7 @@ class Compare (object):
     '''
      * 2 状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listCompareStatus(self, body):
@@ -74,7 +74,7 @@ class Compare (object):
     '''
      * 4 操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def downloadCompare(self, body):
@@ -87,7 +87,7 @@ class Compare (object):
     '''
      * 3 删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteCompare(self, body):
@@ -101,7 +101,7 @@ class Compare (object):
      * 1.1 获取结果列表（周期）
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listCircleCompareResult(self, body):

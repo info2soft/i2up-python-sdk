@@ -9,7 +9,7 @@ class RepBackup (object):
     '''
      * 新建规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createRepBackup(self, body):
@@ -37,7 +37,7 @@ class RepBackup (object):
      * 修改规则
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyRepBackup(self, body):
@@ -50,7 +50,7 @@ class RepBackup (object):
     '''
      * 删除规则
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteRepBackup(self, body):
@@ -63,7 +63,7 @@ class RepBackup (object):
     '''
      * 规则操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def startRepBackup(self, body):
@@ -83,7 +83,7 @@ class RepBackup (object):
     '''
      * 规则状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepBackupStatus(self, body):
@@ -96,7 +96,7 @@ class RepBackup (object):
     '''
      * 获取规则列表（基本信息）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepBackup(self, body):
@@ -110,7 +110,7 @@ class RepBackup (object):
      * cdp baseline 列表 获取
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepBackupBaseLine(self, body):
@@ -124,7 +124,7 @@ class RepBackup (object):
      * cdp baseline 列表 删除
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteRepBackupBaseline(self, body):
@@ -138,7 +138,7 @@ class RepBackup (object):
      * 孤儿文件 列表 获取
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepBackupOrphan(self, body):
@@ -152,7 +152,7 @@ class RepBackup (object):
      * 孤儿文件 列表 删除
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteRepBackupOrphan(self, body):
@@ -166,7 +166,7 @@ class RepBackup (object):
      * 孤儿文件 下载
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def downloadRepBackupOrphan(self, body):
@@ -180,7 +180,7 @@ class RepBackup (object):
      * 快照 列表 获取
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listRepBackupSnapshot(self, body):
@@ -208,7 +208,7 @@ class RepBackup (object):
      * 快照 列表 删除
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteRepBackupSnapshot(self, body):
@@ -221,7 +221,7 @@ class RepBackup (object):
     '''
      *  获取规则列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def repBackup(self, body):

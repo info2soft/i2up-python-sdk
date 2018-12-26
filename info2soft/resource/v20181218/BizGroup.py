@@ -9,7 +9,7 @@ class BizGroup (object):
     '''
      * 1 添加
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createBizGroup(self, body):
@@ -23,7 +23,7 @@ class BizGroup (object):
      * 2 更新
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyBizGroup(self, body):
@@ -50,7 +50,7 @@ class BizGroup (object):
     '''
      * 5 删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteBizGroup(self, body):
@@ -63,7 +63,7 @@ class BizGroup (object):
     '''
      * 4 获取列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listBizGroup(self, body):
@@ -77,7 +77,7 @@ class BizGroup (object):
      * 1 更新绑定
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def updateBizGroupBind(self, body):
@@ -104,7 +104,7 @@ class BizGroup (object):
     '''
      * 1 获取 Res 列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listBizGroupResource(self, body):

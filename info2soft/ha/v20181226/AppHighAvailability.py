@@ -9,7 +9,7 @@ class AppHighAvailability (object):
     '''
      * 高可用列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def list(self, body):
@@ -22,7 +22,7 @@ class AppHighAvailability (object):
     '''
      * 操作接口
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def start(self, body):
@@ -35,7 +35,7 @@ class AppHighAvailability (object):
     '''
      * 删除HA
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def delete(self, body):
@@ -48,7 +48,7 @@ class AppHighAvailability (object):
     '''
      * 状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def list(self, body):
@@ -61,7 +61,7 @@ class AppHighAvailability (object):
     '''
      * HA脚本目录
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describe(self, body):
@@ -74,7 +74,7 @@ class AppHighAvailability (object):
     '''
      * 修改高可用
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modify(self, body):
@@ -87,7 +87,7 @@ class AppHighAvailability (object):
     '''
      * 新建高可用
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def create(self, body):
@@ -100,7 +100,7 @@ class AppHighAvailability (object):
     '''
      * 节点网卡信息
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listNicInfo(self, body):
@@ -125,7 +125,7 @@ class AppHighAvailability (object):
     '''
      *  高可用列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def ha(self, body):

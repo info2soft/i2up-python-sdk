@@ -9,7 +9,7 @@ class VirtualizationSupport(object):
     '''
      *  新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -38,7 +38,7 @@ class VirtualizationSupport(object):
      *  编辑
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -52,7 +52,7 @@ class VirtualizationSupport(object):
     '''
      *  列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -66,7 +66,7 @@ class VirtualizationSupport(object):
     '''
      *  状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -80,7 +80,7 @@ class VirtualizationSupport(object):
     '''
      *  删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -95,7 +95,7 @@ class VirtualizationSupport(object):
      *  查询 虚机列表
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -124,7 +124,7 @@ class VirtualizationSupport(object):
      *  查询 备机上备份列表（RC）1
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -139,7 +139,7 @@ class VirtualizationSupport(object):
      *  查询 备份点信息/虚机配置信息（RC）2
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -154,7 +154,7 @@ class VirtualizationSupport(object):
      *  查询 数据存储下文件列表（RC）3
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -183,7 +183,7 @@ class VirtualizationSupport(object):
      *  查询 数据中心主机列表 （MOVE/REP）2
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -198,7 +198,7 @@ class VirtualizationSupport(object):
      *  查询 存储列表 （MOVE/REP）3
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -213,7 +213,7 @@ class VirtualizationSupport(object):
      *  查询 存储信息 （MOVE/REP）4
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -240,7 +240,7 @@ class VirtualizationSupport(object):
     '''
      *  新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -255,7 +255,7 @@ class VirtualizationSupport(object):
      *  修改（仅模板）
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -297,7 +297,7 @@ class VirtualizationSupport(object):
     '''
      *  列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -311,7 +311,7 @@ class VirtualizationSupport(object):
     '''
      *  列表（组）
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -325,7 +325,7 @@ class VirtualizationSupport(object):
     '''
      *  状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -339,7 +339,7 @@ class VirtualizationSupport(object):
     '''
      *  操作 启停
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -353,7 +353,7 @@ class VirtualizationSupport(object):
     '''
      *  删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -380,7 +380,7 @@ class VirtualizationSupport(object):
     '''
      *  新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -408,7 +408,7 @@ class VirtualizationSupport(object):
     '''
      *  获取列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -422,7 +422,7 @@ class VirtualizationSupport(object):
     '''
      *  状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -436,7 +436,7 @@ class VirtualizationSupport(object):
     '''
      *  操作 启停
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -450,7 +450,7 @@ class VirtualizationSupport(object):
     '''
      *   删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -477,7 +477,7 @@ class VirtualizationSupport(object):
     '''
      *  新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -506,7 +506,7 @@ class VirtualizationSupport(object):
      *  修改（模板）
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -533,7 +533,7 @@ class VirtualizationSupport(object):
     '''
      *  状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -547,7 +547,7 @@ class VirtualizationSupport(object):
     '''
      *  操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -561,7 +561,7 @@ class VirtualizationSupport(object):
     '''
      *  删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 

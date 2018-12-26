@@ -9,7 +9,7 @@ class Node(object):
     '''
      * 获取节点容量
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -23,7 +23,7 @@ class Node(object):
     '''
      * 获取节点卷组列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -37,7 +37,7 @@ class Node(object):
     '''
      * 检查节点在线
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -51,7 +51,7 @@ class Node(object):
     '''
      * 新建节点
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -66,7 +66,7 @@ class Node(object):
      * 修改节点
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -95,7 +95,7 @@ class Node(object):
     '''
      * 新建节点 - 批量
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -124,7 +124,7 @@ class Node(object):
     '''
      * 获取节点列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -138,7 +138,7 @@ class Node(object):
     '''
      * 节点操作
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -152,7 +152,7 @@ class Node(object):
     '''
      * 节点状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -166,7 +166,7 @@ class Node(object):
     '''
      * 删除节点
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 
@@ -180,7 +180,7 @@ class Node(object):
     '''
      *  获取节点列表
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
 

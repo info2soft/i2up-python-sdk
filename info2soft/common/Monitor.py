@@ -49,7 +49,7 @@ class Monitor (object):
      * 设置图表展示项
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def setChartConfig(self, body):
@@ -63,7 +63,7 @@ class Monitor (object):
      * 图表数据
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listChartData(self, body):
