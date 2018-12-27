@@ -119,7 +119,7 @@ class FspBackup (object):
      '''
     def describeFspBackup(self, body):
         if body is None or 'uuid' not in body:
-            pass
+            exit()
         url = '{0}/fsp/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)

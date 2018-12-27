@@ -41,7 +41,7 @@ class BizGroup (object):
      '''
     def describeBizGroup(self, body):
         if body is None or 'uuid' not in body:
-           pass
+           exit()
         url = '{0}/biz_grp/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -95,7 +95,7 @@ class BizGroup (object):
      '''
     def listBizGroupBind(self, body):
         if body is None or 'uuid' not in body:
-           pass
+           exit()
         url = '{0}/biz_grp//bind{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)

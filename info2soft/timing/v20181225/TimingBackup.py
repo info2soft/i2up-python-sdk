@@ -96,7 +96,7 @@ class TimingBackup (object):
      '''
     def describeTimingBackup(self, body):
         if body is None or 'uuid' not in body:
-            pass
+            exit()
         url = '{0}/timing/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)

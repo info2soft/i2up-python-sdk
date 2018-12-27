@@ -27,7 +27,7 @@ class RepBackup (object):
      '''
     def describeRepBackup(self, body):
         if body is None or 'uuid' not in body:
-            pass
+            exit()
         url = '{0}/rep/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -198,7 +198,7 @@ class RepBackup (object):
      '''
     def createRepBackupSnapshot(self, body):
         if body is None or 'uuid' not in body:
-            pass
+            exit()
         url = '{0}/rep/backup//snapshot_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._post(url, None, self.auth)

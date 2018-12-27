@@ -27,7 +27,7 @@ class Lic (object):
      '''
     def downloadLicInfo(self, body):
         if body is None or 'uuid' not in body:
-            pass
+            exit()
         url = '{0}/lic//download_lic_info{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
@@ -118,7 +118,7 @@ class Lic (object):
      '''
     def describeLic(self, body):
         if body is None or 'uuid' not in body:
-            pass
+            exit()
         url = '{0}/lic/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
