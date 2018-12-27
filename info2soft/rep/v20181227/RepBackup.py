@@ -43,6 +43,7 @@ class RepBackup (object):
     def modifyRepBackup(self, body):
         
         url = '{0}/rep/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        print(url)
         del body['uuid']
         res = https._put(url, body, self.auth)
         return res
