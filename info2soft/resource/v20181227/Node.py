@@ -1,10 +1,29 @@
 from info2soft import config
 from info2soft import https
+from info2soft.common.Rsa import Rsa
 
 
 class Node(object):
     def __init__(self, auth):
         self.auth = auth
+
+    '''
+     * 新建节点
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def authNode(self, body):
+        url = '{0}/node/auth'.format(config.get_default('default_api_host'))
+        Rsas = Rsa()
+        print(body)
+        osPwd = Rsas.encrypt(body['os_pwd'])
+        print(osPwd)
+        body.update({'os_pwd': osPwd})
+        print(body)
+        res = https._post(url, body, self.auth)
+        return res
 
     '''
      * 获取节点容量

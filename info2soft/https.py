@@ -4,6 +4,7 @@
 import platform
 
 import requests
+import json
 from requests.auth import AuthBase
 
 from info2soft.compat import is_py2, is_py3
@@ -27,7 +28,8 @@ USER_AGENT = 'info2softPython/{0} ({1}; ) Python/{2}'.format(__version__, _sys_i
 
 _headers = {
     'User-Agent': USER_AGENT,
-    'Accept': 'application/json'
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
     }
 
 
@@ -41,6 +43,7 @@ def __return_wrapper(resp):
 
 def _post(url, data, auth=None, headers=None):
     try:
+        data = json.dumps(data)
         post_headers = _headers.copy()
         if headers is not None:
             for k, v in headers.items():
@@ -56,6 +59,7 @@ def _post(url, data, auth=None, headers=None):
 
 def _get(url, params, auth):
     try:
+        params = json.dumps(params)
         r = requests.get(
             url, params=params, auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
             timeout=config.get_default('connection_timeout'), headers=_headers)
@@ -66,6 +70,7 @@ def _get(url, params, auth):
 
 def _put(url, data, auth=None, headers=None):
     try:
+        data = json.dumps(data)
         post_headers = _headers.copy()
         if headers is not None:
             for k, v in headers.items():
@@ -81,6 +86,7 @@ def _put(url, data, auth=None, headers=None):
 
 def _delete(url, data, auth=None, headers=None):
     try:
+        data = json.dumps(data)
         post_headers = _headers.copy()
         if headers is not None:
             for k, v in headers.items():

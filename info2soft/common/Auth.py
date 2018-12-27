@@ -2,10 +2,10 @@
 
 from requests.auth import AuthBase
 
-from info2soft.compat import urlparse, b
-
+from info2soft.compat import urlparse
 from info2soft import https
 from info2soft import config
+from info2soft.common.Cache import Cache
 
 
 class Auth(object):
@@ -20,9 +20,10 @@ class Auth(object):
         """初始化Auth类"""
         self.__checkKey(username, pwd)
         self.__username = username
-        self.__pwd = b(pwd)
+        self.__pwd = pwd
         self._token = ''
         self.__ssoToken = ''
+        self.cache = Cache()
         self.token()
 
     def get_username(self):
@@ -34,10 +35,14 @@ class Auth(object):
             'username': self.__username,
             'pwd': self.__pwd
         }
-        r = https._post(url, data)
-        self._token = r[0]['data']['token']
-        self.__ssoToken = r[0]['data']['sso_token']
-        return r[0]
+        # 判断缓存中还有不有 token
+        if self.cache.get('token') is None:
+            r = https._post(url, data)
+            self._token = r[0]['data']['token']
+            self.__ssoToken = r[0]['data']['sso_token']
+            self.cache.set('token', r[0]['data']['token'], 3600)
+            return r[0]
+        return None
 
     def describePhoneCode(self):
         url = '{0}/auth/getPhoneCode'.format(config.get_default('default_api_host'))
@@ -113,4 +118,5 @@ class RequestsAuth(AuthBase):
         else:
             token = self.auth.token_of_request(r.url)
         r.headers['Authorization'] = '{0}'.format(token)
+        print(r.headers['Authorization'])
         return r
