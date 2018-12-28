@@ -1,5 +1,6 @@
 from info2soft import config
 from info2soft import https
+from info2soft.common.Rsa import Rsa
 
 
 class Cluster(object):
@@ -28,7 +29,9 @@ class Cluster(object):
 
     def verifyClsNode(self, body):
         url = '{0}/cls/node_verify'.format(config.get_default('default_api_host'))
-
+        rsa = Rsa()
+        osPwd = rsa.rsaEncrypt(body['os_pwd'])
+        body.update({'os_pwd': osPwd})
         res = https._post(url, body, self.auth)
         return res
 
