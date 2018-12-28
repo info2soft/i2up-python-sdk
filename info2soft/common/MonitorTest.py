@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.v20181227.Logs import Logs
+from info2soft.common.v20181227.Monitor import Monitor
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -27,41 +27,41 @@ username = 'admin'
 pwd = 'Info1234'
     
                 
-class LogsTestCase(unittest.TestCase):
+class MonitorTestCase(unittest.TestCase):
 
-    def testListTaskLog(self):
+    def testListDriversInfo(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        monitor = Monitor(a)
         body = {}
-        r = logs.listTaskLog(body)
+        r = monitor.listDriversInfo(body)
         print(r[0])
 
-    def testListHALog(self):
+    def testListPhyInfo(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        monitor = Monitor(a)
         body = {}
-        r = logs.listHALog(body)
+        r = monitor.listPhyInfo(body)
         print(r[0])
 
-    def testListNodeLog(self):
+    def testListChartConfig(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        monitor = Monitor(a)
         body = {}
-        r = logs.listNodeLog(body)
+        r = monitor.listChartConfig(body)
         print(r[0])
 
-    def testListNpsvrLog(self):
+    def testSetChartConfig(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        monitor = Monitor(a)
         body = {}
-        r = logs.listNpsvrLog(body)
+        r = monitor.setChartConfig(body)
         print(r[0])
 
-    def testListTrafficLog(self):
+    def testListChartData(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        monitor = Monitor(a)
         body = {}
-        r = logs.listTrafficLog(body)
+        r = monitor.listChartData(body)
         print(r[0])
 
 

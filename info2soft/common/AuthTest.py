@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.v20181227.Logs import Logs
+from info2soft.common.v20181227.Auth import Auth
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -27,41 +27,41 @@ username = 'admin'
 pwd = 'Info1234'
     
                 
-class LogsTestCase(unittest.TestCase):
+class AuthTestCase(unittest.TestCase):
 
-    def testListTaskLog(self):
+    def testDescribePhoneCode(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        auth = Auth(a)
         body = {}
-        r = logs.listTaskLog(body)
+        r = auth.describePhoneCode(body)
         print(r[0])
 
-    def testListHALog(self):
+    def testRegAccount(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        auth = Auth(a)
         body = {}
-        r = logs.listHALog(body)
+        r = auth.regAccount(body)
         print(r[0])
 
-    def testListNodeLog(self):
+    def testToken(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        auth = Auth(a)
         body = {}
-        r = logs.listNodeLog(body)
+        r = auth.token(body)
         print(r[0])
 
-    def testListNpsvrLog(self):
+    def testResetPwd(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        auth = Auth(a)
         body = {}
-        r = logs.listNpsvrLog(body)
+        r = auth.resetPwd(body)
         print(r[0])
 
-    def testListTrafficLog(self):
+    def testCheckLoginStatus(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        auth = Auth(a)
         body = {}
-        r = logs.listTrafficLog(body)
+        r = auth.checkLoginStatus(body)
         print(r[0])
 
 

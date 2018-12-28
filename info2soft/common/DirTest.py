@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.v20181227.Logs import Logs
+from info2soft.common.v20181227.Dir import Dir
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -27,41 +27,34 @@ username = 'admin'
 pwd = 'Info1234'
     
                 
-class LogsTestCase(unittest.TestCase):
+class DirTestCase(unittest.TestCase):
 
-    def testListTaskLog(self):
+    def testListDir(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dir = Dir(a)
         body = {}
-        r = logs.listTaskLog(body)
+        r = dir.listDir(body)
         print(r[0])
 
-    def testListHALog(self):
+    def testCreateDir(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dir = Dir(a)
         body = {}
-        r = logs.listHALog(body)
+        r = dir.createDir(body)
         print(r[0])
 
-    def testListNodeLog(self):
+    def testCheckDir(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dir = Dir(a)
         body = {}
-        r = logs.listNodeLog(body)
+        r = dir.checkDir(body)
         print(r[0])
 
-    def testListNpsvrLog(self):
+    def testListDir(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dir = Dir(a)
         body = {}
-        r = logs.listNpsvrLog(body)
-        print(r[0])
-
-    def testListTrafficLog(self):
-        a = Auth(username, pwd)
-        logs = Logs(a)
-        body = {}
-        r = logs.listTrafficLog(body)
+        r = dir.listDir(body)
         print(r[0])
 
 
