@@ -135,7 +135,7 @@ class Node(object):
     def describeDeviceInfo(self, body):
         if body is None or 'uuid' not in body:
             exit()
-        url = '{0}/node//device_info{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/node/{1}/device_info'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res

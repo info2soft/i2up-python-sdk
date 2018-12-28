@@ -106,7 +106,7 @@ class Compare (object):
      '''
     def listCircleCompareResult(self, body):
         
-        url = '{0}/compare//result_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/compare/{1}/result_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res

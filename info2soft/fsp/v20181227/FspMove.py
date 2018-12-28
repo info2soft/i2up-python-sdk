@@ -105,7 +105,7 @@ class FspMove (object):
      '''
     def modifyFspMove(self, body):
         
-        url = '{0}/fsp/move/{1} '.format(config.get_default('default_api_host'))
+        url = '{0}/fsp/move/{1}'.format(config.get_default('default_api_host'))
         del body['uuid']
         res = https._put(url, body, self.auth)
         return res
@@ -118,7 +118,7 @@ class FspMove (object):
     def describeFspMove(self, body):
         if body is None or 'uuid' not in body:
             exit()
-        url = '{0}/fsp/move/{1} '.format(config.get_default('default_api_host'))
+        url = '{0}/fsp/move/{1}'.format(config.get_default('default_api_host'))
         
         res = https._get(url, None, self.auth)
         return res

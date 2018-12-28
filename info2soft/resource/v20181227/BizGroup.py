@@ -82,7 +82,7 @@ class BizGroup (object):
      '''
     def updateBizGroupBind(self, body):
         
-        url = '{0}/biz_grp//bind{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/biz_grp/{1}/bind'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._put(url, body, self.auth)
         return res
@@ -96,7 +96,7 @@ class BizGroup (object):
     def listBizGroupBind(self, body):
         if body is None or 'uuid' not in body:
            exit()
-        url = '{0}/biz_grp//bind{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/biz_grp/{1}/bind'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
         return res

@@ -101,7 +101,7 @@ class VirtualizationSupport(object):
 
     def list(self, body):
 
-        url = '{0}/vp/platform//vm{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/vm'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -115,7 +115,7 @@ class VirtualizationSupport(object):
 
     def vp(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/vp/platform//info{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/info'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -130,7 +130,7 @@ class VirtualizationSupport(object):
 
     def listBakVer(self, body):
 
-        url = '{0}/vp/platform//bak_ver{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/bak_ver'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -145,7 +145,7 @@ class VirtualizationSupport(object):
 
     def vp(self, body):
 
-        url = '{0}/vp/platform//bak_ver_info{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/bak_ver_info'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -160,7 +160,7 @@ class VirtualizationSupport(object):
 
     def vp(self, body):
 
-        url = '{0}/vp/platform//datastore_file{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/datastore_file'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -174,7 +174,7 @@ class VirtualizationSupport(object):
 
     def listDatacenter(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/vp/platform//datacenter{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/datacenter'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -189,7 +189,7 @@ class VirtualizationSupport(object):
 
     def listDatacenterHost(self, body):
 
-        url = '{0}/vp/platform//datacenter_host{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/datacenter_host'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -204,7 +204,7 @@ class VirtualizationSupport(object):
 
     def listDatastore(self, body):
 
-        url = '{0}/vp/platform//datastore{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/datastore'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -219,7 +219,7 @@ class VirtualizationSupport(object):
 
     def listDatastoreInfo(self, body):
 
-        url = '{0}/vp/platform//datastore_info{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/platform/{1}/datastore_info'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -289,7 +289,7 @@ class VirtualizationSupport(object):
 
     def describeVpBackupGroup(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/vp/backup//group{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/backup/{1}/group'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -400,7 +400,7 @@ class VirtualizationSupport(object):
 
     def describeVpRecoveryGroup(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/vp/recovery//group{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/recovery/{1}/group'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -581,7 +581,7 @@ class VirtualizationSupport(object):
 
     def listVpRepPointList(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/vp/rep//point_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/rep/{1}/point_list'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res

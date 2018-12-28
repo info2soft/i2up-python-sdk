@@ -116,7 +116,7 @@ class RepBackup (object):
      '''
     def listRepBackupBaseLine(self, body):
         
-        url = '{0}/rep/backup//cdp_bl_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/cdp_bl_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -130,7 +130,7 @@ class RepBackup (object):
      '''
     def deleteRepBackupBaseline(self, body):
         
-        url = '{0}/rep/backup//cdp_bl_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/cdp_bl_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._delete(url, body, self.auth)
         return res
@@ -144,7 +144,7 @@ class RepBackup (object):
      '''
     def listRepBackupOrphan(self, body):
         
-        url = '{0}/rep/backup//orphan_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/orphan_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -158,7 +158,7 @@ class RepBackup (object):
      '''
     def deleteRepBackupOrphan(self, body):
         
-        url = '{0}/rep/backup//orphan_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/orphan_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._delete(url, body, self.auth)
         return res
@@ -172,7 +172,7 @@ class RepBackup (object):
      '''
     def downloadRepBackupOrphan(self, body):
         
-        url = '{0}/rep/backup//orphan_download{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/orphan_download'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -186,7 +186,7 @@ class RepBackup (object):
      '''
     def listRepBackupSnapshot(self, body):
         
-        url = '{0}/rep/backup//snapshot_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/snapshot_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
@@ -200,7 +200,7 @@ class RepBackup (object):
     def createRepBackupSnapshot(self, body):
         if body is None or 'uuid' not in body:
             exit()
-        url = '{0}/rep/backup//snapshot_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/snapshot_list'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._post(url, None, self.auth)
         return res
@@ -214,7 +214,7 @@ class RepBackup (object):
      '''
     def deleteRepBackupSnapshot(self, body):
         
-        url = '{0}/rep/backup//snapshot_list{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/backup/{1}/snapshot_list'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._delete(url, body, self.auth)
         return res

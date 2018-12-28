@@ -88,7 +88,9 @@ class LicTestCase(unittest.TestCase):
     def testDescribeLic(self):
         a = Auth(username, pwd)
         lic = Lic(a)
-        body = {}
+        body = {
+            'uuid': '6847CBD7-DEB2-9D08-A35F-ED907803CAD8'
+        }
         r = lic.describeLic(body)
         print(r[0])
 
