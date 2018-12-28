@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 # flake8: noqa
 
@@ -25,43 +24,36 @@ if is_py3:
 
 username = 'admin'
 pwd = 'Info1234'
-    
-                
+
+
 class TimingBackupTestCase(unittest.TestCase):
 
-    def testDescribeTimingBackupMssqlSource(self):
+    def testListTimingRecoveryMssqlTime(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.describeTimingBackupMssqlSource(body)
+        r = timingBackup.listTimingRecoveryMssqlTime(body)
         print(r[0])
 
-    def testVerifyTimingBackupOracleInfo(self):
+    def testDescribeTimingRecoveryMssqlInitInfo(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.verifyTimingBackupOracleInfo(body)
+        r = timingBackup.describeTimingRecoveryMssqlInitInfo(body)
         print(r[0])
 
-    def testDescribeTimingBackupOracleContent(self):
+    def testListTimingRecoveryPathList(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.describeTimingBackupOracleContent(body)
+        r = timingBackup.listTimingRecoveryPathList(body)
         print(r[0])
 
-    def testDescibeTimingBackupOracleSriptPath(self):
+    def testVerifyTimingRecoveryMssqlInfo(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.descibeTimingBackupOracleSriptPath(body)
-        print(r[0])
-
-    def testListTimingBackupMssqlDbList(self):
-        a = Auth(username, pwd)
-        timingBackup = TimingBackup(a)
-        body = {}
-        r = timingBackup.listTimingBackupMssqlDbList(body)
+        r = timingBackup.verifyTimingRecoveryMssqlInfo(body)
         print(r[0])
 
     def testTempFuncName(self):
@@ -71,53 +63,46 @@ class TimingBackupTestCase(unittest.TestCase):
         r = timingBackup.tempFuncName(body)
         print(r[0])
 
-    def testCreateTimingBackup(self):
+    def testCreateTimingRecovery(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.createTimingBackup(body)
+        r = timingBackup.createTimingRecovery(body)
         print(r[0])
 
-    def testDescribeTimingBackup(self):
+    def testModifyTimingRecovery(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.describeTimingBackup(body)
+        r = timingBackup.modifyTimingRecovery(body)
         print(r[0])
 
-    def testModifyTimingBackup(self):
+    def testDescribeTimingRecovery(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.modifyTimingBackup(body)
+        r = timingBackup.describeTimingRecovery(body)
         print(r[0])
 
-    def testListTimingBackup(self):
+    def testListTimingRecovery(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.listTimingBackup(body)
+        r = timingBackup.listTimingRecovery(body)
         print(r[0])
 
-    def testListTimingBackupStatus(self):
+    def testListTimingRecoveryStatus(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.listTimingBackupStatus(body)
+        r = timingBackup.listTimingRecoveryStatus(body)
         print(r[0])
 
-    def testDeleteTimingBackup(self):
+    def testDeleteTimingRecovery(self):
         a = Auth(username, pwd)
         timingBackup = TimingBackup(a)
         body = {}
-        r = timingBackup.deleteTimingBackup(body)
-        print(r[0])
-
-    def testTempFuncName(self):
-        a = Auth(username, pwd)
-        timingBackup = TimingBackup(a)
-        body = {}
-        r = timingBackup.tempFuncName(body)
+        r = timingBackup.deleteTimingRecovery(body)
         print(r[0])
 
     def testTempFuncName(self):
@@ -129,4 +114,4 @@ class TimingBackupTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()  
+    unittest.main()

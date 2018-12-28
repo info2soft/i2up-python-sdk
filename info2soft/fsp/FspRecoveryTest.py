@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 # flake8: noqa
 
@@ -25,85 +24,92 @@ if is_py3:
 
 username = 'admin'
 pwd = 'Info1234'
-    
-                
+
+
 class FspBackupTestCase(unittest.TestCase):
 
-    def testListFspBackupNic(self):
+    def testListFspRecoveryDir(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.listFspBackupNic(body)
+        r = fspBackup.listFspRecoveryDir(body)
         print(r[0])
 
-    def testListFspBackupDir(self):
+    def testListFspRecoveryNic(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.listFspBackupDir(body)
+        r = fspBackup.listFspRecoveryNic(body)
         print(r[0])
 
-    def testVerifyFspBackupCoopySpace(self):
+    def testListFspRecoveryPoint(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.verifyFspBackupCoopySpace(body)
+        r = fspBackup.listFspRecoveryPoint(body)
         print(r[0])
 
-    def testVerifyFspBackupLicense(self):
+    def testVerifyFspRecoveryVolumeSpace(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.verifyFspBackupLicense(body)
+        r = fspBackup.verifyFspRecoveryVolumeSpace(body)
         print(r[0])
 
-    def testVerifyFspBackupOldRule(self):
+    def testVerifyFspRecoveryOldRule(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.verifyFspBackupOldRule(body)
+        r = fspBackup.verifyFspRecoveryOldRule(body)
         print(r[0])
 
-    def testVerifyFspBackupOsVersion(self):
+    def testVerifyFspRecoveryLicense(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.verifyFspBackupOsVersion(body)
+        r = fspBackup.verifyFspRecoveryLicense(body)
         print(r[0])
 
-    def testCreateFspBackup(self):
+    def testVerifyFspRecoveryOsVersion(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.createFspBackup(body)
+        r = fspBackup.verifyFspRecoveryOsVersion(body)
         print(r[0])
 
-    def testModifyFspBackup(self):
+    def testCreateFspRecovery(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.modifyFspBackup(body)
+        r = fspBackup.createFspRecovery(body)
         print(r[0])
 
-    def testDescribeFspBackup(self):
+    def testModifyFspRecovery(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.describeFspBackup(body)
+        r = fspBackup.modifyFspRecovery(body)
         print(r[0])
 
-    def testDeleteFspBackup(self):
+    def testDesribeFspRecovery(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.deleteFspBackup(body)
+        r = fspBackup.desribeFspRecovery(body)
         print(r[0])
 
-    def testListFspBackup(self):
+    def testDeleteFspRecovery(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.listFspBackup(body)
+        r = fspBackup.deleteFspRecovery(body)
+        print(r[0])
+
+    def testListFspRecovery(self):
+        a = Auth(username, pwd)
+        fspBackup = FspBackup(a)
+        body = {}
+        r = fspBackup.listFspRecovery(body)
         print(r[0])
 
     def testTempFuncName(self):
@@ -111,13 +117,6 @@ class FspBackupTestCase(unittest.TestCase):
         fspBackup = FspBackup(a)
         body = {}
         r = fspBackup.tempFuncName(body)
-        print(r[0])
-
-    def testListFspBackupStatus(self):
-        a = Auth(username, pwd)
-        fspBackup = FspBackup(a)
-        body = {}
-        r = fspBackup.listFspBackupStatus(body)
         print(r[0])
 
     def testTempFuncName(self):
@@ -129,4 +128,4 @@ class FspBackupTestCase(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()  
+    unittest.main()
