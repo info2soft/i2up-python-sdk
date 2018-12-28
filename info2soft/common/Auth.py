@@ -118,5 +118,4 @@ class RequestsAuth(AuthBase):
         else:
             token = self.auth.token_of_request(r.url)
         r.headers['Authorization'] = '{0}'.format(token)
-        print(r.headers['Authorization'])
         return r

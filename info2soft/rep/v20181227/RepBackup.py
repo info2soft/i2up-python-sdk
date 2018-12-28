@@ -29,7 +29,6 @@ class RepBackup (object):
         if body is None or 'uuid' not in body:
             exit()
         url = '{0}/rep/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        
         res = https._get(url, None, self.auth)
         return res
 
@@ -43,8 +42,9 @@ class RepBackup (object):
     def modifyRepBackup(self, body):
         
         url = '{0}/rep/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        print(url)
         del body['uuid']
+        randomStr = https._get(url, None, self.auth)[0]['data']['rep_backup']['random_str']
+        body['rep_backup']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
         return res
 
