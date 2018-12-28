@@ -14,7 +14,7 @@ class Monitor (object):
      '''
     def listDriversInfo(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/monitor/drivers_info/ {1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/monitor/drivers_info/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
         return res
@@ -27,7 +27,7 @@ class Monitor (object):
      '''
     def listPhyInfo(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/monitor/phy_info/ {1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/monitor/phy_info/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
         return res
@@ -40,7 +40,7 @@ class Monitor (object):
      '''
     def listChartConfig(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/monitor/chart_config/ {1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/monitor/chart_config/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
         return res
@@ -54,7 +54,7 @@ class Monitor (object):
      '''
     def setChartConfig(self, body):
         
-        url = '{0}/monitor/chart_config/ {1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/monitor/chart_config/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._post(url, body, self.auth)
         return res
@@ -68,7 +68,7 @@ class Monitor (object):
      '''
     def listChartData(self, body):
         
-        url = '{0}/monitor/chart_data/ {1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/monitor/chart_data/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._get(url, body, self.auth)
         return res
