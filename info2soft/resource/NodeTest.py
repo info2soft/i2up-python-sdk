@@ -32,7 +32,7 @@ class NodeTestCase(unittest.TestCase):
     def testAuthNode(self):
         a = Auth(username, pwd)
         node = Node(a)
-        body = {"config_addr":"192.168.25.11","config_port":"26821","os_pwd":"QBECXJCmZUjsn+DubEWv3/m1ZKSPVxQcxLYW09ZruVGbMU4nS7htN31EjBMPfZ591/7yPZPst9ZLpuYZM6zELmgu1wzQA75AHZ5kCrLUNJ0HQohHdY5sgIWXwzH8uyRjpYRKrd5Uv/6gIvhXA5SHZ7ViPkSFSHEFVKFeilWsIYsVSGrqGUQGS38Maea0WhghpLUslgrsAm4/AsyOfXjqgieVfR+QH8BCeCToqxh0ntOrTh3oywZQDcEP7wzpWX428D38rnSxE41WQDwhwjeXL5Lq6EkuUHicJ865JX7fdcxELUjlh9MEWPufKgSdFfLr9Uq2jGd2La4r7QvuM7immw==","os_user":"root","auth_type":0,"node_uuid":"","i2id":""}
+        body = {"config_addr":"192.168.0.144","config_port":"26821","os_pwd":"123qwe-=","os_user":"administrator","auth_type":0,"node_uuid":"4B3CE874-66E8-1A41-B2A9-EB2F7F960E19","i2id":""}
         r = node.authNode(body)
         print(r[0])
 

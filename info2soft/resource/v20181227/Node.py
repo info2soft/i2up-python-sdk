@@ -16,12 +16,9 @@ class Node(object):
 
     def authNode(self, body):
         url = '{0}/node/auth'.format(config.get_default('default_api_host'))
-        Rsas = Rsa()
-        print(body)
-        osPwd = Rsas.encrypt(body['os_pwd'])
-        print(osPwd)
+        rsa = Rsa()
+        osPwd = rsa.rsaEncrypt(body['os_pwd'])
         body.update({'os_pwd': osPwd})
-        print(body)
         res = https._post(url, body, self.auth)
         return res
 
@@ -93,6 +90,9 @@ class Node(object):
 
         url = '{0}/node/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
+        rsa = Rsa()
+        osPwd = rsa.rsaEncrypt(body['os_pwd'])
+        body.update({'os_pwd': osPwd})
         res = https._put(url, body, self.auth)
         return res
 

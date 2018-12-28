@@ -1,6 +1,7 @@
 
 from info2soft import config
 from info2soft import https
+from info2soft.common.Rsa import Rsa
 
 
 class User (object):
@@ -13,9 +14,10 @@ class User (object):
      * @return array
      '''
     def createUser(self, body):
-        
         url = '{0}/user'.format(config.get_default('default_api_host'))
-        
+        rsa = Rsa()
+        password = rsa.rsaEncrypt(body['password'])
+        body.update({'password': password})
         res = https._post(url, body, self.auth)
         return res
 
@@ -53,7 +55,9 @@ class User (object):
     def deleteUser(self, body):
         
         url = '{0}/user'.format(config.get_default('default_api_host'))
-        
+        rsa = Rsa()
+        password = rsa.rsaEncrypt(body['password'])
+        body.update({'password': password})
         res = https._delete(url, body, self.auth)
         return res
 
@@ -64,9 +68,10 @@ class User (object):
      * @return array
      '''
     def modifyUser(self, body):
-        
         url = '{0}/user/:id([0-9] )'.format(config.get_default('default_api_host'))
-        
+        rsa = Rsa()
+        password = rsa.rsaEncrypt(body['password'])
+        body.update({'password': password})
         res = https._put(url, body, self.auth)
         return res
 
@@ -79,7 +84,10 @@ class User (object):
     def modifyUserPwd(self, body):
         
         url = '{0}/user/password'.format(config.get_default('default_api_host'))
-        
+        rsa = Rsa()
+        password = rsa.rsaEncrypt(body['password'])
+        oldPwd = rsa.rsaEncrypt(body['old_password'])
+        body.update({'password': password, 'old_password': oldPwd})
         res = https._post(url, body, self.auth)
         return res
 
@@ -120,40 +128,4 @@ class User (object):
         res = https._post(url, None, self.auth)
         return res
 
-    '''
-     * 更新配置
-     * 
-     * @param dict body  参数详见 API 手册
-     * @return array
-     '''
-    def updateSetting(self, body):
-        
-        url = '{0}/sys/settings'.format(config.get_default('default_api_host'))
-        
-        res = https._post(url, body, self.auth)
-        return res
-
-    '''
-     * 获取配置
-     * 
-     * @return array
-     '''
-    def listSysSetting(self, ):
-        
-        url = '{0}/sys/settings'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, None, self.auth)
-        return res
-
-    '''
-     * 控制台主机IP
-     * 
-     * @return array
-     '''
-    def describe(self, ):
-        
-        url = '{0}/sys/settings/ips'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, None, self.auth)
-        return res
 
