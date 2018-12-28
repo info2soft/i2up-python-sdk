@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.v20181227.Logs import Logs
+from info2soft.common.v20181227.DataBaseBackup import DataBaseBackup
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -27,41 +27,41 @@ username = 'admin'
 pwd = 'Info1234'
     
                 
-class LogsTestCase(unittest.TestCase):
+class DataBaseBackupTestCase(unittest.TestCase):
 
-    def testListTaskLog(self):
+    def testImportConfig(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dataBaseBackup = DataBaseBackup(a)
         body = {}
-        r = logs.listTaskLog(body)
+        r = dataBaseBackup.importConfig(body)
         print(r[0])
 
-    def testListHALog(self):
+    def testExportConfig(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dataBaseBackup = DataBaseBackup(a)
         body = {}
-        r = logs.listHALog(body)
+        r = dataBaseBackup.exportConfig(body)
         print(r[0])
 
-    def testListNodeLog(self):
+    def testListBackupHistory(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dataBaseBackup = DataBaseBackup(a)
         body = {}
-        r = logs.listNodeLog(body)
+        r = dataBaseBackup.listBackupHistory(body)
         print(r[0])
 
-    def testListNpsvrLog(self):
+    def testBackupConfig(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dataBaseBackup = DataBaseBackup(a)
         body = {}
-        r = logs.listNpsvrLog(body)
+        r = dataBaseBackup.backupConfig(body)
         print(r[0])
 
-    def testListTrafficLog(self):
+    def testDescribeBackupConfig(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        dataBaseBackup = DataBaseBackup(a)
         body = {}
-        r = logs.listTrafficLog(body)
+        r = dataBaseBackup.describeBackupConfig(body)
         print(r[0])
 
 

@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.v20181227.Logs import Logs
+from info2soft.common.v20181227.Qr import Qr
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -27,41 +27,41 @@ username = 'admin'
 pwd = 'Info1234'
     
                 
-class LogsTestCase(unittest.TestCase):
+class QrTestCase(unittest.TestCase):
 
-    def testListTaskLog(self):
+    def testDescribeTimeStamp(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        qr = Qr(a)
         body = {}
-        r = logs.listTaskLog(body)
+        r = qr.describeTimeStamp(body)
         print(r[0])
 
-    def testListHALog(self):
+    def testCreateQrPic(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        qr = Qr(a)
         body = {}
-        r = logs.listHALog(body)
+        r = qr.createQrPic(body)
         print(r[0])
 
-    def testListNodeLog(self):
+    def testConfirmLogin(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        qr = Qr(a)
         body = {}
-        r = logs.listNodeLog(body)
+        r = qr.confirmLogin(body)
         print(r[0])
 
-    def testListNpsvrLog(self):
+    def testObtainQrContent(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        qr = Qr(a)
         body = {}
-        r = logs.listNpsvrLog(body)
+        r = qr.obtainQrContent(body)
         print(r[0])
 
-    def testListTrafficLog(self):
+    def testCheckQrStatus(self):
         a = Auth(username, pwd)
-        logs = Logs(a)
+        qr = Qr(a)
         body = {}
-        r = logs.listTrafficLog(body)
+        r = qr.checkQrStatus(body)
         print(r[0])
 
 
