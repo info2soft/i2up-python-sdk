@@ -107,6 +107,8 @@ class FspMove (object):
         
         url = '{0}/fsp/move/{1}'.format(config.get_default('default_api_host'))
         del body['uuid']
+        randomStr = https._get(url, None, self.auth)[0]['data']['fsp_move']['random_str']
+        body['fsp_move']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
         return res
 

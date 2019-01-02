@@ -94,6 +94,8 @@ class TimingRecovery(object):
 
         url = '{0}/timing/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
+        randomStr = https._get(url, None, self.auth)[0]['data']['timing_recovery']['random_str']
+        body['timing_recovery']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
         return res
 

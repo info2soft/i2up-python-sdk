@@ -130,6 +130,8 @@ class FspBackup(object):
 
         url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
+        randomStr = https._get(url, None, self.auth)[0]['data']['fsp_recovery']['random_str']
+        body['fsp_recovery']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
         return res
 

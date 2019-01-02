@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.nas.v20181227.NAS import NAS
+from info2soft.nas.v20190102.NAS import NAS
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -31,51 +31,58 @@ class NASTestCase(unittest.TestCase):
 
     def testCreateNAS(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.createNAS(body)
+        r = nas.createNAS(body)
         print(r[0])
 
     def testDescribeNASGroup(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.describeNASGroup(body)
+        r = nas.describeNASGroup(body)
         print(r[0])
 
     def testModifyNAS(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.modifyNAS(body)
+        r = nas.modifyNAS(body)
         print(r[0])
 
     def testListNAS(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.listNAS(body)
+        r = nas.listNAS(body)
         print(r[0])
 
     def testListNASStatus(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.listNASStatus(body)
+        r = nas.listNASStatus(body)
         print(r[0])
 
     def testDeleteNAS(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.deleteNAS(body)
+        r = nas.deleteNAS(body)
         print(r[0])
 
     def testStartNAS(self):
         a = Auth(username, pwd)
-        nAS = NAS(a)
+        nas = NAS(a)
         body = {}
-        r = nAS.startNAS(body)
+        r = nas.startNAS(body)
+        print(r[0])
+
+    def testStopNAS(self):
+        a = Auth(username, pwd)
+        nas = NAS(a)
+        body = {}
+        r = nas.startNAS(body)
         print(r[0])
 
 
