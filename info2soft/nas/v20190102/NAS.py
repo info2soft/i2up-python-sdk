@@ -9,7 +9,7 @@ class NAS (object):
     '''
      *  组 新建
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def createNAS(self, body):
@@ -23,7 +23,7 @@ class NAS (object):
      *  组 获取单个
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def describeNASGroup(self, body):
@@ -37,7 +37,7 @@ class NAS (object):
      *  组 编辑
      * 
      * @body['uuid'] String  必填 节点uuid
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def modifyNAS(self, body):
@@ -64,7 +64,7 @@ class NAS (object):
     '''
      *  获取 状态
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def listNASStatus(self, body):
@@ -77,7 +77,7 @@ class NAS (object):
     '''
      *  删除
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def deleteNAS(self, body):
@@ -90,7 +90,7 @@ class NAS (object):
     '''
      *  操作：启停
      * 
-     * @param array $body  参数详见 API 手册
+     * @param dict body  参数详见 API 手册
      * @return array
      '''
     def startNAS (self, body):
