@@ -2,7 +2,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.system.v20181227.User import User
+from info2soft.system.v20181227.Settings import Settings
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
@@ -30,23 +30,23 @@ class UserTestCase(unittest.TestCase):
 
     def testUpdateSetting(self):
         a = Auth(username, pwd)
-        user = User(a)
+        setting = Settings(a)
         body = {}
-        r = user.updateSetting(body)
+        r = setting.updateSetting(body)
         print(r[0])
 
     def testListSysSetting(self):
         a = Auth(username, pwd)
-        user = User(a)
+        setting = Settings(a)
         body = {}
-        r = user.listSysSetting(body)
+        r = setting.listSysSetting(body)
         print(r[0])
 
     def testDescribeCCip(self):
         a = Auth(username, pwd)
-        user = User(a)
+        setting = Settings(a)
         body = {}
-        r = user.describeCCip(body)
+        r = setting.describeCCip(body)
         print(r[0])
 
 

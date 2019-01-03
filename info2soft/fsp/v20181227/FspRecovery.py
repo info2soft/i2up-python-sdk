@@ -2,7 +2,7 @@ from info2soft import config
 from info2soft import https
 
 
-class FspBackup(object):
+class FspRecovery(object):
     def __init__(self, auth):
         self.auth = auth
 

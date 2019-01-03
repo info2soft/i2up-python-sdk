@@ -99,7 +99,7 @@ class VirtualizationSupport(object):
      * @return array
      '''
 
-    def list(self, body):
+    def listVM(self, body):
 
         url = '{0}/vp/platform/{1}/vm'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
@@ -113,7 +113,7 @@ class VirtualizationSupport(object):
      * @return array
      '''
 
-    def vp(self, body):
+    def describeVpAttribute(self, body):
         if body is None or 'uuid' not in body: exit()
         url = '{0}/vp/platform/{1}/info'.format(config.get_default('default_api_host'), body['uuid'])
 
@@ -143,7 +143,7 @@ class VirtualizationSupport(object):
      * @return array
      '''
 
-    def vp(self, body):
+    def listBakVerInfo(self, body):
 
         url = '{0}/vp/platform/{1}/bak_ver_info'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
@@ -158,7 +158,7 @@ class VirtualizationSupport(object):
      * @return array
      '''
 
-    def vp(self, body):
+    def listDatastoreFile(self, body):
 
         url = '{0}/vp/platform/{1}/datastore_file'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
@@ -227,15 +227,7 @@ class VirtualizationSupport(object):
     '''
      * ------------------------- 分隔线 ----------------------------
      * 
-     * @return array
      '''
-
-    def tempFuncName(self, ):
-
-        url = '{0}/dash1'.format(config.get_default('default_api_host'))
-
-        res = https._get(url, None, self.auth)
-        return res
 
     '''
      *  新建
@@ -367,15 +359,7 @@ class VirtualizationSupport(object):
     '''
      * ------------------------- 分隔线 ----------------------------
      * 
-     * @return array
      '''
-
-    def tempFuncName(self, ):
-
-        url = '{0}/dash2'.format(config.get_default('default_api_host'))
-
-        res = https._get(url, None, self.auth)
-        return res
 
     '''
      *  新建
@@ -464,15 +448,7 @@ class VirtualizationSupport(object):
     '''
      * ------------------------- 分隔线 ----------------------------
      * 
-     * @return array
      '''
-
-    def tempFuncName(self, ):
-
-        url = '{0}/dash3'.format(config.get_default('default_api_host'))
-
-        res = https._get(url, None, self.auth)
-        return res
 
     '''
      *  新建
@@ -483,7 +459,7 @@ class VirtualizationSupport(object):
 
     def createVpMove(self, body):
 
-        url = '{0}/vp/(move|rep)'.format(config.get_default('default_api_host'))
+        url = '{0}/vp/move'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
@@ -497,7 +473,7 @@ class VirtualizationSupport(object):
 
     def describeVpMove(self, body):
         if body is None or 'uuid' not in body: exit()
-        url = '{0}/vp/(move|rep)/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/move/{1}'.format(config.get_default('default_api_host'), body['uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -512,7 +488,7 @@ class VirtualizationSupport(object):
 
     def modifyVpMove(self, body):
 
-        url = '{0}/vp/(move|rep)/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/vp/move/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         del body['uuid']
         res = https._put(url, body, self.auth)
         return res
@@ -525,7 +501,7 @@ class VirtualizationSupport(object):
 
     def listVpMove(self, ):
 
-        url = '{0}/vp/(move|rep)'.format(config.get_default('default_api_host'))
+        url = '{0}/vp/move'.format(config.get_default('default_api_host'))
 
         res = https._get(url, None, self.auth)
         return res
@@ -539,7 +515,7 @@ class VirtualizationSupport(object):
 
     def listVpMoveStatus(self, body):
 
-        url = '{0}/vp/(move|rep)/status'.format(config.get_default('default_api_host'))
+        url = '{0}/vp/move/status'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
         return res
@@ -553,7 +529,7 @@ class VirtualizationSupport(object):
 
     def stopVpMove(self, body):
 
-        url = '{0}/vp/(move|rep)/operate'.format(config.get_default('default_api_host'))
+        url = '{0}/vp/move/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
@@ -567,7 +543,105 @@ class VirtualizationSupport(object):
 
     def deleteVpMove(self, body):
 
-        url = '{0}/vp/(move|rep)'.format(config.get_default('default_api_host'))
+        url = '{0}/vp/move'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     *  新建
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def createVpRep(self, body):
+
+        url = '{0}/vp/rep'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     *  获取单个
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @return array
+     '''
+
+    def describeVpRep(self, body):
+        if body is None or 'uuid' not in body: exit()
+        url = '{0}/vp/rep/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     *  修改（模板）
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def modifyVpRep(self, body):
+
+        url = '{0}/vp/rep/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        del body['uuid']
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     *  获取列表
+     * 
+     * @return array
+     '''
+
+    def listVpRep(self, ):
+
+        url = '{0}/vp/rep'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     *  状态
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def listVpRepStatus(self, body):
+
+        url = '{0}/vp/rep/status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  操作
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def stopVpRep(self, body):
+
+        url = '{0}/vp/rep/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     *  删除
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def deleteVpRep(self, body):
+
+        url = '{0}/vp/rep'.format(config.get_default('default_api_host'))
 
         res = https._delete(url, body, self.auth)
         return res
