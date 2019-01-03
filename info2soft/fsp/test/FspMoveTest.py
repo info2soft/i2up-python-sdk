@@ -113,6 +113,27 @@ class FspMoveTestCase(unittest.TestCase):
         r = fspMove.startFspMove(body)
         print(r[0])
 
+    def testStopFspMove(self):
+        a = Auth(username, pwd)
+        fspMove = FspMove(a)
+        body = {}
+        r = fspMove.stopFspMove(body)
+        print(r[0])
+
+    def testMoveFspMove(self):
+        a = Auth(username, pwd)
+        fspMove = FspMove(a)
+        body = {}
+        r = fspMove.moveFspMove(body)
+        print(r[0])
+
+    def testRebootFspMove(self):
+        a = Auth(username, pwd)
+        fspMove = FspMove(a)
+        body = {}
+        r = fspMove.rebootFspMove(body)
+        print(r[0])
+
     def testListFspMoveStatus(self):
         a = Auth(username, pwd)
         fspMove = FspMove(a)

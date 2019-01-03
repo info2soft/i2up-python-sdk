@@ -12,7 +12,7 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def list(self, body):
+    def listHA(self, body):
         
         url = '{0}/ha'.format(config.get_default('default_api_host'))
         
@@ -25,10 +25,23 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def start(self, body):
+    def startHA(self, body):
         
         url = '{0}/ha/operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    def stopHA(self, body):
+
+        url = '{0}/ha/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    def forceSwitchHA(self, body):
+        url = '{0}/ha/operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -38,7 +51,7 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def delete(self, body):
+    def deleteHA(self, body):
         
         url = '{0}/ha'.format(config.get_default('default_api_host'))
         
@@ -51,7 +64,7 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def list(self, body):
+    def listHAStatus(self, body):
         
         url = '{0}/ha/status'.format(config.get_default('default_api_host'))
         
@@ -64,7 +77,7 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def describe(self, body):
+    def describeHAScriptPath(self, body):
         
         url = '{0}/ha/script_path'.format(config.get_default('default_api_host'))
         
@@ -77,7 +90,7 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def modify(self, body):
+    def modifyHA(self, body):
         
         url = '{0}/ha'.format(config.get_default('default_api_host'))
         
@@ -90,7 +103,7 @@ class AppHighAvailability (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def create(self, body):
+    def createHA(self, body):
         
         url = '{0}/ha'.format(config.get_default('default_api_host'))
         
@@ -115,23 +128,12 @@ class AppHighAvailability (object):
      * 
      * @return array
      '''
-    def describe(self, ):
+    def describeHA(self, body):
         
-        url = '{0}/ha/:uuid([a-f-0-9] )'.format(config.get_default('default_api_host'))
+        url = '{0}/ha/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
         return res
 
-    '''
-     *  高可用列表
-     * 
-     * @param dict body  参数详见 API 手册
-     * @return array
-     '''
-    def ha(self, body):
-        
-        url = '{0}/dashboard/ha'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, body, self.auth)
-        return res
+
 

@@ -106,11 +106,25 @@ class FspBackupTestCase(unittest.TestCase):
         r = fspBackup.listFspBackup(body)
         print(r[0])
 
-    def testTempFuncName(self):
+    def testStartFspBackup(self):
         a = Auth(username, pwd)
         fspBackup = FspBackup(a)
         body = {}
-        r = fspBackup.tempFuncName(body)
+        r = fspBackup.startFspBackup(body)
+        print(r[0])
+
+    def testStopFspBackup(self):
+        a = Auth(username, pwd)
+        fspBackup = FspBackup(a)
+        body = {}
+        r = fspBackup.stopFspBackup(body)
+        print(r[0])
+
+    def testFinishFspBackup(self):
+        a = Auth(username, pwd)
+        fspBackup = FspBackup(a)
+        body = {}
+        r = fspBackup.finishFspBackup(body)
         print(r[0])
 
     def testListFspBackupStatus(self):
@@ -118,13 +132,6 @@ class FspBackupTestCase(unittest.TestCase):
         fspBackup = FspBackup(a)
         body = {}
         r = fspBackup.listFspBackupStatus(body)
-        print(r[0])
-
-    def testTempFuncName(self):
-        a = Auth(username, pwd)
-        fspBackup = FspBackup(a)
-        body = {}
-        r = fspBackup.tempFuncName(body)
         print(r[0])
 
 

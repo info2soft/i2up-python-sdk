@@ -39,9 +39,9 @@ class User (object):
      * 
      * @return array
      '''
-    def describeUser(self, ):
+    def describeUser(self, body):
         
-        url = '{0}/user/:id([0-9] )'.format(config.get_default('default_api_host'))
+        url = '{0}/user/{1}'.format(config.get_default('default_api_host'), body['uuid'])
         
         res = https._get(url, None, self.auth)
         return res

@@ -43,11 +43,25 @@ class DashboardTestCase(unittest.TestCase):
         r = dashboard.describeVmProtectRate(body)
         print(r[0])
 
-    def testTempFuncName(self):
+    def testRepBackup(self):
         a = Auth(username, pwd)
         dashboard = Dashboard(a)
         body = {}
-        r = dashboard.tempFuncName(body)
+        r = dashboard.repBackup(body)
+        print(r[0])
+
+    def testNode(self):
+        a = Auth(username, pwd)
+        dashboard = Dashboard(a)
+        body = {}
+        r = dashboard.node(body)
+        print(r[0])
+
+    def testHa(self):
+        a = Auth(username, pwd)
+        dashboard = Dashboard(a)
+        body = {}
+        r = dashboard.ha(body)
         print(r[0])
 
 

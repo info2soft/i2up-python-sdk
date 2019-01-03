@@ -3,7 +3,7 @@ from info2soft import https
 from info2soft.common.Rsa import Rsa
 
 
-class User(object):
+class Settings(object):
     def __init__(self, auth):
         self.auth = auth
 
@@ -41,7 +41,7 @@ class User(object):
      * @return array
      '''
 
-    def describe(self, ):
+    def describeCCip(self, ):
         url = '{0}/sys/settings/ips'.format(config.get_default('default_api_host'))
 
         res = https._get(url, None, self.auth)

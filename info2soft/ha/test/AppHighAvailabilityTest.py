@@ -43,6 +43,20 @@ class AppHighAvailabilityTestCase(unittest.TestCase):
         r = appHighAvailability.startHA(body)
         print(r[0])
 
+    def testStopHA(self):
+        a = Auth(username, pwd)
+        appHighAvailability = AppHighAvailability(a)
+        body = {}
+        r = appHighAvailability.stopHA(body)
+        print(r[0])
+
+    def testForceSwitchHA(self):
+        a = Auth(username, pwd)
+        appHighAvailability = AppHighAvailability(a)
+        body = {}
+        r = appHighAvailability.forceSwitchHA(body)
+        print(r[0])
+
     def testDeleteHA(self):
         a = Auth(username, pwd)
         appHighAvailability = AppHighAvailability(a)
@@ -90,13 +104,6 @@ class AppHighAvailabilityTestCase(unittest.TestCase):
         appHighAvailability = AppHighAvailability(a)
         body = {}
         r = appHighAvailability.describeHA(body)
-        print(r[0])
-
-    def testHa(self):
-        a = Auth(username, pwd)
-        appHighAvailability = AppHighAvailability(a)
-        body = {}
-        r = appHighAvailability.ha(body)
         print(r[0])
 
 

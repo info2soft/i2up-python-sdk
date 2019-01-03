@@ -142,13 +142,6 @@ class RepBackupTestCase(unittest.TestCase):
         r = repBackup.deleteRepBackupSnapshot(body)
         print(r[0])
 
-    def testRepBackup(self):
-        a = Auth(username, pwd)
-        repBackup = RepBackup(a)
-        body = {}
-        r = repBackup.repBackup(body)
-        print(r[0])
-
 
 if __name__ == '__main__':
     unittest.main()

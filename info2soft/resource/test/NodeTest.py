@@ -99,11 +99,11 @@ class NodeTestCase(unittest.TestCase):
         r = node.listNode(body)
         print(r[0])
 
-    def testTempFuncName(self):
+    def testUpgradeNode(self):
         a = Auth(username, pwd)
         node = Node(a)
         body = {}
-        r = node.tempFuncName(body)
+        r = node.upgradeNode(body)
         print(r[0])
 
     def testListNodeStatus(self):
@@ -118,13 +118,6 @@ class NodeTestCase(unittest.TestCase):
         node = Node(a)
         body = {}
         r = node.deleteNode(body)
-        print(r[0])
-
-    def testNode(self):
-        a = Auth(username, pwd)
-        node = Node(a)
-        body = {}
-        r = node.node(body)
         print(r[0])
 
 
