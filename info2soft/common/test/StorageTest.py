@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.v20181227.Storage import Storage
+from info2soft.common.Storage import Storage
 from info2soft import Auth
 from info2soft.compat import is_py2, is_py3
 
