@@ -1,0 +1,290 @@
+
+# -*- coding: utf-8 -*-
+# flake8: noqa
+
+import unittest
+from info2soft.resource.v20181227.Node import Node
+from info2soft import Auth
+from info2soft.fileWriter import write
+from info2soft.compat import is_py2, is_py3
+
+if is_py2:
+    import sys
+    import StringIO
+    import urllib
+
+    # reload(sys)
+    sys.setdefaultencoding('utf-8')
+    StringIO = StringIO.StringIO
+    urlopen = urllib.urlopen
+if is_py3:
+    import io
+    import urllib
+
+    StringIO = io.StringIO
+    urlopen = urllib.request.urlopen
+
+username = 'admin'
+pwd = 'Info1234'
+    
+                
+class NodeTestCase(unittest.TestCase):
+
+    def testCheckCapacity(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_port': '26821',
+            'cache_path': 'C:\\Program Files (x86)\\info2soft\\node\\cache\\',
+            'config_addr': '192.168.72.76',
+        }
+        node = Node(a)
+        r = node.checkCapacity(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'checkCapacity', body)
+
+    def testListVg(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_port': '26821',
+            'config_addr': '192.168.72.76',
+        }
+        node = Node(a)
+        r = node.listVg(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listVg', body)
+
+    def testCheckNodeOnline(self):
+        a = Auth(username, pwd)
+        body = {
+            'port': '26821',
+            'ip': '192.168.72.76',
+        }
+        node = Node(a)
+        r = node.checkNodeOnline(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'checkNodeOnline', body)
+
+    def testCreateNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node': {
+                'bak_client_max': '100',
+                'cloud_type': '0',
+                'bak_root': '',
+                'monitor_switch': 0,
+                'node_role': '3',
+                'mem_limit': '819',
+                'config_port': '26821',
+                'mon_save_day': '5',
+                'vg': '',
+                'os_type': 1,
+                'log_path': 'C:\\Program Files (x86)\\info2soft\\node\\log\\',
+                'mon_data_path': 'C:\\Program Files (x86)\\info2soft\\node\\log\\',
+                'comment': '',
+                'rep_path': [],
+                'bak_user_max': '100',
+                'cache_path': 'C:\\Program Files (x86)\\info2soft\\node\\cache\\',
+                'db_save_day': '3',
+                'proxy_switch': 0,
+                'data_addr': '192.168.72.76',
+                'node_name': 'N4_72.76',
+                'config_addr': '192.168.72.76',
+                'mon_send_interval': '10',
+                'disk_limit': '10240',
+                'reboot_sys': '0',
+                'bind_lic_list': [],
+                'security_check': 0,
+                'os_user': 'Kyran',
+                'bak_service_type': '',
+                'en_snap_switch': 0,
+                'rep_excl_path': [],
+                'biz_grp_list': [],
+                'i2id': '',
+            },
+        }
+        node = Node(a)
+        r = node.createNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'createNode', body)
+
+    def testModifyNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node': {
+               "monitor_switch": 0,
+               "mon_send_interval": "10",
+               "mon_data_path": None,
+               "mon_save_day": "5",
+               "db_save_day": "3",
+               "chart_config": "0",
+               "info": None,
+               "created_at": "1546827340",
+               "updated_at": None,
+               "username": "admin",
+               "id": "14",
+               "bak_client_max": "100",
+               "bak_root": "",
+               "bak_service_type": "",
+               "bak_user_max": "100",
+               "bind_lic_list": [],
+               "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+               "cls_disk": None,
+               "cls_node": None,
+               "cls_is_local": None,
+               "comment": "",
+               "config_addr": "192.168.72.76",
+               "config_port": "26821",
+               "create_time": "1546827340",
+               "data_addr": "192.168.72.76",
+               "data_port": "26831",
+               "disk_limit": "10240",
+               "en_snap_switch": 0,
+               "log_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+               "mem_limit": "819",
+               "node_name": "N4_72.76Modify",
+               "node_role": "3",
+               "node_type": 0,
+               "node_uuid": "990E2F2B-9983-A734-2CD3-9D298DBB365A",
+               "os_version": "Microsoft Windows 10/x64 Edition",
+               "os_type": 1,
+               "os_user": "Kyran",
+                'os_pwd': 'EnEyGDJF==',
+               "phy_type": 2,
+               "proxy_switch": 0,
+               "random_str": "F3BE9F6C-9896-D4A4-2CBD-CB6D7313078B",
+               "rep_excl_path": [],
+               "rep_path": [
+                "/"
+               ],
+               "security_check": 0,
+               "status": None,
+               "tc_uuid": None,
+               "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+               "vg": "",
+               "hardware_code": None,
+               "i2id": "",
+               "biz_grp_list": [],
+               "biz_grp_name": [],
+               "allow_modify_cache_path": 1
+              },
+        }
+        node = Node(a)
+        r = node.modifyNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'modifyNode', body)
+
+    def testDescribeNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '990E2F2B-9983-A734-2CD3-9D298DBB365A'
+        }
+        node = Node(a)
+        r = node.describeNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'describeNode', body)
+
+    def testCreateBatchNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'base_info_list': [
+                {
+                    'os_pwd': '123qwe',
+                    'os_user': 'chenky',
+                    'config_port': '26821',
+                    'config_addr': '192.168.72.76',
+                    'node_name': 'N4_72.76',
+                }
+            ],
+            'node': {
+                'mem_limit': '819',
+                'bind_lic_list': [],
+                'disk_limit': '10240',
+                'monitor_interval': '10',
+                'node_role': '3',
+                'monitor_switch': 0,
+                'moni_log_keep_node': '5',
+                'moni_log_keep_server': '3',
+                'security_check': 0,
+                'biz_grp_list': []
+            },
+        }
+        node = Node(a)
+        r = node.createBatchNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'createBatchNode', body)
+
+    def testDescribeDeviceInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            "node_uuid": "990E2F2B-9983-A734-2CD3-9D298DBB365A",
+        }
+        node = Node(a)
+        r = node.describeDeviceInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'describeDeviceInfo', body)
+
+    def testListNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'search_value': '',
+            'search_field': '',
+            'limit': 10,
+            'page': 1,
+            'type': '',
+            # 'like_args[xxx]': '',
+            # 'where_args[xxx]': '',
+            'filter_by_biz_grp': '',
+            'order_by': '',
+            'direction': '',
+        }
+        node = Node(a)
+        r = node.listNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listNode', body)
+
+    def testUpgradeNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuids': ["990E2F2B-9983-A734-2CD3-9D298DBB365A"],
+            'operate': 'upgrade',
+        }
+        node = Node(a)
+        r = node.upgradeNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'upgradeNode', body)
+
+    def testListNodeStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuids': ["990E2F2B-9983-A734-2CD3-9D298DBB365A"],
+        }
+        node = Node(a)
+        r = node.listNodeStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listNodeStatus', body)
+
+    def testDeleteNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuids': ['990E2F2B-9983-A734-2CD3-9D298DBB365A',],
+        }
+        node = Node(a)
+        r = node.deleteNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'deleteNode', body)
+
+
+if __name__ == '__main__':
+    unittest.main()  
