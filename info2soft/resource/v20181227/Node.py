@@ -88,11 +88,12 @@ class Node(object):
 
     def modifyNode(self, body):
 
-        url = '{0}/node/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
+        url = '{0}/node/{1}'.format(config.get_default('default_api_host'), body['node']['node_uuid'])
         rsa = Rsa()
-        osPwd = rsa.rsaEncrypt(body['os_pwd'])
-        body.update({'os_pwd': osPwd})
+        osPwd = rsa.rsaEncrypt(body['node']['os_pwd'])
+        body['node'].update({'os_pwd': osPwd})
+        randomStr = https._get(url, None, self.auth)[0]['data']['node']['random_str']
+        body['node']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
         return res
 
@@ -104,9 +105,9 @@ class Node(object):
      '''
 
     def describeNode(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'node_uuid' not in body:
             exit()
-        url = '{0}/node/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/node/{1}'.format(config.get_default('default_api_host'), body['node_uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -133,9 +134,9 @@ class Node(object):
      '''
 
     def describeDeviceInfo(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'node_uuid' not in body:
             exit()
-        url = '{0}/node/{1}/device_info'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/node/{1}/device_info'.format(config.get_default('default_api_host'), body['node_uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -178,8 +179,13 @@ class Node(object):
     def listNodeStatus(self, body):
 
         url = '{0}/node/status'.format(config.get_default('default_api_host'))
-
-        res = https._get(url, body, self.auth)
+        if body is not None:
+            for k, v in body.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(body[k], list):
+                    urlEnd = '&node_uuids[]='
+                    url = url + '?node_uuids[]=' + urlEnd.join(body[k])
+        res = https._get(url, None, self.auth)
         return res
 
     '''
