@@ -1,0 +1,444 @@
+<START-----------------------------------------------------------
+Method: createBizGroup
+body: {
+ "biz_grp": {
+  "subtype": 0,
+  "comment": "123",
+  "grp_name": "grp_name",
+  "type": 1
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBizGroup
+body: {
+ "biz_grp": {
+  "comment": "12313213123",
+  "grp_name": "grp_name_Modify",
+  "type": 1,
+  "subtype": 0,
+  "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBizGroup
+body: {
+ "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "biz_grp": {
+   "username": "admin",
+   "id": "1",
+   "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C",
+   "grp_name": "grp_name_Modify",
+   "type": 1,
+   "subtype": 0,
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "comment": "12313213123",
+   "create_time": 1546831684
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroup
+body: {
+ "limit": 1,
+ "search_field": "",
+ "search_value": "",
+ "direction": "",
+ "order_by": "",
+ "page": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "id": "1",
+    "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C",
+    "grp_name": "grp_name_Modify",
+    "type": 1,
+    "subtype": 0,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "comment": "12313213123",
+    "create_time": 1546831684
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateBizGroupBind
+body: {
+ "uuids": [
+  "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+ ],
+ "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupBind
+body: {
+ "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "5DDB61AC-0D69-E7E0-5A8D-2173F6A8B306",
+    "name": "linux192.168.25.12",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1542681702,
+    "is_bound": 0
+   },
+   {
+    "uuid": "A77BC711-3AC0-24F3-52B2-1D7DEF6E544C",
+    "name": "linux192.168.25.11",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1542681678,
+    "is_bound": 0
+   },
+   {
+    "uuid": "352E7B1E-F02D-B613-5E55-78AA41864A52",
+    "name": "192.168.25.22",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543481250,
+    "is_bound": 0
+   },
+   {
+    "uuid": "05F705CD-FBD8-80A3-0C67-2197B3703F13",
+    "name": "16.240",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543819867,
+    "is_bound": 0
+   },
+   {
+    "uuid": "76AD38A0-16BF-5A8E-0A40-ADCCB4DA44E7",
+    "name": "26.12",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543482610,
+    "is_bound": 0
+   },
+   {
+    "uuid": "CF5D4AB6-E869-CE4D-CCF9-AF6821E191A2",
+    "name": "26.170",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543482664,
+    "is_bound": 0
+   },
+   {
+    "uuid": "AB54384E-3EF7-B770-0B77-8A1D9F0625C2",
+    "name": "1.157",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543544732,
+    "is_bound": 0
+   },
+   {
+    "uuid": "DD32BA50-2053-FE24-915C-E70F416BFCF0",
+    "name": "26.11",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543820505,
+    "is_bound": 0
+   },
+   {
+    "uuid": "7C78C1B4-A839-0351-2FDD-BDC33211A33E",
+    "name": "26.198",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543547648,
+    "is_bound": 0
+   },
+   {
+    "uuid": "902F4069-3E65-DE9A-A8DE-B694FFBC032D",
+    "name": "192.168.25.1",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543825842,
+    "is_bound": 0
+   },
+   {
+    "uuid": "4B5EB622-FD79-4496-8224-82940C49C2CB",
+    "name": "192.168.25.21",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543481228,
+    "is_bound": 0
+   },
+   {
+    "uuid": "B1573DBA-12DB-0E73-F812-B481AC8D2897",
+    "name": "26.171",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543819295,
+    "is_bound": 0
+   },
+   {
+    "uuid": "37F0270B-5C0E-58C1-7F58-1F8434C146D5",
+    "name": "26.253",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543819783,
+    "is_bound": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupResource
+body: {
+ "type": 1,
+ "subtype": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "5DDB61AC-0D69-E7E0-5A8D-2173F6A8B306",
+    "name": "linux192.168.25.12",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1542681702
+   },
+   {
+    "uuid": "A77BC711-3AC0-24F3-52B2-1D7DEF6E544C",
+    "name": "linux192.168.25.11",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1542681678
+   },
+   {
+    "uuid": "352E7B1E-F02D-B613-5E55-78AA41864A52",
+    "name": "192.168.25.22",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543481250
+   },
+   {
+    "uuid": "05F705CD-FBD8-80A3-0C67-2197B3703F13",
+    "name": "16.240",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543819867
+   },
+   {
+    "uuid": "76AD38A0-16BF-5A8E-0A40-ADCCB4DA44E7",
+    "name": "26.12",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543482610
+   },
+   {
+    "uuid": "CF5D4AB6-E869-CE4D-CCF9-AF6821E191A2",
+    "name": "26.170",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543482664
+   },
+   {
+    "uuid": "AB54384E-3EF7-B770-0B77-8A1D9F0625C2",
+    "name": "1.157",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543544732
+   },
+   {
+    "uuid": "DD32BA50-2053-FE24-915C-E70F416BFCF0",
+    "name": "26.11",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543820505
+   },
+   {
+    "uuid": "7C78C1B4-A839-0351-2FDD-BDC33211A33E",
+    "name": "26.198",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543547648
+   },
+   {
+    "uuid": "902F4069-3E65-DE9A-A8DE-B694FFBC032D",
+    "name": "192.168.25.1",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543825842
+   },
+   {
+    "uuid": "4B5EB622-FD79-4496-8224-82940C49C2CB",
+    "name": "192.168.25.21",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543481228
+   },
+   {
+    "uuid": "B1573DBA-12DB-0E73-F812-B481AC8D2897",
+    "name": "26.171",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543819295
+   },
+   {
+    "uuid": "37F0270B-5C0E-58C1-7F58-1F8434C146D5",
+    "name": "26.253",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "type": 1,
+    "subtype": 0,
+    "create_time": 1543819783
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBizGroup
+body: {
+ "grp_uuids": [
+  "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
