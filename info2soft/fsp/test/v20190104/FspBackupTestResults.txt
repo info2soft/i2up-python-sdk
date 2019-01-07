@@ -1,0 +1,799 @@
+<START-----------------------------------------------------------
+Method: listFspBackupNic
+body: {
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "wk_nic_list": [
+   {
+    "name": "eth2",
+    "type": "0",
+    "ip": "192.168.25.11/255.255.192.0",
+    "gw": "192.168.1.10",
+    "dns": "8.8.8.8"
+   }
+  ],
+  "bk_nic_list": [
+   {
+    "name": "eth2",
+    "type": "0",
+    "ip": "192.168.25.12/255.255.192.0",
+    "gw": "192.168.1.10",
+    "dns": "8.8.8.8"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDir
+body: {
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "fsp_uuid": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "hd_list": [
+   {
+    "label": "/",
+    "is_system": 1
+   }
+  ],
+  "dir_list": [
+   {
+    "wk_path": "/",
+    "type": "1"
+   },
+   {
+    "wk_path": "/boot/",
+    "type": "1"
+   },
+   {
+    "wk_path": "/cgroup/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/dev/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/etc/X11/xorg.conf/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/etc/init.d/i2node/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/etc/rc.d/init.d/i2node/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/etc/sdata/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/lost+found/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/media/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/mnt/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/proc/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/run/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/selinux/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/sys/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/tmp/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/usr/local/sdata/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/var/i2/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/var/i2data/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/var/lock/",
+    "type": "2"
+   },
+   {
+    "wk_path": "/var/run/vmblock-fuse/",
+    "type": "2"
+   }
+  ],
+  "os_type": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupCoopySpace
+body: {
+ "bk_path": [
+  "/FSPback0107/"
+ ],
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "excl_path": [
+  "/cgroup/",
+  "/dev/",
+  "/etc/X11/xorg.conf/",
+  "/etc/init.d/i2node/",
+  "/etc/rc.d/init.d/i2node/",
+  "/etc/sdata/",
+  "/lost+found/",
+  "/media/",
+  "/mnt/",
+  "/proc/",
+  "/run/",
+  "/selinux/",
+  "/sys/",
+  "/tmp/",
+  "/usr/local/sdata/",
+  "/var/i2/",
+  "/var/i2data/",
+  "/var/lock/",
+  "/var/run/vmblock-fuse/"
+ ],
+ "wk_path": [
+  "/",
+  "/boot/"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "bk_disk_need": 0,
+  "bk_disk_free": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupLicense
+body: {
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupOldRule
+body: {
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "bk_path": [
+  "/FSPback0107/"
+ ],
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupOsVersion
+body: {
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "wk_os_ver": "CentOS 6.4 x86_64",
+  "bk_os_ver": "CentOS 6.4 x86_64"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFspBackup
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "3*03:00-14:00*2m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:12",
+    "sched_day": 23,
+    "sched_gap_min": 61,
+    "sched_time": "11:31",
+    "sched_time_start": "04:10",
+    "sched_every": 2,
+    "limit": 9
+   }
+  ],
+  "fsp_type": 1
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspBackup
+body: {
+ "fsp_backup": {
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+  "secret_key": "",
+  "band_width": "3*03:00-19:00*16m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:50",
+    "sched_day": 22,
+    "sched_gap_min": 31,
+    "sched_time": "01:06",
+    "sched_time_start": "13:35",
+    "sched_every": 2,
+    "limit": 29
+   }
+  ],
+  "fsp_type": 1,
+  "random_str": "882E52EF-B1B9-2E25-5E41-57F45CBD8967"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFspBackup
+body: {
+ "fsp_backup": {
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "fsp_backup": {
+   "id": "4",
+   "auto_start": "1",
+   "band_width": "3*03:00-19:00*16m",
+   "bkup_one_time": 1515568566,
+   "bkup_policy": 0,
+   "bkup_schedule": [
+    {
+     "sched_time_end": "18:50",
+     "sched_day": 22,
+     "sched_gap_min": 31,
+     "sched_time": "01:06",
+     "sched_time_start": "13:35",
+     "sched_every": 2,
+     "limit": 29
+    }
+   ],
+   "compress": "0",
+   "cmp_file_check": "0",
+   "cmp_schedule": null,
+   "cmp_switch": "0",
+   "create_time": "1546850570",
+   "encrypt_switch": "0",
+   "mirr_file_check": "0",
+   "mirr_open_type": "0",
+   "mirr_sync_attr": "1",
+   "mirr_sync_flag": "0",
+   "mirr_skip": "0",
+   "random_str": "62965307-CCCF-B530-CF8B-22DB197BDF7A",
+   "secret_key": "",
+   "snapshot_interval": "24",
+   "snapshot_limit": "2",
+   "snapshot_policy": "0",
+   "snapshot_start": null,
+   "snapshot_switch": "0",
+   "bk_path_policy": "1",
+   "uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+   "wk_node_name": "192.168.25.11",
+   "bk_node_name": "192.168.25.12",
+   "wk_ip": "192.168.25.11",
+   "wk_port": "26821",
+   "bk_ip": "192.168.25.12",
+   "bk_port": "26821",
+   "username": "admin",
+   "backup_type": "0",
+   "boot_time": null,
+   "excl_path": [
+    "/cgroup/",
+    "/dev/",
+    "/etc/X11/xorg.conf/",
+    "/etc/init.d/i2node/",
+    "/etc/rc.d/init.d/i2node/",
+    "/etc/sdata/",
+    "/lost+found/",
+    "/media/",
+    "/mnt/",
+    "/proc/",
+    "/run/",
+    "/selinux/",
+    "/sys/",
+    "/tmp/",
+    "/usr/local/sdata/",
+    "/var/i2/",
+    "/var/i2data/",
+    "/var/lock/",
+    "/var/run/vmblock-fuse/"
+   ],
+   "failover": "2",
+   "fsp_name": "rrrrr",
+   "fsp_type": "3",
+   "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+   "fsp_wk_shut_flag": "2",
+   "wk_path": [
+    "/",
+    "/boot/"
+   ],
+   "wk_data_type": 1,
+   "heartbeat": "10",
+   "max_fail_times": "6",
+   "monitor_ips": "",
+   "monitor_type": 0,
+   "move_type": null,
+   "net_mapping": [],
+   "net_mapping_type": "2",
+   "post_over_script": "",
+   "pre_over_script": "",
+   "recovery_data_path": null,
+   "restore_point": null,
+   "running_service": [
+    "sshd"
+   ],
+   "snapshot": "0",
+   "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+   "status": null,
+   "sync_item": "/",
+   "bk_path": [
+    "/FSPback0107/"
+   ],
+   "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+   "bk_data_type": 0,
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "biz_grp_list": [],
+   "biz_grp_name": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackup
+body: {
+ "type": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspBackup
+body: {
+ "operate": "start",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopFspBackup
+body: {
+ "operate": "stop",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupStatus
+body: {
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+    "status": "M_STOP"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: finishFspBackup
+body: {
+ "operate": "finish",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10061113,
+  "message": "[10061113] The current state is not in place.",
+  "fail_list": [
+   {
+    "code": 10061113,
+    "message": "[10061113] The current state is not in place.",
+    "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+   }
+  ],
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspBackup
+body: {
+ "fsp_backup": {
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+  "secret_key": "",
+  "band_width": "3*03:00-19:00*16m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:50",
+    "sched_day": 22,
+    "sched_gap_min": 31,
+    "sched_time": "01:06",
+    "sched_time_start": "13:35",
+    "sched_every": 2,
+    "limit": 29
+   }
+  ],
+  "fsp_type": 1,
+  "random_str": "7E466745-8F79-268D-97AC-E9670E71D135"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackup
+body: {
+ "type": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspBackup
+body: {
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10031017,
+  "message": "[10031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspBackup
+body: {
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10031017,
+  "message": "[10031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackup
+body: {
+ "type": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
