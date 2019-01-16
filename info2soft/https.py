@@ -59,14 +59,6 @@ def _post(url, data, auth=None, headers=None):
 
 def _get(url, params=None, auth=None):
     try:
-        if params is not None:
-            for k, v in params.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(params[k], list):
-                    urlEnd = '&rep_uuids[]='
-                    url = url + '?rep_uuids[]=' + urlEnd.join(params[k])
-                    # 置空 params 防止 requests 又处理了一次 url
-                    params = {}
         r = requests.get(
             url, params=params, auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
             timeout=config.get_default('connection_timeout'), headers=_headers)

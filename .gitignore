@@ -5,6 +5,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 #自己增加的排除 xml iml 文件
+info2soft/config.py
+info2soft/common/token.txt
 *.xml
 *.iml
 # C extensions
