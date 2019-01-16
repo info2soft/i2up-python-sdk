@@ -127,9 +127,10 @@ class FspRecovery(object):
      '''
 
     def modifyFspRecovery(self, body):
-
-        url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
+        if body is None or 'fsp_uuid' not in body:
+            exit()
+        url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['fsp_uuid'])
+        del body['fsp_uuid']
         randomStr = https._get(url, None, self.auth)[0]['data']['fsp_recovery']['random_str']
         body['fsp_recovery']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
@@ -143,9 +144,9 @@ class FspRecovery(object):
      '''
 
     def desribeFspRecovery(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'fsp_uuid' not in body:
             exit()
-        url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['fsp_uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -223,7 +224,12 @@ class FspRecovery(object):
     def listFspRecoveryStatus(self, body):
 
         url = '{0}/fsp/recovery/status'.format(config.get_default('default_api_host'))
-
+        if body is not None:
+            for k, v in body.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(body[k], list):
+                    urlEnd = '&fsp_uuids[]='
+                    url = url + '?fsp_uuids[]=' + urlEnd.join(body[k])
         res = https._get(url, body, self.auth)
         return res
 
