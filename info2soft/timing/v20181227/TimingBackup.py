@@ -95,9 +95,9 @@ class TimingBackup (object):
      * @return array
      '''
     def describeTimingBackup(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'task_uuid' not in body:
             exit()
-        url = '{0}/timing/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/timing/backup/{1}'.format(config.get_default('default_api_host'), body['task_uuid'])
         
         res = https._get(url, None, self.auth)
         return res
@@ -110,9 +110,10 @@ class TimingBackup (object):
      * @return array
      '''
     def modifyTimingBackup(self, body):
-        
-        url = '{0}/timing/backup/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
+        if body is None or 'task_uuid' not in body:
+            exit()
+        url = '{0}/timing/backup/{1}'.format(config.get_default('default_api_host'), body['task_uuid'])
+        del body['task_uuid']
         randomStr = https._get(url, None, self.auth)[0]['data']['timing_backup']['random_str']
         body['timing_backup']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
@@ -140,7 +141,12 @@ class TimingBackup (object):
     def listTimingBackupStatus(self, body):
         
         url = '{0}/timing/backup/status'.format(config.get_default('default_api_host'))
-        
+        if body is not None:
+            for k, v in body.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(body[k], list):
+                    urlEnd = '&task_uuids[]='
+                    url = url + '?task_uuids[]=' + urlEnd.join(body[k])
         res = https._get(url, body, self.auth)
         return res
 
