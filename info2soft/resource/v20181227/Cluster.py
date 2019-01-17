@@ -16,7 +16,9 @@ class Cluster(object):
 
     def authCls(self, body):
         url = '{0}/cls/auth'.format(config.get_default('default_api_host'))
-
+        rsa = Rsa()
+        osPwd = rsa.rsaEncrypt(body['os_pwd'])
+        body.update({'os_pwd': osPwd})
         res = https._post(url, body, self.auth)
         return res
 
@@ -29,9 +31,7 @@ class Cluster(object):
 
     def verifyClsNode(self, body):
         url = '{0}/cls/node_verify'.format(config.get_default('default_api_host'))
-        rsa = Rsa()
-        osPwd = rsa.rsaEncrypt(body['os_pwd'])
-        body.update({'os_pwd': osPwd})
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -56,9 +56,9 @@ class Cluster(object):
      '''
 
     def describeCls(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'node_uuid' not in body['cls']:
             exit()
-        url = '{0}/cls/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/cls/{1}'.format(config.get_default('default_api_host'), body['cls']['node_uuid'])
 
         res = https._get(url, None, self.auth)
         return res
@@ -72,8 +72,10 @@ class Cluster(object):
      '''
 
     def modifyCls(self, body):
-        url = '{0}/cls/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
+        url = '{0}/cls/{1}'.format(config.get_default('default_api_host'), body['cls']['node_uuid'])
+        del body['cls']['node_uuid']
+        randomStr = https._get(url, None, self.auth)[0]['data']['cls']['random_str']
+        body['cls']['random_str'] = randomStr
         res = https._put(url, body, self.auth)
         return res
 
@@ -99,7 +101,12 @@ class Cluster(object):
 
     def listClsStatus(self, body):
         url = '{0}/cls/status'.format(config.get_default('default_api_host'))
-
+        if body is not None:
+            for k, v in body.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(body[k], list):
+                    urlEnd = '&node_uuids[]='
+                    url = url + '?node_uuids[]=' + urlEnd.join(body[k])
         res = https._get(url, body, self.auth)
         return res
 
