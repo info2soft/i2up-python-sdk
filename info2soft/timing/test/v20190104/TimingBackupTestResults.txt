@@ -500,3 +500,54 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: listTimingBackupMssqlDbList
+body: {
+ "wk_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
+ "mssql_settings": {
+  "win_verify": 0,
+  "instance_name": "MSSQLSERVER",
+  "pass_word": "123456",
+  "data_source": "WIN-EGKN86NF3PM",
+  "user_id": "sa"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "mssql_db_list": [
+   "master",
+   "tempdb",
+   "model",
+   "msdb",
+   "ReportServer",
+   "ReportServerTempDB",
+   "test",
+   "a1",
+   "test2",
+   "test3",
+   "test4"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descibeTimingBackupOracleSriptPath
+body: {
+ "wk_uuid": "B61C4858-748D-0253-0F2F-76669902A53D"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "script_path": "/etc/sdata/scripts"
+ }
+}
+-----------------------------------------------------------END>
+

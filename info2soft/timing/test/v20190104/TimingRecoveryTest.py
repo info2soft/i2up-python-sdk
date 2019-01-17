@@ -32,8 +32,8 @@ class TimingBackupTestCase(unittest.TestCase):
     def testListTimingRecoveryMssqlTime(self):
         a = Auth(username, pwd)
         body = {
-            'bk_uuid': '',
-            'rc_data_path': '',
+            'bk_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
+            'rc_data_path': 'E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\',
         }
         timingRecovery = TimingRecovery(a)
         r = timingRecovery.listTimingRecoveryMssqlTime(body)
@@ -45,7 +45,7 @@ class TimingBackupTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
             'rc_point_in_time': '2017-12-21_13-16-53',
-            'bk_uuid': '',
+            'bk_uuid': '11111111-1111-1111-1111-111111111111',
             'rc_data_path': '',
         }
         timingRecovery = TimingRecovery(a)
@@ -57,8 +57,8 @@ class TimingBackupTestCase(unittest.TestCase):
     def testListTimingRecoveryPathList(self):
         a = Auth(username, pwd)
         body = {
-            'rc_data_path': 'C:\\back\\',
-            'bk_uuid': '',
+            'rc_data_path': 'E:\\test3\\',
+            'bk_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
             'backup_task_uuid': '',
         }
         timingRecovery = TimingRecovery(a)
@@ -71,13 +71,12 @@ class TimingBackupTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
             'mssql_settings': {
-
                 'win_verify': 0,
-                'pass_word': '',
-                'instance_name': '',
-                'user_id': ''
+                'pass_word': '123456',
+                'instance_name': 'MSSQLSERVER',
+                'user_id': 'sa'
             },
-            'wk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
+            'wk_uuid': '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
         }
         timingRecovery = TimingRecovery(a)
         r = timingRecovery.verifyTimingRecoveryMssqlInfo(body)
