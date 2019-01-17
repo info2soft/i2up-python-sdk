@@ -39,7 +39,7 @@ class TimingBackupTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'TimingBackup', 'describeTimingBackupMssqlSource', body)
-
+    # 无用接口
     # def testVerifyTimingBackupOracleInfo(self):
     #     a = Auth(username, pwd)
     #     body = {
@@ -75,35 +75,34 @@ class TimingBackupTestCase(unittest.TestCase):
     #     assert r[0]['ret'] == 200
     #     write(r[0], 'TimingBackup', 'describeTimingBackupOracleContent', body)
 
-    # def testDescibeTimingBackupOracleSriptPath(self):
-    #     a = Auth(username, pwd)
-    #     body = {
-    #         'wk_uuid': '0DD4E727-70AB-62C6-BEB5-D012DFAE46E3',
-    #     }
-    #     timingBackup = TimingBackup(a)
-    #     r = timingBackup.descibeTimingBackupOracleSriptPath(body)
-    #     print(r[0])
-    #     assert r[0]['ret'] == 200
-    #     write(r[0], 'TimingBackup', 'descibeTimingBackupOracleSriptPath', body)
+    def testDescibeTimingBackupOracleSriptPath(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': 'B61C4858-748D-0253-0F2F-76669902A53D',
+        }
+        timingBackup = TimingBackup(a)
+        r = timingBackup.descibeTimingBackupOracleSriptPath(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'descibeTimingBackupOracleSriptPath', body)
 
-    # def testListTimingBackupMssqlDbList(self):
-    #     a = Auth(username, pwd)
-    #     body = {
-    #         'wk_uuid': '0DD4E727-70AB-62C6-BEB5-D012DFAE46E3',
-    #         'mssql_settings': {
-    #
-    #             'win_verify': 0,
-    #             'instance_name': '',
-    #             'pass_word': '',
-    #             'data_source': '',
-    #             'user_id': ''
-    #         }
-    #     }
-    #     timingBackup = TimingBackup(a)
-    #     r = timingBackup.listTimingBackupMssqlDbList(body)
-    #     print(r[0])
-    #     assert r[0]['ret'] == 200
-    #     write(r[0], 'TimingBackup', 'listTimingBackupMssqlDbList', body)
+    def testListTimingBackupMssqlDbList(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            'mssql_settings': {
+                'win_verify': 0,
+                'instance_name': 'MSSQLSERVER',
+                'pass_word': '123456',
+                'data_source': 'WIN-EGKN86NF3PM',
+                'user_id': 'sa'
+            }
+        }
+        timingBackup = TimingBackup(a)
+        r = timingBackup.listTimingBackupMssqlDbList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'listTimingBackupMssqlDbList', body)
 
     def testCreateTimingBackup(self):
         a = Auth(username, pwd)
@@ -197,7 +196,7 @@ class TimingBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'TimingBackup', 'describeTimingBackup', body)
 
-# 不支持修改
+    # 不支持修改
     # def testModifyTimingBackup(self):
     #     a = Auth(username, pwd)
     #     body = {
