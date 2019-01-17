@@ -19,7 +19,11 @@ def getToken(username, pwd):
         'access_token': ssoToken
     }
     res = https._get(url, data)
-    if res[0]['data']['code'] != 0 is None or token == '':
+    if res is not None:
+        code = res[0]['data']['code']
+    else:
+        code = -1
+    if code != 0 or token == '':
         url = '{0}/auth/token'.format(config.get_default('default_api_host'))
         data = {
             'username': username,
