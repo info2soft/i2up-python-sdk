@@ -22,15 +22,32 @@ class RepRecovery (object):
     '''
      * 1 获取单个任务
      * 
-     * @body['uuid'] String  必填 节点uuid
+     * @body['rep_recovery']['rc_uuid'] String  必填 节点uuid
      * @return array
      '''
     def describeRepRecovery(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'rc_uuid' not in body['rep_recovery']:
             exit()
-        url = '{0}/rep/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/rep/recovery/{1}'.format(config.get_default('default_api_host'), body['rep_recovery']['rc_uuid'])
         
         res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * 修改
+     * 
+     * @body['rep_recovery']['rc_uuid'] String  必填 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def modifyRepRecovery(self, body):
+        if body is None or 'rc_uuid' not in body['rep_recovery']:
+            exit()
+        url = '{0}/rep/recovery/{1}'.format(config.get_default('default_api_host'), body['rep_recovery']['rc_uuid'])
+        randomStr = https._get(url, None, self.auth)[0]['data']['rep_recovery']['random_str']
+        body['rep_recovery']['random_str'] = randomStr
+        res = https._put(url, body, self.auth)
         return res
 
     '''
@@ -95,8 +112,13 @@ class RepRecovery (object):
     def listRepRecoveryStatus(self, body):
         
         url = '{0}/rep/recovery/status'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, body, self.auth)
+        if body is not None:
+            for k, v in body.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(body[k], list):
+                    urlEnd = '&rc_uuids[]='
+                    url = url + '?rc_uuids[]=' + urlEnd.join(body[k])
+        res = https._get(url, None, self.auth)
         return res
 
     '''
