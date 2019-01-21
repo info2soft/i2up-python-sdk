@@ -1,0 +1,698 @@
+<START-----------------------------------------------------------
+Method: createUser
+body: {
+ "username": "test2",
+ "password": "l4INfWGIzGwSQzYrgI+IQoN/IDBa0yEE2Ip5LJFvBDfrpqATO6rkrJZt7JpQL93Gm5zpAVZcIrfT1WL4HTbnAjsia+5WlwwV+QAZ2m8hQDtlXCfhYoT4ZrIib3xNJH0vn5QJv+6EtJKEmdasPxRCV5/ENpjKeJYhMDRpUj1r2YGWeWvd2+gOtKBMEW2q6Ot1Kj9aCEZfSGf2qmmnZzI9L4y9EgI6xxoMaOnRb/d8NFQVikaxv5vvQ+t8S8nUZerznoCKKVBUYBFepWWoYLepepkxuZCRx/1oJPpIM2oqqop07tbEIRiNWkuB8KHVKlxFdgMfTFV7QFapCI8iEnqMSg==",
+ "roles": [
+  "3"
+ ],
+ "active": "1",
+ "email": "11@info2soft.com",
+ "mobile": "12366666666",
+ "comment": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUser
+body: {
+ "limit": 10,
+ "page": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "users": [
+   {
+    "id": "2",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "username": "admin",
+    "email": "test@info2soft.com",
+    "mobile": "15354254585",
+    "active": "1",
+    "first_name": "Admin",
+    "last_name": "default",
+    "address": "test",
+    "comment": "",
+    "company": "info2soft",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "2",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "user_uuid": "1EE80198-20FB-33F9-7C24-F835A34C7440",
+    "username": "auditor",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "auditor",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "4",
+      "user_id": "3",
+      "role_id": "4",
+      "name": "auditor",
+      "is_system": "1",
+      "allow_new_user": "0",
+      "display_name": "Auditor",
+      "description": "Business auditor",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "operator",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "5",
+      "user_id": "4",
+      "role_id": "5",
+      "name": "operator",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Operator",
+      "description": "Operation Clerk",
+      "dynamic_perms": "1"
+     }
+    ]
+   },
+   {
+    "id": "1",
+    "user_uuid": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+    "username": "system",
+    "email": "lis@info2soft.com",
+    "mobile": "12332145248",
+    "active": "1",
+    "first_name": "System",
+    "last_name": "default",
+    "address": null,
+    "comment": "",
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "1",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "user_uuid": "2BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DD",
+    "username": "sysadmin",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "System Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409132",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "2",
+      "user_id": "5",
+      "role_id": "2",
+      "name": "sysadmin",
+      "is_system": "1",
+      "allow_new_user": "0",
+      "display_name": "Administrator",
+      "description": "Super User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "9",
+    "user_uuid": "11111111-1111-1111-1111-111111111111",
+    "username": "test2",
+    "email": "11@info2soft.com",
+    "mobile": "12366666666",
+    "active": "1",
+    "first_name": null,
+    "last_name": null,
+    "address": null,
+    "comment": "",
+    "company": null,
+    "create_time": "1548060287",
+    "builtin": "0",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "9",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   }
+  ],
+  "total": 6
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUser
+body: {
+ "user_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "users": [
+   {
+    "id": "2",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "username": "admin",
+    "email": "test@info2soft.com",
+    "mobile": "15354254585",
+    "active": "1",
+    "first_name": "Admin",
+    "last_name": "default",
+    "address": "test",
+    "comment": "",
+    "company": "info2soft",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "2",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "user_uuid": "1EE80198-20FB-33F9-7C24-F835A34C7440",
+    "username": "auditor",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "auditor",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "4",
+      "user_id": "3",
+      "role_id": "4",
+      "name": "auditor",
+      "is_system": "1",
+      "allow_new_user": "0",
+      "display_name": "Auditor",
+      "description": "Business auditor",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "operator",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "5",
+      "user_id": "4",
+      "role_id": "5",
+      "name": "operator",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Operator",
+      "description": "Operation Clerk",
+      "dynamic_perms": "1"
+     }
+    ]
+   },
+   {
+    "id": "1",
+    "user_uuid": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+    "username": "system",
+    "email": "lis@info2soft.com",
+    "mobile": "12332145248",
+    "active": "1",
+    "first_name": "System",
+    "last_name": "default",
+    "address": null,
+    "comment": "",
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "1",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "user_uuid": "2BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DD",
+    "username": "sysadmin",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "System Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409132",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "2",
+      "user_id": "5",
+      "role_id": "2",
+      "name": "sysadmin",
+      "is_system": "1",
+      "allow_new_user": "0",
+      "display_name": "Administrator",
+      "description": "Super User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "9",
+    "user_uuid": "11111111-1111-1111-1111-111111111111",
+    "username": "test2",
+    "email": "11@info2soft.com",
+    "mobile": "12366666666",
+    "active": "1",
+    "first_name": null,
+    "last_name": null,
+    "address": null,
+    "comment": "",
+    "company": null,
+    "create_time": "1548060287",
+    "builtin": "0",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "9",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   }
+  ],
+  "total": 6
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUser
+body: {
+ "user_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "users": [
+   {
+    "id": "2",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "username": "admin",
+    "email": "test@info2soft.com",
+    "mobile": "15354254585",
+    "active": "1",
+    "first_name": "Admin",
+    "last_name": "default",
+    "address": "test",
+    "comment": "",
+    "company": "info2soft",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "2",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "user_uuid": "1EE80198-20FB-33F9-7C24-F835A34C7440",
+    "username": "auditor",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "auditor",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "4",
+      "user_id": "3",
+      "role_id": "4",
+      "name": "auditor",
+      "is_system": "1",
+      "allow_new_user": "0",
+      "display_name": "Auditor",
+      "description": "Business auditor",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "operator",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "5",
+      "user_id": "4",
+      "role_id": "5",
+      "name": "operator",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Operator",
+      "description": "Operation Clerk",
+      "dynamic_perms": "1"
+     }
+    ]
+   },
+   {
+    "id": "1",
+    "user_uuid": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+    "username": "system",
+    "email": "lis@info2soft.com",
+    "mobile": "12332145248",
+    "active": "1",
+    "first_name": "System",
+    "last_name": "default",
+    "address": null,
+    "comment": "",
+    "company": "",
+    "create_time": "1546409131",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "1",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "5",
+    "user_uuid": "2BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DD",
+    "username": "sysadmin",
+    "email": null,
+    "mobile": null,
+    "active": "1",
+    "first_name": "System Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": "1546409132",
+    "builtin": "1",
+    "roles": [
+     {
+      "id": "2",
+      "user_id": "5",
+      "role_id": "2",
+      "name": "sysadmin",
+      "is_system": "1",
+      "allow_new_user": "0",
+      "display_name": "Administrator",
+      "description": "Super User",
+      "dynamic_perms": "0"
+     }
+    ]
+   },
+   {
+    "id": "9",
+    "user_uuid": "11111111-1111-1111-1111-111111111111",
+    "username": "test2",
+    "email": "11@info2soft.com",
+    "mobile": "12366666666",
+    "active": "1",
+    "first_name": null,
+    "last_name": null,
+    "address": null,
+    "comment": "",
+    "company": null,
+    "create_time": "1548060287",
+    "builtin": "0",
+    "roles": [
+     {
+      "id": "3",
+      "user_id": "9",
+      "role_id": "3",
+      "name": "admin",
+      "is_system": "1",
+      "allow_new_user": "1",
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": "0"
+     }
+    ]
+   }
+  ],
+  "total": 6
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUserPwd
+body: {
+ "old_password": "Np6DCqFwDwohkFw/qlFDVB8KzishkCnPqvOldrJSBCtOiQQJCQK/dTTpOMsy45bwHpsuptH1G28ow9EEdTKttgzXBSqBsTQqJvyR7YMHBE0YlZZN7+N6IKBZPZ9uSzO2vGblRQPZBabOjI/Y+P5f9s2V1XPxQOKeRBNZU5c0EM1VAi4Wln52RAdhBUG9REqd6g6NlqVbZhRG77ip4Xa1gzbwxTEVr7MWDS/OOt0eI3AiZdtbNOZciZTZy50157pnQA08/E4Xr9c1kO2hvSm9E9woxv3LjpQeSOk8/K7slzzRoa+bitW6jc1aDummG3dhCDg7mggwYS0AU9XsZVoEkA==",
+ "password": "Ly2YVLL3GyXoMcQ82whpq1yVpLsSM9no19hTMCQeAEfBVENXv1s0ogRtYTj97tF8vQ8IU60PAQ0i44pRDyLgIFpEx0e7G/F5JDxyxItxLN0ct6xFseiMbOtyt1/A5O3FEFJ8MjlFKqWwlaOTfBrpLzFfMjcqP/keDgsEh133T8dt9u9kg5MDsoV57T+yl0k7MvHHXyy74Q1DP17Z2BYODSX8Mh3QM/EDkgJiJjARNpCjWfBtlPNvTQOHVrvWqF23GhQvoKjS6F4Ewyu1Zj8GjCTXkI4hR2+C2uDczpmju8dKpEQwtu9Fn5zkD97vfMPnYWfIsIwE9fJpmDS0YUqMnQ=="
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listProfile
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "profile": {
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "username": "admin",
+   "mobile": "15354254585",
+   "email": "test@info2soft.com",
+   "nickname": "test",
+   "company": "info2soft",
+   "address": "test",
+   "comment": "",
+   "pwd_change_time": "1548061276"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyProfile
+body: {
+ "mobile": "15354254585",
+ "email": "test@info2soft.com",
+ "nickname": "test",
+ "company": "info2soft",
+ "address": "test",
+ "comment": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: logout
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUser
+body: {
+ "ids": "20",
+ "username": "admin",
+ "password": "pDlQ8LoH8wSvM1Kk577Sv2RKOZOX4XmgGrZVduiJkTB/6WA/71eI46PYVK75hTeZr2MYa7ywhL3enyPWJvsBifJu6vrDMFZLsqQ/sbiZ6lVnHR9ZMRiIXyDyFlmiaUyVLR4nmh62ZXasRCUUTWjZanIOmgv2sBsAcV+uyEyo4Z5iWn/sH8efYscNu7XZp3+MYm6vvqkPu/zB9SGZB9Y5vIYjYbMsh1NOHDzESvYmuveHTESax7VHKfK4wOAhx6hHdRbjnf+5aT/ByyeER6l4sc91TiFRKZt/vv+n5IQ4pUhgCf0ehDA8j76zzwcr72Y4YYivl3cNNiDtWSvE/BIMJA==",
+ "roles": [
+  "3"
+ ],
+ "active": "1",
+ "email": "123@info2soft.com",
+ "mobile": "12332145248",
+ "comment": "",
+ "first_name": "",
+ "last_name": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001113,
+  "message": "[10001113] Fail to update user User does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteUser
+body: {
+ "ids": [
+  "20"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
