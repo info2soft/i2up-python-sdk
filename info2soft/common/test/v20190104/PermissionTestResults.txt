@@ -1,0 +1,27 @@
+<START-----------------------------------------------------------
+Method: listCategory
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "categories": [
+   "system",
+   "resource",
+   "template",
+   "rules",
+   "ha",
+   "nasSync",
+   "fsp",
+   "virtualSupport",
+   "timing",
+   "statistics",
+   "tools",
+   "notification"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
