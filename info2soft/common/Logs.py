@@ -12,7 +12,7 @@ class Logs (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def listTaskLog(self, body):
+    def listOpLog(self, body):
         
         url = '{0}/logs'.format(config.get_default('default_api_host'))
         
