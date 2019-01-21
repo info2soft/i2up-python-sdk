@@ -1,0 +1,241 @@
+<START-----------------------------------------------------------
+Method: describeCompare
+body: {
+ "compare": {
+  "task_uuid": "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "compare": {
+   "username": "admin",
+   "id": "16",
+   "bkup_one_time": 0,
+   "bkup_policy": 2,
+   "bkup_schedule": {
+    "limit": "",
+    "sched_day": [
+     1
+    ],
+    "sched_every": 0,
+    "sched_time": [
+     "00:00:00"
+    ],
+    "sched_time_end": "23:59",
+    "sched_time_start": "00:00",
+    "sched_gap_min": 60
+   },
+   "cmp_type": 0,
+   "compress": 0,
+   "create_time": 1547534390,
+   "end_time": 1547534389,
+   "excl_path": [],
+   "mirr_file_check": 1,
+   "random_str": "7D1EBECE-1C64-9329-BE1D-BAB0518A79A0",
+   "raw_uuid": null,
+   "result_sum": {
+    "state_code": 0,
+    "start_time": 1547534388,
+    "end_time": 1547534389,
+    "finish_in": 1,
+    "f_total": 0,
+    "total": 0,
+    "f_missing": 0,
+    "f_diff": 0,
+    "f_err": 0,
+    "f_skip": 0
+   },
+   "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "wk_path": [
+    "E:\\t\\"
+   ],
+   "start_time": 1547534390,
+   "status": "FINISH",
+   "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+   "bk_path": [
+    "E:\\t\\"
+   ],
+   "task_name": "test",
+   "task_type": 0,
+   "task_uuid": "88FE607E-6826-5F1F-FC70-9B3036DA79C6",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "ct_name_type": 0,
+   "ct_name_str1": "",
+   "ct_name_str2": "",
+   "ct_name_str3": null,
+   "ct_name_str4": null,
+   "oph_policy": 0,
+   "biz_grp_list": [],
+   "biz_grp_name": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompare
+body: {
+ "search_value": "",
+ "limit": 10,
+ "page": 1,
+ "search_field": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "move B 72.82",
+    "username": "admin",
+    "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "bkup_policy": 2,
+    "create_time": 1547534390,
+    "end_time": 1547534389,
+    "result_sum": {
+     "state_code": 0,
+     "start_time": 1547534388,
+     "end_time": 1547534389,
+     "finish_in": 1,
+     "f_total": 0,
+     "total": 0,
+     "f_missing": 0,
+     "f_diff": 0,
+     "f_err": 0,
+     "f_skip": 0
+    },
+    "start_time": 1547534390,
+    "status": "FINISH",
+    "task_name": "test",
+    "task_uuid": "88FE607E-6826-5F1F-FC70-9B3036DA79C6",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompareStatus
+body: {
+ "task_uuids": [
+  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "task_uuid": "88FE607E-6826-5F1F-FC70-9B3036DA79C6",
+    "status": "FINISH",
+    "result_sum": {
+     "state_code": 0,
+     "start_time": 1547534388,
+     "end_time": 1547534389,
+     "finish_in": 1,
+     "f_total": 0,
+     "total": 0,
+     "f_missing": 0,
+     "f_diff": 0,
+     "f_err": 0,
+     "f_skip": 0
+    },
+    "start_time": 1547534390
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadCompare
+body: {
+ "operate": "download",
+ "task_uuids": [
+  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "file_name": "CPR_20190121102112.zip",
+  "download_url": "/download/CPR_20190121102112.zip"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCompareResults
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCircleCompareResult
+body: {
+ "search_field": "",
+ "limit": 10,
+ "search_value": "",
+ "page": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCompare
+body: {
+ "task_uuids": [
+  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "task_uuid": "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

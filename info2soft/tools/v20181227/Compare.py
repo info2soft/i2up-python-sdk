@@ -26,9 +26,9 @@ class Compare (object):
      * @return array
      '''
     def describeCompare(self, body):
-        if body is None or 'uuid' not in body:
+        if body is None or 'task_uuid' not in body['compare']:
             exit()
-        url = '{0}/compare/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+        url = '{0}/compare/{1}'.format(config.get_default('default_api_host'), body['compare']['task_uuid'])
         
         res = https._get(url, None, self.auth)
         return res
@@ -38,7 +38,7 @@ class Compare (object):
      * 
      * @return array
      '''
-    def describeCompareResults(self, ):
+    def describeCompareResults(self):
         
         url = '{0}/logs'.format(config.get_default('default_api_host'))
         
@@ -67,8 +67,13 @@ class Compare (object):
     def listCompareStatus(self, body):
         
         url = '{0}/compare/status'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, body, self.auth)
+        if body is not None:
+            for k, v in body.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(body[k], list):
+                    urlEnd = '&task_uuids[]='
+                    url = url + '?task_uuids[]=' + urlEnd.join(body[k])
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -106,8 +111,8 @@ class Compare (object):
      '''
     def listCircleCompareResult(self, body):
         
-        url = '{0}/compare/{1}/result_list'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
+        url = '{0}/compare/{1}/result_list'.format(config.get_default('default_api_host'), body['task_uuid'])
+        del body['task_uuid']
         res = https._get(url, body, self.auth)
         return res
 
