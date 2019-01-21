@@ -55,7 +55,7 @@ class User (object):
     def deleteUser(self, body):
         
         url = '{0}/user'.format(config.get_default('default_api_host'))
-        
+
         res = https._delete(url, body, self.auth)
         return res
 

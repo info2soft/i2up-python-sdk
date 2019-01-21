@@ -29,10 +29,10 @@ class Settings(object):
      * @return array
      '''
 
-    def listSysSetting(self, ):
+    def listSysSetting(self, body):
         url = '{0}/sys/settings'.format(config.get_default('default_api_host'))
 
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
