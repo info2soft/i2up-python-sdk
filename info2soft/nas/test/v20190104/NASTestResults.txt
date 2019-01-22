@@ -1,0 +1,491 @@
+<START-----------------------------------------------------------
+Method: createNAS
+body: {
+ "compress": "",
+ "secret_key": "",
+ "wk_list": [
+  {
+   "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "wk_path": "E:\\nas\\"
+  }
+ ],
+ "nas_type": "0",
+ "sync_path": "",
+ "encrypt_switch": "0",
+ "band_width": "",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "E:\\t\\",
+ "sync_uuid": "",
+ "nas_name": "test2",
+ "cmp_schedule": [
+  {
+   "sched_every": 1,
+   "sched_time": [
+    "01:59"
+   ],
+   "sched_day": [
+    2
+   ]
+  }
+ ],
+ "cmp_file_check": 0,
+ "cmp_switch": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001017,
+  "message": "[10001017] Database op failed",
+  "fail_list": [
+   {
+    "code": 10001017,
+    "message": "[10001017] Database op failed",
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ],
+  "nas_uuid": "11111111-1111-1111-1111-111111111111",
+  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNAS
+body: {
+ "compress": "",
+ "secret_key": "",
+ "wk_list": [
+  {
+   "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "wk_path": "E:\\nas\\"
+  }
+ ],
+ "nas_type": "0",
+ "sync_path": "",
+ "encrypt_switch": "0",
+ "band_width": "",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "E:\\t\\",
+ "sync_uuid": "",
+ "nas_name": "test2",
+ "cmp_schedule": [
+  {
+   "sched_every": 1,
+   "sched_time": [
+    "01:59"
+   ],
+   "sched_day": [
+    2
+   ]
+  }
+ ],
+ "cmp_file_check": 0,
+ "cmp_switch": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNASGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "11111111-1111-1111-1111-111111111111",
+    "sync_node_name": null,
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\t\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "11111111-1111-1111-1111-111111111111",
+    "nas_name": "test2",
+    "nas_type": 0,
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "sync_path": "",
+    "sync_uuid": "",
+    "wk_path": "E:\\nas\\",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   },
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "0B3AD89C-9A3E-7BCA-1F94-E3D8E3C141D3",
+    "sync_node_name": "move B 72.82",
+    "wk_node_name": "move B 72.82",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\test\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "A434BAC3-2B05-4B25-7D91-9578A1F9825E",
+    "nas_name": "test",
+    "nas_type": 1,
+    "nas_uuid": "C62ED944-A31E-22AE-6F46-484C2BA4F63E",
+    "sync_path": "E:\\test\\",
+    "sync_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "wk_path": "E:\\t\\",
+    "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84"
+   },
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "0B3AD89C-9A3E-7BCA-1F94-E3D8E3C141D3",
+    "sync_node_name": "move B 72.82",
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\test\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "A434BAC3-2B05-4B25-7D91-9578A1F9825E",
+    "nas_name": "test",
+    "nas_type": 1,
+    "nas_uuid": "F46B65D7-BFDB-7CEA-EF45-544A834AC50B",
+    "sync_path": "E:\\test\\",
+    "sync_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "wk_path": "E:\\t\\",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNAS
+body: {
+ "limit": 10,
+ "page": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "11111111-1111-1111-1111-111111111111",
+    "sync_node_name": null,
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\t\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "11111111-1111-1111-1111-111111111111",
+    "nas_name": "test2",
+    "nas_type": 0,
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "sync_path": "",
+    "sync_uuid": "",
+    "wk_path": "E:\\nas\\",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   },
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "0B3AD89C-9A3E-7BCA-1F94-E3D8E3C141D3",
+    "sync_node_name": "move B 72.82",
+    "wk_node_name": "move B 72.82",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\test\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "A434BAC3-2B05-4B25-7D91-9578A1F9825E",
+    "nas_name": "test",
+    "nas_type": 1,
+    "nas_uuid": "C62ED944-A31E-22AE-6F46-484C2BA4F63E",
+    "sync_path": "E:\\test\\",
+    "sync_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "wk_path": "E:\\t\\",
+    "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84"
+   },
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "0B3AD89C-9A3E-7BCA-1F94-E3D8E3C141D3",
+    "sync_node_name": "move B 72.82",
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\test\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "A434BAC3-2B05-4B25-7D91-9578A1F9825E",
+    "nas_name": "test",
+    "nas_type": 1,
+    "nas_uuid": "F46B65D7-BFDB-7CEA-EF45-544A834AC50B",
+    "sync_path": "E:\\test\\",
+    "sync_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "wk_path": "E:\\t\\",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNASStatus
+body: {
+ "nas_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "status": "STOP",
+    "sync_status": ""
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startNAS
+body: {
+ "nas_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "operate": "start"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "nas_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopNAS
+body: {
+ "nas_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "operate": "stop"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "nas_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNASGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "11111111-1111-1111-1111-111111111111",
+    "sync_node_name": null,
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\t\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "11111111-1111-1111-1111-111111111111",
+    "nas_name": "test2",
+    "nas_type": 0,
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "sync_path": "",
+    "sync_uuid": "",
+    "wk_path": "E:\\nas\\",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   },
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "0B3AD89C-9A3E-7BCA-1F94-E3D8E3C141D3",
+    "sync_node_name": "move B 72.82",
+    "wk_node_name": "move B 72.82",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\test\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "A434BAC3-2B05-4B25-7D91-9578A1F9825E",
+    "nas_name": "test",
+    "nas_type": 1,
+    "nas_uuid": "C62ED944-A31E-22AE-6F46-484C2BA4F63E",
+    "sync_path": "E:\\test\\",
+    "sync_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "wk_path": "E:\\t\\",
+    "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84"
+   },
+   {
+    "band_width": "",
+    "encrypt_switch": "0",
+    "random_str": "0B3AD89C-9A3E-7BCA-1F94-E3D8E3C141D3",
+    "sync_node_name": "move B 72.82",
+    "wk_node_name": "N3_72.75",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "bk_path": "E:\\test\\",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "group_uuid": "A434BAC3-2B05-4B25-7D91-9578A1F9825E",
+    "nas_name": "test",
+    "nas_type": 1,
+    "nas_uuid": "F46B65D7-BFDB-7CEA-EF45-544A834AC50B",
+    "sync_path": "E:\\test\\",
+    "sync_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+    "wk_path": "E:\\t\\",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNAS
+body: {
+ "random_str": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNAS
+body: {
+ "compress": "",
+ "secret_key": "",
+ "wk_list": [
+  {
+   "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "wk_path": "E:\\nas\\"
+  }
+ ],
+ "nas_type": "0",
+ "sync_path": "",
+ "encrypt_switch": "1",
+ "band_width": "",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "E:\\t\\",
+ "sync_uuid": "",
+ "nas_name": "test2",
+ "cmp_schedule": [
+  {
+   "sched_every": 1,
+   "sched_time": [
+    "01:59"
+   ],
+   "sched_day": [
+    2
+   ]
+  }
+ ],
+ "cmp_file_check": 0,
+ "cmp_switch": 0,
+ "random_str": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "nas_uuid": "11111111-1111-1111-1111-111111111111",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNAS
+body: {
+ "nas_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "nas_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

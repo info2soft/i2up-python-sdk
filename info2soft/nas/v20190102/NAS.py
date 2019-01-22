@@ -28,9 +28,9 @@ class NAS (object):
      '''
     def describeNASGroup(self, body):
         
-        url = '{0}/nas/sync//group{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
-        res = https._get(url, body, self.auth)
+        url = '{0}/nas/sync//group{1}'.format(config.get_default('default_api_host'), body['group_uuid'])
+        del body['group_uuid']
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -42,8 +42,8 @@ class NAS (object):
      '''
     def modifyNAS(self, body):
         
-        url = '{0}/nas/sync//group{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
+        url = '{0}/nas/sync/{1}/group'.format(config.get_default('default_api_host'), body['group_uuid'])
+        del body['group_uuid']
         randomStr = https._get(url, None, self.auth)[0]['data']['nas']['random_str']
         body['random_str'] = randomStr
         res = https._put(url, body, self.auth)
@@ -54,11 +54,11 @@ class NAS (object):
      * 
      * @return array
      '''
-    def listNAS(self, ):
+    def listNAS(self, body):
         
         url = '{0}/nas/sync'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
