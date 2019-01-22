@@ -1,0 +1,162 @@
+<START-----------------------------------------------------------
+Method: describeVersion
+body: null
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "prod_type": "STD",
+  "version": "7.0.0.80",
+  "api_version": "2.0.0",
+  "bundle_version": "2e44b27",
+  "build_date": "20181018",
+  "migration_version": 20190116180716
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDatabase
+body: null
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "success update to latest version"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatistics
+body: {
+ "page": 1,
+ "end": 1848122966,
+ "name": "c",
+ "limit": 10,
+ "start": 1548122966,
+ "status": "",
+ "type": "",
+ "result": 0,
+ "group_uuid": "",
+ "uuid": ""
+}
+response: null
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: readStatistics
+body: {
+ "type": "I2VP_BK"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: overall
+body: null
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "node_num": 11,
+  "rep_num": 5,
+  "ha_num": 0,
+  "node": {
+   "UNKNOWN": 8,
+   "OFFLINE": 0,
+   "ONLINE": 3
+  },
+  "rep": {
+   "UNKNOWN": 1,
+   "FINISH": 0,
+   "STOP": 1,
+   "REPLICATION": 3,
+   "MIRROR": 0,
+   "EXCEPTION": 0,
+   "STALE": 0,
+   "SWITCH": 0,
+   "WAIT": 0,
+   "EXECUTING": 0,
+   "IDLE": 0,
+   "DEAD": 0
+  },
+  "ha": {
+   "master_status": {
+    "HA_UNKNOWN": 0,
+    "HA_STOP": 0,
+    "HA_START": 0,
+    "HA_RUN": 0,
+    "HA_MIRROR": 0,
+    "HA_READY": 0,
+    "HA_WARN": 0,
+    "HA_FAIL": 0
+   },
+   "master_role": {
+    "HA_UNKNOWN": 0,
+    "HA_UNJOIN": 0,
+    "HA_MASTER": 0,
+    "HA_SLAVE": 0,
+    "HA_PREOVER": 0,
+    "HA_POSTOVER": 0,
+    "HA_PREBACK": 0,
+    "HA_POSTBACK": 0,
+    "HA_SWITCH": 0
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStatistics
+body: {
+ "id": "2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "detail": {
+   "uuid": "D35717B8-0D09-8788-2893-03144698F656",
+   "name": "testRC",
+   "type": "I2VP_BK",
+   "stage": "1",
+   "policy": "1",
+   "sync_obj_num": "1",
+   "file_skiped_num": "0",
+   "start_time": "2019-01-07 13:08:35",
+   "end_time": "2019-01-07 13:08:35",
+   "trans_data_num": "",
+   "data_writed_num": "",
+   "src_type": "5",
+   "src_size": "",
+   "create_time": "2019-01-07 13:08:35",
+   "project_failed_num": "",
+   "dir_failed_num": "",
+   "dup_rate": "0%",
+   "space_occu": "",
+   "bkup_window": "",
+   "result": "error",
+   "tran_rate": "",
+   "used_time": "",
+   "data_size": "0"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
