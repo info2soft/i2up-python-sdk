@@ -2,7 +2,7 @@ import os
 import json
 
 
-def write(information, module, method, body):
+def write(information, module, method, body=None):
     path = os.getcwd()
     print(path)
     file = open(path + '/{0}TestResults.txt'.format(module), mode='a', encoding='UTF-8')

@@ -11,11 +11,11 @@ class DataBaseBackup (object):
      * 
      * @return array
      '''
-    def importConfig(self, ):
+    def importConfig(self, body):
         
         url = '{0}/cc/import'.format(config.get_default('default_api_host'))
         
-        res = https._post(url, None, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''

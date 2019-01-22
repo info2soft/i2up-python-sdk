@@ -18,3 +18,279 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: listOpLog
+body: {
+ "page": 1,
+ "end_time": 1,
+ "limit": 10,
+ "start_time": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTaskLog
+body: {
+ "uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C",
+ "level": 1,
+ "start": 1,
+ "page": 1,
+ "end": 1,
+ "limit": 10
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHALog
+body: {
+ "uuid": "",
+ "end": 1,
+ "level": 1,
+ "start": 1,
+ "node_uuid": "",
+ "page": 1,
+ "limit": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeLog
+body: {
+ "level": 1,
+ "page": 1,
+ "limit": 10,
+ "start": 1,
+ "uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "end": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrLog
+body: null
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTrafficLog
+body: {
+ "start_stamp": 1545637314,
+ "type": "month",
+ "uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "traffics": [
+   {
+    "start_time": 1545443906,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1545530306,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1545616706,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1545703106,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1545789506,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1545875906,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1545962306,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546048706,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546135106,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546221506,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546307906,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546394306,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546480706,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546567106,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546653506,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546739906,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546826306,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546912706,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1546999106,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547085506,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547171906,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547258306,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547344706,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547431106,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547517506,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547603906,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547690306,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547776706,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547863106,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1547949506,
+    "traffic": 0,
+    "speed": 0
+   },
+   {
+    "start_time": 1548035906,
+    "traffic": 0,
+    "speed": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

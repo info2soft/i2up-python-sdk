@@ -48,9 +48,10 @@ class GeneralInterface (object):
      * 
      * @return array
      '''
-    def describeStatistics(self, ):
-        
-        url = '{0}/statistics/:id([0-9] )'.format(config.get_default('default_api_host'))
+    def describeStatistics(self, body):
+        if body is None or 'id' not in body:
+            exit()
+        url = '{0}/statistics/{1}'.format(config.get_default('default_api_host'), body['id'])
         
         res = https._get(url, None, self.auth)
         return res

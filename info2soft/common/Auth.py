@@ -38,7 +38,7 @@ class Auth(object):
 
     def describePhoneCode(self):
         url = '{0}/auth/getPhoneCode'.format(config.get_default('default_api_host'))
-        r = https._post(url)
+        r = https._post(url, None, self)
         return r[0]['data']
 
     def regAccount(self):
