@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# from info2soft import zone
-
-API_HOST = 'http://192.168.25.101:58080/api'  # 数据处理操作Host
-
-# _BLOCK_SIZE = 1024 * 1024 * 4  # 断点续上传分块大小，该参数为接口规格，暂不支持修改
+# 数据Host
+# API_HOST = 'http://192.168.72.70:58080/api'
+API_HOST = ''
 
 _config = {
     'default_api_host': API_HOST,
