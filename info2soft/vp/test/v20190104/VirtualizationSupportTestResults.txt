@@ -1,0 +1,1988 @@
+<START-----------------------------------------------------------
+Method: createVp
+body: {
+ "comment": "",
+ "config_addr": "192.168.72.75",
+ "config_port": 58083,
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test",
+ "vp_type": 0,
+ "bind_lic_list": [],
+ "biz_grp_list": []
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVp
+body: {
+ "vp_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_platform": {
+   "username": "admin",
+   "vp_uuid": "11111111-1111-1111-1111-111111111111",
+   "vp_name": "test1",
+   "random_str": "11111111-1111-1111-1111-111111111111",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "vp_addr": "192.168.88.107",
+   "os_usr": "root",
+   "os_pwd": "12345678",
+   "config_addr": "192.168.72.75",
+   "config_port": 58083,
+   "comment": "",
+   "create_time": 1548141207,
+   "vp_type": 0,
+   "npsvr_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "biz_grp_list": [],
+   "biz_grp_name": [],
+   "bind_lic_list": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVp
+body: {
+ "comment": "",
+ "config_addr": "192.168.72.75",
+ "config_port": 58083,
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test1",
+ "vp_type": 0,
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "random_str": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVp
+body: {
+ "vp_uuid": "11111111-1111-1111-1111-111111111111",
+ "page": 1,
+ "limit": 10
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "vp_uuid": "11111111-1111-1111-1111-111111111111",
+    "vp_name": "test1",
+    "random_str": "11111111-1111-1111-1111-111111111111",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_addr": "192.168.88.107",
+    "os_usr": "root",
+    "os_pwd": "12345678",
+    "config_addr": "192.168.72.75",
+    "config_port": 58083,
+    "comment": "",
+    "create_time": 1548141207,
+    "vp_type": 0,
+    "npsvr_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   },
+   {
+    "username": "admin",
+    "vp_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+    "vp_name": "88.22",
+    "random_str": "11111111-1111-1111-1111-111111111111",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_addr": "192.168.88.22",
+    "os_usr": "administrator",
+    "os_pwd": "2",
+    "config_addr": "192.168.72.75",
+    "config_port": 58083,
+    "comment": "",
+    "create_time": 1546841760,
+    "vp_type": 0,
+    "npsvr_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+   },
+   {
+    "username": "admin",
+    "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+    "vp_name": "85.139",
+    "random_str": "CD304281-A3EE-59D7-308C-CD98C9DA84CA",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_addr": "192.168.85.139",
+    "os_usr": "root",
+    "os_pwd": "123qwe-=",
+    "config_addr": "192.168.72.75",
+    "config_port": 58083,
+    "comment": "",
+    "create_time": 1546833086,
+    "vp_type": 0,
+    "npsvr_uuid": null
+   },
+   {
+    "username": "admin",
+    "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+    "vp_name": "85.137",
+    "random_str": "D178FFE2-E512-BFA5-1550-AA7E6088897A",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_addr": "192.168.85.137",
+    "os_usr": "administrator",
+    "os_pwd": "123qwe-=",
+    "config_addr": "192.168.72.75",
+    "config_port": 58083,
+    "comment": "",
+    "create_time": 1546831306,
+    "vp_type": 0,
+    "npsvr_uuid": null
+   }
+  ],
+  "total": 4
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpStatus
+body: {
+ "vp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "vp_uuid": "11111111-1111-1111-1111-111111111111",
+    "status": "ONLINE"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVM
+body: {
+ "path": "/",
+ "force_rpc": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vm_list": [
+   {
+    "morval": "ha-datacenter",
+    "powerState": "0",
+    "ExistRuletype": "0",
+    "size": "",
+    "name": "ha-datacenter",
+    "time": "",
+    "supportCbt": "1",
+    "host_ip": "192.168.88.107",
+    "is_dir": "1",
+    "tmp_type": "2"
+   }
+  ],
+  "create_time": 1548141623
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpAttribute
+body: {
+ "vp_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "api_type": "HostAgent",
+  "api_version": "5.5",
+  "ip": "192.168.88.107"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVer
+body: {
+ "bk_path": "H:\\vp_bk5\\test2_BAK_vm-11880_192.168.88.22\\",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11111001,
+  "message": "[11111001] call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVer
+body: {
+ "bk_path": "H:\\vp_bk5\\test2_BAK_vm-11880_192.168.88.22\\",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   {
+    "last": {
+     "isroot": "",
+     "time": ""
+    },
+    "size": "2097152",
+    "time": "2018-12-27_10-40-45",
+    "backup_rule_uuid": "6277F526-6D3D-4A44-B323-B2D96AF85CEC",
+    "is_root": 49
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerInfo
+body: {
+ "vp_uuid": "11111111-1111-1111-1111-111111111111",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+ "group_uuid": "",
+ "time": "2019-01-07_13-10-45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   {
+    "anno": "",
+    "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139\\",
+    "cdrom": "",
+    "controller": "1,1000,100,3,0,3,noSharing,0",
+    "core_per_sock": "1",
+    "cpu": "1",
+    "dc": "ha-datacenter",
+    "disk": "2,[datastore1] \u6d4b\u8bd55/proxy gateway1.vmdk,persistent,1,2048,2000,1000,0,52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107,0,1",
+    "disk_count": "1",
+    "ds": "datastore1",
+    "floppy": "",
+    "guest_os_id": "rhel6_64Guest",
+    "hostname": "localhost.localdomain",
+    "nic": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+    "nic_count": "2",
+    "storeMem": "0",
+    "valid_data": 4194304,
+    "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+    "alt_name": "",
+    "chg_id": "52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107",
+    "vm_ref": "99",
+    "vm_version": "vmx-08",
+    "mem_mb": "1024",
+    "vm_name": "\u6d4b\u8bd55",
+    "disk_list": [
+     "proxy gateway1.vmdk"
+    ],
+    "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+    "time": "2019-01-07_13-10-45"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreFile
+body: {
+ "dir_file": "/",
+ "ds_name": "datastore107\uff081\uff09",
+ "dc_name": "ha-datacenter"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   {
+    "path": "/ISO/",
+    "name": "ISO"
+   },
+   {
+    "path": "/NexentaFusion 1.0.2.8/",
+    "name": "NexentaFusion 1.0.2.8"
+   },
+   {
+    "path": "/centos6.8_64bit/",
+    "name": "centos6.8_64bit"
+   },
+   {
+    "path": "/chenky_test/",
+    "name": "chenky_test"
+   },
+   {
+    "path": "/chenky_test_ha/",
+    "name": "chenky_test_ha"
+   },
+   {
+    "path": "/chenky_test_ha_1/",
+    "name": "chenky_test_ha_1"
+   },
+   {
+    "path": "/chenky_vp_test/",
+    "name": "chenky_vp_test"
+   },
+   {
+    "path": "/chenky_vp_test_ha_copy/",
+    "name": "chenky_vp_test_ha_copy"
+   },
+   {
+    "path": "/chenky_vp_test_move/",
+    "name": "chenky_vp_test_move"
+   },
+   {
+    "path": "/clean_win2012_standard/",
+    "name": "clean_win2012_standard"
+   },
+   {
+    "path": "/customer-i2share/",
+    "name": "customer-i2share"
+   },
+   {
+    "path": "/ericom/",
+    "name": "ericom"
+   },
+   {
+    "path": "/ericom_move/",
+    "name": "ericom_move"
+   },
+   {
+    "path": "/i2yun.com local/",
+    "name": "i2yun.com local"
+   },
+   {
+    "path": "/install-i2share/",
+    "name": "install-i2share"
+   },
+   {
+    "path": "/ls_vp_test(\u5173\u673a\u72b6\u6001)/",
+    "name": "ls_vp_test(\u5173\u673a\u72b6\u6001)"
+   },
+   {
+    "path": "/ls_vp_test(\u5f00\u673a\u72b6\u6001)_move/",
+    "name": "ls_vp_test(\u5f00\u673a\u72b6\u6001)_move"
+   },
+   {
+    "path": "/ls_vp_test_move/",
+    "name": "ls_vp_test_move"
+   },
+   {
+    "path": "/lvam_win2003 r2 32bit/",
+    "name": "lvam_win2003 r2 32bit"
+   },
+   {
+    "path": "/lvam_win2003 r2 32bit_138_ha/",
+    "name": "lvam_win2003 r2 32bit_138_ha"
+   },
+   {
+    "path": "/lvam_win2003 r2_32bit/",
+    "name": "lvam_win2003 r2_32bit"
+   },
+   {
+    "path": "/win2012/",
+    "name": "win2012"
+   },
+   {
+    "path": "/win2012_ctrl_ha/",
+    "name": "win2012_ctrl_ha"
+   },
+   {
+    "path": "/win2012_node1_ganl/",
+    "name": "win2012_node1_ganl"
+   },
+   {
+    "path": "/win2012_node2_ganl/",
+    "name": "win2012_node2_ganl"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenter
+body: {
+ "vp_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   {
+    "dc_mor": "ha-datacenter",
+    "dc_name": "ha-datacenter"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenterHost
+body: {
+ "dc_name": "ha-datacenter",
+ "dc_mor": "ha-datacenter"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   "dev-esxi.6.6.6"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastore
+body: {
+ "host_name": "dev-esxi.6.6.6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   "datastore107\uff081\uff09"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreInfo
+body: {
+ "ds_name": "datastore107\uff081\uff09"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "store_type": "VMFS",
+  "total": "924.00",
+  "free": "1.00"
+ }
+}
+-----------------------------------------------------------END>
+
+
+
+
+
+
+<START-----------------------------------------------------------
+Method: createVpBackup
+body: {
+ "del_bkup_data": 0,
+ "quiet_snap": 0,
+ "quick_back": 1,
+ "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+ "bk_path": "E:\\vp_bk5\\",
+ "vm_list": [
+  {
+   "vm_name": "\u6d4b\u8bd55",
+   "vm_ref": "vm-10811"
+  }
+ ],
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "lan_free": 23,
+ "rule_name": "vp_bk cky",
+ "bkup_policy": 0,
+ "bkup_one_time": 1546831899,
+ "bkup_schedule": [
+  {
+   "limit": 3,
+   "sched_day": [
+    1,
+    2,
+    3
+   ],
+   "sched_time": [
+    "00:00"
+   ],
+   "sched_every": 0,
+   "bkup_type": 0
+  }
+ ],
+ "biz_grp_list": [],
+ "rule_type": 0,
+ "band_width": "-1",
+ "compress": 0,
+ "mem_snap": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "vm_name": "\u6d4b\u8bd55"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackup
+body: {
+ "page": 1,
+ "limit": 10,
+ "type": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "vp_name": "85.137",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "rule_name": "vp_bk cky",
+    "vm_name": "\u6d4b\u8bd55",
+    "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "group_uuid": "11111111-1111-1111-1111-111111111111",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "rule_type": 0
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpBackup
+body: {
+ "rule_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_backup": {
+   "username": "admin",
+   "group_uuid": "11111111-1111-1111-1111-111111111111",
+   "rule_name": "vp_bk cky",
+   "rule_uuid": "11111111-1111-1111-1111-111111111111",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+   "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "vm_name": "\u6d4b\u8bd55",
+   "bk_path": "E:\\vp_bk5\\",
+   "quick_back": 1,
+   "bkup_policy": 0,
+   "del_bkup_data": 0,
+   "bkup_one_time": 1546831899,
+   "lan_free": 23,
+   "bkup_schedule": [
+    {
+     "limit": 3,
+     "sched_day": [
+      1,
+      2,
+      3
+     ],
+     "sched_time": [
+      "00:00"
+     ],
+     "sched_every": 0,
+     "bkup_type": 0
+    }
+   ],
+   "vm_ref": "vm-10811",
+   "quiet_snap": 0,
+   "create_time": 1548146009,
+   "random_str": "11111111-1111-1111-1111-111111111111",
+   "rule_type": 0,
+   "mem_snap": 0,
+   "band_width": "-1",
+   "status": null,
+   "compress": 0,
+   "biz_grp_list": [],
+   "biz_grp_name": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpBackupGroup
+body: {
+ "group_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_backup": {
+   "vp_name": "85.137",
+   "bk_node_name": "N3_72.75",
+   "group_uuid": "11111111-1111-1111-1111-111111111111",
+   "rule_name": "vp_bk cky",
+   "rule_uuid": "11111111-1111-1111-1111-111111111111",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+   "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "bk_path": "E:\\vp_bk5\\",
+   "quick_back": 1,
+   "bkup_policy": 0,
+   "del_bkup_data": 0,
+   "bkup_one_time": 1546831899,
+   "lan_free": 23,
+   "bkup_schedule": [
+    {
+     "limit": 3,
+     "sched_day": [
+      1,
+      2,
+      3
+     ],
+     "sched_time": [
+      "00:00"
+     ],
+     "sched_every": 0,
+     "bkup_type": 0
+    }
+   ],
+   "quiet_snap": 0,
+   "create_time": 1548146009,
+   "random_str": "11111111-1111-1111-1111-111111111111",
+   "rule_type": 0,
+   "mem_snap": 0,
+   "band_width": "-1",
+   "status": null,
+   "compress": 0,
+   "vm_list": [
+    {
+     "vm_name": "\u6d4b\u8bd55",
+     "vm_ref": "vm-10811",
+     "rule_uuid": "11111111-1111-1111-1111-111111111111"
+    }
+   ]
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackupGroup
+body: {
+ "page": 1,
+ "limit": 10,
+ "type": 0,
+ "where_args[bk_path]": "H:\\vp_bk5\\"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackupStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "status": "IDLE",
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpBackup
+body: {
+ "operate": "start",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpBackup
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpBackup
+body: {
+ "del_bkup_data": 0,
+ "quiet_snap": 0,
+ "quick_back": 1,
+ "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+ "bk_path": "E:\\vp_bk5\\",
+ "vm_list": [
+  {
+   "vm_name": "\u6d4b\u8bd55",
+   "vm_ref": "vm-10811"
+  }
+ ],
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "lan_free": 23,
+ "rule_name": "vp_bk cky",
+ "bkup_policy": 0,
+ "bkup_one_time": 1546831899,
+ "bkup_schedule": [
+  {
+   "limit": 3,
+   "sched_day": [
+    1,
+    2,
+    3
+   ],
+   "sched_time": [
+    "00:00"
+   ],
+   "sched_every": 0,
+   "bkup_type": 0
+  }
+ ],
+ "biz_grp_list": [],
+ "rule_type": 10,
+ "band_width": "-1",
+ "compress": 0,
+ "mem_snap": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpBackup
+body: {
+ "del_bkup_data": 0,
+ "quiet_snap": 0,
+ "quick_back": 1,
+ "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+ "bk_path": "E:\\vp_bk5\\",
+ "vm_list": [
+  {
+   "vm_name": "\u6d4b\u8bd55",
+   "vm_ref": "vm-10811"
+  }
+ ],
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "lan_free": 23,
+ "rule_name": "vp_bk cky",
+ "bkup_policy": 0,
+ "bkup_one_time": 1546831899,
+ "bkup_schedule": [
+  {
+   "limit": 3,
+   "sched_day": [
+    1,
+    2,
+    3
+   ],
+   "sched_time": [
+    "00:00"
+   ],
+   "sched_every": 0,
+   "bkup_type": 0
+  }
+ ],
+ "biz_grp_list": [],
+ "rule_type": 0,
+ "band_width": "-1",
+ "compress": 0,
+ "mem_snap": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001012,
+  "message": "[10001012] Operation faild"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpBackup
+body: {
+ "operate": "stop",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpRecovery
+body: {
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "new_ds": "datastore1",
+ "vm_list": [
+  {
+   "vm_cfg": {
+    "alt_name": "",
+    "anno": "",
+    "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139\\",
+    "cdrom": "",
+    "chg_id": "52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107",
+    "controller": "1,1000,100,3,0,3,noSharing,0",
+    "core_per_sock": "1",
+    "cpu": "1",
+    "dc": "ha-datacenter",
+    "disk": "2,[datastore1] \u6d4b\u8bd55/proxy gateway1.vmdk,persistent,1,2048,2000,1000,0,52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107,0,1",
+    "disk_count": "1",
+    "disk_list": [
+     "proxy gateway1.vmdk"
+    ],
+    "ds": "datastore1",
+    "floppy": "",
+    "guest_os_id": "rhel6_64Guest",
+    "hostname": "localhost.localdomain",
+    "mem_mb": "1024",
+    "nic": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+    "nic_count": "2",
+    "storeMem": "0",
+    "time": "2019-01-07_13-10-45",
+    "valid_data": 4194304,
+    "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+    "vm_name": "\u6d4b\u8bd55",
+    "vm_ref": "99",
+    "vm_version": "vmx-08",
+    "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2"
+   },
+   "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+   "vm_ref": "99",
+   "vm_name": "\u6d4b\u8bd55",
+   "disk_list": [
+    {
+     "disk_name": "proxy gateway1.vmdk",
+     "disk_path": "/",
+     "is_same": 1,
+     "new_ds": "datastore1"
+    }
+   ]
+  }
+ ],
+ "new_hostname": "localhost.localdomain",
+ "new_dc": "ha-datacenter",
+ "is_create": 0,
+ "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+ "new_ds_path": "/",
+ "new_vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+ "rule_name": "testRC cky",
+ "lan_free": 23,
+ "rule_type": 0,
+ "automate": 0,
+ "new_vm_name": "\u6d4b\u8bd55",
+ "new_dc_mor": "ha-datacenter",
+ "api_type": "HostAgent",
+ "biz_grp_list": [],
+ "cpu": 1,
+ "core_per_sock": 1,
+ "mem_mb": 1024,
+ "mac": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+ "group_recovery": 0,
+ "backup_rule_name": "testRC1",
+ "band_width": "-1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "vm_name": "\u6d4b\u8bd55"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpRecoveryGroup
+body: {
+ "group_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_recovery": {
+   "vp_name": "85.139",
+   "new_vp_name": "85.139",
+   "bk_node_name": "N3_72.75",
+   "group_uuid": "11111111-1111-1111-1111-111111111111",
+   "rule_type": 0,
+   "rule_uuid": "11111111-1111-1111-1111-111111111111",
+   "rule_name": "testRC cky",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+   "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "new_vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+   "new_dc": "ha-datacenter",
+   "new_ds": "datastore1",
+   "new_dc_mor": "ha-datacenter",
+   "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+   "new_ds_path": "/",
+   "new_hostname": "localhost.localdomain",
+   "new_vm_name": "\u6d4b\u8bd55",
+   "cpu": 1,
+   "core_per_sock": 1,
+   "mem_mb": 1024,
+   "mac": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+   "automate": 0,
+   "api_type": "HostAgent",
+   "group_recovery": 0,
+   "is_create": 0,
+   "lan_free": 23,
+   "create_time": 1548146570,
+   "random_str": "11111111-1111-1111-1111-111111111111",
+   "status": null,
+   "backup_rule_name": "testRC1",
+   "band_width": "-1",
+   "vm_list": [
+    {
+     "vm_name": "\u6d4b\u8bd55",
+     "vm_ref": "99",
+     "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+     "vm_cfg": {
+      "alt_name": "",
+      "anno": "",
+      "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139\\",
+      "cdrom": "",
+      "chg_id": "52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107",
+      "controller": "1,1000,100,3,0,3,noSharing,0",
+      "core_per_sock": "1",
+      "cpu": "1",
+      "dc": "ha-datacenter",
+      "disk": "2,[datastore1] \u6d4b\u8bd55/proxy gateway1.vmdk,persistent,1,2048,2000,1000,0,52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107,0,1",
+      "disk_count": "1",
+      "disk_list": [
+       "proxy gateway1.vmdk"
+      ],
+      "ds": "datastore1",
+      "floppy": "",
+      "guest_os_id": "rhel6_64Guest",
+      "hostname": "localhost.localdomain",
+      "mem_mb": "1024",
+      "nic": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+      "nic_count": "2",
+      "storeMem": "0",
+      "time": "2019-01-07_13-10-45",
+      "valid_data": 4194304,
+      "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+      "vm_name": "\u6d4b\u8bd55",
+      "vm_ref": "99",
+      "vm_version": "vmx-08",
+      "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2"
+     },
+     "disk_list": [
+      {
+       "disk_name": "proxy gateway1.vmdk",
+       "disk_path": "/",
+       "is_same": 1,
+       "new_ds": "datastore1"
+      }
+     ],
+     "rule_uuid": "11111111-1111-1111-1111-111111111111"
+    }
+   ]
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRecovery
+body: {
+ "type": 0,
+ "limit": 10,
+ "page": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "vp_name": "85.139",
+    "new_vp_name": "85.139",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "create_time": 1548146570,
+    "backup_rule_name": "testRC1",
+    "rule_name": "testRC cky",
+    "rule_type": 0,
+    "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+    "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+    "new_vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+    "vm_name": "\u6d4b\u8bd55",
+    "group_uuid": "11111111-1111-1111-1111-111111111111",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRecoveryStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "status": "VP_TRNS",
+    "progress": "4.0"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpRecovery
+body: {
+ "operate": "start",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpRecovery
+body: {
+ "operate": "stop",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clearFinishVpRecovery
+body: {
+ "operate": "clear_finish",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpRecovery
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpMove
+body: {
+ "new_ds": "103-\u6570\u636e\u76d8",
+ "support_cbt": 1,
+ "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "del_bkup_swap": 0,
+ "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "automate": 0,
+ "rule_name": "testMove1 cky",
+ "new_dc": "i2test",
+ "bk_path": "H:\\vp_rep\\",
+ "backup_type": "i",
+ "new_host": "192.168.88.103",
+ "quiet_snap": 1,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 19,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "quick_back": 1,
+ "del_bkup_data": 0,
+ "lan_free": 23,
+ "vm_list": [
+  {
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "vm_ref": "vm-11877",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "overwrite": 0
+  }
+ ],
+ "time_window": "",
+ "new_dc_mor": "datacenter-2",
+ "bkup_policy": 0,
+ "band_width": "-1",
+ "rule_type": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpMove
+body: {
+ "rule_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_move": {
+   "username": "admin",
+   "group_uuid": "11111111-1111-1111-1111-111111111111",
+   "rule_name": "testMove1 cky",
+   "automate": 0,
+   "backup_type": "i",
+   "rule_uuid": "11111111-1111-1111-1111-111111111111",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "quick_back": 1,
+   "lan_free": 23,
+   "new_dc": "i2test",
+   "new_dc_mor": "datacenter-2",
+   "new_ds": "103-\u6570\u636e\u76d8",
+   "new_host": "192.168.88.103",
+   "overwrite": 0,
+   "del_bkup_data": 0,
+   "del_bkup_swap": 0,
+   "bkup_schedule": {
+    "sched_time_start": "0",
+    "limit": 0,
+    "sched_day": 19,
+    "sched_every": 0,
+    "sched_time": [],
+    "sched_gap_min": 0
+   },
+   "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+   "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "vm_ref": "vm-11877",
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "create_time": 1548146797,
+   "bk_path": "H:\\vp_rep\\",
+   "quiet_snap": 1,
+   "status": null,
+   "rule_type": 1,
+   "random_str": "11111111-1111-1111-1111-111111111111",
+   "bkup_policy": 0,
+   "time_window": "",
+   "mem_snap": 0,
+   "band_width": "-1",
+   "biz_grp_list": [],
+   "biz_grp_name": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpMove
+body: {
+ "new_ds": "",
+ "support_cbt": 1,
+ "tgt_uuid": "",
+ "del_bkup_swap": 1,
+ "src_uuid": "fa2eEdD2-AA4d-ecB3-2C1C-bA6099FEcCeF",
+ "bk_uuid": "",
+ "automate": 1,
+ "rule_name": "",
+ "new_dc": "",
+ "bk_path": "",
+ "backup_type": "",
+ "new_host": "",
+ "quiet_snap": 1,
+ "bkup_schedule": [],
+ "quick_back": 1,
+ "del_bkup_data": 1,
+ "lan_free": 1,
+ "vm_list": [],
+ "time_window": "",
+ "new_dc_mor": "",
+ "bkup_policy": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001012,
+  "message": "[10001012] Operation faild"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMove
+body: {
+ "page": 1,
+ "limit": 10
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "src_name": "88.22",
+    "tgt_name": "88.22",
+    "bk_node_name": "N3_72.75",
+    "username": "admin",
+    "rule_name": "testMove1 cky",
+    "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+    "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+    "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "group_uuid": "11111111-1111-1111-1111-111111111111",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "rule_type": 1,
+    "bkup_policy": 0
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMoveStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] params invalid Following key type err: Key \"rule_uuids\" except \"array\" find \"string\", "
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMoveStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "status": "STOP",
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpMove
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRepPointList
+body: {
+ "rule_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpMove
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpRep
+body: {
+ "new_ds": "103-\u6570\u636e\u76d8",
+ "support_cbt": 1,
+ "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "del_bkup_swap": 0,
+ "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "automate": 0,
+ "rule_name": "testMove1 cky",
+ "new_dc": "i2test",
+ "bk_path": "H:\\vp_rep\\",
+ "backup_type": "i",
+ "new_host": "192.168.88.103",
+ "quiet_snap": 1,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 19,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "quick_back": 1,
+ "del_bkup_data": 0,
+ "lan_free": 23,
+ "vm_list": [
+  {
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "vm_ref": "vm-11877",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "overwrite": 0
+  }
+ ],
+ "time_window": "",
+ "new_dc_mor": "datacenter-2",
+ "bkup_policy": 0,
+ "band_width": "-1",
+ "rule_type": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpRep
+body: {
+ "rule_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_rep": {
+   "username": "admin",
+   "group_uuid": "11111111-1111-1111-1111-111111111111",
+   "rule_name": "testMove1 cky",
+   "automate": 0,
+   "backup_type": "i",
+   "rule_uuid": "11111111-1111-1111-1111-111111111111",
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "quick_back": 1,
+   "lan_free": 23,
+   "new_dc": "i2test",
+   "new_dc_mor": "datacenter-2",
+   "new_ds": "103-\u6570\u636e\u76d8",
+   "new_host": "192.168.88.103",
+   "overwrite": 0,
+   "del_bkup_data": 0,
+   "del_bkup_swap": 0,
+   "bkup_schedule": {
+    "sched_time_start": "0",
+    "limit": 0,
+    "sched_day": 19,
+    "sched_every": 0,
+    "sched_time": [],
+    "sched_gap_min": 0
+   },
+   "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+   "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "vm_ref": "vm-11877",
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "create_time": 1548147278,
+   "bk_path": "H:\\vp_rep\\",
+   "quiet_snap": 1,
+   "status": null,
+   "rule_type": 1,
+   "random_str": "11111111-1111-1111-1111-111111111111",
+   "bkup_policy": 0,
+   "time_window": "",
+   "mem_snap": 0,
+   "band_width": "-1",
+   "biz_grp_list": [],
+   "biz_grp_name": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpRep
+body: {
+ "new_ds": "",
+ "support_cbt": 1,
+ "tgt_uuid": "",
+ "del_bkup_swap": 1,
+ "src_uuid": "fa2eEdD2-AA4d-ecB3-2C1C-bA6099FEcCeF",
+ "bk_uuid": "",
+ "automate": 1,
+ "rule_name": "",
+ "new_dc": "",
+ "bk_path": "",
+ "backup_type": "",
+ "new_host": "",
+ "quiet_snap": 1,
+ "bkup_schedule": [],
+ "quick_back": 1,
+ "del_bkup_data": 1,
+ "lan_free": 1,
+ "vm_list": [],
+ "time_window": "",
+ "new_dc_mor": "",
+ "bkup_policy": 1
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001012,
+  "message": "[10001012] Operation faild"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRep
+body: {
+ "page": 1,
+ "limit": 10
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRepStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] params invalid Following key type err: Key \"rule_uuids\" except \"array\" find \"string\", "
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRepStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] params invalid Following key type err: Key \"rule_uuids\" except \"array\" find \"string\", "
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRepStatus
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "rule_uuid": "11111111-1111-1111-1111-111111111111",
+    "status": "STOP",
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpRep
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpRep
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpRep
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failoverVpRep
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failbackVpRep
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpRep
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ]
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpMove
+body: {
+ "operate": "stop",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpMove
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveVpMove
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failoverVpRep
+body: {
+ "operate": "failover",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failbackVpRep
+body: {
+ "operate": "failback",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
