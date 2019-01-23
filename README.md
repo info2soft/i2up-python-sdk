@@ -84,7 +84,7 @@ $ pip install pycrypto
     import sys
     # SDK 代码包所在位置需要加入 path 中。
     sys.path.append(r'C:\python_sdk')
-    from info2soft.rep.v20181227.RepBackup import RepBackup
+    from info2soft import RepBackup
     from info2soft import Auth
     
     username = 'admin'
