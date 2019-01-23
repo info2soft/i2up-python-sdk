@@ -1,24 +1,37 @@
-## Python SDK
-企业版接口SDK
-
-## 依赖
-pip install requests
-
-如果提示：You are using pip version 10.0.1, however version 18.1 is available.
-You should consider upgrading via the 'python -m pip install --upgrade pip' command.
-
-执行：python -m pip install --upgrade pip
-
-pip install simplejson
-
-pip install pytest
-
-pip3 install flake8
-
-pip3 install rsa
 
 
-pip install pycrypto,如果失败:
+## info2soft SDK for Python
+
+## 安装依赖如下
+
+通过pip
+
+
+```bash
+$ pip install requests
+```
+    如果提示：You are using pip version 10.0.1, however version 18.1 is available.
+    You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+```bash
+$ python -m pip install --upgrade pip
+```
+
+```bash
+$ pip install simplejson
+
+$ pip install pytest
+
+$ pip3 install flake8
+
+$ pip3 install rsa
+
+$ pip install pycrypto
+
+```
+
+
+如果出现以下失败情况:
 
     安装 Microsoft Visual C++ Build Tools
     
@@ -34,6 +47,7 @@ pip install pycrypto,如果失败:
     改为
     #include "stdint.h"
     
+    
     问题：
     error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\\link.exe' failed with exit status 1158
     
@@ -44,12 +58,79 @@ pip install pycrypto,如果失败:
     复制到
     C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin
     
+    
     问题：
     error: ModuleNotFoundError: No module named winrandom
     修改python3安装目录下的 lib/Crypto/Random/OSRNG/nt.py 文件中找到
     import winrandom
     改为
     from Crypto.Random.OSRNG import winrandom
+
+## 运行环境
+
+| info2soft SDK版本 | Python 版本 |
+|:--------------------:|:---------------------------:|
+|          7.x         |          3.x|
+
+
+## 使用方法
+
+###  获取复制规则列表
+...
+
+    # -*- coding: utf-8 -*-
+    # flake8: noqa
+    
+    import sys
+    # SDK 代码包所在位置需要加入 path 中。
+    sys.path.append(r'C:\python_sdk')
+    from info2soft.rep.v20181227.RepBackup import RepBackup
+    from info2soft import Auth
+    
+    username = 'admin'
+    pwd = 'Info1234'
+    
+    a = Auth(username, pwd)
+    body = {
+        'search_value': '',
+        'limit': 1,
+        'type': 1,
+        'page': 1,
+        'search_field': '',
+    }
+    repBackup = RepBackup(a)
+    ret, info = repBackup.listRepBackup(body)
+    if ret is not None:
+        print('All is OK')
+    else:
+        print(info) # error message in info
+    
+...
+
+## 常见问题
+
+- 上面的例子中第二个参数 info 保留了请求响应的信息，失败情况下 ret 为 none, 将 info 可以打印出来，提交给我们。
+- API 的使用 demo 可以参考 [模块测试](https://code.info2soft.com/web/sdk/python-sdk/tree/develop/info2soft/resource/test)。
+- 如果碰到`ImportError: No module named requests.auth` 请安装 `requests` 。
+
+
+##  API 接口入参参考
+- API 入参请参考 [API使用手册](https://i2up-api-doc.info2soft.com/apiref/)。
+
+
+## 代码贡献
+
+详情参考[代码提交指南](https://code.info2soft.com/web/sdk/python-sdk/CONTRIBUTING.md)。
+
+## 联系我们
+
+- 如果需要帮助，请联系邮箱: chengl@info2soft.com
+- 更详细的文档，见[官方文档站](https://code.info2soft.com/web/sdk/python-sdk)
+- 如果发现了bug， 欢迎提交 [issue](https://code.info2soft.com/web/sdk/python-sdk/issues)
+- 如果有功能需求，欢迎提交 [issue](https://code.info2soft.com/web/sdk/python-sdk/issues)
+- 如果要提交代码，欢迎提交 pull request
+
+
     
     
     
