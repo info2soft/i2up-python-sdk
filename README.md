@@ -2,7 +2,7 @@
 
 ## info2soft SDK for Python
 
-## 安装依赖如下
+## 安装
 
 通过pip
 
@@ -46,8 +46,9 @@ $ pip install pycrypto
     #include <stdint.h>
     改为
     #include "stdint.h"
-    
-    
+
+
+​    
     问题：
     error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\\link.exe' failed with exit status 1158
     
@@ -57,8 +58,9 @@ $ pip install pycrypto
     C:\Program Files (x86)\Windows Kits\8.1\bin\x86
     复制到
     C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin
-    
-    
+
+
+​    
     问题：
     error: ModuleNotFoundError: No module named winrandom
     修改python3安装目录下的 lib/Crypto/Random/OSRNG/nt.py 文件中找到
@@ -73,9 +75,10 @@ $ pip install pycrypto
 |          7.x         |          3.x|
 
 
-## 使用方法
+## 使用示例
 
 ###  获取复制规则列表
+
 ...
 
     # -*- coding: utf-8 -*-
@@ -104,7 +107,7 @@ $ pip install pycrypto
         print('All is OK')
     else:
         print(info) # error message in info
-    
+
 ...
 
 ## 常见问题
@@ -120,17 +123,15 @@ $ pip install pycrypto
 
 ## 代码贡献
 
-详情参考[代码提交指南](https://code.info2soft.com/web/sdk/python-sdk/CONTRIBUTING.md)。
+详情参考[代码提交指南](CONTRIBUTING.md)。
 
 ## 联系我们
 
-- 如果需要帮助，请联系邮箱: chengl@info2soft.com
+- 如果需要帮助，请联系邮箱: support@info2soft.com
 - 更详细的文档，见[官方文档站](https://code.info2soft.com/web/sdk/python-sdk)
-- 如果发现了bug， 欢迎提交 [issue](https://code.info2soft.com/web/sdk/python-sdk/issues)
-- 如果有功能需求，欢迎提交 [issue](https://code.info2soft.com/web/sdk/python-sdk/issues)
+- 如果发现了bug或功能需求， 欢迎提交 [issue](https://github.com/info2soft/i2up-python-sdk/issues)
 - 如果要提交代码，欢迎提交 pull request
 
 
-    
-    
+ 
     
