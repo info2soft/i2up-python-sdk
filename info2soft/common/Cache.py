@@ -8,7 +8,7 @@ def getToken(username, pwd):
     token = ''
     ssoToken = ''
     res = None
-    path = os.path.split(os.path.realpath(__file__))[0] + '/token.txt'
+    path = os.path.split(os.path.realpath(__file__))[0] + '/token.dat'
     lists = linecache.getlines(path)
     # 鉴定 token.txt 不为空
     if len(lists) != 0:
@@ -32,7 +32,7 @@ def getToken(username, pwd):
         r = https._post(url, data)
         token = r[0]['data']['token']
         ssoToken = r[0]['data']['sso_token']
-        with open(path, mode='r+', encoding='UTF-8') as tokenFile:
+        with open(path, mode='w+', encoding='UTF-8') as tokenFile:
             tokenFile.write(token + '\n' + ssoToken)
             tokenFile.close()
     return [token, ssoToken]
