@@ -77,6 +77,15 @@ $ pip install pycrypto
 
 ## 使用示例
 
+###   配置入口文件 config.py
+
+路径: /python_sdk/info2soft/config.py
+
+配置 `API_HOST` 参数为你的控制机 IP 地址即可
+
+    # API_HOST = 'http://127.0.0.1:58080/api'
+    
+
 ###  获取复制规则列表
 
 ...
