@@ -83,7 +83,7 @@ $ pip install pycrypto
 
 配置 `API_HOST` 参数为你的控制机 IP 地址即可
 
-    # API_HOST = 'http://127.0.0.1:58080/api'
+    # API_HOST = 'https://127.0.0.1:58080/api'
     
 
 ###  获取复制规则列表
