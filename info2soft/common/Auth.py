@@ -19,18 +19,18 @@ class Auth(object):
     def __init__(self, username, pwd):
         """初始化Auth类"""
         self.__checkKey(username, pwd)
-        self.__username = username
-        self.__pwd = pwd
+        self._username = username
+        self._pwd = pwd
         self._token = ''
         self._ssoToken = ''
         self.token()
 
     def get_username(self):
-        return self.__username
+        return self._username
 
     def token(self):
-        user = self.__username
-        pwd = self.__pwd
+        user = self._username
+        pwd = self._pwd
         r = getToken(user, pwd)
         self._token = r[0]
         self._ssoToken = r[1]
