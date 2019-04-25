@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# 数据Host
-# API_HOST = 'http://192.168.72.70:58080/api'
+# 数据 Host
+# API_HOST = 'https://192.168.7.250:58086/api'
 API_HOST = ''
 
 _config = {
