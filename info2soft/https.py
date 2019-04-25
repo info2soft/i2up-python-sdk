@@ -40,6 +40,7 @@ def _post(url, data, auth=None, headers=None):
         if headers is not None:
             for k, v in headers.items():
                 post_headers.update({k: v})
+        requests.packages.urllib3.disable_warnings()
         r = requests.post(
             url,
             data=data,
@@ -55,6 +56,7 @@ def _post(url, data, auth=None, headers=None):
 
 def _get(url, params=None, auth=None):
     try:
+        requests.packages.urllib3.disable_warnings()
         r = requests.get(
             url,
             params=params,
@@ -74,6 +76,7 @@ def _put(url, data, auth=None, headers=None):
         if headers is not None:
             for k, v in headers.items():
                 post_headers.update({k: v})
+        requests.packages.urllib3.disable_warnings()
         r = requests.put(
             url,
             data=data,
@@ -94,6 +97,7 @@ def _delete(url, data, auth=None, headers=None):
         if headers is not None:
             for k, v in headers.items():
                 post_headers.update({k: v})
+        requests.packages.urllib3.disable_warnings()
         r = requests.delete(
             url,
             data=data,
