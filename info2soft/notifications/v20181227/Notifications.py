@@ -115,3 +115,28 @@ class Notifications (object):
         res = https._get(url, None, self.auth)
         return res
 
+    '''
+     * 消息 添加
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def addNotifications(self, body):
+        url = '{0}/notifications'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 短信测试
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
+    def testNotificationsSms(self, body):
+        url = '{0}/notifications/sms_test'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
