@@ -19,3 +19,14 @@ class Permission (object):
         res = https._get(url, body, self.auth)
         return res
 
+    '''
+     *  类别权限
+     * 
+     * @return list
+     '''
+
+    def listCatPerms(self, ):
+        url = '{0}/permission/cat_perms'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, None, self.auth)
+        return res
