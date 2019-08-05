@@ -180,6 +180,20 @@ class VirtualizationSupport(object):
         return res
 
     '''
+     *  操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+
+    def updateDataAgentVp(self, body):
+
+        url = '{0}/vp/platform/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      *  查询 数据中心主机列表 （MOVE/REP）2
      * 
      * @body['uuid'] String  必填 节点uuid
@@ -736,5 +750,96 @@ class VirtualizationSupport(object):
         url = '{0}/vp/rep/{1}/point_list'.format(config.get_default('default_api_host'), body['rule_uuid'])
 
         res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 1 获取恢复虚机ip
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def describeVpFileRecoveryVmIp(self, body):
+
+        url = '{0}/vp/file_recovery/vm_ip'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 2 livecd磁盘分区
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def vpFileRecoveryLivecdPartition(self, body):
+
+        url = '{0}/vp/file_recovery/livecd_partition'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 新建
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def createVpFileRecovery(self, body):
+
+        url = '{0}/vp/file_recovery'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 获取单个
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @return list
+     '''
+    def describeVpFileRecovery(self, body):
+        if body is None or 'uuid' not in body: exit()
+        url = '{0}/vp/file_recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 获取列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def listVpFileRecovery(self, body):
+
+        url = '{0}/vp/file_recovery'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def listVpFileRecoveryStatus(self, body):
+
+        url = '{0}/vp/file_recovery/status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  文件恢复 - 删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def deleteVpFileRecovery(self, body):
+
+        url = '{0}/vp/file_recovery'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
         return res
 
