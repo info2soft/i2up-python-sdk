@@ -81,3 +81,29 @@ class GeneralInterface (object):
         res = https._get(url, None, self.auth)
         return res
 
+    '''
+     *  整体统计
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+    def listStatisticsChart(self, body):
+
+        url = '{0}/statistics/chart'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 平台监控（整体状态 VP）
+     * 
+     * @return list
+     '''
+    def upMonitorOverall(self, ):
+
+        url = '{0}/dashboard/up_monitor_overall'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, None, self.auth)
+        return res
+
+
