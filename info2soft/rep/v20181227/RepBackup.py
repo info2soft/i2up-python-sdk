@@ -6,6 +6,20 @@ from info2soft import https
 class RepBackup (object):
     def __init__(self, auth):
         self.auth = auth
+
+    '''
+     *  获取 cdp zfs池列表
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return list
+     '''
+    def listRepBackupCdpZfs(self, body):
+
+        url = '{0}/rep/backup/cdp_zfs'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
     '''
      * 新建规则
      * 
