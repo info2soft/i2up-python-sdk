@@ -122,8 +122,82 @@ class User (object):
     def logout(self, ):
         
         url = '{0}/user/logout'.format(config.get_default('default_api_host'))
-        
+
         res = https._post(url, None, self.auth)
         return res
 
+    '''
+     * ---- 密钥管理 -----
+     * 
+     * @return list
+     '''
+
+    '''
+     * AccessKey列表
+     * 
+     * @return list
+     '''
+
+    def listAk(self, ):
+        url = '{0}/ak'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * AccessKey新建
+     * 
+     * @return list
+     '''
+
+    def createAk(self, ):
+        url = '{0}/ak'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, None, self.auth)
+        return res
+
+    '''
+     * AccessKey更新
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+
+    def modifyAk(self, body):
+        url = '{0}/ak'.format(config.get_default('default_api_host'))
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * AccessKey删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+
+    def deleteAk(self, body):
+        url = '{0}/ak'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * ----  角色管理 -----
+     * 
+     * @return list
+     '''
+
+    '''
+     *  角色列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+     '''
+
+    def listRole(self, body):
+        url = '{0}/role'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
 
