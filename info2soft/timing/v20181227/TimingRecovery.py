@@ -13,6 +13,20 @@ class TimingRecovery(object):
      * @return array
      '''
 
+    def listTimingRecoveryDb2Time(self, body):
+
+        url = '{0}/timing/recovery/rc_db2_time'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 1 恢复 准备-2 恢复 获取还原时间点 - Mssql
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+
     def listTimingRecoveryMssqlTime(self, body):
 
         url = '{0}/timing/recovery/rc_mssql_time'.format(config.get_default('default_api_host'))
