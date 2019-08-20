@@ -14,16 +14,21 @@ class Auth(object):
     Attributes:
         username: 账号
         pwd: 密码
+        auth_type: 认证类型
+        access_key: 密钥
     """
 
-    def __init__(self, username, pwd):
+    def __init__(self, username, pwd, auth_type, access_key):
         """初始化Auth类"""
         self.__checkKey(username, pwd)
         self._username = username
         self._pwd = pwd
         self._token = ''
         self._ssoToken = ''
-        self.token()
+        self.auth_type = auth_type
+        self.access_key = access_key
+        if auth_type is 'token':
+            self.token()
 
     def get_username(self):
         return self._username

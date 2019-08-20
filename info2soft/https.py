@@ -7,6 +7,13 @@ import requests
 import json
 from requests.auth import AuthBase
 
+import time
+import uuid
+import random
+import struct
+import hmac
+import hashlib
+
 from info2soft.compat import is_py2, is_py3
 from info2soft import config
 import info2soft.common.Auth
@@ -21,7 +28,10 @@ USER_AGENT = 'info2softPython/{0} ({1}; ) Python/{2}'.format(__version__, _sys_i
 _headers = {
     'User-Agent': USER_AGENT,
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
+    'timestamp': '',
+    'Authorization': '',
+    'Signature': ''
     }
 
 
@@ -33,19 +43,28 @@ def __return_wrapper(resp):
     return ret, ResponseInfo(resp)
 
 
-def _post(url, data, auth=None, headers=None):
+def _post(url, data, auth=None, headers=None, head_config=None):
     try:
-        data = json.dumps(data)
-        post_headers = _headers.copy()
+        auth_type = auth.auth_type
+        token = auth.token
+        ak = auth.access_key
+        # 3eb647b1
+        data.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+
+        header_config = _generate_header(auth_type, token, ak, 'post', url, data.random)
+
         if headers is not None:
             for k, v in headers.items():
-                post_headers.update({k: v})
+                header_config.update({k: v})
         requests.packages.urllib3.disable_warnings()
+
+        data = json.dumps(data)
+
         r = requests.post(
             url,
             data=data,
             auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
-            headers=post_headers,
+            headers=header_config,
             timeout=config.get_default('connection_timeout'),
             verify=False
         )
@@ -56,12 +75,20 @@ def _post(url, data, auth=None, headers=None):
 
 def _get(url, params=None, auth=None):
     try:
+        auth_type = auth.auth_type
+        token = auth.token
+        ak = auth.access_key
+        # 3eb647b1
+        params.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+
+        header_config = _generate_header(auth_type, token, ak, 'get', url, params.random)
+
         requests.packages.urllib3.disable_warnings()
         r = requests.get(
             url,
             params=params,
             auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
-            timeout=config.get_default('connection_timeout'), headers=_headers,
+            timeout=config.get_default('connection_timeout'), headers=header_config,
             verify=False
         )
     except Exception as e:
@@ -71,17 +98,25 @@ def _get(url, params=None, auth=None):
 
 def _put(url, data, auth=None, headers=None):
     try:
+        auth_type = auth.auth_type
+        token = auth.token
+        ak = auth.access_key
+        # 3eb647b1
+        data.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+
+        header_config = _generate_header(auth_type, token, ak, 'put', url, data.random)
+
         data = json.dumps(data)
-        post_headers = _headers.copy()
+
         if headers is not None:
             for k, v in headers.items():
-                post_headers.update({k: v})
+                header_config.update({k: v})
         requests.packages.urllib3.disable_warnings()
         r = requests.put(
             url,
             data=data,
             auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
-            headers=post_headers,
+            headers=header_config,
             timeout=config.get_default('connection_timeout'),
             verify=False
         )
@@ -92,17 +127,25 @@ def _put(url, data, auth=None, headers=None):
 
 def _delete(url, data, auth=None, headers=None):
     try:
+        auth_type = auth.auth_type
+        token = auth.token
+        ak = auth.access_key
+        # 3eb647b1
+        data.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+
+        header_config = _generate_header(auth_type, token, ak, 'delete', url, data.random)
+
         data = json.dumps(data)
-        post_headers = _headers.copy()
+
         if headers is not None:
             for k, v in headers.items():
-                post_headers.update({k: v})
+                header_config.update({k: v})
         requests.packages.urllib3.disable_warnings()
         r = requests.delete(
             url,
             data=data,
             auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
-            headers=post_headers,
+            headers=header_config,
             timeout=config.get_default('connection_timeout'),
             verify=False
         )
@@ -126,6 +169,34 @@ def _post_with_token(url, data, token):
 
 def _post_with_auth(url, data, auth):
     return _post(url, data, info2soft.common.Auth.RequestsAuth(auth))
+
+
+# def _generate_signature(_, method, url):
+#     timestamp = int(round(time.time() * 1000))
+#     nonce = uuid.uuid4()
+#     sign_str = method.upper() + '\n' + url + '\n' + _ + '\n' + timestamp + '\n' + nonce
+#     signature = hmac.new("key", sign_str, digestmod=hashlib.sha256).digest()
+#     return signature
+
+
+def _generate_header(auth_type='token', token='', ak='', method='', url='', _=''):
+    timestamp = int(round(time.time() * 1000))
+    header_config = {
+        'User-Agent': USER_AGENT,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': token if auth_type is 'token' else '',
+        'ACCESS-KEY': ak if auth_type is 'ak' else '',
+        'timestamp': timestamp,
+        'Signature': ''
+    }
+
+    nonce = uuid.uuid4()
+    sign_str = method.upper() + '\n' + url + '\n' + _ + '\n' + timestamp + '\n' + nonce
+    signature = hmac.new("key", sign_str, digestmod=hashlib.sha256).digest()
+
+    header_config.Signature = signature
+    return header_config
 
 
 class ResponseInfo(object):
