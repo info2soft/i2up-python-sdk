@@ -14,8 +14,8 @@ class Auth(object):
     Attributes:
         username: 账号
         pwd: 密码
-        auth_type: 认证类型
-        access_key: 密钥
+        auth_type: 认证类型，token 或者 ak
+        access_key: 密钥, auth_type 为 ak 的时候需要
     """
 
     def __init__(self, username, pwd, auth_type, access_key):
