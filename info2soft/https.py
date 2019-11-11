@@ -52,10 +52,7 @@ def _post(url, data, auth=None, headers=None, head_config=None):
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        print('_generate_header in')
         header_config = _generate_header(auth_type, token, ak, 'post', url, data['_'])
-        print('header_config')
-        print(header_config)
 
         if headers is not None:
             for k, v in headers.items():
@@ -200,9 +197,19 @@ def _generate_header(auth_type='token', token='', ak='', method='', url='', _=''
     url_parse = urllib.parse.urlsplit(url)
     sign_str = method.upper() + '\n' + url_parse.path + '\n' + _ + '\n' + str(timestamp) + '\n' + str(nonce)
     # signature = hmac.new(token, sign_str, digestmod=hashlib.sha256).hexdigest()
-    signature_bytes = hmac.new(bytes(token or 'code', encoding='utf-8'),
-                               bytes(sign_str, encoding='utf-8'),
-                               digestmod=hashlib.sha256).digest()
+    # signature_bytes = ''
+    if auth_type == 'token':
+        signature_bytes = hmac.new(
+            bytes(token or 'token', encoding='utf-8'),
+            bytes(sign_str, encoding='utf-8'),
+            digestmod=hashlib.sha256
+        ).digest()
+    else:
+        signature_bytes = hmac.new(
+            bytes(ak or 'ak', encoding='utf-8'),
+            bytes(sign_str, encoding='utf-8'),
+            digestmod=hashlib.sha256
+        ).digest()
     signature = signature_bytes.hex().lower()
 
     header_config['Signature'] = signature
