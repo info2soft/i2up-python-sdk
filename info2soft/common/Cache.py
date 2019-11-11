@@ -7,22 +7,23 @@ import os
 def getToken(username, pwd):
     token = ''
     ssoToken = ''
-    res = None
-    path = os.path.split(os.path.realpath(__file__))[0] + '/token.dat'
+    # path = os.path.split(os.path.realpath(__file__))[0] + '/token.dat'
+    path = os.sep.join([os.path.split(os.path.realpath(__file__))[0], 'token.dat'])
     lists = linecache.getlines(path)
+    code = 0
     # 鉴定 token.txt 不为空
     if len(lists) != 0:
         token = lists[0].strip('\n')
         ssoToken = lists[1].strip('\n')
-    url = '{0}/auth/token'.format(config.get_default('default_api_host'))
-    data = {
-        'access_token': ssoToken
-    }
-    res = https._get(url, data)
-    if res is not None:
-        code = res[0]['data']['code']
-    else:
-        code = -1
+        url = '{0}/auth/token'.format(config.get_default('default_api_host'))
+        data = {
+            'access_token': ssoToken
+        }
+        res = https._get(url, data)
+        if res is not None:
+            code = res[0]['data']['code']
+        else:
+            code = -1
     if code != 0 or token == '':
         url = '{0}/auth/token'.format(config.get_default('default_api_host'))
         data = {

@@ -27,18 +27,22 @@ class Auth(object):
         self._ssoToken = ''
         self.auth_type = auth_type
         self.access_key = access_key
+        self.token = ''
+        self.ssoToken = ''
         if auth_type is 'token':
-            self.token()
+            self.get_token()
 
     def get_username(self):
         return self._username
 
-    def token(self):
+    def get_token(self):
         user = self._username
         pwd = self._pwd
         r = getToken(user, pwd)
         self._token = r[0]
         self._ssoToken = r[1]
+        self.token = r[0]
+        self.ssoToken = r[1]
         return self._token
 
     def describePhoneCode(self):
