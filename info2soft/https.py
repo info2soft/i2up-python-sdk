@@ -13,6 +13,7 @@ import random
 import struct
 import hmac
 import hashlib
+import urllib.parse
 
 from info2soft.compat import is_py2, is_py3
 from info2soft import config
@@ -45,13 +46,16 @@ def __return_wrapper(resp):
 
 def _post(url, data, auth=None, headers=None, head_config=None):
     try:
-        auth_type = auth.auth_type
-        token = auth.token
-        ak = auth.access_key
+        auth_type = 'token' if auth is None else auth.auth_type
+        token = '' if auth is None else auth.token
+        ak = '' if auth is None else auth.access_key
         # 3eb647b1
-        data.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+        data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'post', url, data.random)
+        print('_generate_header in')
+        header_config = _generate_header(auth_type, token, ak, 'post', url, data['_'])
+        print('header_config')
+        print(header_config)
 
         if headers is not None:
             for k, v in headers.items():
@@ -75,20 +79,21 @@ def _post(url, data, auth=None, headers=None, head_config=None):
 
 def _get(url, params=None, auth=None):
     try:
-        auth_type = auth.auth_type
-        token = auth.token
-        ak = auth.access_key
+        auth_type = 'token' if auth is None else auth.auth_type
+        token = '' if auth is None else auth.token
+        ak = '' if auth is None else auth.access_key
         # 3eb647b1
-        params.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+        params['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'get', url, params.random)
+        header_config = _generate_header(auth_type, token, ak, 'get', url, params['_'])
 
         requests.packages.urllib3.disable_warnings()
         r = requests.get(
             url,
             params=params,
             auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
-            timeout=config.get_default('connection_timeout'), headers=header_config,
+            timeout=config.get_default('connection_timeout'),
+            headers=header_config,
             verify=False
         )
     except Exception as e:
@@ -98,13 +103,13 @@ def _get(url, params=None, auth=None):
 
 def _put(url, data, auth=None, headers=None):
     try:
-        auth_type = auth.auth_type
-        token = auth.token
-        ak = auth.access_key
+        auth_type = 'token' if auth is None else auth.auth_type
+        token = '' if auth is None else auth.token
+        ak = '' if auth is None else auth.access_key
         # 3eb647b1
-        data.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+        data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'put', url, data.random)
+        header_config = _generate_header(auth_type, token, ak, 'put', url, data['_'])
 
         data = json.dumps(data)
 
@@ -127,13 +132,13 @@ def _put(url, data, auth=None, headers=None):
 
 def _delete(url, data, auth=None, headers=None):
     try:
-        auth_type = auth.auth_type
-        token = auth.token
-        ak = auth.access_key
+        auth_type = 'token' if auth is None else auth.auth_type
+        token = '' if auth is None else auth.token
+        ak = '' if auth is None else auth.access_key
         # 3eb647b1
-        data.random = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+        data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'delete', url, data.random)
+        header_config = _generate_header(auth_type, token, ak, 'delete', url, data['_'])
 
         data = json.dumps(data)
 
@@ -180,22 +185,28 @@ def _post_with_auth(url, data, auth):
 
 
 def _generate_header(auth_type='token', token='', ak='', method='', url='', _=''):
-    timestamp = int(round(time.time() * 1000))
+    timestamp = int(round(time.time() * 1000))/1000
+    nonce = uuid.uuid4()
     header_config = {
         'User-Agent': USER_AGENT,
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'Authorization': token if auth_type is 'token' else '',
         'ACCESS-KEY': ak if auth_type is 'ak' else '',
-        'timestamp': timestamp,
+        'timestamp': str(timestamp),
+        'nonce': str(nonce),
         'Signature': ''
     }
+    url_parse = urllib.parse.urlsplit(url)
+    sign_str = method.upper() + '\n' + url_parse.path + '\n' + _ + '\n' + str(timestamp) + '\n' + str(nonce)
+    # signature = hmac.new(token, sign_str, digestmod=hashlib.sha256).hexdigest()
+    signature_bytes = hmac.new(bytes(token or 'code', encoding='utf-8'),
+                               bytes(sign_str, encoding='utf-8'),
+                               digestmod=hashlib.sha256).digest()
+    signature = signature_bytes.hex().lower()
 
-    nonce = uuid.uuid4()
-    sign_str = method.upper() + '\n' + url + '\n' + _ + '\n' + timestamp + '\n' + nonce
-    signature = hmac.new("key", sign_str, digestmod=hashlib.sha256).digest()
+    header_config['Signature'] = signature
 
-    header_config.Signature = signature
     return header_config
 
 
