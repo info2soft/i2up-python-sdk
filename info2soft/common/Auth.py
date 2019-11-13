@@ -16,9 +16,10 @@ class Auth(object):
         pwd: 密码
         auth_type: 认证类型，token 或者 ak
         access_key: 密钥, auth_type 为 ak 的时候需要
+        secret_key: 密钥, auth_type 为 ak 的时候需要
     """
 
-    def __init__(self, username, pwd, auth_type, access_key):
+    def __init__(self, username, pwd, auth_type='token', access_key='', secret_key=''):
         """初始化Auth类"""
         self.__checkKey(username, pwd)
         self._username = username
@@ -27,6 +28,7 @@ class Auth(object):
         self._ssoToken = ''
         self.auth_type = auth_type
         self.access_key = access_key
+        self.secret_key = secret_key
         self.token = ''
         self.ssoToken = ''
         if auth_type is 'token':
