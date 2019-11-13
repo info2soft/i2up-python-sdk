@@ -49,10 +49,11 @@ def _post(url, data, auth=None, headers=None, head_config=None):
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
+        sk = '' if auth is None else auth.secret_key
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'post', url, data['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'post', url, data['_'])
 
         if headers is not None:
             for k, v in headers.items():
@@ -79,10 +80,11 @@ def _get(url, params=None, auth=None):
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
+        sk = '' if auth is None else auth.secret_key
         # 3eb647b1
         params['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'get', url, params['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'get', url, params['_'])
 
         requests.packages.urllib3.disable_warnings()
         r = requests.get(
@@ -103,10 +105,11 @@ def _put(url, data, auth=None, headers=None):
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
+        sk = '' if auth is None else auth.secret_key
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'put', url, data['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'put', url, data['_'])
 
         data = json.dumps(data)
 
@@ -132,10 +135,11 @@ def _delete(url, data, auth=None, headers=None):
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
+        sk = '' if auth is None else auth.secret_key
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, 'delete', url, data['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'delete', url, data['_'])
 
         data = json.dumps(data)
 
@@ -181,7 +185,7 @@ def _post_with_auth(url, data, auth):
 #     return signature
 
 
-def _generate_header(auth_type='token', token='', ak='', method='', url='', _=''):
+def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=''):
     timestamp = int(round(time.time() * 1000))/1000
     nonce = uuid.uuid4()
     header_config = {
@@ -206,7 +210,7 @@ def _generate_header(auth_type='token', token='', ak='', method='', url='', _=''
         ).digest()
     else:
         signature_bytes = hmac.new(
-            bytes(ak or 'ak', encoding='utf-8'),
+            bytes(sk or 'ak', encoding='utf-8'),
             bytes(sign_str, encoding='utf-8'),
             digestmod=hashlib.sha256
         ).digest()
