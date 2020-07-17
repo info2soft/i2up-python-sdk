@@ -20,7 +20,7 @@ def urlsafe_base64_encode(data):
     """urlsafe的base64编码:
 
     对提供的数据进行urlsafe的base64编码。规格参考：
-    https://developer.qiniu.com/kodo/manual/1231/appendix#1
+    详细编码规范请参考RFC4648标准中的相关描述。http://www.ietf.org/rfc/rfc4648.txt
 
     Args:
         data: 待编码的数据，一般为字符串
@@ -109,8 +109,6 @@ def _sha1(data):
 def etag_stream(input_stream):
     """计算输入流的etag:
 
-    etag规格参考 https://developer.qiniu.com/kodo/manual/1231/appendix#3
-
     Args:
         input_stream: 待计算etag的二进制流
 
@@ -145,8 +143,6 @@ def etag(filePath):
 
 def entry(bucket, key):
     """计算API中的数据格式:
-
-    entry规格参考 https://developer.qiniu.com/kodo/api/1276/data-format
 
     Args:
         bucket: 待操作的空间名
