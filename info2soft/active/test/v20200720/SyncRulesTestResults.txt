@@ -1,0 +1,667 @@
+<START-----------------------------------------------------------
+Method: describeSyncRulesObjInfo
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "BaeeC5C6-ceAD-A66b-dD5E-F05bD59Ad178",
+ "usr": "",
+ "sort": "",
+ "sort_order": "",
+ "search": "",
+ "_": "3de67690"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesDML
+body: {
+ "offset": 0,
+ "limit": "10",
+ "usr": "",
+ "rule_uuid": "bFAf6DA9-6Eef-1dE3-7fF7-22E9E1ccbf7b",
+ "sort_order": "asc",
+ "search": "",
+ "sort": "",
+ "_": "3f3e6682"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesHasSync
+body: {
+ "offset": "0",
+ "limit": 10,
+ "row_uuid": "b2528cf8-F0c9-CfFE-DDAe-dBfc3dFdFcb2",
+ "search": "",
+ "_": "3e46beb3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesFailObj
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "d9779eB3-Ee1c-F312-cc78-55f2BdFf4B5E",
+ "search": "",
+ "_": "3ed5648a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesFailObj
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "d9779eB3-Ee1c-F312-cc78-55f2BdFf4B5E",
+ "search": "",
+ "_": "3f179ba3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createSyncRules
+body: {
+ "rule_name": "ctt->ctt",
+ "src_db_uuid": " 1B1153F6-DAD9-BC39-888A-A743FCC208E5",
+ "tgt_db_uuid": " D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "tgt_type": "oracle",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [
+  {}
+ ],
+ "dbmap_topic": "",
+ "sync_mode": 1,
+ "start_scn": 1,
+ "full_sync_settings": {
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ]
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   "hh.ww"
+  ]
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "",
+    "user": "",
+    "process": "SKIP",
+    "addInfo": ""
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": ""
+ },
+ "error_handling": {
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp"
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "kafka_time_out|12000": "",
+ "part_load_balance": "",
+ "_": "3f2f8eea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createSyncRules
+body: {
+ "rule_name": "ctt->ctt",
+ "src_db_uuid": " 1B1153F6-DAD9-BC39-888A-A743FCC208E5",
+ "tgt_db_uuid": " D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "tgt_type": "oracle",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [
+  {}
+ ],
+ "dbmap_topic": "",
+ "sync_mode": 1,
+ "start_scn": 1,
+ "full_sync_settings": {
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ]
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   "hh.ww"
+  ]
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "",
+    "user": "",
+    "process": "SKIP",
+    "addInfo": ""
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": ""
+ },
+ "error_handling": {
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp"
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "kafka_time_out|12000": "",
+ "part_load_balance": "",
+ "_": "3f740c68"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesLoadInfo
+body: {
+ "rule_uuid": "",
+ "_": "3db0abd8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": {
+   "work": {
+    "name": null,
+    "uuid": null,
+    "process": 0,
+    "state": null,
+    "full_backup": [],
+    "threads": [],
+    "txn": {
+     "mem": "0 Bytes",
+     "mempeak": "0 Bytes",
+     "irp": null,
+     "drp": null,
+     "urp": null,
+     "qmi": null,
+     "txn": null,
+     "state": null
+    }
+   },
+   "back": {
+    "name": null,
+    "uuid": null,
+    "state": null,
+    "preprocess": null,
+    "ldType": null,
+    "extLdSt": null,
+    "process": 0,
+    "full_backup": [],
+    "loader_info": {
+     "actfail": null,
+     "actload": null,
+     "txndelay": "0s",
+     "maxdelay": "0s",
+     "scn": null,
+     "scnTime": " ",
+     "compress_rate": 0
+    },
+    "load_thread": []
+   },
+   "relay": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSyncRules
+body: {
+ "uuids": [
+  "DBED8CDE-435D-7865-76FE-149AA54AC7F7"
+ ],
+ "type": "",
+ "_": "3ea778cb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncRules
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "_": "3e74ad4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "src_db_name": "73.152ydb-relay",
+    "tgt_db_name": "73.153kfk_72.181",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "rule_uuid": "753431F0-2EE9-9D4B-C5E9-8344F7C04ADB",
+    "src_db_uuid": "C53B1620-E47F-B740-226F-B6ED4188F5F2",
+    "tgt_db_uuid": "1A5234D0-F453-FF1A-D96D-BA3F74E7AC4B",
+    "rule_type": 0,
+    "rule_name": "TEST4",
+    "node_uuid": "",
+    "tgt_type": "kafka",
+    "db_user_map": "{\"TEST4\":\"TEST4\"}",
+    "row_map_mode": "where",
+    "map_type": "user",
+    "table_map": "",
+    "dbmap_topic": "",
+    "sync_mode": "1",
+    "start_scn": "0",
+    "storage_settings": "{\"src_max_mem\":\"512\",\"src_max_disk\":\"5000\",\"txn_max_mem\":\"10000\",\"tf_max_size\":\"100\",\"max_ld_mem\":\"512\",\"tgt_extern_table\":\"\"}",
+    "table_space_map": "{\"tgt_table_space\":\"\",\"table_mapping_way\":\"ptop\",\"table_path_map\":[],\"table_space_name\":[]}",
+    "other_settings": "{\"keep_dyn_data\":0,\"dyn_thread\":1,\"dly_constraint_load\":0,\"zip_level\":0,\"ddl_cv\":0,\"keep_bad_act\":0,\"keep_usr_pwd\":0,\"convert_urp_of_key\":0,\"ignore_foreign_key\":0,\"gen_txn\":0}",
+    "error_handling": "{\"irp\":\"irpafterdel\",\"urp\":\"toirp\",\"drp\":\"ignore\",\"load_err_set\":\"continue\",\"report_failed_dml\":0}",
+    "bw_settings": "{\"bw_limit\":\"\"}",
+    "strate": null,
+    "full_sync_settings": "{\"existing_table\":\"drop_to_recycle\",\"load_mode\":\"direct\",\"ld_dir_opt\":0,\"his_thread\":1,\"try_split_part_table\":1,\"concurrent_table\":\"[]\",\"clean_user_before_dump\":0}",
+    "full_sync_obj_filter": "{\"full_sync_obj_data\":[\"INDEX\",\"VIEW\",\"FUNCTION\",\"PROCEDURE\",\"PACKAGE\",\"PACKAGE BODY\",\"SYNONYM\",\"TRIGGER\",\"SEQUENCE\",\"JAVA CLASS\",\"TYPE\",\"TYPE BODY\",\"MATERIALIZED VIEW\",\"DATABASE LINK\",\"OLD JOB\",\"JOB\",\"PRIVS\",\"CONSTRAINT\",\"JAVA RESOURCE\",\"JAVA SOURCE\"]}",
+    "inc_sync_ddl_filter": "{\"inc_sync_ddl_data\":[\"CREATE TABLE\",\"DROP TABLE\",\"ALTER TABLE\",\"TABLE ADD\",\"TABLE DROP\",\"TABLE MODIFY\",\"TABLE RENAME\",\"TRUNCATE TABLE\",\"MOVE TABLE\",\"CREATE COMMENT\",\"ADD PARTITION\",\"DROP PARTITION\",\"ADD SUBPARTITION\",\"DROP SUBPARTITION\",\"SPLIT PARTITION\",\"SPLIT SUBPARTITION\",\"MERGE SUBPARTITION\",\"MERGE PARTITION\",\"SWAP\",\"ALTER LVAL\",\"SET TEMPLATE\",\"CREATE INDEX\",\"DROP INDEX\",\"ALTER INDEX\",\"RENAME INDEX\",\"CREATE TYPE\",\"DROP TYPE\",\"CREATE VIEW\",\"DROP VIEW\",\"CREATE SYN\",\"DROP SYN\",\"ADD CONSTRAINT\",\"DROP CONSTRAINT\",\"ALTER CONSTRAINT\",\"CREATE SEQUENCE\",\"DROP SEQUENCE\",\"ALTER SEQUENCE\",\"CREATE ROLE\",\"DROP ROLE\",\"ALTER ROLE\",\"GRANT SYS\",\"GRANT OBJ\",\"REVOKE SYS\",\"REVOKE OBJ\",\"CREATE MVIEW LOG\",\"DROP MVIEW LOG\",\"CREATE MVIEW\",\"DROP MVIEW\",\"CREATE JAVA\",\"DROP JAVA\",\"CREATE CLASS\",\"DROP CLASS\",\"CREATE RESOURCE\",\"DROP RESOURCE\",\"CREATE PROFILE\",\"DROP PROFILE\",\"ALTER PROFILE\",\"CREATE PROC\",\"DROP PROC\",\"ALTER PROC\",\"CREATE DROP DBLINK\",\"CREATE QUEUE\",\"DROP QUEUE\",\"ALTER QUEUE\",\"CREATE TABLESPACE\",\"DROP TABLESPACE\",\"ALTER TABLESPACE\",\"RENAME TABLESPACE\",\"ADD HASH PARTITION\",\"SWAPS\",\"ADD CONSTRAINTS\"]}",
+    "filter_table_settings": "{\"exclude_table\":\"[]\"}",
+    "etl_settings": "{\"etl_table\":[]}",
+    "create_time": 1594957348,
+    "start_rule_now": "1",
+    "db_map_uuid": "",
+    "dml_track": "{\"enable\":0,\"urp\":0,\"drp\":0,\"tmcol\":\"\",\"delcol\":\"\"}",
+    "kafka_time_out": "2400000",
+    "part_load_balance": "by_table",
+    "kafka_message_encoding": "UTF-8",
+    "dst_producer_host": null,
+    "dst_producer_port": null,
+    "dst_broker_server": [
+     {
+      "ip": "172.20.72.181",
+      "port": "9092"
+     }
+    ],
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "src_db_name": "73.152ydb-relay",
+    "tgt_db_name": "73.153kfk_72.181",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "rule_uuid": "6B9C87D6-511B-375C-EE65-66DEFAC57447",
+    "src_db_uuid": "C53B1620-E47F-B740-226F-B6ED4188F5F2",
+    "tgt_db_uuid": "1A5234D0-F453-FF1A-D96D-BA3F74E7AC4B",
+    "rule_type": 0,
+    "rule_name": "test2",
+    "node_uuid": "",
+    "tgt_type": "kafka",
+    "db_user_map": "{\"TEST2\":\"test2\"}",
+    "row_map_mode": "rowid",
+    "map_type": "user",
+    "table_map": "",
+    "dbmap_topic": "",
+    "sync_mode": "1",
+    "start_scn": "0",
+    "storage_settings": "{\"src_max_mem\":\"512\",\"src_max_disk\":\"5000\",\"txn_max_mem\":\"10000\",\"tf_max_size\":\"100\",\"max_ld_mem\":\"512\",\"tgt_extern_table\":\"\"}",
+    "table_space_map": "{\"tgt_table_space\":\"\",\"table_mapping_way\":\"ptop\",\"table_path_map\":[],\"table_space_name\":[]}",
+    "other_settings": "{\"keep_dyn_data\":0,\"dyn_thread\":1,\"dly_constraint_load\":0,\"zip_level\":0,\"ddl_cv\":0,\"keep_bad_act\":0,\"keep_usr_pwd\":0,\"convert_urp_of_key\":0,\"ignore_foreign_key\":0,\"gen_txn\":0}",
+    "error_handling": "{\"irp\":\"irpafterdel\",\"urp\":\"toirp\",\"drp\":\"ignore\",\"load_err_set\":\"continue\",\"report_failed_dml\":0}",
+    "bw_settings": "{\"bw_limit\":\"\"}",
+    "strate": null,
+    "full_sync_settings": "{\"existing_table\":\"drop_to_recycle\",\"load_mode\":\"direct\",\"ld_dir_opt\":0,\"his_thread\":1,\"try_split_part_table\":1,\"concurrent_table\":\"[]\",\"clean_user_before_dump\":0}",
+    "full_sync_obj_filter": "{\"full_sync_obj_data\":[\"INDEX\",\"VIEW\",\"FUNCTION\",\"PROCEDURE\",\"PACKAGE\",\"PACKAGE BODY\",\"SYNONYM\",\"TRIGGER\",\"SEQUENCE\",\"JAVA CLASS\",\"TYPE\",\"TYPE BODY\",\"MATERIALIZED VIEW\",\"DATABASE LINK\",\"OLD JOB\",\"JOB\",\"PRIVS\",\"CONSTRAINT\",\"JAVA RESOURCE\",\"JAVA SOURCE\"]}",
+    "inc_sync_ddl_filter": "{\"inc_sync_ddl_data\":[\"CREATE TABLE\",\"DROP TABLE\",\"ALTER TABLE\",\"TABLE ADD\",\"TABLE DROP\",\"TABLE MODIFY\",\"TABLE RENAME\",\"TRUNCATE TABLE\",\"MOVE TABLE\",\"CREATE COMMENT\",\"ADD PARTITION\",\"DROP PARTITION\",\"ADD SUBPARTITION\",\"DROP SUBPARTITION\",\"SPLIT PARTITION\",\"SPLIT SUBPARTITION\",\"MERGE SUBPARTITION\",\"MERGE PARTITION\",\"SWAP\",\"ALTER LVAL\",\"SET TEMPLATE\",\"CREATE INDEX\",\"DROP INDEX\",\"ALTER INDEX\",\"RENAME INDEX\",\"CREATE TYPE\",\"DROP TYPE\",\"CREATE VIEW\",\"DROP VIEW\",\"CREATE SYN\",\"DROP SYN\",\"ADD CONSTRAINT\",\"DROP CONSTRAINT\",\"ALTER CONSTRAINT\",\"CREATE SEQUENCE\",\"DROP SEQUENCE\",\"ALTER SEQUENCE\",\"CREATE ROLE\",\"DROP ROLE\",\"ALTER ROLE\",\"GRANT SYS\",\"GRANT OBJ\",\"REVOKE SYS\",\"REVOKE OBJ\",\"CREATE MVIEW LOG\",\"DROP MVIEW LOG\",\"CREATE MVIEW\",\"DROP MVIEW\",\"CREATE JAVA\",\"DROP JAVA\",\"CREATE CLASS\",\"DROP CLASS\",\"CREATE RESOURCE\",\"DROP RESOURCE\",\"CREATE PROFILE\",\"DROP PROFILE\",\"ALTER PROFILE\",\"CREATE PROC\",\"DROP PROC\",\"ALTER PROC\",\"CREATE DROP DBLINK\",\"CREATE QUEUE\",\"DROP QUEUE\",\"ALTER QUEUE\",\"CREATE TABLESPACE\",\"DROP TABLESPACE\",\"ALTER TABLESPACE\",\"RENAME TABLESPACE\",\"ADD HASH PARTITION\",\"SWAPS\",\"ADD CONSTRAINTS\"]}",
+    "filter_table_settings": "{\"exclude_table\":\"[]\"}",
+    "etl_settings": "{\"etl_table\":[]}",
+    "create_time": 1594629950,
+    "start_rule_now": "1",
+    "db_map_uuid": "",
+    "dml_track": "{\"enable\":0,\"urp\":0,\"drp\":0,\"tmcol\":\"\",\"delcol\":\"\"}",
+    "kafka_time_out": "2400000",
+    "part_load_balance": "by_table",
+    "kafka_message_encoding": "UTF-8",
+    "dst_producer_host": null,
+    "dst_producer_port": null,
+    "dst_broker_server": [
+     {
+      "ip": "172.20.72.181",
+      "port": "9092"
+     }
+    ],
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "src_db_name": "73.152ydb-relay",
+    "tgt_db_name": "73.153kfk_72.181",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "rule_uuid": "0CEF3D65-0166-C49C-8A39-761054F0540F",
+    "src_db_uuid": "C53B1620-E47F-B740-226F-B6ED4188F5F2",
+    "tgt_db_uuid": "1A5234D0-F453-FF1A-D96D-BA3F74E7AC4B",
+    "rule_type": 0,
+    "rule_name": "bmtest",
+    "node_uuid": "",
+    "tgt_type": "kafka",
+    "db_user_map": "{\"BM\":\"bm\"}",
+    "row_map_mode": "rowid",
+    "map_type": "user",
+    "table_map": "",
+    "dbmap_topic": "",
+    "sync_mode": "1",
+    "start_scn": "0",
+    "storage_settings": "{\"src_max_mem\":\"512\",\"src_max_disk\":\"5000\",\"txn_max_mem\":\"10000\",\"tf_max_size\":\"100\",\"max_ld_mem\":\"512\",\"tgt_extern_table\":\"\"}",
+    "table_space_map": "{\"tgt_table_space\":\"\",\"table_mapping_way\":\"ptop\",\"table_path_map\":[],\"table_space_name\":[]}",
+    "other_settings": "{\"keep_dyn_data\":0,\"dyn_thread\":1,\"dly_constraint_load\":0,\"zip_level\":0,\"ddl_cv\":0,\"keep_bad_act\":0,\"keep_usr_pwd\":0,\"convert_urp_of_key\":0,\"ignore_foreign_key\":0,\"gen_txn\":0}",
+    "error_handling": "{\"irp\":\"irpafterdel\",\"urp\":\"toirp\",\"drp\":\"ignore\",\"load_err_set\":\"continue\",\"report_failed_dml\":0}",
+    "bw_settings": "{\"bw_limit\":\"\"}",
+    "strate": null,
+    "full_sync_settings": "{\"existing_table\":\"drop_to_recycle\",\"load_mode\":\"direct\",\"ld_dir_opt\":0,\"his_thread\":1,\"try_split_part_table\":1,\"concurrent_table\":\"[]\",\"clean_user_before_dump\":0}",
+    "full_sync_obj_filter": "{\"full_sync_obj_data\":[\"INDEX\",\"VIEW\",\"FUNCTION\",\"PROCEDURE\",\"PACKAGE\",\"PACKAGE BODY\",\"SYNONYM\",\"TRIGGER\",\"SEQUENCE\",\"JAVA CLASS\",\"TYPE\",\"TYPE BODY\",\"MATERIALIZED VIEW\",\"DATABASE LINK\",\"OLD JOB\",\"JOB\",\"PRIVS\",\"CONSTRAINT\",\"JAVA RESOURCE\",\"JAVA SOURCE\"]}",
+    "inc_sync_ddl_filter": "{\"inc_sync_ddl_data\":[\"CREATE TABLE\",\"DROP TABLE\",\"ALTER TABLE\",\"TABLE ADD\",\"TABLE DROP\",\"TABLE MODIFY\",\"TABLE RENAME\",\"TRUNCATE TABLE\",\"MOVE TABLE\",\"CREATE COMMENT\",\"ADD PARTITION\",\"DROP PARTITION\",\"ADD SUBPARTITION\",\"DROP SUBPARTITION\",\"SPLIT PARTITION\",\"SPLIT SUBPARTITION\",\"MERGE SUBPARTITION\",\"MERGE PARTITION\",\"SWAP\",\"ALTER LVAL\",\"SET TEMPLATE\",\"CREATE INDEX\",\"DROP INDEX\",\"ALTER INDEX\",\"RENAME INDEX\",\"CREATE TYPE\",\"DROP TYPE\",\"CREATE VIEW\",\"DROP VIEW\",\"CREATE SYN\",\"DROP SYN\",\"ADD CONSTRAINT\",\"DROP CONSTRAINT\",\"ALTER CONSTRAINT\",\"CREATE SEQUENCE\",\"DROP SEQUENCE\",\"ALTER SEQUENCE\",\"CREATE ROLE\",\"DROP ROLE\",\"ALTER ROLE\",\"GRANT SYS\",\"GRANT OBJ\",\"REVOKE SYS\",\"REVOKE OBJ\",\"CREATE MVIEW LOG\",\"DROP MVIEW LOG\",\"CREATE MVIEW\",\"DROP MVIEW\",\"CREATE JAVA\",\"DROP JAVA\",\"CREATE CLASS\",\"DROP CLASS\",\"CREATE RESOURCE\",\"DROP RESOURCE\",\"CREATE PROFILE\",\"DROP PROFILE\",\"ALTER PROFILE\",\"CREATE PROC\",\"DROP PROC\",\"ALTER PROC\",\"CREATE DROP DBLINK\",\"CREATE QUEUE\",\"DROP QUEUE\",\"ALTER QUEUE\",\"CREATE TABLESPACE\",\"DROP TABLESPACE\",\"ALTER TABLESPACE\",\"RENAME TABLESPACE\",\"ADD HASH PARTITION\",\"SWAPS\",\"ADD CONSTRAINTS\"]}",
+    "filter_table_settings": "{\"exclude_table\":\"[]\"}",
+    "etl_settings": "{\"etl_table\":[]}",
+    "create_time": 1594607598,
+    "start_rule_now": "1",
+    "db_map_uuid": "",
+    "dml_track": "{\"enable\":0,\"urp\":0,\"drp\":0,\"tmcol\":\"\",\"delcol\":\"\"}",
+    "kafka_time_out": "2400000",
+    "part_load_balance": "by_table",
+    "kafka_message_encoding": "UTF-8",
+    "dst_producer_host": null,
+    "dst_producer_port": null,
+    "dst_broker_server": [
+     {
+      "ip": "172.20.72.181",
+      "port": "9092"
+     }
+    ],
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncRulesStatus
+body: {
+ "uuids": [
+  "bb879aCB-6FD5-DCD1-d8E6-593A31EB9cEC",
+  "38bcE2De-A5D8-3FD9-fc3A-5e238CF772b3"
+ ],
+ "_": "3f0521ad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "has_false_rule": false,
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesMrtg
+body: {
+ "set_time": 1,
+ "type": "",
+ "interval": "\u65f6\u95f4\u95f4\u9694",
+ "set_time_init": "",
+ "rule_uuid": "",
+ "_": "3f7c77b0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesIncreDdl
+body: {
+ "offset": 0,
+ "limit": "10",
+ "rule_uuid": "f706174B-6B1f-8b06-9AA9-9ee53797EFbF",
+ "_": "3f19d6c5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": {
+   "error": {
+    "code": 10001017,
+    "message": "[10001017] Database op failed"
+   }
+  },
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

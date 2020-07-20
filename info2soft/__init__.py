@@ -65,5 +65,5 @@ from .tools.v20181227.Diagnose import Diagnose
 
 from .vp.v20181227.VirtualizationSupport import VirtualizationSupport
 
-
+from .active.v20200720.SyncRules import SyncRules
 
