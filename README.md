@@ -86,6 +86,21 @@ $ pip install pycrypto
     # API_HOST = 'https://127.0.0.1:58086/api'
     
 
+###   运行时对配置文件进行自定义
+
+> 可配置的参数可以参考 info2soft/config.py 的注释
+
+比如修改默认 host
+```
+
+...
+from info2soft import config
+
+config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
+...
+
+```
+
 ###  获取复制规则列表
 
 ...
