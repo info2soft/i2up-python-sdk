@@ -2,14 +2,25 @@
 
 ## info2soft SDK for Python
 
+## 运行环境
+
+| info2soft SDK版本 | Python 版本 |
+|:--------------------:|:---------------------------:|
+|          7.x         |          3.x|
+
+---
 ## 安装
 
-通过pip
+通过 `pip3`
 
+> 如果网络不好，可以使用清华大学镜像源
 
-```bash
-$ pip install requests
 ```
+$ pip3 install somePackage -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+```
+
+安装以下库
+
     如果提示：You are using pip version 10.0.1, however version 18.1 is available.
     You should consider upgrading via the 'python -m pip install --upgrade pip' command.
 
@@ -18,15 +29,17 @@ $ python -m pip install --upgrade pip
 ```
 
 ```bash
-$ pip install simplejson
+$ pip3 install requests
 
-$ pip install pytest
+$ pip3 install simplejson
+
+$ pip3 install pytest
 
 $ pip3 install flake8
 
 $ pip3 install rsa
 
-$ pip install pycrypto
+$ pip3 install pycrypto
 
 ```
 
@@ -68,12 +81,7 @@ $ pip install pycrypto
     改为
     from Crypto.Random.OSRNG import winrandom
 
-## 运行环境
-
-| info2soft SDK版本 | Python 版本 |
-|:--------------------:|:---------------------------:|
-|          7.x         |          3.x|
-
+---
 
 ## 使用示例
 
@@ -103,7 +111,7 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
 
 ###  获取复制规则列表
 
-...
+    ...
 
     # -*- coding: utf-8 -*-
     # flake8: noqa
@@ -132,7 +140,9 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
     else:
         print(info) # error message in info
 
-...
+    ...
+
+---
 
 ## 常见问题
 
