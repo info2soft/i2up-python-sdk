@@ -338,13 +338,7 @@ class VirtualizationSupport(object):
     def listVpBackupStatus(self, body):
 
         url = '{0}/vp/backup/status'.format(config.get_default('default_api_host'))
-        if body is not None:
-            for k, v in body.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(body[k], list):
-                    urlEnd = '&rule_uuids[]='
-                    url = url + '?rule_uuids[]=' + urlEnd.join(body[k])
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -563,13 +557,7 @@ class VirtualizationSupport(object):
     def listVpMoveStatus(self, body):
 
         url = '{0}/vp/move/status'.format(config.get_default('default_api_host'))
-        if body is not None:
-            for k, v in body.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(body[k], list):
-                    urlEnd = '&rule_uuids[]='
-                    url = url + '?rule_uuids[]=' + urlEnd.join(body[k])
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -680,13 +668,7 @@ class VirtualizationSupport(object):
     def listVpRepStatus(self, body):
 
         url = '{0}/vp/rep/status'.format(config.get_default('default_api_host'))
-        if body is not None:
-            for k, v in body.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(body[k], list):
-                    urlEnd = '&rule_uuids[]='
-                    url = url + '?rule_uuids[]=' + urlEnd.join(body[k])
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
