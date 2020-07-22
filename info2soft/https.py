@@ -82,6 +82,19 @@ def _get(url, params=None, auth=None):
         ak = '' if auth is None else auth.access_key
         sk = '' if auth is None else auth.secret_key
         # 3eb647b1
+        # 处理 get 请求各种状态接口传入 **uuids 数组类型，做数据处理
+        waitDel = ''
+        if params is not None:
+            for k, v in params.items():
+                # 如果包含了数组形式的数据需要处理一下 url
+                if isinstance(params[k], list):
+                    urlConnectTag = '%s%s%s' % ('&', k, '[]=')
+                    urlSub = urlConnectTag.join(params[k])
+                    urlConnectSub = '%s%s%s' % ('?', k, '[]=')
+                    url = '%s%s%s' % (url, urlConnectSub, urlSub)
+                    waitDel = k
+        if waitDel is not '':
+            params.pop(waitDel)
         params['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
         header_config = _generate_header(auth_type, token, ak, sk, 'get', url, params['_'])
