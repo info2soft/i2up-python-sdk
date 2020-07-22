@@ -101,12 +101,6 @@ class Cluster(object):
 
     def listClsStatus(self, body):
         url = '{0}/cls/status'.format(config.get_default('default_api_host'))
-        if body is not None:
-            for k, v in body.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(body[k], list):
-                    urlEnd = '&node_uuids[]='
-                    url = url + '?node_uuids[]=' + urlEnd.join(body[k])
         res = https._get(url, body, self.auth)
         return res
 

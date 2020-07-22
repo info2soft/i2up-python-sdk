@@ -141,12 +141,6 @@ class TimingBackup (object):
     def listTimingBackupStatus(self, body):
         
         url = '{0}/timing/backup/status'.format(config.get_default('default_api_host'))
-        if body is not None:
-            for k, v in body.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(body[k], list):
-                    urlEnd = '&task_uuids[]='
-                    url = url + '?task_uuids[]=' + urlEnd.join(body[k])
         res = https._get(url, body, self.auth)
         return res
 
