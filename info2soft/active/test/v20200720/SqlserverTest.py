@@ -1,9 +1,12 @@
 
 # -*- coding: utf-8 -*-
 # flake8: noqa
+import sys
+sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft.active.v20181227.Sqlserver import Sqlserver
+from info2soft import Sqlserver
+# from info2soft.active.v20200722.Sqlserver import Sqlserver
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -53,6 +56,7 @@ class SqlserverTestCase(unittest.TestCase):
             'drop_old_tab': 1,},
             '_': '95f4e88ab554',
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.createRule(body)
         print(r[0])
@@ -77,6 +81,7 @@ class SqlserverTestCase(unittest.TestCase):
             'tgt_db_uuid': '',
             'mirror_db_uuid': '',},],
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.batchCreateRule(body)
         print(r[0])
@@ -107,6 +112,7 @@ class SqlserverTestCase(unittest.TestCase):
             '_': '95f4e88ab554',
             'uuid': '',
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.modifyRule(body)
         print(r[0])
@@ -118,6 +124,7 @@ class SqlserverTestCase(unittest.TestCase):
         body = {
             'uuids': [],
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.deleteRule(body)
         print(r[0])
@@ -130,6 +137,7 @@ class SqlserverTestCase(unittest.TestCase):
             'operate': '',
             'uuids': '',
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.operateRule(body)
         print(r[0])
@@ -141,6 +149,7 @@ class SqlserverTestCase(unittest.TestCase):
         body = {
             'uuids': '',
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.listRuleStatus(body)
         print(r[0])
@@ -151,6 +160,7 @@ class SqlserverTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.checkName(body)
         print(r[0])
@@ -168,6 +178,7 @@ class SqlserverTestCase(unittest.TestCase):
             'where_args': {
             'rule_uuid': '',},
         }
+        
         sqlserver = Sqlserver(a)
         r = sqlserver.listRule(body)
         print(r[0])

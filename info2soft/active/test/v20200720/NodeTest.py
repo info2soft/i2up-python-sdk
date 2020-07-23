@@ -1,9 +1,12 @@
 
 # -*- coding: utf-8 -*-
 # flake8: noqa
+import sys
+sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft.active.v20181227.Node import Node
+from info2soft import Node
+# from info2soft.active.v20200722.Node import Node
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -34,6 +37,7 @@ class NodeTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        
         node = Node(a)
         r = node.listInactiveNodes(body)
         print(r[0])
@@ -51,6 +55,7 @@ class NodeTestCase(unittest.TestCase):
             'sort': '@pick{'name',address}',
             'search_value': '',
         }
+        
         node = Node(a)
         r = node.listNodes(body)
         print(r[0])
@@ -61,9 +66,10 @@ class NodeTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
             'uuids': [
-            '76BEbF87-ACE5-e4F7-Cff5-a6CDf1CAbDDf',
-            '028BAfb3-82bC-dFfC-1fFb-6fe6EbDC36EA',],
+            'ECe4aEFE-CF4d-2AE1-eD7A-a3dbB2eAB419',
+            'BFBaebeC-AC43-E92f-0ADF-F0c71b3ABBC8',],
         }
+        
         node = Node(a)
         r = node.listNodeStatus(body)
         print(r[0])
@@ -74,10 +80,11 @@ class NodeTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
             'registered': 1,
-            'node_uuid': 'eFd4542f-CD9F-180E-Fc2c-3a8A6eCB7f95',
+            'node_uuid': '750c83B6-e656-d12C-e98B-1A61675b93e4',
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         node = Node(a)
-        r = node.descriptNode(body)
+        r = node.descriptNode(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'descriptNode', body)
@@ -85,20 +92,20 @@ class NodeTestCase(unittest.TestCase):
     def testActiveNode(self):
         a = Auth(username, pwd)
         body = {
-            'node_name': 'Dorothy Hernandez',
-            'address': '22.67.77.42',
+            'node_name': 'Gary Wilson',
+            'address': '75.82.95.60',
             'data_port': '26804',
             'cache_dir': '/var/i2data/cache/',
-            'ipctoken': 'EDbd2d9A-Da3c-1cC1-7F63-e2AffaB2Cfc8',
+            'ipctoken': '82Fa2CFD-bC93-cbBB-5Fe6-d543C88693C8',
             'log_dir': '/var/i2data/log/',
-            'node_uuid': 'd1Ef6ABF-639e-6b86-62F9-2aEEFcBDE42f',
-            'registered': 0,
+            'node_uuid': 'b719ecBa-8187-D3BE-dB9C-cd30d5802BCD',
+            'registered': 1,
             'relay_node': 0,
-            'source_node': 0,
+            'source_node': 1,
             'back_node': 0,
             'active_flag': '0',
             'comment': 'string',
-            'web_uuid': 'FCc6b45B-DFfE-B031-5CBe-E72477eeFeB6',
+            'web_uuid': '0DC713bE-e93b-67dC-3DfD-34F5CDd44C9E',
             'port': {
             'iawork': '',
             'iaback': '',
@@ -109,6 +116,7 @@ class NodeTestCase(unittest.TestCase):
             'iamsg': '',
             'iagauss': '',},
         }
+        
         node = Node(a)
         r = node.activeNode(body)
         print(r[0])
@@ -119,20 +127,34 @@ class NodeTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
             'uuids': [
-            'e623BB5f-23A6-EA4b-Bd30-Eb7E43571670',
-            'cCEB1D8B-bAde-6D3e-d74B-6Eb6ec4BEC2F',],
+            '95215Ac5-A4f9-bA8A-991a-D89F8EAb79e2',
+            '3070f557-CACE-4Ae4-7b3e-fFC8Df9Ec0cD',],
         }
+        
         node = Node(a)
         r = node.deleteNode(body)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'deleteNode', body)
 
+    def testUpgradeNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+        
+        node = Node(a)
+        r = node.upgradeNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'upgradeNode', body)
+
     def testDescriptNodeDebugInfo(self):
         a = Auth(username, pwd)
         body = {
             'uuid': '41D1C1E8-60AE-4853-9694-5599560EEB0F',
         }
+        
         node = Node(a)
         r = node.descriptNodeDebugInfo(body)
         print(r[0])
@@ -142,20 +164,20 @@ class NodeTestCase(unittest.TestCase):
     def testModifyNode(self):
         a = Auth(username, pwd)
         body = {
-            'node_name': 'Michael Rodriguez',
-            'address': '19.2.98.158',
+            'node_name': 'Helen Clark',
+            'address': '246.73.219.231',
             'data_port': '26804',
             'cache_dir': '/var/i2data/cache/',
-            'iptoken': '6c58C56D-7A3b-d8C1-98cA-544417dAde8a',
+            'iptoken': 'B5E1f5fB-bAD9-DDaE-b4d1-D0a9fe46FD33',
             'logdir': '/var/i2data/log/',
-            'node_uuid': '763a7ce7-A58b-709a-2A4A-Ff9D4eB8622D',
+            'node_uuid': 'EEdf64f4-CEf7-B62c-a26e-3b3Bc89BcFf0',
             'registered': 1,
             'relay_node': 0,
             'source_node': 1,
             'back_node': 1,
             'active_flag': '0',
             'comment': 'string',
-            'web_uuid': 'a46Db2b3-A848-8be6-afED-DDBBdaDF69ce',
+            'web_uuid': 'a2dbD81B-8e87-bd59-cA2e-b5C9EAB738db',
             'port': {
             'iawork': '26804',
             'iaback': '26805',
@@ -166,22 +188,12 @@ class NodeTestCase(unittest.TestCase):
             'iamsg': '26810',
             'iaguass': '',},
         }
+        
         node = Node(a)
         r = node.modifyNode(body)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'modifyNode', body)
-
-    def testUpgradeNode(self):
-        a = Auth(username, pwd)
-        body = {
-            'uuids': [],
-        }
-        node = Node(a)
-        r = node.upgradeNode(body)
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'Node', 'upgradeNode', body)
 
 
 if __name__ == '__main__':

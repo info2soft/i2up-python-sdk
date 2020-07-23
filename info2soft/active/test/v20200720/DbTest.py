@@ -1,9 +1,12 @@
 
 # -*- coding: utf-8 -*-
 # flake8: noqa
+import sys
+sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft.active.v20181227.Db import Db
+from info2soft import Db
+# from info2soft.active.v20200722.Db import Db
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -39,6 +42,7 @@ class DbTestCase(unittest.TestCase):
             'search_value': '',
             'type': 'all',
         }
+        
         db = Db(a)
         r = db.listDbs(body)
         print(r[0])
@@ -48,15 +52,15 @@ class DbTestCase(unittest.TestCase):
     def testModifyDb(self):
         a = Auth(username, pwd)
         body = {
-            'db_name': 'Larry Martinez',
-            'db_uuid': 'E6A8407A-8AAe-299c-F442-Fd5E83dB35FA',
-            'node_uuid': 'aFcEAC9D-dcDA-d417-D073-2Ff41FCb509b',
+            'db_name': 'Jeffrey Anderson',
+            'db_uuid': '81d7CeD8-FdE6-C3C2-1FFE-d8b3B2aFB2fc',
+            'node_uuid': 'aD84af1f-FcFb-3d11-BbeC-Bf04E8FF9B2e',
             'db_type': 'oracle',
             'file_open_type': '0',
             'deploy_mode': '0',
             'log_read_type': 'file',
             'config': {
-            'username': 'Eric Lopez',
+            'username': 'Kevin Martinez',
             'password': '',
             'server_name': '',
             'port': 1,
@@ -77,15 +81,16 @@ class DbTestCase(unittest.TestCase):
             'db_list': [{
             'ip': '',
             'thread': '',},],
-            'producer_host': '173.73.53.184',
+            'producer_host': '251.122.55.221',
             'producer_port': 1,
             'broker_server': [{
-            'ip': '178.54.147.112',
+            'ip': '169.157.35.84',
             'port': 1,},],},
             'random_str': '',
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         db = Db(a)
-        r = db.modifyDb(body)
+        r = db.modifyDb(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Db', 'modifyDb', body)
@@ -93,14 +98,14 @@ class DbTestCase(unittest.TestCase):
     def testCheckDbLink(self):
         a = Auth(username, pwd)
         body = {
-            'db_name': 'Sharon Hall',
-            'node_uuid': 'ceBF6aaF-3F4b-08Af-c28C-EA185CCdB14A',
+            'db_name': 'Jason Harris',
+            'node_uuid': 'B5587B58-2A7f-E8fc-edCB-4Ac5BE3f46A4',
             'db_type': 'oracle',
             'file_open_type': 'DIRECT',
             'deploy_mode': 'single',
             'log_read_type': 'file',
             'config': {
-            'username': 'Robert Miller',
+            'username': 'Larry Garcia',
             'password': '',
             'server_name': '',
             'port': 1,
@@ -122,13 +127,14 @@ class DbTestCase(unittest.TestCase):
             'ip': '',
             'thread': '',
             'disable': '',},],
-            'producer_host': '49.160.23.205',
+            'producer_host': '176.6.142.208',
             'producer_port': 1,
             'broker_server': [{
-            'ip': '8.129.109.182',
+            'ip': '148.131.32.35',
             'port': 1,},],},
-            'db_uuid': 'fFaeCd8F-d482-bdD9-C4e7-79C6BD9e7809',
+            'db_uuid': 'Acc6B7E9-8f6D-fEfd-F13b-dcC26AB5DADf',
         }
+        
         db = Db(a)
         r = db.checkDbLink(body)
         print(r[0])
@@ -138,14 +144,14 @@ class DbTestCase(unittest.TestCase):
     def testCreateDb(self):
         a = Auth(username, pwd)
         body = {
-            'db_name': 'Charles Thomas',
-            'node_uuid': 'f7f7a85B-74b5-5920-3c9d-6fdE838Cbf7B',
+            'db_name': 'Sarah Thomas',
+            'node_uuid': 'F8C8f87d-f2be-469B-E2dB-CEEE8BEB1d9E',
             'db_type': 'oracle',
             'file_open_type': '0',
             'deploy_mode': '0',
             'log_read_type': 'file',
             'config': {
-            'username': 'Jose Williams',
+            'username': 'Sandra Wilson',
             'password': '',
             'server_name': '',
             'port': 1,
@@ -166,11 +172,11 @@ class DbTestCase(unittest.TestCase):
             'db_list': [{
             'ip': '',
             'thread': '',
-            'disable': 0,},],
-            'producer_host': '84.105.70.29',
+            'disable': 1,},],
+            'producer_host': '13.206.45.18',
             'producer_port': 1,
             'broker_server': [{
-            'ip': '50.173.70.141',
+            'ip': '111.184.153.42',
             'port': 1,},],
             'authentication': 'none',
             'principal': '',
@@ -188,10 +194,11 @@ class DbTestCase(unittest.TestCase):
             'pwd': '',
             'db': '',
             'dacport': '',},},
-            'db_uuid': 'Fe26e5bb-4567-c877-33Be-16C89A081c46',
+            'db_uuid': 'dCcBdaCa-cD9D-CD1B-FbDB-cAbD14Ce6B49',
             'db_mode': '',
-            'cdb': 'E69D3ABf-BbcB-896e-8cF8-bDC95BA9e278',
+            'cdb': 'FC8f8BfD-5618-bEf7-7BE3-38f7c9BebA2d',
         }
+        
         db = Db(a)
         r = db.createDb(body)
         print(r[0])
@@ -201,8 +208,9 @@ class DbTestCase(unittest.TestCase):
     def testDeleteDb(self):
         a = Auth(username, pwd)
         body = {
-            'uuids': '7C5B0EDB-6806-94c9-eFDe-99c86cf1e879',
+            'uuids': '3F5f266A-4cF4-2DD8-ADc9-1d3f04832c88',
         }
+        
         db = Db(a)
         r = db.deleteDb(body)
         print(r[0])
@@ -212,8 +220,9 @@ class DbTestCase(unittest.TestCase):
     def testListDbStatus(self):
         a = Auth(username, pwd)
         body = {
-            'uuids': 'b37FFF1d-4E68-8dc8-B4F9-5267a09d3c2B',
+            'uuids': '0bA6d94f-7EC3-F4AA-ab1D-Bc61434Cefcc',
         }
+        
         db = Db(a)
         r = db.listDbStatus(body)
         print(r[0])
@@ -223,8 +232,9 @@ class DbTestCase(unittest.TestCase):
     def testDescribeDbHealthInfo(self):
         a = Auth(username, pwd)
         body = {
-            'uuid': '2bc48e16-624F-ECda-4E3e-7CB31bdd799d',
+            'uuid': '80FbF65E-452E-64DF-F2A3-68Bfb28BBA5e',
         }
+        
         db = Db(a)
         r = db.describeDbHealthInfo(body)
         print(r[0])
@@ -234,8 +244,9 @@ class DbTestCase(unittest.TestCase):
     def testDescribeDbSpace(self):
         a = Auth(username, pwd)
         body = {
-            'uuid': 'FAcA8b92-3d15-7bbC-A7B1-19cDBF7dDEB0',
+            'uuid': 'fEfacB2b-d6eD-208D-a6c2-3dbEaadA27fc',
         }
+        
         db = Db(a)
         r = db.describeDbSpace(body)
         print(r[0])
@@ -246,8 +257,9 @@ class DbTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         db = Db(a)
-        r = db.describeDb(body)
+        r = db.describeDb(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Db', 'describeDb', body)
@@ -257,6 +269,7 @@ class DbTestCase(unittest.TestCase):
         body = {
             'type': 'db_csv',
         }
+        
         db = Db(a)
         r = db.importTemplate(body)
         print(r[0])
@@ -267,6 +280,7 @@ class DbTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        
         db = Db(a)
         r = db.batchCreateDbs(body)
         print(r[0])

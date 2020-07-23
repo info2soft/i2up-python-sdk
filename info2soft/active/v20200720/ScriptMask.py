@@ -48,12 +48,14 @@ class ScriptMask (object):
     '''
      * 获取脚本详细信息
      * 
+     * @body['uuid'] String  必填 节点uuid
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def descriptScript(self, body):
-        
-        url = '{0}/script/script/:id'.format(config.get_default('default_api_host'))
+    def descriptScript(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/script/script/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, body, self.auth)
         return res
@@ -113,12 +115,14 @@ class ScriptMask (object):
     '''
      * 获取规则详细信息
      * 
+     * @body['uuid'] String  必填 节点uuid
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def descriptRule(self, body):
-        
-        url = '{0}/script/rule/:id'.format(config.get_default('default_api_host'))
+    def descriptRule(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/script/rule/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, body, self.auth)
         return res
