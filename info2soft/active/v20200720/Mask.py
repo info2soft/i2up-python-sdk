@@ -126,12 +126,14 @@ class Mask (object):
     '''
      * 修改集合
      * 
+     * @body['uuid'] String  必填 节点uuid
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def modifyMap(self, body):
-        
-        url = '{0}/mask/sens_map/:id'.format(config.get_default('default_api_host'))
+    def modifyMap(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_map/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, body, self.auth)
         return res
@@ -152,11 +154,13 @@ class Mask (object):
     '''
      * 获取单个集合
      * 
+     * @body['uuid'] String  必填 节点uuid
      * @return list
     '''
-    def descriptMap(self, ):
-        
-        url = '{0}/mask/sens_map/:id'.format(config.get_default('default_api_host'))
+    def descriptMap(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_map/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
         return res
@@ -228,12 +232,14 @@ class Mask (object):
     '''
      * 修改敏感发现任务
      * 
+     * @body['uuid'] String  必填 节点uuid
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def modifySensCheck(self, body):
-        
-        url = '{0}/mask/sens_check/:uuid'.format(config.get_default('default_api_host'))
+    def modifySensCheck(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_check/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, body, self.auth)
         return res
@@ -267,11 +273,13 @@ class Mask (object):
     '''
      * 获取单个任务详情
      * 
+     * @body['uuid'] String  必填 节点uuid
      * @return list
     '''
-    def descriptSensCheck(self, ):
-        
-        url = '{0}/mask/sens_check/:uuid'.format(config.get_default('default_api_host'))
+    def descriptSensCheck(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_check/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
         return res

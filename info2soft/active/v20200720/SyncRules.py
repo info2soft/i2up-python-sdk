@@ -25,7 +25,7 @@ class SyncRules (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def describeSyncRules(self, body):
+    def describeSyncRulesDML(self, body):
         
         url = '{0}/active/rule/incre_dml_summary'.format(config.get_default('default_api_host'))
         
@@ -181,10 +181,11 @@ class SyncRules (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def describeSyncRules(self, body):
+    def describeSyncRules(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/rule/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        url = '{0}/active/rule/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
         res = https._get(url, body, self.auth)
         return res
 
@@ -233,9 +234,10 @@ class SyncRules (object):
      * @body['uuid'] String  必填 节点uuid
      * @return list
     '''
-    def describeObjCmp(self, body):
-        if body is None or 'uuid' not in body: exit()
-        url = '{0}/active/obj_cmp/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+    def describeObjCmp(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/obj_cmp/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
         return res
@@ -267,6 +269,19 @@ class SyncRules (object):
         return res
 
     '''
+     * 获取对象比较状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listObjCmpStatus(self, body):
+        
+        url = '{0}/active/obj_cmp/status'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 比较结果的删除
      * 
      * @param dict $body  参数详见 API 手册
@@ -293,19 +308,6 @@ class SyncRules (object):
         return res
 
     '''
-     * 获取对象比较状态
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def listObjCmpStatus(self, body):
-        
-        url = '{0}/active/obj_cmp/status'.format(config.get_default('default_api_host'))
-        
-        res = https._post(url, body, self.auth)
-        return res
-
-    '''
      *  新建
      * 
      * @param dict $body  参数详见 API 手册
@@ -325,10 +327,11 @@ class SyncRules (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def describeObjFix(self, body):
+    def describeObjFix(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/obj_fix/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        url = '{0}/active/obj_fix/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
         res = https._get(url, body, self.auth)
         return res
 
@@ -404,10 +407,11 @@ class SyncRules (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def describeTbCmp(self, body):
+    def describeTbCmp(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/tb_cmp/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        url = '{0}/active/tb_cmp/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
         res = https._get(url, body, self.auth)
         return res
 
@@ -534,9 +538,10 @@ class SyncRules (object):
      * @body['uuid'] String  必填 节点uuid
      * @return list
     '''
-    def describeBkTakeover(self, body):
-        if body is None or 'uuid' not in body: exit()
-        url = '{0}/active/bk_takeover/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+    def describeBkTakeover(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/bk_takeover/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
         return res

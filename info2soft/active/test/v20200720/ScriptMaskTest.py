@@ -1,9 +1,12 @@
 
 # -*- coding: utf-8 -*-
 # flake8: noqa
+import sys
+sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft.active.v20181227.ScriptMask import ScriptMask
+from info2soft import ScriptMask
+# from info2soft.active.v20200722.ScriptMask import ScriptMask
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -47,6 +50,7 @@ class ScriptMaskTestCase(unittest.TestCase):
             'one_time': '',
             'time_policy': '',},},
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.createScript(body)
         print(r[0])
@@ -58,6 +62,7 @@ class ScriptMaskTestCase(unittest.TestCase):
         body = {
             'uuids': '',
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.deleteScript(body)
         print(r[0])
@@ -72,6 +77,7 @@ class ScriptMaskTestCase(unittest.TestCase):
             'search_field': '',
             'search_value': '',
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.listScript(body)
         print(r[0])
@@ -83,8 +89,9 @@ class ScriptMaskTestCase(unittest.TestCase):
         body = {
             'uuid': '',
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         scriptMask = ScriptMask(a)
-        r = scriptMask.descriptScript(body)
+        r = scriptMask.descriptScript(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'ScriptMask', 'descriptScript', body)
@@ -106,6 +113,7 @@ class ScriptMaskTestCase(unittest.TestCase):
             'one_time': '',
             'time_policy': '',},},
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.createRule(body)
         print(r[0])
@@ -117,6 +125,7 @@ class ScriptMaskTestCase(unittest.TestCase):
         body = {
             'uuids': '',
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.deleteRule(body)
         print(r[0])
@@ -142,6 +151,7 @@ class ScriptMaskTestCase(unittest.TestCase):
             'one_time': '',
             'time_policy': '',
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.modifyDb(body)
         print(r[0])
@@ -156,6 +166,7 @@ class ScriptMaskTestCase(unittest.TestCase):
             'search_field': 'rule_name',
             'search_value': '',
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.listRules(body)
         print(r[0])
@@ -167,8 +178,9 @@ class ScriptMaskTestCase(unittest.TestCase):
         body = {
             'uuid': '',
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         scriptMask = ScriptMask(a)
-        r = scriptMask.descriptRule(body)
+        r = scriptMask.descriptRule(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'ScriptMask', 'descriptRule', body)
@@ -178,6 +190,7 @@ class ScriptMaskTestCase(unittest.TestCase):
         body = {
             'uuids': [],
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.listRuleStatus(body)
         print(r[0])
@@ -190,6 +203,7 @@ class ScriptMaskTestCase(unittest.TestCase):
             'operate': 'stop',
             'uuids': [],
         }
+        
         scriptMask = ScriptMask(a)
         r = scriptMask.operateRule(body)
         print(r[0])

@@ -1,9 +1,12 @@
 
 # -*- coding: utf-8 -*-
 # flake8: noqa
+import sys
+sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft.active.v20181227.Mask import Mask
+from info2soft import Mask
+# from info2soft.active.v20200722.Mask import Mask
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -36,6 +39,7 @@ class MaskTestCase(unittest.TestCase):
             'page': 0,
             'limit': 10,
         }
+        
         mask = Mask(a)
         r = mask.listTypes(body)
         print(r[0])
@@ -52,6 +56,7 @@ class MaskTestCase(unittest.TestCase):
             'params': '',
             'sort': '',
         }
+        
         mask = Mask(a)
         r = mask.createAlgo(body)
         print(r[0])
@@ -64,6 +69,7 @@ class MaskTestCase(unittest.TestCase):
             'page': 0,
             'limit': 10,
         }
+        
         mask = Mask(a)
         r = mask.listAlgos(body)
         print(r[0])
@@ -76,6 +82,7 @@ class MaskTestCase(unittest.TestCase):
             'limit': 10,
             'page': 0,
         }
+        
         mask = Mask(a)
         r = mask.listMaskRules(body)
         print(r[0])
@@ -91,9 +98,10 @@ class MaskTestCase(unittest.TestCase):
             'strate': [{
             'sens_map_id': 1,
             'mask_algo_id': 1,},],
-            'load_thread': 9,
-            'compress_level': 5,
+            'load_thread': 8,
+            'compress_level': 2,
         }
+        
         mask = Mask(a)
         r = mask.createMaskRules(body)
         print(r[0])
@@ -105,6 +113,7 @@ class MaskTestCase(unittest.TestCase):
         body = {
             'uuids': '',
         }
+        
         mask = Mask(a)
         r = mask.deleteMaskRule(body)
         print(r[0])
@@ -116,6 +125,7 @@ class MaskTestCase(unittest.TestCase):
         body = {
             'uuids': [],
         }
+        
         mask = Mask(a)
         r = mask.listMaskRuleStatus(body)
         print(r[0])
@@ -128,6 +138,7 @@ class MaskTestCase(unittest.TestCase):
             'page': 1,
             'limit': 1,
         }
+        
         mask = Mask(a)
         r = mask.listMap(body)
         print(r[0])
@@ -144,6 +155,7 @@ class MaskTestCase(unittest.TestCase):
             'table': 'MP',
             'column': 'MP',},],
         }
+        
         mask = Mask(a)
         r = mask.createMap(body)
         print(r[0])
@@ -160,8 +172,9 @@ class MaskTestCase(unittest.TestCase):
             'table': 'MP',
             'column': 'MP',},],
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         mask = Mask(a)
-        r = mask.modifyMap(body)
+        r = mask.modifyMap(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'modifyMap', body)
@@ -171,6 +184,7 @@ class MaskTestCase(unittest.TestCase):
         body = {
             'uuids': [],
         }
+        
         mask = Mask(a)
         r = mask.deleteMap(body)
         print(r[0])
@@ -181,8 +195,9 @@ class MaskTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         mask = Mask(a)
-        r = mask.descriptMap(body)
+        r = mask.descriptMap(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'descriptMap', body)
@@ -193,6 +208,7 @@ class MaskTestCase(unittest.TestCase):
             'db_uuid': '',
             'map_name': '',
         }
+        
         mask = Mask(a)
         r = mask.createDbMap(body)
         print(r[0])
@@ -205,6 +221,7 @@ class MaskTestCase(unittest.TestCase):
             'page': 0,
             'limit': 10,
         }
+        
         mask = Mask(a)
         r = mask.listDbMap(body)
         print(r[0])
@@ -216,6 +233,7 @@ class MaskTestCase(unittest.TestCase):
         body = {
             'uuid': '',
         }
+        
         mask = Mask(a)
         r = mask.deleteDbMap(body)
         print(r[0])
@@ -226,8 +244,9 @@ class MaskTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        
         mask = Mask(a)
-        r = mask.modifyDbMap(body)
+        r = mask.modifyDbMap()
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'modifyDbMap', body)
@@ -245,6 +264,7 @@ class MaskTestCase(unittest.TestCase):
             'type_id': 1,
             'type_arg': '',},],
         }
+        
         mask = Mask(a)
         r = mask.createSensCheck(body)
         print(r[0])
@@ -264,8 +284,9 @@ class MaskTestCase(unittest.TestCase):
             'type_id': 1,
             'type_arg': '',},],
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         mask = Mask(a)
-        r = mask.modifySensCheck(body)
+        r = mask.modifySensCheck(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'modifySensCheck', body)
@@ -275,6 +296,7 @@ class MaskTestCase(unittest.TestCase):
         body = {
             'uuids': '',
         }
+        
         mask = Mask(a)
         r = mask.deleteSensCheck(body)
         print(r[0])
@@ -287,6 +309,7 @@ class MaskTestCase(unittest.TestCase):
             'page': 0,
             'limit': 10,
         }
+        
         mask = Mask(a)
         r = mask.listSensCheck(body)
         print(r[0])
@@ -297,8 +320,9 @@ class MaskTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         mask = Mask(a)
-        r = mask.descriptSensCheck(body)
+        r = mask.descriptSensCheck(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'descriptSensCheck', body)

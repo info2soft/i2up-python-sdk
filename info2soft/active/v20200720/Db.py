@@ -26,10 +26,11 @@ class Db (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def modifyDb(self, body):
+    def modifyDb(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/db/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        url = '{0}/active/db/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
         res = https._put(url, body, self.auth)
         return res
 
@@ -117,9 +118,10 @@ class Db (object):
      * @body['uuid'] String  必填 节点uuid
      * @return list
     '''
-    def describeDb(self, body):
-        if body is None or 'uuid' not in body: exit()
-        url = '{0}/active/db/{1}'.format(config.get_default('default_api_host'), body['uuid'])
+    def describeDb(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/db/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
         return res

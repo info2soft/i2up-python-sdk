@@ -51,10 +51,11 @@ class Node (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def descriptNode(self, body):
+    def descriptNode(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/active/node/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        url = '{0}/active/node/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
         res = https._get(url, body, self.auth)
         return res
 
@@ -85,6 +86,19 @@ class Node (object):
         return res
 
     '''
+     * 节点升级
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def upgradeNode(self, body):
+        
+        url = '{0}/active/node/upgrade'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 节点调试信息
      * 
      * @param dict $body  参数详见 API 手册
@@ -108,18 +122,5 @@ class Node (object):
         url = '{0}/active/node'.format(config.get_default('default_api_host'))
         
         res = https._put(url, body, self.auth)
-        return res
-
-    '''
-     * 节点升级
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def upgradeNode(self, body):
-        
-        url = '{0}/active/node/upgrade'.format(config.get_default('default_api_host'))
-        
-        res = https._post(url, body, self.auth)
         return res
 
