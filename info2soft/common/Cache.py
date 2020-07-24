@@ -31,11 +31,19 @@ def getToken(username, pwd):
             'pwd': pwd
         }
         r = https._post(url, data)
-        token = r[0]['data']['token']
-        ssoToken = r[0]['data']['sso_token']
-        with open(path, mode='w+', encoding='UTF-8') as tokenFile:
-            tokenFile.write(token + '\n' + ssoToken)
-            tokenFile.close()
+        if r[0] is not None and r[0]['ret'] is 200 and r[0]['data']['code'] is 0:
+            # 密码错误处理
+            token = r[0]['data']['token']
+            ssoToken = r[0]['data']['sso_token']
+            with open(path, mode='w+', encoding='UTF-8') as tokenFile:
+                tokenFile.write(token + '\n' + ssoToken)
+                tokenFile.close()
+        else:
+            if r[0] is None:
+                print('Can Not Connect Host')
+            else:
+                print(r[0]['data']['message'])
+            exit()
     return [token, ssoToken]
 
 
