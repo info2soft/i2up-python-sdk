@@ -37,8 +37,8 @@ _headers = {
 
 
 def __return_wrapper(resp):
-    if resp.status_code != 200:
-        return None, ResponseInfo(resp)
+    # if resp.status_code != 200:
+    #     return None, ResponseInfo(resp)
     resp.encoding = 'utf-8'
     ret = resp.json(encoding='utf-8') if resp.text != '' else {}
     return ret, ResponseInfo(resp)
@@ -256,10 +256,10 @@ class ResponseInfo(object):
             self.text_body = response.text
             if self.status_code >= 400:
                 ret = response.json() if response.text != '' else None
-                if ret is None or ret['error'] is None:
+                if ret is None:
                     self.error = 'unknown'
                 else:
-                    self.error = ret['error']
+                    self.error = ret['msg'] if 'msg' in ret else 'unknown'
 
     def ok(self):
         return self.status_code == 200
