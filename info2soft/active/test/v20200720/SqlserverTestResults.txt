@@ -1,0 +1,281 @@
+<START-----------------------------------------------------------
+Method: batchCreateRule
+body: {
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "enable_cdc": 0,
+  "start_rule_now": 1,
+  "dump_thd": 1,
+  "sync_mode": 1,
+  "drop_old_tab": 1,
+  "table_map": ""
+ },
+ "rule_list": [
+  {
+   "rule_name": "",
+   "src_db_uuid": "",
+   "tgt_db_uuid": "",
+   "mirror_db_uuid": ""
+  }
+ ],
+ "_": "3f732754"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "code": -3565,
+    "message": "[-3565]IPC request is not recognized: I2.IPC_RULE_ADD",
+    "rule_name": "123->sqlserver-1"
+   },
+   {
+    "code": -3565,
+    "message": "[-3565]IPC request is not recognized: I2.IPC_RULE_ADD",
+    "rule_name": "123->sqlserver-2"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRule
+body: {
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+ "tgt_type": "sqlserver",
+ "map_type": "table",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": [
+   {
+    "src_user": "1",
+    "src_table": "2",
+    "dst_user": "1",
+    "dst_table": "2",
+    "column": []
+   }
+  ],
+  "enable_cdc": 0,
+  "mirror_db_uuid": "",
+  "sync_mode": 1,
+  "dump_thd": 1,
+  "drop_old_tab": 1
+ },
+ "_": "3f756391"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRule
+body: {
+ "uuids": [],
+ "_": "3f61de1b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "where_args": {
+  "rule_uuid": ""
+ },
+ "_": "3f1435d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "rule_uuid": "6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337",
+    "rule_name": "Ronald Lopez",
+    "src_db_uuid": "",
+    "tgt_db_uuid": "",
+    "tgt_type": "kafka",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "tgt_db_name": "bei",
+    "map_type": "database",
+    "config": {
+     "start_rule_now": 1,
+     "table_map": "",
+     "full_sync": 1,
+     "incre_sync": 1,
+     "full_sync_mode": "",
+     "db_user_map": [],
+     "dbmap_topic": "",
+     "row_map_mode": "",
+     "kafka_time_out": "",
+     "part_load_balance": "",
+     "kafka_message_encoding": ""
+    },
+    "src_db_name": "1111",
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "rule_uuid": "3BF809AF-4A2E-DD28-072E-530D33BAC189",
+    "rule_name": "Melissa Brown",
+    "src_db_uuid": "",
+    "tgt_db_uuid": "",
+    "tgt_type": "kafka",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "tgt_db_name": "bei",
+    "map_type": "database",
+    "config": {
+     "start_rule_now": 1,
+     "table_map": "",
+     "full_sync": 1,
+     "incre_sync": 1,
+     "full_sync_mode": "",
+     "db_user_map": [],
+     "dbmap_topic": "",
+     "row_map_mode": "",
+     "kafka_time_out": "",
+     "part_load_balance": "",
+     "kafka_message_encoding": ""
+    },
+    "src_db_name": "1111",
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleStatus
+body: {
+ "uuids": "",
+ "_": "3e9203ac"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "rule_uuid": "6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337",
+    "export_state": {
+     "status": "ACTIVE_RULE_ABNORMAL",
+     "error_code": -4014
+    },
+    "load_state": {
+     "status": "ACTIVE_RULE_ABNORMAL",
+     "error_code": -4014
+    },
+    "track_state": {
+     "status": "ACTIVE_RULE_STOP",
+     "error_code": -4014
+    }
+   },
+   {
+    "rule_uuid": "3BF809AF-4A2E-DD28-072E-530D33BAC189",
+    "export_state": {
+     "status": "ACTIVE_RULE_ABNORMAL",
+     "error_code": -4014
+    },
+    "load_state": {
+     "status": "ACTIVE_RULE_ABNORMAL",
+     "error_code": -4014
+    },
+    "track_state": {
+     "status": "ACTIVE_RULE_STOP",
+     "error_code": -4014
+    }
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRule
+body: {
+ "table_map": [
+  {
+   "src_user": "1",
+   "src_table": "2",
+   "dst_user": "1",
+   "dst_table": "2",
+   "column": []
+  }
+ ],
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+ "tgt_type": "sqlserver",
+ "map_type": "table",
+ "config": {},
+ "start_rule_now": 1,
+ "enable_cdc": 0,
+ "mirror_db_uuid": "",
+ "sync_mode": 1,
+ "dump_thd": 1,
+ "drop_old_tab": 1,
+ "_": "3f03e524",
+ "uuid": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateRule
+body: {
+ "operate": "",
+ "uuids": "",
+ "_": "3f07ca1e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
