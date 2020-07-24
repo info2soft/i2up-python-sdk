@@ -839,8 +839,7 @@ class SyncRulesTestCase(unittest.TestCase):
         }
         
         syncRules = SyncRules(a)
-        r = syncRules.listBkTakeover(body)
-        print(r[0])
+        r = syncRules.listBkTakeover()
         assert r[0]['ret'] == 200
         write(r[0], 'SyncRules', 'listBkTakeover', body)
 

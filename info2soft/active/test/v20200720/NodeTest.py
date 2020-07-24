@@ -52,7 +52,7 @@ class NodeTestCase(unittest.TestCase):
             'nodetype': '@pick{"name","source","backup"]}',
             'search_field': '',
             'order_by': '',
-            'sort': '@pick{'name',address}',
+            'sort': '@pick',
             'search_value': '',
         }
         
