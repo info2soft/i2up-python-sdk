@@ -144,10 +144,10 @@ class Db (object):
      * 
      * @return list
     '''
-    def batchCreateDbs(self, ):
+    def batchCreateDbs(self, body):
         
         url = '{0}/active/db/batch'.format(config.get_default('default_api_host'))
         
-        res = https._post(url, None, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
