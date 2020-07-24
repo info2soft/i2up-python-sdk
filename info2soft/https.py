@@ -95,9 +95,11 @@ def _get(url, params=None, auth=None):
                     waitDel = k
         if waitDel is not '':
             params.pop(waitDel)
-        params['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+        _ = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
+        if params is not None:
+            params['_'] = _
 
-        header_config = _generate_header(auth_type, token, ak, sk, 'get', url, params['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'get', url, _)
 
         requests.packages.urllib3.disable_warnings()
         r = requests.get(
