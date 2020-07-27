@@ -142,13 +142,13 @@ class Cluster (object):
      *  集群服务器池 网卡信息
      * 
      * @return list
-    '''
     def listNicInfo(self, ):
         
         url = '{0}/ha/net/if'.format(config.get_default('default_api_host'))
         
         res = https._get(url, None, self.auth)
         return res
+    '''
 
     '''
      *  集群服务器池 获取状态

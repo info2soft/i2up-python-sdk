@@ -206,7 +206,7 @@ class ClusterTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Cluster', 'listHaClusterMonitor', body)
 
-    def testListNicInfo(self):
+    """ def testListNicInfo(self):
         a = Auth(username, pwd)
         body = {
         }
@@ -215,7 +215,7 @@ class ClusterTestCase(unittest.TestCase):
         r = cluster.listNicInfo()
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cluster', 'listNicInfo', body)
+        write(r[0], 'Cluster', 'listNicInfo', body) """
 
     def testListHaClusterStatus(self):
         a = Auth(username, pwd)
