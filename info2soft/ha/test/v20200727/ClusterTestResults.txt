@@ -1,0 +1,331 @@
+<START-----------------------------------------------------------
+Method: createHaCluster
+body: {
+ "cluster_name": "cluster",
+ "center_vir_ip": "2.2.2.1",
+ "node_list": [
+  {
+   "node_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+   "node_ip": "2.2.2.1",
+   "label_list": [
+    "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+    "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187"
+   ],
+   "ha_conf": {
+    "ha_vir_ip_adapter": "eth0",
+    "ha_heartbeat_adapter": "eth0",
+    "ha_heartbeat_ip": "2.2.21",
+    "ha_heartbeat_netif": "{DEFF6069-58A0-4723-BD1E-E63CF9E5499D}"
+   },
+   "total_service_limit": "1",
+   "total_monitor_limit": "10",
+   "center_vir_ip_adapter": "eth0"
+  }
+ ],
+ "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+ "center_vir_mask": "255.255.255.0",
+ "_": "3ebe5935"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createLabel
+body: {
+ "label_name": "MSSQLSERVER",
+ "content": "SQL Server\u670d\u52a1",
+ "_": "3eb2297f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": "name_dumplicated",
+  "message": "[23333333] undefined message"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHaCluster
+body: {
+ "cluster_uuids": [],
+ "force": 1,
+ "_": "3e77463e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHaClusterHost
+body: {
+ "cluster_uuid": "",
+ "node_uuid": "",
+ "_": "3f79384c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteLabel
+body: {
+ "label_uuids": [],
+ "_": "3f2d3ee6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHaCluster
+body: {}
+response: {
+ "ret": 400,
+ "msg": "[10001051] Illegal request with inconsistent signature."
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHaCluster
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f3dfcd0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "cluster_name": "cluster",
+    "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+    "center_vir_ip": "2.2.2.1",
+    "center_vir_mask": "255.255.255.0",
+    "node_list": "[{\"node_uuid\":\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\",\"node_ip\":\"2.2.2.1\",\"label_list\":[\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\",\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\"],\"ha_conf\":{\"ha_vir_ip_adapter\":\"eth0\",\"ha_heartbeat_adapter\":\"eth0\",\"ha_heartbeat_ip\":\"2.2.21\"},\"total_service_limit\":\"1\",\"total_monitor_limit\":\"10\",\"center_vir_ip_adapter\":\"eth0\",\"result\":0,\"config_seq\":0,\"rpc_send_params\":\"{\\\"ClusterConf\\\":{\\\"CommonConf\\\":{\\\"ClusterName\\\":\\\"Y2x1c3Rlcg==\\\",\\\"ClusterID\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"CenterVirIP\\\":\\\"2.2.2.1\\\",\\\"CenterVirMask\\\":\\\"255.255.255.0\\\",\\\"OrgCenterID\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\"},\\\"Myself\\\":{\\\"CenterVirIPAdapter\\\":\\\"ZXRoMA==\\\",\\\"Base\\\":{\\\"NodeUuid\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"NodeIP\\\":\\\"2.2.2.1\\\"}},\\\"NodeList\\\":[{\\\"NodeUuid\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"NodeIP\\\":\\\"2.2.2.1\\\"}],\\\"ConfigSeq\\\":0},\\\"ProviderConf\\\":{\\\"ClusterID\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"SerTabelList\\\":[{\\\"Label\\\":0,\\\"MaxLimit\\\":1},{\\\"Label\\\":0,\\\"MaxLimit\\\":1}],\\\"HAConf\\\":{\\\"HAVirIPAdapter\\\":\\\"ZXRoMA==\\\",\\\"HAHeartbeatAdapter\\\":\\\"ZXRoMA==\\\",\\\"HAHeartbeatIP\\\":\\\"2.2.21\\\"},\\\"TotalServiceLimit\\\":1,\\\"TotalMonitorLimit\\\":10,\\\"ConfigSeq\\\":0}}\"}]"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHaClusterIpDuplicate
+body: {
+ "cluster_uuid": "",
+ "center_vir_ip": "",
+ "_": "3c1818f9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHaClusterMonitor
+body: {
+ "cluster_uuid": "",
+ "_": "3f3e01ef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHaClusterStatus
+body: {
+ "_": "3e999379"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "cluster_uuid": "",
+    "status": "UNKNOWN",
+    "online_num": "UNKNOWN"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLabel
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "label_name",
+ "search_value": "",
+ "_": "3f6b6e97"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": "1",
+    "label_name": "MSSQLSERVER",
+    "label_uuid": "68881D44-7670-326A-F583-DD564631336F",
+    "used": "0",
+    "content": "SQL Server\u670d\u52a1"
+   },
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": "0",
+    "label_name": "default",
+    "label_uuid": "2ACDCAB3-D3B8-3E28-DCC5-AA36FDC2B5AB",
+    "used": "0",
+    "content": "Initial specified type of system"
+   }
+  ],
+  "total": 2
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyHaCluster
+body: {
+ "cluster_name": "cluster",
+ "center_vir_ip": "2.2.2.1",
+ "node_list": [
+  {
+   "node_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+   "node_ip": "2.2.2.1",
+   "label_list": [
+    "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+    "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187"
+   ],
+   "ha_conf": {
+    "ha_vir_ip_adapter": "eth0",
+    "ha_heartbeat_adapter": "eth0",
+    "ha_heartbeat_ip": "2.2.21"
+   },
+   "total_service_limit": "1",
+   "total_monitor_limit": "10",
+   "center_vir_ip_adapter": "eth0"
+  }
+ ],
+ "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+ "random_str": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+ "_": "3edf19c2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyLabel
+body: {
+ "label_name": "SQL Server\u670d\u52a1",
+ "label_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
+ "_": "3f007460"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: registerHaCluster
+body: {
+ "cluster_name": "cluster",
+ "center_vir_ip": "2.2.2.1",
+ "node_list": [
+  {
+   "node_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+   "node_ip": "2.2.2.1",
+   "label_list": [
+    "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+    "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187"
+   ],
+   "ha_conf": {
+    "ha_vir_ip_adapter": "eth0",
+    "ha_heartbeat_adapter": "eth0",
+    "ha_heartbeat_ip": "2.2.21"
+   },
+   "total_service_limit": "1",
+   "total_monitor_limit": "10",
+   "center_vir_ip_adapter": "eth0"
+  }
+ ],
+ "node_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+ "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+ "center_vir_mask": "255.255.255.0",
+ "_": "3f5f3e63"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
