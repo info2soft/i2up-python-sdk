@@ -69,3 +69,6 @@ from .active import Db, Mask, Node, ScriptMask, Sqlserver, SyncRules
 
 
 from .ha import haCluster
+
+from .cloud import CloudBackup, CloudVolume, CloudRehearse, CloudPlatform, CloudEcs
+
