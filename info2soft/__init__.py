@@ -67,3 +67,5 @@ from .vp.v20181227.VirtualizationSupport import VirtualizationSupport
 
 from .active import Db, Mask, Node, ScriptMask, Sqlserver, SyncRules
 
+
+from .ha import haCluster
