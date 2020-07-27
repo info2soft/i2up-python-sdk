@@ -43,7 +43,7 @@ class CloudBackup (object):
             exit()
         url = '{0}/cloud/backup/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        res = https._put(url, None, self.auth)
+        res = https._put(url, body, self.auth)
         return res
 
     '''
@@ -51,11 +51,11 @@ class CloudBackup (object):
      * 
      * @return list
     '''
-    def deleteCloudBackup(self, ):
+    def deleteCloudBackup(self, body):
         
         url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
         
-        res = https._delete(url, None, self.auth)
+        res = https._delete(url, body, self.auth)
         return res
 
     '''
