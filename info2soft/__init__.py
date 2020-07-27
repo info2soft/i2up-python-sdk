@@ -49,6 +49,8 @@ from .resource.v20181227.Node import Node
 from .resource.v20181227.Cluster import Cluster
 from .resource.v20181227.BizGroup import BizGroup
 
+from .resource import BoxVm
+
 
 from .system.v20181227.User import User
 from .system.v20181227.Lic import Lic
