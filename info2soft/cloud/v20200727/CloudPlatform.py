@@ -41,7 +41,7 @@ class CloudPlatform (object):
     def modifyCloudPlatform(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/cloud/platform/([a-f0-9-] ]){1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/cloud/platform/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, body, self.auth)
         return res
