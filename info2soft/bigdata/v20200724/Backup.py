@@ -68,7 +68,7 @@ class Backup (object):
     def operateBigdataBackup(self, body):
         url = '{0}/bigdata/backup/operate'.format(config.get_default('default_api_host'))
         
-        res = https._post(url, None, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''
