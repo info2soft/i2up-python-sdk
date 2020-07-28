@@ -87,6 +87,19 @@ class Cluster (object):
         return res
 
     '''
+     *  集群服务器池操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def operateHaCluster(self, body):
+        
+        url = '{0}/ha/cls_pool/operate'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      *  集群服务器池 - 单个
      * 
      * @body['uuid'] String  必填 节点uuid
