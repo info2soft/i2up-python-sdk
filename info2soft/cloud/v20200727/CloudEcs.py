@@ -50,11 +50,23 @@ class CloudEcs (object):
      * 
      * @return list
     '''
-    def listEcsStatus(self, ):
+    def listEcsStatus(self, body):
         
         url = '{0}/cloud/ecs/status'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  状态
+     * 
+     * @return list
+    '''
+    def operateEcsNode(self, body):
+        
+        url = '{0}/cloud/ecs/node_operate'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
         return res
 
     '''
