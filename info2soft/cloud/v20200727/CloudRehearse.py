@@ -275,7 +275,7 @@ class CloudRehearse (object):
     def listNpsvrRehearseStatus(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/cloud/rehearse/([a-fa-f0-9-] )/status{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/cloud/rehearse/{1}/status'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, None, self.auth)
         return res
@@ -289,7 +289,7 @@ class CloudRehearse (object):
     def listNpsvrRehearseProgress(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/cloud/rehearse/([a-fa-f0-9-] )/progress{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/cloud/rehearse/{1}/progress'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, None, self.auth)
         return res
