@@ -136,6 +136,19 @@ class SyncRules (object):
         return res
 
     '''
+     * 操作同步规则
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def operateSyncRules(self, body):
+        
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 状态
      * 
      * @param dict $body  参数详见 API 手册
@@ -362,6 +375,19 @@ class SyncRules (object):
         return res
 
     '''
+     * 对象修复-操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def operateObjFix(self, body):
+        
+        url = '{0}/active/obj_fix/operate'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      *  修复结果
      * 
      * @param dict $body  参数详见 API 手册
@@ -468,6 +494,19 @@ class SyncRules (object):
         return res
 
     '''
+     * 表比较-操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def operateTbCmp(self, body):
+        
+        url = '{0}/active/tb_cmp/operate'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 比较结果的删除
      * 
      * @param dict $body  参数详见 API 手册
@@ -570,6 +609,19 @@ class SyncRules (object):
         url = '{0}/active/bk_takeover/result'.format(config.get_default('default_api_host'))
         
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 备机接管-操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def operateBkTakeover(self, body):
+        
+        url = '{0}/active/bk_takeover/operate'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -720,7 +772,7 @@ class SyncRules (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def describeRule(self, body):
+    def describeRuleZStructure(self, body):
         
         url = '{0}/active/rule/z_structure'.format(config.get_default('default_api_host'))
         
