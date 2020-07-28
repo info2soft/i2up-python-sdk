@@ -27,7 +27,7 @@ class Mask (object):
     '''
     def createAlgo(self, body):
         
-        url = '{0}/mask/newalgo'.format(config.get_default('default_api_host'))
+        url = '{0}/mask/newAlgo'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
         return res
@@ -67,6 +67,19 @@ class Mask (object):
     def createMaskRules(self, body):
         
         url = '{0}/mask/rule'.format(config.get_default('default_api_host'))
+        
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作脱敏规则
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def OperateMaskRule(self, body):
+        
+        url = '{0}/mask/rule/operate'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
         return res
