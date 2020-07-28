@@ -42,7 +42,7 @@ class Node (object):
     def updateStatus(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/distribution/node//status{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/distribution/node/{1}/status'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, body, self.auth)
         return res
@@ -98,7 +98,7 @@ class Node (object):
     def fileConfig(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/distribution/node//file_config{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/distribution/node/{1}/file_config'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, body, self.auth)
         return res
@@ -113,7 +113,7 @@ class Node (object):
     def warnConfig(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/distribution/node//warn_config{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/distribution/node/{1}/warn_config'.format(config.get_default('default_api_host'), uuid)
         
         res = https._put(url, body, self.auth)
         return res
