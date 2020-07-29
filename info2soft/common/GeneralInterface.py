@@ -106,4 +106,28 @@ class GeneralInterface (object):
         res = https._get(url, None, self.auth)
         return res
 
+    '''
+     * 获取版本提交记录
+     * 
+     * @return list
+    '''
+    def listRpcTask(self, ):
+        
+        url = '{0}//rpc_task'.format(config.get_default('default_api_host'))
+        
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * 获取版本提交记录
+     * 
+     * @return list
+    '''
+    def listVersionHistory(self, ):
+        
+        url = '{0}/version_history'.format(config.get_default('default_api_host'))
+        
+        res = https._get(url, None, self.auth)
+        return res
+
 
