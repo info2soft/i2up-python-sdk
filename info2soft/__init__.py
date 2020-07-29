@@ -22,6 +22,7 @@ from info2soft.common.Monitor import Monitor
 from info2soft.common.Permission import Permission
 from info2soft.common.Qr import Qr
 from info2soft.common.Storage import Storage
+from .common import Client
 
 
 from info2soft.dashboard.v20181227.Dashboard import Dashboard
@@ -48,6 +49,7 @@ from .rep.v20181227.RepRecovery import RepRecovery
 from .resource.v20181227.Node import Node
 from .resource.v20181227.Cluster import Cluster
 from .resource.v20181227.BizGroup import BizGroup
+from .resource import AppSystem
 
 from .resource import BoxVm
 
