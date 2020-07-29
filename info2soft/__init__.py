@@ -77,3 +77,5 @@ from .cloud import CloudBackup, CloudVolume, CloudRehearse, CloudPlatform, Cloud
 from .bigdata import bigDataRecovery, bigDataBackup
 
 from .distributor import DistributorSystem, DistributorGroup, DistributorNode
+
+from .cdm import Cdm
