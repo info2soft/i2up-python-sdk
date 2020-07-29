@@ -79,3 +79,5 @@ from .bigdata import bigDataRecovery, bigDataBackup
 from .distributor import DistributorSystem, DistributorGroup, DistributorNode
 
 from .cdm import Cdm
+
+from .system import Credential
