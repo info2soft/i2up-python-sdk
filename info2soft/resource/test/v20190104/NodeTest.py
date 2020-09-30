@@ -30,6 +30,38 @@ pwd = 'Info1234'
                 
 class NodeTestCase(unittest.TestCase):
 
+    def testAuthNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'proxy_switch': 0,
+            'config_addr': '192.168.72.76',
+            'config_port': 26821,
+            'node_uuid': '',
+            'os_user': 'chenky',
+            'os_pwd': '123qwe',
+            'i2id': '',
+            'use_credential': 0,
+            'cred_uuid': '',
+        }
+
+        node = Node(a)
+        r = node.authNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'authNode', body)
+
+    def testListNodePackageList(self):
+        a = Auth(username, pwd)
+        body = {
+            'for_download': 1,
+        }
+
+        node = Node(a)
+        r = node.listNodePackageList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listNodePackageList', body)
+
     def testCheckCapacity(self):
         a = Auth(username, pwd)
         body = {
@@ -148,7 +180,7 @@ class NodeTestCase(unittest.TestCase):
                "node_name": "N4_72.76Modify",
                "node_role": "3",
                "node_type": 0,
-               "node_uuid": "990E2F2B-9983-A734-2CD3-9D298DBB365A",
+               "node_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
                "os_version": "Microsoft Windows 10/x64 Edition",
                "os_type": 1,
                "os_user": "Kyran",
@@ -263,6 +295,18 @@ class NodeTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'upgradeNode', body)
 
+    def testMaintainNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuids': ["990E2F2B-9983-A734-2CD3-9D298DBB365A"],
+            'operate': 'maintain',
+        }
+        node = Node(a)
+        r = node.upgradeNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'maintainNode', body)
+
     def testListNodeStatus(self):
         a = Auth(username, pwd)
         body = {
@@ -284,6 +328,88 @@ class NodeTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'deleteNode', body)
+
+    def testNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'limit': 1,
+            'page': 1,
+            'type': 1,
+        }
+
+        node = Node(a)
+        r = node.node(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'node', body)
+
+    def testAddSlaveNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'proxy_switch': '0',
+            'config_addr': '',
+            'config_port': 1,
+            'i2id': '',
+            'os_pwd': 'yAZe2Hx6/dCL8GnjiRaro/mayqD24i3bMwZLtRXrHlRDIijGDcNKTqSK4IL91YIaqAGaOpUbnTr+y6VPgJ4UXJQset0se7bQgVrRjVncNeiVNCNyAzLktWYMMGKOWekw5uD2MOVEHhbknG0ZSuFXyywFEG9JTntNerCae7RSI6u2c3kRBCyqbdPc9osMK8YL9ZRqiIE/4K1+BomG9q1RwNEJhDcm/OaMxJCPHANNTImBWWv+Ir3qt20jjv1Fx7of2Fgb14Sj4TwGb7ESrbMiL/fblrfGl+rc6koNucEIRdT+aje+F47pKu4mknubWZ1wo+W2p/yaKyqfzTfeDFJtFQ==',
+            'os_user': 'administrator',
+            'use_credential': 1,
+            'cred_uuid': '',
+            'bind_lic_list': [],
+            'biz_grp_list': [],
+            'comment': '',
+        }
+
+        node = Node(a)
+        r = node.addSlaveNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'addSlaveNode', body)
+
+    def testNodeGetOracleInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'username': '',
+            'password': '',
+            'sqlplus_path': '',
+            'sid': '',
+            'timeout': '',
+            'port': '',
+            'bk_uuid': '',
+        }
+
+        node = Node(a)
+        r = node.nodeGetOracleInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'nodeGetOracleInfo', body)
+
+    def testNodeGetMysqlInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'username': '',
+            'password': '',
+            'mysql_path': '',
+            'timeout': '',
+            'port': '',
+            'bk_uuid': '',
+        }
+
+        node = Node(a)
+        r = node.nodeGetMysqlInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'nodeGetMysqlInfo', body)
+
+    def testDescribeDriverLetter(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        node = Node(a)
+        r = node.describeDriverLetter(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'describeDriverLetter', body)
 
 
 if __name__ == '__main__':
