@@ -1,0 +1,349 @@
+<START-----------------------------------------------------------
+Method: getAuthorizationResBind
+body: {
+ "res_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3f548776"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: res_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getAuthorizationUserBind
+body: {
+ "user_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "type": "",
+ "subtype": "",
+ "_": "3f620d16"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: user_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: ListAuthorizationUser
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3e9f482b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "id": "4",
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "roles": "operator"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateAuthorizationResBind
+body: {
+ "res_uuid": "",
+ "user_list": [
+  {
+   "user_uuid": "",
+   "can_up": 1,
+   "can_op": 1
+  }
+ ],
+ "_": "3e05abc4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: res_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateAuthorizationUserBind
+body: {
+ "res_list": [
+  {
+   "res_uuid": "11111111-1111-1111-1111-111111111111",
+   "can_up": 1,
+   "can_op": 1,
+   "is_bound": 1
+  }
+ ],
+ "user_uuid": "11111111-1111-1111-1111-111111111111",
+ "_": "3e9dc097"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001017,
+  "message": "[10001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateAuthorizationBind
+body: {
+ "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+ "res_uuids": [
+  "7E36A0B7-7C9A-D310-645A-F9FF7972F13F"
+ ],
+ "_": "3d5b516d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getAuthorizationBind
+body: {
+ "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+ "_": "3f2e55b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "obj_uuid": "93240783-BD0A-95A0-E7C7-872F88B6BE1C",
+    "obj_name": "rac-26.94",
+    "obj_type": 0,
+    "obj_subtype": 2,
+    "config_addr": "192.168.26.94",
+    "config_port": "0",
+    "data_addr": "192.168.26.94",
+    "phy_type": 2,
+    "os_type": 0,
+    "proxy_switch": "0",
+    "i2id": null,
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1601272639,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": null,
+    "deleted": "0",
+    "state": null,
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "2355CE9B-0DE0-DE4B-F72C-AC2E7CA65FAD",
+    "obj_name": "node2",
+    "obj_type": 0,
+    "obj_subtype": 0,
+    "config_addr": "192.168.26.91",
+    "config_port": "26821",
+    "data_addr": "192.168.26.91",
+    "phy_type": 2,
+    "os_type": 0,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1601188936,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": "",
+    "deleted": "0",
+    "state": "{\"node_uuid\":\"2355CE9B-0DE0-DE4B-F72C-AC2E7CA65FAD\",\"status\":\"ONLINE\",\"detail\":{\"performance\":{\"disk_limit\":1251999744,\"disk_percent\":0,\"disk_used\":0,\"mem_limit\":1755316224,\"mem_percent\":4,\"mem_used\":79691776},\"process\":{\"collector\":1,\"ha\":1,\"ha_detector\":1,\"logd\":1,\"rpc\":1,\"sdatad\":1,\"srepd\":1}},\"version\":\"7.1.68.20092310\"}",
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "6E4CE268-2D46-21FA-8FA6-5AD1A43999A4",
+    "obj_name": "node1",
+    "obj_type": 0,
+    "obj_subtype": 0,
+    "config_addr": "192.168.26.90",
+    "config_port": "26821",
+    "data_addr": "192.168.26.90",
+    "phy_type": 2,
+    "os_type": 0,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1601188887,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": "",
+    "deleted": "0",
+    "state": "{\"node_uuid\":\"6E4CE268-2D46-21FA-8FA6-5AD1A43999A4\",\"status\":\"ONLINE\",\"detail\":{\"performance\":{\"disk_limit\":2559574016,\"disk_percent\":0,\"disk_used\":0,\"mem_limit\":1500512256,\"mem_percent\":5,\"mem_used\":79691776},\"process\":{\"collector\":0,\"ha\":1,\"ha_detector\":1,\"logd\":1,\"rpc\":1,\"sdatad\":1,\"srepd\":1}},\"version\":\"7.1.68.20092310\"}",
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "62A2AC5C-D70A-FDF0-EBD1-4084C36E9404",
+    "obj_name": "TEST-68.212",
+    "obj_type": 0,
+    "obj_subtype": 0,
+    "config_addr": "192.168.7.250",
+    "config_port": "26821",
+    "data_addr": "192.168.7.250",
+    "phy_type": 1,
+    "os_type": 1,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1599790713,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": "",
+    "deleted": "0",
+    "state": "{\"node_uuid\":\"62A2AC5C-D70A-FDF0-EBD1-4084C36E9404\",\"status\":\"ONLINE\",\"detail\":{\"performance\":{\"disk_limit\":91539636224,\"disk_percent\":0,\"disk_used\":0,\"mem_limit\":438304768,\"mem_percent\":11,\"mem_used\":50331648},\"process\":{\"collector\":1,\"ha\":1,\"ha_detector\":1,\"logd\":1,\"rpc\":1,\"sdatad\":1,\"srepd\":1}},\"version\":\"7.1.66.20081318\"}",
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "B919C076-7B02-7BC2-D466-A794C00664CA",
+    "obj_name": "31.12-os",
+    "obj_type": 1,
+    "obj_subtype": 5,
+    "config_addr": "172.20.68.211",
+    "config_port": "26823",
+    "data_addr": null,
+    "phy_type": 2,
+    "os_type": 5,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1599555952,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": null,
+    "deleted": "0",
+    "state": "{\"vp_uuid\":\"B919C076-7B02-7BC2-D466-A794C00664CA\",\"status\":\"OFFLINE\",\"data_agent_version\":\"\",\"drill_status\":\"\",\"npsvr_version\":\"\",\"code\":11116072,\"message\":\"[11116072] rpc.vp.esxi_not_exist\"}",
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "4A1F80DE-379D-C5E7-C495-7D55E0795275",
+    "obj_name": "beijing01",
+    "obj_type": 1,
+    "obj_subtype": 4,
+    "config_addr": "172.20.68.211",
+    "config_port": "26823",
+    "data_addr": null,
+    "phy_type": 2,
+    "os_type": 4,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1599554962,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": null,
+    "deleted": "0",
+    "state": "{\"vp_uuid\":\"4A1F80DE-379D-C5E7-C495-7D55E0795275\",\"status\":\"OFFLINE\",\"data_agent_version\":\"\",\"drill_status\":\"\",\"npsvr_version\":\"\",\"code\":11116072,\"message\":\"[11116072] rpc.vp.esxi_not_exist\"}",
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "6963230A-9208-F3F8-F552-A3ACDB5DC569",
+    "obj_name": "1.132",
+    "obj_type": 1,
+    "obj_subtype": 0,
+    "config_addr": "172.20.68.211",
+    "config_port": "26823",
+    "data_addr": "192.168.1.132",
+    "phy_type": 2,
+    "os_type": 0,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": "A5129D48-2CEA-4C90-8E3C-954D60BE8980",
+    "create_time": 1599553491,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": null,
+    "deleted": "0",
+    "state": "{\"vp_uuid\":\"6963230A-9208-F3F8-F552-A3ACDB5DC569\",\"status\":\"ONLINE\",\"data_agent_version\":\"\",\"drill_status\":1,\"npsvr_version\":\"7.1.66.20083119\"}",
+    "is_bound": 0
+   },
+   {
+    "username": "admin",
+    "obj_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "obj_name": "test-68.211",
+    "obj_type": 0,
+    "obj_subtype": 0,
+    "config_addr": "172.20.68.211",
+    "config_port": "26821",
+    "data_addr": "172.20.68.211",
+    "phy_type": 2,
+    "os_type": 1,
+    "proxy_switch": "0",
+    "i2id": "",
+    "dtrack_switch": "0",
+    "rep_path": "[]",
+    "npsvr_uuid": null,
+    "create_time": 1598406935,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "db_type": "0",
+    "is_backup_center": "0",
+    "platform_uuid": "",
+    "deleted": "0",
+    "state": "{\"node_uuid\":\"10F2C96C-EA17-ED89-C592-2AD2E50C8896\",\"status\":\"ONLINE\",\"detail\":{\"performance\":{\"disk_limit\":38669385728,\"disk_percent\":0,\"disk_used\":0,\"mem_limit\":486539264,\"mem_percent\":11,\"mem_used\":54525952},\"process\":{\"collector\":1,\"ha\":1,\"ha_detector\":1,\"logd\":1,\"rpc\":1,\"sdatad\":1,\"srepd\":1}},\"version\":\"7.1.66.20080618\"}",
+    "is_bound": 0
+   }
+  ],
+  "total": 8
+ }
+}
+-----------------------------------------------------------END>
+
