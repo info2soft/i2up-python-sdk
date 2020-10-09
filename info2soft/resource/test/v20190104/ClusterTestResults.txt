@@ -349,3 +349,196 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: authCls
+body: {
+ "cls_is_local": 1,
+ "os_pwd": "pvBd8H8T5zUGWbtuO46IKWtqYMihI6PpXCtwaPIDdkjS93lXTgMEdJFkYVI9Gzn9FjEUDWFFAF+SvMAbsv4KmBFD5rwn7Rfhh8or1qUMqKJqSS7qVZWF4T2iuWbCT+5WnwgfpjRo0Z8Rda3is/MQtiJkPJqQFtCWA8E07YqHOHPmdV1psA+QM7UUNQhBy+kO+Fl9jxAuhyHvYGDkjmXklFC84T7sydk7brXA6PXEcw7LIGWjm5B59+Xnm6LZXbxPuL1asZRr088VYUmzTezodt475N8vSLwMV4LIE4DZRknaUX4BZPnAp8pftXsoIlQfmurX5fLmRBhi2buShPYpOA==",
+ "os_user": "i2test2018.com\\administrator",
+ "config_addr": "192.168.87.14",
+ "config_port": 26821,
+ "_": "3ef81e41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform Node server authentication fail"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsDetail
+body: {
+ "operate": "detail",
+ "node_uuid": "11111111-1111-1111-1111-111111111111",
+ "_": "3f530943"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": null,
+  "message": "[23333333] undefined message"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCls
+body: {
+ "cls": {
+  "comment": "",
+  "cls_disk": [
+   "E:\\"
+  ],
+  "config_port": "26821",
+  "cls_node": [
+   "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C"
+  ],
+  "node_type": 1,
+  "cls_is_local": 1,
+  "os_user": "i2test2018.com\\administrator",
+  "config_addr": "192.168.74.25",
+  "node_name": "cls"
+ },
+ "_": "3f7ccb66"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011213,
+  "message": "[10011213] Failed to get phy type. Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCls
+body: {
+ "node_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f62ef79"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCls
+body: {
+ "cls": {
+  "node_uuid": "5EFAEFFB-772D-1F39-06B2-F0C7E08DDD51"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCls
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "_": "3f78289f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listClsStatus
+body: {
+ "_": "3ebd80fa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyClsNode
+body: {
+ "node_uuid": "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C",
+ "cls_name": "cluster-2018",
+ "cls_node_name": "cluster-node1",
+ "_": "3b695bbe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10071103,
+  "message": "[10071103] Failed to verify cluster node [10111]",
+  "node_name": null,
+  "node_uuid": null,
+  "config_addr": null,
+  "version": "7.1.66.20081318"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsNodeInfo
+body: {
+ "cls_ip": "",
+ "_": "3e47d24a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11119506,
+  "message": "[11119506] RPC method not defined"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRacStatus
+body: {
+ "_": "3d87ff56"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
