@@ -1,0 +1,357 @@
+<START-----------------------------------------------------------
+Method: createHAGroup
+body: {
+ "group_name": "111",
+ "error_confirm": 1,
+ "switch_confirm": 1,
+ "ha_rules": [
+  "B95DB026-AEDF-737A-0442-B5134660D204",
+  "128C2F7D-0795-41F3-1274-3FBAA2449BAD",
+  "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
+  "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8"
+ ],
+ "stage": {
+  "step_1": {
+   "ha_rule": [
+    "B95DB026-AEDF-737A-0442-B5134660D204",
+    "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+   ],
+   "failover_serial": 1,
+   "failback_serial": -1,
+   "haList": [
+    {
+     "ha_name": "tst",
+     "ha_uuid": "B95DB026-AEDF-737A-0442-B5134660D204"
+    },
+    {
+     "ha_name": "test4",
+     "ha_uuid": "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+    }
+   ]
+  },
+  "step_2": {
+   "ha_rule": [
+    "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
+    "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8"
+   ],
+   "failover_serial": 2,
+   "failback_serial": -2,
+   "haList": [
+    {
+     "ha_name": "test3",
+     "ha_uuid": "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
+     "disabled": 1
+    },
+    {
+     "ha_name": "test2",
+     "ha_uuid": "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8",
+     "disabled": 1
+    }
+   ]
+  }
+ },
+ "_": "3f1da2be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001009,
+  "message": "[10001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHAGroup
+body: {
+ "uuids": [
+  "CFCEDC75-F48E-22B0-8A67-DE1FCA51C4C7"
+ ],
+ "_": "3d9a6335"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHAGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVolumeInfo
+body: {
+ "master_uuid": "",
+ "slave_uuid": "",
+ "_": "3eedc6e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist",
+  "disk_info": [],
+  "drive_letter_info": {
+   "master_node": [],
+   "sub_node": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: forceSwitchHAGroup
+body: {
+ "ha_uuids": [
+  "B95DB026-AEDF-737A-0442-B5134660D204",
+  "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+ ],
+ "_": "3f79023b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001017,
+  "message": "[10001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: ha
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: haVerifyName
+body: {
+ "ha_name": "",
+ "_": "3e111725"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHAGroup
+body: {
+ "page": 1,
+ "limit": 1,
+ "search_field": "group_name",
+ "search_value": "",
+ "_": "3d5c33b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "group_uuid": "F041CD70-F9DE-CC62-0119-C405F02C54C0",
+    "group_name": "111",
+    "switch_confirm": 1,
+    "error_confirm": 1,
+    "stage": {
+     "step_1": {
+      "ha_rule": [
+       "B95DB026-AEDF-737A-0442-B5134660D204",
+       "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+      ],
+      "failover_serial": 1,
+      "failback_serial": -1,
+      "haList": [
+       {
+        "ha_name": "tst",
+        "ha_uuid": "B95DB026-AEDF-737A-0442-B5134660D204"
+       },
+       {
+        "ha_name": "test4",
+        "ha_uuid": "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+       }
+      ]
+     },
+     "step_2": {
+      "ha_rule": [
+       "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
+       "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8"
+      ],
+      "failover_serial": 2,
+      "failback_serial": -2,
+      "haList": [
+       {
+        "ha_name": "test3",
+        "ha_uuid": "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
+        "disabled": 1
+       },
+       {
+        "ha_name": "test2",
+        "ha_uuid": "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8",
+        "disabled": 1
+       }
+      ]
+     }
+    },
+    "ha_rules": [
+     "B95DB026-AEDF-737A-0442-B5134660D204",
+     "128C2F7D-0795-41F3-1274-3FBAA2449BAD",
+     "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
+     "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8"
+    ],
+    "created_at": 1602231083,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1,
+  "ha_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHASwitchTaskStatus
+body: {
+ "task_uuid": "F696DC12-6727-B799-93D4-8B2213086F5A",
+ "_": "3f71014e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStageOptions
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyHAGroup
+body: {
+ "group_uuid": "CFCEDC75-F48E-22B0-8A67-DE1FCA51C4C7",
+ "group_name": "111",
+ "error_confirm": 1,
+ "switch_confirm": 1,
+ "ha_rules": [
+  "B95DB026-AEDF-737A-0442-B5134660D204",
+  "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+ ],
+ "stage": {
+  "step_1": {
+   "ha_rule": [
+    "B95DB026-AEDF-737A-0442-B5134660D204",
+    "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+   ],
+   "failover_serial": 1,
+   "failback_serial": -1,
+   "haList": [
+    {
+     "ha_name": "tst",
+     "ha_uuid": "B95DB026-AEDF-737A-0442-B5134660D204"
+    },
+    {
+     "ha_name": "test4",
+     "ha_uuid": "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
+    }
+   ]
+  }
+ },
+ "_": "3f745eba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: pauseHAGroupSwitch
+body: {
+ "operate": "pause",
+ "task_uuid": "F696DC12-6727-B799-93D4-8B2213086F5A",
+ "_": "3f477da4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeHAGroupSwitch
+body: {
+ "operate": "resume",
+ "task_uuid": "F696DC12-6727-B799-93D4-8B2213086F5A",
+ "_": "3f38487b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
