@@ -282,6 +282,49 @@ class ClusterTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Cluster', 'listLabel', body)
 
+    def testCheckDupName(self):
+        a = Auth(username, pwd)
+        body = {
+            'cluster_name': 'A',
+            'cluster_uuid': '7432C18E-4FF6-D06B-8081-ACA41F673ADD',
+        }
+
+        cluster = Cluster(a)
+        r = cluster.checkDupName(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'checkDupName', body)
+
+    def testStartHaCluster(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start',
+            'cluster_uuids': [
+                '7432C18E-4FF6-D06B-8081-ACA41F673ADD',
+            ],
+        }
+
+        cluster = Cluster(a)
+        r = cluster.operateHaCluster(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'operateHaCluster', body)
+
+    def testStopHaCluster(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'stop',
+            'cluster_uuids': [
+                '7432C18E-4FF6-D06B-8081-ACA41F673ADD',
+            ],
+        }
+
+        cluster = Cluster(a)
+        r = cluster.operateHaCluster(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'operateHaCluster', body)
+
 
 if __name__ == '__main__':
     unittest.main()
