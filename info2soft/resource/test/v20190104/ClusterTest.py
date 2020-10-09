@@ -163,6 +163,30 @@ class ClusterTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Cluster', 'deleteCls', body)
 
+    def testClsNodeInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'cls_ip': '',
+        }
+
+        cluster = Cluster(a)
+        r = cluster.clsNodeInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'clsNodeInfo', body)
+
+    def testListRacStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuids': [],
+        }
+
+        cluster = Cluster(a)
+        r = cluster.listRacStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'listRacStatus', body)
+
 
 if __name__ == '__main__':
     unittest.main()  

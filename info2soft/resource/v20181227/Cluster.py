@@ -130,3 +130,29 @@ class Cluster(object):
         res = https._post(url, body, self.auth)
         return res
 
+    '''
+     * 1准备-3 根据集群IP获取节点信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def clsNodeInfo(self, body):
+
+        url = '{0}/cls/node_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 列表 - 状态(RAC)
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listRacStatus(self, body):
+
+        url = '{0}/cls/rac_status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
