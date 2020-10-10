@@ -55,7 +55,6 @@ from .resource import BoxVm
 
 from .system.v20181227.User import User
 from .system.v20181227.Lic import Lic
-from .system.v20181227.Settings import Settings
 
 
 from .timing.v20181227.TimingBackup import TimingBackup
