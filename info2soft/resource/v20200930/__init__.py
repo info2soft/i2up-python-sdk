@@ -9,3 +9,5 @@ from .DtoStorage import DtoStorage
 from .DtoHost import DtoHost
 
 from .Monitor import Monitor
+
+from .NodeProxy import NodeProxy
