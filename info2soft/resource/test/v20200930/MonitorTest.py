@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.common.Monitor import Monitor
+from info2soft.resource.v20200930 import Monitor
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -92,6 +92,17 @@ class MonitorTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Monitor', 'listChartData', body)
+
+    def testListBkNodeOverall(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        monitor = Monitor(a)
+        r = monitor.listBkNodeOverall(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Monitor', 'listBkNodeOverall', body)
 
 
 if __name__ == '__main__':

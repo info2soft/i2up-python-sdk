@@ -1,0 +1,155 @@
+<START-----------------------------------------------------------
+Method: listBkNodeOverall
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "phy_info": {
+   "code": 10011307,
+   "message": "[10011307] Node monitor is not turned on"
+  },
+  "drivers_info": {
+   "code": 0,
+   "message": "[0] success",
+   "rpc": "1",
+   "sdatad": "1",
+   "srepd": "1",
+   "log": "1",
+   "ha": "1",
+   "ha_detector": "1",
+   "drivers": [
+    {
+     "name": "C:",
+     "total": "214746628096",
+     "free": "81143832576"
+    },
+    {
+     "name": "D:",
+     "total": "42949668864",
+     "free": "29712723968"
+    },
+    {
+     "name": "E:",
+     "total": "242300768256",
+     "free": "211539099648"
+    },
+    {
+     "name": "F:",
+     "total": "107374178304",
+     "free": "98577924096"
+    },
+    {
+     "name": "H:",
+     "total": "107374178304",
+     "free": "101361811456"
+    },
+    {
+     "name": "I:",
+     "total": "324639125504",
+     "free": "230960943104"
+    },
+    {
+     "name": "K:",
+     "total": "460813496320",
+     "free": "460640595968"
+    }
+   ]
+  },
+  "chart_data": {
+   "code": 0,
+   "message": "[0] success",
+   "cpu": [],
+   "mem": [],
+   "nic": [],
+   "disk": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listChartConfig
+body: {
+ "uuid": "B8566905-411E-B2CD-A742-77B1346D8E84"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listChartData
+body: {
+ "start_time": 154172680,
+ "last_time": 164172680,
+ "_": "3cb7de34"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDriversInfo
+body: {
+ "uuid": "B8566905-411E-B2CD-A742-77B1346D8E84"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPhyInfo
+body: {
+ "uuid": "B8566905-411E-B2CD-A742-77B1346D8E84"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setChartConfig
+body: {
+ "storage_io": 1,
+ "nic_io": 0,
+ "per_core": 1,
+ "per_disk": 0,
+ "net_in": 0,
+ "net_out": 0,
+ "_": "3f0dd55b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
