@@ -33,7 +33,7 @@ class Qr (object):
         return res
 
     '''
-     * 4.确认/取消登
+     * 4.确认登录
      * 
      * @param dict body  参数详见 API 手册
      * @return array
@@ -42,6 +42,32 @@ class Qr (object):
         
         url = '{0}/qr/event'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 4.取消登录
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+    def cancelLogin(self, body):
+
+        url = '{0}/qr/event'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 4.检查有效性
+     * 
+     * @param dict body  参数详见 API 手册
+     * @return array
+     '''
+    def checkQrValidity(self, body):
+
+        url = '{0}/qr/event'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 

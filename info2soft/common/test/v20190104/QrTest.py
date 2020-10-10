@@ -77,6 +77,30 @@ class QrTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Qr', 'confirmLogin', body)
 
+    def testCancelLogin(self):
+        a = Auth(username, pwd)
+        body = {
+            'action': 2,
+            'uuid': '9169240e9e5fa86a115578b9ed151c34771ca22e',
+        }
+        qr = Qr(a)
+        r = qr.confirmLogin(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Qr', 'cancelLogin', body)
+
+    def testCheckQrValidity(self):
+        a = Auth(username, pwd)
+        body = {
+            'action': 3,
+            'uuid': '9169240e9e5fa86a115578b9ed151c34771ca22e',
+        }
+        qr = Qr(a)
+        r = qr.confirmLogin(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Qr', 'checkQrValidity', body)
+
     def testCheckQrStatus(self):
         a = Auth(username, pwd)
         body = {
