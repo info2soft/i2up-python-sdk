@@ -47,29 +47,97 @@ class Auth(object):
         self.ssoToken = r[1]
         return self._token
 
-    def describePhoneCode(self):
-        url = '{0}/auth/getPhoneCode'.format(config.get_default('default_api_host'))
-        r = https._post(url, None, self)
-        return r[0]['data']
+    '''
+     * auth-注册账号(不开放)
+     * 
+     * @return list
+    '''
+    def regAccount(self, body):
 
-    def regAccount(self):
-        url = '{0}/auth/register'.format(config.get_default('default_api_host'))
-        r = https._post(url)
-        return r[0]['data']
+        url = '{0}auth/register'.format(config.get_default('default_api_host'))
 
-    def resetPwd(self):
-        url = '{0}/auth/reset/password'.format(config.get_default('default_api_host'))
-        r = https._post(url, None, self)
-        return r[0]['data']
+        res = https._post(url, body, self)
+        return res
 
-    def checkLoginStatus(self):
+    '''
+     * 短信-1.时间戳
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def describeTimeStamp(self, body):
+
+        url = '{0}/auth/t'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self)
+        return res
+
+    '''
+     * 短信-2.生成短信、邮件关联信息
+     * 
+     * @return list
+    '''
+    def authGenerate(self, body):
+
+        url = '{0}/auth/generate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self)
+        return res
+
+    '''
+     * auth-获取手机、邮件验证码
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def describeVerificationCode(self, body):
+
+        url = '{0}auth/verification_code'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self)
+        return res
+
+    '''
+     * auth-获取token
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def tokendef(self, body):
+
+        url = '{0}auth/token'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self)
+        return res
+
+    '''
+     * auth-是否超时或账号失效
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def heartbeat(self, body):
+
+        url = '{0}auth/heartbeat'.format(config.get_default('default_api_host'))
+
+        res = https._put(url, body, self)
+        return res
+
+    '''
+     * 接口未实现
+    '''
+    def resetPwd(self, body):
+        url = '{0}/auth/reset_password'.format(config.get_default('default_api_host'))
+        r = https._post(url, body, self)
+        return r
+
+    def checkLoginStatus(self, body):
         url = '{0}/auth/token'.format(config.get_default('default_api_host'))
         data = {
             'access_token': self._ssoToken
         }
         r = https._get(url, data, self)
-        print(r)
-        return r[0]['data']
+        return r
 
     def token_of_request(self, url, body=None, content_type=None):
         parsed_url = urlparse(url)

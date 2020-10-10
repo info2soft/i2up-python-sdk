@@ -30,34 +30,70 @@ pwd = 'Info1234'
                 
 class AuthTestCase(unittest.TestCase):
 
-    def testDescribePhoneCode(self):
+    def testDescribeTimeStamp(self):
         a = Auth(username, pwd)
-        r = a.describePhoneCode()
+        body = {
+            'timestamp': 1546847673,
+        }
+
+        r = a.describeTimeStamp(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Auth', 'describePhoneCode', None)
+        write(r[0], 'Auth', 'describeTimeStamp', body)
 
-    def testRegAccount(self):
+    def testAuthGenerate(self):
         a = Auth(username, pwd)
-        r = a.regAccount()
+        body = {
+        }
+
+        r = a.authGenerate(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Auth', 'regAccount', None)
+        write(r[0], 'Auth', 'authGenerate', body)
 
-    def testToken(self):
+    def testDescribeVerificationCode(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'mobile': 18501767968,
+            'email': '',
+            'type': 'sms',
+        }
+
+        r = a.describeVerificationCode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Auth', 'describeVerificationCode', body)
+
+    def testTokendef(self):
         a = Auth(username, pwd)
         body = {
             'pwd': 'Info1234',
             'username': 'admin',
         }
-        r = a.token(body)
+
+        r = a.tokendef(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Auth', 'token', body)
+        write(r[0], 'Auth', 'tokendef', body)
+
+    def testHeartbeat(self):
+        a = Auth(username, pwd)
+        body = {
+            'refresh_token': 'null',
+        }
+
+        r = a.heartbeat(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Auth', 'heartbeat', body)
 
     def testResetPwd(self):
         a = Auth(username, pwd)
-        r = a.resetPwd()
+        body = {
+        }
+
+        r = a.resetPwd(body)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Auth', 'resetPwd', None)
