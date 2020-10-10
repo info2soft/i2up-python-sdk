@@ -18,7 +18,6 @@ from info2soft.common.DataBaseBackup import DataBaseBackup
 from info2soft.common.Dir import Dir
 from info2soft.common.GeneralInterface import GeneralInterface
 from info2soft.common.Logs import Logs
-from info2soft.common.Monitor import Monitor
 from info2soft.common.Permission import Permission
 from info2soft.common.Qr import Qr
 from info2soft.common.Storage import Storage

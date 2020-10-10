@@ -85,3 +85,15 @@ class Monitor (object):
         res = https._get(url, None, self.auth)
         return res
 
+    '''
+     * 获取备端系统状态（平台监控）
+     * 
+     * @return list
+    '''
+    def listBkNodeOverall(self, body):
+
+        url = '{0}/monitor/bk_node_overall'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, None, self.auth)
+        return res
+
