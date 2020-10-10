@@ -1,0 +1,245 @@
+<START-----------------------------------------------------------
+Method: authDtoHost
+body: {
+ "host_ip": "192.168.72.70",
+ "host_user": "exampleuser",
+ "host_pwd": "dN5BejxqJsnEQOBRig7OBeZzQb1SEYAfs0keD+6z1l658pc/drceaMJa29FDdQpW6FfLLmb1cG1DWvOOGz9sZRUY4wnKNhpHQjVE4wAlLOnVZPGlYSgtURhbIOeLl5uZCWgCSGTbQFMTCD/wql4/8/cMgWspQBvwO/5UbYqcW64Sj8wnuWf6qt4KGqrP9ua2yDFj+5S0MgMLWnAXhBwCCFVBmmmngNr5CUMe4Hqm1/d4OhvTzqTWecLNFnr9NmN4fp1zAQMZstUiedgWGg7uU9Aez2Xf8RsekMeo3O7bnZXyHZL5wpOtiq3gD/12H4bNrgDYuShsGDfEEqzfwXpoew==",
+ "_": "3cdfca91"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtoHost
+body: {
+ "host_name": "",
+ "host_ip": "",
+ "host_user": "",
+ "host_pwd": "",
+ "sto_uuid": "CCF36C5F-CBA6-8A55-3CA2-C07CF8E0EC4F",
+ "comment": "",
+ "_": "3f75feaa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: host_name;\n Lost: host_ip;\n Lost: host_user;\n Lost: host_pwd;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoHost
+body: {
+ "host_uuids": [],
+ "_": "3eddde16"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: host_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoHost
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listArchiveDate
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listArchiveFile
+body: {
+ "data_source": "2019",
+ "page": 1,
+ "limit": 100,
+ "wk_path": "",
+ "file_name": "",
+ "create_begin_time": 1,
+ "create_end_time": 1,
+ "modify_begin_time": 1,
+ "modify_end_time": 1,
+ "_": "3f5814cc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakRecord
+body: {
+ "file_name": "",
+ "wk_path": "",
+ "bk_path": "",
+ "begin_backup_time": 1,
+ "end_backup_time": 1,
+ "page": "1",
+ "limit": "100",
+ "_": "3e3d1c6f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoHost
+body: {
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "search_field": "",
+ "_": "3ee306e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "sto_name": "local",
+    "sto_type": "0",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "host_name": "68.212",
+    "host_uuid": "6C2C9791-2DE5-FBCA-C6D2-DB0D96776399",
+    "host_type": 0,
+    "host_ip": "172.20.68.212",
+    "sto_uuid": "EDC7C488-F5F7-3473-C0E6-554ABDC4F53D",
+    "os_type": 1,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoHostStatus
+body: {
+ "_": "3f768e73"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: host_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLoadRules
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRcTimePoint
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoHost
+body: {
+ "host_uuid": "",
+ "host_name": "",
+ "host_ip": "",
+ "host_user": "",
+ "host_pwd": "",
+ "sto_uuid": 0,
+ "random_str": "",
+ "_": "3efe10d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: host_name;\n Lost: host_ip;\n Lost: host_user;\n Lost: host_pwd;\n Not uuid: sto_uuid;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateDtoHost
+body: {
+ "host_uuids": [],
+ "operate": "",
+ "_": "3e2a6c94"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: host_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
