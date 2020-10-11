@@ -111,7 +111,7 @@ class GeneralInterface (object):
      * 
      * @return list
     '''
-    def listRpcTask(self, ):
+    def listRpcTask(self, body):
         
         url = '{0}//rpc_task'.format(config.get_default('default_api_host'))
         
