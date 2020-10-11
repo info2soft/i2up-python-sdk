@@ -73,19 +73,50 @@ class DirTestCase(unittest.TestCase):
     def testListDir2(self):
         a = Auth(username, pwd)
         body = {
-            'port': '26821',
-            'account': 'Administrator',
-            'path': '/',
-            'ip': '192.168.25.21',
             'show_file': 1,
-            'password': 'xxxxxx',
-            'i2id': ''
+            'node_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
+            'dev': 0,
+            'path': '',
+            'rep_uuid': '',
+            'bs_time': ''
         }
         dir = Dir(a)
-        r = dir.listDir(body)
+        r = dir.listDir2(body)
+        print(r)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Dir', 'listDir', body)
+        write(r[0], 'Dir', 'listDir2', body)
+
+    def testDeleteDir(self):
+        a = Auth(username, pwd)
+        body = {
+            'sto_uuid': '',
+            'path': 'aliyun--oos:/TestDir',
+            'names': [{
+            'name': '222 - 副本 (2).txt',
+            'is_dir': '0',},],
+            'host_uuid': '',
+        }
+
+        dir = Dir(a)
+        r = dir.deleteDir(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Dir', 'deleteDir', body)
+
+    def testDescribeDirDelStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'sto_uuid': '',
+            'task_uuid': '',
+            'host_uuid': '',
+        }
+
+        dir = Dir(a)
+        r = dir.describeDirDelStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Dir', 'describeDirDelStatus', body)
 
 
 if __name__ == '__main__':
