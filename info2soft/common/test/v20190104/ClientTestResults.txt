@@ -1,0 +1,116 @@
+<START-----------------------------------------------------------
+Method: createCompareResult
+body: {
+ "uuid": "65DA3916-AF53-CE70-0B47-A142414AA140",
+ "result_uuid": "25DA3916-AF13-CE70-0B47-B142414AA142",
+ "result": {
+  "code": "0",
+  "time": "10",
+  "files": "100",
+  "bytes": "1111111",
+  "missing": "2",
+  "diff": "48",
+  "equal": "50",
+  "erro": ""
+ },
+ "result_type": "rep",
+ "_": "3edf3107"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVirtualPlatformRules
+body: {
+ "vp_uuids": [
+  "3C334EF3",
+  "3C334EF3"
+ ],
+ "_": "3f6b6592"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "rules": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVirtualPlatforms
+body: {
+ "npsvr_uuid": "",
+ "_": "3e74a09a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "virtualPlatforms": [
+   {
+    "uuid": "B919C076-7B02-7BC2-D466-A794C00664CA"
+   },
+   {
+    "uuid": "4A1F80DE-379D-C5E7-C495-7D55E0795275"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateSlaveNode
+body: {
+ "config": "",
+ "_": "3e273d6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011220,
+  "message": "[10011220] Failed to get master node_info."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCompareResult
+body: {
+ "uuid": "65DA3916-AF53-CE70-0B47-A142414AA140",
+ "result_uuid": "25DA3916-AF13-CE70-0B47-B142414AA142",
+ "result": {
+  "code": "0",
+  "time": "10",
+  "files": "100",
+  "bytes": "1111111",
+  "missing": "2",
+  "diff": "48",
+  "equal": "50",
+  "erro": ""
+ },
+ "result_type": "rep",
+ "_": "3f3714de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

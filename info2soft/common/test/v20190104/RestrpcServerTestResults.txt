@@ -1,0 +1,290 @@
+<START-----------------------------------------------------------
+Method: addRestRpcCluster
+body: {
+ "cluster_uuid": "",
+ "center_node_ip": "",
+ "_": "3f067752"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 22221005,
+  "message": "[22221005] Wrong Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addRestRpcHa
+body: {
+ "rule_uuid": "",
+ "failed_node_uuid": "",
+ "new_node_uuid": "",
+ "_": "3e00b3c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 22221005,
+  "message": "[22221005] Wrong Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addRestRpcLog
+body: {
+ "method": "",
+ "cc_uuid": "",
+ "node_uuid": "",
+ "content": "",
+ "_": "3ecfbc56"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addRestRpcresult
+body: {
+ "type": "result",
+ "code": 1,
+ "ip": "",
+ "_": "3ee641c0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 22221005,
+  "message": "[22221005] Wrong Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRestRpcCcip
+body: {
+ "method": "get_node_mode",
+ "uuid": "65E3E4A5-D089-8B6A-25F3-096F6997E3F0",
+ "_": "3f580b80"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRestRpcTasks
+body: {
+ "method": "get_rules",
+ "node_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+ "node_role": "",
+ "node_type": "",
+ "_": "3f55920f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "rep_name": "dGVzdDE=",
+    "rep_uuid": "A19F8FF5-B6C1-3160-4042-0DF3AE44F8DB",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "bk_port": "26832,26833",
+    "encrypt": 0,
+    "secret_key": "",
+    "compress": 0,
+    "hd_limit": "0",
+    "wk_ip": "172.20.68.211",
+    "bk_ip": "172.20.68.211",
+    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "rep_path": "Qzpc5Li05pe25paH5Lu2XHRlc3Rc",
+    "abspath": "0",
+    "rep_dir": "Qzpc5Li05pe25paH5Lu2XHRlc3RiazFc",
+    "snapshot_interval": 0,
+    "snapshot_limit": null,
+    "snapshot_start": null,
+    "snapshot_policy": null,
+    "cdp": "0",
+    "ctname_type": 0,
+    "oph_policy": "0",
+    "oph_dir": "",
+    "rep_mode": 0,
+    "band_width": "",
+    "del_policy": "0",
+    "rep_type": 0,
+    "nostart": "1",
+    "cmp_plan": 0,
+    "file_check": 0,
+    "sync_flag": 0,
+    "open_type": "0",
+    "syncattr": "1",
+    "skipmirr": "0",
+    "thread_num": "1",
+    "mir_detect_script": "",
+    "mscs_autostart": 0,
+    "filter_delete": 0
+   },
+   {
+    "rep_name": "MTEx",
+    "rep_uuid": "C4081DC6-A46A-CD0C-137C-C048A943B96F",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "bk_port": "26832,26833",
+    "encrypt": 0,
+    "secret_key": "",
+    "compress": 0,
+    "hd_limit": "0",
+    "wk_ip": "172.20.68.211",
+    "bk_ip": "172.20.68.211",
+    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "rep_path": "STpc,!STpcUkVDWUNMRVJc,!STpcU3lzdGVtIFZvbHVtZSBJbmZvcm1hdGlvblw=,!STpcJFJlY3ljbGUuQmluXA==,!STpcJFJFQ1lDTEUuQklOXA==,!STpccGFnZWZpbGUuc3lz,!STpcaGliZXJmaWwuc3lz,!STpcc3dhcGZpbGUuc3lz",
+    "excludes": "!STpcUkVDWUNMRVJc,!STpcU3lzdGVtIFZvbHVtZSBJbmZvcm1hdGlvblw=,!STpcJFJlY3ljbGUuQmluXA==,!STpcJFJFQ1lDTEUuQklOXA==,!STpccGFnZWZpbGUuc3lz,!STpcaGliZXJmaWwuc3lz,!STpcc3dhcGZpbGUuc3lz",
+    "abspath": "0",
+    "rep_dir": "STpc",
+    "snapshot_interval": 0,
+    "snapshot_limit": null,
+    "snapshot_start": null,
+    "snapshot_policy": null,
+    "cdp": "0",
+    "ctname_type": 0,
+    "oph_policy": "0",
+    "oph_dir": "",
+    "rep_mode": 0,
+    "band_width": "",
+    "del_policy": "0",
+    "rep_type": 0,
+    "nostart": "0",
+    "cmp_plan": 0,
+    "file_check": 0,
+    "sync_flag": 0,
+    "open_type": "0",
+    "syncattr": "1",
+    "skipmirr": "0",
+    "thread_num": "1",
+    "mir_detect_script": "",
+    "mscs_autostart": 0,
+    "filter_delete": 0
+   },
+   {
+    "rep_name": "dGVzdDI=",
+    "rep_uuid": "1A18D8DC-15D0-C4CF-D9C9-F67C6342A7EB",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "bk_port": "26832,26833",
+    "encrypt": 0,
+    "secret_key": "",
+    "compress": 0,
+    "hd_limit": "0",
+    "wk_ip": "172.20.68.211",
+    "bk_ip": "172.20.68.211",
+    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "rep_path": "Qzpc5Li05pe25paH5Lu2XHRlc3Rc",
+    "abspath": "0",
+    "rep_dir": "Qzpc5Li05pe25paH5Lu2XHRlc3RcYmsyXA==",
+    "snapshot_interval": 0,
+    "snapshot_limit": null,
+    "snapshot_start": null,
+    "snapshot_policy": null,
+    "cdp": "0",
+    "ctname_type": 0,
+    "oph_policy": "0",
+    "oph_dir": "",
+    "rep_mode": 0,
+    "band_width": "",
+    "del_policy": "0",
+    "rep_type": 0,
+    "nostart": "1",
+    "cmp_plan": 0,
+    "file_check": 0,
+    "sync_flag": 0,
+    "open_type": "0",
+    "syncattr": "1",
+    "skipmirr": "0",
+    "thread_num": "1",
+    "mir_detect_script": "",
+    "mscs_autostart": 0,
+    "filter_delete": 0
+   },
+   {
+    "rep_name": "bW92ZS50ZXN0Mw==",
+    "rep_uuid": "F84EE60E-5BCB-974C-9C82-8B31A588CD43",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "bk_port": "26832,26833",
+    "encrypt": 0,
+    "secret_key": "",
+    "compress": 0,
+    "hd_limit": "0",
+    "wk_ip": "172.20.68.211",
+    "bk_ip": "192.168.7.250",
+    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "62A2AC5C-D70A-FDF0-EBD1-4084C36E9404",
+    "rep_path": "Qzpc,QzpcUHJvZ3JhbSBGaWxlcyAoeDg2KVw=,QzpcUHJvZ3JhbSBGaWxlc1w=,QzpcUHJvZ3JhbURhdGFc,QzpcVXNlcnNc,QzpcV0lORE9XU1w=,QzpcV2luZG93c1w=,QzpccHJvZ3JhbSBmaWxlcyAoeDg2KVw=,QzpccHJvZ3JhbSBmaWxlc1w=,QzpccHJvZ3JhbWRhdGFc,QzpcdXNlcnNc,Qzpcd2luZG93c1w=,!QzpcUkVDWUNMRVJc,!QzpcU3lzdGVtIFZvbHVtZSBJbmZvcm1hdGlvblw=,!QzpcJFJlY3ljbGUuQmluXA==,!QzpcJFJFQ1lDTEUuQklOXA==,!QzpccGFnZWZpbGUuc3lz,!QzpcaGliZXJmaWwuc3lz,!Qzpcc3dhcGZpbGUuc3lz,!QzpcJFdJTkRPV1MufkJUXA==,!QzpcUGVyZkxvZ3Nc,!QzpcUHJvZ3JhbSBGaWxlcyAoeDg2KVxpbmZvMnNvZnRcbm9kZVw=,!QzpcUHJvZ3JhbSBGaWxlc1xXaW5kb3dzQXBwc1w=,!QzpcVXNlcnNcd2VuY1xBcHBEYXRhXExvY2FsXENvbW1zXFVuaXN0b3JlREJc,!QzpcV2luZG93c1xhc3NlbWJseVxOYXRpdmVJbWFnZXNfdjQuMC4zMDMxOV8zMlxUZW1wXA==,!QzpcYm9vdG1ncg==",
+    "abspath": 0,
+    "rep_dir": "QzpcLEs6XEkyRkZPXFByb2dyYW0gRmlsZXMgKHg4NilcLEs6XEkyRkZPXFByb2dyYW0gRmlsZXNcLEs6XEkyRkZPXFByb2dyYW1EYXRhXCxLOlxJMkZGT1xVc2Vyc1wsSzpcSTJGRk9cV0lORE9XU1wsSzpcSTJGRk9cV2luZG93c1wsSzpcSTJGRk9ccHJvZ3JhbSBmaWxlcyAoeDg2KVwsSzpcSTJGRk9ccHJvZ3JhbSBmaWxlc1wsSzpcSTJGRk9ccHJvZ3JhbWRhdGFcLEs6XEkyRkZPXHVzZXJzXCxLOlxJMkZGT1x3aW5kb3dzXA==",
+    "snapshot_interval": 0,
+    "snapshot_limit": 2,
+    "snapshot_start": null,
+    "snapshot_policy": 0,
+    "cdp": 0,
+    "cdp_data_inc": 0,
+    "cdp_snap_on": "",
+    "cdp_snap_interval": "",
+    "cdp_snap_count": "",
+    "cdp_zfs_pool": "",
+    "oph_policy": 0,
+    "oph_dir": "",
+    "rep_mode": 0,
+    "band_width": "",
+    "del_policy": 0,
+    "nostart": "1",
+    "cmp_plan": 0,
+    "file_check": 0,
+    "sync_flag": 0,
+    "open_type": 0,
+    "syncattr": 1,
+    "thread_num": "1",
+    "mir_detect_script": "",
+    "mscs_autostart": 0,
+    "filter_delete": 0,
+    "rep_type": 0,
+    "src_type": 1,
+    "dst_type": 1,
+    "excl_driver": "",
+    "ffo_type": 1,
+    "ffo_move_type": 0,
+    "ffo_net_mapping_type": "2",
+    "ffo_net_mapping": "",
+    "ffo_failover": "0",
+    "ffo_monitor_type": 2,
+    "ffo_monitorips": "",
+    "ffo_heartbeat": 10,
+    "ffo_max_fail_times": 6,
+    "ffo_bk_type": "0",
+    "ffo_pre_over_script": "",
+    "ffo_post_over_script": "",
+    "ffo_servicelist": "QXBwaW5mbyxBcHBNZ210LEJGRSxLZXlJc28sQ2VydFByb3BTdmMsVmF1bHRTdmMsQ3J5cHRTdmMsRGNvbUxhdW5jaCxEaGNwLERuc2NhY2hlLERQUyxXZGlTeXN0ZW1Ib3N0LEVGUyxFYXBob3N0LGdwc3ZjLEkyLUF2YWlsYWJpbGl0eSxJMi1TZGF0YWQsSTItU2xvZ2QsSTItU3JlcGQsSTItcnBjLElLRUVYVCxpcGhscHN2YyxQb2xpY3lBZ2VudCxTaGFyZWRBY2Nlc3Msc3dwcnYsTVNpU0NTSSxOZXRsb2dvbixOZXRtYW4sbmV0cHJvZm0sTmxhU3ZjLG5zaSxQbHVnUGxheSxXUERCdXNFbnVtLFBvd2VyLFJwY0VwdE1hcHBlcixSYXNNYW4sU2Vzc2lvbkVudixUZXJtU2VydmljZSxVbVJkcFNlcnZpY2UsUnBjU3MsU3N0cFN2YyxTYW1TcyxMYW5tYW5TZXJ2ZXIsU0NhcmRTdnIsc3Bwc3ZjLFNFTlMsbG1ob3N0cyxTY2hlZHVsZSxQcm9mU3ZjLHZkcyx3bWlBcFNydixXaW5IdHRwQXV0b1Byb3h5U3ZjLG1wc3N2YyxFdmVudExvZyxXaW5tZ210LFRydXN0ZWRJbnN0YWxsZXIsV2luUk0sVzMyVGltZSxkb3Qzc3ZjLExhbm1hbldvcmtzdGF0aW9u"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
