@@ -99,7 +99,7 @@ class GeneralInterface (object):
      * 
      * @return list
      '''
-    def upMonitorOverall(self, ):
+    def upMonitorOverall(self, body):
 
         url = '{0}/dashboard/up_monitor_overall'.format(config.get_default('default_api_host'))
 
@@ -107,13 +107,13 @@ class GeneralInterface (object):
         return res
 
     '''
-     * 获取版本提交记录
+     * RPC Task 列表
      * 
      * @return list
     '''
     def listRpcTask(self, body):
         
-        url = '{0}//rpc_task'.format(config.get_default('default_api_host'))
+        url = '{0}/rpc_task'.format(config.get_default('default_api_host'))
         
         res = https._get(url, None, self.auth)
         return res
@@ -123,10 +123,22 @@ class GeneralInterface (object):
      * 
      * @return list
     '''
-    def listVersionHistory(self, ):
+    def listVersionHistory(self, body):
         
         url = '{0}/version_history'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * Dashboard-sysadmin
+     * 
+     * @return list
+    '''
+    def sysadmin(self, body):
+
+        url = '{0}/dashboard/user_summary'.format(config.get_default('default_api_host'))
+
         res = https._get(url, None, self.auth)
         return res
 
