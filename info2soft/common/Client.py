@@ -45,3 +45,16 @@ class Client (object):
         res = https._post(url, body, self.auth)
         return res
 
+    '''
+     * 复制/NAS规则，创建比较结果
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def createCompareResult(self, body):
+
+        url = '{0}/api/client/create_compare_result'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
