@@ -14,7 +14,7 @@ class Client (object):
     '''
     def updateSlaveNode(self, body):
         
-        url = '{0}/api/client/update_slave_node'.format(config.get_default('default_api_host'))
+        url = '{0}/client/update_slave_node'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
         return res
@@ -27,7 +27,7 @@ class Client (object):
     '''
     def getVirtualPlatforms(self, body):
         
-        url = '{0}/api/client/get_virtual_platforms'.format(config.get_default('default_api_host'))
+        url = '{0}/client/get_virtual_platforms'.format(config.get_default('default_api_host'))
         
         res = https._get(url, body, self.auth)
         return res
@@ -40,7 +40,7 @@ class Client (object):
     '''
     def getVirtualPlatformRules(self, body):
         
-        url = '{0}/api/client/get_virtual_platform_rules'.format(config.get_default('default_api_host'))
+        url = '{0}/client/get_virtual_platform_rules'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
         return res
@@ -53,7 +53,7 @@ class Client (object):
     '''
     def createCompareResult(self, body):
 
-        url = '{0}/api/client/create_compare_result'.format(config.get_default('default_api_host'))
+        url = '{0}/client/create_compare_result'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
