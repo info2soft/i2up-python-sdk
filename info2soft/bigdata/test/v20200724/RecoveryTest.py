@@ -123,6 +123,21 @@ class BackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Recovery', 'listBigdataRecoveryStatus', body)
 
+    def testOperateBigdataRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start',
+            'uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        bigDataRecovery = Recovery(a)
+        r = bigDataRecovery.operateBigdataRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Recovery', 'operateBigdataRecovery', body)
+
     def testAuthBigdataPlatform(self):
         a = Auth(username, pwd)
         body = {
