@@ -1,4 +1,20 @@
 <START-----------------------------------------------------------
+Method: describeStatistics
+body: {
+ "id": "2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "detail": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: describeVersion
 body: null
 response: {
@@ -7,25 +23,27 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
+  "version": "7.1.68.20100922",
   "prod_type": "STD",
-  "version": "7.0.0.80",
   "api_version": "2.0.0",
-  "bundle_version": "2e44b27",
-  "build_date": "20181018",
-  "migration_version": 20190116180716
+  "build_date": "202010092221",
+  "migration_version": 20200925171200,
+  "server_time": 1602477423
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: updateDatabase
-body: null
+Method: listRpcTask
+body: {}
 response: {
  "ret": 200,
  "msg": "",
  "data": {
   "code": 0,
-  "message": "success update to latest version"
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
  }
 }
 -----------------------------------------------------------END>
@@ -42,22 +60,431 @@ body: {
  "type": "",
  "result": 0,
  "group_uuid": "",
- "uuid": ""
+ "uuid": "",
+ "_": "3e388121"
 }
-response: null
+response: {}
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: readStatistics
+Method: listStatisticsChart
 body: {
- "type": "I2VP_BK"
+ "start": 1,
+ "src_type": "0",
+ "end": 2,
+ "type": "I2BAK_BK",
+ "_": "3f6143c2"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  The type field must be one of: OVERVIEW,bak_bk,bak_rc,cmp_all,ffo,rule,vp.;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVersionHistory
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
   "code": 0,
-  "message": ""
+  "message": "[0] success",
+  "version_history": [
+   {
+    "time": "2020-09-29",
+    "version": "7.1.68",
+    "content": [
+     "[\u65b0\u7279\u6027]\uff1a",
+     "-\u5468\u671f\u6027\u5907\u4efd\u7b56\u7565\u8c03\u6574,\u5148\u5220\u9664\u8fc7\u671f\u6570\u636e\u518d\u5907\u4efd",
+     "-FFO\u652f\u6301\u88f8\u673a\u6062\u590d",
+     "-\u65b0\u589e\u6574\u673aCDM\u6a21\u5757",
+     "-\u590d\u5236\u89c4\u5219/i2NAS\u89c4\u5219\u6bd4\u8f83\u8ba1\u5212\u4ea7\u751f\u7684\u6bd4\u8f83\u7ed3\u679c\u53ef\u901a\u8fc7\u754c\u9762\u67e5\u8be2",
+     "-\u65b0\u589e\u4e91\u5e73\u53f0\u6a21\u5757",
+     "-\u65b0\u589eEasyStack\u5230VMware\u3001EasyStack\u5230EasyStack\u865a\u673a\u8fc1\u79fb\u529f\u80fd",
+     "-VP\u5907\u4efd\u89c4\u5219\u4e2d\u65b0\u589e\u81ea\u52a8\u9a8c\u8bc1\u9009\u9879",
+     "-VP\u590d\u5236\u548c\u8fc1\u79fb\u65b0\u589e\u81ea\u5b9a\u4e49\u8bbe\u7f6e\u9009\u62e9\u78c1\u76d8\u529f\u80fd",
+     "-\u5907\u4efd\u70b9\u5217\u8868\u4e2d\u65b0\u589e\u6f14\u7ec3\u7ed3\u679c\u4fe1\u606f",
+     "-\u63a7\u5236\u53f0\u5730\u5740\u652f\u6301\u914d\u7f6e\u591a\u4e2a",
+     "-\u5728\u8fdb\u884c\u865a\u673a\u8fc1\u79fb\u3001\u865a\u673a\u590d\u5236\u3001\u77ac\u65f6\u6062\u590d\u7ed3\u675f\u65f6\uff0c\u65b0\u589e\u2018\u5220\u9664\u76ee\u6807\u865a\u673a\u2019\u9009\u9879",
+     "-\u8868\u6620\u5c04\u6a21\u5f0f\u4e0b\u9875\u9762\u589e\u52a0\u8868\u641c\u7d22\u529f\u80fd",
+     "-\u65b0\u589e\u811a\u672c\u8131\u654f\u6a21\u5757",
+     "\u2026\u2026",
+     "[\u4f18\u5316]",
+     "-VP\u5468\u671f\u6027\u5907\u4efd\u7b56\u7565\u4f18\u5316",
+     "-CDM\u6f14\u7ec3\u76f8\u5173\u7ffb\u8bd1\u4f18\u5316",
+     "-\u641c\u7d22\u529f\u80fd\u4e0d\u533a\u5206\u5b57\u6bcd\u5927\u5c0f\u5199",
+     "-\u865a\u673a\u590d\u5236\u89c4\u5219\u5f00\u542f\u9a8c\u8bc1\u65f6\uff0c\u5982\u679c\u76ee\u6807\u5e73\u53f0\u6ca1\u6709\u8bbe\u7f6e\u6f14\u7ec3\uff0c\u7981\u6b62\u5f00\u542f\u9a8c\u8bc1",
+     "-Oracle\u5907\u4efd \u5e76\u884c\u6d41\u6570\u9ed8\u8ba4\u503c\u6539\u4e3a4",
+     "-\u5b9a\u65f6\u6062\u590dMSSQL\u6570\u636e\u6e90\u4f18\u5316\u4e3a\u53ef\u81ea\u52a8\u586b\u5145\u4f46\u662f\u4e0d\u7981\u6b62\u4fee\u6539",
+     "-\u4f18\u5316DB2\u548cOracle\u7684\u9996\u6b21\u5907\u4efd\u64cd\u4f5c\uff0c\u73b0\u65e0\u8bba\u5907\u4efd\u7c7b\u578b\u5982\u4f55\u90fd\u6267\u884c\u5168\u5907\u7684\u64cd\u4f5c",
+     "-i2Backup Oracle\u8fd8\u539f\u66f4\u52a0\u7b80\u4fbf",
+     "-\u5757\u590d\u5236\u89c4\u5219\u5217\u8868\u652f\u6301\u81ea\u5b9a\u4e49\u5217",
+     "-\u5757\u590d\u5236\u7ec4\u89c4\u5219\u5173\u8054\u5355\u4e2a\u89c4\u5219\u64cd\u4f5c\u4f18\u5316",
+     "-\u62c6\u5206\u9519\u8bef\u78014017\uff08\u63a7\u5236\u7a0b\u5e8f\u5f02\u5e38\uff09\u4e3a4017\uff08\u8282\u70b9\u4e0d\u5b58\u5728\u89c4\u5219\uff09\u548c4022\uff08\u63a7\u5236\u673a\u79bb\u7ebf)",
+     "-\u8868\u6620\u5c04\u6a21\u5f0f\u4e0b\u7531\u9875\u9762\u914d\u7f6e\u76f8\u5173\u5bf9\u8c61\u7684\u540c\u6b65",
+     "-\u63d0\u5347\u65e5\u5fd7\u5206\u6790\u6027\u80fd",
+     "-precheck\u5de5\u5177\u6dfb\u52a0\u67e5\u8be2\u6570\u636e\u5e93\u4e2d\u6709\u6548\u7684\u89e6\u53d1\u5668\u548c\u4f5c\u4e1a\u4efb\u52a1\u7684\u529f\u80fd",
+     "\u2026\u2026"
+    ]
+   },
+   {
+    "time": "2020-08-28",
+    "version": "7.1.66",
+    "content": [
+     "[\u65b0\u7279\u6027]\uff1a",
+     "- \u589e\u52a0\u8868\u5bf9\u6bd4\u7ed3\u679c\u5206\u6790\u5de5\u5177",
+     "- \u589e\u52a0ROWID\u6620\u5c04\u8868\u68c0\u67e5\u5de5\u5177",
+     "- \u589e\u52a0\u5907\u5e93\u66f4\u6539\u68c0\u6d4b\u5de5\u5177",
+     "- \u589e\u52a0\u5b9a\u671f\u5bf9\u8c61\u5bf9\u6bd4\u5e76\u81ea\u52a8\u4fee\u590d\u7684\u529f\u80fd",
+     "- \u53ef\u901a\u8fc7\u90ae\u7bb1\u6216\u624b\u673a\u6536\u53d6\u9a8c\u8bc1\u7801\u65b9\u5f0f\u767b\u5f55",
+     "- \u590d\u5236\u89c4\u5219\u53ef\u4ee5\u8fc7\u6ee4\u5220\u9664\u64cd\u4f5c",
+     "- NAS\u53ef\u4ee5\u6307\u5b9a\u65f6\u95f4\u8fdb\u884c\u540c\u6b65\uff0c\u5176\u4ed6\u65f6\u95f4\u53ea\u8bb0\u5f55",
+     "- \u63a7\u5236\u673a\u9ed8\u8ba4\u81ea\u52a8\u5f00\u542f\u5b9a\u65f6\u5907\u4efd",
+     "- DTO\u652f\u6301\u6d77\u91cf\u6587\u4ef6\u7684\u67e5\u8be2",
+     "- DTO\u652f\u6301\u6062\u590d\u5386\u53f2\u6570\u636e",
+     "",
+     "[\u4f18\u5316]",
+     "- \u4f18\u5316\u5e8f\u5217\u540c\u6b65\u4e0d\u9700\u8981\u63a5\u7ba1\u5373\u4e3a\u5b9e\u65f6\u540c\u6b65",
+     "- \u53bb\u9664\u4f1a\u8017\u8d39\u5927\u91cfCPU\u7684\u9501\u8868\u4fe1\u606f\u67e5\u8be2\u529f\u80fd",
+     "- \u4f18\u5316\u589e\u91cf\u6e90\u7aef\u6267\u884c\u5c0f\u4e8b\u52a1\u5907\u7aef\u67e5\u8be2\u6709\u5ef6\u8fdf\u7684\u73b0\u8c61",
+     "- \u589e\u52a0\u5e95\u5c42\u6570\u636e\u4f20\u8f93\u901a\u9053\u8fde\u63a5\u72b6\u6001\u65e5\u5fd7",
+     "- \u589e\u52a0\u7f51\u7edc\u53d1\u9001\u961f\u5217\u5185\u5b58\u7edf\u8ba1",
+     "- \u9650\u5236\u4fe1\u606f\u91c7\u96c6\u63d2\u5165\u7684\u66f4\u65b0\u65f6\u95f4\u6700\u5c0f\u4e3a2\u79d2",
+     "- iadebug\u589e\u52a0\u63a5\u7ba1\u547d\u4ee4\u7528\u6765\u624b\u52a8\u63a5\u7ba1",
+     "- \u88c5\u8f7d\u8fdb\u7a0b\u91cd\u542f\u5bfc\u81f4\u5907\u673a\u63a5\u7ba1\u5931\u8d25\u540e\u53ef\u4ee5\u4eceRule.dat\u52a0\u8f7d\u89c4\u5219\u540e\u8fdb\u884c\u63a5\u7ba1",
+     "- \u589e\u91cf\u8fc7\u7a0b\u4e2d\u5df2\u540c\u6b65\u8868\u7684\u589e\u5220\u6539\u884c\u6570\u7edf\u8ba1\u652f\u6301\u5347\u964d\u6392\u5e8f",
+     "- \u5168\u91cf\u540c\u6b65\u65f6\u914d\u7f6eTRUNCATE\u8868\u65f6\u4e0d\u9700\u8981\u521b\u5efa\u7ea6\u675f\u548c\u7d22\u5f15",
+     "- \u589e\u52a0dumptab_no_lock\u53c2\u6570\u914d\u7f6e\u5168\u540c\u6b65\u65f6\u4e0d\u9501\u8868",
+     "- \u5757\u590d\u5236\u89c4\u5219\u5feb\u7167\u95f4\u9694\u652f\u6301\u5206\u949f\u7ea7\u548c\u4fdd\u7559\u4e2a\u6570",
+     "- \u5feb\u590d\u5236\u7ec4\u89c4\u5219\u7684\u5feb\u7167\u5217\u8868\u63d0\u4f9b\u5220\u9664\u64cd\u4f5c",
+     "- \u4e24\u7aef\u7cfb\u7edf\u4e00\u81f4\uff0cCDP\u8def\u5f84\u53ef\u4ee5\u81ea\u52a8\u586b\u5145"
+    ]
+   },
+   {
+    "time": "2020-05-29",
+    "version": "7.1.64",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- \u57fa\u4e8e\u5171\u4eab\u78c1\u76d8\u7684\u9ad8\u53ef\u7528",
+     "- \u5b9a\u65f6\u5907\u4efd\u7684\u5907\u4efd\u6570\u636e\u652f\u6301\u52a0\u5bc6",
+     "- \u65b0\u589e\u6279\u91cf\u521b\u5efa\u590d\u5236\u89c4\u5219\u529f\u80fd",
+     "- \u589e\u52a0\u589e\u91cf\u88c5\u8f7d\u961f\u5217\u5185\u5b58\u53ef\u914d\u7f6e\u7684\u529f\u80fd",
+     "- udpreport\u529f\u80fd\u652f\u6301UDP\u4f7f\u7528\u57df\u540d",
+     "- Kafka\u5b57\u7b26\u4e32\u6a21\u677f\u4e2d\u6dfb\u52a0ROWID\u5b57\u6bb5",
+     "",
+     "\u4f18\u5316\uff1a",
+     "- \u8c03\u6574\u6279\u91cf\u6ce8\u518c\u7684\u7aef\u53e3",
+     "- \u8bbe\u7f6e\u901a\u9053\u88c5\u8f7d\u4f4d\u7f6e\u4e3avolatile\u4ee5\u9632\u6b62\u672a\u5220\u9664\u5df2\u88c5\u8f7d\u7684\u6587\u4ef6",
+     "- \u521d\u59cb\u5316\u901a\u9053\u72b6\u6001\u7ed3\u6784\u4f53\u907f\u514d\u4ea7\u751f\u968f\u673a\u503c",
+     "- \u6539\u8fdb\u4e86\u516c\u7f51\u5730\u5740\u65e0\u6cd5\u521b\u5efa\u5fc3\u8df3\u7ebf\u7684\u95ee\u9898"
+    ]
+   },
+   {
+    "time": "2020-04-30",
+    "version": "7.1.62",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- \u589e\u52a0\u4e86\u5bf9CentOS 8(8.0\u30018.1)\u7684\u652f\u6301",
+     "- \u53ef\u4ee5\u76f4\u63a5\u901a\u8fc7\u590d\u5236\u89c4\u5219\u521b\u5efa\u6bd4\u8f83\u4efb\u52a1",
+     "- \u5141\u8bb8\u590d\u5236\u89c4\u5219\u955c\u50cf\u524d\uff0c\u914d\u7f6e\u811a\u672c",
+     "- \u96c6\u7fa4\uff08MSCS\uff09\u5141\u8bb8\u4fdd\u62a4\u591a\u4e2a\u5e94\u7528",
+     "- \u4e00\u4e2ai2Node\u8282\u70b9\u5141\u8bb8\u88ab\u591a\u4e2a\u63a7\u5236\u673a\u63a7\u5236",
+     "- AIX\u7cfb\u7edf\u540c\u6b65\u65f6\u53ef\u4ee5\u505aMD5\u6821\u9a8c",
+     "- \u5757\u590d\u5236(i2Block)\u6e90\u7aef\u652f\u6301Linux\u64cd\u4f5c\u7cfb\u7edf",
+     "- License\u6388\u6743\u540e\uff0c\u53ef\u4ee5\u53ea\u663e\u793a\u88ab\u6388\u6743\u7684\u529f\u80fd",
+     "- \u8282\u70b9\u53ef\u4ee5\u901a\u8fc7\u4e8c\u7ea7\u4ee3\u7406\u88ab\u7ba1\u7406",
+     "- i2DTO\u53ef\u4ee5\u901a\u8fc7\u63a7\u5236\u673a\u8fdb\u884c\u8f6f\u4ef6\u5347\u7ea7",
+     "- \u589e\u52a0\u89c4\u5219\u542f\u52a8\u524d\u6570\u636e\u5e93\u9884\u68c0\u67e5\u5bf9\u6bd4\u529f\u80fd",
+     "- \u652f\u6301\u4e0d\u540c\u5b57\u7b26\u96c6\u7684\u6570\u636e\u5e93\u8fdb\u884c\u540c\u6b65",
+     "- \u652f\u6301\u540c\u4e00\u73af\u5883\u4e0b\u5355\u4e00\u8fdb\u7a0b\u8fd0\u884c\u4e0d\u540c\u5b57\u7b26\u96c6\u7684\u540c\u6b65\u89c4\u5219",
+     "- \u652f\u6301job\u548cdblink\u7684\u589e\u91cf\u540c\u6b65",
+     "- \u652f\u630119c\u7248\u672c\u7684\u6570\u636e\u5e93\u8fdb\u884c\u5168\u91cf\u548c\u589e\u91cf\u540c\u6b65",
+     "- \u652f\u6301ArrayUDT\u7684\u5168\u91cf\u548c\u589e\u91cf\u540c\u6b65",
+     "- \u652f\u6301\u5305\u542b\u538b\u7f29lob\u7684\u8868\u7684\u5168\u91cf\u540c\u6b65",
+     "- \u652f\u6301\u672c\u5730\u5206\u533a\u7d22\u5f15\u7684\u521b\u5efa",
+     "- \u652f\u6301\u8c03\u6574\u89c4\u5219\u7684\u538b\u7f29\u7ea7\u522b",
+     "- \u652f\u6301\u4e00\u5bf9\u591a\u89c4\u5219\u91c7\u7528\u4e0d\u540c\u7684\u538b\u7f29\u7ea7\u522b",
+     "- \u589e\u52a0iahelper\u7684\u770b\u95e8\u72d7\u529f\u80fd\uff0c\u81ea\u52a8\u542f\u52a8\u5176\u5b83\u8fdb\u7a0b",
+     "- \u589e\u52a0\u81ea\u52a8\u8bbe\u7f6eulimit\u7528\u4e8e\u4ea7\u751fcore\u6587\u4ef6\u7684\u529f\u80fd",
+     "- \u589e\u52a0\u5728\u540c\u6b65\u72b6\u6001\u4e0biaback\u91cd\u542f\u540e\u4f1a\u81ea\u52a8\u7ee7\u7eed\u89c4\u5219\u7684\u529f\u80fd",
+     "- \u589e\u52a0\u5168\u91cf\u540c\u6b65\u524d\u6e05\u9664\u7528\u6237\u7684\u9009\u9879\u7684\u529f\u80fd",
+     "- \u589e\u52a0ASM\u5757\u8bbe\u5907\u8def\u5f84\u7684\u914d\u7f6e",
+     "- \u589e\u52a0\u8868\u5bf9\u6bd4\u7ed3\u679c\u5206\u6790\u5de5\u5177\u6620\u5c04\u6e90\u5907\u7aef\u8bb0\u5f55\u7684\u529f\u80fd",
+     "- \u589e\u52a0bakredo\u5de5\u5177\u5728\u5907\u673a\u5907\u4efdREDOLOG\u7684\u529f\u80fd\uff08\u975eASM\u5b58\u50a8\u7cfb\u7edf\u9700\u8981\u7ed3\u5408logreader\uff09",
+     "- kafka\u589e\u52a0\u76d1\u63a7iaconsume\u8fdb\u7a0b\u72b6\u6001",
+     "- kafka\u652f\u6301\u754c\u9762\u914d\u7f6ekerberos\u5b89\u5168\u8ba4\u8bc1",
+     "- kafka\u652f\u6301\u57fa\u4e8eSASL_PLAIN\u5b89\u5168\u8ba4\u8bc1",
+     "- kafka\u589e\u52a0\u6309\u7167\u8868\u540d\u6216\u4e3b\u952e\u8fdb\u884c\u5206\u533a\u5747\u8861\u7684\u529f\u80fd",
+     "",
+     "\u4f18\u5316\uff1a",
+     "- \u4f18\u5316\u540c\u6b65\u6548\u7387",
+     "- \u8c03\u6574\u4e86\u89d2\u8272\u6388\u6743\u663e\u793a\u65b9\u5f0f\uff0c\u5df2\u6309\u7167\u529f\u80fd\u5f52\u7c7b",
+     "- \u4f18\u5316\u4e86\u6d41\u91cf\u56fe\u53ef\u8ffd\u6eaf\u5929\u6570\uff0c\u76ee\u524d\u6700\u957f\u53ef\u8ffd\u6eaf\u81f3\u534a\u5e74\u524d",
+     "- \u4f18\u5316\u4e86License\u7684\u544a\u8b66\u673a\u5236\uff0c\u66f4\u52a0\u4eba\u6027\u5316",
+     "- \u7edf\u8ba1\u62a5\u8868\u663e\u793a\u5185\u5bb9\u66f4\u52a0\u76f4\u89c2"
+    ]
+   },
+   {
+    "time": "2020-03-30",
+    "version": "7.1.60.20033020",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- FFO\u652f\u6301\u5e76\u53d1\u63a7\u5236",
+     "- \u590d\u5236\u89c4\u5219\u589e\u52a0\u96c6\u7fa4\u6545\u969c\u8f6c\u79fb",
+     "",
+     "\u4f18\u5316\uff1a",
+     "- \u89e3\u51b3\u540c\u6b65\u6548\u7387\u4f4e\u7684\u95ee\u9898"
+    ]
+   },
+   {
+    "time": "2020-03-06",
+    "version": "7.1.59.20030612",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- \u652f\u6301\u589e\u91cf\u5907\u4efdHyper-V 2012 R2",
+     "",
+     "\u4f18\u5316\uff1a",
+     "- \u4fee\u590d\u4e86\u5df2\u77e5\u95ee\u9898\uff0c\u63d0\u9ad8\u4ea7\u54c1\u7a33\u5b9a\u6027"
+    ]
+   },
+   {
+    "time": "2020-02-10",
+    "version": "7.1.58.20021021",
+    "content": [
+     "\u65b0\u529f\u80fd:",
+     "- \u63d0\u4ea4\u8282\u70b9\u4fe1\u606f\u6536\u96c6\u529f\u80fd\u4ee3\u7801",
+     "- hardlink\u652f\u6301\u3002",
+     "- linux\u4e0b\u5b89\u88c5\u9009\u62e9\u4f01\u4e1a\u7248\u8fd8\u662fi2cloud",
+     "- \u589e\u52a0dml\u64cd\u4f5c\u8ddf\u8e2a\u529f\u80fd",
+     "- \u589e\u52a0\u6570\u636e\u5e93\u7684CDB\u914d\u7f6e\u9879",
+     "- \u8868\u5bf9\u6bd4\u589e\u52a0\u81ea\u52a8\u4fee\u590d\u529f\u80fd",
+     "- \u5168\u91cf\u540c\u6b65\u652f\u6301Bigfile\u7c7b\u578b\u7684\u8868\u7a7a\u95f4",
+     "- fixObj\u589e\u52a0\u5bf9\u7528\u6237\u7684\u5bc6\u7801\u68c0\u67e5\u6bd4\u5bf9",
+     "- \u652f\u6301\u5168\u91cf\u5907\u4efdHyper-V Windows 2012 R2",
+     "- i2Block\u652f\u6301SQLServer",
+     "- \u65b0\u589e\u51ed\u8bc1\u7ba1\u7406\u529f\u80fd",
+     "- \u65b0\u589e\u90ae\u4ef6\u544a\u8b66\u6a21\u677f\u7684\u914d\u7f6e",
+     "- \u589e\u52a0\u5bf9\u8d44\u6e90\u6743\u9650\u5206\u914d\u548c\u63a7\u5236\u7684\u529f\u80fd",
+     "- \u589e\u52a0\u7528\u6237\u767b\u5f55\u4f1a\u8bdd\u7684\u9650\u5236",
+     "- \u589e\u52a0License\u5230\u671f\u63d0\u9192\u529f\u80fd",
+     "- \u63d0\u4f9b\u8282\u70b9\u4fe1\u606f\u6536\u96c6\u5de5\u5177",
+     "",
+     "\u4f18\u5316\uff1a",
+     "- \u63a7\u5236\u673a\u5bc6\u7801\u6709\u6548\u671f\u6700\u957f\u653e\u5bbd\u5230180\u5929",
+     "- i2VP\u589e\u52a0\u201c\u4e0a\u6b21\u6267\u884c\u201d\u201c\u4e0a\u6b21\u6210\u529f\u6267\u884c\u201d\u7684\u663e\u793a",
+     "- i2NAS\u53ef\u4ee5\u8bbe\u7f6e\u662f\u5426\u540c\u6b65\u5dee\u5f02\u6587\u4ef6",
+     "- i2Node\u53ef\u4ee5\u9009\u62e9\u591a\u79cd\u5b89\u88c5\u6a21\u5f0f",
+     "- \u4f18\u5316\u4e86IPv6\u7684\u652f\u6301\uff0c\u73b0\u5728\u5168\u7ebf\u4ea7\u54c1\u90fd\u53ef\u7528"
+    ]
+   },
+   {
+    "time": "2020-01-05",
+    "version": "7.1.57.20010519",
+    "content": [
+     "\u65b0\u529f\u80fd:",
+     "- \u652f\u6301IPv6",
+     "- i2Block\u589e\u52a0\u7b56\u7565\u7ec4\u529f\u80fd",
+     "- \u589e\u52a0\u8d44\u6e90\u6388\u6743\u529f\u80fd",
+     "- \u589e\u52a0\u5907\u4efd\u670d\u52a1\u5668\u5b58\u50a8\u914d\u989d\u7ba1\u7406\u529f\u80fd",
+     "- \u589e\u52a0\u8282\u70b9\u8fdc\u7a0b\u5b89\u88c5\u548c\u6ce8\u518c\u529f\u80fd",
+     "- Hyper-V \u652f\u6301\u77ac\u65f6\u6062\u590d, \u8fc1\u79fb\u548c\u590d\u5236",
+     "- \u589e\u52a0\u4e00\u4f53\u673a\u865a\u673a\u7ba1\u7406",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- Oracle \u5907\u4efd\u548c\u6062\u590d\u7684\u6539\u8fdb",
+     "- VMware \u77ac\u65f6\u6062\u590d\u652f\u6301\u76f4\u63a5\u4f7f\u7528 NFS"
+    ]
+   },
+   {
+    "time": "2019-10-29",
+    "version": "7.1.56.19102920",
+    "content": [
+     "\u65b0\u529f\u80fd:",
+     "- i2Block\u589e\u52a0\u7b56\u7565\u7ec4\u529f\u80fd",
+     "- \u589e\u52a0\u8d44\u6e90\u6388\u6743\u529f\u80fd",
+     "- \u589e\u52a0\u5907\u4efd\u670d\u52a1\u5668\u5b58\u50a8\u914d\u989d\u7ba1\u7406\u529f\u80fd",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- Oracle \u5907\u4efd\u548c\u6062\u590d\u7684\u6539\u8fdb"
+    ]
+   },
+   {
+    "time": "2019-09-29",
+    "version": "7.1.55.19092919",
+    "content": [
+     "\u65b0\u529f\u80fd:",
+     "- \u65b0\u589e\u5757\u590d\u5236(i2Block)\u529f\u80fd\u6a21\u5757",
+     "- \u65b0\u589e\u5907\u7aef\u5b58\u50a8\u76d1\u63a7\u529f\u80fd",
+     "- \u65b0\u589e\u5907\u4efd\u7684\u62a5\u8868\u529f\u80fd",
+     "- CDP\u652f\u6301\u57fa\u4e8e\u589e\u91cf\u505a\u5feb\u7167",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- i2NAS\u589e\u52a0\u6587\u4ef6\u540d\u8fc7\u6ee4\u529f\u80fd",
+     "- \u7528\u6237\u53ef\u4ee5\u624b\u52a8\u6216\u8005\u9009\u62e9\u4fee\u6539i2NAS\u67d0\u4e9b\u5de5\u4f5c\u673a\u7684\u8def\u5f84",
+     "- \u590d\u5236\u89c4\u5219\u5217\u8868\u663e\u793a\u590d\u5236\u5ef6\u65f6"
+    ]
+   },
+   {
+    "time": "2019-08-08",
+    "version": "7.1.53.19080819",
+    "content": [
+     "\u65b0\u529f\u80fd:",
+     "- \u65b0\u589e\u8d44\u6e90\u76d1\u89c6\u529f\u80fd",
+     "- \u65b0\u589ei2NAS\u529f\u80fd",
+     "- i2VP\u65b0\u589eWindows Hyper-V\u652f\u6301",
+     "- \u65b0\u589e\u5907\u4efd\u7684\u62a5\u8868\u529f\u80fd",
+     "- CDP\u652f\u6301\u57fa\u4e8e\u589e\u91cf\u505a\u5feb\u7167",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- i2NAS\u589e\u52a0\u6587\u4ef6\u540d\u8fc7\u6ee4\u529f\u80fd",
+     "- \u7528\u6237\u53ef\u4ee5\u624b\u52a8\u6216\u8005\u9009\u62e9\u4fee\u6539i2NAS\u67d0\u4e9b\u5de5\u4f5c\u673a\u7684\u8def\u5f84",
+     "- \u590d\u5236\u89c4\u5219\u5217\u8868\u663e\u793a\u590d\u5236\u5ef6\u65f6"
+    ]
+   },
+   {
+    "time": "2019-07-11",
+    "version": "7.1.48.34116",
+    "content": [
+     "\u4f18\u5316\uff1a",
+     "- Linux \u8c03\u7528PHP\u547d\u4ee4\u653e\u5230\u540e\u53f0\u8fd0\u884c\uff0c\u9632\u6b62i2Ctrlserver\u7cfb\u7edf\u8c03\u7528\u5835\u4f4f",
+     "- \u63a7\u5236\u53f0\u5347\u7ea7\u65f6\u914d\u7f6e\u6587\u4ef6\u6709\u53d8\u52a8\uff0c\u4e0d\u505a\u8986\u76d6\uff1b\u5378\u8f7d\u65f6\u5907\u4efd\u66f4\u6539\u8fc7\u7684\u90e8\u5206\u914d\u7f6e\u6587\u4ef6\uff1b\u5efa\u8bae\u901a\u8fc7 rpm -Uvh \u5347\u7ea7\u63a7\u5236\u53f0\uff1b",
+     "- \u4fee\u6539ARM\u5e73\u53f0\u63a7\u5236\u53f0Spec\u6587\u4ef6",
+     "- \u540c\u6b65el7 i2node spec",
+     "- get_access_id \u4e0d\u6821\u9a8c\u53c2\u6570"
+    ]
+   },
+   {
+    "time": "2019-07-07",
+    "version": "7.1.47.33984",
+    "content": [
+     "\u4f18\u5316\uff1a",
+     "- Windows\u5e73\u53f0\u6dfb\u52a0\u7f16\u8bd1\u63a7\u5236\u673a\u811a\u672c",
+     "- develop\u7684win10\u7248\u672c\u8282\u70b9\u5305\u4e2d\u6587\u4ef6\u62f7\u8d1d\u9519\u8bef",
+     "- hyperv\u7684win10\u7248\u672c\u8282\u70b9\u5305\u4e2d\u4e5f\u6dfb\u52a0vp\u6a21\u5757",
+     "- Windows\u5e73\u53f0\u4e0b\u6dfb\u52a0vp\u7684\u6253\u5305\u811a\u672c",
+     "- windows\u6253\u5305\u7a0b\u5e8f\u4e2d\u4e34\u65f6\u8def\u5f84\u8bbe\u7f6e\u9519\u8bef",
+     "- Windows\u5e73\u53f0\u4e0b\u6dfb\u52a0vp\u7684\u6253\u5305\u811a\u672c",
+     "- Windows\u5e73\u53f0\u4e0b\u6253\u5305\u811a\u672c\u4fee\u6539",
+     "- \u8c03\u6574hyperv\u7684\u6253\u5305\u811a\u672c"
+    ]
+   },
+   {
+    "time": "2019-06-28",
+    "version": "7.1.44.33747",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- \u7528\u547d\u4ee4\u884c\u7684\u65b9\u5f0f\u83b7\u53d6\u8bc6\u522b\u7801",
+     "- \u8ba9php \u6267\u884c i2Ctrlserver \u4e34\u65f6\u62e5\u6709root\u6743\u9650",
+     "- \u53bb\u9664\u5e95\u5c42\u6ca1\u6709\u4f7f\u7528\u7684\u53c2\u6570",
+     "- \u5b89\u88c5\u8fc7\u7a0b\u4e2d\u4e0d\u5220\u9664 i2id.conf\u548ci2port.conf",
+     "- \u914d\u7f6e\u6587\u4ef6\u4fdd\u6301\u65e7\u6587\u4ef6\uff0c\u65b0\u6587\u4ef6\u5b89\u88c5\u4e3a.rpmnew",
+     "- i2move \u652f\u6301asianux"
+    ]
+   },
+   {
+    "time": "2019-06-27",
+    "version": "7.1.43.33634",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- \u63a7\u5236\u53f0\u91cd\u542f\u670d\u52a1\u589e\u52a0php-fpm",
+     "- \u53bb\u6389\u591a\u4f59\u7684base64\u89e3\u7801",
+     "- FFO\u5b9a\u65f6\u5907\u4efd\u8df3\u8fc7\u67d0\u6b21\u5907\u4efd\u65f6\uff0c\u6253\u5370\u544a\u8b66\u4fe1\u606f",
+     "- vp\u5220\u9664\u89c4\u5219\u524d\u68c0\u67e5\u4efb\u52a1\u662f\u5426\u5b58\u5728,\u907f\u514d\u7b49\u5f85\u8d85\u65f6;",
+     "- \u6570\u636e\u5e93\u8fde\u63a5\u9ed8\u8ba4\u6253\u5f00SSL",
+     "- \u6570\u636e\u5e93\u52a0\u56fa",
+     "- vp\u589e\u52a0\u5907\u4efd\u89c4\u5219\u5220\u9664\u6570\u636e\u7684\u68c0\u67e5;",
+     "- \u4fdd\u5b58\u6a21\u677f\u7ffb\u8bd1\u8c03\u6574",
+     "- \u5c4f\u853d\u5b64\u513f\u6587\u4ef6\u4e0b\u8f7d",
+     "- \u8bb8\u53ef\u67e5\u770b\u589e\u52a0\u529f\u80fd\u7c7b\u578b",
+     "- \u83b7\u53d6\u8bc6\u522b\u7801\u53bb\u6389MAC\u8ba1\u7b97\u65b9\u5f0f",
+     "- \u8bb0\u5f55\u8fc1\u79fb\u64cd\u4f5c\uff1b",
+     "- FSP\u68c0\u67e5\u51c6\u5907\u6539\u6210\u6570\u636e\u5e93\u8bb0\u5f55",
+     "- FFO\u6388\u6743\u5141\u8bb8\u7684\u6570\u91cf\u6539\u4e3a\u9636\u68af",
+     "- \u540c\u6b65GTS\u5206\u652f\u6587\u4ef6",
+     "- \u8865\u5168\u64cd\u4f5c\u65e5\u5fd7",
+     "- \u589e\u52a0\u68c0\u67e5\u7528\u6237\u662f\u5426\u5b58\u5728\u63a5\u53e3",
+     "- License\u9875\u9762\u6743\u9650\u7ec6\u5316\u4e3a\u67e5\u770b\uff08\u7ed1\u5b9a\uff09\u548c\u66f4\u65b0",
+     "- \u666e\u901a\u7528\u6237\u67e5\u770b\u7ed1\u5b9a\u9650\u5236\u53ea\u80fd\u770b\u89c1\u81ea\u5df1\u7684\u8282\u70b9",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- \u7ffb\u8bd1\u8c03\u6574",
+     "- \u9690\u85cf\u6a21\u677f dialog \u7684\u542f\u7528\u6a21\u677f\u5f00\u5173",
+     "- \u6539\u53d8\u7edf\u8ba1\u62a5\u8868 src_type 5 \u5bf9\u5e94\u4e3a VP",
+     "- \u589e\u52a0\u6a21\u677f\u53ef\u9009\u6e90\u5907\u7aef\u7c7b\u578b\u529f\u80fd",
+     "- \u4f18\u5316\u4e86\u4e2d\u6587\u9875\u9762\u663e\u793a\u5e03\u5c40",
+     "- \u4f18\u5316\u4e86\u82f1\u6587\u9875\u9762\u663e\u793a\u5e03\u5c40",
+     "- \u8bb8\u53ef\u67e5\u770b\u589e\u52a0\u529f\u80fd\u7c7b\u578b",
+     "- \u8c03\u6574\u5e26\u5bbd\u9ed8\u8ba4\u65f6\u95f4\u8303\u56f4 00\uff1a00 - 23\uff1a59"
+    ]
+   },
+   {
+    "time": "2019-06-21",
+    "version": "7.1.41.33528",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- npsvr\u9ed8\u8ba4\u65e5\u5fd7\u7ea7\u522b\u8c03\u6574INFO;",
+     "- vp\u907f\u514d\u89c4\u5219\u91cd\u590d\u8c03\u5ea6;",
+     "- \u4fee\u6539smon\u63a7\u5236\u673a\u5730\u5740\u4e3a\u4ee3\u7406\u5730\u5740",
+     "- \u5141\u8bb8\u6839\u636e\u662f\u5426\u4e3a\u865a\u62df\u673a\uff0c\u81ea\u52a8\u9009\u62e9\u8fc1\u79fb\u65b9\u5f0f",
+     "- \u4efb\u52a1\u6570bk_tsk_thd\u9ed8\u8ba4\u503c4\u8c03\u6574\u52308;",
+     "- vp\u6062\u590d\u89c4\u5219\u53c2\u6570\u83b7\u53d6\u4fdd\u6301\u4e00\u81f4;",
+     "- \u52fe\u9009\u4fdd\u6301\u542f\u52a8\u72b6\u6001\uff0c\u62c9\u8d77HaDetector\u8fdb\u7a0b",
+     "- Op_log, VP\u3001\u8bca\u65ad \u6dfb\u52a0\u64cd\u4f5c\u65e5\u5fd7\uff1b",
+     "- \u5b89\u88c5\u5305\u4e0b\u8f7d\u8def\u5f84\u589e\u52a0alias",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- \u589e\u52a0\u90e8\u5206\u64cd\u4f5c\u65e5\u5fd7",
+     "- \u65b0\u5efa\u8282\u70b9\u90e8\u5206\u7ffb\u8bd1\u66f4\u65b0",
+     "- \u82f1\u6587\u7ffb\u8bd1\u53ca\u9875\u9762\u663e\u793a\u4fee\u6539",
+     "- \u6210\u529f\u4fe1\u606f\u7684\u63d0\u793a\u5f39\u7a97\u65f6\u95f4\u7f29\u77ed\u4e3a3s"
+    ]
+   },
+   {
+    "time": "2019-06-18",
+    "version": "7.1.40.33438",
+    "content": [
+     "\u65b0\u529f\u80fd\uff1a",
+     "- VP \u8fc1\u79fb \u9ad8\u7ea7\u8bbe\u7f6e\u589e\u52a0\u9009\u9879\u201c\u8fc1\u79fb\u5b8c\u6210\u5173\u95ed\u539f\u673a",
+     "- nas\u89c4\u5219\u9875\u9762\u589e\u52a0\u5e76\u53d1\u4efb\u52a1\u6570",
+     " ",
+     "\u4f18\u5316\uff1a",
+     "- i2vp\u5dee\u5f02\u5907\u4efd\u5220\u9664\u8c03\u6574\uff0c\u5220\u9664\u5168\u5907\u4e4b\u524d\u7684\u6570\u636e",
+     "- \u521b\u5efa\u65b0\u865a\u673a\u4e00\u5f8b\u68c0\u67e5\u76ee\u6807\u5e73\u53f0datastore\u7a7a\u95f4",
+     "- \u4f18\u5316i2vp\u5468\u671f\u6570\u636e\u5220\u9664\uff0c\u53bb\u9664\u5408\u5e76\u64cd\u4f5c\u4ee3\u7801",
+     "- Srepd\u542f\u52a8\u65f6\uff0c\u5982\u679cvddk\u52a0\u8f7d\uff0c\u8f93\u51favddk\u7684\u7248\u672c\uff1b",
+     "- linux\u5e73\u53f0\u4e0a\u6302\u8f7dvmdk\u5de5\u5177",
+     "- linux\u9ed8\u8ba4\u91c7\u7528\u547d\u4ee4\u884c\u7684\u65b9\u5f0f\u6302\u8f7dvmdk",
+     "- linux\u9ed8\u8ba4\u91c7\u7528\u547d\u4ee4\u884c\u65b9\u5f0f\u6302\u8f7dvmdk",
+     "- \u8bbe\u7f6e\u5168\u5c40\u6d88\u606f\u6c14\u6ce1\u6301\u7eed\u65f6\u95f4\u4e3a10s\uff0c\u589e\u52a0\u624b\u52a8\u5173\u95ed",
+     "- \u77ed\u4fe1\u652f\u6301\u591a\u6a21\u677f",
+     "- \u8bed\u8a00\u6587\u4ef6\u8c03\u6574",
+     "- \u90e8\u5206\u72b6\u6001\u63cf\u8ff0\u8c03\u6574",
+     "- NAS \u538b\u7f29\u8bbe\u7f6e\u4e0e\u590d\u5236\u89c4\u5219\u4fdd\u6301\u4e00\u81f4",
+     "- \u8c03\u6574\u90e8\u5206\u7ffb\u8bd1",
+     "- \u77ed\u4fe1\u6a21\u677f\u63d0\u793a\u66f4\u65b0",
+     "- \u4e0b\u8f7d\u94fe\u63a5\u6539\u6210\u76f8\u5bf9\u8def\u5f84",
+     "- \u89c4\u5219\u72b6\u6001\u517c\u5bb9\u83b7\u53d6\u5355\u6761\u4f46\u5e95\u5c42\u8fd4\u56de\u5217\u8868",
+     "- \u7c7b\u540d\u5927\u5c0f\u5199\u89c4\u8303",
+     "- \u6279\u91cf\u4fee\u6539\u7684 loading \u5728\u63a5\u53e3\u8fd4\u56de\u540e\u5c31 false\uff0c\u4e0d\u5173\u5fc3\u72b6\u6001\u7801",
+     "- \u5173\u95ed\u9ad8\u53ef\u7528\u89c4\u5219\u9ed8\u8ba4\u5f00\u542f\u81ea\u52a8\u5207\u6362",
+     "- \u4ee3\u7406\u6a21\u5f0f\u6d41\u7a0b\u6539\u53d8",
+     "- \u65b0\u589e\u7edf\u8ba1\u62a5\u8868\u641c\u7d22\u6761\u4ef6",
+     "- \u589e\u52a0\u5b9a\u65f6\u5907\u4efd\u914d\u7f6e\u9879\u7684\u5c55\u793a\u63cf\u8ff0"
+    ]
+   },
+   {
+    "time": "2019-06-03",
+    "version": "7.1.38.33098",
+    "content": [
+     "\u9996\u6b21\u53d1\u5e03"
+    ]
+   }
+  ]
  }
 }
 -----------------------------------------------------------END>
@@ -71,27 +498,29 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "node_num": 11,
-  "rep_num": 5,
+  "node_num": 4,
+  "rep_num": 3,
   "ha_num": 0,
   "node": {
-   "UNKNOWN": 8,
+   "UNKNOWN": 0,
    "OFFLINE": 0,
-   "ONLINE": 3
+   "ONLINE": 4
   },
   "rep": {
-   "UNKNOWN": 1,
+   "UNKNOWN": 0,
    "FINISH": 0,
-   "STOP": 1,
-   "REPLICATION": 3,
+   "STOP": 0,
+   "REPLICATION": 1,
    "MIRROR": 0,
    "EXCEPTION": 0,
    "STALE": 0,
    "SWITCH": 0,
-   "WAIT": 0,
+   "WAITING": 0,
    "EXECUTING": 0,
    "IDLE": 0,
-   "DEAD": 0
+   "DEAD": 0,
+   "EXCPT": 0,
+   "M_STOP": 2
   },
   "ha": {
    "master_status": {
@@ -121,41 +550,129 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: describeStatistics
+Method: readStatistics
 body: {
- "id": "2"
+ "type": "I2VP_BK",
+ "_": "3d59549f"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  The type field must be one of: OVERVIEW,bak_bk,bak_rc,cmp_all,ffo,rule,vp.;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: sysadmin
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
   "code": 0,
-  "message": "",
-  "detail": {
-   "uuid": "D35717B8-0D09-8788-2893-03144698F656",
-   "name": "testRC",
-   "type": "I2VP_BK",
-   "stage": "1",
-   "policy": "1",
-   "sync_obj_num": "1",
-   "file_skiped_num": "0",
-   "start_time": "2019-01-07 13:08:35",
-   "end_time": "2019-01-07 13:08:35",
-   "trans_data_num": "",
-   "data_writed_num": "",
-   "src_type": "5",
-   "src_size": "",
-   "create_time": "2019-01-07 13:08:35",
-   "project_failed_num": "",
-   "dir_failed_num": "",
-   "dup_rate": "0%",
-   "space_occu": "",
-   "bkup_window": "",
-   "result": "error",
-   "tran_rate": "",
-   "used_time": "",
-   "data_size": "0"
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upMonitorOverall
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "up": {
+   "ONLINE": 0,
+   "OFFLINE": 0
+  },
+  "overall": {
+   "code": 0,
+   "message": "[0] success",
+   "node_num": 0,
+   "rep_num": 0,
+   "ha_num": 0,
+   "node": {
+    "UNKNOWN": 0,
+    "OFFLINE": 0,
+    "ONLINE": 0
+   },
+   "rep": {
+    "UNKNOWN": 0,
+    "FINISH": 0,
+    "STOP": 0,
+    "REPLICATION": 0,
+    "MIRROR": 0,
+    "EXCEPTION": 0,
+    "STALE": 0,
+    "SWITCH": 0,
+    "WAITING": 0,
+    "EXECUTING": 0,
+    "IDLE": 0,
+    "DEAD": 0
+   },
+   "ha": {
+    "master_status": {
+     "HA_UNKNOWN": 0,
+     "HA_STOP": 0,
+     "HA_START": 0,
+     "HA_RUN": 0,
+     "HA_MIRROR": 0,
+     "HA_READY": 0,
+     "HA_WARN": 0,
+     "HA_FAIL": 0
+    },
+    "master_role": {
+     "HA_UNKNOWN": 0,
+     "HA_UNJOIN": 0,
+     "HA_MASTER": 0,
+     "HA_SLAVE": 0,
+     "HA_PREOVER": 0,
+     "HA_POSTOVER": 0,
+     "HA_PREBACK": 0,
+     "HA_POSTBACK": 0,
+     "HA_SWITCH": 0
+    }
+   }
+  },
+  "vp_vm": {
+   "code": 0,
+   "message": "[0] success",
+   "vm_total": 0,
+   "vm_protected": 0
+  },
+  "vp_rule": {
+   "code": 0,
+   "message": "[0] success",
+   "all_total_num": 0,
+   "all_trans_data_num_raw": 0,
+   "all_success_num": 0,
+   "all_unread_err_num": 0,
+   "total_num": 0,
+   "trans_data_num_raw": 0,
+   "success_num": 0,
+   "unread_err_num": 0,
+   "all_trans_data_num": "0 Bytes",
+   "trans_data_num": "0 Bytes"
   }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDatabase
+body: null
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "Successfully updated to the latest version"
  }
 }
 -----------------------------------------------------------END>

@@ -96,6 +96,63 @@ class GeneralInterfaceTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'GeneralInterface', 'overall', None)
 
+    def testListRpcTask(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listRpcTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listRpcTask', body)
+
+    def testListVersionHistory(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listVersionHistory(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listVersionHistory', body)
+
+    def testListStatisticsChart(self):
+        a = Auth(username, pwd)
+        body = {
+            'start': 1,
+            'src_type': '0',
+            'end': 2,
+            'type': 'I2BAK_BK',
+        }
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listStatisticsChart(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listStatisticsChart', body)
+
+    def testUpMonitorOverall(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.upMonitorOverall(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'upMonitorOverall', body)
+
+    def testSysadmin(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.sysadmin(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'sysadmin', body)
+
 
 if __name__ == '__main__':
     unittest.main()  
