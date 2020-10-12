@@ -39,6 +39,17 @@ class PermissionTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Permission', 'listCategory', body)
 
+    def testListCatPerms(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        permission = Permission(a)
+        r = permission.listCatPerms(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Permission', 'listCatPerms', body)
+
 
 if __name__ == '__main__':
     unittest.main()  
