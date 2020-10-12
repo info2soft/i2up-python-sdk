@@ -1,0 +1,66 @@
+<START-----------------------------------------------------------
+Method: deleteCompareResult
+body: {
+ "result_uuids": [],
+ "_": "3f4665a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: result_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompareResult
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3eccd627"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateCompareResult
+body: {
+ "result_uuids": [],
+ "operate": "",
+ "_": "3d3b0ea8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: result_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: viewConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "rule": null
+ }
+}
+-----------------------------------------------------------END>
+
