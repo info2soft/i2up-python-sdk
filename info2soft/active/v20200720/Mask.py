@@ -20,6 +20,35 @@ class Mask (object):
         return res
 
     '''
+     * 修改敏感类型
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifySensType(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_type/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * 获取单个类型
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @return list
+    '''
+    def descriptSensType(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_type/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
      * 新建脱敏算法
      * 
      * @param dict $body  参数详见 API 手册
@@ -27,7 +56,7 @@ class Mask (object):
     '''
     def createAlgo(self, body):
         
-        url = '{0}/mask/newAlgo'.format(config.get_default('default_api_host'))
+        url = '{0}/mask/algo'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
         return res
@@ -43,6 +72,20 @@ class Mask (object):
         url = '{0}/mask/algo'.format(config.get_default('default_api_host'))
         
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 获取单个算法
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @return list
+    '''
+    def descriptAlgo(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/algo/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -77,7 +120,7 @@ class Mask (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def OperateMaskRule(self, body):
+    def operateMaskRule(self, body):
         
         url = '{0}/mask/rule/operate'.format(config.get_default('default_api_host'))
         
@@ -95,6 +138,20 @@ class Mask (object):
         url = '{0}/mask/rule'.format(config.get_default('default_api_host'))
         
         res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * 获取单条规则
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @return list
+    '''
+    def describeMaskRule(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/rule/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, None, self.auth)
         return res
 
     '''
@@ -222,11 +279,11 @@ class Mask (object):
      * 
      * @return list
     '''
-    def modifyDbMap(self, ):
+    def modifyDbMap(self, body, uuid):
         
-        url = '{0}/mask/sens_db_map'.format(config.get_default('default_api_host'))
+        url = '{0}/mask/sens_db_map/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        res = https._put(url, None, self.auth)
+        res = https._put(url, body, self.auth)
         return res
 
     '''
@@ -295,5 +352,74 @@ class Mask (object):
         url = '{0}/mask/sens_check/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * 获取任务状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listSensCheckStatus(self, body):
+
+        url = '{0}/mask/sens_check/status'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 获取结果
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listSensCheckResult(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/sens_check/result/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 忽略列
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listSensCheckIgnoreCol(self, body):
+
+        url = '{0}mask/sens_check/ignore_col'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 算法测试
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def algoTest(self, body):
+
+        url = '{0}/mask/algo/test'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 修改规则·
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifyMaskRules(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/mask/rule/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._put(url, body, self.auth)
         return res
 
