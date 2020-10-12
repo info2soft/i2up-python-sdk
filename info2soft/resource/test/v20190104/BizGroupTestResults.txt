@@ -442,3 +442,225 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: createBizGroup
+body: {
+ "biz_grp": {
+  "subtype": 0,
+  "comment": "123",
+  "grp_name": "grp_name",
+  "type": 1
+ },
+ "_": "3dda45f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBizGroup
+body: {
+ "grp_uuids": [
+  "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+ ],
+ "_": "3ebe5881"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBizGroup
+body: {
+ "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroup
+body: {
+ "limit": 1,
+ "search_field": "",
+ "search_value": "",
+ "direction": "",
+ "order_by": "",
+ "page": 1,
+ "_": "3ce682b5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": "1",
+    "grp_uuid": "821934DC-D7FF-2E70-C78B-6638A272DB59",
+    "grp_name": "grp_name",
+    "type": 1,
+    "subtype": 0,
+    "comment": "123",
+    "create_time": 1602234996
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupBind
+body: {
+ "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupResource
+body: {
+ "type": 1,
+ "subtype": 0,
+ "_": "3f51b3ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "group_uuid": null,
+    "dtrack_group_uuid": "",
+    "name": "test-68.211",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "param1": null,
+    "type": 1,
+    "subtype": 0,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1598406935
+   },
+   {
+    "uuid": "62A2AC5C-D70A-FDF0-EBD1-4084C36E9404",
+    "group_uuid": null,
+    "dtrack_group_uuid": "",
+    "name": "TEST-68.212",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "param1": null,
+    "type": 1,
+    "subtype": 0,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1599790713
+   },
+   {
+    "uuid": "2355CE9B-0DE0-DE4B-F72C-AC2E7CA65FAD",
+    "group_uuid": null,
+    "dtrack_group_uuid": "",
+    "name": "node2",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "param1": null,
+    "type": 1,
+    "subtype": 0,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1601188936
+   },
+   {
+    "uuid": "6E4CE268-2D46-21FA-8FA6-5AD1A43999A4",
+    "group_uuid": null,
+    "dtrack_group_uuid": "",
+    "name": "node1",
+    "wk_uuid": null,
+    "bk_uuid": null,
+    "other": null,
+    "param1": null,
+    "type": 1,
+    "subtype": 0,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1601188887
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBizGroup
+body: {
+ "biz_grp": {
+  "comment": "12313213123",
+  "grp_name": "grp_name_Modify",
+  "type": 1,
+  "subtype": 0,
+  "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+ },
+ "_": "3f5b0084"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist",
+  "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateBizGroupBind
+body: {
+ "uuids": [
+  "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+ ],
+ "grp_uuid": "8675036C-6664-8C3E-E8F4-04022FBDBA9C",
+ "_": "3f65ac49"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001017,
+  "message": "[10001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+

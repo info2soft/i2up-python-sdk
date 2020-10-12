@@ -1986,3 +1986,1381 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: createVpMove
+body: {
+ "new_ds": "103-\u6570\u636e\u76d8",
+ "support_cbt": 1,
+ "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "del_bkup_swap": 0,
+ "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "automate": 0,
+ "rule_name": "testMove1 cky",
+ "new_dc": "i2test",
+ "bk_path": "H:\\vp_rep\\",
+ "backup_type": "i",
+ "new_host": "192.168.88.103",
+ "quiet_snap": 1,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 19,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "quick_back": 1,
+ "del_bkup_data": 0,
+ "lan_free": 23,
+ "vm_list": [
+  {
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "vm_ref": "vm-11877",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "overwrite": 0
+  }
+ ],
+ "time_window": "",
+ "new_dc_mor": "datacenter-2",
+ "bkup_policy": 0,
+ "band_width": "-1",
+ "rule_type": 1,
+ "_": "3f64e8f6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10110011,
+  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpRecovery
+body: {
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "new_ds": "datastore1",
+ "vm_list": [
+  {
+   "vm_cfg": {
+    "alt_name": "",
+    "anno": "",
+    "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139\\",
+    "cdrom": "",
+    "chg_id": "52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107",
+    "controller": "1,1000,100,3,0,3,noSharing,0",
+    "core_per_sock": "1",
+    "cpu": "1",
+    "dc": "ha-datacenter",
+    "disk": "2,[datastore1] \u6d4b\u8bd55/proxy gateway1.vmdk,persistent,1,2048,2000,1000,0,52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107,0,1",
+    "disk_count": "1",
+    "disk_list": [
+     "proxy gateway1.vmdk"
+    ],
+    "ds": "datastore1",
+    "floppy": "",
+    "guest_os_id": "rhel6_64Guest",
+    "hostname": "localhost.localdomain",
+    "mem_mb": "1024",
+    "nic": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+    "nic_count": "2",
+    "storeMem": "0",
+    "time": "2019-01-07_13-10-45",
+    "valid_data": 4194304,
+    "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+    "vm_name": "\u6d4b\u8bd55",
+    "vm_ref": "99",
+    "vm_version": "vmx-08",
+    "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2"
+   },
+   "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+   "vm_ref": "99",
+   "vm_name": "\u6d4b\u8bd55",
+   "disk_list": [
+    {
+     "disk_name": "proxy gateway1.vmdk",
+     "disk_path": "/",
+     "is_same": 1,
+     "new_ds": "datastore1"
+    }
+   ]
+  }
+ ],
+ "new_hostname": "localhost.localdomain",
+ "new_dc": "ha-datacenter",
+ "is_create": 0,
+ "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+ "new_ds_path": "/",
+ "new_vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+ "rule_name": "testRC cky",
+ "lan_free": 23,
+ "rule_type": 0,
+ "automate": 0,
+ "new_vm_name": "\u6d4b\u8bd55",
+ "new_dc_mor": "ha-datacenter",
+ "api_type": "HostAgent",
+ "biz_grp_list": [],
+ "cpu": 1,
+ "core_per_sock": 1,
+ "mem_mb": 1024,
+ "mac": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+ "group_recovery": 0,
+ "backup_rule_name": "testRC1",
+ "band_width": "-1",
+ "_": "3ecb8c19"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10110011,
+  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpRep
+body: {
+ "new_ds": "103-\u6570\u636e\u76d8",
+ "support_cbt": 1,
+ "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "del_bkup_swap": 0,
+ "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "automate": 0,
+ "rule_name": "testMove1 cky",
+ "new_dc": "i2test",
+ "bk_path": "H:\\vp_rep\\",
+ "backup_type": "i",
+ "new_host": "192.168.88.103",
+ "quiet_snap": 1,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 19,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "quick_back": 1,
+ "del_bkup_data": 0,
+ "lan_free": 23,
+ "vm_list": [
+  {
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "vm_ref": "vm-11877",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "overwrite": 0
+  }
+ ],
+ "time_window": "",
+ "new_dc_mor": "datacenter-2",
+ "bkup_policy": 0,
+ "band_width": "-1",
+ "rule_type": 1,
+ "_": "3ef7794f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10110011,
+  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clearFinishVpRecovery
+body: {
+ "operate": "clear_finish",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0,
+ "_": "3f7aef1c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVp
+body: {
+ "comment": "",
+ "config_addr": "192.168.72.75",
+ "config_port": 58083,
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test",
+ "vp_type": 0,
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "_": "3f000824"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpBackup
+body: {
+ "del_bkup_data": 0,
+ "quiet_snap": 0,
+ "quick_back": 1,
+ "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+ "bk_path": "E:\\vp_bk5\\",
+ "vm_list": [
+  {
+   "vm_name": "\u6d4b\u8bd55",
+   "vm_ref": "vm-10811"
+  }
+ ],
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "lan_free": 23,
+ "rule_name": "vp_bk cky",
+ "bkup_policy": 0,
+ "bkup_one_time": 1546831899,
+ "bkup_schedule": [
+  {
+   "limit": 3,
+   "sched_day": [
+    1,
+    2,
+    3
+   ],
+   "sched_time": [
+    "00:00"
+   ],
+   "sched_every": 0,
+   "bkup_type": 0
+  }
+ ],
+ "biz_grp_list": [],
+ "rule_type": 10,
+ "band_width": "-1",
+ "compress": 0,
+ "mem_snap": 0,
+ "_": "3edeab97"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpMove
+body: {
+ "new_ds": "103-\u6570\u636e\u76d8",
+ "support_cbt": 1,
+ "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "del_bkup_swap": 0,
+ "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "automate": 0,
+ "rule_name": "testMove1 cky",
+ "new_dc": "i2test",
+ "bk_path": "H:\\vp_rep\\",
+ "backup_type": "i",
+ "new_host": "192.168.88.103",
+ "quiet_snap": 1,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 19,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "quick_back": 1,
+ "del_bkup_data": 0,
+ "lan_free": 23,
+ "vm_list": [
+  {
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "vm_ref": "vm-11877",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "overwrite": 0
+  }
+ ],
+ "time_window": "",
+ "new_dc_mor": "datacenter-2",
+ "bkup_policy": 0,
+ "band_width": "-1",
+ "rule_type": 1,
+ "_": "3f35c2f6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10110011,
+  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpRecovery
+body: {
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "new_ds": "datastore1",
+ "vm_list": [
+  {
+   "vm_cfg": {
+    "alt_name": "",
+    "anno": "",
+    "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139\\",
+    "cdrom": "",
+    "chg_id": "52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107",
+    "controller": "1,1000,100,3,0,3,noSharing,0",
+    "core_per_sock": "1",
+    "cpu": "1",
+    "dc": "ha-datacenter",
+    "disk": "2,[datastore1] \u6d4b\u8bd55/proxy gateway1.vmdk,persistent,1,2048,2000,1000,0,52 19 10 74 e2 c2 b3 63-de 7a 2e d2 9d 40 91 bf/107,0,1",
+    "disk_count": "1",
+    "disk_list": [
+     "proxy gateway1.vmdk"
+    ],
+    "ds": "datastore1",
+    "floppy": "",
+    "guest_os_id": "rhel6_64Guest",
+    "hostname": "localhost.localdomain",
+    "mem_mb": "1024",
+    "nic": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+    "nic_count": "2",
+    "storeMem": "0",
+    "time": "2019-01-07_13-10-45",
+    "valid_data": 4194304,
+    "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+    "vm_name": "\u6d4b\u8bd55",
+    "vm_ref": "99",
+    "vm_version": "vmx-08",
+    "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2"
+   },
+   "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+   "vm_ref": "99",
+   "vm_name": "\u6d4b\u8bd55",
+   "disk_list": [
+    {
+     "disk_name": "proxy gateway1.vmdk",
+     "disk_path": "/",
+     "is_same": 1,
+     "new_ds": "datastore1"
+    }
+   ]
+  }
+ ],
+ "new_hostname": "localhost.localdomain",
+ "new_dc": "ha-datacenter",
+ "is_create": 0,
+ "vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+ "new_ds_path": "/",
+ "new_vp_uuid": "928B88A6-CDBA-6F55-ADCB-15A8A935C9C2",
+ "rule_name": "testRC cky",
+ "lan_free": 23,
+ "rule_type": 0,
+ "automate": 0,
+ "new_vm_name": "\u6d4b\u8bd55",
+ "new_dc_mor": "ha-datacenter",
+ "api_type": "HostAgent",
+ "biz_grp_list": [],
+ "cpu": 1,
+ "core_per_sock": 1,
+ "mem_mb": 1024,
+ "mac": "3,00:50:56:90:ff:ad,1,4000,100,7,1,VM Network;3,00:50:56:90:7b:51,1,4001,100,8,1,VM Network",
+ "group_recovery": 0,
+ "backup_rule_name": "testRC1",
+ "band_width": "-1",
+ "_": "3f169fa6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10110011,
+  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpRep
+body: {
+ "new_ds": "103-\u6570\u636e\u76d8",
+ "support_cbt": 1,
+ "tgt_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "del_bkup_swap": 0,
+ "src_uuid": "7F16E670-1A61-D565-6905-9C68B9520907",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "automate": 0,
+ "rule_name": "testMove1 cky",
+ "new_dc": "i2test",
+ "bk_path": "H:\\vp_rep\\",
+ "backup_type": "i",
+ "new_host": "192.168.88.103",
+ "quiet_snap": 1,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 19,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "quick_back": 1,
+ "del_bkup_data": 0,
+ "lan_free": 23,
+ "vm_list": [
+  {
+   "vm_name": "\u65b0\u5efa\u865a\u62df\u673a1",
+   "vm_ref": "vm-11877",
+   "shd_name": "\u65b0\u5efa\u865a\u62df\u673a1_move",
+   "overwrite": 0
+  }
+ ],
+ "time_window": "",
+ "new_dc_mor": "datacenter-2",
+ "bkup_policy": 0,
+ "band_width": "-1",
+ "rule_type": 1,
+ "_": "3ed31431"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10110011,
+  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVp
+body: {
+ "vp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3e85cde7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 10001011,
+    "message": "[10001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpBackup
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3d353e5b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 10001011,
+    "message": "[10001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpMove
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3dd1b0b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 10001011,
+    "message": "[10001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpRecovery
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f39a185"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 10001011,
+    "message": "[10001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpRep
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f305fbe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 10001011,
+    "message": "[10001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failbackVpRep
+body: {
+ "operate": "failback",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3f31f16e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failoverVpRep
+body: {
+ "operate": "failover",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3f130b45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVer
+body: {
+ "bk_path": "H:\\vp_bk5\\test2_BAK_vm-11880_192.168.88.22\\",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "_": "3e8441c7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerInfo
+body: {
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+ "group_uuid": "",
+ "time": "2019-01-07_13-10-45",
+ "_": "3f59f786"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenterHost
+body: {
+ "dc_name": "ha-datacenter",
+ "dc_mor": "ha-datacenter",
+ "_": "3f701bfa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastore
+body: {
+ "host_name": "dev-esxi.6.6.6",
+ "_": "3f0b2898"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreInfo
+body: {
+ "ds_name": "datastore107\uff081\uff09",
+ "_": "3f69140f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVM
+body: {
+ "path": "/",
+ "force_rpc": 0,
+ "_": "3f723aff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform",
+  "vm_list": [],
+  "create_time": 1602294188
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVp
+body: {
+ "vp_uuid": "11111111-1111-1111-1111-111111111111",
+ "page": 1,
+ "limit": 10,
+ "_": "3f718f14"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_uuid": "B919C076-7B02-7BC2-D466-A794C00664CA",
+    "vp_name": "31.12-os",
+    "random_str": "A786465E-82EA-F7CC-AFB6-E4F614F7878A",
+    "vp_addr": null,
+    "os_usr": "info2soft",
+    "os_pwd": "xXA6X7g1ErhKOGdyr2S2acdr8cRckMWU2tIiXFnEbkAHBxY2Gur8xKEFhHirJkexhGbJ24yRakzXeoqL8nSIr98f+zy9NHVRa6xeXuMkZYT/V1UhsIMzprmYa5cfv1bzOafwqHC98sPt7bDIvsMGMdy2N0fiqULWWo81VkWdoEYbYutsODX4RjYkRw7lpHMRDlLarYHcdAb5764RTCnl15tdrLRVLNHpbtu2hAd3yq8pNym41+b51ADmK3YM/J7AqHtOXaRelCNKVCNWE4xNaS6m2dUYTdUbJveHMvyzrmb0xxJUIs3NoQ1oQzuEbeSpyFNe7oC5b2+iJegDJND3Qw==",
+    "config_addr": "172.20.68.211",
+    "config_port": 26823,
+    "comment": null,
+    "create_time": 1599555952,
+    "vp_type": 5,
+    "npsvr_uuid": null,
+    "cred_uuid": null,
+    "is_drill": 0,
+    "drill_config": null,
+    "authurl": "172.20.31.12",
+    "project_id": "37680d9bf3df4bf3813967d0a7f4f290",
+    "user_domain_id": "",
+    "rehearse_net_conf": null,
+    "register_type": "common",
+    "iam_user": "",
+    "cc_ip_uuid": "87B7DFC3-16E1-09DF-17DA-B0D484B0943C",
+    "cc_ip": "192.168.7.250",
+    "is_backup_center": "0",
+    "region": "",
+    "user_domain_name": "Default",
+    "state": "{\"vp_uuid\":\"B919C076-7B02-7BC2-D466-A794C00664CA\",\"status\":\"OFFLINE\",\"data_agent_version\":\"\",\"drill_status\":\"\",\"npsvr_version\":\"\",\"code\":11116072,\"message\":\"[11116072] rpc.vp.esxi_not_exist\"}",
+    "platform_type": "0",
+    "status": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_uuid": "4A1F80DE-379D-C5E7-C495-7D55E0795275",
+    "vp_name": "beijing01",
+    "random_str": "422E90E0-6618-1B3A-3FC3-A5247CC6C94E",
+    "vp_addr": null,
+    "os_usr": "info2soft",
+    "os_pwd": "Rf5e9tCgwUs8QndHYAaoegEFDXy0bdWVt5pQRZX99HXg9PYrlRDbk0d1+3l04qhR1t6YUv/OzNNDyyGVIACCmGE1W6nehbIcdwNNCZ2E4H/D7PfyD5f9fTfu9riYMS74GBMUQeMJA5EY5V3hE3ialaGVV66NEZSx+yk+imMs4f5mrFWeuWHI3URAzW4lJx9xHpUXkNU1aTchPhawotaftE2UcHT1j+SysMZjG48NWDDdcM43hKVtZL2m5zwXLQ3MbJPTxK8E9VCyhxcFrLiCKvoERALGFlC17WvEQ2nvuYjxkRuQguumb08moMFFB17GES0q8zPj9pw4D6y+fPGtOA==",
+    "config_addr": "172.20.68.211",
+    "config_port": 26823,
+    "comment": null,
+    "create_time": 1599554962,
+    "vp_type": 4,
+    "npsvr_uuid": null,
+    "cred_uuid": null,
+    "is_drill": 0,
+    "drill_config": null,
+    "authurl": "https://iam.cn-north-1.myhuaweicloud.com/v3",
+    "project_id": "37680d9bf3df4bf3813967d0a7f4f290",
+    "user_domain_id": "e4dcb2f24b8e4f68b199ba2b61119179",
+    "rehearse_net_conf": null,
+    "register_type": "common",
+    "iam_user": "",
+    "cc_ip_uuid": "87B7DFC3-16E1-09DF-17DA-B0D484B0943C",
+    "cc_ip": "192.168.7.250",
+    "is_backup_center": "0",
+    "region": "\u534e\u5317-\u5317\u4eac\u4e00",
+    "user_domain_name": "",
+    "state": "{\"vp_uuid\":\"4A1F80DE-379D-C5E7-C495-7D55E0795275\",\"status\":\"OFFLINE\",\"data_agent_version\":\"\",\"drill_status\":\"\",\"npsvr_version\":\"\",\"code\":11116072,\"message\":\"[11116072] rpc.vp.esxi_not_exist\"}",
+    "platform_type": "0",
+    "status": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "vp_uuid": "6963230A-9208-F3F8-F552-A3ACDB5DC569",
+    "vp_name": "1.132",
+    "random_str": "708425B8-1011-86D3-FA00-00A4E0179CA1",
+    "vp_addr": "192.168.1.132",
+    "os_usr": "root",
+    "os_pwd": null,
+    "config_addr": "172.20.68.211",
+    "config_port": 26823,
+    "comment": "",
+    "create_time": 1599553491,
+    "vp_type": 0,
+    "npsvr_uuid": "A5129D48-2CEA-4C90-8E3C-954D60BE8980",
+    "cred_uuid": null,
+    "is_drill": 0,
+    "drill_config": {},
+    "authurl": null,
+    "project_id": null,
+    "user_domain_id": null,
+    "rehearse_net_conf": null,
+    "register_type": "common",
+    "iam_user": null,
+    "cc_ip_uuid": "2392BFE1-C01E-6EB1-9A5F-4EC7F0C9F61A",
+    "cc_ip": "192.168.7.250",
+    "is_backup_center": "0",
+    "region": null,
+    "user_domain_name": null,
+    "state": "{\"vp_uuid\":\"6963230A-9208-F3F8-F552-A3ACDB5DC569\",\"status\":\"ONLINE\",\"data_agent_version\":\"\",\"drill_status\":1,\"npsvr_version\":\"7.1.66.20083119\"}",
+    "platform_type": "0",
+    "status": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackup
+body: {
+ "page": 1,
+ "limit": 10,
+ "type": 0,
+ "_": "3f454492"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackupGroup
+body: {
+ "page": 1,
+ "limit": 10,
+ "type": 0,
+ "where_args[bk_path]": "H:\\vp_bk5\\",
+ "_": "3f6d3376"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackupStatus
+body: {
+ "_": "3aee94ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMove
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f62e4bf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMoveStatus
+body: {
+ "_": "3f5df533"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRecovery
+body: {
+ "type": 0,
+ "limit": 10,
+ "page": 1,
+ "_": "3e68166d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRecoveryStatus
+body: {
+ "_": "3f143714"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRep
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3ec3ad34"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRepStatus
+body: {
+ "_": "3e352747"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpStatus
+body: {
+ "_": "3efc7460"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVp
+body: {
+ "comment": "",
+ "config_addr": "192.168.72.75",
+ "config_port": 58083,
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test1",
+ "vp_type": 0,
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "_": "3f4755df"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001013,
+  "message": "[10001013] This entry has been updated, please refresh."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpBackup
+body: {
+ "del_bkup_data": 0,
+ "quiet_snap": 0,
+ "quick_back": 1,
+ "vp_uuid": "C6335F62-2565-1957-4BB9-587F2FF46B00",
+ "bk_path": "E:\\vp_bk5\\",
+ "vm_list": [
+  {
+   "vm_name": "\u6d4b\u8bd55",
+   "vm_ref": "vm-10811"
+  }
+ ],
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "lan_free": 23,
+ "rule_name": "vp_bk cky",
+ "bkup_policy": 0,
+ "bkup_one_time": 1546831899,
+ "bkup_schedule": [
+  {
+   "limit": 3,
+   "sched_day": [
+    1,
+    2,
+    3
+   ],
+   "sched_time": [
+    "00:00"
+   ],
+   "sched_every": 0,
+   "bkup_type": 0
+  }
+ ],
+ "biz_grp_list": [],
+ "rule_type": 0,
+ "band_width": "-1",
+ "compress": 0,
+ "mem_snap": 1,
+ "_": "3ea479fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpMove
+body: {
+ "new_ds": "",
+ "support_cbt": 1,
+ "tgt_uuid": "",
+ "del_bkup_swap": 1,
+ "src_uuid": "fa2eEdD2-AA4d-ecB3-2C1C-bA6099FEcCeF",
+ "bk_uuid": "",
+ "automate": 1,
+ "rule_name": "",
+ "new_dc": "",
+ "bk_path": "",
+ "backup_type": "",
+ "new_host": "",
+ "quiet_snap": 1,
+ "bkup_schedule": [],
+ "quick_back": 1,
+ "del_bkup_data": 1,
+ "lan_free": 1,
+ "vm_list": [],
+ "time_window": "",
+ "new_dc_mor": "",
+ "bkup_policy": 1,
+ "_": "3f56b2e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpRep
+body: {
+ "new_ds": "",
+ "support_cbt": 1,
+ "tgt_uuid": "",
+ "del_bkup_swap": 1,
+ "src_uuid": "fa2eEdD2-AA4d-ecB3-2C1C-bA6099FEcCeF",
+ "bk_uuid": "",
+ "automate": 1,
+ "rule_name": "",
+ "new_dc": "",
+ "bk_path": "",
+ "backup_type": "",
+ "new_host": "",
+ "quiet_snap": 1,
+ "bkup_schedule": [],
+ "quick_back": 1,
+ "del_bkup_data": 1,
+ "lan_free": 1,
+ "vm_list": [],
+ "time_window": "",
+ "new_dc_mor": "",
+ "bkup_policy": 1,
+ "_": "3f3cb830"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveVpMove
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3f345b2f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpBackup
+body: {
+ "operate": "start",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "_": "3e5168e7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpMove
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3f7d7d28"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpRecovery
+body: {
+ "operate": "start",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0,
+ "_": "3e5bfd9f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpRep
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3f58c461"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpBackup
+body: {
+ "operate": "stop",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "_": "3ed56a00"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpMove
+body: {
+ "operate": "stop",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3ed0392d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpRecovery
+body: {
+ "operate": "stop",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0,
+ "_": "3f0aaeef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpRep
+body: {
+ "operate": "stop",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "_": "3ebaf366"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreFile
+body: {
+ "dir_file": "/",
+ "ds_name": "datastore107\uff081\uff09",
+ "dc_name": "ha-datacenter",
+ "_": "3ef213be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 11110001,
+  "message": "[11110001] Call failed. Can't connect to a node or platform"
+ }
+}
+-----------------------------------------------------------END>
+
