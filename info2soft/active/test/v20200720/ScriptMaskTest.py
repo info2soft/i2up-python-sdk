@@ -5,7 +5,7 @@ import sys
 sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft import ScriptMask
+from info2soft.active.v20200720.ScriptMask import ScriptMask
 # from info2soft.active.v20200722.ScriptMask import ScriptMask
 from info2soft import Auth
 from info2soft.fileWriter import write
@@ -68,6 +68,33 @@ class ScriptMaskTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'ScriptMask', 'deleteScript', body)
+
+    def testModifyScript(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'rule_uuid': '',
+            'rule_name': '',
+            'src_db_uuid': '',
+            'tgt_db_uuid': '',
+            'node_uuid': '',
+            'config': {
+            'script': [],
+            'src_type': '',
+            'dyn_thd': 1,
+            'lderrset': 'continue',
+            'policy': {
+            'policy_type': 'immediate',
+            'one_time': '',
+            'time_policy': '',},},
+        }
+
+        scriptMask = ScriptMask(a)
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        r = scriptMask.modifyScript(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ScriptMask', 'modifyScript', body)
 
     def testListScript(self):
         a = Auth(username, pwd)
