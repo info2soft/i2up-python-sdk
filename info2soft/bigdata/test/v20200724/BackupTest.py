@@ -108,6 +108,21 @@ class BackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Backup', 'describeBigdataBackup', body)
 
+    def testOperateBigdataBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start',
+            'uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        backup = Backup(a)
+        r = backup.operateBigdataBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Backup', 'operateBigdataBackup', body)
+
     def testDeleteBigdataBackup(self):
         a = Auth(username, pwd)
         body = {
