@@ -25,7 +25,7 @@ class Permission (object):
      * @return list
      '''
 
-    def listCatPerms(self, ):
+    def listCatPerms(self, body):
         url = '{0}/permission/cat_perms'.format(config.get_default('default_api_host'))
 
         res = https._get(url, None, self.auth)
