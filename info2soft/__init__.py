@@ -65,7 +65,7 @@ from .tools.v20181227.Compare import Compare
 from .tools.v20181227.Diagnose import Diagnose
 
 
-from .vp.v20181227.VirtualizationSupport import VirtualizationSupport
+from .vp.VirtualizationSupport import VirtualizationSupport
 
 from .active import Db, Mask, Node, ScriptMask, Sqlserver, SyncRules
 
