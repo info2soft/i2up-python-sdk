@@ -5,8 +5,7 @@ import sys
 sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft import SyncRules
-# from info2soft.active.v20200722.SyncRules import SyncRules
+from info2soft.active.v20200720.SyncRules import SyncRules
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -1100,6 +1099,196 @@ class SyncRulesTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'SyncRules', 'describeRuleDbCheck', body)
+
+    def testResumeSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.resumeSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'resumeSyncRules', body)
+
+    def testStopSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.stopSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'stopSyncRules', body)
+
+    def testRestartSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.restartSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'restartSyncRules', body)
+
+    def testStartAnalysisSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.startAnalysisSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'startAnalysisSyncRules', body)
+
+    def testStopAnalysisSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.stopAnalysisSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'stopAnalysisSyncRules', body)
+
+    def testResetAnalysisSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.resetAnalysisSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'resetAnalysisSyncRules', body)
+
+    def testStopAndStopanalysisSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': '',
+            'scn': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.stopAndStopanalysisSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'stopAndStopanalysisSyncRules', body)
+
+    def testRestartObjFix(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_fix_uuids': '33E2BD5a-3bB8-Bc72-4Be9-ff9157ddfAD4',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.restartObjFix(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'restartObjFix', body)
+
+    def testStopObjFix(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_fix_uuids': '33E2BD5a-3bB8-Bc72-4Be9-ff9157ddfAD4',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.stopObjFix(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'stopObjFix', body)
+
+    def testStopTbCmp(self):
+        a = Auth(username, pwd)
+        body = {
+            'tb_cmp_uuids': 'DAD4dECC-2eED-6c37-e16e-018DDe7fFfad',
+            'operate': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.stopTbCmp(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'stopTbCmp', body)
+
+    def testRestartTbCmp(self):
+        a = Auth(username, pwd)
+        body = {
+            'tb_cmp_uuids': 'DAD4dECC-2eED-6c37-e16e-018DDe7fFfad',
+            'operate': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.restartTbCmp(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'restartTbCmp', body)
+
+    def testStopBkTakeover(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_takeover_uuids': 'Be227bF2-1553-edeC-9993-B4071D73c8Cb',
+            'operate': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.stopBkTakeover(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'stopBkTakeover', body)
+
+    def testRestartBkTakeover(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_takeover_uuids': 'Be227bF2-1553-edeC-9993-B4071D73c8Cb',
+            'operate': '',
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.restartBkTakeover(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'restartBkTakeover', body)
+
+    def testDownloadLog(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': '',
+            'type': 1,
+            'module_type': 1,
+            'date_start': 1,
+            'date_end': 1,
+        }
+
+        syncRules = SyncRules(a)
+        r = syncRules.downloadLog(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRules', 'downloadLog', body)
 
 
 if __name__ == '__main__':
