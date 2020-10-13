@@ -27,9 +27,9 @@ from .common import Client
 from info2soft.dashboard.v20181227.Dashboard import Dashboard
 
 
-from info2soft.fsp.v20181227.FspRecovery import FspRecovery
-from info2soft.fsp.v20181227.FspBackup import FspBackup
-from info2soft.fsp.v20181227.FspMove import FspMove
+from info2soft.fsp.FspRecovery import FspRecovery
+from info2soft.fsp.FspBackup import FspBackup
+from info2soft.fsp.FspMove import FspMove
 
 
 from info2soft.ha.v20181227.AppHighAvailability import AppHighAvailability

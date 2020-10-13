@@ -130,9 +130,7 @@ class FspRecovery(object):
         if body is None or 'fsp_uuid' not in body:
             exit()
         url = '{0}/fsp/recovery/{1}'.format(config.get_default('default_api_host'), body['fsp_uuid'])
-        del body['fsp_uuid']
-        randomStr = https._get(url, None, self.auth)[0]['data']['fsp_recovery']['random_str']
-        body['fsp_recovery']['random_str'] = randomStr
+
         res = https._put(url, body, self.auth)
         return res
 
@@ -224,6 +222,19 @@ class FspRecovery(object):
     def listFspRecoveryStatus(self, body):
 
         url = '{0}/fsp/recovery/status'.format(config.get_default('default_api_host'))
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 全服恢复-0 获取两节点网卡列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFspRecoveryNic(self, body):
+
+        url = '{0}/fsp/recovery/nic_list'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
