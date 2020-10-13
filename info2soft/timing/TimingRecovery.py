@@ -106,10 +106,8 @@ class TimingRecovery(object):
 
     def modifyTimingRecovery(self, body):
 
-        url = '{0}/timing/recovery/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
-        randomStr = https._get(url, None, self.auth)[0]['data']['timing_recovery']['random_str']
-        body['timing_recovery']['random_str'] = randomStr
+        url = '{0}/timing/recovery/{1}'.format(config.get_default('default_api_host'), body['timing_recovery']['task_uuid'])
+
         res = https._put(url, body, self.auth)
         return res
 
@@ -188,4 +186,17 @@ class TimingRecovery(object):
         url = '{0}/timing/recovery/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 恢复 准备 获取oracle恢复点日志
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listTimingRecoveryOracleRcPointInfo(self, body):
+
+        url = '{0}/timing/recovery/rc_sbt'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
         return res

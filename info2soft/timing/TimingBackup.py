@@ -113,9 +113,7 @@ class TimingBackup (object):
         if body is None or 'task_uuid' not in body:
             exit()
         url = '{0}/timing/backup/{1}'.format(config.get_default('default_api_host'), body['task_uuid'])
-        del body['task_uuid']
-        randomStr = https._get(url, None, self.auth)[0]['data']['timing_backup']['random_str']
-        body['timing_backup']['random_str'] = randomStr
+
         res = https._put(url, body, self.auth)
         return res
 
@@ -172,6 +170,51 @@ class TimingBackup (object):
 
     def stopTimingBackup(self, body):
         url = '{0}/timing/backup/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    def startImmediateTimingBackup(self, body):
+        url = '{0}/timing/backup/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 1-1 备份 准备-1 备份/恢复 认证Oracle信息（目前未使用）
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def verifyTimingBackupOracleInfo(self, body):
+
+        url = '{0}/timing/backup/verify_oracle_info'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 1-1 备份 准备-2 备份/恢复 获取Oracle表空间（目前未使用）
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def describeTimingBackupOracleContent(self, body):
+
+        url = '{0}/timing/backup/oracle_content'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 备份 准备 验证oracle登陆认证
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def verifyTimingBackupOracleLogin(self, body):
+
+        url = '{0}/timing/backup/oracle_login'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
