@@ -37,7 +37,7 @@ class SyncRules (object):
      * 
      * @return list
     '''
-    def describeSyncRulesProxyStatus(self, ):
+    def describeSyncRulesProxyStatus(self, body):
         
         url = '{0}/active/rule/proxy_status'.format(config.get_default('default_api_host'))
         
@@ -836,7 +836,7 @@ class SyncRules (object):
      * 
      * @return list
     '''
-    def describeRuleGetFalseRule(self, ):
+    def describeRuleGetFalseRule(self, body):
         
         url = '{0}/active/rule/get_false_rule'.format(config.get_default('default_api_host'))
         
@@ -893,5 +893,187 @@ class SyncRules (object):
         url = '{0}/active/rule/db_check'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 操作 继续
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def resumeSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 操作 重启
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 操作 开始日志解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startAnalysisSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 操作 停止日志解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopAnalysisSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 操作 重新日志解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def resetAnalysisSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 同步规则 - 停止规则并停止日志解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopAndStopanalysisSyncRules(self, body):
+
+        url = '{0}/active/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 对象修复-操作 重启
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartObjFix(self, body):
+
+        url = '{0}/active/obj_fix/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 对象修复-操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopObjFix(self, body):
+
+        url = '{0}/active/obj_fix/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 表比较-操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopTbCmp(self, body):
+
+        url = '{0}/active/tb_cmp/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 表比较-操作 重启
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartTbCmp(self, body):
+
+        url = '{0}/active/tb_cmp/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 备机接管-操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopBkTakeover(self, body):
+
+        url = '{0}/active/bk_takeover/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 备机接管-操作 重启
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartBkTakeover(self, body):
+
+        url = '{0}/active/bk_takeover/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 日志下载
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def downloadLog(self, body):
+
+        url = '{0}/active/rule/log_download'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
         return res
 
