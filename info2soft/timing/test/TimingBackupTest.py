@@ -2,7 +2,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.timing.v20181227.TimingBackup import TimingBackup
+from info2soft.timing.TimingBackup import TimingBackup
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -196,89 +196,88 @@ class TimingBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'TimingBackup', 'describeTimingBackup', body)
 
-    # 不支持修改
-    # def testModifyTimingBackup(self):
-    #     a = Auth(username, pwd)
-    #     body = {
-    #         'task_uuid': 'C04AE9FD-23A9-E389-61B2-89EF4D145DA2',
-    #         'timing_backup': {
-    #             'mirr_sync_attr': 1,
-    #             'secret_key': '',
-    #             'oracle_settings': {
-    #                 'ora_sid_name': '',
-    #                 'ora_content_type': 0,
-    #                 'ora_use_script': 0,
-    #                 'ora_port': 1,
-    #                 'ora_script_path': '',
-    #                 'ora_passwd': 'Info1234',
-    #                 'ora_home_path': '',
-    #             },
-    #             'policy_uuid': '38FFA6E2-2A40-31D6-7A94-E8168EBA9FF1',
-    #             'wk_data_type': 0,
-    #             'task_name': 'testTiming',
-    #             'backup_type': 1,
-    #             'del_policy': 0,
-    #             'mirr_sync_flag': 0,
-    #             'snap_type': 0,
-    #             'oracle_rman_settings': {
-    #                 'rman_skip_offline': 0,
-    #                 'rman_num_streams_arch': 1,
-    #                 'rman_del_arch': 1,
-    #                 'rman_include_arch_flag': 1,
-    #                 'rman_num_streams_df': 1,
-    #                 'rman_filespertset_arch': 20,
-    #                 'rman_maxsetsize_df': 0,
-    #                 'rman_set_limit_arch_flag': 0,
-    #                 'rman_skip_readonly': 0,
-    #                 'rman_maxsetsize_arch': 0,
-    #                 'rman_cold_bkup': 0,
-    #                 'rman_filespertset_df': 20,
-    #             },
-    #             'compress': 0,
-    #             'encrypt_switch': 0,
-    #             'wk_path': ['E:\\test\\', ],
-    #             'excl_path': [],
-    #             'bk_data_type': 1,
-    #             'mirr_blk_size': 0,
-    #             'bk_path': ['E:\\t\\', ],
-    #             'blk_direct_copy': 0,
-    #             'mirr_open_type': 0,
-    #             'mssql_settings': {
-    #                 'instance_name': '',
-    #                 'time_out': '2',
-    #                 'data_source': '',
-    #                 'dbsize': '',
-    #                 'win_verify': 0,
-    #                 'user_id': '',
-    #                 'db_name': '',
-    #                 'pass_word': '',
-    #             },
-    #             'wk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
-    #             'bk_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
-    #             'bkup_policy': 0,
-    #             'bkup_window': {
-    #                 'sched_time_start': '15:18',
-    #                 'sched_time_end': '14:37',
-    #             },
-    #             'bkup_one_time': 1515568566,
-    #             'bkup_schedule': [
-    #                 {
-    #                     'limit': 25,
-    #                     'sched_day': 24,
-    #                     'sched_every': 2,
-    #                     'sched_time': '04:07',
-    #                     'sched_gap_min': 49,
-    #                 }
-    #             ],
-    #             'task_type': 0,
-    #             'random_str': '',
-    #         },
-    #     }
-    #     timingBackup = TimingBackup(a)
-    #     r = timingBackup.modifyTimingBackup(body)
-    #     print(r[0])
-    #     assert r[0]['ret'] == 200
-    #     write(r[0], 'TimingBackup', 'modifyTimingBackup', body)
+    def testModifyTimingBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'task_uuid': 'C04AE9FD-23A9-E389-61B2-89EF4D145DA2',
+            'timing_backup': {
+                'mirr_sync_attr': 1,
+                'secret_key': '',
+                'oracle_settings': {
+                    'ora_sid_name': '',
+                    'ora_content_type': 0,
+                    'ora_use_script': 0,
+                    'ora_port': 1,
+                    'ora_script_path': '',
+                    'ora_passwd': 'Info1234',
+                    'ora_home_path': '',
+                },
+                'policy_uuid': '38FFA6E2-2A40-31D6-7A94-E8168EBA9FF1',
+                'wk_data_type': 0,
+                'task_name': 'testTiming',
+                'backup_type': 1,
+                'del_policy': 0,
+                'mirr_sync_flag': 0,
+                'snap_type': 0,
+                'oracle_rman_settings': {
+                    'rman_skip_offline': 0,
+                    'rman_num_streams_arch': 1,
+                    'rman_del_arch': 1,
+                    'rman_include_arch_flag': 1,
+                    'rman_num_streams_df': 1,
+                    'rman_filespertset_arch': 20,
+                    'rman_maxsetsize_df': 0,
+                    'rman_set_limit_arch_flag': 0,
+                    'rman_skip_readonly': 0,
+                    'rman_maxsetsize_arch': 0,
+                    'rman_cold_bkup': 0,
+                    'rman_filespertset_df': 20,
+                },
+                'compress': 0,
+                'encrypt_switch': 0,
+                'wk_path': ['E:\\test\\', ],
+                'excl_path': [],
+                'bk_data_type': 1,
+                'mirr_blk_size': 0,
+                'bk_path': ['E:\\t\\', ],
+                'blk_direct_copy': 0,
+                'mirr_open_type': 0,
+                'mssql_settings': {
+                    'instance_name': '',
+                    'time_out': '2',
+                    'data_source': '',
+                    'dbsize': '',
+                    'win_verify': 0,
+                    'user_id': '',
+                    'db_name': '',
+                    'pass_word': '',
+                },
+                'wk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
+                'bk_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
+                'bkup_policy': 0,
+                'bkup_window': {
+                    'sched_time_start': '15:18',
+                    'sched_time_end': '14:37',
+                },
+                'bkup_one_time': 1515568566,
+                'bkup_schedule': [
+                    {
+                        'limit': 25,
+                        'sched_day': 24,
+                        'sched_every': 2,
+                        'sched_time': '04:07',
+                        'sched_gap_min': 49,
+                    }
+                ],
+                'task_type': 0,
+                'random_str': '',
+            },
+        }
+        timingBackup = TimingBackup(a)
+        r = timingBackup.modifyTimingBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'modifyTimingBackup', body)
 
     def testListTimingBackup(self):
         a = Auth(username, pwd)
@@ -348,6 +347,72 @@ class TimingBackupTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'TimingBackup', 'stopTimingBackup', body)
+
+    def testStartImmediateTimingBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediate',
+            'task_uuids': [
+                'C04AE9FD-23A9-E389-61B2-89EF4D145DA2'
+            ],
+        }
+        timingBackup = TimingBackup(a)
+        r = timingBackup.startImmediateTimingBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'startImmediateTimingBackup', body)
+
+    def testVerifyTimingBackupOracleInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'oracle_settings': {
+            'ora_sid_name': '',
+            'ora_port': 1,
+            'ora_home_path': '',
+            'ora_passwd': 'Info1234',},
+            'wk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
+        }
+
+        timingBackup = TimingBackup(a)
+        r = timingBackup.verifyTimingBackupOracleInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'verifyTimingBackupOracleInfo', body)
+
+    def testDescribeTimingBackupOracleContent(self):
+        a = Auth(username, pwd)
+        body = {
+            'oracle_settings': {
+            'ora_passwd': 'Info1234',
+            'ora_port': 1,
+            'ora_sid_name': '',
+            'ora_content_type': 0,},
+            'wk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
+        }
+
+        timingBackup = TimingBackup(a)
+        r = timingBackup.describeTimingBackupOracleContent(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'describeTimingBackupOracleContent', body)
+
+    def testVerifyTimingBackupOracleLogin(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': '',
+            'oracle_settings': {
+            'ora_sid_name': '',
+            'ora_login_name': '',
+            'ora_login_pwd': '',
+            'ora_server_name': '',
+            'ora_server_port': '',},
+        }
+
+        timingBackup = TimingBackup(a)
+        r = timingBackup.verifyTimingBackupOracleLogin(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'verifyTimingBackupOracleLogin', body)
 
 
 if __name__ == '__main__':

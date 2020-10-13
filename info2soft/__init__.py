@@ -57,8 +57,8 @@ from .system.v20181227.User import User
 from .system.v20181227.Lic import Lic
 
 
-from .timing.v20181227.TimingBackup import TimingBackup
-from .timing.v20181227.TimingRecovery import TimingRecovery
+from .timing.TimingBackup import TimingBackup
+from .timing.TimingRecovery import TimingRecovery
 
 
 from .tools.v20181227.Compare import Compare
