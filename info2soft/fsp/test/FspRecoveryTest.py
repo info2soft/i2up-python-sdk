@@ -2,7 +2,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.fsp.v20181227.FspRecovery import FspRecovery
+from info2soft.fsp.FspRecovery import FspRecovery
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -343,6 +343,20 @@ class FspRecoveryTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'FspRecovery', 'listFspRecoveryStatus', body)
+
+    def testListFspRecoveryNic(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': 'F85DFEC0-149E-373D-0B9E-3DA9A5C43940',
+            'dst_path': '/fsp_bk/192.168.71.77_26821/20190111113656/',
+            'wk_uuid': '42614852-BB62-1EF7-FED0-D2354BF3149D',
+        }
+
+        fspRecovery = FspRecovery(a)
+        r = fspRecovery.listFspRecoveryNic(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspRecovery', 'listFspRecoveryNic', body)
 
 
 if __name__ == '__main__':

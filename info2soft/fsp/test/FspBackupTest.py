@@ -2,7 +2,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.fsp.v20181227.FspBackup import FspBackup
+from info2soft.fsp.FspBackup import FspBackup
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -293,6 +293,30 @@ class FspBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'FspBackup', 'finishFspBackup', body)
 
+    def testFailoverFspBackup(self):
+        a = Auth(username, pwd)
+        fspBackup = FspBackup(a)
+        body = {
+            'operate': 'failover',
+            'fsp_uuids': ['90534F82-221E-08FE-9B4F-AA1029A0CFF8'],
+        }
+        r = fspBackup.failoverFspBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspBackup', 'failoverFspBackup', body)
+
+    def testFailbackFspBackup(self):
+        a = Auth(username, pwd)
+        fspBackup = FspBackup(a)
+        body = {
+            'operate': 'failback',
+            'fsp_uuids': ['90534F82-221E-08FE-9B4F-AA1029A0CFF8'],
+        }
+        r = fspBackup.failbackFspBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspBackup', 'failbackFspBackup', body)
+
     def testListFspBackupStatus(self):
         a = Auth(username, pwd)
         body = {
@@ -303,6 +327,99 @@ class FspBackupTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'FspBackup', 'listFspBackupStatus', body)
+
+    def testListFspBackupDriverInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+        }
+
+        fspBackup = FspBackup(a)
+        r = fspBackup.listFspBackupDriverInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspBackup', 'listFspBackupDriverInfo', body)
+
+    def testBatchCreateFspBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'base_info_list': {
+            'secret_key': '',
+            'band_width': '',
+            'mirr_open_type': '0',
+            'service_uuid': '',
+            'mirr_sync_flag': '0',
+            'bkup_one_time': 0,
+            'encrypt_switch': '0',
+            'mirr_sync_attr': '1',
+            'wk_data_type': 1,
+            'sync_item': '/',
+            'bkup_policy': 2,
+            'mirr_file_check': '0',
+            'compress': '0',
+            'monitor_type': 0,
+            'failover': '0',
+            'fsp_wk_shut_flag': '2',
+            'bk_data_type': 1,
+            'bkup_schedule': [{
+            'sched_day': 4,
+            'sched_time': '11:29',
+            'sched_every': 2,
+            'limit': 44,
+            'backup_type': 0,
+            'policys': '"每天22:00自动执行"',
+            'backup_type_show': '"全备"',
+            'running_time': '"22:00"',},],
+            'fsp_type': 3,
+            'del_policy': 1,
+            'timeout': 1,
+            'cbt_switch': 1,
+            'threshold_vaild_byte': '',
+            'advanced_policy': {
+            'bk_cdp': 1,
+            'execute_interval': 1,
+            'cdp_detail': 1,
+            'cdp_daily': 1,
+            'cdp_param': '',
+            'cdp_switch': 1,},
+            'tgt_uuid': '',
+            'new_dc': '',
+            'new_dc_mor': '',
+            'new_host': '',
+            'new_ds': '',
+            'network_name': '',
+            'network_id': '',},
+            'common_params': {
+            'batch_name': '',
+            'rep_prefix': '',
+            'rep_sufix': '',
+            'variable_type': 1,},
+            'node_list': [{
+            'bk_uuid': '',
+            'excl_path': [],
+            'bk_path': [],
+            'wk_uuid': '',
+            'wk_path': [],
+            'vm_name': '',
+            'new_vm_name': '',
+            'custom_config': 1,
+            'cpu': '',
+            'core_per_sock': '',
+            'mem_mb': '',
+            'dynamic_mem': '',
+            'add_drill': 1,
+            'auto': 1,
+            'orch_vm_name': '',
+            'scripts_type': '',
+            'scripts': '',
+            'os_type': 1,},],
+        }
+
+        fspBackup = FspBackup(a)
+        r = fspBackup.batchCreateFspBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspBackup', 'batchCreateFspBackup', body)
 
 
 if __name__ == '__main__':

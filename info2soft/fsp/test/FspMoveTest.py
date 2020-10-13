@@ -3,7 +3,7 @@
 # flake8: noqa
 
 import unittest
-from info2soft.fsp.v20181227.FspMove import FspMove
+from info2soft.fsp.FspMove import FspMove
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -27,7 +27,7 @@ if is_py3:
 username = 'admin'
 pwd = 'Info1234'
     
-                
+
 class FspMoveTestCase(unittest.TestCase):
 
     def testListFspMoveNic(self):
@@ -314,38 +314,38 @@ class FspMoveTestCase(unittest.TestCase):
     def testStopFspMove(self):
         a = Auth(username, pwd)
         body = {
-            'operate': 'start',
+            'operate': 'stop',
             'fsp_uuids': ['3C6B932A-9140-7C37-9639-EB8F44654F18'],
         }
         fspMove = FspMove(a)
         r = fspMove.stopFspMove(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FspMove', 'startFspMove', body)
+        write(r[0], 'FspMove', 'stopFspMove', body)
 
     def testMoveFspMove(self):
         a = Auth(username, pwd)
         body = {
-            'operate': 'start',
+            'operate': 'move',
             'fsp_uuids': ['3C6B932A-9140-7C37-9639-EB8F44654F18'],
         }
         fspMove = FspMove(a)
-        r = fspMove.stopFspMove(body)
+        r = fspMove.moveFspMove(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FspMove', 'startFspMove', body)
+        write(r[0], 'FspMove', 'moveFspMove', body)
 
     def testRebootFspMove(self):
         a = Auth(username, pwd)
         body = {
-            'operate': 'start',
+            'operate': 'move',
             'fsp_uuids': ['3C6B932A-9140-7C37-9639-EB8F44654F18'],
         }
         fspMove = FspMove(a)
-        r = fspMove.stopFspMove(body)
+        r = fspMove.rebootFspMove(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FspMove', 'startFspMove', body)
+        write(r[0], 'FspMove', 'rebootFspMove', body)
 
 
     def testListFspMoveStatus(self):
@@ -358,6 +358,18 @@ class FspMoveTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'FspMove', 'listFspMoveStatus', body)
+
+    def testListFspMoveDriverInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': '',
+        }
+
+        fspMove = FspMove(a)
+        r = fspMove.listFspMoveDriverInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspMove', 'listFspMoveDriverInfo', body)
 
 
 if __name__ == '__main__':

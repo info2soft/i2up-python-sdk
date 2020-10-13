@@ -107,8 +107,7 @@ class FspBackup (object):
     def modifyFspBackup(self, body):
         
         url = '{0}/fsp/backup/{1}'.format(config.get_default('default_api_host'), body['fsp_backup']['fsp_uuid'])
-        randomStr = https._get(url, None, self.auth)[0]['data']['fsp_backup']['random_str']
-        body['fsp_backup']['random_str'] = randomStr
+
         res = https._put(url, body, self.auth)
         return res
 
@@ -177,6 +176,18 @@ class FspBackup (object):
         res = https._post(url, body, self.auth)
         return res
 
+    def failoverFspBackup(self, body):
+        url = '{0}/fsp/backup/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    def failbackFspBackup(self, body):
+        url = '{0}/fsp/backup/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
     '''
      * 3 规则状态
      * 
@@ -187,5 +198,31 @@ class FspBackup (object):
         
         url = '{0}/fsp/backup/status'.format(config.get_default('default_api_host'))
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 全服务器备份 - 获取节点设备列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFspBackupDriverInfo(self, body):
+
+        url = '{0}/fsp/backup/device_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 整机备份 - 批量创建
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def batchCreateFspBackup(self, body):
+
+        url = '{0}/fsp/backup/batch'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 

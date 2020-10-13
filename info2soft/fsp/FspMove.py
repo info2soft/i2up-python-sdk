@@ -106,8 +106,7 @@ class FspMove (object):
     def modifyFspMove(self, body):
         
         url = '{0}/fsp/move/{1}'.format(config.get_default('default_api_host'), body['fsp_move']['fsp_uuid'])
-        randomStr = https._get(url, None, self.auth)[0]['data']['fsp_move']['random_str']
-        body['fsp_move']['random_str'] = randomStr
+
         res = https._put(url, body, self.auth)
         return res
 
@@ -190,6 +189,19 @@ class FspMove (object):
     def listFspMoveStatus(self, body):
         
         url = '{0}/fsp/move/status'.format(config.get_default('default_api_host'))
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 新建 - 准备 - 获取源端驱动列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFspMoveDriverInfo(self, body):
+
+        url = '{0}/fsp/move/driver_info'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
