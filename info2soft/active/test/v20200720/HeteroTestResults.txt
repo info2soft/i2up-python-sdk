@@ -1,0 +1,478 @@
+<START-----------------------------------------------------------
+Method: addHeteroGraph
+body: {
+ "graph_uuid": "",
+ "rule_number": "",
+ "src_type": "",
+ "rule_uuid": "",
+ "_": "3f1202af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createConsumerRule
+body: {
+ "name": "",
+ "src_db_uuid": "",
+ "tgt_type": "",
+ "init_offset": [
+  {
+   "topic": "",
+   "offset": "",
+   "partition": ""
+  }
+ ],
+ "modify": "false",
+ "topic": "",
+ "dst_topic": "",
+ "tgt_db_uuid": "",
+ "init_offset_type": "earlist",
+ "tabmap": "{111:222}",
+ "consumer_thread_num": "2",
+ "actload_thread_num": "4",
+ "kudu_partition_config": [],
+ "impala_connected": "",
+ "config": {
+  "goldendb_config": {
+   "machine_number": 1,
+   "distribute_type": ""
+  },
+  "insert_date_config": {},
+  "primary_key_config": {}
+ },
+ "_": "3f258ced"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001008,
+  "message": "[10001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroGraph
+body: {
+ "graph_name": "",
+ "is_parent": "",
+ "is_rule": "",
+ "consume_rule": [
+  {
+   "id": "",
+   "rule_number": 1,
+   "rule_name": "",
+   "src_type": "",
+   "src_uuid": "",
+   "dst_type": "",
+   "dst_uuid": "",
+   "rule_status": "",
+   "is_parent": "",
+   "is_rule": "",
+   "src_name": "",
+   "dst_name": "",
+   "rule_traffic": ""
+  }
+ ],
+ "_": "3e1d061f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001008,
+  "message": "[10001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroRule
+body: {
+ "name": "",
+ "kfk_ver": "",
+ "dst_node": "",
+ "conn_type": "",
+ "host": "",
+ "port": "",
+ "broker": "",
+ "tabmap": {},
+ "consumer_thread_num": 2,
+ "actload_thread_num": 4,
+ "_": "3f3ab518"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteConsumerRules
+body: {
+ "uuid": [],
+ "force": 1,
+ "_": "3f1e8099"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHeteroGraph
+body: {
+ "graph_uuids": [
+  {
+   "graph_uuid": "CcB11Bf6-1D15-dcF4-Ed71-60c7d3CBeDcA",
+   "rule_uuids": [
+    {
+     "uuid": "86d28b2c-b6E1-2c1F-3F0D-ECbfB5dE3A50",
+     "is_rule": "1",
+     "rule_number": "4",
+     "src_type": "oracle"
+    }
+   ]
+  }
+ ],
+ "is_whole": "1",
+ "_": "3f7ff71c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeConsumerRules
+body: {
+ "uuid": "",
+ "_": "3f3d9ea1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptGraphDetail
+body: {
+ "page": 1,
+ "limit": 10,
+ "start_time": "",
+ "end_time": "",
+ "graph_uuid": "",
+ "_": "3f713baa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroRule
+body: {
+ "name": "",
+ "kfk_ver": "",
+ "dst_node": "",
+ "conn_type": "",
+ "host": "",
+ "port": "",
+ "broker": "",
+ "tabmap": {},
+ "consumer_thread_num": 2,
+ "actload_thread_num": 4,
+ "_": "3f092918"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGraph
+body: {
+ "graph_uuid": "",
+ "_": "3f100d5f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopHeteroGraph
+body: {
+ "graphs": [
+  {
+   "graph_uuid": "",
+   "rule_uuids": [
+    {
+     "uuid": "",
+     "src_type": ""
+    }
+   ]
+  }
+ ],
+ "_": "3f069764"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": null,
+  "message": "[]"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: runHeteroGraph
+body: {
+ "graphs": [],
+ "graph_uuid": "",
+ "rule_uuids": [
+  {
+   "uuid": "",
+   "src_type": ""
+  }
+ ],
+ "_": "3da0f17c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHeteroGraph
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f2eed8c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerRules
+body: {
+ "search_field": "tgt_type",
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "where_args": {
+  "uuid": ""
+ },
+ "_": "3eaba735"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerStatus
+body: {
+ "_": "3e9d797b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "run": {
+     "status": "ACTIVE_RULE_ABNORMAL",
+     "error_code": -4014
+    },
+    "uuid": ""
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyConsumerRule
+body: {
+ "init_offset_type": "earlist",
+ "modify": "false",
+ "tabmap": "{111:222}",
+ "consumer_thread_num": "2",
+ "actload_thread_num": "4",
+ "tgt_db_uuid": "",
+ "name": "",
+ "src_db_uuid": "",
+ "tgt_type": "",
+ "init_offset": [
+  {
+   "topic": "",
+   "offset": "",
+   "partition": ""
+  }
+ ],
+ "topic": "",
+ "dst_topic": "",
+ "uuid": "@guuid",
+ "user_uuid": "@guuid",
+ "_": "3f5548c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001008,
+  "message": "[10001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createConsumerRule
+body: {
+ "name": "",
+ "src_db_uuid": "",
+ "tgt_type": "",
+ "init_offset": [
+  {
+   "topic": "",
+   "offset": "",
+   "partition": ""
+  }
+ ],
+ "modify": "false",
+ "topic": "",
+ "dst_topic": "",
+ "tgt_db_uuid": "",
+ "init_offset_type": "earlist",
+ "tabmap": "{111:222}",
+ "consumer_thread_num": "2",
+ "actload_thread_num": "4",
+ "kudu_partition_config": [],
+ "impala_connected": "",
+ "config": {
+  "goldendb_config": {
+   "machine_number": 1,
+   "distribute_type": ""
+  },
+  "insert_date_config": {},
+  "primary_key_config": {}
+ },
+ "_": "3e1da083"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001008,
+  "message": "[10001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopConsumerRule
+body: {
+ "uuid": "",
+ "operate": "stop",
+ "_": "3e80f8b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeConsumerRule
+body: {
+ "uuid": "",
+ "operate": "resume",
+ "_": "3f04212b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,65 @@
+<START-----------------------------------------------------------
+Method: deleteGaussRule
+body: {
+ "uuids": [
+  "DBED8CDE-435D-7865-76FE-149AA54AC7F7"
+ ],
+ "type": "",
+ "_": "3f7d68e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGaussTraffic
+body: {
+ "set_time": 1,
+ "type": "",
+ "interval": "\u65f6\u95f4\u95f4\u9694",
+ "set_time_init": "",
+ "rule_uuid": "",
+ "_": "3ed4e5ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGaussRules
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "where_args": {
+  "rule_uuid": ""
+ },
+ "_": "3f4dac53"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
