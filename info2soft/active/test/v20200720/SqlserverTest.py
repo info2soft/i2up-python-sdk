@@ -185,6 +185,18 @@ class SqlserverTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Sqlserver', 'listRule', body)
 
+    def testDescribeListRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': '6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        sqlserver = Sqlserver(a)
+        r = sqlserver.describeListRule(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Sqlserver', 'describeListRule', body)
+
 
 if __name__ == '__main__':
     unittest.main()
