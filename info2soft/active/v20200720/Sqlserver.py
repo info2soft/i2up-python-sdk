@@ -89,11 +89,11 @@ class Sqlserver (object):
      * 
      * @return list
     '''
-    def checkName(self, ):
+    def checkName(self, body):
         
         url = '{0}/sqlserver/rule/check_name'.format(config.get_default('default_api_host'))
         
-        res = https._post(url, None, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -106,6 +106,21 @@ class Sqlserver (object):
         
         url = '{0}/sqlserver/rule'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 获取单个规则
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def describeListRule(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}sqlserver/rule/{1}'.format(config.get_default('default_api_host'), uuid)
+
         res = https._get(url, body, self.auth)
         return res
 

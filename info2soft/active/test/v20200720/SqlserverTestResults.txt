@@ -19,26 +19,14 @@ body: {
    "mirror_db_uuid": ""
   }
  ],
- "_": "3f732754"
+ "_": "3e0f5275"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [
-   {
-    "code": -3565,
-    "message": "[-3565]IPC request is not recognized: I2.IPC_RULE_ADD",
-    "rule_name": "123->sqlserver-1"
-   },
-   {
-    "code": -3565,
-    "message": "[-3565]IPC request is not recognized: I2.IPC_RULE_ADD",
-    "rule_name": "123->sqlserver-2"
-   }
-  ]
+  "code": 10001009,
+  "message": "[10001009] Name exists"
  }
 }
 -----------------------------------------------------------END>
@@ -68,14 +56,14 @@ body: {
   "dump_thd": 1,
   "drop_old_tab": 1
  },
- "_": "3f756391"
+ "_": "3f63e19a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success"
+  "code": -1,
+  "message": "[-1]node not found"
  }
 }
 -----------------------------------------------------------END>
@@ -84,14 +72,14 @@ response: {
 Method: deleteRule
 body: {
  "uuids": [],
- "_": "3f61de1b"
+ "_": "3d1624f3"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success"
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -107,7 +95,7 @@ body: {
  "where_args": {
   "rule_uuid": ""
  },
- "_": "3f1435d4"
+ "_": "3e1268dc"
 }
 response: {
  "ret": 200,
@@ -115,64 +103,8 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [
-   {
-    "rule_uuid": "6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337",
-    "rule_name": "Ronald Lopez",
-    "src_db_uuid": "",
-    "tgt_db_uuid": "",
-    "tgt_type": "kafka",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "tgt_db_name": "bei",
-    "map_type": "database",
-    "config": {
-     "start_rule_now": 1,
-     "table_map": "",
-     "full_sync": 1,
-     "incre_sync": 1,
-     "full_sync_mode": "",
-     "db_user_map": [],
-     "dbmap_topic": "",
-     "row_map_mode": "",
-     "kafka_time_out": "",
-     "part_load_balance": "",
-     "kafka_message_encoding": ""
-    },
-    "src_db_name": "1111",
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   },
-   {
-    "rule_uuid": "3BF809AF-4A2E-DD28-072E-530D33BAC189",
-    "rule_name": "Melissa Brown",
-    "src_db_uuid": "",
-    "tgt_db_uuid": "",
-    "tgt_type": "kafka",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "tgt_db_name": "bei",
-    "map_type": "database",
-    "config": {
-     "start_rule_now": 1,
-     "table_map": "",
-     "full_sync": 1,
-     "incre_sync": 1,
-     "full_sync_mode": "",
-     "db_user_map": [],
-     "dbmap_topic": "",
-     "row_map_mode": "",
-     "kafka_time_out": "",
-     "part_load_balance": "",
-     "kafka_message_encoding": ""
-    },
-    "src_db_name": "1111",
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   }
-  ]
+  "info_list": [],
+  "total": 0
  }
 }
 -----------------------------------------------------------END>
@@ -181,46 +113,14 @@ response: {
 Method: listRuleStatus
 body: {
  "uuids": "",
- "_": "3e9203ac"
+ "_": "3f7df0ae"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
   "code": 0,
-  "message": "[0] success",
-  "info_list": [
-   {
-    "rule_uuid": "6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337",
-    "export_state": {
-     "status": "ACTIVE_RULE_ABNORMAL",
-     "error_code": -4014
-    },
-    "load_state": {
-     "status": "ACTIVE_RULE_ABNORMAL",
-     "error_code": -4014
-    },
-    "track_state": {
-     "status": "ACTIVE_RULE_STOP",
-     "error_code": -4014
-    }
-   },
-   {
-    "rule_uuid": "3BF809AF-4A2E-DD28-072E-530D33BAC189",
-    "export_state": {
-     "status": "ACTIVE_RULE_ABNORMAL",
-     "error_code": -4014
-    },
-    "load_state": {
-     "status": "ACTIVE_RULE_ABNORMAL",
-     "error_code": -4014
-    },
-    "track_state": {
-     "status": "ACTIVE_RULE_STOP",
-     "error_code": -4014
-    }
-   }
-  ]
+  "message": "[0] success"
  }
 }
 -----------------------------------------------------------END>
@@ -249,8 +149,25 @@ body: {
  "sync_mode": 1,
  "dump_thd": 1,
  "drop_old_tab": 1,
- "_": "3f03e524",
+ "_": "3e0e7e58",
  "uuid": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "[-1]node not found"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateRule
+body: {
+ "operate": "",
+ "uuids": "",
+ "_": "3ec1f065"
 }
 response: {
  "ret": 200,
@@ -263,18 +180,33 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: operateRule
+Method: checkName
 body: {
- "operate": "",
- "uuids": "",
- "_": "3f07ca1e"
+ "_": "3f630b63"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
   "code": 0,
-  "message": "[0] success"
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeListRule
+body: {
+ "rule_uuid": "6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337",
+ "_": "3e8eb08f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
