@@ -11,11 +11,11 @@ class AppSystem (object):
      * 
      * @return list
     '''
-    def secDirList(self, ):
+    def secDirList(self, body):
         
         url = '{0}/sec_dir'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -184,11 +184,11 @@ class AppSystem (object):
      * 
      * @return list
     '''
-    def resourceView(self, ):
+    def resourceView(self, body):
         
         url = '{0}/dashboard/source'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -209,11 +209,11 @@ class AppSystem (object):
      * 
      * @return list
     '''
-    def taskView(self, ):
+    def taskView(self, body):
         
         url = '{0}/dashboard/task'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -227,5 +227,70 @@ class AppSystem (object):
         url = '{0}/statistics/report'.format(config.get_default('default_api_host'))
         
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 任务列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def batchTaskList(self, body):
+
+        url = '{0}/batch_task'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 任务状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def batchTaskStatus(self, body):
+
+        url = '{0}/batch_task/status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 批量任务 - 操作 启动
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startBatchTask(self, body):
+
+        url = '{0}/batch_task/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 批量任务 - 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopBatchTask(self, body):
+
+        url = '{0}/batch_task/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 批量任务 - 操作 删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def deleteBatchTask(self, body):
+
+        url = '{0}/batch_task/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 
