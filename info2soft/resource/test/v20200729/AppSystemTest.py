@@ -5,7 +5,7 @@ import sys
 sys.path.append(r'/Users/chengl/Desktop/sdk/python-sdk/')
 
 import unittest
-from info2soft import AppSystem
+from info2soft.resource.v20200729.AppSystem import AppSystem
 # from info2soft.resource.v20200722.AppSystem import AppSystem
 from info2soft import Auth
 from info2soft.fileWriter import write
@@ -28,7 +28,7 @@ if is_py3:
     urlopen = urllib.request.urlopen
 
 username = 'admin'
-pwd = '12345678'
+pwd = 'Info1234'
     
                 
 class AppSystemTestCase(unittest.TestCase):
@@ -281,6 +281,78 @@ class AppSystemTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'AppSystem', 'listStatisticsReport', body)
+
+    def testBatchTaskList(self):
+        a = Auth(username, pwd)
+        body = {
+            'like_args[xxx]': '',
+            'limit': 1,
+            'page': 1,
+            'type': 1,
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.batchTaskList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'batchTaskList', body)
+
+    def testBatchTaskStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'batch_uuids': [],
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.batchTaskStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'batchTaskStatus', body)
+
+    def testStartBatchTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'batch_uuid': '',
+            'delete_tgtvm': '',
+            'del_policy': '',
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.startBatchTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'startBatchTask', body)
+
+    def testStopBatchTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'batch_uuid': '',
+            'delete_tgtvm': '',
+            'del_policy': '',
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.stopBatchTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'stopBatchTask', body)
+
+    def testDeleteBatchTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'batch_uuid': '',
+            'delete_tgtvm': '',
+            'del_policy': '',
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.deleteBatchTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'deleteBatchTask', body)
 
 
 if __name__ == '__main__':
