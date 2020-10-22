@@ -1,0 +1,235 @@
+<START-----------------------------------------------------------
+Method: createTakeOverDrill
+body: {
+ "vm_name": "",
+ "rule_type": 1,
+ "wk_uuid": "",
+ "bk_version": "",
+ "vm_cpu_core": "",
+ "vm_mem": "",
+ "vm_network": {
+  "cards": [
+   {
+    "ip": "",
+    "mac": "",
+    "mask": "",
+    "gateway": "",
+    "dns": {
+     "domain": "",
+     "servers": ""
+    }
+   }
+  ],
+  "dns": {
+   "domain": "",
+   "servers": ""
+  }
+ },
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "bios_type": "",
+ "vp_uuid": "",
+ "timezone": "",
+ "storage_uuid": "",
+ "bk_path": "",
+ "os_version": "",
+ "_": "3ede26b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: vm_name;\n Lost: vp_uuid;\n Lost: bk_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: vm_cpu_core;\n Lost: vm_mem;\n Lost: bios_type;\n Lost: timezone;\n Lost: os_version;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "_": "3f0026c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTakeOverDrill
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getHostStorageList
+body: {
+ "vp_uuid": "",
+ "_": "3f2a08d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getPointList
+body: {
+ "bk_uuid": "",
+ "path": "",
+ "type": "",
+ "suffix": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3e98847a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10011001,
+  "message": "[10011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getResourceList
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3eddb9c7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVmStatus
+body: {
+ "_": "3f72f8c7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: openConsoleTakeOverDrill
+body: {
+ "operate": "",
+ "type": "",
+ "_": "3f7b3910"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startTakeOverDrill
+body: {
+ "operate": "",
+ "type": "",
+ "_": "3f6f567f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTakeOverDrill
+body: {
+ "operate": "",
+ "type": "",
+ "_": "3f0945c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: takeOverDrillList
+body: {
+ "limit": 10,
+ "page": 1,
+ "where_args": {
+  "wk_uuid": "",
+  "bk_uuid": ""
+ },
+ "_": "3f44fec5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+

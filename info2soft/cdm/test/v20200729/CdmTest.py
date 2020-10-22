@@ -82,9 +82,9 @@ class CdmTestCase(unittest.TestCase):
         body = {
             'limit': 10,
             'page': 1,
-            'where_args': [{
+            'where_args': {
             'wk_uuid': '',
-            'bk_uuid': '',},],
+            'bk_uuid': ''}
         }
         
         cdm = Cdm(a)
@@ -169,7 +169,7 @@ class CdmTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Cdm', 'getVmStatus', body)
 
-    def testOperateTakeOverDrill(self):
+    def testStartTakeOverDrill(self):
         a = Auth(username, pwd)
         body = {
             "rule_uuids": [],
@@ -178,10 +178,38 @@ class CdmTestCase(unittest.TestCase):
         }
         
         cdm = Cdm(a)
-        r = cdm.operateTakeOverDrill(body)
+        r = cdm.startTakeOverDrill(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cdm', 'operateTakeOverDrill', body)
+        write(r[0], 'Cdm', 'startTakeOverDrill', body)
+
+    def testStopTakeOverDrill(self):
+        a = Auth(username, pwd)
+        body = {
+            "rule_uuids": [],
+            "operate": "",
+            "type": ""
+        }
+
+        cdm = Cdm(a)
+        r = cdm.stopTakeOverDrill(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cdm', 'stopTakeOverDrill', body)
+
+    def testOpenConsoleTakeOverDrill(self):
+        a = Auth(username, pwd)
+        body = {
+            "rule_uuids": [],
+            "operate": "",
+            "type": ""
+        }
+
+        cdm = Cdm(a)
+        r = cdm.openConsoleTakeOverDrill(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cdm', 'openConsoleTakeOverDrill', body)
 
 
 if __name__ == '__main__':
