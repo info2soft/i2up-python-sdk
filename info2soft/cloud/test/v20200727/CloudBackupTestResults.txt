@@ -1,0 +1,222 @@
+<START-----------------------------------------------------------
+Method: createBackup
+body: {
+ "cloud_backup": {
+  "secret_key": "",
+  "mirr_open_type": "0",
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "wk_data_type": 1,
+  "bk_path": [],
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "wk_path": [
+   {
+    "node_name": "8.180",
+    "path_name": "PhysicalDrive0",
+    "path_size": "42944186880",
+    "path_attr": "1",
+    "node_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D"
+   }
+  ],
+  "group_name": "test",
+  "wk_uuid": [
+   "42614852-BB62-1EF7-FED0-D2354BF3149D"
+  ],
+  "bk_data_type": 1,
+  "bkup_schedule": [
+   {
+    "sched_day": 24,
+    "sched_time": "11:22",
+    "sched_every": 2,
+    "limit": 41,
+    "backup_type": 0,
+    "policys": "\u6bcf\u592922:00\u81ea\u52a8\u6267\u884c",
+    "backup_type_show": "\u5168\u5907",
+    "running_time": "22:00"
+   }
+  ],
+  "random_str": "11111111-1111-1111-1111-111111111111"
+ },
+ "_": "3f367475"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  The cloud_backup[wk_data_type] field must be one of: 0.;\n Not uuid: cloud_backup[wk_uuid];\n Lost: cloud_backup[bk_path][0];\n The cloud_backup[bk_data_type] field must be one of: 5.;\n Lost: cloud_backup[cbt_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCloudBackup
+body: {
+ "fsp_uuids": [],
+ "_": "3eacb0ad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackup
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3d32f547"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDevice
+body: {
+ "node_uuid": "",
+ "_": "3f4f6628"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCloudBackup
+body: {
+ "cloud_backup": {
+  "secret_key": "",
+  "mirr_open_type": "0",
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "wk_data_type": 1,
+  "bk_path": [],
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "wk_path": [
+   {
+    "node_name": "8.180",
+    "path_name": "PhysicalDrive0",
+    "path_size": "42944186880",
+    "path_attr": "1",
+    "node_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D"
+   }
+  ],
+  "group_name": "test",
+  "wk_uuid": [
+   "42614852-BB62-1EF7-FED0-D2354BF3149D"
+  ],
+  "bk_data_type": 1,
+  "bkup_schedule": [
+   {
+    "sched_day": 24,
+    "sched_time": "11:22",
+    "sched_every": 2,
+    "limit": 41,
+    "backup_type": 0,
+    "policys": "\u6bcf\u592922:00\u81ea\u52a8\u6267\u884c",
+    "backup_type_show": "\u5168\u5907",
+    "running_time": "22:00"
+   }
+  ],
+  "random_str": "11111111-1111-1111-1111-111111111111"
+ },
+ "_": "3ef5768c"
+}
+response: {
+ "ret": 400,
+ "msg": "Unknown method"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startBackup
+body: {
+ "operate": "start",
+ "_": "3f4cd42c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelyBackup
+body: {
+ "operate": "start_immediate",
+ "_": "3f237913"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBackup
+body: {
+ "operate": "stop",
+ "_": "3e85eb4c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

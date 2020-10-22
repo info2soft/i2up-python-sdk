@@ -113,6 +113,18 @@ class CloudPlatformTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'CloudPlatform', 'listCloudPlatform', body)
 
+    def testListCloudPlatformStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'vp_uuids': [],
+        }
+
+        cloudPlatform = CloudPlatform(a)
+        r = cloudPlatform.listCloudPlatformStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CloudPlatform', 'listCloudPlatformStatus', body)
+
     def testDescribeCloudPlatform(self):
         a = Auth(username, pwd)
         body = {
