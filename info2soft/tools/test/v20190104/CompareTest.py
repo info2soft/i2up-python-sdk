@@ -62,6 +62,64 @@ class CompareTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Compare', 'createCompare', body)
 
+    def testModifyCompare(self):
+        a = Auth(username, pwd)
+        body = {
+            'compare': {
+            'excl_path': [],
+            'bkup_one_time': 0,
+            'bkup_schedule': {
+            'sched_gap_min': 60,
+            'sched_time': [
+            '00:00:00',],
+            'sched_day': [
+            '1',],
+            'sched_time_end': '23:59',
+            'limit': 5,
+            'sched_time_start': '00:00',
+            'sched_every': 0,},
+            'mirr_file_check': '1',
+            'task_name': 'testCompare1',
+            'wk_path': [
+            'E:\\test\\',],
+            'bk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
+            'cmp_type': 0,
+            'bk_path': [
+            'E:\\test\\',],
+            'bkup_policy': 2,
+            'compress': 0,
+            'wk_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',
+            'mirr_sync_attr': 1,
+            'encrypt_switch': '',
+            'secret_key': '',
+            'biz_grp_list': [],
+            'oph_policy': '',
+            'ct_name_str1': '',
+            'ct_name_str2': '',
+            'ct_name_str3': '',
+            'ct_name_str4': '',
+            'task_uuid': '',
+            'random_str': '',
+            'data_ip_uuid': '67E33CDB-D75B-15B3-367D-50C764F5A26F',},
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        compare = Compare(a)
+        r = compare.modifyCompare(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Compare', 'modifyCompare', body)
+
+    def testListCompareLogs(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        compare = Compare(a)
+        r = compare.listCompareLogs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Compare', 'listCompareLogs', body)
+
     def testDescribeCompare(self):
         a = Auth(username, pwd)
         body = {
@@ -135,6 +193,18 @@ class CompareTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Compare', 'downloadCompare', body)
 
+    def testStartImmediatelyCompare(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediate',
+            'task_uuids': ['88FE607E-6826-5F1F-FC70-9B3036DA79C6'],
+        }
+        compare = Compare(a)
+        r = compare.startImmediatelyCompare(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Compare', 'startImmediatelyCompare', body)
+
     def testDeleteCompare(self):
         a = Auth(username, pwd)
         body = {
@@ -145,6 +215,26 @@ class CompareTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Compare', 'deleteCompare', body)
+
+    def testCollectCompareResult(self):
+        a = Auth(username, pwd)
+        body = {
+            'code': '',
+            'time': '',
+            'files': '',
+            'bytes': '',
+            'missing': '',
+            'diff': '',
+            'erro': '',
+            'equal': '',
+            'task_uuid': '',
+        }
+
+        compare = Compare(a)
+        r = compare.collectCompareResult(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Compare', 'collectCompareResult', body)
 
 
 if __name__ == '__main__':

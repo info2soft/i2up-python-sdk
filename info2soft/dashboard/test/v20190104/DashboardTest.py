@@ -67,7 +67,7 @@ class DashboardTestCase(unittest.TestCase):
         r = dashboard.repBackup(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Dashboard', 'describeVmProtectRate', body)
+        write(r[0], 'Dashboard', 'repBackup', body)
 
     def testNode(self):
         a = Auth(username, pwd)
@@ -80,7 +80,7 @@ class DashboardTestCase(unittest.TestCase):
         r = dashboard.node(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Dashboard', 'describeVmProtectRate', body)
+        write(r[0], 'Dashboard', 'node', body)
 
     def testHa(self):
         a = Auth(username, pwd)
@@ -93,7 +93,7 @@ class DashboardTestCase(unittest.TestCase):
         r = dashboard.ha(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Dashboard', 'describeVmProtectRate', body)
+        write(r[0], 'Dashboard', 'ha', body)
 
 
 if __name__ == '__main__':

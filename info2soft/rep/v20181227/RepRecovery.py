@@ -45,8 +45,7 @@ class RepRecovery (object):
         if body is None or 'rc_uuid' not in body['rep_recovery']:
             exit()
         url = '{0}/rep/recovery/{1}'.format(config.get_default('default_api_host'), body['rep_recovery']['rc_uuid'])
-        randomStr = https._get(url, None, self.auth)[0]['data']['rep_recovery']['random_str']
-        body['rep_recovery']['random_str'] = randomStr
+
         res = https._put(url, body, self.auth)
         return res
 
