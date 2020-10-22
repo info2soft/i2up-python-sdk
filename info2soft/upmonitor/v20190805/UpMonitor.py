@@ -46,31 +46,32 @@ class UpMonitor(object):
         return res
 
     '''
-     *  修改
+     * 子平台 - 修改
      * 
      * @body['uuid'] String  必填 节点uuid
      * @param dict $body  参数详见 API 手册
      * @return list
-     '''
+    '''
+    def modifyUpMonitor(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/up_monitor/{1}'.format(config.get_default('default_api_host'), uuid)
 
-    def modifyUpMonitor(self, body):
-        url = '{0}/up_monitor/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-        del body['uuid']
         res = https._put(url, body, self.auth)
         return res
 
     '''
-     *  获取单个
+     * 子平台 - 获取单个
      * 
      * @body['uuid'] String  必填 节点uuid
      * @return list
-     '''
+    '''
+    def describeUpMonitor(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/up_monitor/{1}'.format(config.get_default('default_api_host'), uuid)
 
-    def describeUpMonitor(self, body):
-        if body is None or 'uuid' not in body: exit()
-        url = '{0}/up_monitor/{1}'.format(config.get_default('default_api_host'), body['uuid'])
-
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
