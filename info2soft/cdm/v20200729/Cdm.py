@@ -112,15 +112,41 @@ class Cdm (object):
         return res
 
     '''
-     * -- 操作
+     * -- 操作 启动
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def operateTakeOverDrill(self, body):
+    def startTakeOverDrill(self, body):
         
         url = '{0}/cdm_rule/operate'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * -- 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopTakeOverDrill(self, body):
+
+        url = '{0}/cdm_rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * -- 操作 打开终端
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def openConsoleTakeOverDrill(self, body):
+
+        url = '{0}/cdm_rule/operate'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
