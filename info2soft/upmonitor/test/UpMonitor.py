@@ -75,17 +75,18 @@ class UpMonitorTestCase(unittest.TestCase):
     def testModifyUpMonitor(self):
         a = Auth(username, pwd)
         body = {
-            'access_key': '',
+            'up_name': '就这个控制机',
+            'access_key': 'oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk',
+            'secret_key': 'fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo',
+            'ip': '172.20.2.70',
+            'port': '58086',
+            'comment': '备注xxx',
             'biz_grp_list': [],
-            'comment': '',
-            'random_str': '',
-            'secret_key': '',
-            'ip': '',
-            'port': '',
-            'up_name': '',
+            'random_str': '11111111-1111-1111-1111-111111111111',
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         upMonitor = UpMonitor(a)
-        r = upMonitor.modifyUpMonitor(body)
+        r = upMonitor.modifyUpMonitor(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'UpMonitor', 'modifyUpMonitor', body)
@@ -94,8 +95,9 @@ class UpMonitorTestCase(unittest.TestCase):
         a = Auth(username, pwd)
         body = {
         }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         upMonitor = UpMonitor(a)
-        r = upMonitor.describeUpMonitor(body)
+        r = upMonitor.describeUpMonitor(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'UpMonitor', 'describeUpMonitor', body)
