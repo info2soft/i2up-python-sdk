@@ -347,6 +347,123 @@ class RepBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'RepBackup', 'deleteRepBackupSnapshot', body)
 
+    def testListRepBackupCdpZfs(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': '',
+        }
+        repBackup = RepBackup(a)
+        r = repBackup.listRepBackupCdpZfs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'listRepBackupCdpZfs', body)
+
+    def testRepBackupVerifyDevice(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+            'dir_name': '',
+        }
+
+        repBackup = RepBackup(a)
+        r = repBackup.repBackupVerifyDevice(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'repBackupVerifyDevice', body)
+
+    def testListRapBackupMscsGroup(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+        }
+
+        repBackup = RepBackup(a)
+        r = repBackup.listRepBackupMscsGroup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'listRepBackupMscsGroup', body)
+
+    def testBatchCreateRepBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'base_info_list': {
+            'mirr_sync_attr': '1',
+            'cdp_path': 'E: est3/',
+            'oph_path': 'E: est4/',
+            'secret_key': '',
+            'rep_prefix': 'bk_',
+            'snapshot_policy': '0',
+            'bk_path_policy': '1',
+            'cdp_process_time': '05:07:28',
+            'mirr_open_type': '0',
+            'compress': '0',
+            'cdp_switch': '1',
+            'snapshot_start': 1546913351,
+            'cdp_baseline_format': '0',
+            'cdp_bl_bkup_switch': 0,
+            'encrypt_switch': '0',
+            'auto_start': '1',
+            'disk_limit': '0',
+            'band_width': '',
+            'snapshot_limit': '24',
+            'mirr_sync_flag': '0',
+            'mirr_file_check': '0',
+            'cdp_bl_sched_switch': 1,
+            'del_policy': '1',
+            'cmp_switch': 0,
+            'rep_type': 0,
+            'snapshot_interval': '1',
+            'file_type_filter_switch': 0,
+            'snapshot_switch': 1,
+            'file_type_filter': '',
+            'cdp_param': '3,30,0',
+            'oph_policy': '2',
+            'mirr_skip': '0',
+            'cdp_bl_sched': '2|1|0|5',
+            'mirr_sched': '',
+            'bkup_one_time': 1515568566,
+            'mirr_sched_switch': 0,
+            'cdp_snap_on': 0,
+            'cdp_snap_interval': 30,
+            'cdp_snap_count': 240,
+            'ct_name_type': 0,
+            'ct_name_str1': '',
+            'ct_name_str2': '',
+            'ct_name_str3': '',
+            'ct_name_str4': '',
+            'cmp_file_check': 0,
+            'cmp_schedule': [{
+            'sched_every': 1,
+            'sched_time': [
+            '15:54',],
+            'sched_day': [
+            '1',],},],
+            'thread_num': '0',
+            'cdp_zfs_pool': '',
+            'cdp_data_inc_switch': 0,
+            'cdp_data_inc': 0,
+            'cdp_data_inc_flag': '',
+            'latency_threshold': 1,
+            'mscs_autostart': 1,
+            'mir_detect_script': '',
+            'mscs_group': {},
+            'rep_sufix': '',
+            'variable_type': 'node',
+            'batch_name': '',},
+            'rep_backup': [{
+            'wk_uuid': '',
+            'bk_uuid': '',
+            'wk_path': [],
+            'bk_path': [],
+            'excl_path': [],},],
+        }
+
+        repBackup = RepBackup(a)
+        r = repBackup.batchCreateRepBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'batchCreateRepBackup', body)
+
 
 if __name__ == '__main__':
     unittest.main()

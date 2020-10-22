@@ -26,10 +26,10 @@ class NAS (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def describeNASGroup(self, body):
+    def describeNASGroup(self, body, group_uuid):
         
-        url = '{0}/nas/sync//group{1}'.format(config.get_default('default_api_host'), body['group_uuid'])
-        del body['group_uuid']
+        url = '{0}/nas/sync/{1}/group'.format(config.get_default('default_api_host'), group_uuid)
+
         res = https._get(url, None, self.auth)
         return res
 
@@ -40,12 +40,10 @@ class NAS (object):
      * @param dict body  参数详见 API 手册
      * @return array
      '''
-    def modifyNAS(self, body):
+    def modifyNAS(self, body, group_uuid):
         
-        url = '{0}/nas/sync/{1}/group'.format(config.get_default('default_api_host'), body['group_uuid'])
-        del body['group_uuid']
-        randomStr = https._get(url, None, self.auth)[0]['data']['nas']['random_str']
-        body['random_str'] = randomStr
+        url = '{0}/nas/sync/{1}/group'.format(config.get_default('default_api_host'), group_uuid)
+
         res = https._put(url, body, self.auth)
         return res
 

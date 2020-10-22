@@ -553,3 +553,51 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: describeVmProtectRate
+body: {
+ "limit": 10,
+ "page": 1,
+ "type": 0,
+ "_": "3f4acbab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [
+   {
+    "cmp_switch": 0,
+    "band_width": "",
+    "bk_path_policy": "0",
+    "random_str": "8520D22D-3A06-4085-3AA5-A6BCC9A2B1F1",
+    "bkup_schedule": null,
+    "bkup_policy": "2",
+    "wk_node_name": "test-68.211",
+    "bk_node_name": "test-68.211",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "bk_path": [
+     "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\bk2\\"
+    ],
+    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "excl_path": [],
+    "rep_name": "test2",
+    "rep_type": 0,
+    "rep_uuid": "1A18D8DC-15D0-C4CF-D9C9-F67C6342A7EB",
+    "wk_path": [
+     "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
+    ],
+    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "n_status": "M_STOP",
+    "n_role": null,
+    "time": null
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+

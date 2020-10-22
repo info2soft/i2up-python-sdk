@@ -1,0 +1,155 @@
+<START-----------------------------------------------------------
+Method: createNAS
+body: {
+ "_": "3f30b60a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: bk_path;\n Lost: bk_uuid;\n Lost: cmp_switch;\n Lost: compress;\n Lost: encrypt_switch;\n Lost: nas_name;\n Lost: nas_type;\n Lost: wk_list[0][wk_path];\n Lost: wk_list[0][wk_uuid];\n Lost: file_type_filter_switch;\n Lost: thread_num;\n Lost: mirr_sync_attr;\n Lost: filter_delete;\n Lost: runtime_switch;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNAS
+body: {
+ "_": "3f36fd23"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: nas_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNAS
+body: {
+ "_": "3e584c21"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNASStatus
+body: {
+ "_": "3f6c1ac2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: nas_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNAS
+body: {
+ "operate": "start",
+ "_": "3e3e9f60"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: nas_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopNAS
+body: {
+ "operate": "stop",
+ "_": "3f51a26d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: nas_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modify
+body: {
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "_": "3ef85af7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: bk_path;\n Lost: bk_uuid;\n Lost: cmp_switch;\n Lost: compress;\n Lost: encrypt_switch;\n Lost: nas_name;\n Lost: nas_type;\n Lost: wk_list[0][wk_path];\n Lost: wk_list[0][wk_uuid];\n Lost: file_type_filter_switch;\n Lost: thread_num;\n Lost: mirr_sync_attr;\n Lost: filter_delete;\n Lost: runtime_switch;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNASGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001011,
+  "message": "[10001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNAS
+body: {
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "_": "3f431028"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: bk_path;\n Lost: bk_uuid;\n Lost: cmp_switch;\n Lost: compress;\n Lost: encrypt_switch;\n Lost: nas_name;\n Lost: nas_type;\n Lost: wk_list[0][wk_path];\n Lost: wk_list[0][wk_uuid];\n Lost: file_type_filter_switch;\n Lost: thread_num;\n Lost: mirr_sync_attr;\n Lost: filter_delete;\n Lost: runtime_switch;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startNAS
+body: {
+ "operate": "start",
+ "_": "3de6f793"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: nas_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+

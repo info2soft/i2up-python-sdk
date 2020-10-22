@@ -21,6 +21,19 @@ class RepBackup (object):
         return res
 
     '''
+     * 复制规则 - 检查是否挂载盘
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def repBackupVerifyDevice(self, body):
+
+        url = '{0}/rep/backup/verify_device'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 新建规则
      * 
      * @param dict body  参数详见 API 手册
@@ -57,9 +70,7 @@ class RepBackup (object):
         if body is None or 'rep_uuid' not in body['rep_backup']:
             exit()
         url = '{0}/rep/backup/{1}'.format(config.get_default('default_api_host'), body['rep_backup']['rep_uuid'])
-        randomStr = https._get(url, None, self.auth)[0]['data']['rep_backup']['random_str']
-        print(https._get(url, None, self.auth)[0]['data']['rep_backup'])
-        body['rep_backup']['random_str'] = randomStr
+
         res = https._put(url, body, self.auth)
         return res
 
@@ -216,7 +227,7 @@ class RepBackup (object):
             exit()
         url = '{0}/rep/backup/{1}/snapshot_list'.format(config.get_default('default_api_host'), body['rep_uuid'])
         
-        res = https._post(url, None, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -231,6 +242,32 @@ class RepBackup (object):
         url = '{0}/rep/backup/{1}/snapshot_list'.format(config.get_default('default_api_host'), body['rep_uuid'])
         del body['rep_uuid']
         res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * 复制规则 - 获取集群组信息
+     *
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listRepBackupMscsGroup(self, body):
+
+        url = '{0}/rep/backup/mscs_group'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 复制规则 - 批量新建
+     *
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def batchCreateRepBackup(self, body):
+
+        url = '{0}/rep/backup/batch'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 
 
