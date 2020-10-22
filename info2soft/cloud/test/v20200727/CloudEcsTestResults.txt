@@ -1,0 +1,343 @@
+<START-----------------------------------------------------------
+Method: attachPoint
+body: {
+ "ecs_id": "",
+ "_": "3f7d1310"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: configRehearse
+body: {
+ "cloud_backup_uuid": "",
+ "source": {
+  "node_name": "8.180",
+  "host_name": "Windows Ftp Server",
+  "host_ip": "192.168.8.180",
+  "node_os": "Windows Server 2012 R2 64bits",
+  "vcpus": "8",
+  "memory": "40957",
+  "disk_num": "2",
+  "disk_size": "64420392960",
+  "ecs_id": ""
+ },
+ "zone": {
+  "zone_name": "\u534e\u5317-\u5317\u4eac\u4e00",
+  "availability_zone": "cn-east-2c"
+ },
+ "rc_point": {
+  "time": "2019-08-13 17:13:28",
+  "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f33dd",
+  "disk_num": 2,
+  "total_size": "8000",
+  "list": [
+   {
+    "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f41dd",
+    "size": "4000",
+    "boot_index": 0
+   }
+  ]
+ },
+ "ecs_name": "Rehearse lij-test",
+ "flavor": {
+  "id": "ai1.2xlarge.4",
+  "name": "ai1.2xlarge.4",
+  "vcpus": "8",
+  "ram": 32768,
+  "disk": "0",
+  "disabled": "false",
+  "is_public": 1
+ },
+ "vpc": {
+  "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+  "name": "vpc-49a5,192.168.0.0/16"
+ },
+ "subnet": {
+  "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+  "name": "subnet-1df4,192.168.64.0/24"
+ },
+ "ip_address": "192.168.192.101",
+ "security_group": [
+  {
+   "group_id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+   "group_name": "i2",
+   "ingress": "ICMP,TCP/22,80,443,26821-26868,55443",
+   "egress ": "ICMP"
+  }
+ ],
+ "network_switch": 1,
+ "_": "3f071486"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createEcs
+body: {
+ "cloud_uuid": "",
+ "ecs_name": "",
+ "flavorid": "",
+ "volume_sys_id": "",
+ "server_zone": "",
+ "volume_data_ids": [],
+ "wk_uuid": "",
+ "rc_point": {
+  "time": "",
+  "disk_num": 1,
+  "total_size": "",
+  "list": [
+   {
+    "id": "",
+    "size": "",
+    "boot_index": 1
+   }
+  ]
+ },
+ "from_backup": 0,
+ "_": "3f1b0f4c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: ecs_name;\n Lost: cloud_uuid;\n Lost: flavorid;\n Lost: server_zone;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRehearseGroup
+body: {
+ "group_uuid": "",
+ "group_name": "",
+ "ecs_ids": [
+  "396c8bde-2d3a-4cad-87ea-8d1f81e2451c",
+  "f3ca421d-9b6e-42b9-b911-36ebbeabb485"
+ ],
+ "group_content": "",
+ "_": "3e4d59be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: group_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRehearseGroup
+body: {
+ "group_uuids": [
+  "A14875A3-738E-3E5B-65D3-483CADE35E5D",
+  "A14875A3-738E-3E5B-65D3-483CADE35E5D"
+ ],
+ "_": "3f13a511"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRehearseGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "rehearse_group": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEcs
+body: {
+ "cloud_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3e94c9ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "node_name": null,
+    "node_uuid": null,
+    "wk_node_name": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": "1",
+    "create_time": 0,
+    "ecs_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "random_str": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "cloud_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "ecs_name": "centos7",
+    "ecs_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "ecs_type": null,
+    "server_zone": null,
+    "flavorid": "adfadlfjkljfkldjfskldjflkasdjfkldasfj",
+    "volume_sys_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "volume_data_ids": null,
+    "image_ref": null,
+    "status": null,
+    "ip": null,
+    "rc_point": null,
+    "from_backup": "0",
+    "private_ips": null,
+    "security_groups": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEcsStatus
+body: {
+ "_": "3dd61adb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "node_name": null,
+    "node_uuid": null,
+    "wk_node_name": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": "1",
+    "create_time": 0,
+    "ecs_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "random_str": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "cloud_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "ecs_name": "centos7",
+    "ecs_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "ecs_type": null,
+    "server_zone": null,
+    "flavorid": "adfadlfjkljfkldjfskldjflkasdjfkldasfj",
+    "volume_sys_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
+    "volume_data_ids": null,
+    "image_ref": null,
+    "status": null,
+    "ip": null,
+    "rc_point": null,
+    "from_backup": "0",
+    "private_ips": null,
+    "security_groups": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearseGroup
+body: {
+ "limit": 1,
+ "page": 1,
+ "cloud_uuid": "",
+ "_": "3e1e44ce"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVncConsole
+body: {
+ "ecs_id": "",
+ "_": "3f028dab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: bindNode
+body: {
+ "_": "3ebbb989"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n Lost: node_uuid;\n Lost: node_name;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: untieNode
+body: {
+ "_": "3f6c95c5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001002,
+  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n Lost: node_uuid;\n Lost: node_name;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

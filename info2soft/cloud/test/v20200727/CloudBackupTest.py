@@ -127,7 +127,7 @@ class CloudBackupTestCase(unittest.TestCase):
         r = cloudBackup.modifyCloudBackup(body, uuid)
         print(r[0])
         # assert r[0]['ret'] == 200
-        write(r[0], 'CloudBackup', 'https', body)
+        write(r[0], 'CloudBackup', 'modifyCloudBackup', body)
 
     def testDeleteCloudBackup(self):
         a = Auth(username, pwd)
@@ -149,23 +149,49 @@ class CloudBackupTestCase(unittest.TestCase):
         }
         
         cloudBackup = CloudBackup(a)
-        r = cloudBackup.listCloudBackup(body)
+        r = cloudBackup.listBackup(body)
         print(r[0])
         # assert r[0]['ret'] == 200
-        write(r[0], 'CloudBackup', 'listCloudBackup', body)
+        write(r[0], 'CloudBackup', 'listBackup', body)
 
-    def testOperateCloudBackup(self):
+    def testStopBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'stop',
+            'fsp_uuids': ['22D03E06-94D0-5E2C-336E-4BEEC2D28EC4', '22D03E06-94D0-5E2C-336E-4BEEC2D28EC3']
+        }
+        
+        cloudBackup = CloudBackup(a)
+        r = cloudBackup.stopBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CloudBackup', 'stopBackup', body)
+
+    def testStartBackup(self):
         a = Auth(username, pwd)
         body = {
             'operate': 'start',
             'fsp_uuids': ['22D03E06-94D0-5E2C-336E-4BEEC2D28EC4', '22D03E06-94D0-5E2C-336E-4BEEC2D28EC3']
         }
-        
+
         cloudBackup = CloudBackup(a)
-        r = cloudBackup.operateCloudBackup(body)
+        r = cloudBackup.startBackup(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'CloudBackup', 'operateCloudBackup', body)
+        write(r[0], 'CloudBackup', 'startBackup', body)
+
+    def testStartImmediatelyBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediate',
+            'fsp_uuids': ['22D03E06-94D0-5E2C-336E-4BEEC2D28EC4', '22D03E06-94D0-5E2C-336E-4BEEC2D28EC3']
+        }
+
+        cloudBackup = CloudBackup(a)
+        r = cloudBackup.startImmediatelyBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CloudBackup', 'startImmediatelyBackup', body)
 
     def testDescribeBackup(self):
         a = Auth(username, pwd)

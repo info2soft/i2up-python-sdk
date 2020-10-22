@@ -221,6 +221,28 @@ class CloudEcsTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'CloudEcs', 'describeRehearseGroup', body)
 
+    def testBindNode(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        cloudEcs = CloudEcs(a)
+        r = cloudEcs.bindNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CloudEcs', 'bindNode', body)
+
+    def testUntieNode(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        cloudEcs = CloudEcs(a)
+        r = cloudEcs.untieNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CloudEcs', 'untieNode', body)
+
 
 if __name__ == '__main__':
     unittest.main()

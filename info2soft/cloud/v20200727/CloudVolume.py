@@ -89,11 +89,11 @@ class CloudVolume (object):
      * 
      * @return list
     '''
-    def listVolumeStatus(self, ):
+    def listVolumeStatus(self, body):
         
         url = '{0}/cloud/volume/status'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''

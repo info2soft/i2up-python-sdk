@@ -11,11 +11,11 @@ class CloudPlatform (object):
      * 
      * @return list
     '''
-    def listCloudPlatformRegion(self, ):
+    def listCloudPlatformRegion(self, body):
         
         url = '{0}/cloud/platform/region_list'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -69,6 +69,19 @@ class CloudPlatform (object):
         
         url = '{0}/cloud/platform'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listCloudPlatformStatus(self, body):
+
+        url = '{0}/cloud/platform/status'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 

@@ -58,14 +58,26 @@ class CloudEcs (object):
         return res
 
     '''
-     *  状态
+     *  云主机 - 节点操作 绑定
      * 
      * @return list
     '''
-    def operateEcsNode(self, body):
+    def bindNode(self, body):
         
         url = '{0}/cloud/ecs/node_operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     *  云主机 - 节点操作 解绑
+     * 
+     * @return list
+    '''
+    def untieNode(self, body):
+
+        url = '{0}/cloud/ecs/node_operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 

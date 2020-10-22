@@ -24,11 +24,11 @@ class CloudRehearse (object):
      * 
      * @return list
     '''
-    def listHost(self, ):
+    def listHost(self, body):
         
         url = '{0}/cloud/rehearse/host_list'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -277,7 +277,7 @@ class CloudRehearse (object):
             exit()
         url = '{0}/cloud/rehearse/{1}/status'.format(config.get_default('default_api_host'), uuid)
         
-        res = https._put(url, None, self.auth)
+        res = https._put(url, body, self.auth)
         return res
 
     '''
@@ -291,7 +291,7 @@ class CloudRehearse (object):
             exit()
         url = '{0}/cloud/rehearse/{1}/progress'.format(config.get_default('default_api_host'), uuid)
         
-        res = https._put(url, None, self.auth)
+        res = https._put(url, body, self.auth)
         return res
 
     '''
@@ -351,11 +351,11 @@ class CloudRehearse (object):
      * 
      * @return list
     '''
-    def listGroup(self, ):
+    def listGroup(self, body):
         
         url = '{0}/cloud/rehearse/group'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -416,11 +416,11 @@ class CloudRehearse (object):
      * 
      * @return list
     '''
-    def listEvacuatedGroup(self, ):
+    def listEvacuatedGroup(self, body):
         
         url = '{0}/cloud/rehearse/evacuated_group_list'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''

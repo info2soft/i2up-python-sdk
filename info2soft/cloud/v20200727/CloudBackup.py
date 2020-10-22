@@ -64,7 +64,7 @@ class CloudBackup (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def listCloudBackup(self, body):
+    def listBackup(self, body):
         
         url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
         
@@ -72,15 +72,41 @@ class CloudBackup (object):
         return res
 
     '''
-     *  启动停止
+     *  操作 停止
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def operateCloudBackup(self, body):
+    def stopBackup(self, body):
         
         url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  操作 启动
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startBackup(self, body):
+
+        url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  操作 立即执行
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startImmediatelyBackup(self, body):
+
+        url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
