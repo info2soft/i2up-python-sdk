@@ -140,3 +140,46 @@ class RepRecovery (object):
         res = https._get(url, body, self.auth)
         return res
 
+    '''
+     * 恢复 - CDP在线查看任意时间点数据
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def viewRepRecoveryData(self, body):
+
+        url = '{0}/rep/recovery/rc_data_view'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 恢复-状态 在线查看任意时间点数据专用
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listRcpRecoveryDataViewStatus(self, body):
+
+        url = '{0}/rep/recovery/rc_data_view_status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 恢复 - 孤儿文件列表-CDP时间点数据
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listCDPRcData(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/rep/recovery//orphan_list{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, body, self.auth)
+        return res
+
+
+

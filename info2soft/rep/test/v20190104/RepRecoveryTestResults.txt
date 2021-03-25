@@ -244,3 +244,72 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: viewRepRecoveryData
+body: {
+ "rep_recovery": {
+  "cdp_position": "2017-11-17_15-30-40+-2",
+  "rc_name": "",
+  "cdp_time": "2018-04-24 13:43:26.0",
+  "wk_uuid": "Jane",
+  "snapshot_size": "1.34 GB",
+  "cdp_rc_method": 0,
+  "snapshot_time": "2017-11-17 17:24:14",
+  "rc_type": 0,
+  "snapshot_name": "c5809dd2-e8be-4389-ac0d-0a657ff94da0_snap_2017-11-17_17-24-14",
+  "bk_path": [],
+  "oph_policy": 0,
+  "cdp_file": "Baseline",
+  "cdp_op": "backup",
+  "wk_path": [],
+  "data_ip_uuid": "d",
+  "biz_grp_list": [],
+  "bk_uuid": "",
+  "bk_path_policy": "",
+  "cdpShowOne": "true",
+  "cdpShowTwo": "false",
+  "compress": "0",
+  "ct_name_str1": "",
+  "ct_name_str2": "",
+  "ct_name_type": "0",
+  "data_path": "",
+  "encrypt_switch": "0",
+  "end_time": "",
+  "isShowTime": "",
+  "merge_path": "",
+  "pointTime": "2020-10-19T06:57:59.399Z",
+  "secret_key": "",
+  "snapTable": [],
+  "start_time": ""
+ },
+ "_": "3e615230"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 10001008,
+  "message": "[10001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRcpRecoveryDataViewStatus
+body: {
+ "task_uuid": "",
+ "node_uuid": "",
+ "_": "3e330003"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

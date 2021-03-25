@@ -204,6 +204,76 @@ class RepRecoveryTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'RepRecovery', 'listRepRecoveryCdpLog', body)
 
+    def testViewRepRecoveryData(self):
+        a = Auth(username, pwd)
+        body = {
+            'rep_recovery': {
+            'cdp_position': '2017-11-17_15-30-40+-2',
+            'rc_name': '',
+            'cdp_time': '2018-04-24 13:43:26.0',
+            'wk_uuid': 'Jane',
+            'snapshot_size': '1.34 GB',
+            'cdp_rc_method': 0,
+            'snapshot_time': '2017-11-17 17:24:14',
+            'rc_type': 0,
+            'snapshot_name': 'c5809dd2-e8be-4389-ac0d-0a657ff94da0_snap_2017-11-17_17-24-14',
+            'bk_path': [],
+            'oph_policy': 0,
+            'cdp_file': 'Baseline',
+            'cdp_op': 'backup',
+            'wk_path': [],
+            'data_ip_uuid': 'd',
+            'biz_grp_list': [],
+            'bk_uuid': '',
+            'bk_path_policy': '',
+            'cdpShowOne': 'true',
+            'cdpShowTwo': 'false',
+            'compress': '0',
+            'ct_name_str1': '',
+            'ct_name_str2': '',
+            'ct_name_type': '0',
+            'data_path': '',
+            'encrypt_switch': '0',
+            'end_time': '',
+            'isShowTime': '',
+            'merge_path': '',
+            'pointTime': '2020-10-19T06:57:59.399Z',
+            'secret_key': '',
+            'snapTable': [],
+            'start_time': '',},
+        }
+
+        repRecovery = RepRecovery(a)
+        r = repRecovery.viewRepRecoveryData(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepRecovery', 'viewRepRecoveryData', body)
+
+    def testListRcpRecoveryDataViewStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'task_uuid': '',
+            'node_uuid': '',
+        }
+
+        repRecovery = RepRecovery(a)
+        r = repRecovery.listRcpRecoveryDataViewStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepRecovery', 'listRcpRecoveryDataViewStatus', body)
+
+    def testListCDPRcData(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        repRecovery = RepRecovery(a)
+        r = repRecovery.listCDPRcData(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepRecovery', 'listCDPRcData', body)
+
 
 if __name__ == '__main__':
     unittest.main()  
