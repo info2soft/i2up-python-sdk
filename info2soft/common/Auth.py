@@ -5,7 +5,7 @@ from requests.auth import AuthBase
 from info2soft.compat import urlparse
 from info2soft import https
 from info2soft import config
-from info2soft.common.Cache import getToken
+from info2soft.common.Cache import getToken, refreshToken
 
 
 class Auth(object):
@@ -46,6 +46,14 @@ class Auth(object):
         self.token = r[0]
         self.ssoToken = r[1]
         return self._token
+
+    def refresh_token(self):
+        r = refreshToken()
+        self._token = r[0]
+        self._ssoToken = r[1]
+        self.token = r[0]
+        self.ssoToken = r[1]
+        return self
 
     '''
      * auth-注册账号(不开放)

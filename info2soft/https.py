@@ -46,6 +46,7 @@ def __return_wrapper(resp):
 
 def _post(url, data, auth=None, headers=None, head_config=None):
     try:
+        src_data = data
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
@@ -72,11 +73,17 @@ def _post(url, data, auth=None, headers=None, head_config=None):
         )
     except Exception as e:
         return None, ResponseInfo(None, e)
-    return __return_wrapper(r)
+
+    ret = __return_wrapper(r)
+    if ret[0]['ret'] == 400:
+        return _post(url, src_data, auth.refresh_token(), headers, head_config)
+    else:
+        return ret
 
 
 def _get(url, params=None, auth=None):
     try:
+        src_url = url
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
@@ -112,11 +119,17 @@ def _get(url, params=None, auth=None):
         )
     except Exception as e:
         return None, ResponseInfo(None, e)
-    return __return_wrapper(r)
+
+    ret = __return_wrapper(r)
+    if ret[0]['ret'] == 400:
+        return _get(src_url, params, auth.refresh_token())
+    else:
+        return ret
 
 
 def _put(url, data, auth=None, headers=None):
     try:
+        src_data = data
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
@@ -142,11 +155,17 @@ def _put(url, data, auth=None, headers=None):
         )
     except Exception as e:
         return None, ResponseInfo(None, e)
-    return __return_wrapper(r)
+
+    ret = __return_wrapper(r)
+    if ret[0]['ret'] == 400:
+        return _put(url, src_data, auth.refresh_token(), headers)
+    else:
+        return ret
 
 
 def _delete(url, data, auth=None, headers=None):
     try:
+        src_data = data
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
@@ -172,7 +191,12 @@ def _delete(url, data, auth=None, headers=None):
         )
     except Exception as e:
         return None, ResponseInfo(None, e)
-    return __return_wrapper(r)
+
+    ret = __return_wrapper(r)
+    if ret[0]['ret'] == 400:
+        return _delete(url, src_data, auth.refresh_token(), headers)
+    else:
+        return ret
 
 
 class _TokenAuth(AuthBase):

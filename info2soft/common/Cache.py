@@ -35,8 +35,9 @@ def getToken(username, pwd):
             # 密码错误处理
             token = r[0]['data']['token']
             ssoToken = r[0]['data']['sso_token']
+            refreshToken = r[0]['data']['refresh_token']
             with open(path, mode='w+', encoding='UTF-8') as tokenFile:
-                tokenFile.write(token + '\n' + ssoToken)
+                tokenFile.write(token + '\n' + ssoToken + '\n' + refreshToken)
                 tokenFile.close()
         else:
             if r[0] is None:
@@ -46,5 +47,32 @@ def getToken(username, pwd):
             exit()
     return [token, ssoToken]
 
-
+def refreshToken():
+    token = ''
+    ssoToken = ''
+    path = os.sep.join([os.path.split(os.path.realpath(__file__))[0], 'token.dat'])
+    lists = linecache.getlines(path)
+    refresh_token = lists[2].strip('\n')
+    # 删除token文件
+    os.remove(path)
+    url = '{0}/auth/refresh_token'.format(config.get_default('default_api_host'))
+    data = {
+        'refresh_token': refresh_token,
+    }
+    r = https._put(url, data)
+    if r[0] is not None and r[0]['ret'] is 200 and r[0]['data']['code'] is 0:
+        # 密码错误处理
+        token = r[0]['data']['token']
+        ssoToken = r[0]['data']['sso_token']
+        refreshToken = r[0]['data']['refresh_token']
+        with open(path, mode='w+', encoding='UTF-8') as tokenFile:
+            tokenFile.write(token + '\n' + ssoToken + '\n' + refreshToken)
+            tokenFile.close()
+    else:
+        if r[0] is None:
+            print('Can Not Connect Host')
+        else:
+            print(r[0]['data']['message'])
+        exit()
+    return [token, ssoToken]
 
