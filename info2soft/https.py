@@ -75,7 +75,7 @@ def _post(url, data, auth=None, headers=None, head_config=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 400:
+    if ret[0]['ret'] == 400 or ret[0]['ret'] == 403:
         return _post(url, src_data, auth.refresh_token(), headers, head_config)
     else:
         return ret
@@ -121,7 +121,7 @@ def _get(url, params=None, auth=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 400:
+    if ret[0]['ret'] == 400 or ret[0]['ret'] == 403:
         return _get(src_url, params, auth.refresh_token())
     else:
         return ret
@@ -157,7 +157,7 @@ def _put(url, data, auth=None, headers=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 400:
+    if ret[0]['ret'] == 400 or ret[0]['ret'] == 403:
         return _put(url, src_data, auth.refresh_token(), headers)
     else:
         return ret
@@ -193,7 +193,7 @@ def _delete(url, data, auth=None, headers=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 400:
+    if ret[0]['ret'] == 400 or ret[0]['ret'] == 403:
         return _delete(url, src_data, auth.refresh_token(), headers)
     else:
         return ret
