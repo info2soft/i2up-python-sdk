@@ -80,7 +80,7 @@ class Storage (object):
      '''
 
     def listStorageInfo(self, body):
-        url = '{0}/ /storage/info'.format(config.get_default('default_api_host'))
+        url = '{0}/storage/info'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
         return res
