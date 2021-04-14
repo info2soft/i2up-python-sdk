@@ -100,7 +100,7 @@ def _get(url, params=None, auth=None):
                     urlConnectSub = '%s%s%s' % ('?', k, '[]=')
                     url = '%s%s%s' % (url, urlConnectSub, urlSub)
                     waitDel = k
-        if waitDel is not '':
+        if waitDel != '':
             params.pop(waitDel)
         _ = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
         if params is not None:
@@ -231,8 +231,8 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
         'User-Agent': USER_AGENT,
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': token if auth_type is 'token' else '',
-        'ACCESS-KEY': ak if auth_type is 'ak' else '',
+        'Authorization': token if auth_type == 'token' else '',
+        'ACCESS-KEY': ak if auth_type == 'ak' else '',
         'timestamp': str(timestamp),
         'nonce': str(nonce),
         'Signature': ''

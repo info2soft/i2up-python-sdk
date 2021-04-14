@@ -31,7 +31,7 @@ def getToken(username, pwd):
             'pwd': pwd
         }
         r = https._post(url, data)
-        if r[0] is not None and r[0]['ret'] is 200 and r[0]['data']['code'] is 0:
+        if r[0] is not None and r[0]['ret'] == 200 and r[0]['data']['code'] == 0:
             # 密码错误处理
             token = r[0]['data']['token']
             ssoToken = r[0]['data']['sso_token']
@@ -47,6 +47,7 @@ def getToken(username, pwd):
             exit()
     return [token, ssoToken]
 
+
 def refreshToken():
     token = ''
     ssoToken = ''
@@ -60,7 +61,7 @@ def refreshToken():
         'refresh_token': refresh_token,
     }
     r = https._put(url, data)
-    if r[0] is not None and r[0]['ret'] is 200 and r[0]['data']['code'] is 0:
+    if r[0] is not None and r[0]['ret'] == 200 and r[0]['data']['code'] == 0:
         # 密码错误处理
         token = r[0]['data']['token']
         ssoToken = r[0]['data']['sso_token']

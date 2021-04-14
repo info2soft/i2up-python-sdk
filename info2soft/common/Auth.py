@@ -31,7 +31,7 @@ class Auth(object):
         self.secret_key = secret_key
         self.token = ''
         self.ssoToken = ''
-        if auth_type is 'token':
+        if auth_type == 'token':
             self.get_token()
 
     def get_username(self):
