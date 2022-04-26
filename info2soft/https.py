@@ -105,6 +105,10 @@ def _get(url, params=None, auth=None):
         _ = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
         if params is not None:
             params['_'] = _
+        else:
+            params = {
+                '_': _
+            }
 
         header_config = _generate_header(auth_type, token, ak, sk, 'get', url, _)
 
