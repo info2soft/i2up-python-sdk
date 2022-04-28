@@ -106,6 +106,19 @@ class Auth(object):
         return res
 
     '''
+     * auth-检查用户是否需要验证码
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def checkCaptcha(self, body):
+
+        url = '{0}/auth/check_captcha'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self)
+        return res
+
+    '''
      * auth-获取token
      * 
      * @param dict $body  参数详见 API 手册
