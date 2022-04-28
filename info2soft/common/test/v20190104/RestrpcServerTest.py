@@ -117,6 +117,43 @@ class RestrpcServerTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'RestrpcServer', 'addRestRpcCluster', body)
 
+    def testModifyEcs(self):
+        a = Auth(username, pwd)
+        body = {
+            'restored_uuid': '',
+            'ecs_id': '',
+            'code': 1,
+        }
+
+        restrpcServer = RestrpcServer(a)
+        r = restrpcServer.modifyEcs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RestrpcServer', 'modifyEcs', body)
+
+    def testRegisterNodeFromNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_name': '',
+            'os_type': 1,
+            'os_user': '',
+            'i2id': '',
+            'cc_ip': '',
+            'config_addr': '',
+            'username': '',
+            'password': '',
+            'root': '',
+            'disk_limit': '',
+            'mem_limit': '',
+            'disk_free_space_limit': '',
+        }
+
+        restrpcServer = RestrpcServer(a)
+        r = restrpcServer.registerNodeFromNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RestrpcServer', 'registerNodeFromNode', body)
+
 
 if __name__ == '__main__':
     unittest.main()

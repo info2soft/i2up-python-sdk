@@ -1,14 +1,14 @@
 <START-----------------------------------------------------------
 Method: closeService
 body: {
- "_": "3f57ef11"
+ "_": "3e9e7a9d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": "user.not_exist",
-  "message": "[user.not_exist] undefined message"
+  "code": 1010001110,
+  "message": "[1010001110] User does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -29,7 +29,7 @@ body: {
   }
  },
  "is_trial": 1,
- "_": "3ed6c92f"
+ "_": "3ef27b33"
 }
 response: {
  "ret": 200,
@@ -44,7 +44,7 @@ response: {
     "move_num": 0,
     "node_num": 6,
     "service_type": -1,
-    "purchase_time": "2020-10-12",
+    "purchase_time": "2022-04-27",
     "expire_time": "2020-02-11",
     "tenant_name": ""
    }
@@ -63,12 +63,12 @@ response: {
   "code": 0,
   "message": "",
   "status": 0,
-  "node_num": 4,
+  "node_num": 0,
   "quota": [
    {
     "tenant_id": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
     "status": "",
-    "move_num": 11,
+    "move_num": 0,
     "move_used_num": 0,
     "ha_num": 22,
     "ha_used_num": 0,
@@ -76,8 +76,8 @@ response: {
     "ffo_used_num": 0,
     "cdp_num": 22,
     "cdp_used_num": 0,
-    "purchase_time": "2020-08-17",
-    "expire_time": "2021-09-18",
+    "purchase_time": "2022-03-25",
+    "expire_time": "2023-10-01",
     "tenant_name": "admin"
    }
   ]
@@ -94,19 +94,19 @@ response: {
  "data": {
   "code": 0,
   "message": "",
-  "node_num": 4,
-  "rep_num": 3,
+  "node_num": 0,
+  "rep_num": 0,
   "ha_num": 0,
   "node": {
    "UNKNOWN": 0,
    "OFFLINE": 0,
-   "ONLINE": 4
+   "ONLINE": 0
   },
   "rep": {
    "UNKNOWN": 0,
    "FINISH": 0,
    "STOP": 0,
-   "REPLICATION": 1,
+   "REPLICATION": 0,
    "MIRROR": 0,
    "EXCEPTION": 0,
    "STALE": 0,
@@ -116,7 +116,7 @@ response: {
    "IDLE": 0,
    "DEAD": 0,
    "EXCPT": 0,
-   "M_STOP": 2
+   "M_STOP": 0
   },
   "ha": {
    "master_status": {
@@ -144,11 +144,11 @@ response: {
   "summary": {
    "status": "",
    "tenant_num": 1,
-   "sold_num": 55,
+   "sold_num": 44,
    "offline_num": 0,
-   "reg_num": 4,
-   "rule_num": 3,
-   "exception_num": 2,
+   "reg_num": 0,
+   "rule_num": 0,
+   "exception_num": 0,
    "near_expired_num": 0
   }
  }
@@ -159,14 +159,14 @@ response: {
 Method: listService
 body: {
  "tenant_id": "",
- "_": "3f320b69"
+ "_": "3f391a1e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": "user.not_exist",
-  "message": "[user.not_exist] undefined message"
+  "code": 1010001110,
+  "message": "[1010001110] User does not exist"
  }
 }
 -----------------------------------------------------------END>

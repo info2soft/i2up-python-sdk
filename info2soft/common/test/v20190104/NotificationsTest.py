@@ -238,6 +238,19 @@ class NotificationsTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Notifications', 'modifyEmailTemplate', body)
 
+    def testOperateNotificationsTemplate(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'operate': '',
+        }
+
+        notifications = Notifications(a)
+        r = notifications.operateNotificationsTemplate(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Notifications', 'operateNotificationsTemplate', body)
+
 
 if __name__ == '__main__':
     unittest.main()

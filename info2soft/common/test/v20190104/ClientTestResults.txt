@@ -14,14 +14,14 @@ body: {
   "erro": ""
  },
  "result_type": "rep",
- "_": "3edf3107"
+ "_": "3f7d5f38"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -33,15 +33,14 @@ body: {
   "3C334EF3",
   "3C334EF3"
  ],
- "_": "3f6b6592"
+ "_": "3f0cb0c4"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success",
-  "rules": []
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -50,22 +49,14 @@ response: {
 Method: getVirtualPlatforms
 body: {
  "npsvr_uuid": "",
- "_": "3e74a09a"
+ "_": "3e99d633"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success",
-  "virtualPlatforms": [
-   {
-    "uuid": "B919C076-7B02-7BC2-D466-A794C00664CA"
-   },
-   {
-    "uuid": "4A1F80DE-379D-C5E7-C495-7D55E0795275"
-   }
-  ]
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -74,42 +65,81 @@ response: {
 Method: updateSlaveNode
 body: {
  "config": "",
- "_": "3e273d6b"
+ "_": "3dc33188"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011220,
-  "message": "[10011220] Failed to get master node_info."
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: createCompareResult
+Method: collectCompareResult
 body: {
- "uuid": "65DA3916-AF53-CE70-0B47-A142414AA140",
- "result_uuid": "25DA3916-AF13-CE70-0B47-B142414AA142",
- "result": {
-  "code": "0",
-  "time": "10",
-  "files": "100",
-  "bytes": "1111111",
-  "missing": "2",
-  "diff": "48",
-  "equal": "50",
-  "erro": ""
- },
- "result_type": "rep",
- "_": "3f3714de"
+ "code": "",
+ "start_time": "",
+ "files": "",
+ "bytes": "",
+ "missing": "",
+ "diff": "",
+ "erro": "",
+ "equal": "",
+ "task_uuid": "",
+ "cc_uuid": "",
+ "send_bytes": "",
+ "end_time": "",
+ "_": "3f4e0787"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: uploadCompareDiffDetail
+body: {
+ "files": [],
+ "missing_files": [
+  "file",
+  "file"
+ ],
+ "diff_files": [],
+ "uuid": "",
+ "cc_uuid": "",
+ "is_new": 0,
+ "_": "3d5e7f88"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoStorageList
+body: {
+ "cc_uuid": "",
+ "_": "3f422e82"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>

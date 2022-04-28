@@ -118,6 +118,41 @@ class DirTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Dir', 'describeDirDelStatus', body)
 
+    def testListEtcdDir(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
+            'path': '',
+        }
+
+        dir = Dir(a)
+        r = dir.listEtcdDir(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Dir', 'listEtcdDir', body)
+
+    def testOperateDtoDir(self):
+        a = Auth(username, pwd)
+        body = {
+            'type': 1,
+            'sto_uuid': '',
+            'host_uuid': '',
+            'sto_type': '',
+            'archive_data_direct': 1,
+            'valid_period': 1,
+            'rate_type': 1,
+            'path': [],
+            'names': [{
+            'name': '',
+            'is_dir': '',},],
+        }
+
+        dir = Dir(a)
+        r = dir.operateDtoDir(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Dir', 'operateDtoDir', body)
+
 
 if __name__ == '__main__':
     unittest.main()  

@@ -207,9 +207,9 @@ class UserTestCase(unittest.TestCase):
             'first_name': '',
             'last_name': '',
         }
-        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        id = "2"
         system = Settings(a)
-        r = system.modifyUser(body, uuid)
+        r = system.modifyUser(body, id)
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Settings', 'modifyUser', body)
@@ -327,6 +327,191 @@ class UserTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Settings', 'listRole', body)
+
+    def testListNpsvr(self):
+        a = Auth(username, pwd)
+        body = {
+            'page': 1,
+            'limit': 10,
+        }
+
+        settings = Settings(a)
+        r = settings.listNpsvr(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'listNpsvr', body)
+
+    def testDescribeNpsvr(self):
+        a = Auth(username, pwd)
+        body = {
+            'npsvr_uuid': '9C865EB7-6999-65D6-C029-0615735C137E',
+        }
+
+        settings = Settings(a)
+        r = settings.describeNpsvr(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'describeNpsvr', body)
+
+    def testModifyNpsvr(self):
+        a = Auth(username, pwd)
+        body = {
+            'npsvr_uuid': '9C865EB7-6999-65D6-C029-0615735C137E',
+            'bkup_switch': '0',
+            'policy': {
+            'limit': '30',
+            'bkup_type': '0',
+            'time': '24',},
+            'random_str': '9C865EB7-6999-65D6-C029-0615735C137E',
+        }
+
+        settings = Settings(a)
+        r = settings.modifyNpsvr(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'modifyNpsvr', body)
+
+    def testDeleteNpsvr(self):
+        a = Auth(username, pwd)
+        body = {
+            'npsvr_uuid': '',
+        }
+
+        settings = Settings(a)
+        r = settings.deleteNpsvr(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'deleteNpsvr', body)
+
+    def testListNpsvrStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'npsvr_uuids': '',
+        }
+
+        settings = Settings(a)
+        r = settings.listNpsvrStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'listNpsvrStatus', body)
+
+    def testListNpsvrBakList(self):
+        a = Auth(username, pwd)
+        body = {
+            'npsvr_uuid': '',
+        }
+
+        settings = Settings(a)
+        r = settings.listNpsvrBakList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'listNpsvrBakList', body)
+
+    def testNpsvrBakRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'id': '',
+            'operate': '',
+        }
+
+        settings = Settings(a)
+        r = settings.npsvrBakRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'npsvrBakRecovery', body)
+
+    def testListBakConfig(self):
+        a = Auth(username, pwd)
+        body = {
+            'page': 1,
+            'limit': 10,
+            'obj_type': 'dto',
+        }
+
+        settings = Settings(a)
+        r = settings.listBakConfig(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'listBakConfig', body)
+
+    def testDescribeBakConfig(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_uuid': '',
+        }
+
+        settings = Settings(a)
+        r = settings.describeBakConfig(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'describeBakConfig', body)
+
+    def testModifyBakConfig(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_uuid': '9C865EB7-6999-65D6-C029-0615735C137E',
+            'bkup_switch': '0',
+            'policy': {
+            'limit': 30,
+            'bkup_type': 0,
+            'time': 24,},
+            'random_str': '9C865EB7-6999-65D6-C029-0615735C137E',
+        }
+
+        settings = Settings(a)
+        r = settings.modifyBakConfig(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'modifyBakConfig', body)
+
+    def testDeleteBakConfig(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_uuid': '',
+        }
+
+        settings = Settings(a)
+        r = settings.deleteBakConfig(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'deleteBakConfig', body)
+
+    def testListBakConfigStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_uuids': [],
+        }
+
+        settings = Settings(a)
+        r = settings.listBakConfigStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'listBakConfigStatus', body)
+
+    def testListBakHistory(self):
+        a = Auth(username, pwd)
+        body = {
+            'obj_uuid': '',
+        }
+
+        settings = Settings(a)
+        r = settings.listBakHistory(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'listBakHistory', body)
+
+    def testRecoveryBakConfigInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'id': 1,
+            'operate': '',
+        }
+
+        settings = Settings(a)
+        r = settings.recoveryBakConfigInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Settings', 'recoveryBakConfigInfo', body)
 
 
 if __name__ == '__main__':

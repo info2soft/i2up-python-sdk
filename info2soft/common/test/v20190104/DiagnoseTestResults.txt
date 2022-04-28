@@ -5,7 +5,7 @@ body: {
  "check_type": 1,
  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
  "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
- "_": "3e6a2813"
+ "_": "3f416dfe"
 }
 response: {
  "ret": 200,
@@ -23,7 +23,7 @@ body: {
  "check_uuids": [
   "11111111-1111-1111-1111-111111111111"
  ],
- "_": "3eae92be"
+ "_": "3e814f5f"
 }
 response: {
  "ret": 200,
@@ -40,7 +40,7 @@ Method: listDiagnose
 body: {
  "page": 1,
  "limit": 10,
- "_": "3f4fe536"
+ "_": "3f789b84"
 }
 response: {
  "ret": 200,
@@ -52,19 +52,21 @@ response: {
    {
     "item_name": null,
     "wk_node_name": null,
+    "wk_ip": null,
     "bk_node_name": null,
+    "bk_ip": null,
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "id": "1",
+    "id": 1,
     "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
     "item_uuid": "",
     "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
-    "check_uuid": "0E9BCFD7-5DD3-4AF8-FBD4-6785903E5ACF",
+    "check_uuid": "A5C2C055-B0E4-63ED-BAC3-4BB29AAAE53C",
     "check_type": 1,
     "status": "DIAGNOSE",
     "result": null,
     "download_url": null,
-    "create_time": 1602404639
+    "create_time": 1651032430
    }
   ],
   "total": 1

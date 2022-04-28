@@ -162,3 +162,16 @@ class Notifications (object):
         res = https._put(url, body, self.auth)
         return res
 
+    '''
+     * 邮件模板 操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def operateNotificationsTemplate(self, body):
+
+        url = '{0}/notifications/template/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+

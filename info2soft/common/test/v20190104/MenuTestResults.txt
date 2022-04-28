@@ -1,0 +1,2295 @@
+<START-----------------------------------------------------------
+Method: listMenu
+body: {
+ "_": "3d9c4e3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "menu": [
+   {
+    "id": 1,
+    "name": "dashboard",
+    "url": null,
+    "category": "dashboard",
+    "status": 1,
+    "order": 11,
+    "parent": ""
+   },
+   {
+    "id": 2,
+    "name": "monitorDashboard",
+    "url": null,
+    "category": "dashboard",
+    "status": 1,
+    "order": 12,
+    "parent": ""
+   },
+   {
+    "id": 3,
+    "name": "vpMonitorDashboard",
+    "url": null,
+    "category": "dashboard",
+    "status": 1,
+    "order": 13,
+    "parent": ""
+   },
+   {
+    "id": 4,
+    "name": "taskOverviewDash",
+    "url": null,
+    "category": "dashboard",
+    "status": 1,
+    "order": 14,
+    "parent": ""
+   },
+   {
+    "id": 5,
+    "name": "tenantMgr",
+    "url": null,
+    "category": "tenant",
+    "status": 1,
+    "order": 25,
+    "parent": ""
+   },
+   {
+    "id": 6,
+    "name": "upMonitor",
+    "url": null,
+    "category": "upMonitor",
+    "status": 1,
+    "order": 36,
+    "parent": ""
+   },
+   {
+    "id": 7,
+    "name": "group",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 47,
+    "parent": ""
+   },
+   {
+    "id": 8,
+    "name": "authorization",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 48,
+    "parent": ""
+   },
+   {
+    "id": 9,
+    "name": "node",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 49,
+    "parent": "data_guard_node"
+   },
+   {
+    "id": 10,
+    "name": "cls",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 410,
+    "parent": "data_guard_node"
+   },
+   {
+    "id": 11,
+    "name": "yfCls",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 411,
+    "parent": ""
+   },
+   {
+    "id": 12,
+    "name": "haServiceLabel",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 412,
+    "parent": ""
+   },
+   {
+    "id": 13,
+    "name": "nodeProxy",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 413,
+    "parent": ""
+   },
+   {
+    "id": 14,
+    "name": "storage",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 414,
+    "parent": "storage"
+   },
+   {
+    "id": 15,
+    "name": "vpPlat",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 415,
+    "parent": "virtualization"
+   },
+   {
+    "id": 16,
+    "name": "dtoStorage",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 416,
+    "parent": "dto_resource"
+   },
+   {
+    "id": 17,
+    "name": "dtoHost",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 417,
+    "parent": "dto_resource"
+   },
+   {
+    "id": 18,
+    "name": "storagePool",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 418,
+    "parent": "storage"
+   },
+   {
+    "id": 19,
+    "name": "copyVolume",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 419,
+    "parent": "storage"
+   },
+   {
+    "id": 20,
+    "name": "activeNodeList",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 420,
+    "parent": "database_node"
+   },
+   {
+    "id": 21,
+    "name": "inactiveNodeList",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 421,
+    "parent": "database_node"
+   },
+   {
+    "id": 22,
+    "name": "dbNode",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 422,
+    "parent": "database_node"
+   },
+   {
+    "id": 23,
+    "name": "cloudPlatform",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 423,
+    "parent": "virtualization"
+   },
+   {
+    "id": 24,
+    "name": "cloudHost",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 424,
+    "parent": ""
+   },
+   {
+    "id": 25,
+    "name": "tape",
+    "url": null,
+    "category": "resource",
+    "status": 1,
+    "order": 425,
+    "parent": "storage"
+   },
+   {
+    "id": 26,
+    "name": "activeRuleList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 526,
+    "parent": "oracle"
+   },
+   {
+    "id": 27,
+    "name": "objCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 527,
+    "parent": "oracle"
+   },
+   {
+    "id": 28,
+    "name": "objFixList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 528,
+    "parent": "oracle"
+   },
+   {
+    "id": 29,
+    "name": "tableCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 529,
+    "parent": "oracle"
+   },
+   {
+    "id": 30,
+    "name": "bkTakeover",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 530,
+    "parent": "oracle"
+   },
+   {
+    "id": 31,
+    "name": "activeReverseRuleList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 531,
+    "parent": "oracle"
+   },
+   {
+    "id": 32,
+    "name": "mysqlRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 532,
+    "parent": "mysql"
+   },
+   {
+    "id": 33,
+    "name": "mysqlObjCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 533,
+    "parent": "mysql"
+   },
+   {
+    "id": 34,
+    "name": "mysqlObjFixList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 534,
+    "parent": "mysql"
+   },
+   {
+    "id": 35,
+    "name": "mysqlTableCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 535,
+    "parent": "mysql"
+   },
+   {
+    "id": 36,
+    "name": "tidbRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 536,
+    "parent": "tidb"
+   },
+   {
+    "id": 37,
+    "name": "sqlServerRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 537,
+    "parent": "sql_server"
+   },
+   {
+    "id": 38,
+    "name": "sqlServerTcmp",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 538,
+    "parent": "sql_server"
+   },
+   {
+    "id": 39,
+    "name": "postgreRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 539,
+    "parent": ""
+   },
+   {
+    "id": 40,
+    "name": "qianBaseRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 540,
+    "parent": "qianbase"
+   },
+   {
+    "id": 41,
+    "name": "qbTableCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 541,
+    "parent": "qianbase"
+   },
+   {
+    "id": 42,
+    "name": "db2Rule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 542,
+    "parent": "db2"
+   },
+   {
+    "id": 43,
+    "name": "db2TableCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 543,
+    "parent": "db2"
+   },
+   {
+    "id": 44,
+    "name": "oceanRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 544,
+    "parent": ""
+   },
+   {
+    "id": 45,
+    "name": "informixRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 545,
+    "parent": ""
+   },
+   {
+    "id": 46,
+    "name": "kafkaConsumeRule",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 546,
+    "parent": "kafka"
+   },
+   {
+    "id": 47,
+    "name": "kafkaTopology",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 547,
+    "parent": "kafka"
+   },
+   {
+    "id": 48,
+    "name": "kafkaTopologyGraph",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 548,
+    "parent": "kafka"
+   },
+   {
+    "id": 49,
+    "name": "dataTableCmpList",
+    "url": null,
+    "category": "databaseRep",
+    "status": 1,
+    "order": 549,
+    "parent": "data_check"
+   },
+   {
+    "id": 50,
+    "name": "sensType",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 650,
+    "parent": "desensitization"
+   },
+   {
+    "id": 51,
+    "name": "maskAlgo",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 651,
+    "parent": "desensitization"
+   },
+   {
+    "id": 52,
+    "name": "sensCheckList",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 652,
+    "parent": "desensitization"
+   },
+   {
+    "id": 53,
+    "name": "sensDbMap",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 653,
+    "parent": "desensitization"
+   },
+   {
+    "id": 54,
+    "name": "maskRule",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 654,
+    "parent": "desensitization"
+   },
+   {
+    "id": 55,
+    "name": "scriptList",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 655,
+    "parent": "sql_script"
+   },
+   {
+    "id": 56,
+    "name": "scriptMaskRule",
+    "url": null,
+    "category": "mask",
+    "status": 1,
+    "order": 656,
+    "parent": "sql_script"
+   },
+   {
+    "id": 57,
+    "name": "repBackup",
+    "url": null,
+    "category": "realTimeDataRep",
+    "status": 1,
+    "order": 757,
+    "parent": ""
+   },
+   {
+    "id": 58,
+    "name": "repRecovery",
+    "url": null,
+    "category": "realTimeDataRep",
+    "status": 1,
+    "order": 758,
+    "parent": ""
+   },
+   {
+    "id": 59,
+    "name": "compare",
+    "url": null,
+    "category": "realTimeDataRep",
+    "status": 1,
+    "order": 759,
+    "parent": ""
+   },
+   {
+    "id": 60,
+    "name": "dTrackBackup",
+    "url": null,
+    "category": "realTimeDataRep",
+    "status": 1,
+    "order": 760,
+    "parent": ""
+   },
+   {
+    "id": 61,
+    "name": "nasSync",
+    "url": null,
+    "category": "realTimeDataRep",
+    "status": 1,
+    "order": 761,
+    "parent": ""
+   },
+   {
+    "id": 62,
+    "name": "ha",
+    "url": null,
+    "category": "ha",
+    "status": 1,
+    "order": 862,
+    "parent": ""
+   },
+   {
+    "id": 63,
+    "name": "haGroup",
+    "url": null,
+    "category": "ha",
+    "status": 1,
+    "order": 863,
+    "parent": ""
+   },
+   {
+    "id": 64,
+    "name": "vpBackup",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 964,
+    "parent": "virtual_workload"
+   },
+   {
+    "id": 65,
+    "name": "vpMove",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 965,
+    "parent": "virtual_workload"
+   },
+   {
+    "id": 66,
+    "name": "vpRecovery",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 966,
+    "parent": "virtual_workload"
+   },
+   {
+    "id": 67,
+    "name": "vpRep",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 967,
+    "parent": "virtual_workload"
+   },
+   {
+    "id": 68,
+    "name": "vpFileRecovery",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 968,
+    "parent": "virtual_workload"
+   },
+   {
+    "id": 69,
+    "name": "vpDrill",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 969,
+    "parent": "virtual_workload"
+   },
+   {
+    "id": 70,
+    "name": "dtoSync",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 970,
+    "parent": "dto"
+   },
+   {
+    "id": 71,
+    "name": "dtoRecovery",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 971,
+    "parent": "dto"
+   },
+   {
+    "id": 72,
+    "name": "dtoCompare",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 972,
+    "parent": "dto"
+   },
+   {
+    "id": 73,
+    "name": "dtoThawed",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 973,
+    "parent": "dto"
+   },
+   {
+    "id": 74,
+    "name": "fspBackup",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 974,
+    "parent": "full_server"
+   },
+   {
+    "id": 75,
+    "name": "fspRestore",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 975,
+    "parent": "full_server"
+   },
+   {
+    "id": 76,
+    "name": "timingBackup",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 976,
+    "parent": "app_protect"
+   },
+   {
+    "id": 77,
+    "name": "timingRecovery",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 977,
+    "parent": "app_protect"
+   },
+   {
+    "id": 78,
+    "name": "tapeRecovery",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 978,
+    "parent": ""
+   },
+   {
+    "id": 79,
+    "name": "bigdataBackup",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 979,
+    "parent": "big_data"
+   },
+   {
+    "id": 80,
+    "name": "bigdataRecovery",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 980,
+    "parent": "big_data"
+   },
+   {
+    "id": 81,
+    "name": "cloudBackup",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 981,
+    "parent": "cloud_disaster_relief"
+   },
+   {
+    "id": 82,
+    "name": "cloudHostTakeover",
+    "url": null,
+    "category": "timingDataRep",
+    "status": 1,
+    "order": 982,
+    "parent": "cloud_disaster_relief"
+   },
+   {
+    "id": 83,
+    "name": "cdm",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1083,
+    "parent": "whole_machine_cdm"
+   },
+   {
+    "id": 84,
+    "name": "cdmRule",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1084,
+    "parent": "whole_machine_cdm"
+   },
+   {
+    "id": 85,
+    "name": "cdmDrill",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1085,
+    "parent": "whole_machine_cdm"
+   },
+   {
+    "id": 86,
+    "name": "ffoMount",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1086,
+    "parent": "whole_machine_cdm"
+   },
+   {
+    "id": 87,
+    "name": "cdmRecovery",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1087,
+    "parent": "whole_machine_cdm"
+   },
+   {
+    "id": 88,
+    "name": "drp",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1088,
+    "parent": "whole_machine_cdm"
+   },
+   {
+    "id": 89,
+    "name": "snapshotTask",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1089,
+    "parent": "storage_cdm"
+   },
+   {
+    "id": 90,
+    "name": "mountTask",
+    "url": null,
+    "category": "cdm",
+    "status": 1,
+    "order": 1090,
+    "parent": "storage_cdm"
+   },
+   {
+    "id": 91,
+    "name": "fspMove",
+    "url": null,
+    "category": "businessMigration",
+    "status": 1,
+    "order": 1191,
+    "parent": ""
+   },
+   {
+    "id": 92,
+    "name": "users",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1292,
+    "parent": ""
+   },
+   {
+    "id": 93,
+    "name": "role",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1293,
+    "parent": ""
+   },
+   {
+    "id": 94,
+    "name": "log",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1294,
+    "parent": ""
+   },
+   {
+    "id": 95,
+    "name": "menuManage",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1295,
+    "parent": ""
+   },
+   {
+    "id": 96,
+    "name": "sysSettings",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1296,
+    "parent": ""
+   },
+   {
+    "id": 97,
+    "name": "license",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1297,
+    "parent": ""
+   },
+   {
+    "id": 98,
+    "name": "credential",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1298,
+    "parent": ""
+   },
+   {
+    "id": 99,
+    "name": "ccBakManage",
+    "url": null,
+    "category": "system",
+    "status": 1,
+    "order": 1299,
+    "parent": ""
+   },
+   {
+    "id": 100,
+    "name": "notificationAll",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13100,
+    "parent": "message"
+   },
+   {
+    "id": 101,
+    "name": "notificationHaveRead",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13101,
+    "parent": "message"
+   },
+   {
+    "id": 102,
+    "name": "notificationUnread",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13102,
+    "parent": "message"
+   },
+   {
+    "id": 103,
+    "name": "notificationManage",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13103,
+    "parent": "message"
+   },
+   {
+    "id": 104,
+    "name": "notificationEmailTemp",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13104,
+    "parent": "message"
+   },
+   {
+    "id": 105,
+    "name": "statistics",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13105,
+    "parent": "report"
+   },
+   {
+    "id": 106,
+    "name": "statisticsTiming",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13106,
+    "parent": "report"
+   },
+   {
+    "id": 107,
+    "name": "repListTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13107,
+    "parent": "template"
+   },
+   {
+    "id": 108,
+    "name": "fspBackupTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13108,
+    "parent": "template"
+   },
+   {
+    "id": 109,
+    "name": "fspRestoreTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13109,
+    "parent": "template"
+   },
+   {
+    "id": 110,
+    "name": "fspMoveTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13110,
+    "parent": "template"
+   },
+   {
+    "id": 111,
+    "name": "timingBackupTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13111,
+    "parent": "template"
+   },
+   {
+    "id": 112,
+    "name": "vpBackupTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13112,
+    "parent": "template"
+   },
+   {
+    "id": 113,
+    "name": "vpRepTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13113,
+    "parent": "template"
+   },
+   {
+    "id": 114,
+    "name": "vpMoveTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13114,
+    "parent": "template"
+   },
+   {
+    "id": 115,
+    "name": "haTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13115,
+    "parent": "template"
+   },
+   {
+    "id": 116,
+    "name": "nasTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13116,
+    "parent": "template"
+   },
+   {
+    "id": 117,
+    "name": "cmpTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13117,
+    "parent": "template"
+   },
+   {
+    "id": 118,
+    "name": "commonTemplate",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13118,
+    "parent": "template"
+   },
+   {
+    "id": 119,
+    "name": "activeLogWarning",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13119,
+    "parent": ""
+   },
+   {
+    "id": 120,
+    "name": "diagnose",
+    "url": null,
+    "category": "more",
+    "status": 1,
+    "order": 13120,
+    "parent": ""
+   }
+  ],
+  "tree": [
+   {
+    "id": "dashboard",
+    "cat": "dashboard",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "children": [
+     {
+      "id": 1,
+      "name": "dashboard",
+      "status": 1
+     },
+     {
+      "id": 2,
+      "name": "monitorDashboard",
+      "status": 1
+     },
+     {
+      "id": 3,
+      "name": "vpMonitorDashboard",
+      "status": 1
+     },
+     {
+      "id": 4,
+      "name": "taskOverviewDash",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "tenant",
+    "cat": "tenant",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     5
+    ],
+    "children": [
+     {
+      "id": 5,
+      "name": "tenantMgr",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "upMonitor",
+    "cat": "upMonitor",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     6
+    ],
+    "children": [
+     {
+      "id": 6,
+      "name": "upMonitor",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "resource",
+    "cat": "resource",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25
+    ],
+    "children": [
+     {
+      "id": 7,
+      "name": "group",
+      "status": 1
+     },
+     {
+      "id": 8,
+      "name": "authorization",
+      "status": 1
+     },
+     {
+      "id": "resource_data_guard_node",
+      "cat": "data_guard_node",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       9,
+       10
+      ],
+      "children": [
+       {
+        "id": 9,
+        "name": "node",
+        "status": 1
+       },
+       {
+        "id": 10,
+        "name": "cls",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": 11,
+      "name": "yfCls",
+      "status": 1
+     },
+     {
+      "id": 12,
+      "name": "haServiceLabel",
+      "status": 1
+     },
+     {
+      "id": 13,
+      "name": "nodeProxy",
+      "status": 1
+     },
+     {
+      "id": "resource_storage",
+      "cat": "storage",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       14,
+       18,
+       19,
+       25
+      ],
+      "children": [
+       {
+        "id": 14,
+        "name": "storage",
+        "status": 1
+       },
+       {
+        "id": 18,
+        "name": "storagePool",
+        "status": 1
+       },
+       {
+        "id": 19,
+        "name": "copyVolume",
+        "status": 1
+       },
+       {
+        "id": 25,
+        "name": "tape",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "resource_virtualization",
+      "cat": "virtualization",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       15,
+       23
+      ],
+      "children": [
+       {
+        "id": 15,
+        "name": "vpPlat",
+        "status": 1
+       },
+       {
+        "id": 23,
+        "name": "cloudPlatform",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "resource_dto_resource",
+      "cat": "dto_resource",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       16,
+       17
+      ],
+      "children": [
+       {
+        "id": 16,
+        "name": "dtoStorage",
+        "status": 1
+       },
+       {
+        "id": 17,
+        "name": "dtoHost",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "resource_database_node",
+      "cat": "database_node",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       20,
+       21,
+       22
+      ],
+      "children": [
+       {
+        "id": 20,
+        "name": "activeNodeList",
+        "status": 1
+       },
+       {
+        "id": 21,
+        "name": "inactiveNodeList",
+        "status": 1
+       },
+       {
+        "id": 22,
+        "name": "dbNode",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": 24,
+      "name": "cloudHost",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "databaseRep",
+    "cat": "databaseRep",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49
+    ],
+    "children": [
+     {
+      "id": "databaseRep_oracle",
+      "cat": "oracle",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       26,
+       27,
+       28,
+       29,
+       30,
+       31
+      ],
+      "children": [
+       {
+        "id": 26,
+        "name": "activeRuleList",
+        "status": 1
+       },
+       {
+        "id": 27,
+        "name": "objCmpList",
+        "status": 1
+       },
+       {
+        "id": 28,
+        "name": "objFixList",
+        "status": 1
+       },
+       {
+        "id": 29,
+        "name": "tableCmpList",
+        "status": 1
+       },
+       {
+        "id": 30,
+        "name": "bkTakeover",
+        "status": 1
+       },
+       {
+        "id": 31,
+        "name": "activeReverseRuleList",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "databaseRep_mysql",
+      "cat": "mysql",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       32,
+       33,
+       34,
+       35
+      ],
+      "children": [
+       {
+        "id": 32,
+        "name": "mysqlRule",
+        "status": 1
+       },
+       {
+        "id": 33,
+        "name": "mysqlObjCmpList",
+        "status": 1
+       },
+       {
+        "id": 34,
+        "name": "mysqlObjFixList",
+        "status": 1
+       },
+       {
+        "id": 35,
+        "name": "mysqlTableCmpList",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "databaseRep_tidb",
+      "cat": "tidb",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       36
+      ],
+      "children": [
+       {
+        "id": 36,
+        "name": "tidbRule",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "databaseRep_sql_server",
+      "cat": "sql_server",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       37,
+       38
+      ],
+      "children": [
+       {
+        "id": 37,
+        "name": "sqlServerRule",
+        "status": 1
+       },
+       {
+        "id": 38,
+        "name": "sqlServerTcmp",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": 39,
+      "name": "postgreRule",
+      "status": 1
+     },
+     {
+      "id": "databaseRep_qianbase",
+      "cat": "qianbase",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       40,
+       41
+      ],
+      "children": [
+       {
+        "id": 40,
+        "name": "qianBaseRule",
+        "status": 1
+       },
+       {
+        "id": 41,
+        "name": "qbTableCmpList",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "databaseRep_db2",
+      "cat": "db2",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       42,
+       43
+      ],
+      "children": [
+       {
+        "id": 42,
+        "name": "db2Rule",
+        "status": 1
+       },
+       {
+        "id": 43,
+        "name": "db2TableCmpList",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": 44,
+      "name": "oceanRule",
+      "status": 1
+     },
+     {
+      "id": 45,
+      "name": "informixRule",
+      "status": 1
+     },
+     {
+      "id": "databaseRep_kafka",
+      "cat": "kafka",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       46,
+       47,
+       48
+      ],
+      "children": [
+       {
+        "id": 46,
+        "name": "kafkaConsumeRule",
+        "status": 1
+       },
+       {
+        "id": 47,
+        "name": "kafkaTopology",
+        "status": 1
+       },
+       {
+        "id": 48,
+        "name": "kafkaTopologyGraph",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "databaseRep_data_check",
+      "cat": "data_check",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       49
+      ],
+      "children": [
+       {
+        "id": 49,
+        "name": "dataTableCmpList",
+        "status": 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "mask",
+    "cat": "mask",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56
+    ],
+    "children": [
+     {
+      "id": "mask_desensitization",
+      "cat": "desensitization",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       50,
+       51,
+       52,
+       53,
+       54
+      ],
+      "children": [
+       {
+        "id": 50,
+        "name": "sensType",
+        "status": 1
+       },
+       {
+        "id": 51,
+        "name": "maskAlgo",
+        "status": 1
+       },
+       {
+        "id": 52,
+        "name": "sensCheckList",
+        "status": 1
+       },
+       {
+        "id": 53,
+        "name": "sensDbMap",
+        "status": 1
+       },
+       {
+        "id": 54,
+        "name": "maskRule",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "mask_sql_script",
+      "cat": "sql_script",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       55,
+       56
+      ],
+      "children": [
+       {
+        "id": 55,
+        "name": "scriptList",
+        "status": 1
+       },
+       {
+        "id": 56,
+        "name": "scriptMaskRule",
+        "status": 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "realTimeDataRep",
+    "cat": "realTimeDataRep",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     57,
+     58,
+     59,
+     60,
+     61
+    ],
+    "children": [
+     {
+      "id": 57,
+      "name": "repBackup",
+      "status": 1
+     },
+     {
+      "id": 58,
+      "name": "repRecovery",
+      "status": 1
+     },
+     {
+      "id": 59,
+      "name": "compare",
+      "status": 1
+     },
+     {
+      "id": 60,
+      "name": "dTrackBackup",
+      "status": 1
+     },
+     {
+      "id": 61,
+      "name": "nasSync",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "ha",
+    "cat": "ha",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     62,
+     63
+    ],
+    "children": [
+     {
+      "id": 62,
+      "name": "ha",
+      "status": 1
+     },
+     {
+      "id": 63,
+      "name": "haGroup",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "timingDataRep",
+    "cat": "timingDataRep",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70,
+     71,
+     72,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82
+    ],
+    "children": [
+     {
+      "id": "timingDataRep_virtual_workload",
+      "cat": "virtual_workload",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       64,
+       65,
+       66,
+       67,
+       68,
+       69
+      ],
+      "children": [
+       {
+        "id": 64,
+        "name": "vpBackup",
+        "status": 1
+       },
+       {
+        "id": 65,
+        "name": "vpMove",
+        "status": 1
+       },
+       {
+        "id": 66,
+        "name": "vpRecovery",
+        "status": 1
+       },
+       {
+        "id": 67,
+        "name": "vpRep",
+        "status": 1
+       },
+       {
+        "id": 68,
+        "name": "vpFileRecovery",
+        "status": 1
+       },
+       {
+        "id": 69,
+        "name": "vpDrill",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "timingDataRep_dto",
+      "cat": "dto",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       70,
+       71,
+       72,
+       73
+      ],
+      "children": [
+       {
+        "id": 70,
+        "name": "dtoSync",
+        "status": 1
+       },
+       {
+        "id": 71,
+        "name": "dtoRecovery",
+        "status": 1
+       },
+       {
+        "id": 72,
+        "name": "dtoCompare",
+        "status": 1
+       },
+       {
+        "id": 73,
+        "name": "dtoThawed",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "timingDataRep_full_server",
+      "cat": "full_server",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       74,
+       75
+      ],
+      "children": [
+       {
+        "id": 74,
+        "name": "fspBackup",
+        "status": 1
+       },
+       {
+        "id": 75,
+        "name": "fspRestore",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "timingDataRep_app_protect",
+      "cat": "app_protect",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       76,
+       77
+      ],
+      "children": [
+       {
+        "id": 76,
+        "name": "timingBackup",
+        "status": 1
+       },
+       {
+        "id": 77,
+        "name": "timingRecovery",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": 78,
+      "name": "tapeRecovery",
+      "status": 1
+     },
+     {
+      "id": "timingDataRep_big_data",
+      "cat": "big_data",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       79,
+       80
+      ],
+      "children": [
+       {
+        "id": 79,
+        "name": "bigdataBackup",
+        "status": 1
+       },
+       {
+        "id": 80,
+        "name": "bigdataRecovery",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "timingDataRep_cloud_disaster_relief",
+      "cat": "cloud_disaster_relief",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       81,
+       82
+      ],
+      "children": [
+       {
+        "id": 81,
+        "name": "cloudBackup",
+        "status": 1
+       },
+       {
+        "id": 82,
+        "name": "cloudHostTakeover",
+        "status": 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "cdm",
+    "cat": "cdm",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90
+    ],
+    "children": [
+     {
+      "id": "cdm_whole_machine_cdm",
+      "cat": "whole_machine_cdm",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       83,
+       84,
+       85,
+       86,
+       87,
+       88
+      ],
+      "children": [
+       {
+        "id": 83,
+        "name": "cdm",
+        "status": 1
+       },
+       {
+        "id": 84,
+        "name": "cdmRule",
+        "status": 1
+       },
+       {
+        "id": 85,
+        "name": "cdmDrill",
+        "status": 1
+       },
+       {
+        "id": 86,
+        "name": "ffoMount",
+        "status": 1
+       },
+       {
+        "id": 87,
+        "name": "cdmRecovery",
+        "status": 1
+       },
+       {
+        "id": 88,
+        "name": "drp",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "cdm_storage_cdm",
+      "cat": "storage_cdm",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       89,
+       90
+      ],
+      "children": [
+       {
+        "id": 89,
+        "name": "snapshotTask",
+        "status": 1
+       },
+       {
+        "id": 90,
+        "name": "mountTask",
+        "status": 1
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "businessMigration",
+    "cat": "businessMigration",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     91
+    ],
+    "children": [
+     {
+      "id": 91,
+      "name": "fspMove",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "system",
+    "cat": "system",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     92,
+     93,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99
+    ],
+    "children": [
+     {
+      "id": 92,
+      "name": "users",
+      "status": 1
+     },
+     {
+      "id": 93,
+      "name": "role",
+      "status": 1
+     },
+     {
+      "id": 94,
+      "name": "log",
+      "status": 1
+     },
+     {
+      "id": 95,
+      "name": "menuManage",
+      "status": 1
+     },
+     {
+      "id": 96,
+      "name": "sysSettings",
+      "status": 1
+     },
+     {
+      "id": 97,
+      "name": "license",
+      "status": 1
+     },
+     {
+      "id": 98,
+      "name": "credential",
+      "status": 1
+     },
+     {
+      "id": 99,
+      "name": "ccBakManage",
+      "status": 1
+     }
+    ]
+   },
+   {
+    "id": "more",
+    "cat": "more",
+    "indeterminate": false,
+    "checked_all": false,
+    "menu_ids": [
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120
+    ],
+    "children": [
+     {
+      "id": "more_message",
+      "cat": "message",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       100,
+       101,
+       102,
+       103,
+       104
+      ],
+      "children": [
+       {
+        "id": 100,
+        "name": "notificationAll",
+        "status": 1
+       },
+       {
+        "id": 101,
+        "name": "notificationHaveRead",
+        "status": 1
+       },
+       {
+        "id": 102,
+        "name": "notificationUnread",
+        "status": 1
+       },
+       {
+        "id": 103,
+        "name": "notificationManage",
+        "status": 1
+       },
+       {
+        "id": 104,
+        "name": "notificationEmailTemp",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "more_report",
+      "cat": "report",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       105,
+       106
+      ],
+      "children": [
+       {
+        "id": 105,
+        "name": "statistics",
+        "status": 1
+       },
+       {
+        "id": 106,
+        "name": "statisticsTiming",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": "more_template",
+      "cat": "template",
+      "indeterminate": false,
+      "checked_all": false,
+      "menu_ids": [
+       107,
+       108,
+       109,
+       110,
+       111,
+       112,
+       113,
+       114,
+       115,
+       116,
+       117,
+       118
+      ],
+      "children": [
+       {
+        "id": 107,
+        "name": "repListTemplate",
+        "status": 1
+       },
+       {
+        "id": 108,
+        "name": "fspBackupTemplate",
+        "status": 1
+       },
+       {
+        "id": 109,
+        "name": "fspRestoreTemplate",
+        "status": 1
+       },
+       {
+        "id": 110,
+        "name": "fspMoveTemplate",
+        "status": 1
+       },
+       {
+        "id": 111,
+        "name": "timingBackupTemplate",
+        "status": 1
+       },
+       {
+        "id": 112,
+        "name": "vpBackupTemplate",
+        "status": 1
+       },
+       {
+        "id": 113,
+        "name": "vpRepTemplate",
+        "status": 1
+       },
+       {
+        "id": 114,
+        "name": "vpMoveTemplate",
+        "status": 1
+       },
+       {
+        "id": 115,
+        "name": "haTemplate",
+        "status": 1
+       },
+       {
+        "id": 116,
+        "name": "nasTemplate",
+        "status": 1
+       },
+       {
+        "id": 117,
+        "name": "cmpTemplate",
+        "status": 1
+       },
+       {
+        "id": 118,
+        "name": "commonTemplate",
+        "status": 1
+       }
+      ]
+     },
+     {
+      "id": 119,
+      "name": "activeLogWarning",
+      "status": 1
+     },
+     {
+      "id": 120,
+      "name": "diagnose",
+      "status": 1
+     }
+    ]
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

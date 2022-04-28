@@ -32,80 +32,26 @@ class GeneralInterfaceTestCase(unittest.TestCase):
 
     def testDescribeVersion(self):
         a = Auth(username, pwd)
-        generalInterface = GeneralInterface(a)
-        r = generalInterface.describeVersion()
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'describeVersion', None)
-
-    def testUpdateDatabase(self):
-        a = Auth(username, pwd)
-        generalInterface = GeneralInterface(a)
-        r = generalInterface.updateDatabase()
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'updateDatabase', None)
-
-    def testListStatistics(self):
-        a = Auth(username, pwd)
-        body = {
-            'page': 1,
-            'end': 1848122966,
-            'name': 'c',
-            'limit': 10,
-            'start': 1548122966,
-            'status': '',
-            'type': '',
-            'result': 0,
-            'group_uuid': '',
-            'uuid': '',
-        }
-        generalInterface = GeneralInterface(a)
-        r = generalInterface.listStatistics(body)
-        print(r[0])
-        # assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'listStatistics', body)
-
-    def testDescribeStatistics(self):
-        a = Auth(username, pwd)
-        body = {
-            'id': '2'
-        }
-        generalInterface = GeneralInterface(a)
-        r = generalInterface.describeStatistics(body)
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'describeStatistics', body)
-
-    def testReadStatistics(self):
-        a = Auth(username, pwd)
-        body = {
-            'type': 'I2VP_BK',
-        }
-        generalInterface = GeneralInterface(a)
-        r = generalInterface.readStatistics(body)
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'readStatistics', body)
-
-    def testOverall(self):
-        a = Auth(username, pwd)
-        generalInterface = GeneralInterface(a)
-        r = generalInterface.overall()
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'overall', None)
-
-    def testListRpcTask(self):
-        a = Auth(username, pwd)
         body = {
         }
 
         generalInterface = GeneralInterface(a)
-        r = generalInterface.listRpcTask(body)
+        r = generalInterface.describeVersion(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'listRpcTask', body)
+        write(r[0], 'GeneralInterface', 'describeVersion', body)
+
+    def testLatestVersion(self):
+        a = Auth(username, pwd)
+        body = {
+            'plat': 'example_plat',
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.latestVersion(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'latestVersion', body)
 
     def testListVersionHistory(self):
         a = Auth(username, pwd)
@@ -118,24 +64,48 @@ class GeneralInterfaceTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'GeneralInterface', 'listVersionHistory', body)
 
-    def testListStatisticsChart(self):
+    def testUpdateDatabase(self):
         a = Auth(username, pwd)
         body = {
-            'start': 1,
-            'src_type': '0',
-            'end': 2,
-            'type': 'I2BAK_BK',
         }
+
         generalInterface = GeneralInterface(a)
-        r = generalInterface.listStatisticsChart(body)
+        r = generalInterface.updateDatabase(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'GeneralInterface', 'listStatisticsChart', body)
+        write(r[0], 'GeneralInterface', 'updateDatabase', body)
+
+    def testNodeConnectTest(self):
+        a = Auth(username, pwd)
+        body = {
+            'ip': '',
+            'port': '',
+            'type': 'node',
+            'node_uuids': [],
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.nodeConnectTest(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'nodeConnectTest', body)
+
+    def testOverall(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.overall(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'overall', body)
 
     def testUpMonitorOverall(self):
         a = Auth(username, pwd)
         body = {
         }
+
         generalInterface = GeneralInterface(a)
         r = generalInterface.upMonitorOverall(body)
         print(r[0])
@@ -152,6 +122,163 @@ class GeneralInterfaceTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'GeneralInterface', 'sysadmin', body)
+
+    def testStatusOverall(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.statusOverall(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'statusOverall', body)
+
+    def testListOverallLogs(self):
+        a = Auth(username, pwd)
+        body = {
+            'get_all': 0,
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listOverallLogs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listOverallLogs', body)
+
+    def testListOverallResourceSta(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listOverallResourceSta(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listOverallResourceSta', body)
+
+    def testListOverallRealTimeCopy(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listOverallRealTimeCopy(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listOverallRealTimeCopy', body)
+
+    def testListOverallHa(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listOverallHa(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listOverallHa', body)
+
+    def testListOverallCdm(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listOverallCdm(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listOverallCdm', body)
+
+    def testListOverallFspMv(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listOverallFspMv(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listOverallFspMv', body)
+
+    def testNodeRepSummary(self):
+        a = Auth(username, pwd)
+        body = {
+            'summary': '',
+            'cache': '',
+            'rep_rule': '',
+            'filter': '',
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.nodeRepSummary(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'nodeRepSummary', body)
+
+    def testListVpRuleStat(self):
+        a = Auth(username, pwd)
+        body = {
+            'type': 'VP_PT',
+            'wk_uuid': 'AC7A5A1F-5BB1-41D6-E075-1648ADC5C60B',
+            'mode': 'month',
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.listVpRuleStat(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'listVpRuleStat', body)
+
+    def testExportRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'suffix': '',
+            'type': '',
+            'sub_type': '',
+            'uuids': [],
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.exportRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'exportRules', body)
+
+    def testCreateColumnExt(self):
+        a = Auth(username, pwd)
+        body = {
+            'type': '',
+            'list_col': {
+            'wk_ip': {
+            'display': '1',
+            'width': '100',},
+            'bk_ip': {
+            'display': '1',},
+            'cdp_switch': {
+            'display': '1',},
+            'name': {
+            'display': 1,
+            'width': 80,},},
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.createColumnExt(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'createColumnExt', body)
+
+    def testDescribeColumnext(self):
+        a = Auth(username, pwd)
+        body = {
+            'type': '',
+        }
+
+        generalInterface = GeneralInterface(a)
+        r = generalInterface.describeColumnext(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'GeneralInterface', 'describeColumnext', body)
 
 
 if __name__ == '__main__':

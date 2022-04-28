@@ -2,14 +2,14 @@
 Method: deleteCompareResult
 body: {
  "result_uuids": [],
- "_": "3f4665a7"
+ "_": "3e27df94"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: result_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: result_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -19,7 +19,7 @@ Method: listCompareResult
 body: {
  "page": "",
  "limit": "",
- "_": "3eccd627"
+ "_": "3f4e5638"
 }
 response: {
  "ret": 200,
@@ -38,14 +38,14 @@ Method: operateCompareResult
 body: {
  "result_uuids": [],
  "operate": "",
- "_": "3d3b0ea8"
+ "_": "3ddbc97d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: result_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: result_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -60,6 +60,25 @@ response: {
   "code": 0,
   "message": "[0] success",
   "rule": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiffDetail
+body: {
+ "uuid": "",
+ "type": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3ee4b3f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: type;\n"
  }
 }
 -----------------------------------------------------------END>

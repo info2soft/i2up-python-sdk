@@ -94,6 +94,60 @@ class ClientTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Client', 'createCompareResult', body)
 
+    def testCollectCompareResult(self):
+        a = Auth(username, pwd)
+        body = {
+            'code': '',
+            'start_time': '',
+            'files': '',
+            'bytes': '',
+            'missing': '',
+            'diff': '',
+            'erro': '',
+            'equal': '',
+            'task_uuid': '',
+            'cc_uuid': '',
+            'send_bytes': '',
+            'end_time': '',
+        }
+
+        client = Client(a)
+        r = client.collectCompareResult(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Client', 'collectCompareResult', body)
+
+    def testUploadCompareDiffDetail(self):
+        a = Auth(username, pwd)
+        body = {
+            'files': [],
+            'missing_files': [
+            'file',
+            'file',],
+            'diff_files': [],
+            'uuid': '',
+            'cc_uuid': '',
+            'is_new': 0,
+        }
+
+        client = Client(a)
+        r = client.uploadCompareDiffDetail(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Client', 'uploadCompareDiffDetail', body)
+
+    def testGetDtoStorageList(self):
+        a = Auth(username, pwd)
+        body = {
+            'cc_uuid': '',
+        }
+
+        client = Client(a)
+        r = client.getDtoStorageList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Client', 'getDtoStorageList', body)
+
 
 if __name__ == '__main__':
     unittest.main()

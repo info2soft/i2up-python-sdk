@@ -247,6 +247,19 @@ class LicTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Lic', 'cdmCapacity', body)
 
+    def testUnsubscribeLic(self):
+        a = Auth(username, pwd)
+        body = {
+            'sn': '',
+            'operate': 'unsubscribe',
+        }
+
+        lic = Lic(a)
+        r = lic.unsubscribeLic(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Lic', 'unsubscribeLic', body)
+
 
 if __name__ == '__main__':
     unittest.main()

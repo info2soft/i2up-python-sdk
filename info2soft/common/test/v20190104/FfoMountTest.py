@@ -82,6 +82,21 @@ class FfoMountTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'FfoMount', 'viewConfig', body)
 
+    def testListDiffDetail(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'type': '',
+            'page': 1,
+            'limit': 10,
+        }
+
+        ffoMount = FfoMount(a)
+        r = ffoMount.listDiffDetail(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FfoMount', 'listDiffDetail', body)
+
 
 if __name__ == '__main__':
     unittest.main()

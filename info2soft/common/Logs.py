@@ -81,6 +81,5 @@ class Logs(object):
         url = '{0}/collect_statistics'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
-        print(res)
         return res
 

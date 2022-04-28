@@ -1,0 +1,124 @@
+<START-----------------------------------------------------------
+Method: cancelLogin
+body: {
+ "action": 2,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3f253cdd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001301,
+  "message": "[1010001301] Invalid code uuid, please obtain again"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkQrStatus
+body: {
+ "uuid": "0d6e290f9c8414bac0bb105b97232771ec3e5178",
+ "_": "3e3fb487"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[1010001301] Invalid code uuid, please obtain again",
+  "status": 9
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkQrValidity
+body: {
+ "action": 3,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3eaa5df1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001301,
+  "message": "[1010001301] Invalid code uuid, please obtain again"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: confirmLogin
+body: {
+ "action": 1,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3f3bca33"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001301,
+  "message": "[1010001301] Invalid code uuid, please obtain again"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createQrPic
+body: {
+ "point_size": 1,
+ "text": "test",
+ "format": "base64",
+ "_": "3f396b57"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvAQMAAACxXBw2AAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA50lEQVRIie2WsRWDMAxElUdB6REYhdFgNI/iEShd5Fk5WXZCEjoKrkCN7U9zlnVCInecjUEtypBF5rXudeXC2WSWQbcpSrH9zIYDlJYqvy6JFOeAMzGW8VA3BfaXd91/BUGAu3cMH1jqckwfcLXM2jL6eI7v6/BgFKO2pVZoFC6cZYpLcfkGJjYMwbJ4hSKxn5dnwaZUYRo0oSj4tLm5qbDnN7jukHbSGXDrPl6TTT4X7jOEFUDxExnuM4Sbe/sdckgwEtu7j3JihHUf6N4nlgL7y2fzOH4wfLjNENq9k76GnOvxHefiBTCVpbdgpHHVAAAAAElFTkSuQmCC"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimeStamp
+body: {
+ "timestamp": 1546847673,
+ "_": "3f12703a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "t": "165096485980952318"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: obtainQrContent
+body: {
+ "app_name": "enterpriseApp",
+ "_": "3f2ed534"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "content": {
+   "uuid": "c24ac245b19c4ef85027f99f27fc7eb4454b2dad",
+   "t": "165096486112046550"
+  }
+ }
+}
+-----------------------------------------------------------END>
+

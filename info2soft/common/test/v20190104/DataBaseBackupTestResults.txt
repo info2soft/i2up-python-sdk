@@ -5,36 +5,18 @@ response: null
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: describeBackupConfig
-body: null
-response: {}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: exportConfig
-body: null
-response: {}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
 Method: importConfig
 body: {
  "keep_cc_ip": 1,
- "_": "3e57dbd6"
+ "_": "3ccf4032"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001033,
-  "message": "[10001033] Database file path is invalid"
+  "code": 1010001031,
+  "message": "[1010001031] Upload error, please check the log  You did not select a file to upload. "
  }
 }
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listBackupHistory
-body: null
-response: {}
 -----------------------------------------------------------END>
 

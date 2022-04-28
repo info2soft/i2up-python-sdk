@@ -127,15 +127,14 @@ class Settings(object):
     '''
      * 用户管理(admin)-修改用户信息
      * 
-     * @body['uuid'] String  必填 节点uuid
+     * @body['id'] String  必填 用户id
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def modifyUser(self, body, uuid):
-        if uuid is None:
+    def modifyUser(self, body, id):
+        if id is None:
             exit()
-        url = '{0}/user/{1}'.format(config.get_default('default_api_host'), uuid)
-
+        url = '{0}/user/{1}'.format(config.get_default('default_api_host'), id)
         res = https._put(url, body, self.auth)
         return res
 
@@ -252,3 +251,198 @@ class Settings(object):
         res = https._get(url, body, self.auth)
         return res
 
+    '''
+     * npsvr列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def listNpsvr(self, body):
+
+        url = '{0}/cc/npsvr_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr获取单个
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def describeNpsvr(self, body):
+
+        url = '{0}/cc/npsvr'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr修改
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def modifyNpsvr(self, body):
+
+        url = '{0}/cc/npsvr'.format(config.get_default('default_api_host'))
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def deleteNpsvr(self, body):
+
+        url = '{0}/cc/npsvr'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def listNpsvrStatus(self, body):
+
+        url = '{0}/cc/npsvr_status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr 备份历史列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def listNpsvrBakList(self, body):
+
+        url = '{0}/cc/npsvr_bak_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr 备份历史操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def npsvrBakRecovery(self, body):
+
+        url = '{0}/cc/npsvr_operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def listBakConfig(self, body):
+
+        url = '{0}/cc/bak_config_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 单个
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def describeBakConfig(self, body):
+
+        url = '{0}/cc/bak_config'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 修改
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def modifyBakConfig(self, body):
+
+        url = '{0}/cc/bak_config'.format(config.get_default('default_api_host'))
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def deleteBakConfig(self, body):
+
+        url = '{0}/cc/bak_config'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def listBakConfigStatus(self, body):
+
+        url = '{0}/cc/bak_config_status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 获取备份历史列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def listBakHistory(self, body):
+
+        url = '{0}/cc/bak_history_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 配置备份 - 备份历史操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+
+    def recoveryBakConfigInfo(self, body):
+
+        url = '{0}/cc/bak_history_operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res

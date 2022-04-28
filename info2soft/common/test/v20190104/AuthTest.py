@@ -65,6 +65,17 @@ class AuthTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Auth', 'describeVerificationCode', body)
 
+    def testCheckCaptcha(self):
+        a = Auth(username, pwd)
+        body = {
+            'username': 'admin',
+        }
+
+        r = a.checkCaptcha(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Auth', 'checkCaptcha', body)
+
     def testTokendef(self):
         a = Auth(username, pwd)
         body = {

@@ -1,11 +1,34 @@
 <START-----------------------------------------------------------
+Method: downloadOpLog
+body: {
+ "end_time": 1,
+ "start_time": 1,
+ "_": "3f334484"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: listOpLog
 body: {
  "page": 1,
  "end": 1548950400,
  "limit": 10,
  "start": 1546272000,
- "_": "3e6df440"
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "address": "",
+ "username": "",
+ "_": "3f6b6eb7"
 }
 response: {
  "ret": 200,

@@ -84,3 +84,31 @@ class RestrpcServer (object):
         res = https._put(url, body, self.auth)
         return res
 
+    '''
+     * 云主机 - 创建结果
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifyEcs(self, body):
+
+        url = '{0}/client/rest_rpc/cloud_ecs'.format(config.get_default('default_api_host'))
+        print(url)
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * 快速注册节点
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def registerNodeFromNode(self, body):
+
+        url = '{0}/client/rest_rpc/node'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+
+
