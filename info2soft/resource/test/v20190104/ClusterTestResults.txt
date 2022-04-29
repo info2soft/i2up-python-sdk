@@ -1,0 +1,240 @@
+<START-----------------------------------------------------------
+Method: authCls
+body: {
+ "cls_is_local": 1,
+ "os_pwd": "K2/NHnmIDO08e/oTUCzglmvuTiw2GApEYyAMego71d8WFpmOA+0tppJG3Vwm6u2Q8ZEkq4TlkUDs0E/Nz2A27vrHKms12zuBZ72foYhxVCxwXA9Y7F6Xhb1JogDpv/Fr3Timu5w3bjTG3ncqmoJGccFo1zS3hdFXvvCD1PvP2BEl6QuKJhAm+FoaN9jA+4TGTiKCqq4jO8wUl+b3vAClBVjoq8doUPS2SdkEUy1g+LJIJvu3mlahPluBJwdW61Bcmj0RgLNHbXLc6K8c1FgTfQ849aoQGxA9lMv0AVOX1RD/SJ0tDjgAhJn6sp20h374uXCRCi3DA89/tax+tIc3FQ==",
+ "os_user": "i2test2018.com\\administrator",
+ "config_addr": "192.168.87.14",
+ "config_port": 26821,
+ "_": "3f1af331"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address Node server authentication fail"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsDetail
+body: {
+ "operate": "detail",
+ "node_uuid": "11111111-1111-1111-1111-111111111111",
+ "_": "3f2f3e7e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsNodeInfo
+body: {
+ "cls_ip": "",
+ "_": "3f011ef1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCls
+body: {
+ "cls": {
+  "comment": "",
+  "cls_disk": [
+   "E:\\"
+  ],
+  "config_port": "26821",
+  "cls_node": [
+   "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C"
+  ],
+  "node_type": 1,
+  "cls_is_local": 1,
+  "os_user": "i2test2018.com\\administrator",
+  "config_addr": "192.168.74.25",
+  "node_name": "cls"
+ },
+ "_": "3f75c6b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cls[maintenance];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCls
+body: {
+ "node_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3c617e36"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCls
+body: {
+ "cls": {
+  "node_uuid": "5EFAEFFB-772D-1F39-06B2-F0C7E08DDD51"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCls
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "_": "3f20f558"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listClsStatus
+body: {
+ "_": "3f5e6c51"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRacStatus
+body: {
+ "_": "3f139573"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCls
+body: {
+ "cls": {
+  "comment": "",
+  "cls_disk": [
+   "E:\\"
+  ],
+  "config_port": "26821",
+  "cls_node": [
+   "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C"
+  ],
+  "node_type": 1,
+  "cls_is_local": 0,
+  "os_user": "i2test2018.com\\administrator",
+  "config_addr": "192.168.74.25",
+  "node_name": "cls",
+  "random_str": "11111111-1111-1111-1111-111111111111"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyClsNode
+body: {
+ "node_uuid": "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C",
+ "cls_name": "cluster-2018",
+ "cls_node_name": "cluster-node1",
+ "_": "3ed21ef4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010071103,
+  "message": "[1010071103] Failed to verify cluster node [11110]",
+  "node_name": null,
+  "node_uuid": null,
+  "config_addr": null,
+  "version": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchMaintenance
+body: {
+ "uuid": "",
+ "switch": 0,
+ "_": "3f05f41d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

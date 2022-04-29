@@ -1,0 +1,721 @@
+<START-----------------------------------------------------------
+Method: addSlaveNode
+body: {
+ "proxy_switch": "0",
+ "config_addr": "",
+ "config_port": 1,
+ "i2id": "",
+ "os_pwd": "yAZe2Hx6/dCL8GnjiRaro/mayqD24i3bMwZLtRXrHlRDIijGDcNKTqSK4IL91YIaqAGaOpUbnTr+y6VPgJ4UXJQset0se7bQgVrRjVncNeiVNCNyAzLktWYMMGKOWekw5uD2MOVEHhbknG0ZSuFXyywFEG9JTntNerCae7RSI6u2c3kRBCyqbdPc9osMK8YL9ZRqiIE/4K1+BomG9q1RwNEJhDcm/OaMxJCPHANNTImBWWv+Ir3qt20jjv1Fx7of2Fgb14Sj4TwGb7ESrbMiL/fblrfGl+rc6koNucEIRdT+aje+F47pKu4mknubWZ1wo+W2p/yaKyqfzTfeDFJtFQ==",
+ "os_user": "administrator",
+ "use_credential": 1,
+ "cred_uuid": "",
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "comment": "",
+ "_": "3ead0f2c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: cred_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: authNode
+body: {
+ "proxy_switch": 0,
+ "config_addr": "192.168.72.76",
+ "config_port": 26821,
+ "node_uuid": "",
+ "os_user": "chenky",
+ "os_pwd": "Kk5DzTQnF/daJi3limKwI7dGQit8q9r065eFKv5KXLN0t/KFnAV6wW2YXJ8psgClWIclg2/vjnLdC24YOShT5gG7vyHXQx79YSedRbjKhT7OIa248kP+Q7EmX9eeHj+ZHE/n1Z1koHkw5eVOBhvHRNNgL6zVUZmhQtaMRcrl61rjNrGmI2k+5qEV+D5l5h2cpHpx0uc+Fioa3xZeFHbLwByiESljgr8gzw44UTAqTFgNqgZvH0jl+iV1JHBjSbiJYFpSDULIKMnsg6mZp42Qcyr9VOyNYtwyIu+xEE3y92mglRJyyCwkQk+a8r+Bb9Z69yNQ4cv4rUDXQHHIncZKYQ==",
+ "i2id": "",
+ "use_credential": 0,
+ "cred_uuid": "",
+ "_": "3f5580b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address Node server authentication fail"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchSearchByPort
+body: {
+ "ip": "",
+ "port_start": 1,
+ "port_end": 1,
+ "_": "3ee8deff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkCapacity
+body: {
+ "config_port": "26821",
+ "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+ "config_addr": "192.168.72.76",
+ "_": "3f7ca2e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: proxy_switch;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkNodeOnline
+body: {
+ "port": "26821",
+ "ip": "192.168.72.76",
+ "_": "3de800b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: proxy_switch;\n Lost: config_port;\n Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkUnbindEcs
+body: {
+ "node_uuid": "",
+ "_": "3e849698"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBatchNode
+body: {
+ "base_info_list": [
+  {
+   "os_pwd": "123qwe",
+   "os_user": "chenky",
+   "config_port": "26821",
+   "config_addr": "192.168.72.76",
+   "node_name": "N4_72.76"
+  }
+ ],
+ "node": {
+  "mem_limit": "819",
+  "bind_lic_list": [],
+  "disk_limit": "10240",
+  "monitor_interval": "10",
+  "node_role": "3",
+  "monitor_switch": 0,
+  "moni_log_keep_node": "5",
+  "moni_log_keep_server": "3",
+  "security_check": 0,
+  "biz_grp_list": []
+ },
+ "_": "3d50e0ae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The base_info_list[0][os_pwd] field must contain a valid Base64 string.;\n Lost: base_info_list[0][os_type];\n Lost: base_info_list[0][need_install];\n Lost: node[cc_ip_uuid];\n Lost: node[disk_free_space_limit];\n Lost: node[proxy_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNode
+body: {
+ "node": {
+  "bak_client_max": "100",
+  "cloud_type": "0",
+  "bak_root": "",
+  "monitor_switch": 0,
+  "node_role": "3",
+  "mem_limit": "819",
+  "config_port": "26821",
+  "mon_save_day": "5",
+  "vg": "",
+  "os_type": 1,
+  "log_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+  "mon_data_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+  "comment": "",
+  "rep_path": [],
+  "bak_user_max": "100",
+  "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+  "db_save_day": "3",
+  "proxy_switch": 0,
+  "data_addr": "192.168.72.76",
+  "node_name": "N4_72.76",
+  "config_addr": "192.168.72.76",
+  "mon_send_interval": "10",
+  "disk_limit": "10240",
+  "reboot_sys": "0",
+  "bind_lic_list": [],
+  "security_check": 0,
+  "os_user": "Kyran",
+  "bak_service_type": "",
+  "en_snap_switch": 0,
+  "rep_excl_path": [],
+  "biz_grp_list": [],
+  "i2id": ""
+ },
+ "_": "3ef5e9f9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node[keep_log_days];\n Lost: node[dtrack_switch];\n Lost: node[iscsi_switch];\n Lost: node[os_pwd];\n Lost: node[use_credential];\n Lost: node[disk_free_space_limit];\n Lost: node[cc_ip];\n Lost: node[cc_ip_uuid];\n Lost: node[maintenance];\n Lost: node[fc_as_initiator];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dataIpList
+body: {
+ "_": "3f551eb9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": {
+   "": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNode
+body: {
+ "node_uuids": [
+  "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+ ],
+ "_": "3f090f8f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHbaInfo
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "proxy_switch": 1,
+ "i2id": "",
+ "_": "3ead24c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: i2id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNode
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "type": "",
+ "filter_by_biz_grp": "",
+ "order_by": "",
+ "direction": "",
+ "_": "3f36e2d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "cache_path": "C:\\info2soft\\node\\cache\\",
+    "config_addr": "172.20.68.211",
+    "config_port": 26821,
+    "data_addr": "172.20.68.211",
+    "disk_limit": 10240,
+    "log_path": "C:\\info2soft\\node\\log\\",
+    "mem_limit": 1998,
+    "node_name": "68.211",
+    "node_role": 3,
+    "node_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+    "os_type": 1,
+    "os_version": "Microsoft Windows 10/x64 Edition",
+    "iscsi_initiator_name": "",
+    "iscsi_as_target": 0,
+    "iscsi_as_initiator": 0,
+    "slave_node": 0,
+    "state": null,
+    "maintenance": 0,
+    "fc_as_initiator": 0,
+    "wwpn_info": [],
+    "random_str": "68CB0C0E-72D5-3F5C-2A6F-9B6E839A34AF",
+    "proxy_switch": 0,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "status": "UNKNOWN"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeBindEcs
+body: {
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "platform_uuid": "",
+ "_": "3ddadb72"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodePackageList
+body: {
+ "for_download": 1,
+ "_": "3f5d1ec7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "_": "3f51451d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVg
+body: {
+ "config_port": "26821",
+ "config_addr": "192.168.72.76",
+ "_": "3f5c7c99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: proxy_switch;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainNode
+body: {
+ "node_uuids": [
+  "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+ ],
+ "operate": "maintain",
+ "_": "3f24ea76"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: switch;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDataIp
+body: {
+ "data_ip_list": [
+  {
+   "uuid": "A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319",
+   "data_ip": "172.20.15.121"
+  }
+ ],
+ "node_uuid": "D6EC7CF9-FCA2-D467-ECD6-E028AA9C8319",
+ "_": "3eed8c8b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist : A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: node
+body: {
+ "limit": 1,
+ "page": 1,
+ "type": 1,
+ "_": "3f5aece1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "cache_path": "C:\\info2soft\\node\\cache\\",
+    "config_addr": "172.20.68.211",
+    "config_port": 26821,
+    "data_addr": "172.20.68.211",
+    "disk_limit": 10240,
+    "log_path": "C:\\info2soft\\node\\log\\",
+    "mem_limit": 1998,
+    "node_name": "68.211",
+    "node_role": 3,
+    "node_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+    "os_type": 1,
+    "os_version": "Microsoft Windows 10/x64 Edition",
+    "iscsi_initiator_name": "",
+    "iscsi_as_target": 0,
+    "iscsi_as_initiator": 0,
+    "slave_node": 0,
+    "state": null,
+    "maintenance": 0,
+    "fc_as_initiator": 0,
+    "wwpn_info": [],
+    "random_str": "68CB0C0E-72D5-3F5C-2A6F-9B6E839A34AF",
+    "proxy_switch": 0,
+    "n_status": "OFFLINE",
+    "n_role": null,
+    "time": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetMysqlInfo
+body: {
+ "username": "",
+ "password": "",
+ "mysql_path": "",
+ "timeout": "",
+ "port": "",
+ "bk_uuid": "",
+ "_": "3f034712"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: username;\n Lost: password;\n Lost: mysql_path;\n Lost: timeout;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetOracleInfo
+body: {
+ "username": "",
+ "password": "",
+ "sqlplus_path": "",
+ "sid": "",
+ "timeout": "",
+ "port": "",
+ "bk_uuid": "",
+ "_": "3f30a200"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n Lost: timeout;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeNode
+body: {
+ "node_uuids": [
+  "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+ ],
+ "operate": "upgrade",
+ "_": "3e86b532"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDriverLetter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDeviceInfo
+body: {
+ "node_uuid": "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "node_uuid": null,
+  "device_info": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNode
+body: {
+ "node": {
+  "monitor_switch": 0,
+  "mon_send_interval": "10",
+  "mon_data_path": null,
+  "mon_save_day": "5",
+  "db_save_day": "3",
+  "chart_config": "0",
+  "info": null,
+  "created_at": "1546827340",
+  "updated_at": null,
+  "username": "admin",
+  "id": "14",
+  "bak_client_max": "100",
+  "bak_root": "",
+  "bak_service_type": "",
+  "bak_user_max": "100",
+  "bind_lic_list": [],
+  "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+  "cls_disk": null,
+  "cls_node": null,
+  "cls_is_local": null,
+  "comment": "",
+  "config_addr": "192.168.72.76",
+  "config_port": "26821",
+  "create_time": "1546827340",
+  "data_addr": "192.168.72.76",
+  "data_port": "26831",
+  "disk_limit": "10240",
+  "en_snap_switch": 0,
+  "log_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+  "mem_limit": "819",
+  "node_name": "N4_72.76Modify",
+  "node_role": "3",
+  "node_type": 0,
+  "node_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+  "os_version": "Microsoft Windows 10/x64 Edition",
+  "os_type": 1,
+  "os_user": "Kyran",
+  "os_pwd": "boW1As0fMufqYFITMgEctzVRDj0MGPMwGN7ss/OeZRYHHBsySiagShOpKkOfqQGwGHnUDM7q1AN1otYUrQoDSWDhl+g7eS+Mko6WdZsgJjhRFHMJDoNE7ssLYb25MF4CYftdkmrNkyeKOUh007DvboH5q4D5TltAoPpQ/6sJuLgbfVRW9gqlDzYm8rxrLwsj50BzxlAjcpL0CXOWsZgMVX9AQYL8iz6rLhOZThf1CSxtnqmDqCy3k5m8OP1V70Jj/sI+v4oNZRQfXj15L1fNMvlsN4imz0tgTVPZvGrzw94c9uitIzXEXrsh+5AMdpNTOffNsJSLQ0axiHXCKGhgSg==",
+  "phy_type": 2,
+  "proxy_switch": 0,
+  "random_str": "68CB0C0E-72D5-3F5C-2A6F-9B6E839A34AF",
+  "rep_excl_path": [],
+  "rep_path": [
+   "/"
+  ],
+  "security_check": 0,
+  "status": null,
+  "tc_uuid": null,
+  "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+  "vg": "",
+  "hardware_code": null,
+  "i2id": "",
+  "biz_grp_list": [],
+  "biz_grp_name": [],
+  "allow_modify_cache_path": 1
+ },
+ "_": "3e0387bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node[keep_log_days];\n Lost: node[dtrack_switch];\n Lost: node[iscsi_switch];\n Lost: node[disk_free_space_limit];\n Lost: node[cc_ip];\n Lost: node[cc_ip_uuid];\n Lost: node[maintenance];\n Lost: node[fc_as_initiator];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHostInfo
+body: {
+ "node_type": 1,
+ "config_addr": "",
+ "_": "3e8c52de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "cache_path": "C:\\info2soft\\node\\cache\\",
+    "config_addr": "172.20.68.211",
+    "config_port": 26821,
+    "data_addr": "172.20.68.211",
+    "disk_limit": 10240,
+    "log_path": "C:\\info2soft\\node\\log\\",
+    "mem_limit": 1998,
+    "node_name": "68.211",
+    "node_role": 3,
+    "node_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+    "os_type": 1,
+    "os_version": "Microsoft Windows 10/x64 Edition",
+    "iscsi_initiator_name": "",
+    "iscsi_as_target": 0,
+    "iscsi_as_initiator": 0,
+    "slave_node": 0,
+    "state": null,
+    "maintenance": 0,
+    "fc_as_initiator": 0,
+    "wwpn_info": [],
+    "random_str": "68CB0C0E-72D5-3F5C-2A6F-9B6E839A34AF",
+    "proxy_switch": 0,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "status": "UNKNOWN"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNode
+body: {
+ "node_uuid": "990E2F2B-9983-A734-2CD3-9D298DBB365A"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

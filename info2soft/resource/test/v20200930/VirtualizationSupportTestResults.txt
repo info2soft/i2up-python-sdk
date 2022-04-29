@@ -1,0 +1,765 @@
+<START-----------------------------------------------------------
+Method: createDatastore
+body: {
+ "host_name": "dev-esxi.6.6.6",
+ "path": "C:\\abc\\",
+ "_": "3f2abb37"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVp
+body: {
+ "comment": "",
+ "config_addr": "192.168.72.75",
+ "config_port": 58083,
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test",
+ "vp_type": 0,
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "use_credential": 0,
+ "cred_uuid": "",
+ "is_drill": 1,
+ "drill_config": {
+  "proxy_name": "",
+  "proxy_ip": "",
+  "proxy_mask": "",
+  "proxy_gw": "",
+  "new_hostname": "",
+  "new_ds": "",
+  "new_dc": "",
+  "new_dcmor": "",
+  "network_name": "",
+  "network_id": ""
+ },
+ "is_backup_center": 1,
+ "cc_ip_uuid": "",
+ "_": "3eb15751"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cc_ip_uuid;\n Lost: maintenance;\n Lost: connect_port;\n Lost: data_transmission_port;\n Lost: is_ssl;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVp
+body: {
+ "vp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f1a73b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVp
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpAttribute
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discoveryVm
+body: {
+ "vp_uuid": "",
+ "match_policy": {
+  "vm_name": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "location": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "folder": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ]
+ },
+ "_": "3ef1c60b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dl
+body: {
+ "type": "vm_ip_csv",
+ "vp_uuid": "DC151595-EB90-86F5-B659-CA787751CA5D",
+ "_": "3e8b7f1a"
+}
+response: {
+ "ret": 200,
+ "data": "Host IP, Virtual machine name, Virtual machine ID, IP, User, Password\n"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: drilConfigInfo
+body: {
+ "vp_addr": "",
+ "vp_type": "",
+ "use_credential": "",
+ "cred_uuid": "",
+ "os_usr": "",
+ "os_pwd": "",
+ "config_addr": "",
+ "config_port": 1,
+ "_": "3f400e70"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getTargetVmInfo
+body: {
+ "group_uuid": "",
+ "rule_type": "",
+ "_": "3f65f2aa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importVmIpMapping
+body: {
+ "vp_uuid": "",
+ "_": "3f7c7ea0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVer
+body: {
+ "bk_path": "H:\\vp_bk5\\test2_BAK_vm-11880_192.168.88.22\\",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "_": "3ef5ba51"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerInfo
+body: {
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+ "group_uuid": "",
+ "time": "2019-01-07_13-10-45",
+ "_": "3f641046"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerInfoByIp
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "time": "",
+ "ver_sig": "",
+ "bk_uuid": "",
+ "bk_path": "",
+ "_": "3f1eb299"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: config_port;\n Lost: bk_uuid;\n Lost: bk_path;\n Lost: time;\n Lost: ver_sig;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenter
+body: {
+ "_": "3f557fd8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenterHost
+body: {
+ "dc_name": "ha-datacenter",
+ "dc_mor": "ha-datacenter",
+ "_": "3eceb21d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastore
+body: {
+ "host_name": "dev-esxi.6.6.6",
+ "path": "/",
+ "_": "3f22c30a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreFile
+body: {
+ "dir_file": "/",
+ "ds_name": "datastore107\uff081\uff09",
+ "dc_name": "ha-datacenter",
+ "_": "3f2433f7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreInfo
+body: {
+ "ds_name": "datastore107\uff081\uff09",
+ "_": "3e720ac5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiskType
+body: {
+ "vp_uuid": "",
+ "region_id": "",
+ "project_id": "",
+ "_": "3f0d89f9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNetwork
+body: {
+ "host_name": "",
+ "_": "3f3aa032"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNetworkInfo
+body: {
+ "vp_uuid": "",
+ "vm_id": "",
+ "_": "3ecf7429"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPlatformStorage
+body: {
+ "vp_uuid": "FC151595-EB90-86F5-B659-CA787753CA5D",
+ "_": "3d2bebdb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVM
+body: {
+ "type": "",
+ "id": "",
+ "view_type": "",
+ "search_name": "",
+ "_": "3da2f249"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVmDisk
+body: {
+ "vm_ref": "123",
+ "_": "3ee4d5db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVp
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f5d51ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpStatus
+body: {
+ "_": "3f7761a0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpStorage
+body: {
+ "where_args['enabled']": "1",
+ "_": "3f4b6ab1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVp
+body: {
+ "comment": "",
+ "config_addr": "192.168.72.75",
+ "config_port": 58083,
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test1",
+ "vp_type": 0,
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "use_credential": 0,
+ "cred_uuid": "",
+ "is_drill": 1,
+ "drill_config": {
+  "proxy_name": "",
+  "proxy_ip": "",
+  "proxy_mask": "",
+  "proxy_gw": "",
+  "new_hostname": "",
+  "new_ds": "",
+  "new_dc": "",
+  "new_dcmor": "",
+  "network_name": "",
+  "network_id": ""
+ },
+ "_": "3eaa5708"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cc_ip_uuid;\n Lost: maintenance;\n Lost: connect_port;\n Lost: data_transmission_port;\n Lost: is_ssl;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: platformAuthorize
+body: {
+ "vp_storage": [
+  {
+   "uuid": "FC151595-EB90-86F5-B659-CA787753CA5D",
+   "enabled": 0,
+   "capacity": "10"
+  }
+ ],
+ "vp_uuid": "DC151595-EB90-86F5-B659-CA787751CA5D",
+ "_": "3e04860e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNode
+body: {
+ "node_uuid": "5765E77A-C658-9AF1-83D0-1897B8A5850E",
+ "cred_uuid": "4165E77A-C658-9AF1-83D0-1897B8A5850E",
+ "trans_type": "FTP",
+ "vp_uuid": "6765E77A-C658-9AF1-83D0-1897B8A5850E",
+ "_": "3f4c50a8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: tgtVmStatusInfo
+body: {
+ "rule_uuids": "",
+ "_": "3f731941"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDataAgentVp
+body: {
+ "operate": "update_data_agent",
+ "vp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f7f778b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerByIp
+body: {
+ "bk_uuid": "",
+ "bk_path": "",
+ "config_addr": "",
+ "config_port": "",
+ "_": "3f07badb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: config_port;\n Lost: bk_path;\n Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discoveryVm
+body: {
+ "vp_uuid": "",
+ "match_policy": {
+  "vm_name": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "location": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "folder": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ]
+ },
+ "_": "3ea8282c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discoveryVm
+body: {
+ "vp_uuid": "",
+ "match_policy": {
+  "vm_name": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "location": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "folder": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ]
+ },
+ "_": "3f2b552c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dl
+body: {
+ "type": "vm_ip_csv",
+ "vp_uuid": "DC151595-EB90-86F5-B659-CA787751CA5D",
+ "_": "3e160bd7"
+}
+response: {
+ "ret": 200,
+ "data": "Host IP, Virtual machine name, Virtual machine ID, IP, User, Password\n"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dl
+body: {
+ "type": "vm_ip_csv",
+ "vp_uuid": "DC151595-EB90-86F5-B659-CA787751CA5D",
+ "_": "3f7ba6e9"
+}
+response: {
+ "ret": 200,
+ "data": "Host IP, Virtual machine name, Virtual machine ID, IP, User, Password\n"
+}
+-----------------------------------------------------------END>
+
