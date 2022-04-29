@@ -74,3 +74,29 @@ class DtoStorage (object):
         res = https._delete(url, body, self.auth)
         return res
 
+    '''
+     * 存储类别 - 修改 （待定）
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifyDtoStorageType(self, body):
+
+        url = '{0}/dto/storage/storage_type'.format(config.get_default('default_api_host'))
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * 获取桶列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBuckets(self, body):
+
+        url = '{0}/dto/storage/bucket_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+

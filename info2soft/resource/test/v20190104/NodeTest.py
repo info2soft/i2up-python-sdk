@@ -87,6 +87,19 @@ class NodeTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'listVg', body)
 
+    def testListHostInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_type': 1,
+            'config_addr': '',
+        }
+
+        node = Node(a)
+        r = node.listHostInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listHostInfo', body)
+
     def testCheckNodeOnline(self):
         a = Auth(username, pwd)
         body = {
@@ -98,6 +111,34 @@ class NodeTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'checkNodeOnline', body)
+
+    def testBatchSearchByPort(self):
+        a = Auth(username, pwd)
+        body = {
+            'ip': '',
+            'port_start': 1,
+            'port_end': 1,
+        }
+
+        node = Node(a)
+        r = node.batchSearchByPort(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'batchSearchByPort', body)
+
+    def testListNodeBindEcs(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_addr': '192.168.72.76',
+            'config_port': '26821',
+            'platform_uuid': '',
+        }
+
+        node = Node(a)
+        r = node.listNodeBindEcs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listNodeBindEcs', body)
 
     def testCreateNode(self):
         a = Auth(username, pwd)
@@ -180,7 +221,7 @@ class NodeTestCase(unittest.TestCase):
                "node_name": "N4_72.76Modify",
                "node_role": "3",
                "node_type": 0,
-               "node_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+               "node_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
                "os_version": "Microsoft Windows 10/x64 Edition",
                "os_type": 1,
                "os_user": "Kyran",
@@ -400,6 +441,33 @@ class NodeTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'nodeGetMysqlInfo', body)
 
+    def testDataIpList(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuids': [],
+        }
+
+        node = Node(a)
+        r = node.dataIpList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'dataIpList', body)
+
+    def testModifyDataIp(self):
+        a = Auth(username, pwd)
+        body = {
+            'data_ip_list': [{
+            'uuid': 'A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319',
+            'data_ip': '172.20.15.121'}],
+            'node_uuid': 'D6EC7CF9-FCA2-D467-ECD6-E028AA9C8319',
+        }
+
+        node = Node(a)
+        r = node.modifyDataIp(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'modifyDataIp', body)
+
     def testDescribeDriverLetter(self):
         a = Auth(username, pwd)
         body = {
@@ -410,6 +478,97 @@ class NodeTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Node', 'describeDriverLetter', body)
+
+    def testListHbaInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_addr': '',
+            'config_port': '',
+            'proxy_switch': 1,
+            'i2id': '',
+        }
+
+        node = Node(a)
+        r = node.listHbaInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listHbaInfo', body)
+
+    def testCheckUnbindEcs(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+        }
+
+        node = Node(a)
+        r = node.checkUnbindEcs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'checkUnbindEcs', body)
+
+    def testGetNodeVersion(self):
+        a = Auth(username, pwd)
+        body = {
+            'ip': '',
+            'port': 1,
+            'add': 1,
+            'cls_uuid': '',
+        }
+
+        node = Node(a)
+        r = node.getNodeVersion(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'getNodeVersion', body)
+
+    def testActiveNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'list': [{
+            'node_uuid': '',
+            'bind_lic_list': [],},],
+        }
+
+        node = Node(a)
+        r = node.activeNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'activeNode', body)
+
+    def testListWaitingActiveNode(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        node = Node(a)
+        r = node.listWaitingActiveNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'listWaitingActiveNode', body)
+
+    def testDownloadNodeInstallScript(self):
+        a = Auth(username, pwd)
+        body = {
+            'os_type': 0,
+        }
+
+        node = Node(a)
+        r = node.downloadNodeInstallScript(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'downloadNodeInstallScript', body)
+
+    def testGetNodePackageUrl(self):
+        a = Auth(username, pwd)
+        body = {
+            'os_type': 1,
+        }
+
+        node = Node(a)
+        r = node.getNodePackageUrl(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Node', 'getNodePackageUrl', body)
 
 
 if __name__ == '__main__':

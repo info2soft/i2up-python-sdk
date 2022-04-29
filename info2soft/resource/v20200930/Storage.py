@@ -319,6 +319,19 @@ class Storage (object):
         return res
 
     '''
+     * 通过节点rpc来获取池列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listPoolFromNode(self, body):
+
+        url = '{0}/storage/pool_from_node'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 文件系统 - 创建
      * 
      * @param dict $body  参数详见 API 手册
@@ -1095,4 +1108,336 @@ class Storage (object):
 
         res = https._get(url, body, self.auth)
         return res
+
+    '''
+     * 磁带库 - 列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listTape(self, body):
+
+        url = '{0}/tape'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 扫描
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def scanTapes(self, body):
+
+        url = '{0}/tape/scan_tapes'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 新建
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def createTape(self, body):
+
+        url = '{0}/tape'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取单个
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @return list
+    '''
+    def describeTape(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/tape/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 更新
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifyTape(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/tape/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def deleteTape(self, body):
+
+        url = '{0}/tape'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取slot列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listSlot(self, body):
+
+        url = '{0}/tape/slot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - slot：获取备份数据
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBkData(self, body):
+
+        url = '{0}/tape/bkdata_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 查看备份数据下的详细文件
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBkFile(self, body):
+
+        url = '{0}/tape/bkfile_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取有磁带的驱动索引
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBusyDrive(self, body):
+
+        url = '{0}/tape/busy_drive_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取没有磁带的空闲槽
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFreeSlot(self, body):
+
+        url = '{0}/tape/free_slot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取有磁带的IE槽
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBusy(self, body):
+
+        url = '{0}/tape/busy_ieslot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取空闲的IE Slot
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFree(self, body):
+
+        url = '{0}/tape/free_ieslot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取有磁带的Slot
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBusySlot(self, body):
+
+        url = '{0}/tape/busy_slot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取有磁带的IE槽
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBusyIEslot(self, body):
+
+        url = '{0}/tape/busy_ieslot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 获取空闲的IE Slot
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFreeIEslot(self, body):
+
+        url = '{0}/tape/free_ieslot_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 删除 erase
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def eraseTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'erase'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 格式化 format
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def formatTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'format'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 浏览 browse
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def browseTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'browse'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 重构catalog rebuild_catalog
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def rebuildCatalogTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'rebuild_catalog'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 卸载 unload
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def unloadTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'unload'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 导入 import
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def importTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'import'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 磁带库 - 操作 - slot操作 导出 export
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def exportTape(self, body):
+        if body is None:
+            exit()
+        else:
+            body['operate'] = 'export'
+
+        url = '{0}/tape/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+
 

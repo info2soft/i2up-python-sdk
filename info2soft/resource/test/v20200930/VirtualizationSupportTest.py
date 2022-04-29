@@ -434,6 +434,103 @@ class VirtualizationSupportTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'VirtualizationSupport', 'dl', body)
 
+    def testListBakVerByIp(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': '',
+            'bk_path': '',
+            'config_addr': '',
+            'config_port': '',
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.listBakVerByIp(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'listBakVerByIp', body)
+
+    def testListBakVerInfoByIp(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_addr': '',
+            'config_port': '',
+            'time': '',
+            'ver_sig': '',
+            'bk_uuid': '',
+            'bk_path': '',
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.listBakVerInfoByIp(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'listBakVerInfoByIp', body)
+
+    def testTestNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '5765E77A-C658-9AF1-83D0-1897B8A5850E',
+            'cred_uuid': '4165E77A-C658-9AF1-83D0-1897B8A5850E',
+            'trans_type': 'FTP',
+            'vp_uuid': '6765E77A-C658-9AF1-83D0-1897B8A5850E',
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.testNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'testNode', body)
+
+    def testGetTargetVmInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuids': [],
+            'group_uuid': '',
+            'rule_type': '',
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.getTargetVmInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'getTargetVmInfo', body)
+
+    def testListDiskType(self):
+        a = Auth(username, pwd)
+        body = {
+            'vp_uuid': '',
+            'region_id': '',
+            'project_id': '',
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.listDiskType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'listDiskType', body)
+
+    def testDiscoveryVm(self):
+        a = Auth(username, pwd)
+        body = {
+            'vp_uuid': '',
+            'match_policy': {
+            'vm_name': [{
+            'type': '',
+            'value': '',},],
+            'location': [{
+            'type': '',
+            'value': '',},],
+            'folder': [{
+            'type': '',
+            'value': '',},],},
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.discoveryVm(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'discoveryVm', body)
+
 
 if __name__ == '__main__':
     unittest.main()

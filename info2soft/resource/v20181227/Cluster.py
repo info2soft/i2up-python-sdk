@@ -74,9 +74,13 @@ class Cluster(object):
     def modifyCls(self, body):
         url = '{0}/cls/{1}'.format(config.get_default('default_api_host'), body['cls']['node_uuid'])
         del body['cls']['node_uuid']
-        randomStr = https._get(url, None, self.auth)[0]['data']['cls']['random_str']
-        body['cls']['random_str'] = randomStr
-        res = https._put(url, body, self.auth)
+        cls = https._get(url, None, self.auth)[0]
+        if 'cls' in cls['data']:
+            randomStr = https._get(url, None, self.auth)[0]['data']['cls']['random_str']
+            body['cls']['random_str'] = randomStr
+            res = https._put(url, body, self.auth)
+        else:
+            res = [cls]
         return res
 
     '''
@@ -155,4 +159,32 @@ class Cluster(object):
 
         res = https._get(url, body, self.auth)
         return res
+
+    '''
+     * 切换维护
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def switchMaintenance(self, body):
+
+        url = '{0}/cls/maintenance'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 获取GAUSS集群信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getGaussInfo(self, body):
+
+        url = '{0}/cls/gauss_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+
 

@@ -256,3 +256,42 @@ class ActiveNode (object):
         res = https._get(url, None, self.auth)
         return res
 
+    '''
+     * 维护模式切换
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def switchMaintenance(self, body):
+
+        url = '{0}/active/node/maintenance'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 重新生成
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def rebuildActiveNode(self, body):
+
+        url = '{0}/active/node/rebuild'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 刷新
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def refresgActiveNode(self, body):
+
+        url = '{0}/active/node/refresh'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+

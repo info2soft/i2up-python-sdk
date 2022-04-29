@@ -382,3 +382,83 @@ class VirtualizationSupport (object):
         res = https._get(url, body, self.auth)
         return res
 
+    '''
+     * 通过ip和port，获取备份点列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBakVerByIp(self, body):
+
+        url = '{0}/vp/platform/bk_ver_by_ip'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 通过ip和port，获取备份点信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listBakVerInfoByIp(self, body):
+
+        url = '{0}/vp/platform/bk_ver_info_by_ip'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 测试连接节点
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def testNode(self, body):
+
+        url = '{0}/vp/platform/test_node'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 获取规则目标机信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getTargetVmInfo(self, body):
+
+        url = '{0}/vp/platform/target_vm_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 获取平台卷类型列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listDiskType(self, body):
+
+        url = '{0}/vp/platform/disk_type'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 发现虚机
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def discoveryVm(self, body):
+
+        url = '{0}/vp/platform/discovery_vm'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+
+

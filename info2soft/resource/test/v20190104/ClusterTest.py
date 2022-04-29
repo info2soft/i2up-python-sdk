@@ -187,6 +187,33 @@ class ClusterTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Cluster', 'listRacStatus', body)
 
+    def testSwitchMaintenance(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'switch': 0,
+        }
+
+        cluster = Cluster(a)
+        r = cluster.switchMaintenance(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'switchMaintenance', body)
+
+    def testGetGaussInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_addr': '',
+            'user': '',
+            'config_port': '',
+        }
+
+        cluster = Cluster(a)
+        r = cluster.getGaussInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Cluster', 'getGaussInfo', body)
+
 
 if __name__ == '__main__':
     unittest.main()  

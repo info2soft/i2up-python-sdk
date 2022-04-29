@@ -114,6 +114,31 @@ class DtoStorageTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'DtoStorage', 'deleteDtoStorage', body)
 
+    def testModifyDtoStorageType(self):
+        a = Auth(username, pwd)
+        body = {
+            'list': {},
+            'type': '',
+        }
+
+        dtoStorage = DtoStorage(a)
+        r = dtoStorage.modifyDtoStorageType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'DtoStorage', 'modifyDtoStorageType', body)
+
+    def testListBuckets(self):
+        a = Auth(username, pwd)
+        body = {
+            'sto_uuid': '',
+        }
+
+        dtoStorage = DtoStorage(a)
+        r = dtoStorage.listBuckets(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'DtoStorage', 'listBuckets', body)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -121,7 +121,7 @@ class BoxVmTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'BoxVm', 'listBoxVmStatus', body)
 
-    def testOperateBoxVm(self):
+    def testRegisterBoxVm(self):
         a = Auth(username, pwd)
         body = {
             'operate': 'register',
@@ -129,10 +129,10 @@ class BoxVmTestCase(unittest.TestCase):
         }
 
         boxVm = BoxVm(a)
-        r = boxVm.operateBoxVm(body)
+        r = boxVm.registerBoxVm(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'BoxVm', 'operateBoxVm', body)
+        write(r[0], 'BoxVm', 'registerBoxVm', body)
 
 
 if __name__ == '__main__':

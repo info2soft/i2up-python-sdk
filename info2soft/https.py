@@ -37,6 +37,10 @@ _headers = {
 
 
 def __return_wrapper(resp):
+    # content type不是json，比如下载文件，则不走json处理
+    if 'application/json' not in resp.headers.get('Content-type'):
+        ret = {'ret': resp.status_code, 'data': resp.text}
+        return ret, ResponseInfo(resp)
     # if resp.status_code != 200:
     #     return None, ResponseInfo(resp)
     resp.encoding = 'utf-8'

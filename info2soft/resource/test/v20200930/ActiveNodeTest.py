@@ -437,6 +437,43 @@ class ActiveNodeTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'ActiveNode', 'describeDb', body)
 
+    def testSwitchMaintenance(self):
+        a = Auth(username, pwd)
+        body = {
+            'switch': 0,
+            'uuid': 'bBae9dCA-f6cc-BA66-bF59-8DFc395eD094',
+        }
+
+        activeNode = ActiveNode(a)
+        r = activeNode.switchMaintenance(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveNode', 'switchMaintenance', body)
+
+    def testRebuildActiveNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+        }
+
+        activeNode = ActiveNode(a)
+        r = activeNode.rebuildActiveNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveNode', 'rebuildActiveNode', body)
+
+    def testRefresgActiveNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': 'xxxxxxxxx',
+        }
+
+        activeNode = ActiveNode(a)
+        r = activeNode.refresgActiveNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveNode', 'refresgActiveNode', body)
+
 
 if __name__ == '__main__':
     unittest.main()

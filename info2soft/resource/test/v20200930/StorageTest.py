@@ -414,6 +414,18 @@ class StorageTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Storage', 'listPoolInfo', body)
 
+    def testListPoolFromNode(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listPoolFromNode(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listPoolFromNode', body)
+
     def testCreateFs(self):
         a = Auth(username, pwd)
         body = {
@@ -1279,6 +1291,443 @@ class StorageTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Storage', 'registerServer', body)
+
+    def testListTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'where_args[node_uuid]': '',
+            'page': 1,
+            'limit': 10,
+            'search_value': '',
+            'search_field': '',
+            'where_args[pool_uuid]': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listTape', body)
+
+    def testScanTapes(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': 'D42BF707-C971-EEA9-521F-BB0F3F7A92FC',
+        }
+
+        storage = Storage(a)
+        r = storage.scanTapes(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'scanTapes', body)
+
+    def testCreateTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_name': '磁带库1',
+            'node_uuid': 'D42BF707-C971-EEA9-521F-BB0F3F7A92FC',
+            'library_info': [{
+            'library_sn': 'SYZZ_A',
+            'library_vendor': 'STK',
+            'library_product': 'L80',
+            'library_revision': '0106'}],
+        }
+
+        storage = Storage(a)
+        r = storage.createTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'createTape', body)
+
+    def testDescribeTape(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        storage = Storage(a)
+        r = storage.describeTape(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'describeTape', body)
+
+    def testModifyTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_name': '磁带库1',
+            'node_uuid': 'D42BF707-C971-EEA9-521F-BB0F3F7A92FC',
+            'library_info': [{
+            'library_sn': 'SYZZ_A',
+            'library_vendor': 'STK',
+            'library_product': 'L80',
+            'library_revision': '0106'}],
+            'random_str': 'D42BF707-C971-EEA9-521F-BB0F3F7A92FC',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        storage = Storage(a)
+        r = storage.modifyTape(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'modifyTape', body)
+
+    def testDeleteTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    'AA': 'BB'
+                }
+            ]
+        }
+
+        storage = Storage(a)
+        r = storage.deleteTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'deleteTape', body)
+
+    def testListSlot(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '93AF0C9F-14C8-41A2-31CB-AAA0F65193FA',
+            'library_sn': 'SYZZY_B'
+        }
+
+        storage = Storage(a)
+        r = storage.listSlot(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listSlot', body)
+
+    def testListBkData(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+            'slot _index': '',
+            'slot_barcode': '',
+            'slot_tapename': '',
+            'slot_tapesequence': '',
+            'page_num': '0',
+            'page_size': '15',
+            'begin_time': '2021-04-27_00:00:12',
+            'end_time': '2021-04-27_00:00:12',
+            'check_rule': 0,
+        }
+
+        storage = Storage(a)
+        r = storage.listBkData(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listBkData', body)
+
+    def testListBkFile(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': 'D5F704B5-09Ce-3b11-5C8A-A72fcb9d3f91',
+            'library_sn': '3BEe043E-8eC1-1c9E-16B2-43BCc48DAFBA',
+            'slot _index': '1',
+            'slot_barcode': '142419071725852	',
+            'slot_tapename': '专深里美感	',
+            'slot_tapesequence': '7404652025087696	',
+            'bk_index': 'index',
+            'bk_path': 'path',
+            'page': 1,
+            'limit': 10,
+        }
+
+        storage = Storage(a)
+        r = storage.listBkFile(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listBkFile', body)
+
+    def testListBusyDrive(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listBusyDrive(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listBusyDrive', body)
+
+    def testListFreeSlot(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listFreeSlot(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listFreeSlot', body)
+
+    def testListBusy(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listBusy(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listBusy', body)
+
+    def testListFree(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listFree(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listFree', body)
+
+    def testListBusySlot(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listBusySlot(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listBusySlot', body)
+
+    def testListBusyIEslot(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listBusyIEslot(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listBusyIEslot', body)
+
+    def testListFreeIEslot(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuid': '',
+            'library_sn': '',
+        }
+
+        storage = Storage(a)
+        r = storage.listFreeIEslot(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'listFreeIEslot', body)
+
+    def testEraseTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'erase',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.eraseTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'eraseTape', body)
+
+    def testFormatTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'format',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.formatTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'formatTape', body)
+
+    def testBrowseTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'browse',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.browseTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'browseTape', body)
+
+    def testRebuildCatalogTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'rebuild_catalog',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.rebuildCatalogTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'rebuildCatalogTape', body)
+
+    def testUnloadTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'unload',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.unloadTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'unloadTape', body)
+
+    def testImportTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'import',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.importTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'importTape', body)
+
+    def testExportTape(self):
+        a = Auth(username, pwd)
+        body = {
+            'tape_uuids': [
+                {
+                    '': ''
+                }
+            ],
+            'operate': 'export',
+            'slot': {
+                'slot _index': '',
+                'slot_barcode': '',
+                'slot_tapename': '',
+                'slot_tapesequence': '',
+                'new_slot_tapename': ''
+            },
+            'drive_index': '',
+            'slot_index': '',
+            'ieslot_index': '',
+            'library_sn': ''
+        }
+
+        storage = Storage(a)
+        r = storage.exportTape(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Storage', 'exportTape', body)
+
 
 
 if __name__ == '__main__':

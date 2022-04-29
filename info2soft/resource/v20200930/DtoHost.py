@@ -144,13 +144,36 @@ class DtoHost (object):
         return res
 
     '''
-     * 主机 - 操作
+     * 主机 - 操作 upgrade
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def operateDtoHost(self, body):
+    def upgradeDtoHost(self, body):
+        if body is None:
+            body = {
+                'operate': 'upgrade'
+            }
+        else:
+            body['operate'] = 'upgrade'
+        url = '{0}/dto/host/operate'.format(config.get_default('default_api_host'))
 
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 主机 - 操作 maintain
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def maintainDtoHost(self, body):
+        if body is None:
+            body = {
+                'operate': 'maintain'
+            }
+        else:
+            body['operate'] = 'maintain'
         url = '{0}/dto/host/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
@@ -184,4 +207,36 @@ class DtoHost (object):
 
         res = https._get(url, None, self.auth)
         return res
+
+    '''
+     * 主机 - 回源
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def revertFile(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/dto/host/{1}/revert_file'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 主机 - 获取回源记录
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listRevertRecord(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/dto/host/{1}/revert_record'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._get(url, body, self.auth)
+        return res
+
+
 

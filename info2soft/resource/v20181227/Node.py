@@ -77,6 +77,19 @@ class Node(object):
         return res
 
     '''
+     * 节点- 扫描集群IP获取节点信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listHostInfo(self, body):
+
+        url = '{0}/node/host_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 检查节点在线
      * 
      * @param dict body  参数详见 API 手册
@@ -86,6 +99,32 @@ class Node(object):
     def checkNodeOnline(self, body):
 
         url = '{0}/node/hello'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 按端口批量搜索节点
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def batchSearchByPort(self, body):
+
+        url = '{0}/node/hello_port_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 节点 - 获取绑定云主机信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listNodeBindEcs(self, body):
+
+        url = '{0}/node/ecs_info'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
         return res
@@ -289,6 +328,32 @@ class Node(object):
         return res
 
     '''
+     * 获取数据地址列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def dataIpList(self, body):
+
+        url = '{0}/node/data_ip_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 修改数据地址
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifyDataIp(self, body):
+
+        url = '{0}/node/data_ip'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 单项 - (Win)节点获取磁盘挂载点
      * 
      * @body['uuid'] String  必填 节点uuid
@@ -297,10 +362,102 @@ class Node(object):
     def describeDriverLetter(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/node//driver_letter{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/node/{1}/driver_letter'.format(config.get_default('default_api_host'), uuid)
 
         res = https._get(url, None, self.auth)
         return res
+
+    '''
+     * 获取 fc 客户端 hba卡信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listHbaInfo(self, body):
+
+        url = '{0}/node/hba_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 解绑云主机检查
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def checkUnbindEcs(self, body):
+
+        url = '{0}/node/check_unbind_ecs'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 节点 - version
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getNodeVersion(self, body):
+
+        url = '{0}/node/version'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 节点 - 激活
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def activeNode(self, body):
+
+        url = '{0}/node/active'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 节点 - 待激活列表
+     * 
+     * @return list
+    '''
+    def listWaitingActiveNode(self, body):
+
+        url = '{0}/node/inactive_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 节点 - Linux安装脚本下载
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def downloadNodeInstallScript(self, body):
+
+        url = '{0}/node/install_script'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 节点 - 获取安装包下载链接-URL
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getNodePackageUrl(self, body):
+
+        url = '{0}/node/packge_url'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+
 
 
 

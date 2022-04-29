@@ -174,7 +174,7 @@ class DtoHostTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'DtoHost', 'listLoadRules', body)
 
-    def testOperateDtoHost(self):
+    def testUpgradeDtoHost(self):
         a = Auth(username, pwd)
         body = {
             'host_uuids': [],
@@ -182,10 +182,23 @@ class DtoHostTestCase(unittest.TestCase):
         }
 
         dtoHost = DtoHost(a)
-        r = dtoHost.operateDtoHost(body)
+        r = dtoHost.upgradeDtoHost(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'DtoHost', 'operateDtoHost', body)
+        write(r[0], 'DtoHost', 'upgradeDtoHost', body)
+
+    def testMaintainDtoHost(self):
+        a = Auth(username, pwd)
+        body = {
+            'host_uuids': [],
+            'operate': '',
+        }
+
+        dtoHost = DtoHost(a)
+        r = dtoHost.maintainDtoHost(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'DtoHost', 'maintainDtoHost', body)
 
     def testListBakRecord(self):
         a = Auth(username, pwd)
@@ -215,6 +228,38 @@ class DtoHostTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'DtoHost', 'listRcTimePoint', body)
+
+    def testRevertFile(self):
+        a = Auth(username, pwd)
+        body = {
+            'ids': [{
+            '': '',},],
+            'data_source': '2021',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        dtoHost = DtoHost(a)
+        r = dtoHost.revertFile(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'DtoHost', 'revertFile', body)
+
+    def testListRevertRecord(self):
+        a = Auth(username, pwd)
+        body = {
+            'data_source': '2019',
+            'page': 1,
+            'limit': 100,
+            'wk_path': '',
+            'file_name': '',
+            'create_begin_time': 1,
+            'create_end_time': 1,
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        dtoHost = DtoHost(a)
+        r = dtoHost.listRevertRecord(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'DtoHost', 'listRevertRecord', body)
 
 
 if __name__ == '__main__':

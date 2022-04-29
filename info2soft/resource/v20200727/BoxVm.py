@@ -86,12 +86,18 @@ class BoxVm (object):
         return res
 
     '''
-     * 虚机 - 操作
+     * 虚机 - 操作 register
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def operateBoxVm(self, body):
+    def registerBoxVm(self, body):
+        if body is None:
+            body = {
+                'operate': 'register'
+            }
+        else:
+            body['operate'] = 'register'
 
         url = '{0}/box_vm/operate'.format(config.get_default('default_api_host'))
         
