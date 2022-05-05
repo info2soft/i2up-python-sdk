@@ -30,14 +30,14 @@ body: {
   ],
   "random_str": "11111111-1111-1111-1111-111111111111"
  },
- "_": "3f67df99"
+ "_": "3f676883"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: bigdata_backup[rule_name];\n Lost: bigdata_backup[data_type];\n Lost: bigdata_backup[cred_uuid];\n Lost: bigdata_backup[cluster_config_path];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bigdata_backup[rule_name];\n Lost: bigdata_backup[data_type];\n Lost: bigdata_backup[cred_uuid];\n Lost: bigdata_backup[cluster_config_path];\n Lost: bigdata_backup[hive_bktype];\n Lost: bigdata_backup[bk_type];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -49,14 +49,14 @@ body: {
   "11111111-1111-1111-1111-111111111111"
  ],
  "del_policy": 0,
- "_": "3f29865c"
+ "_": "3f2a5d36"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -68,8 +68,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -82,7 +82,7 @@ body: {
  "page": 1,
  "search_value": "",
  "type": 0,
- "_": "3f1fd141"
+ "_": "3f4b6869"
 }
 response: {
  "ret": 200,
@@ -90,8 +90,32 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [],
-  "total": 0
+  "info_list": [
+   {
+    "bk_node_name": "48.120-linux",
+    "bk_ip": "192.168.48.120",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "rule_name": "123",
+    "data_type": "HDFS",
+    "rule_type": 0,
+    "rule_uuid": "54B07BAE-150A-D928-5828-2E37863E5973",
+    "archive_pen": 0,
+    "tape_uuid": "",
+    "library_sn": "",
+    "cluster_config_path": "/usr/local/i2bb/",
+    "bk_type": 1,
+    "obs_settings": {
+     "sto_uuid": "0C97CB9F-3247-7D28-B93F-DCBA23F56268",
+     "bucket_name": "test1"
+    },
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
  }
 }
 -----------------------------------------------------------END>
@@ -99,39 +123,166 @@ response: {
 <START-----------------------------------------------------------
 Method: listBigdataBackupStatus
 body: {
- "_": "3ede5472"
+ "_": "3ec9e7a0"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: operateBigdataBackup
+Method: startBigdataBackup
 body: {
  "operate": "start",
  "uuids": [
   "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
  ],
- "_": "3edf5c26"
+ "_": "3ecf1ce1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelyBigdataBackup
+body: {
+ "operate": "start_immediately",
+ "uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3e90af41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBigdataBackup
+body: {
+ "operate": "stop",
+ "uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3f10c7b9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataHiveTable
+body: {
+ "bk_uuid": "74e8C03A-5bAe-69Fe-2825-4E4DBF57D89F",
+ "table_name": "",
+ "limit": "",
+ "page": "",
+ "db_name": "",
+ "cluster_config_path": "",
+ "_": "3c59b77c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: db_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAllBigdataHiveDatabase
+body: {
+ "bk_uuid": "62bbEE07-eEe8-EffF-d9cf-8ac9d7edcED1",
+ "cluster_config_path": "",
+ "_": "3ea6f368"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cluster_config_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataHiveTable
+body: {
+ "bk_uuid": "74e8C03A-5bAe-69Fe-2825-4E4DBF57D89F",
+ "table_name": "",
+ "limit": "",
+ "page": "",
+ "db_name": "",
+ "cluster_config_path": "",
+ "_": "3f021016"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: db_name;\n"
  }
 }
 -----------------------------------------------------------END>

@@ -108,7 +108,7 @@ class BackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Backup', 'describeBigdataBackup', body)
 
-    def testOperateBigdataBackup(self):
+    def testStartBigdataBackup(self):
         a = Auth(username, pwd)
         body = {
             'operate': 'start',
@@ -118,10 +118,40 @@ class BackupTestCase(unittest.TestCase):
         }
 
         backup = Backup(a)
-        r = backup.operateBigdataBackup(body)
+        r = backup.startBigdataBackup(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Backup', 'operateBigdataBackup', body)
+        write(r[0], 'Backup', 'startBigdataBackup', body)
+
+    def testStopBigdataBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'stop',
+            'uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        backup = Backup(a)
+        r = backup.stopBigdataBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Backup', 'stopBigdataBackup', body)
+
+    def testStartImmediatelyBigdataBackup(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediately',
+            'uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        backup = Backup(a)
+        r = backup.startImmediatelyBigdataBackup(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Backup', 'startImmediatelyBigdataBackup', body)
 
     def testDeleteBigdataBackup(self):
         a = Auth(username, pwd)

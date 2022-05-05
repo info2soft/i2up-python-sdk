@@ -28,7 +28,7 @@ if is_py3:
     urlopen = urllib.request.urlopen
 
 username = 'admin'
-pwd = 'Info1234'
+pwd = '123qwe-='
     
                 
 class BackupTestCase(unittest.TestCase):
@@ -123,7 +123,7 @@ class BackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Recovery', 'listBigdataRecoveryStatus', body)
 
-    def testOperateBigdataRecovery(self):
+    def testStartBigdataRecovery(self):
         a = Auth(username, pwd)
         body = {
             'operate': 'start',
@@ -133,10 +133,25 @@ class BackupTestCase(unittest.TestCase):
         }
 
         bigDataRecovery = Recovery(a)
-        r = bigDataRecovery.operateBigdataRecovery(body)
+        r = bigDataRecovery.startBigdataRecovery(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Recovery', 'operateBigdataRecovery', body)
+        write(r[0], 'Recovery', 'startBigdataRecovery', body)
+
+    def testStopBigdataRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'stop',
+            'uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        bigDataRecovery = Recovery(a)
+        r = bigDataRecovery.stopBigdataRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Recovery', 'stopBigdataRecovery', body)
 
     def testAuthBigdataPlatform(self):
         a = Auth(username, pwd)
@@ -152,6 +167,36 @@ class BackupTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Recovery', 'authBigdataPlatform', body)
+
+    def testListBigdataHiveTable(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': '74e8C03A-5bAe-69Fe-2825-4E4DBF57D89F',
+            'table_name': '',
+            'limit': '',
+            'page': '',
+            'db_name': '',
+            'cluster_config_path': '',
+        }
+
+        recovery = Recovery(a)
+        r = recovery.listBigdataHiveTable(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Backup', 'listBigdataHiveTable', body)
+
+    def testListAllBigdataHiveDatabase(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': '62bbEE07-eEe8-EffF-d9cf-8ac9d7edcED1',
+            'cluster_config_path': '',
+        }
+
+        recovery = Recovery(a)
+        r = recovery.listAllBigdataHiveDatabase(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Backup', 'listAllBigdataHiveDatabase', body)
 
 
 if __name__ == '__main__':
