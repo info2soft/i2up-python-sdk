@@ -1,4 +1,21 @@
 <START-----------------------------------------------------------
+Method: checkDupName
+body: {
+ "cluster_name": "A",
+ "cluster_uuid": "7432C18E-4FF6-D06B-8081-ACA41F673ADD",
+ "_": "3f560284"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: createHaCluster
 body: {
  "cluster_name": "cluster",
@@ -24,7 +41,7 @@ body: {
  ],
  "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
  "center_vir_mask": "255.255.255.0",
- "_": "3e1d302a"
+ "_": "3f2930c1"
 }
 response: {
  "ret": 200,
@@ -41,14 +58,14 @@ Method: createLabel
 body: {
  "label_name": "MSSQLSERVER",
  "content": "SQL Server\u670d\u52a1",
- "_": "3e1744a9"
+ "_": "3ef6b52a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success"
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
  }
 }
 -----------------------------------------------------------END>
@@ -58,7 +75,7 @@ Method: deleteHaCluster
 body: {
  "cluster_uuids": [],
  "force": 1,
- "_": "3f14681b"
+ "_": "3f16a3c7"
 }
 response: {
  "ret": 200,
@@ -75,14 +92,14 @@ Method: deleteHaClusterHost
 body: {
  "cluster_uuid": "",
  "node_uuid": "",
- "_": "3f3ce0c6"
+ "_": "3e0d635c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 111110201,
-  "message": "[111110201] Error in parameter checking"
+  "code": 0,
+  "message": "[0] success"
  }
 }
 -----------------------------------------------------------END>
@@ -91,7 +108,7 @@ response: {
 Method: deleteLabel
 body: {
  "label_uuids": [],
- "_": "3f3def5d"
+ "_": "3f6f8fa9"
 }
 response: {
  "ret": 200,
@@ -111,7 +128,7 @@ response: {
  "msg": "",
  "data": {
   "code": null,
-  "message": "[23333333] undefined message"
+  "message": "[1023333333] undefined message"
  }
 }
 -----------------------------------------------------------END>
@@ -121,7 +138,7 @@ Method: listHaCluster
 body: {
  "page": 1,
  "limit": 10,
- "_": "3f332f49"
+ "_": "3f5a96d9"
 }
 response: {
  "ret": 200,
@@ -129,8 +146,18 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [],
-  "total": 0
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "cluster_name": "cluster",
+    "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
+    "center_vir_ip": "2.2.2.1",
+    "center_vir_mask": "255.255.255.0",
+    "node_list": "[{\"node_uuid\":\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\",\"node_ip\":\"2.2.2.1\",\"label_list\":[\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\",\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\"],\"ha_conf\":{\"ha_vir_ip_adapter\":\"eth0\",\"ha_heartbeat_adapter\":\"eth0\",\"ha_heartbeat_ip\":\"2.2.21\"},\"total_service_limit\":\"1\",\"total_monitor_limit\":\"10\",\"center_vir_ip_adapter\":\"eth0\",\"result\":0,\"config_seq\":0,\"rpc_send_params\":\"{\\\"ClusterConf\\\":{\\\"CommonConf\\\":{\\\"ClusterName\\\":\\\"Y2x1c3Rlcg==\\\",\\\"ClusterID\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"CenterVirIP\\\":\\\"2.2.2.1\\\",\\\"CenterVirMask\\\":\\\"255.255.255.0\\\",\\\"OrgCenterID\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\"},\\\"Myself\\\":{\\\"CenterVirIPAdapter\\\":\\\"ZXRoMA==\\\",\\\"Base\\\":{\\\"NodeUuid\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"NodeIP\\\":\\\"2.2.2.1\\\"}},\\\"NodeList\\\":[{\\\"NodeUuid\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"NodeIP\\\":\\\"2.2.2.1\\\"}],\\\"ConfigSeq\\\":0},\\\"ProviderConf\\\":{\\\"ClusterID\\\":\\\"AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187\\\",\\\"SerTabelList\\\":[{\\\"Label\\\":0,\\\"MaxLimit\\\":1},{\\\"Label\\\":0,\\\"MaxLimit\\\":1}],\\\"HAConf\\\":{\\\"HAVirIPAdapter\\\":\\\"ZXRoMA==\\\",\\\"HAHeartbeatAdapter\\\":\\\"ZXRoMA==\\\",\\\"HAHeartbeatIP\\\":\\\"2.2.21\\\"},\\\"TotalServiceLimit\\\":1,\\\"TotalMonitorLimit\\\":10,\\\"ConfigSeq\\\":0}}\"}]"
+   }
+  ],
+  "total": 1
  }
 }
 -----------------------------------------------------------END>
@@ -144,7 +171,7 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "cluster_uuid": "5FB93490-114D-5946-B420-1720F7C40735"
+  "cluster_uuid": "CD9946FA-6083-73F0-A0D2-D6A2B573411F"
  }
 }
 -----------------------------------------------------------END>
@@ -154,7 +181,7 @@ Method: listHaClusterIpDuplicate
 body: {
  "cluster_uuid": "",
  "center_vir_ip": "",
- "_": "3f7317d9"
+ "_": "3d675c30"
 }
 response: {
  "ret": 200,
@@ -170,14 +197,15 @@ response: {
 Method: listHaClusterMonitor
 body: {
  "cluster_uuid": "",
- "_": "3d67b0a3"
+ "_": "3efb85b0"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 11110001,
-  "message": "[11110001] Call failed. Can't connect to a node or platform"
+  "code": 0,
+  "message": "[0] success",
+  "monitor_info": []
  }
 }
 -----------------------------------------------------------END>
@@ -185,7 +213,7 @@ response: {
 <START-----------------------------------------------------------
 Method: listHaClusterStatus
 body: {
- "_": "3f109f6e"
+ "_": "3f6db33a"
 }
 response: {
  "ret": 200,
@@ -212,7 +240,7 @@ body: {
  "limit": 10,
  "search_field": "label_name",
  "search_value": "",
- "_": "3eb2df1e"
+ "_": "3e95060e"
 }
 response: {
  "ret": 200,
@@ -224,19 +252,19 @@ response: {
    {
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "id": "1",
+    "id": 1,
     "label_name": "MSSQLSERVER",
-    "label_uuid": "609B0EA6-A8D5-7866-39DB-2D245778D602",
-    "used": "0",
+    "label_uuid": "5C0F9C21-9982-A2CB-F8BC-DF481AEEC2AB",
+    "used": 0,
     "content": "SQL Server\u670d\u52a1"
    },
    {
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "id": "0",
+    "id": 0,
     "label_name": "default",
     "label_uuid": "2ACDCAB3-D3B8-3E28-DCC5-AA36FDC2B5AB",
-    "used": "0",
+    "used": 0,
     "content": "Initial specified type of system"
    }
   ],
@@ -270,7 +298,7 @@ body: {
  ],
  "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
  "random_str": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
- "_": "3efc0d57"
+ "_": "3dd125ff"
 }
 response: {
  "ret": 200,
@@ -287,7 +315,7 @@ Method: modifyLabel
 body: {
  "label_name": "SQL Server\u670d\u52a1",
  "label_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
- "_": "3f73f7b2"
+ "_": "3f224a4f"
 }
 response: {
  "ret": 200,
@@ -325,54 +353,43 @@ body: {
  "node_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
  "cluster_uuid": "AEC19FB5-8DC6-27E7-7E6A-7A60ADFA7187",
  "center_vir_mask": "255.255.255.0",
- "_": "3d4d10f7"
+ "_": "3d93c579"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": "11113522",
-  "message": "Please find this code on the manual to grab more info.(3522)"
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: checkDupName
-body: {
- "cluster_name": "A",
- "cluster_uuid": "7432C18E-4FF6-D06B-8081-ACA41F673ADD",
- "_": "3f599602"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: operateHaCluster
+Method: startHaCluster
 body: {
  "operate": "start",
  "cluster_uuids": [
   "7432C18E-4FF6-D06B-8081-ACA41F673ADD"
  ],
- "_": "3ecc307d"
+ "_": "3f5485c5"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -380,24 +397,30 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: operateHaCluster
+Method: stopHaCluster
 body: {
  "operate": "stop",
  "cluster_uuids": [
   "7432C18E-4FF6-D06B-8081-ACA41F673ADD"
  ],
- "_": "3e618a45"
+ "_": "3e417e32"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }

@@ -38,13 +38,25 @@ class AppHighAvailability (object):
      * @return array
      '''
     def startHA(self, body):
-        
+        if body is None:
+            body = {
+                'type': 'start'
+            }
+        else:
+            body['type'] = 'start'
+
         url = '{0}/ha/operate'.format(config.get_default('default_api_host'))
         
         res = https._post(url, body, self.auth)
         return res
 
     def stopHA(self, body):
+        if body is None:
+            body = {
+                'type': 'stop'
+            }
+        else:
+            body['type'] = 'stop'
 
         url = '{0}/ha/operate'.format(config.get_default('default_api_host'))
 
@@ -52,6 +64,13 @@ class AppHighAvailability (object):
         return res
 
     def forceSwitchHA(self, body):
+        if body is None:
+            body = {
+                'type': 'force_switch'
+            }
+        else:
+            body['type'] = 'force_switch'
+
         url = '{0}/ha/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)

@@ -305,10 +305,10 @@ class ClusterTestCase(unittest.TestCase):
         }
 
         cluster = Cluster(a)
-        r = cluster.operateHaCluster(body)
+        r = cluster.startHaCluster(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cluster', 'operateHaCluster', body)
+        write(r[0], 'Cluster', 'startHaCluster', body)
 
     def testStopHaCluster(self):
         a = Auth(username, pwd)
@@ -320,10 +320,10 @@ class ClusterTestCase(unittest.TestCase):
         }
 
         cluster = Cluster(a)
-        r = cluster.operateHaCluster(body)
+        r = cluster.stopHaCluster(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cluster', 'operateHaCluster', body)
+        write(r[0], 'Cluster', 'stopHaCluster', body)
 
 
 if __name__ == '__main__':
