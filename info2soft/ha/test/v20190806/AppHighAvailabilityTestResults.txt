@@ -50,14 +50,14 @@ body: {
    ]
   }
  },
- "_": "3f1da2be"
+ "_": "3f1d8903"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001009,
-  "message": "[10001009] Name exists"
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
  }
 }
 -----------------------------------------------------------END>
@@ -68,7 +68,7 @@ body: {
  "uuids": [
   "CFCEDC75-F48E-22B0-8A67-DE1FCA51C4C7"
  ],
- "_": "3d9a6335"
+ "_": "3f52fdee"
 }
 response: {
  "ret": 200,
@@ -87,8 +87,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -98,19 +98,16 @@ Method: describeVolumeInfo
 body: {
  "master_uuid": "",
  "slave_uuid": "",
- "_": "3eedc6e9"
+ "_": "3e4ce253"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist",
+  "code": 1010090015,
+  "message": "[1010090015] Failed to get node disk information",
   "disk_info": [],
-  "drive_letter_info": {
-   "master_node": [],
-   "sub_node": []
-  }
+  "drive_letter_info": []
  }
 }
 -----------------------------------------------------------END>
@@ -122,14 +119,14 @@ body: {
   "B95DB026-AEDF-737A-0442-B5134660D204",
   "128C2F7D-0795-41F3-1274-3FBAA2449BAD"
  ],
- "_": "3f79023b"
+ "_": "3f640072"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001017,
-  "message": "[10001017] Database op failed"
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
  }
 }
 -----------------------------------------------------------END>
@@ -143,8 +140,72 @@ response: {
  "data": {
   "code": 0,
   "message": "",
-  "info_list": [],
-  "total": 0
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "ha_name": "ha01",
+    "ha_uuid": "937DF73B-3774-C50C-DFF7-523754E5CAB7",
+    "master_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+    "node_priority": [
+     {
+      "uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+      "priority": "high",
+      "node_name": "68.211"
+     },
+     {
+      "uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
+      "priority": "high",
+      "node_name": "68.212"
+     }
+    ],
+    "rules": null,
+    "state": null,
+    "reboot_takeover": 0,
+    "auto_switch": 0,
+    "arbitration": {
+     "disk": {
+      "path": ""
+     },
+     "radio": 0
+    },
+    "heartbeat": [
+     {
+      "ifconfig": [
+       {
+        "ip": "172.20.68.211",
+        "netif": "{44FB5E10-DF89-433D-BADD-A136F8206C6F}",
+        "uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+        "label": "Ethernet0"
+       },
+       {
+        "ip": "172.20.68.212",
+        "netif": "{7C73DC69-3EFE-42CB-A162-2CA159441573}",
+        "uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
+        "label": "Ethernet0"
+       }
+      ],
+      "protocol": "tcp",
+      "port": "26850",
+      "interval": "2",
+      "maxfail": "5",
+      "ipList": "172.20.68.211_172.20.68.212",
+      "params": "\u68c0\u6d4b\u95f4\u9694(/\u79d2):2;\u6700\u5927\u5931\u8d25\u6b21\u6570:5"
+     }
+    ],
+    "monitor": [],
+    "res_switch": [],
+    "sync_data": [],
+    "switch_sync_data": 0,
+    "key_file_path": [],
+    "time": null,
+    "m_status": "HA_UNKNOWN",
+    "m_role": "HA_UNKNOWN",
+    "s_status": "HA_UNKNOWN",
+    "s_role": "HA_UNKNOWN"
+   }
+  ],
+  "total": 1
  }
 }
 -----------------------------------------------------------END>
@@ -153,7 +214,7 @@ response: {
 Method: haVerifyName
 body: {
  "ha_name": "",
- "_": "3e111725"
+ "_": "3e875384"
 }
 response: {
  "ret": 200,
@@ -172,7 +233,7 @@ body: {
  "limit": 1,
  "search_field": "group_name",
  "search_value": "",
- "_": "3d5c33b6"
+ "_": "3f22123d"
 }
 response: {
  "ret": 200,
@@ -184,7 +245,7 @@ response: {
    {
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "group_uuid": "F041CD70-F9DE-CC62-0119-C405F02C54C0",
+    "group_uuid": "2891E15C-4056-54AF-80D4-1A4381ABA9D3",
     "group_name": "111",
     "switch_confirm": 1,
     "error_confirm": 1,
@@ -218,12 +279,12 @@ response: {
        {
         "ha_name": "test3",
         "ha_uuid": "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
-        "disabled": 1
+        "disabled": true
        },
        {
         "ha_name": "test2",
         "ha_uuid": "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8",
-        "disabled": 1
+        "disabled": true
        }
       ]
      }
@@ -234,15 +295,17 @@ response: {
      "214E0B0C-6BFA-B1D7-1AFC-C11E3B5874C0",
      "2FD74EEE-CFDB-FB01-8E11-B6560B6D20F8"
     ],
-    "created_at": 1602231083,
+    "created_at": 1651714540,
     "is_biz_admin": 1,
     "can_del": 1,
     "can_op": 1,
     "can_up": 1
    }
   ],
-  "total": 1,
-  "ha_list": []
+  "total": 2,
+  "ha_list": {
+   "937DF73B-3774-C50C-DFF7-523754E5CAB7": "ha01"
+  }
  }
 }
 -----------------------------------------------------------END>
@@ -251,14 +314,14 @@ response: {
 Method: listHASwitchTaskStatus
 body: {
  "task_uuid": "F696DC12-6727-B799-93D4-8B2213086F5A",
- "_": "3f71014e"
+ "_": "3efe1f4d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -272,8 +335,13 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "total": 0,
-  "list": []
+  "total": 1,
+  "list": [
+   {
+    "ha_name": "ha01",
+    "ha_uuid": "937DF73B-3774-C50C-DFF7-523754E5CAB7"
+   }
+  ]
  }
 }
 -----------------------------------------------------------END>
@@ -309,14 +377,14 @@ body: {
    ]
   }
  },
- "_": "3f745eba"
+ "_": "3e8f4fc1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -326,7 +394,7 @@ Method: pauseHAGroupSwitch
 body: {
  "operate": "pause",
  "task_uuid": "F696DC12-6727-B799-93D4-8B2213086F5A",
- "_": "3f477da4"
+ "_": "3f1ba0f2"
 }
 response: {
  "ret": 200,
@@ -343,7 +411,7 @@ Method: resumeHAGroupSwitch
 body: {
  "operate": "resume",
  "task_uuid": "F696DC12-6727-B799-93D4-8B2213086F5A",
- "_": "3f38487b"
+ "_": "3dc12c22"
 }
 response: {
  "ret": 200,
