@@ -5,14 +5,14 @@ body: {
  "auth_name": "",
  "cred_uuid": "",
  "bk_uuid": "",
- "_": "3edf6432"
+ "_": "3f277eb5"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: bk_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -36,14 +36,14 @@ body: {
   "mirr_file_check": "0",
   "mirr_sync_flag": ""
  },
- "_": "3f3499e5"
+ "_": "3ea64b0a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: bigdata_recovery[rule_name];\n Not array: bigdata_recovery[bk_path];\n Not array: bigdata_recovery[baked_paths];\n Not array: bigdata_recovery[rc_data_path];\n Lost: bigdata_recovery[data_type];\n Lost: bigdata_recovery[cred_switch];\n Lost: bigdata_recovery[cluster_config_path];\n Lost: bigdata_recovery[mirr_sync_flag];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bigdata_recovery[rule_name];\n Not array: bigdata_recovery[bk_path];\n Lost: bigdata_recovery[data_type];\n Lost: bigdata_recovery[cred_switch];\n Lost: bigdata_recovery[cluster_config_path];\n Lost: bigdata_recovery[mirr_sync_flag];\n Lost: bigdata_recovery[bk_type];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -52,14 +52,14 @@ response: {
 Method: deleteBigdataRecovery
 body: {
  "uuids": "",
- "_": "3f6b3ccd"
+ "_": "3db97b2f"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -71,8 +71,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -82,14 +82,14 @@ Method: listBackupHistory
 body: {
  "bk_node_uuid": "",
  "bk_rule_uuid": "",
- "_": "3e51bfd8"
+ "_": "3f361179"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: bk_node_uuid;\n Lost: bk_path[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_node_uuid;\n Lost: bk_path[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -102,7 +102,7 @@ body: {
  "page": 1,
  "search_value": "",
  "type": 0,
- "_": "3e36f52c"
+ "_": "3ea931f0"
 }
 response: {
  "ret": 200,
@@ -110,8 +110,32 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [],
-  "total": 0
+  "info_list": [
+   {
+    "bk_node_name": "48.120-linux",
+    "bk_ip": "192.168.48.120",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "rule_name": "123",
+    "data_type": "HDFS",
+    "rule_type": 1,
+    "rule_uuid": "0A2FDCA0-47ED-CDF3-A4E7-318E9306DFDF",
+    "archive_pen": 0,
+    "tape_uuid": "",
+    "library_sn": "",
+    "cluster_config_path": "/usr/local/i2bb/",
+    "bk_type": 1,
+    "obs_settings": {
+     "sto_uuid": "0C97CB9F-3247-7D28-B93F-DCBA23F56268",
+     "bucket_name": "test1"
+    },
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
  }
 }
 -----------------------------------------------------------END>
@@ -119,7 +143,7 @@ response: {
 <START-----------------------------------------------------------
 Method: listBigdataRecoveryStatus
 body: {
- "_": "3f6e8354"
+ "_": "3f0f8545"
 }
 response: {
  "ret": 200,
@@ -133,24 +157,30 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: operateBigdataRecovery
+Method: startBigdataRecovery
 body: {
  "operate": "start",
  "uuids": [
   "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
  ],
- "_": "3f3a13ac"
+ "_": "3ee446c4"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -158,24 +188,30 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: operateBigdataRecovery
+Method: stopBigdataRecovery
 body: {
- "operate": "start",
+ "operate": "stop",
  "uuids": [
   "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
  ],
- "_": "3f5953e9"
+ "_": "3ed78067"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
