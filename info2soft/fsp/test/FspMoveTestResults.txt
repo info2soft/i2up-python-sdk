@@ -76,14 +76,14 @@ body: {
   "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
   "failover": "2"
  },
- "_": "3e3fb0cb"
+ "_": "3efd495a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  The fsp_move[failover] field must be one of: 0,1.;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_move[compress_switch];\n The fsp_move[failover] field must be one of: 0,1;\n Lost: fsp_move[wk_data_type];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -94,14 +94,14 @@ body: {
  "fsp_uuids": [
   "3C6B932A-9140-7C37-9639-EB8F44654F18"
  ],
- "_": "3f133e71"
+ "_": "3d29eefa"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10031017,
-  "message": "[10031017] Rule does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -117,8 +117,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -130,7 +130,7 @@ body: {
  "limit": 1,
  "page": 1,
  "search_value": "",
- "_": "3f004954"
+ "_": "3f33ebf1"
 }
 response: {
  "ret": 200,
@@ -138,31 +138,8 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [
-   {
-    "cmp_switch": "0",
-    "band_width": "",
-    "bk_path_policy": "0",
-    "random_str": "2DFAFFD7-97EF-D280-106F-400F810BDF33",
-    "bkup_schedule": null,
-    "bkup_policy": 2,
-    "wk_node_name": "test-68.211",
-    "bk_node_name": "TEST-68.212",
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "bk_uuid": "62A2AC5C-D70A-FDF0-EBD1-4084C36E9404",
-    "fsp_name": "test3",
-    "fsp_type": 1,
-    "fsp_uuid": "F84EE60E-5BCB-974C-9C82-8B31A588CD43",
-    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-    "wk_data_type": 1,
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   }
-  ],
-  "total": 1
+  "info_list": [],
+  "total": 0
  }
 }
 -----------------------------------------------------------END>
@@ -172,14 +149,14 @@ Method: listFspMoveDir
 body: {
  "fsp_uuid": "",
  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
- "_": "3f500636"
+ "_": "3d37d5ef"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
   "hd_list": [],
   "dir_list": null,
   "os_type": null
@@ -191,14 +168,14 @@ response: {
 Method: listFspMoveDriverInfo
 body: {
  "wk_uuid": "",
- "_": "3f4e5714"
+ "_": "3df60e7e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10061101,
-  "message": "[10061101] Fail to connect work node.",
+  "code": 1010061101,
+  "message": "[1010061101] Fail to connect work node.",
   "driver_list": []
  }
 }
@@ -209,7 +186,7 @@ Method: listFspMoveNic
 body: {
  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
- "_": "3eb235fb"
+ "_": "3f13a3a3"
 }
 response: {
  "ret": 200,
@@ -217,52 +194,8 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "wk_nic_list": [
-   {
-    "name": "VMware Network Adapter VMnet1",
-    "type": "0",
-    "ip": "172.16.75.1/255.255.255.0",
-    "gw": "",
-    "dns": ""
-   },
-   {
-    "name": "VMware Network Adapter VMnet8",
-    "type": "1",
-    "ip": "172.16.174.1/255.255.255.0",
-    "gw": "",
-    "dns": ""
-   },
-   {
-    "name": "\u672c\u5730\u8fde\u63a5",
-    "type": "0",
-    "ip": "192.168.7.250/255.255.192.0",
-    "gw": "192.168.1.10",
-    "dns": "8.8.8.8;114.114.114.114"
-   }
-  ],
-  "bk_nic_list": [
-   {
-    "name": "VMware Network Adapter VMnet1",
-    "type": "0",
-    "ip": "172.16.75.1/255.255.255.0",
-    "gw": "",
-    "dns": ""
-   },
-   {
-    "name": "VMware Network Adapter VMnet8",
-    "type": "1",
-    "ip": "172.16.174.1/255.255.255.0",
-    "gw": "",
-    "dns": ""
-   },
-   {
-    "name": "\u672c\u5730\u8fde\u63a5",
-    "type": "0",
-    "ip": "192.168.7.250/255.255.192.0",
-    "gw": "192.168.1.10",
-    "dns": "8.8.8.8;114.114.114.114"
-   }
-  ]
+  "wk_nic_list": 1011110001,
+  "bk_nic_list": 1011110001
  }
 }
 -----------------------------------------------------------END>
@@ -270,7 +203,7 @@ response: {
 <START-----------------------------------------------------------
 Method: listFspMoveStatus
 body: {
- "_": "3f3f810c"
+ "_": "3e55584c"
 }
 response: {
  "ret": 200,
@@ -364,14 +297,14 @@ body: {
   ],
   "band_width": "3*03:00-16:00*2m"
  },
- "_": "3f5b57fd"
+ "_": "3f513c82"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  The fsp_move[failover] field must be one of: 0,1.;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_move[compress_switch];\n The fsp_move[failover] field must be one of: 0,1;\n Lost: fsp_move[wk_data_type];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -383,18 +316,24 @@ body: {
  "fsp_uuids": [
   "3C6B932A-9140-7C37-9639-EB8F44654F18"
  ],
- "_": "3d1f9346"
+ "_": "3f41fde5"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -408,18 +347,24 @@ body: {
  "fsp_uuids": [
   "3C6B932A-9140-7C37-9639-EB8F44654F18"
  ],
- "_": "3e1d87d2"
+ "_": "3f5fc456"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -433,18 +378,24 @@ body: {
  "fsp_uuids": [
   "3C6B932A-9140-7C37-9639-EB8F44654F18"
  ],
- "_": "3f384326"
+ "_": "3e4d62e7"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -458,18 +409,24 @@ body: {
  "fsp_uuids": [
   "3C6B932A-9140-7C37-9639-EB8F44654F18"
  ],
- "_": "3f5a5493"
+ "_": "3f4b606a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -481,14 +438,14 @@ Method: verifyFspMoveLicense
 body: {
  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
- "_": "3ddca553"
+ "_": "3f0428f0"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10110022,
-  "message": "[10110022] Unable to get node hardware code."
+  "code": 1010110022,
+  "message": "[1010110022] Unable to get node hardware code."
  }
 }
 -----------------------------------------------------------END>
@@ -498,7 +455,7 @@ Method: verifyFspMoveOldRule
 body: {
  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
- "_": "3f2d8309"
+ "_": "3c2f6ff6"
 }
 response: {
  "ret": 200,
@@ -515,14 +472,14 @@ Method: verifyFspMoveOsVersion
 body: {
  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
- "_": "3b8a5b6a"
+ "_": "3f0e572d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: mode;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mode;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -533,17 +490,147 @@ body: {
  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
  "sync_item": "/",
- "_": "3dace500"
+ "_": "3e9c94bf"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
   "wk_vol_list": [],
   "bk_vol_list": [],
   "lost_volume": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebootFspMove
+body: {
+ "operate": "reboot",
+ "fsp_uuids": [
+  "3C6B932A-9140-7C37-9639-EB8F44654F18"
+ ],
+ "_": "3e322520"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveEnvironment
+body: {
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "wk_path": [
+  {
+   "": ""
+  }
+ ],
+ "bk_path": [
+  {
+   "": ""
+  }
+ ],
+ "_": "3dc8383b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchCreateFspMove
+body: {
+ "base_info_list": {
+  "service_uuid": "",
+  "monitor_type": 0,
+  "compress": 0,
+  "net_mapping": [
+   {
+    "bk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.74/255.255.240.0"
+    },
+    "wk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.73/255.255.240.0"
+    }
+   }
+  ],
+  "encrypt_switch": 0,
+  "mirr_open_type": "0",
+  "mirr_sync_flag": "0",
+  "net_mapping_type": "2",
+  "mirr_sync_attr": "1",
+  "band_width": "",
+  "fsp_wk_shut_flag": 2,
+  "secret_key": "",
+  "mirr_file_check": "0",
+  "failover": 0,
+  "excl_driver": [
+   "inf1",
+   "inf2"
+  ],
+  "compress_switch": 1,
+  "encrypt": 1,
+  "wk_data_type": 1,
+  "auto_start": 1,
+  "bkup_one_time": 1,
+  "backup_type": ""
+ },
+ "common_params": {
+  "batch_name": "",
+  "rep_prefix": "",
+  "rep_sufix": "",
+  "variable_type": 0
+ },
+ "node_list": [
+  {
+   "bk_uuid": "",
+   "excl_path": [],
+   "bk_path": [],
+   "wk_uuid": "",
+   "wk_path": [],
+   "proxy_uuid": "",
+   "data_ip_uuid": "",
+   "sync_item": "/"
+  }
+ ],
+ "_": "3f1ef54a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
  }
 }
 -----------------------------------------------------------END>

@@ -358,6 +358,36 @@ class FspRecoveryTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'FspRecovery', 'listFspRecoveryNic', body)
 
+    def testVerifyEnvironment(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': 'F85DFEC0-149E-373D-0B9E-3DA9A5C43940',
+            'wk_uuid': '42614852-BB62-1EF7-FED0-D2354BF3149D',
+            'wk_path': '/fsp_bk/192.168.71.77_26821/20190111113656/',
+            'cbt_switch': 1,
+            'task_type': 6
+        }
+
+        fspRecovery = FspRecovery(a)
+        r = fspRecovery.verifyEnvironment(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspRecovery', 'verifyEnvironment', body)
+
+    def testListFspRecoveryDriverInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': 'F85DFEC0-149E-373D-0B9E-3DA9A5C43940',
+            'backup_dir': '/fsp_bk/192.168.71.77_26821/20190111113656/',
+            'restore_point': '42614852-BB62-1EF7-FED0-D2354BF3149D',
+        }
+
+        fspRecovery = FspRecovery(a)
+        r = fspRecovery.listFspRecoveryDriverInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspRecovery', 'listFspRecoveryDriverInfo', body)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -226,14 +226,27 @@ class FspRecovery(object):
         return res
 
     '''
-     * 全服恢复-0 获取两节点网卡列表
+     * 环境检查
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def listFspRecoveryNic(self, body):
+    def verifyEnvironment(self, body):
 
-        url = '{0}/fsp/recovery/nic_list'.format(config.get_default('default_api_host'))
+        url = '{0}/fsp/backup/verify_environment'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 全服恢复-获取磁盘信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listFspRecoveryDriverInfo(self, body):
+
+        url = '{0}/fsp/recovery/driver_info'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
         return res

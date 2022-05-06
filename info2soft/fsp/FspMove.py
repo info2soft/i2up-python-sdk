@@ -85,6 +85,19 @@ class FspMove (object):
         return res
 
     '''
+     * 1 检测迁移条件 - 环境监测
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def verifyFspMoveEnvironment(self, body):
+
+        url = '{0}/fsp/move/verify_environment'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 新建规则
      * 
      * @param dict body  参数详见 API 手册
@@ -190,6 +203,19 @@ class FspMove (object):
         
         url = '{0}/fsp/move/status'.format(config.get_default('default_api_host'))
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 业务迁移 - 批量创建
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def batchCreateFspMove(self, body):
+
+        url = '{0}/fsp/move/batch'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 
     '''

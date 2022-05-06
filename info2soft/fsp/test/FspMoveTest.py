@@ -103,6 +103,23 @@ class FspMoveTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'FspMove', 'verifyFspMoveOsVersion', body)
 
+    def testVerifyFspMoveEnvironment(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': '',
+            'bk_uuid': '',
+            'wk_path': [{
+            '': ''}],
+            'bk_path': [{
+            '': ''}],
+        }
+
+        fspMove = FspMove(a)
+        r = fspMove.verifyFspMoveEnvironment(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'fspMove', 'verifyFspMoveEnvironment', body)
+
     def testCreateFspMove(self):
         a = Auth(username, pwd)
         body = {
@@ -338,7 +355,7 @@ class FspMoveTestCase(unittest.TestCase):
     def testRebootFspMove(self):
         a = Auth(username, pwd)
         body = {
-            'operate': 'move',
+            'operate': 'reboot',
             'fsp_uuids': ['3C6B932A-9140-7C37-9639-EB8F44654F18'],
         }
         fspMove = FspMove(a)
@@ -358,6 +375,63 @@ class FspMoveTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'FspMove', 'listFspMoveStatus', body)
+
+    def testBatchCreateFspMove(self):
+        a = Auth(username, pwd)
+        body = {
+            'base_info_list': {
+            'service_uuid': '',
+            'monitor_type': 0,
+            'compress': 0,
+            'net_mapping': [{
+            'bk_nic': {
+            'name': 'Ethernet0',
+            'type': '0',
+            'ip': '192.168.72.74/255.255.240.0',},
+            'wk_nic': {
+            'name': 'Ethernet0',
+            'type': '0',
+            'ip': '192.168.72.73/255.255.240.0'}}],
+            'encrypt_switch': 0,
+            'mirr_open_type': '0',
+            'mirr_sync_flag': '0',
+            'net_mapping_type': '2',
+            'mirr_sync_attr': '1',
+            'band_width': '',
+            'fsp_wk_shut_flag': 2,
+            'secret_key': '',
+            'mirr_file_check': '0',
+            'failover': 0,
+            'excl_driver': [
+            'inf1',
+            'inf2',],
+            'compress_switch': 1,
+            'encrypt': 1,
+            'wk_data_type': 1,
+            'auto_start': 1,
+            'bkup_one_time': 1,
+            'backup_type': '',},
+            'common_params': {
+            'batch_name': '',
+            'rep_prefix': '',
+            'rep_sufix': '',
+            'variable_type': 0},
+            'node_list': [{
+            'bk_uuid': '',
+            'excl_path': [],
+            'bk_path': [],
+            'wk_uuid': '',
+            'wk_path': [],
+            'proxy_uuid': '',
+            'data_ip_uuid': '',
+            'sync_item': '/'}]
+        }
+
+        fspMove = FspMove(a)
+        r = fspMove.batchCreateFspMove(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'FspMove', 'batchCreateFspMove', body)
 
     def testListFspMoveDriverInfo(self):
         a = Auth(username, pwd)

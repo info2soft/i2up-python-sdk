@@ -1,0 +1,642 @@
+<START-----------------------------------------------------------
+Method: batchCreateFspBackup
+body: {
+ "base_info_list": {
+  "secret_key": "",
+  "band_width": "",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "mirr_sync_attr": "1",
+  "wk_data_type": 1,
+  "sync_item": "/",
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "0",
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 1,
+  "bkup_schedule": [
+   {
+    "sched_day": 4,
+    "sched_time": "11:29",
+    "sched_every": 2,
+    "limit": 44,
+    "backup_type": 0,
+    "policys": "\"\u6bcf\u592922:00\u81ea\u52a8\u6267\u884c\"",
+    "backup_type_show": "\"\u5168\u5907\"",
+    "running_time": "\"22:00\""
+   }
+  ],
+  "fsp_type": 3,
+  "del_policy": 1,
+  "timeout": 1,
+  "cbt_switch": 1,
+  "threshold_vaild_byte": "",
+  "advanced_policy": {
+   "bk_cdp": 1,
+   "execute_interval": 1,
+   "cdp_detail": 1,
+   "cdp_daily": 1,
+   "cdp_param": "",
+   "cdp_switch": 1
+  },
+  "tgt_uuid": "",
+  "new_dc": "",
+  "new_dc_mor": "",
+  "new_host": "",
+  "new_ds": "",
+  "network_name": "",
+  "network_id": ""
+ },
+ "common_params": {
+  "batch_name": "",
+  "rep_prefix": "",
+  "rep_sufix": "",
+  "variable_type": 1
+ },
+ "node_list": [
+  {
+   "bk_uuid": "",
+   "excl_path": [],
+   "bk_path": [],
+   "wk_uuid": "",
+   "wk_path": [],
+   "vm_name": "",
+   "new_vm_name": "",
+   "custom_config": 1,
+   "cpu": "",
+   "core_per_sock": "",
+   "mem_mb": "",
+   "dynamic_mem": "",
+   "add_drill": 1,
+   "auto": 1,
+   "orch_vm_name": "",
+   "scripts_type": "",
+   "scripts": "",
+   "os_type": 1
+  }
+ ],
+ "_": "3f74f3eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFspBackup
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "3*03:00-14:00*2m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:12",
+    "sched_day": 23,
+    "sched_gap_min": 61,
+    "sched_time": "11:31",
+    "sched_time_start": "04:10",
+    "sched_every": 2,
+    "limit": 9
+   }
+  ],
+  "fsp_type": 1
+ },
+ "_": "3e8aadba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 1,2,3,4,8;\n Lost: fsp_backup[start_type];\n The fsp_backup[fsp_type] field must be one of: 3,10;\n Lost: fsp_backup[cbt_switch];\n Lost: fsp_backup[bk_file_crypt];\n Lost: fsp_backup[compress_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspBackup
+body: {
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3e163efc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFspBackup
+body: {
+ "fsp_backup": {
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failbackFspBackup
+body: {
+ "operate": "failback",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3f5b335a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: failoverFspBackup
+body: {
+ "operate": "failover",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3e12113d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: finishFspBackup
+body: {
+ "operate": "finish",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3f1aebbb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackup
+body: {
+ "type": 1,
+ "_": "3f70ac4b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The type field must be one of: 3,5,10,11;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDir
+body: {
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "fsp_uuid": "",
+ "_": "3e3aad2f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "hd_list": [],
+  "dir_list": null,
+  "os_type": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDriverInfo
+body: {
+ "node_uuid": "",
+ "_": "3f35982c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupNic
+body: {
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "_": "3f0a1b8f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "wk_nic_list": 1011110001,
+  "bk_nic_list": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupStatus
+body: {
+ "_": "3ef2a127"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspBackup
+body: {
+ "fsp_backup": {
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+  "secret_key": "",
+  "band_width": "3*03:00-19:00*16m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:50",
+    "sched_day": 22,
+    "sched_gap_min": 31,
+    "sched_time": "01:06",
+    "sched_time_start": "13:35",
+    "sched_every": 2,
+    "limit": 29
+   }
+  ],
+  "fsp_type": 1
+ },
+ "_": "3e5c295c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 1,2,3,4,8;\n Lost: fsp_backup[start_type];\n The fsp_backup[fsp_type] field must be one of: 3,10;\n Lost: fsp_backup[cbt_switch];\n Lost: fsp_backup[bk_file_crypt];\n Lost: fsp_backup[compress_switch];\n Lost: fsp_backup[random_str];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspBackup
+body: {
+ "operate": "start",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3da06429"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopFspBackup
+body: {
+ "operate": "stop",
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3ed140b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupCoopySpace
+body: {
+ "bk_path": [
+  "/FSPback0107/"
+ ],
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "excl_path": [
+  "/cgroup/",
+  "/dev/",
+  "/etc/X11/xorg.conf/",
+  "/etc/init.d/i2node/",
+  "/etc/rc.d/init.d/i2node/",
+  "/etc/sdata/",
+  "/lost+found/",
+  "/media/",
+  "/mnt/",
+  "/proc/",
+  "/run/",
+  "/selinux/",
+  "/sys/",
+  "/tmp/",
+  "/usr/local/sdata/",
+  "/var/i2/",
+  "/var/i2data/",
+  "/var/lock/",
+  "/var/run/vmblock-fuse/"
+ ],
+ "wk_path": [
+  "/",
+  "/boot/"
+ ],
+ "_": "3d72fe9c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "bk_disk_need": 0,
+  "bk_disk_free": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupLicense
+body: {
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "_": "3ed9d62c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupOldRule
+body: {
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "bk_path": [
+  "/FSPback0107/"
+ ],
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "_": "3f70ee64"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupOsVersion
+body: {
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "_": "3f274240"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "wk_os_ver": 0,
+  "bk_os_ver": 0
+ }
+}
+-----------------------------------------------------------END>
+
