@@ -313,6 +313,166 @@ class TimingBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'TimingRecovery', 'listTimingRecoveryOracleRcPointInfo', body)
 
+    def testListTimingRecoveryDb(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
+            'rc_data_path': 'E:/mssqlBK/ts-11111111-1111-1111-1111-111111111111/',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.listTimingRecoveryDb(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'listTimingRecoveryDb', body)
+
+    def testListTimingRecoveryGaussTime(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'bk_path': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.listTimingRecoveryGaussTime(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'listTimingRecoveryGaussTime', body)
+
+    def testDescribeTimingRecoveryDmBackupInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+            'bk_path': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.describeTimingRecoveryDmBackupInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'describeTimingRecoveryDmBackupInfo', body)
+
+    def testOperateVolume(self):
+        a = Auth(username, pwd)
+        body = {
+            'volume_uuid': '',
+            'node_uuid': '',
+            'operate': 'mount',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.operateVolume(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'operateVolume', body)
+
+    def testListTimingBackupPoint(self):
+        a = Auth(username, pwd)
+        body = {
+            'task_uuid': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.listTimingBackupPoint(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'listTimingBackupPoint', body)
+
+    def testTaskMountDir(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+            'bakdir': '',
+            'rc_point': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.taskMountDir(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'taskMountDir', body)
+
+    def testDescribeGroupTimingRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.describeGroupTimingRecovery(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'describeGroupTimingRecovery', body)
+
+    def testTimingRecoveryCheckDir(self):
+        a = Auth(username, pwd)
+        body = {
+            'check_type': 1,
+            'file_dir': [],
+            'node_uuid': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.timingRecoveryCheckDir(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'timingRecoveryCheckDir', body)
+
+    def testListTimingRecoveryDbInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'rc_data_path': '',
+            'bk_uuid': '',
+            'wk_data_type': '4',
+            'bk_storage': 1,
+            'obs_settings': {},
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.listTimingRecoveryDbInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'listTimingRecoveryDbInfo', body)
+
+    def testDescribeRcMysqlInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': 'B8566905-411E-B2CD-A742-77B1346D8E84',
+            'rc_data_path': 'E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.describeRcMysqlInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'describeRcMysqlInfo', body)
+
+    def testListSbtContrlFile(self):
+        a = Auth(username, pwd)
+        body = {
+            'rc_data_path': '',
+            'ora_content_type': 1,
+            'bk_uuid': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.listSbtContrlFile(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'listSbtContrlFile', body)
+
+    def testDescribeSbtDbid(self):
+        a = Auth(username, pwd)
+        body = {
+            'file_name': '',
+            'bk_uuid': '',
+        }
+
+        timingRecovery = TimingRecovery(a)
+        r = timingRecovery.describeSbtDbid(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingRecovery', 'describeSbtDbid', body)
+
 
 if __name__ == '__main__':
     unittest.main()

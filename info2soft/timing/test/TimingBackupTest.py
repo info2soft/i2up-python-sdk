@@ -86,6 +86,25 @@ class TimingBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'TimingBackup', 'descibeTimingBackupOracleSriptPath', body)
 
+    def testDescibeDmDbInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'dm_home': '',
+            'host': '',
+            'port': '',
+            'user': '',
+            'password': '',
+            'type': 1,
+            'schema_name': '',
+            'node_uuid': '',
+        }
+
+        timingBackup = TimingBackup(a)
+        r = timingBackup.descibeDmDbInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'descibeDmDbInfo', body)
+
     def testListTimingBackupMssqlDbList(self):
         a = Auth(username, pwd)
         body = {
@@ -395,6 +414,19 @@ class TimingBackupTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'TimingBackup', 'describeTimingBackupOracleContent', body)
+
+    def testShowTimingBackupDetailInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'task_uuid': '',
+            'timing_type': 3,
+        }
+
+        timingBackup = TimingBackup(a)
+        r = timingBackup.showTimingBackupDetailInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'TimingBackup', 'showTimingBackupDetailInfo', body)
 
     def testVerifyTimingBackupOracleLogin(self):
         a = Auth(username, pwd)

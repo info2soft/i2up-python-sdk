@@ -144,6 +144,12 @@ class VirtualizationSupport(object):
     '''
 
     def startVpBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
         url = '{0}/vp/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -158,6 +164,12 @@ class VirtualizationSupport(object):
     '''
 
     def stopVpBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/vp/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -174,6 +186,19 @@ class VirtualizationSupport(object):
     def deleteVpBackup(self, body):
 
         url = '{0}/vp/backup'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * 虚机备份 - 删除备份点
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def deleteVpBackupPoint(self, body):
+
+        url = '{0}/vp/backup/backup_data'.format(config.get_default('default_api_host'))
 
         res = https._delete(url, body, self.auth)
         return res
@@ -243,6 +268,12 @@ class VirtualizationSupport(object):
     '''
 
     def startVpRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
         url = '{0}/vp/recovery/operate'.format(config.get_default('default_api_host'))
 
@@ -257,6 +288,12 @@ class VirtualizationSupport(object):
     '''
 
     def stopVpRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/vp/recovery/operate'.format(config.get_default('default_api_host'))
 
@@ -271,6 +308,12 @@ class VirtualizationSupport(object):
     '''
 
     def clearFinishVpRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'clear_finish'
+            }
+        else:
+            body['operate'] = 'clear_finish'
 
         url = '{0}/vp/recovery/operate'.format(config.get_default('default_api_host'))
 
@@ -475,6 +518,12 @@ class VirtualizationSupport(object):
     '''
 
     def stopVpMove(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/vp/move/operate'.format(config.get_default('default_api_host'))
 
@@ -489,6 +538,12 @@ class VirtualizationSupport(object):
     '''
 
     def startVpMove(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
         url = '{0}/vp/move/operate'.format(config.get_default('default_api_host'))
 
@@ -503,6 +558,12 @@ class VirtualizationSupport(object):
     '''
 
     def moveVpMove(self, body):
+        if body is None:
+            body = {
+                'operate': 'move'
+            }
+        else:
+            body['operate'] = 'move'
 
         url = '{0}/vp/move/operate'.format(config.get_default('default_api_host'))
 
@@ -517,6 +578,12 @@ class VirtualizationSupport(object):
     '''
 
     def stopVpRep(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/vp/rep/operate'.format(config.get_default('default_api_host'))
 
@@ -531,6 +598,12 @@ class VirtualizationSupport(object):
     '''
 
     def startVpRep(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
         url = '{0}/vp/rep/operate'.format(config.get_default('default_api_host'))
 
@@ -545,6 +618,12 @@ class VirtualizationSupport(object):
     '''
 
     def failoverVpRep(self, body):
+        if body is None:
+            body = {
+                'operate': 'failover'
+            }
+        else:
+            body['operate'] = 'failover'
 
         url = '{0}/vp/rep/operate'.format(config.get_default('default_api_host'))
 
@@ -559,6 +638,12 @@ class VirtualizationSupport(object):
     '''
 
     def failbackVpRep(self, body):
+        if body is None:
+            body = {
+                'operate': 'failback'
+            }
+        else:
+            body['operate'] = 'failback'
 
         url = '{0}/vp/rep/operate'.format(config.get_default('default_api_host'))
 
@@ -573,6 +658,12 @@ class VirtualizationSupport(object):
     '''
 
     def createTargeVm(self, body):
+        if body is None:
+            body = {
+                'operate': 'create_target_vm'
+            }
+        else:
+            body['operate'] = 'create_target_vm'
 
         url = '{0}/vp/rep/operate'.format(config.get_default('default_api_host'))
 
@@ -682,6 +773,21 @@ class VirtualizationSupport(object):
         return res
 
     '''
+     * 文件恢复 - 修改
+     * 
+     * @body['uuid'] String  必填 节点uuid
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def modifyVpFileRecovery(self, body, uuid):
+        if uuid is None:
+            exit()
+        url = '{0}/vp/file_recovery/{1}'.format(config.get_default('default_api_host'), uuid)
+
+        res = https._put(url, body, self.auth)
+        return res
+
+    '''
      * 虚机文件恢复 - 获取单个
      * 
      * @body['uuid'] String  必填 节点uuid
@@ -708,6 +814,82 @@ class VirtualizationSupport(object):
         url = '{0}/vp/file_recovery'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 文件恢复 - 操作 挂载
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def attachVpFileRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'attach'
+            }
+        else:
+            body['operate'] = 'attach'
+
+        url = '{0}/vp/file_recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 文件恢复 - 操作 卸载
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def detachVpFileRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'detach'
+            }
+        else:
+            body['operate'] = 'detach'
+
+        url = '{0}/vp/file_recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 文件恢复 - 操作 启动
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startVpFileRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
+
+        url = '{0}/vp/file_recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 文件恢复 - 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopVpFileRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
+
+        url = '{0}/vp/file_recovery/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -810,6 +992,19 @@ class VirtualizationSupport(object):
         return res
 
     '''
+     * 演练规则 - 获取控制台地址
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getConsoleUrl(self, body):
+
+        url = '{0}/vp/drill/console_url'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 演练规则 - 操作 停止
      * 
      * @param dict $body  参数详见 API 手册
@@ -817,6 +1012,12 @@ class VirtualizationSupport(object):
     '''
 
     def stopVpDrill(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/vp/drill/operate'.format(config.get_default('default_api_host'))
 
@@ -831,6 +1032,12 @@ class VirtualizationSupport(object):
     '''
 
     def startVpDrill(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
         url = '{0}/vp/drill/operate'.format(config.get_default('default_api_host'))
 
@@ -845,6 +1052,12 @@ class VirtualizationSupport(object):
     '''
 
     def setStatusVpDrill(self, body):
+        if body is None:
+            body = {
+                'operate': 'set_status'
+            }
+        else:
+            body['operate'] = 'set_status'
 
         url = '{0}/vp/drill/operate'.format(config.get_default('default_api_host'))
 

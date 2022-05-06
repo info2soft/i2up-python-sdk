@@ -76,14 +76,14 @@ body: {
   "task_type": 0,
   "file_check_dir": ""
  },
- "_": "3ed6abac"
+ "_": "3f5c39f7"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: timing_backup[file_check_switch];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_backup[thread_num];\n Lost: timing_backup[compress_switch];\n Lost: timing_backup[mirr_file_check];\n Lost: timing_backup[timing_type];\n Lost: timing_backup[file_check_switch];\n Lost: timing_backup[bk_file_crypt];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -94,14 +94,14 @@ body: {
  "task_uuids": [
   "C04AE9FD-23A9-E389-61B2-89EF4D145DA2"
  ],
- "_": "3f7800d9"
+ "_": "3e29761e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: del_policy;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -110,14 +110,14 @@ response: {
 Method: descibeTimingBackupOracleSriptPath
 body: {
  "wk_uuid": "B61C4858-748D-0253-0F2F-76669902A53D",
- "_": "3f644bcf"
+ "_": "3f2c9505"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -131,8 +131,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -141,14 +141,14 @@ response: {
 Method: describeTimingBackupMssqlSource
 body: {
  "wk_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
- "_": "3f2cc519"
+ "_": "3ec1ded8"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -163,14 +163,14 @@ body: {
   "ora_content_type": 0
  },
  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
- "_": "3ea1ca2b"
+ "_": "3f256479"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: oracle_settings[ora_sid_name];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: oracle_settings[ora_sid_name];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -183,7 +183,7 @@ body: {
  "page": 1,
  "search_value": "",
  "type": 0,
- "_": "3f49015b"
+ "_": "3f7e4107"
 }
 response: {
  "ret": 200,
@@ -193,89 +193,47 @@ response: {
   "message": "[0] success",
   "info_list": [
    {
-    "wk_node_name": "rac-26.94",
-    "bk_node_name": "test-68.211",
+    "wk_node_name": "68.211",
+    "wk_ip": "172.20.68.211",
+    "bk_node_name": "68.212",
+    "bk_ip": "172.20.68.212",
+    "tape_node_uuid": null,
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
     "bk_data_type": 1,
-    "task_name": "rac-bak",
+    "task_name": "bk01",
     "task_type": 0,
-    "task_uuid": "D6F7DB8B-9B12-C2CF-26FF-DEFFED1BB2FB",
-    "wk_uuid": "93240783-BD0A-95A0-E7C7-872F88B6BE1C",
-    "wk_data_type": 3,
-    "bkup_policy": 2,
-    "bkup_schedule": [],
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   },
-   {
-    "wk_node_name": "test-68.211",
-    "bk_node_name": "test-68.211",
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-    "bk_data_type": 1,
-    "task_name": "test-bk2",
-    "task_type": 0,
-    "task_uuid": "427AA64D-C5FC-D490-E31C-DD74E8FA019C",
-    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "task_uuid": "8931FBDA-924C-FD8A-435A-43E9C011F1B4",
+    "wk_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
     "wk_data_type": 1,
     "bkup_policy": 2,
     "bkup_schedule": [],
+    "last_result": null,
+    "last_success_result": null,
+    "archive_pen": 0,
+    "tape_uuid": null,
+    "library_sn": null,
+    "group_uuid": "840F31FC-9100-7BC6-4304-2E77AC001C9B",
+    "is_group": 0,
+    "group_name": "bk01",
+    "state": {
+     "task_uuid": "8931FBDA-924C-FD8A-435A-43E9C011F1B4",
+     "status": "FINISH",
+     "time": 1651722341,
+     "last_result": null,
+     "last_success_result": null,
+     "progress": 100,
+     "current": 572
+    },
     "is_biz_admin": 1,
     "can_del": 1,
     "can_op": 1,
-    "can_up": 1
-   },
-   {
-    "wk_node_name": "test-68.211",
-    "bk_node_name": "test-68.211",
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-    "bk_data_type": 1,
-    "task_name": "TEST-BK1",
-    "task_type": 0,
-    "task_uuid": "CD2B4612-D422-8389-5CB3-359FA3CFAFAF",
-    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-    "wk_data_type": 1,
-    "bkup_policy": 1,
-    "bkup_schedule": [
-     {
-      "backup_type_show": "\u5168\u5907",
-      "policys": "\u6bcf\u592902:02\u81ea\u52a8\u6267\u884c",
-      "backup_type": 0,
-      "sched_every": 0,
-      "running_time": "02:02",
-      "sched_time": [
-       "02:02"
-      ],
-      "sched_day": [],
-      "limit": 2
-     },
-     {
-      "backup_type_show": "\u5168\u5907",
-      "policys": "\u6bcf\u592906:03\u81ea\u52a8\u6267\u884c",
-      "backup_type": 0,
-      "sched_every": 0,
-      "running_time": "06:03",
-      "sched_time": [
-       "06:03"
-      ],
-      "sched_day": [],
-      "limit": 2
-     }
-    ],
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
+    "can_up": 1,
+    "children": []
    }
   ],
-  "total": 3
+  "total": 1
  }
 }
 -----------------------------------------------------------END>
@@ -291,14 +249,14 @@ body: {
   "data_source": "WIN-EGKN86NF3PM",
   "user_id": "sa"
  },
- "_": "3e8a6457"
+ "_": "3d4fe56a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mssql_settings[protocol];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -306,7 +264,7 @@ response: {
 <START-----------------------------------------------------------
 Method: listTimingBackupStatus
 body: {
- "_": "3ecdc2c7"
+ "_": "3eef362f"
 }
 response: {
  "ret": 200,
@@ -399,14 +357,14 @@ body: {
   "task_type": 0,
   "random_str": ""
  },
- "_": "3e30265e"
+ "_": "3f7533c3"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: timing_backup[file_check_switch];\n Lost: timing_backup[random_str];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_backup[compress_switch];\n Lost: timing_backup[mirr_file_check];\n Lost: timing_backup[timing_type];\n Lost: timing_backup[file_check_switch];\n Lost: timing_backup[bk_file_crypt];\n Lost: timing_backup[random_str];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -418,14 +376,14 @@ body: {
  "task_uuids": [
   "C04AE9FD-23A9-E389-61B2-89EF4D145DA2"
  ],
- "_": "3f649415"
+ "_": "3e925e6e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  The operate field must be one of: start,stop.;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: start,stop,start_immediately;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -437,18 +395,24 @@ body: {
  "task_uuids": [
   "C04AE9FD-23A9-E389-61B2-89EF4D145DA2"
  ],
- "_": "3f726683"
+ "_": "3f254e4c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -462,18 +426,24 @@ body: {
  "task_uuids": [
   "C04AE9FD-23A9-E389-61B2-89EF4D145DA2"
  ],
- "_": "3c45108d"
+ "_": "3f1ef02d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
   "fail_list": [
    {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
    }
   ]
  }
@@ -490,14 +460,14 @@ body: {
   "ora_passwd": "Info1234"
  },
  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
- "_": "3f3ca38d"
+ "_": "3f59560c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: oracle_settings[ora_sid_name];\n Lost: oracle_settings[ora_home_path];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: oracle_settings[ora_sid_name];\n Lost: oracle_settings[ora_home_path];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -513,14 +483,66 @@ body: {
   "ora_server_name": "",
   "ora_server_port": ""
  },
- "_": "3e60d211"
+ "_": "3f7d2900"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: wk_uuid;\n Lost: oracle_settings[ora_sid_name];\n Lost: oracle_settings[ora_login_pwd];\n Lost: oracle_settings[ora_login_name];\n Lost: oracle_settings[ora_server_name];\n Lost: oracle_settings[ora_server_port];\n"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRcMysqlInfo
+body: {
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
+ "_": "3f644644"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSbtDbid
+body: {
+ "file_name": "",
+ "bk_uuid": "",
+ "_": "3e9d3e1e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: file_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSbtContrlFile
+body: {
+ "rc_data_path": "",
+ "ora_content_type": 1,
+ "bk_uuid": "",
+ "_": "3efa4181"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n The ora_content_type field must be one of: 6,7;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -529,49 +551,119 @@ response: {
 Method: listTimingRecoveryDb
 body: {
  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
- "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
- "_": "3f5d0eb7"
+ "rc_data_path": "E:/mssqlBK/ts-11111111-1111-1111-1111-111111111111/",
+ "_": "3d040597"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listTimingRecoveryDb
+Method: listTimingRecoveryDbInfo
 body: {
- "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
- "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
- "_": "3f355b04"
+ "rc_data_path": "",
+ "bk_uuid": "",
+ "wk_data_type": "4",
+ "bk_storage": 1,
+ "obs_settings": {},
+ "_": "3f028439"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listTimingRecoveryDb2Time
+Method: timingRecoveryCheckDir
 body: {
- "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
- "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
- "_": "3f160218"
+ "check_type": 1,
+ "file_dir": [],
+ "node_uuid": "",
+ "_": "3e58d09a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: file_dir[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGroupTimingRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: timingRecoveryCheckDir
+body: {
+ "check_type": 1,
+ "file_dir": [],
+ "node_uuid": "",
+ "_": "3f32c5c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: file_dir[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSbtDbid
+body: {
+ "file_name": "",
+ "bk_uuid": "",
+ "_": "3f4d89e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: file_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSbtContrlFile
+body: {
+ "rc_data_path": "",
+ "ora_content_type": 1,
+ "bk_uuid": "",
+ "_": "3f301c13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n The ora_content_type field must be one of: 6,7;\n"
  }
 }
 -----------------------------------------------------------END>

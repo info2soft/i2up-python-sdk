@@ -92,14 +92,14 @@ body: {
   "biz_grp_list": [],
   "biz_grp_name": []
  },
- "_": "3f2455cd"
+ "_": "3f499479"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10110011,
-  "message": "[10110011] The node / virtual platform has no license associated with this feature."
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_recovery[compress_switch];\n Lost: timing_recovery[thread_num];\n Lost: timing_recovery[bk_file_crypt];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -110,14 +110,61 @@ body: {
  "task_uuids": [
   "11111111-1111-1111-1111-111111111111"
  ],
- "_": "3f2555e5"
+ "_": "3b540eab"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGroupTimingRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRcMysqlInfo
+body: {
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
+ "_": "3f601ea6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSbtDbid
+body: {
+ "file_name": "",
+ "bk_uuid": "",
+ "_": "3f46d402"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: file_name;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -131,8 +178,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -143,14 +190,32 @@ body: {
  "rc_point_in_time": "2017-12-21_13-16-53",
  "bk_uuid": "11111111-1111-1111-1111-111111111111",
  "rc_data_path": "",
- "_": "3e92a175"
+ "_": "3ece4992"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rc_data_path;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rc_data_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSbtContrlFile
+body: {
+ "rc_data_path": "",
+ "ora_content_type": 1,
+ "bk_uuid": "",
+ "_": "3f473fe6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n The ora_content_type field must be one of: 6,7;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -162,7 +227,7 @@ body: {
  "page": 1,
  "limit": 1,
  "search_field": "",
- "_": "3f32521a"
+ "_": "3eb6cc07"
 }
 response: {
  "ret": 200,
@@ -172,23 +237,44 @@ response: {
   "message": "[0] success",
   "info_list": [
    {
-    "wk_node_name": "rac-26.94",
-    "bk_node_name": "test-68.211",
+    "wk_node_name": "68.211",
+    "wk_ip": "172.20.68.211",
+    "bk_node_name": "68.212",
+    "bk_ip": "172.20.68.212",
+    "tape_node_uuid": null,
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
     "bk_data_type": 1,
-    "task_name": "rac-bak",
+    "task_name": "bk01",
     "task_type": 1,
-    "task_uuid": "B944D9BF-AA17-E163-64A0-A4D8F345D5EB",
-    "wk_uuid": "93240783-BD0A-95A0-E7C7-872F88B6BE1C",
-    "wk_data_type": 3,
+    "task_uuid": "BFDEDE40-0FF4-E959-3EF1-27A2663D43B9",
+    "wk_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+    "wk_data_type": 1,
     "bkup_policy": 0,
     "bkup_schedule": [],
+    "last_result": null,
+    "last_success_result": null,
+    "archive_pen": 0,
+    "tape_uuid": null,
+    "library_sn": null,
+    "group_uuid": "50136A0E-CACE-1734-5B21-D43FC1FA7A79",
+    "is_group": 0,
+    "group_name": "bk01",
+    "state": {
+     "task_uuid": "BFDEDE40-0FF4-E959-3EF1-27A2663D43B9",
+     "status": "FINISH",
+     "time": 1651722354,
+     "last_result": null,
+     "last_success_result": null,
+     "progress": 100,
+     "current": 572
+    },
     "is_biz_admin": 1,
     "can_del": 1,
     "can_op": 1,
-    "can_up": 1
+    "can_up": 1,
+    "children": []
    }
   ],
   "total": 1
@@ -197,124 +283,18 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listTimingRecoveryMssqlTime
+Method: listTimingRecoveryDb
 body: {
  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
- "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
- "_": "3eb8c17d"
+ "rc_data_path": "E:/mssqlBK/ts-11111111-1111-1111-1111-111111111111/",
+ "_": "3f139d34"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listTimingRecoveryPathList
-body: {
- "rc_data_path": "E:\\test3\\",
- "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
- "backup_task_uuid": "",
- "_": "3f6bab3f"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: backup_task_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listTimingRecoveryStatus
-body: {
- "_": "3f5f5ef7"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "status": []
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: startTimingRecovery
-body: {
- "task_uuids": [
-  "11111111-1111-1111-1111-111111111111"
- ],
- "operate": "start",
- "_": "3e9bd0fc"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
-  "fail_list": [
-   {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
-   }
-  ]
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: stopTimingRecovery
-body: {
- "task_uuids": [
-  "11111111-1111-1111-1111-111111111111"
- ],
- "operate": "stop",
- "_": "3f1c19c5"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
-  "fail_list": [
-   {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
-   }
-  ]
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: verifyTimingRecoveryMssqlInfo
-body: {
- "mssql_settings": {
-  "win_verify": 0,
-  "pass_word": "123456",
-  "instance_name": "MSSQLSERVER",
-  "user_id": "sa"
- },
- "wk_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
- "_": "3f189645"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: mssql_settings[data_source];\n"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -324,14 +304,51 @@ Method: listTimingRecoveryDb2Time
 body: {
  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
  "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
- "_": "3f71b526"
+ "_": "3f560ac7"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryDbInfo
+body: {
+ "rc_data_path": "",
+ "bk_uuid": "",
+ "wk_data_type": "4",
+ "bk_storage": 1,
+ "obs_settings": {},
+ "_": "3ee35bcd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryMssqlTime
+body: {
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "E:\\mssqlBK\\ts-11111111-1111-1111-1111-111111111111\\",
+ "_": "3d562e88"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -343,14 +360,48 @@ body: {
  "limit": 1,
  "bk_uuid": "",
  "bk_path": "",
- "_": "3f77b153"
+ "_": "3e99b5be"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryPathList
+body: {
+ "rc_data_path": "E:\\test3\\",
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "backup_task_uuid": "",
+ "_": "3f09ab86"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryStatus
+body: {
+ "_": "3f140ae7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
  }
 }
 -----------------------------------------------------------END>
@@ -408,14 +459,116 @@ body: {
   "wk_data_type": 0,
   "rc_point_in_time": "2017-12-21_13-16-53"
  },
- "_": "3e091bd7"
+ "_": "3f65fab4"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: timing_recovery[bk_path][0];\n Lost: timing_recovery[compress];\n Lost: timing_recovery[encrypt_switch];\n Lost: timing_recovery[wk_path][0];\n Lost: timing_recovery[blk_direct_copy];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_recovery[bk_path][0];\n Lost: timing_recovery[compress_switch];\n Lost: timing_recovery[encrypt_switch];\n Lost: timing_recovery[wk_path][0];\n Lost: timing_recovery[blk_direct_copy];\n Lost: timing_recovery[bk_file_crypt];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startTimingRecovery
+body: {
+ "task_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "operate": "start",
+ "_": "3ea9f4ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTimingRecovery
+body: {
+ "task_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "operate": "stop",
+ "_": "3e2dd739"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: timingRecoveryCheckDir
+body: {
+ "check_type": 1,
+ "file_dir": [],
+ "node_uuid": "",
+ "_": "3deff768"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: file_dir[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyTimingRecoveryMssqlInfo
+body: {
+ "mssql_settings": {
+  "win_verify": 0,
+  "pass_word": "123456",
+  "instance_name": "MSSQLSERVER",
+  "user_id": "sa"
+ },
+ "wk_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
+ "_": "3f7081e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mssql_settings[data_source];\n Lost: mssql_settings[protocol];\n"
  }
 }
 -----------------------------------------------------------END>

@@ -235,6 +235,19 @@ class VirtualizationSupportTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'VirtualizationSupport', 'deleteVpBackup', body)
 
+    def testDeleteVpBackupPoint(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': '',
+            'version_list': [],
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.deleteVpBackupPoint(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'deleteVpBackupPoint', body)
+
     def testCreateVpRecovery(self):
         a = Auth(username, pwd)
         body = {
@@ -1038,6 +1051,32 @@ class VirtualizationSupportTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'VirtualizationSupport', 'createVpFileRecovery', body)
 
+    def testModifyVpFileRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': '',
+            'rule_name': '',
+            'config_addr': '',
+            'config_port': '',
+            'attach_dir': '',
+            'bk_uuid': '',
+            'bk_path': '',
+            'vm_name': '',
+            'version_id': '',
+            'tgt_uuid': '',
+            'random_str': '',
+            'attach_path': '',
+            'tgt_path': '',
+            'files': [],
+            'version_time': '',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.modifyVpFileRecovery(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'modifyVpFileRecovery', body)
+
     def testDescribeVpFileRecovery(self):
         a = Auth(username, pwd)
         body = {
@@ -1061,6 +1100,58 @@ class VirtualizationSupportTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'VirtualizationSupport', 'listVpFileRecovery', body)
+
+    def testAttachVpFileRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': [],
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.attachVpFileRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'attachVpFileRecovery', body)
+
+    def testDetachVpFileRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': [],
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.detachVpFileRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'detachVpFileRecovery', body)
+
+    def testStartVpFileRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': [],
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.startVpFileRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'startVpFileRecovery', body)
+
+    def testStopVpFileRecovery(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': [],
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.stopVpFileRecovery(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'stopVpFileRecovery', body)
 
     def testListVpFileRecoveryStatus(self):
         a = Auth(username, pwd)
@@ -1184,6 +1275,18 @@ class VirtualizationSupportTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'VirtualizationSupport', 'listVpDrillStatus', body)
+
+    def testGetConsoleUrl(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': '',
+        }
+
+        virtualizationSupport = VirtualizationSupport(a)
+        r = virtualizationSupport.getConsoleUrl(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'VirtualizationSupport', 'getConsoleUrl', body)
 
     def testStopVpDrill(self):
         a = Auth(username, pwd)
