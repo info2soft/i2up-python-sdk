@@ -44,14 +44,14 @@ body: {
   "access_time": 1,
   "type": ""
  },
- "_": "3e56b224"
+ "_": "3f723aba"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_name;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2.;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -60,14 +60,29 @@ response: {
 Method: deleteDtoRule
 body: {
  "rule_uuids": [],
- "_": "3f70dbbc"
+ "_": "3e66caa4"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoRuleFile
+body: {
+ "_": "3eeb12a4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
  }
 }
 -----------------------------------------------------------END>
@@ -79,8 +94,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -93,7 +108,7 @@ body: {
  "search_value": "",
  "search_field": "",
  "type": 1,
- "_": "3f371d23"
+ "_": "3f478112"
 }
 response: {
  "ret": 200,
@@ -101,25 +116,8 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [
-   {
-    "wk_sto_name": null,
-    "bk_sto_name": "target",
-    "sync_host_name": "68.212",
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "rule_uuid": "77314EC7-E257-57A3-3BD1-79F41A924FDE",
-    "rule_name": "\u6062\u590d\u89c4\u5219",
-    "sync_type": 3,
-    "sync_uuid": "6C2C9791-2DE5-FBCA-C6D2-DB0D96776399",
-    "enable": 1,
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   }
-  ],
-  "total": 1
+  "info_list": [],
+  "total": 0
  }
 }
 -----------------------------------------------------------END>
@@ -131,8 +129,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 11110001,
-  "message": "[11110001] Call failed. Can't connect to a node or platform"
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
  }
 }
 -----------------------------------------------------------END>
@@ -143,14 +141,34 @@ body: {
  "type": "",
  "page": 1,
  "limit": 1,
- "_": "3e1d5cd2"
+ "_": "3f2a9373"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: type;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleSourcePath
+body: {
+ "host_uuid": "b6Cb9844-b8Da-Ecab-c3A2-BB924C1586eF",
+ "timepoint": "@timestamp()",
+ "host_ip": "",
+ "prefix": "",
+ "mapper_path": "",
+ "_": "3f4bd1a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
  }
 }
 -----------------------------------------------------------END>
@@ -158,14 +176,14 @@ response: {
 <START-----------------------------------------------------------
 Method: listDtoRuleStatus
 body: {
- "_": "3d9b8d64"
+ "_": "3ebc61ba"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -214,14 +232,31 @@ body: {
   "access_time": 1,
   "type": ""
  },
- "_": "3f2055a8"
+ "_": "3dfe56e0"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_name;\n Lost: rule_type;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2.;\n Lost: random_str;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: rule_type;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartDtoRule
+body: {
+ "operate": "restart",
+ "rule_uuids": [],
+ "_": "3e7660ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -229,16 +264,16 @@ response: {
 <START-----------------------------------------------------------
 Method: resumeDtoRule
 body: {
- "operate": "",
+ "operate": "resume",
  "rule_uuids": [],
- "_": "3f2f6e46"
+ "_": "3e53cd11"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -246,16 +281,16 @@ response: {
 <START-----------------------------------------------------------
 Method: startDtoRule
 body: {
- "operate": "",
+ "operate": "start",
  "rule_uuids": [],
- "_": "3eb3208c"
+ "_": "3f576da1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -263,31 +298,16 @@ response: {
 <START-----------------------------------------------------------
 Method: stopDtoRule
 body: {
- "operate": "",
+ "operate": "stop",
  "rule_uuids": [],
- "_": "3d886b06"
+ "_": "3f524da1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: deleteDtoRuleFile
-body: {
- "_": "3d9da29b"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 11110001,
-  "message": "[11110001] Call failed. Can't connect to a node or platform"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
