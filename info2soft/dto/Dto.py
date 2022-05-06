@@ -94,6 +94,12 @@ class Dto (object):
      * @return list
     '''
     def startDtoRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/dto/rule/operate'.format(config.get_default('default_api_host'))
         
@@ -107,6 +113,12 @@ class Dto (object):
      * @return list
     '''
     def stopDtoRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/dto/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -120,6 +132,31 @@ class Dto (object):
      * @return list
     '''
     def resumeDtoRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'resume'
+            }
+        else:
+            body['operate'] = 'resume'
+
+        url = '{0}/dto/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 规则 - 操作 失败重传
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartDtoRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'restart'
+            }
+        else:
+            body['operate'] = 'restart'
 
         url = '{0}/dto/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -167,5 +204,18 @@ class Dto (object):
         url = '{0}/dto/rule/{1}/cmp_result'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * 规则 - 获取源端对应路径列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listDtoRuleSourcePath(self, body):
+
+        url = '{0}/dto/rule/source_path_list'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 

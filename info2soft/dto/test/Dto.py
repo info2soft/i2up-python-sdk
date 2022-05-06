@@ -227,6 +227,19 @@ class DtoTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Dto', 'resumeDtoRule', body)
 
+    def testRestartDtoRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuids': [],
+        }
+
+        dto = Dto(a)
+        r = dto.restartDtoRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Dto', 'restartDtoRule', body)
+
     def testListDtoRuleFile(self):
         a = Auth(username, pwd)
         body = {
@@ -262,6 +275,22 @@ class DtoTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Dto', 'listDtoRuleCmpResult', body)
+
+    def testListDtoRuleSourcePath(self):
+        a = Auth(username, pwd)
+        body = {
+            'host_uuid': 'b6Cb9844-b8Da-Ecab-c3A2-BB924C1586eF',
+            'timepoint': '@timestamp()',
+            'host_ip': '',
+            'prefix': '',
+            'mapper_path': '',
+        }
+
+        dto = Dto(a)
+        r = dto.listDtoRuleSourcePath(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Dto', 'listDtoRuleSourcePath', body)
 
 
 if __name__ == '__main__':
