@@ -59,6 +59,19 @@ class TimingBackup (object):
         return res
 
     '''
+     * 1-4 备份 获取达梦数据库信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def descibeDmDbInfo(self, body):
+
+        url = '{0}/timing/backup/dm_db_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 1 备份 准备-5 备份 获取MsSql数据库列表
      * 
      * @param dict body  参数详见 API 手册
@@ -162,6 +175,12 @@ class TimingBackup (object):
      * @return array
      '''
     def startTimingBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/timing/backup/operate'.format(config.get_default('default_api_host'))
         
@@ -169,41 +188,40 @@ class TimingBackup (object):
         return res
 
     def stopTimingBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
         url = '{0}/timing/backup/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
 
     def startImmediateTimingBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_immediate'
+            }
+        else:
+            body['operate'] = 'start_immediate'
         url = '{0}/timing/backup/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
         return res
 
     '''
-     * 1-1 备份 准备-1 备份/恢复 认证Oracle信息（目前未使用）
+     * 备份 列表 - 查看更多
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def verifyTimingBackupOracleInfo(self, body):
+    def showTimingBackupDetailInfo(self, body):
 
-        url = '{0}/timing/backup/verify_oracle_info'.format(config.get_default('default_api_host'))
+        url = '{0}/timing/backup/detail'.format(config.get_default('default_api_host'))
 
-        res = https._post(url, body, self.auth)
-        return res
-
-    '''
-     * 1-1 备份 准备-2 备份/恢复 获取Oracle表空间（目前未使用）
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def describeTimingBackupOracleContent(self, body):
-
-        url = '{0}/timing/backup/oracle_content'.format(config.get_default('default_api_host'))
-
-        res = https._post(url, body, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
