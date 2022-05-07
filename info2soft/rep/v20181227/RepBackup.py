@@ -34,6 +34,19 @@ class RepBackup (object):
         return res
 
     '''
+     * 复制规则 - 获取可配置CDP快照数
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getRepBackupCdpSnapNum(self, body):
+
+        url = '{0}/rep/backup/cdp_snap_num'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 新建规则
      * 
      * @param dict body  参数详见 API 手册
@@ -94,6 +107,12 @@ class RepBackup (object):
      * @return array
      '''
     def startRepBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/rep/backup/operate'.format(config.get_default('default_api_host'))
         
@@ -101,6 +120,12 @@ class RepBackup (object):
         return res
 
     def stopRepBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/rep/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -268,6 +293,32 @@ class RepBackup (object):
         url = '{0}/rep/backup/batch'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 复制规则 - 检查目标路径
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def checkBkPath(self, body):
+
+        url = '{0}/rep/backup/check_bk_path'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 复制规则 - 提交前检查
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def chkRules(self, body):
+
+        url = '{0}/rep/backup/rules_chk'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
         return res
 
 

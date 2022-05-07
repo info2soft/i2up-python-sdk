@@ -1,449 +1,4 @@
 <START-----------------------------------------------------------
-Method: createRepBackup
-body: {
- "rep_backup": {
-  "mirr_sync_attr": "1",
-  "cdp_path": "E:\\test3\\",
-  "oph_path": "E:\\test4\\",
-  "secret_key": "",
-  "rep_name": "rep_backup",
-  "snapshot_policy": "0",
-  "bk_path_policy": "1",
-  "cdp_process_time": "05:07:28",
-  "mirr_open_type": "0",
-  "compress": "0",
-  "cdp_switch": "1",
-  "snapshot_start": 1546913351,
-  "cdp_baseline_format": "0",
-  "cdp_bl_bkup_switch": 0,
-  "encrypt_switch": "0",
-  "auto_start": "1",
-  "disk_limit": "0",
-  "wk_path": [
-   "E:\\test66\\"
-  ],
-  "band_width": "",
-  "snapshot_limit": "24",
-  "mirr_sync_flag": "0",
-  "bk_path": [
-   "E:\\test24\\"
-  ],
-  "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
-  "mirr_file_check": "0",
-  "cdp_bl_sched_switch": 1,
-  "del_policy": "1",
-  "cmp_switch": 0,
-  "rep_type": 0,
-  "snapshot_interval": "1",
-  "file_type_filter_switch": 0,
-  "snapshot_switch": 1,
-  "file_type_filter": "",
-  "cdp_param": "3,30,0",
-  "oph_policy": "2",
-  "mirr_skip": "0",
-  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
-  "cdp_bl_sched": "2|1|0|5",
-  "excl_path": [],
-  "mirr_sched": "",
-  "bkup_one_time": 1,
-  "mirr_sched_switch": 0,
-  "cdp_snap_on": 0,
-  "cdp_snap_interval": 30,
-  "cdp_snap_count": 240,
-  "ct_name_type": 0,
-  "ct_name_str1": "",
-  "ct_name_str2": "",
-  "ct_name_str3": "",
-  "ct_name_str4": "",
-  "cmp_file_check": 0,
-  "cmp_schedule": [
-   {
-    "sched_every": 1,
-    "sched_time": [
-     "10:20"
-    ],
-    "sched_day": [
-     13
-    ]
-   }
-  ],
-  "thread_num": "0"
- },
- "_": "3ed1993c"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  The rep_backup[bkup_one_time] field must be exactly 10 characters in length.;\n The rep_backup[thread_num] field must contain a number greater than or equal to 1.;\n Lost: rep_backup[filter_delete];\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: createRepBackupSnapshot
-body: {
- "rep_uuid": "11111111-1111-1111-1111-111111111111",
- "_": "3f7eba97"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10031017,
-  "message": "[10031017] Rule does not exist"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: deleteRepBackup
-body: {
- "rep_uuids": [
-  "11111111-1111-1111-1111-111111111111"
- ],
- "_": "3f7dc908"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10031017,
-  "message": "[10031017] Rule does not exist"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: deleteRepBackupBaseline
-body: {
- "cdp_time_list": "2017-11-17 17:24:14",
- "_": "3e4be159"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001021,
-  "message": "[10001021] Item does not enable this feature."
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: deleteRepBackupOrphan
-body: {
- "path": "/",
- "orphan_list": [
-  ""
- ],
- "_": "3f7a23af"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: orphan_list[0];\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: deleteRepBackupSnapshot
-body: {
- "snapshot_names": [],
- "_": "3f1b0929"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: snapshot_names[0];\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: describeRepBackup
-body: {
- "rep_uuid": "11111111-1111-1111-1111-111111111111"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: downloadRepBackupOrphan
-body: {
- "orphan": "",
- "path": "/",
- "_": "3f6e582a"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: orphan;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackup
-body: {
- "search_value": "",
- "limit": 1,
- "type": 1,
- "page": 1,
- "search_field": "",
- "_": "3edb2639"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [],
-  "total": 0
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackupBaseLine
-body: {
- "page": 1,
- "limit": 10,
- "_": "3f3224ff"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rc_method;\n Lost: rep_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackupCdpZfs
-body: {
- "bk_uuid": "",
- "_": "3f066171"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: bk_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackupOrphan
-body: {
- "path": "",
- "_": "3f20eb0e"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001021,
-  "message": "[10001021] Item does not enable this feature."
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackupSnapshot
-body: {
- "page": 1,
- "limit": 10,
- "_": "3f05b394"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rc_method;\n Lost: rep_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackupStatus
-body: {
- "_": "3f2b5bdb"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "status": []
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: modifyRepBackup
-body: {
- "rep_backup": {
-  "rep_uuid": "11111111-1111-1111-1111-111111111111",
-  "uuid": "11111111-1111-1111-1111-111111111111",
-  "rep_name": "rep_backup",
-  "cdp_param": "",
-  "rep_type": 0,
-  "bkup_one_time": 1515568566,
-  "snapshot_switch": 0,
-  "cdp_baseline_format": "",
-  "mirr_sync_flag": "0",
-  "mirr_open_type": "0",
-  "auto_start": "1",
-  "snapshot_policy": "0",
-  "cdp_bl_sched_switch": 0,
-  "snapshot_interval": "0",
-  "bk_path": "E:\\test24\\",
-  "snapshot_start": 1515568566,
-  "random_str": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
-  "cdp_path": "",
-  "file_type_filter_switch": 0,
-  "cmp_schedule": [
-   {
-    "sched_time": "05:10",
-    "sched_day": 29,
-    "sched_every": 2
-   }
-  ],
-  "snapshot_limit": "24",
-  "cmp_switch": 0,
-  "oph_path": "",
-  "secret_key": "",
-  "excl_path": [],
-  "schedule": "",
-  "policy_interval": 1,
-  "cdp_switch": "",
-  "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
-  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
-  "policy_operation": 1,
-  "wk_path": "E:\\test66\\",
-  "mirr_skip": "0",
-  "policy_limit": 1,
-  "cdp_bl_sched": "",
-  "del_policy": "1",
-  "mirr_sched": "3*03:00-14:00,2*02:00-15:00",
-  "encrypt_switch": "0",
-  "band_width": "3*03:00-14:00*2m,2*02:00-15:00*80m",
-  "compress": "0",
-  "mirr_sync_attr": "1",
-  "policy_start": 1,
-  "cdp_process_time": "",
-  "bk_path_policy": "0",
-  "cdp_bl_bkup_switch": 0,
-  "file_type_filter": "",
-  "disk_limit": "0",
-  "oph_policy": "0",
-  "mirr_file_check": "0",
-  "cmp_file_check": 0,
-  "mirr_sched_switch": 0,
-  "thread_num": "0"
- },
- "_": "3f54e5f9"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: rep_backup[cdp_switch];\n Lost: rep_backup[ct_name_type];\n The rep_backup[thread_num] field must contain a number greater than or equal to 1.;\n Lost: rep_backup[filter_delete];\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: startRepBackup
-body: {
- "operate": "start",
- "rep_uuids": [
-  "11111111-1111-1111-1111-111111111111"
- ],
- "_": "3f33ba8f"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
-  "fail_list": [
-   {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
-   }
-  ]
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: stopRepBackup
-body: {
- "operate": "stop",
- "rep_uuids": [
-  "11111111-1111-1111-1111-111111111111"
- ],
- "_": "3f60a624"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
-  "fail_list": [
-   {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
-   }
-  ]
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listRepBackupMscsGroup
-body: {
- "node_uuid": "",
- "_": "3f22157e"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
 Method: batchCreateRepBackup
 body: {
  "base_info_list": {
@@ -525,14 +80,409 @@ body: {
    "excl_path": []
   }
  ],
- "_": "3f0013ac"
+ "_": "3e73e5c3"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  The base_info_list[thread_num] field must contain a number greater than or equal to 1.;\n Lost: rep_backup[0][wk_path][0];\n Lost: rep_backup[0][wk_uuid];\n Lost: rep_backup[0][bk_uuid];\n Lost: rep_backup[0][bk_path][0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: base_info_list[compress_switch];\n Lost: base_info_list[encrypt];\n The base_info_list[thread_num] field must contain a number greater than or equal to 1;\n Lost: rep_backup[0][wk_path][0];\n Lost: rep_backup[0][wk_uuid];\n Lost: rep_backup[0][bk_uuid];\n Lost: rep_backup[0][bk_path][0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRepBackup
+body: {
+ "rep_backup": {
+  "mirr_sync_attr": "1",
+  "cdp_path": "E:\\test3\\",
+  "oph_path": "E:\\test4\\",
+  "secret_key": "",
+  "rep_name": "rep_backup",
+  "snapshot_policy": "0",
+  "bk_path_policy": "1",
+  "cdp_process_time": "05:07:28",
+  "mirr_open_type": "0",
+  "compress": "0",
+  "cdp_switch": "1",
+  "snapshot_start": 1546913351,
+  "cdp_baseline_format": "0",
+  "cdp_bl_bkup_switch": 0,
+  "encrypt_switch": "0",
+  "auto_start": "1",
+  "disk_limit": "0",
+  "wk_path": [
+   "E:\\test66\\"
+  ],
+  "band_width": "",
+  "snapshot_limit": "24",
+  "mirr_sync_flag": "0",
+  "bk_path": [
+   "E:\\test24\\"
+  ],
+  "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "mirr_file_check": "0",
+  "cdp_bl_sched_switch": 1,
+  "del_policy": "1",
+  "cmp_switch": 0,
+  "rep_type": 0,
+  "snapshot_interval": "1",
+  "file_type_filter_switch": 0,
+  "snapshot_switch": 1,
+  "file_type_filter": "",
+  "cdp_param": "3,30,0",
+  "oph_policy": "2",
+  "mirr_skip": "0",
+  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "cdp_bl_sched": "2|1|0|5",
+  "excl_path": [],
+  "mirr_sched": "",
+  "bkup_one_time": 1,
+  "mirr_sched_switch": 0,
+  "cdp_snap_on": 0,
+  "cdp_snap_interval": 30,
+  "cdp_snap_count": 240,
+  "ct_name_type": 0,
+  "ct_name_str1": "",
+  "ct_name_str2": "",
+  "ct_name_str3": "",
+  "ct_name_str4": "",
+  "cmp_file_check": 0,
+  "cmp_schedule": [
+   {
+    "sched_every": 1,
+    "sched_time": [
+     "10:20"
+    ],
+    "sched_day": [
+     13
+    ]
+   }
+  ],
+  "thread_num": "0"
+ },
+ "_": "3ea6d192"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The rep_backup[bkup_one_time] field must be exactly 10 characters in length;\n Lost: rep_backup[compress_switch];\n Lost: rep_backup[encrypt];\n Lost: rep_backup[traversing_sync];\n The rep_backup[thread_num] field must contain a number greater than or equal to 1;\n Lost: rep_backup[filter_delete];\n Lost: rep_backup[bk_file_crypt];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRepBackupSnapshot
+body: {
+ "rep_uuid": "11111111-1111-1111-1111-111111111111",
+ "_": "3dfa93ce"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010031017,
+  "message": "[1010031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRepBackup
+body: {
+ "rep_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3ecd24d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRepBackupBaseline
+body: {
+ "cdp_time_list": "2017-11-17 17:24:14",
+ "_": "3f6fb6da"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001021,
+  "message": "[1010001021] Item does not enable this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRepBackupOrphan
+body: {
+ "path": "/",
+ "orphan_list": [
+  ""
+ ],
+ "_": "3f5d514d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: orphan_list[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRepBackupSnapshot
+body: {
+ "snapshot_names": [],
+ "_": "3f14382f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: snapshot_names[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRepBackup
+body: {
+ "rep_uuid": "11111111-1111-1111-1111-111111111111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadRepBackupOrphan
+body: {
+ "orphan": "",
+ "path": "/",
+ "_": "3ebb5634"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: orphan;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackupMscsGroup
+body: {
+ "node_uuid": "",
+ "_": "3f491221"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackup
+body: {
+ "search_value": "",
+ "limit": 1,
+ "type": 1,
+ "page": 1,
+ "search_field": "",
+ "_": "3ead0718"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackupBaseLine
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f28e619"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rc_method;\n Lost: rep_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackupCdpZfs
+body: {
+ "bk_uuid": "",
+ "_": "3f7804e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackupOrphan
+body: {
+ "path": "",
+ "_": "3f37bf65"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001021,
+  "message": "[1010001021] Item does not enable this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackupSnapshot
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f7fe587"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rc_method;\n Lost: rep_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackupStatus
+body: {
+ "_": "3e8998cb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRepBackup
+body: {
+ "rep_backup": {
+  "rep_uuid": "11111111-1111-1111-1111-111111111111",
+  "uuid": "11111111-1111-1111-1111-111111111111",
+  "rep_name": "rep_backup",
+  "cdp_param": "",
+  "rep_type": 0,
+  "bkup_one_time": 1515568566,
+  "snapshot_switch": 0,
+  "cdp_baseline_format": "",
+  "mirr_sync_flag": "0",
+  "mirr_open_type": "0",
+  "auto_start": "1",
+  "snapshot_policy": "0",
+  "cdp_bl_sched_switch": 0,
+  "snapshot_interval": "0",
+  "bk_path": "E:\\test24\\",
+  "snapshot_start": 1515568566,
+  "random_str": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "cdp_path": "",
+  "file_type_filter_switch": 0,
+  "cmp_schedule": [
+   {
+    "sched_time": "05:10",
+    "sched_day": 29,
+    "sched_every": 2
+   }
+  ],
+  "snapshot_limit": "24",
+  "cmp_switch": 0,
+  "oph_path": "",
+  "secret_key": "",
+  "excl_path": [],
+  "schedule": "",
+  "policy_interval": 1,
+  "cdp_switch": "",
+  "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "policy_operation": 1,
+  "wk_path": "E:\\test66\\",
+  "mirr_skip": "0",
+  "policy_limit": 1,
+  "cdp_bl_sched": "",
+  "del_policy": "1",
+  "mirr_sched": "3*03:00-14:00,2*02:00-15:00",
+  "encrypt_switch": "0",
+  "band_width": "3*03:00-14:00*2m,2*02:00-15:00*80m",
+  "compress": "0",
+  "mirr_sync_attr": "1",
+  "policy_start": 1,
+  "cdp_process_time": "",
+  "bk_path_policy": "0",
+  "cdp_bl_bkup_switch": 0,
+  "file_type_filter": "",
+  "disk_limit": "0",
+  "oph_policy": "0",
+  "mirr_file_check": "0",
+  "cmp_file_check": 0,
+  "mirr_sched_switch": 0,
+  "thread_num": "0"
+ },
+ "_": "3f235b49"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_backup[cdp_switch];\n Lost: rep_backup[compress_switch];\n Lost: rep_backup[ct_name_type];\n Lost: rep_backup[encrypt];\n Lost: rep_backup[traversing_sync];\n The rep_backup[thread_num] field must contain a number greater than or equal to 1;\n Lost: rep_backup[filter_delete];\n Lost: rep_backup[bk_file_crypt];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -542,14 +492,175 @@ Method: repBackupVerifyDevice
 body: {
  "node_uuid": "",
  "dir_name": "",
- "_": "3f7ab46f"
+ "_": "3f584736"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: dir_name;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: dir_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startRepBackup
+body: {
+ "operate": "start",
+ "rep_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3eac7ba4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopRepBackup
+body: {
+ "operate": "stop",
+ "rep_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3e261660"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRepBackup
+body: {
+ "search_value": "",
+ "limit": 1,
+ "type": 0,
+ "page": 1,
+ "search_field": "",
+ "_": "3f7a9033"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "cmp_switch": 0,
+    "band_width": "",
+    "bk_path_policy": 0,
+    "random_str": "AA241C29-A059-2A44-07FA-849D13071FA6",
+    "bkup_schedule": null,
+    "bkup_policy": 2,
+    "start_type": 0,
+    "nostart": 0,
+    "state": null,
+    "wk_node_name": "68.211",
+    "wk_ip": "172.20.68.211",
+    "bk_node_name": "68.212",
+    "bk_ip": "172.20.68.212",
+    "proxy_addr": null,
+    "proxy_port": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "bk_path": [
+     "C:\\TEST\\b21-2\\"
+    ],
+    "bk_uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
+    "excl_path": [],
+    "rep_name": "rep01",
+    "rep_type": 0,
+    "rep_uuid": "7090D1B7-7352-4B18-9DF6-60E53E18602E",
+    "wk_path": [
+     "C:\\TEST\\b21-2\\"
+    ],
+    "wk_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
+    "is_from_ha": 0,
+    "mscs_group": null,
+    "proxy_uuid": "",
+    "data_ip_uuid": "",
+    "cdp_switch": 0,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getRepBackupCdpSnapNum
+body: {
+ "bk_uuid": "",
+ "cdp_zfs_pool": "",
+ "_": "3dc91dbc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: cdp_zfs_pool;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: chkRules
+body: {
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "bk_path": [],
+ "has_reverse": 1,
+ "_": "3ece8d2a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
  }
 }
 -----------------------------------------------------------END>

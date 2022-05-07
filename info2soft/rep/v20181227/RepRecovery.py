@@ -82,6 +82,12 @@ class RepRecovery (object):
      * @return array
      '''
     def startRepRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/rep/recovery/operate'.format(config.get_default('default_api_host'))
         
@@ -89,6 +95,12 @@ class RepRecovery (object):
         return res
 
     def stopRepRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/rep/recovery/operate'.format(config.get_default('default_api_host'))
 
@@ -96,6 +108,12 @@ class RepRecovery (object):
         return res
 
     def clearFinishRepRecovery(self, body):
+        if body is None:
+            body = {
+                'operate': 'clear_finish'
+            }
+        else:
+            body['operate'] = 'clear_finish'
 
         url = '{0}/rep/recovery/operate'.format(config.get_default('default_api_host'))
 
@@ -176,7 +194,7 @@ class RepRecovery (object):
     def listCDPRcData(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/rep/recovery//orphan_list{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/rep/recovery/{1}/orphan_list'.format(config.get_default('default_api_host'), uuid)
 
         res = https._get(url, body, self.auth)
         return res

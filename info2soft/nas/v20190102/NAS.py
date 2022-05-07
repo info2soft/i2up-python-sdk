@@ -92,6 +92,12 @@ class NAS (object):
      * @return array
      '''
     def startNAS (self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/nas/sync/operate'.format(config.get_default('default_api_host'))
         body['operate'] = 'start'
@@ -100,6 +106,12 @@ class NAS (object):
 
 
     def stopNAS (self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/nas/sync/operate'.format(config.get_default('default_api_host'))
         body['operate'] = 'stop'

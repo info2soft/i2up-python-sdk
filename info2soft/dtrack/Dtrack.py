@@ -133,6 +133,12 @@ class Dtrack (object):
      * @return list
     '''
     def takeSnapshotDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'take_snapshot'
+            }
+        else:
+            body['operate'] = 'take_snapshot'
         
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
         
@@ -146,6 +152,12 @@ class Dtrack (object):
      * @return list
     '''
     def deleteSnapshotDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'delete_snapshot'
+            }
+        else:
+            body['operate'] = 'delete_snapshot'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -159,6 +171,12 @@ class Dtrack (object):
      * @return list
     '''
     def takeSnapshotCloneDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'take_snapshot_clone'
+            }
+        else:
+            body['operate'] = 'take_snapshot_clone'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -172,6 +190,12 @@ class Dtrack (object):
      * @return list
     '''
     def deleteSnapshotCloneDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'delete_snapshot_clone'
+            }
+        else:
+            body['operate'] = 'delete_snapshot_clone'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -185,6 +209,12 @@ class Dtrack (object):
      * @return list
     '''
     def scanDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'scan'
+            }
+        else:
+            body['operate'] = 'scan'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -198,6 +228,12 @@ class Dtrack (object):
      * @return list
     '''
     def cancelScanDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'cancel_scan'
+            }
+        else:
+            body['operate'] = 'cancel_scan'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -211,6 +247,12 @@ class Dtrack (object):
      * @return list
     '''
     def syncDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'sync'
+            }
+        else:
+            body['operate'] = 'sync'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -224,6 +266,12 @@ class Dtrack (object):
      * @return list
     '''
     def cancelSyncDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'cancel_sync'
+            }
+        else:
+            body['operate'] = 'cancel_sync'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -237,6 +285,12 @@ class Dtrack (object):
      * @return list
     '''
     def suspendDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'suspend'
+            }
+        else:
+            body['operate'] = 'suspend'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -250,6 +304,12 @@ class Dtrack (object):
      * @return list
     '''
     def resumeDtrackBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'resume'
+            }
+        else:
+            body['operate'] = 'resume'
 
         url = '{0}/dtrack/backup/operate'.format(config.get_default('default_api_host'))
 
@@ -626,6 +686,12 @@ class Dtrack (object):
      * @return list
     '''
     def suspendDtrackGroup(self, body):
+        if body is None:
+            body = {
+                'operate': 'suspend'
+            }
+        else:
+            body['operate'] = 'suspend'
         
         url = '{0}/dtrack/group/operate'.format(config.get_default('default_api_host'))
         
@@ -639,6 +705,12 @@ class Dtrack (object):
      * @return list
     '''
     def resumeDtrackGroup(self, body):
+        if body is None:
+            body = {
+                'operate': 'resume'
+            }
+        else:
+            body['operate'] = 'resume'
 
         url = '{0}/dtrack/group/operate'.format(config.get_default('default_api_host'))
 
@@ -652,6 +724,12 @@ class Dtrack (object):
      * @return list
     '''
     def syncDtrackGroup(self, body):
+        if body is None:
+            body = {
+                'operate': 'sync'
+            }
+        else:
+            body['operate'] = 'sync'
 
         url = '{0}/dtrack/group/operate'.format(config.get_default('default_api_host'))
 
@@ -665,6 +743,12 @@ class Dtrack (object):
      * @return list
     '''
     def cancelSyncDtrackGroup(self, body):
+        if body is None:
+            body = {
+                'operate': 'cancel_sync'
+            }
+        else:
+            body['operate'] = 'cancel_sync'
 
         url = '{0}/dtrack/group/operate'.format(config.get_default('default_api_host'))
 
@@ -678,6 +762,12 @@ class Dtrack (object):
      * @return list
     '''
     def takeSnapshotDtrackGroup(self, body):
+        if body is None:
+            body = {
+                'operate': 'take_snapshot'
+            }
+        else:
+            body['operate'] = 'take_snapshot'
 
         url = '{0}/dtrack/group/operate'.format(config.get_default('default_api_host'))
 
@@ -691,6 +781,12 @@ class Dtrack (object):
      * @return list
     '''
     def deleteSnapshotDtrackGroup(self, body):
+        if body is None:
+            body = {
+                'operate': 'delete_snapshot'
+            }
+        else:
+            body['operate'] = 'delete_snapshot'
 
         url = '{0}/dtrack/group/operate'.format(config.get_default('default_api_host'))
 

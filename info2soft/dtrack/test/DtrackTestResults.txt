@@ -29,14 +29,14 @@ body: {
   "clean_bit": 1
  },
  "Content-Type": "application/json",
- "_": "3f0657ed"
+ "_": "3d3193e4"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -52,17 +52,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "cancel_scan",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3f11c79f"
+ "_": "3f723fc9"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -78,17 +78,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "cancel_sync",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3df9854f"
+ "_": "3e2e820c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -97,21 +97,21 @@ response: {
 Method: cancelSyncDtrackGroup
 body: {
  "group_uuid": "",
- "operate": "",
+ "operate": "cancel_sync",
  "fs_analyze": 1,
  "snapshot": 1,
  "quiesce": 1,
  "reason": 1,
  "snapshot_name": "",
  "force": 0,
- "_": "3f267468"
+ "_": "3f16c941"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -156,14 +156,14 @@ body: {
   "target_type": ""
  },
  "data_ip_uuid": "28C36A2E-230D-E66A-F0A6-A55C0134EA17",
- "_": "3e8685c9"
+ "_": "3f37801b"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: config[source_disk_id];\n Lost: config[source_disk_path];\n Lost: config[mirror_file];\n Lost: config[mirror_fs_mountpoint];\n Lost: config[mirror_disk_path];\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: config[source_disk_id];\n Lost: config[source_disk_path];\n Lost: config[mirror_file];\n Lost: config[mirror_fs_mountpoint];\n Lost: config[mirror_disk_path];\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -189,14 +189,14 @@ body: {
   "sqlserver_enable": 1,
   "max_snap_cnt": 1
  },
- "_": "3f2ac941"
+ "_": "3eb0d67d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: wk_uuid;\n Lost: group_name;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: group_name;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -207,14 +207,14 @@ body: {
  "delete_mirror": 1,
  "policy_uuids": [],
  "force": 1,
- "_": "3c9bb94b"
+ "_": "3f1e0b14"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -223,14 +223,14 @@ response: {
 Method: deleteDtrackGroup
 body: {
  "group_uuids": [],
- "_": "3f09c29e"
+ "_": "3e5e50ed"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuids[0];\n Lost: force;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuids[0];\n Lost: force;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -246,17 +246,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "delete_snapshot_clone",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3f4e5282"
+ "_": "3da355e2"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n Lost: snapshot_clone_name;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -272,17 +272,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "delete_snapshot",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3f4b751f"
+ "_": "3f743d79"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -291,21 +291,21 @@ response: {
 Method: deleteSnapshotDtrackGroup
 body: {
  "group_uuid": "",
- "operate": "",
+ "operate": "delete_snapshot",
  "fs_analyze": 1,
  "snapshot": 1,
  "quiesce": 1,
  "reason": 1,
  "snapshot_name": "",
  "force": 0,
- "_": "3dbe3197"
+ "_": "3ed16ce8"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -317,8 +317,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -326,14 +326,14 @@ response: {
 <START-----------------------------------------------------------
 Method: describeDtrackGroup
 body: {
- "_": "3f6596f2"
+ "_": "3f28dbff"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -343,14 +343,14 @@ Method: describeDtrackNodeInitiatorName
 body: {
  "config_addr": "",
  "node_uuid": "",
- "_": "3e8b5dfb"
+ "_": "3e71d125"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -360,14 +360,14 @@ Method: describeDtrackNodeInitiatorStatus
 body: {
  "config_addr": "",
  "node_uuid": "",
- "_": "3f53244c"
+ "_": "3f377744"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -377,14 +377,14 @@ Method: describeDtrackNodeInitiatorVersion
 body: {
  "node_uuid": "",
  "config_addr": "",
- "_": "3f20fbe5"
+ "_": "3f18f918"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -394,14 +394,14 @@ Method: describeDtrackRecoveryTargetDiscovered
 body: {
  "node_uuid": "",
  "address": "",
- "_": "3f48b989"
+ "_": "3efd68d3"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -411,14 +411,14 @@ Method: dtrackBackupCtlDrv
 body: {
  "node_uuid": "",
  "ctl_flag": "INSTALL_DRIVER",
- "_": "3e819188"
+ "_": "3db65578"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -428,7 +428,39 @@ Method: dtrackBackupFeatureMatrix
 body: {
  "node_uuid": "",
  "type": "tc",
- "_": "3f239bea"
+ "_": "3f009794"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dtrackBackupRebootSystem
+body: {
+ "node_uuid": "",
+ "_": "3e813608"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackup
+body: {
+ "bind_group_uuid": "",
+ "_": "3f5b1448"
 }
 response: {
  "ret": 200,
@@ -443,33 +475,17 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: dtrackBackupRebootSystem
-body: {
- "node_uuid": "",
- "_": "3f327b8e"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
 Method: listDtrackBackupDev
 body: {
  "node_uuid": "",
- "_": "3f21fbe8"
+ "_": "3f019694"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -481,7 +497,7 @@ body: {
  "end": 1,
  "page": 1,
  "limit": 1,
- "_": "3ef0d92d"
+ "_": "3f7df6a1"
 }
 response: {
  "ret": 200,
@@ -502,8 +518,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -511,14 +527,14 @@ response: {
 <START-----------------------------------------------------------
 Method: listDtrackBackupStatus
 body: {
- "_": "3e05c3e0"
+ "_": "3f73def1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -527,14 +543,33 @@ response: {
 Method: listDtrackBackupSystemInfo
 body: {
  "node_uuid": "",
- "_": "3e3c9372"
+ "_": "3f5b5931"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackGroup
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3ef0cea3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
  }
 }
 -----------------------------------------------------------END>
@@ -542,14 +577,14 @@ response: {
 <START-----------------------------------------------------------
 Method: listDtrackGroupSnap
 body: {
- "_": "3f6a83b2"
+ "_": "3e9104b5"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -557,14 +592,14 @@ response: {
 <START-----------------------------------------------------------
 Method: listDtrackGroupStatus
 body: {
- "_": "3f1f8ef4"
+ "_": "3f112951"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -574,14 +609,14 @@ Method: listDtrackRecoveryTarget
 body: {
  "node_uuid": "",
  "address": "",
- "_": "3f09406f"
+ "_": "3f4bd75c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -590,14 +625,14 @@ response: {
 Method: listMysqlConf
 body: {
  "node_uuid": "",
- "_": "3f6749e7"
+ "_": "3f037e39"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -606,14 +641,14 @@ response: {
 Method: listMysqlDb
 body: {
  "node_uuid": "",
- "_": "3f775762"
+ "_": "3f25625e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -622,14 +657,14 @@ response: {
 Method: listOracleConf
 body: {
  "node_uuid": "",
- "_": "3e6825d7"
+ "_": "3d7f441e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -638,14 +673,14 @@ response: {
 Method: listOracleDb
 body: {
  "node_uuid": "",
- "_": "3dd79fc7"
+ "_": "3e9e7bed"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -654,14 +689,14 @@ response: {
 Method: listSqlserverConf
 body: {
  "node_uuid": "",
- "_": "3f58a3b3"
+ "_": "3f77e232"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -697,14 +732,14 @@ body: {
  "bk_uuid": "",
  "random_str": "",
  "data_ip_uuid": "28C36A2E-230D-E66A-F0A6-A55C0134EA17",
- "_": "3f1b0ee4"
+ "_": "3f53d7d6"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -731,14 +766,14 @@ body: {
  },
  "wk_uuid": "",
  "random_str": "",
- "_": "3f424c91"
+ "_": "3f78e1e2"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: wk_uuid;\n Lost: group_name;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: group_name;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -752,14 +787,14 @@ body: {
  "timeout": 1,
  "port": 1,
  "mysql_path": "",
- "_": "3f2ed505"
+ "_": "3f1284fa"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: username;\n Lost: password;\n Lost: mysql_path;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: username;\n Lost: password;\n Lost: mysql_path;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -774,14 +809,14 @@ body: {
  "port": 1,
  "sqlplus_path": "",
  "sid": "",
- "_": "3e56bf4e"
+ "_": "3ef8a7d8"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -797,17 +832,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "resume",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3f795592"
+ "_": "3e4831aa"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -816,21 +851,21 @@ response: {
 Method: resumeDtrackGroup
 body: {
  "group_uuid": "",
- "operate": "",
+ "operate": "resume",
  "fs_analyze": 1,
  "snapshot": 1,
  "quiesce": 1,
  "reason": 1,
  "snapshot_name": "",
  "force": 0,
- "_": "3f6d94d6"
+ "_": "3d3375d3"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -846,17 +881,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "scan",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3f670544"
+ "_": "3e7036f5"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -866,14 +901,14 @@ Method: sqlserverConf
 body: {
  "node_uuid": "",
  "timeout": 1,
- "_": "3edf2dd1"
+ "_": "3edaf2b7"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -889,17 +924,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "suspend",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3ed091a7"
+ "_": "3dad268c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -908,21 +943,21 @@ response: {
 Method: suspendDtrackGroup
 body: {
  "group_uuid": "",
- "operate": "",
+ "operate": "suspend",
  "fs_analyze": 1,
  "snapshot": 1,
  "quiesce": 1,
  "reason": 1,
  "snapshot_name": "",
  "force": 0,
- "_": "3f31ef94"
+ "_": "3e8ea1ac"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -938,17 +973,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "sync",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3c7ee710"
+ "_": "3ecb4491"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -957,21 +992,21 @@ response: {
 Method: syncDtrackGroup
 body: {
  "group_uuid": "",
- "operate": "",
+ "operate": "sync",
  "fs_analyze": 1,
  "snapshot": 1,
  "quiesce": 1,
  "reason": 1,
  "snapshot_name": "",
  "force": 0,
- "_": "3eba389f"
+ "_": "3e76d045"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -987,17 +1022,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "take_snapshot_clone",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3e473c93"
+ "_": "3f391532"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n Lost: snapshot_clone_name;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -1013,17 +1048,17 @@ body: {
  "sync_after_scan": 0,
  "reason": 128,
  "snapshot": 0,
- "operate": "",
+ "operate": "take_snapshot",
  "force": 1,
  "snapshot_clone_name": "",
- "_": "3f6b7258"
+ "_": "3ee51748"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n Lost: snapshot_name;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -1032,21 +1067,21 @@ response: {
 Method: takeSnapshotDtrackGroup
 body: {
  "group_uuid": "",
- "operate": "",
+ "operate": "take_snapshot",
  "fs_analyze": 1,
  "snapshot": 1,
  "quiesce": 1,
  "reason": 1,
  "snapshot_name": "",
  "force": 0,
- "_": "3ee1d3c6"
+ "_": "3da25ebc"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_uuid;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n Lost: snapshot_name;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -1055,7 +1090,7 @@ response: {
 Method: updateDtrackBackupBind
 body: {
  "group_uuid": "",
- "_": "3efd3078"
+ "_": "3f0b6d39"
 }
 response: {
  "ret": 200,
@@ -1071,7 +1106,7 @@ response: {
 Method: updateDtrackGroupBind
 body: {
  "policy_uuids": [],
- "_": "3e3942f7"
+ "_": "3f7c5bad"
 }
 response: {
  "ret": 200,
@@ -1088,107 +1123,14 @@ Method: verifyDtrackBackupName
 body: {
  "policy_uuid": "",
  "policy_name": "",
- "_": "3e1ff896"
+ "_": "3e341c3e"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: policy_name;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listDtrackBackupDev
-body: {
- "node_uuid": "",
- "_": "3f1f76de"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: node_uuid;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listDtrackBackup
-body: {
- "where_args": [
-  {
-   "wk_uuid": "",
-   "group_uuid": ""
-  }
- ],
- "bind_group_uuid": ""
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [],
-  "total": 0
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listDtrackBackup
-body: {
- "_": "3f1b3208"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [],
-  "total": 0
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listDtrackBackup
-body: {
- "bind_group_uuid": "",
- "_": "3f0332cf"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [],
-  "total": 0
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listDtrackGroup
-body: {
- "page": 1,
- "limit": 1,
- "_": "3eedc764"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [],
-  "total": 0
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_name;\n"
  }
 }
 -----------------------------------------------------------END>

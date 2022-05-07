@@ -371,6 +371,19 @@ class RepBackupTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'RepBackup', 'repBackupVerifyDevice', body)
 
+    def testGetRepBackupCdpSnapNum(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': '',
+            'cdp_zfs_pool': '',
+        }
+
+        repBackup = RepBackup(a)
+        r = repBackup.getRepBackupCdpSnapNum(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'getRepBackupCdpSnapNum', body)
+
     def testListRapBackupMscsGroup(self):
         a = Auth(username, pwd)
         body = {
@@ -463,6 +476,37 @@ class RepBackupTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'RepBackup', 'batchCreateRepBackup', body)
+
+    def testCheckBkPath(self):
+        a = Auth(username, pwd)
+        body = {
+            'bk_uuid': '',
+            'bk_path': [],
+        }
+
+        repBackup = RepBackup(a)
+        r = repBackup.checkBkPath(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'checkBkPath', body)
+
+    def testChkRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': '',
+            'bk_uuid': '',
+            'bk_path': [],
+            'chk_list': [
+            'bk_path',
+            'rules',],
+            'has_reverse': 1,
+        }
+
+        repBackup = RepBackup(a)
+        r = repBackup.chkRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'RepBackup', 'chkRules', body)
 
 
 if __name__ == '__main__':

@@ -98,12 +98,18 @@ class Compare (object):
         return res
 
     '''
-     * 4 操作
+     * 4 操作 下载
      * 
      * @param dict body  参数详见 API 手册
      * @return array
      '''
     def downloadCompare(self, body):
+        if body is None:
+            body = {
+                'operate': 'download'
+            }
+        else:
+            body['operate'] = 'download'
         
         url = '{0}/compare/operate'.format(config.get_default('default_api_host'))
         
@@ -117,6 +123,12 @@ class Compare (object):
      * @return array
      '''
     def startImmediatelyCompare(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_immediate'
+            }
+        else:
+            body['operate'] = 'start_immediate'
 
         url = '{0}/compare/operate'.format(config.get_default('default_api_host'))
 
