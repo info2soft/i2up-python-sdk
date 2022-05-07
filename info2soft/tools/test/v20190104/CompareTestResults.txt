@@ -1,4 +1,28 @@
 <START-----------------------------------------------------------
+Method: collectCompareResult
+body: {
+ "code": "",
+ "time": "",
+ "files": "",
+ "bytes": "",
+ "missing": "",
+ "diff": "",
+ "erro": "",
+ "equal": "",
+ "task_uuid": "",
+ "_": "3f718636"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: createCompare
 body: {
  "compare": {
@@ -31,14 +55,14 @@ body: {
   "compress": 0,
   "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
  },
- "_": "3eae7809"
+ "_": "3f262187"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: compare[encrypt_switch];\n Lost: compare[mirr_sync_attr];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: compare[compress_switch];\n Lost: compare[encrypt_switch];\n Lost: compare[mirr_sync_attr];\n Lost: compare[oph_policy];\n Lost: compare[file_type_filter_switch];\n Lost: compare[traversing_sync];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -49,20 +73,14 @@ body: {
  "task_uuids": [
   "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
  ],
- "_": "3eded6a9"
+ "_": "3ee9cd6d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist",
-  "fail_list": [
-   {
-    "code": 10001011,
-    "message": "[10001011] Item does not exist"
-   }
-  ]
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -78,8 +96,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -107,7 +125,7 @@ body: {
  "task_uuids": [
   "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
  ],
- "_": "3edb2fc7"
+ "_": "3f063d07"
 }
 response: {
  "ret": 200,
@@ -115,8 +133,7 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "file_name": "CPR_20201021160915.zip",
-  "download_url": "/download/CPR_20201021160915.zip"
+  "file_name": "CPR_20220507114557.zip"
  }
 }
 -----------------------------------------------------------END>
@@ -128,7 +145,7 @@ body: {
  "limit": 10,
  "search_value": "",
  "page": 1,
- "_": "3f587348"
+ "_": "3f5efb67"
 }
 response: {
  "ret": 200,
@@ -149,7 +166,7 @@ body: {
  "limit": 10,
  "page": 1,
  "search_field": "",
- "_": "3f59520b"
+ "_": "3dcd5757"
 }
 response: {
  "ret": 200,
@@ -159,25 +176,41 @@ response: {
   "message": "[0] success",
   "info_list": [
    {
-    "wk_node_name": "test-68.211",
-    "bk_node_name": "test-68.211",
+    "wk_node_name": "68.211",
+    "wk_ip": "172.20.68.211",
+    "bk_node_name": "68.212",
+    "bk_ip": "172.20.68.212",
+    "proxy_addr": null,
+    "proxy_port": null,
     "username": "admin",
     "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "bk_uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
     "bkup_policy": 2,
-    "create_time": 1600762376,
-    "end_time": null,
-    "result_sum": null,
-    "start_time": 1600762383,
+    "create_time": 1651890226,
+    "end_time": 1651890231,
+    "result_sum": {
+     "state_code": 0,
+     "start_time": 1651890230,
+     "end_time": 1651890231,
+     "finish_in": 1,
+     "f_total": 1,
+     "total": 286,
+     "f_missing": 0,
+     "f_diff": 0,
+     "f_err": 0,
+     "f_skip": 1,
+     "transfer_bytes": 0
+    },
+    "start_time": 1651890227,
     "status": "FINISH",
-    "task_name": "test1",
-    "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
+    "task_name": "cmp01",
+    "task_uuid": "5FFA43D4-4204-B380-4631-8C4CE92968F3",
     "task_type": 2,
     "raw_uuid": null,
-    "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+    "wk_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
     "task_info": {
-     "id": "3",
-     "bkup_one_time": 1600761624,
+     "id": 1,
+     "bkup_one_time": 0,
      "bkup_policy": 2,
      "bkup_schedule": {
       "limit": "",
@@ -194,293 +227,64 @@ response: {
      },
      "cmp_type": 0,
      "compress": 0,
-     "create_time": 1600762243,
+     "create_time": 1651890226,
      "end_time": null,
      "excl_path": [],
      "mirr_file_check": 1,
-     "random_str": "A1743CB2-274A-411C-0B76-ABBA16A66072",
+     "random_str": "48379092-0585-9513-E10A-4F17666A65A3",
      "raw_uuid": null,
      "result_sum": null,
-     "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+     "wk_uuid": "35E926D9-53D5-40E0-AD81-8711006DCB23",
      "wk_path": [
-      "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
+      "C:\\TEST\\bk1\\"
      ],
-     "start_time": 1600762246,
+     "start_time": 1651890227,
      "status": "COMPARING",
-     "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+     "bk_uuid": "936726A7-BAA7-2DED-3476-96A322E7C4BC",
      "bk_path": [
-      "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
+      "C:\\TEST\\b21-1\\"
      ],
-     "task_name": "test1",
+     "task_name": "cmp01",
      "task_type": 2,
-     "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
+     "task_uuid": "5FFA43D4-4204-B380-4631-8C4CE92968F3",
      "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
      "ct_name_type": 0,
      "ct_name_str1": "",
      "ct_name_str2": "",
-     "ct_name_str3": "",
-     "ct_name_str4": "",
+     "ct_name_str3": null,
+     "ct_name_str4": null,
      "oph_policy": 0,
      "mirr_sync_attr": 0,
-     "encrypt_switch": "0",
+     "encrypt_switch": 0,
      "secret_key": "",
-     "task_info": {
-      "id": "3",
-      "bkup_one_time": 1600761624,
-      "bkup_policy": 2,
-      "bkup_schedule": {
-       "limit": "",
-       "sched_day": [
-        1
-       ],
-       "sched_every": 0,
-       "sched_time": [
-        "00:00:00"
-       ],
-       "sched_time_end": "",
-       "sched_time_start": "",
-       "sched_gap_min": 60
-      },
-      "cmp_type": 0,
-      "compress": 0,
-      "create_time": 1600762226,
-      "end_time": null,
-      "excl_path": [],
-      "mirr_file_check": 1,
-      "random_str": "A1743CB2-274A-411C-0B76-ABBA16A66072",
-      "raw_uuid": null,
-      "result_sum": null,
-      "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-      "wk_path": [
-       "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-      ],
-      "start_time": 1600762228,
-      "status": "COMPARING",
-      "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-      "bk_path": [
-       "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-      ],
-      "task_name": "test1",
-      "task_type": 2,
-      "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
-      "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-      "ct_name_type": 0,
-      "ct_name_str1": "",
-      "ct_name_str2": "",
-      "ct_name_str3": "",
-      "ct_name_str4": "",
-      "oph_policy": 0,
-      "mirr_sync_attr": 0,
-      "encrypt_switch": "0",
-      "secret_key": "",
-      "task_info": {
-       "id": "3",
-       "bkup_one_time": 1600761624,
-       "bkup_policy": 2,
-       "bkup_schedule": {
-        "limit": "",
-        "sched_day": [
-         1
-        ],
-        "sched_every": 0,
-        "sched_time": [
-         "00:00:00"
-        ],
-        "sched_time_end": "",
-        "sched_time_start": "",
-        "sched_gap_min": 60
-       },
-       "cmp_type": 0,
-       "compress": 0,
-       "create_time": 1600761949,
-       "end_time": null,
-       "excl_path": [],
-       "mirr_file_check": 1,
-       "random_str": "A1743CB2-274A-411C-0B76-ABBA16A66072",
-       "raw_uuid": null,
-       "result_sum": null,
-       "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-       "wk_path": [
-        "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-       ],
-       "start_time": 1600761953,
-       "status": "COMPARING",
-       "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-       "bk_path": [
-        "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-       ],
-       "task_name": "test1",
-       "task_type": 2,
-       "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
-       "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-       "ct_name_type": 0,
-       "ct_name_str1": "",
-       "ct_name_str2": "",
-       "ct_name_str3": "",
-       "ct_name_str4": "",
-       "oph_policy": 0,
-       "mirr_sync_attr": 0,
-       "encrypt_switch": "0",
-       "secret_key": "",
-       "task_info": {
-        "id": "3",
-        "bkup_one_time": 1600761624,
-        "bkup_policy": 2,
-        "bkup_schedule": {
-         "limit": "",
-         "sched_day": [
-          1
-         ],
-         "sched_every": 0,
-         "sched_time": [
-          "00:00:00"
-         ],
-         "sched_time_end": "",
-         "sched_time_start": "",
-         "sched_gap_min": 60
-        },
-        "cmp_type": 0,
-        "compress": 0,
-        "create_time": 1600761721,
-        "end_time": null,
-        "excl_path": [],
-        "mirr_file_check": 1,
-        "random_str": "A1743CB2-274A-411C-0B76-ABBA16A66072",
-        "raw_uuid": null,
-        "result_sum": null,
-        "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-        "wk_path": [
-         "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-        ],
-        "start_time": 1600761724,
-        "status": "COMPARING",
-        "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-        "bk_path": [
-         "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-        ],
-        "task_name": "test1",
-        "task_type": 2,
-        "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
-        "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-        "ct_name_type": 0,
-        "ct_name_str1": "",
-        "ct_name_str2": "",
-        "ct_name_str3": "",
-        "ct_name_str4": "",
-        "oph_policy": 0,
-        "mirr_sync_attr": 0,
-        "encrypt_switch": "0",
-        "secret_key": "",
-        "task_info": {
-         "id": "3",
-         "bkup_one_time": 1600761624,
-         "bkup_policy": 2,
-         "bkup_schedule": {
-          "limit": "",
-          "sched_day": [
-           1
-          ],
-          "sched_every": 0,
-          "sched_time": [
-           "00:00:00"
-          ],
-          "sched_time_end": "",
-          "sched_time_start": "",
-          "sched_gap_min": 60
-         },
-         "cmp_type": 0,
-         "compress": 0,
-         "create_time": 1600761637,
-         "end_time": null,
-         "excl_path": [],
-         "mirr_file_check": 1,
-         "random_str": "A1743CB2-274A-411C-0B76-ABBA16A66072",
-         "raw_uuid": null,
-         "result_sum": null,
-         "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-         "wk_path": [
-          "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-         ],
-         "start_time": 1600761640,
-         "status": "COMPARING",
-         "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-         "bk_path": [
-          "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-         ],
-         "task_name": "test1",
-         "task_type": 2,
-         "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
-         "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-         "ct_name_type": 0,
-         "ct_name_str1": "",
-         "ct_name_str2": "",
-         "ct_name_str3": "",
-         "ct_name_str4": "",
-         "oph_policy": 0,
-         "mirr_sync_attr": 0,
-         "encrypt_switch": "0",
-         "secret_key": "",
-         "task_info": {
-          "id": "3",
-          "bkup_one_time": 0,
-          "bkup_policy": 2,
-          "bkup_schedule": {
-           "limit": "",
-           "sched_day": [
-            1
-           ],
-           "sched_every": 0,
-           "sched_time": [
-            "00:00:00"
-           ],
-           "sched_time_end": "",
-           "sched_time_start": "",
-           "sched_gap_min": 60
-          },
-          "cmp_type": 0,
-          "compress": 0,
-          "create_time": 1600760688,
-          "end_time": null,
-          "excl_path": [],
-          "mirr_file_check": 1,
-          "random_str": "A1743CB2-274A-411C-0B76-ABBA16A66072",
-          "raw_uuid": null,
-          "result_sum": null,
-          "wk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-          "wk_path": [
-           "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-          ],
-          "start_time": 1600760689,
-          "status": "COMPARING",
-          "bk_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
-          "bk_path": [
-           "C:\\\u4e34\u65f6\u6587\u4ef6\\test\\"
-          ],
-          "task_name": "test1",
-          "task_type": 2,
-          "task_uuid": "72551853-DE62-D81F-9602-0F06299C8578",
-          "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-          "ct_name_type": 0,
-          "ct_name_str1": "",
-          "ct_name_str2": "",
-          "ct_name_str3": null,
-          "ct_name_str4": null,
-          "oph_policy": 0,
-          "mirr_sync_attr": 0,
-          "encrypt_switch": "0",
-          "secret_key": "",
-          "task_info": null,
-          "proxy_uuid": ""
-         },
-         "proxy_uuid": ""
-        },
-        "proxy_uuid": ""
-       },
-       "proxy_uuid": ""
-      },
-      "proxy_uuid": ""
-     },
-     "proxy_uuid": ""
+     "thread_num": 1,
+     "proxy_uuid": "",
+     "data_ip_uuid": "",
+     "state": null,
+     "oph_path": "",
+     "traversing_sync": 0,
+     "compress_switch": 0,
+     "band_width": "",
+     "file_type_filter": "",
+     "file_type_filter_switch": 0,
+     "last_result_sum": null,
+     "pre_work_script": "",
+     "pre_back_script": "",
+     "post_work_script": "",
+     "post_back_script": ""
+    },
+    "last_result_sum": {
+     "state_code": 0,
+     "start_time": 1651890230,
+     "end_time": 1651890231,
+     "finish_in": 1,
+     "f_total": 1,
+     "total": 286,
+     "f_missing": 0,
+     "f_diff": 0,
+     "f_err": 0,
+     "f_skip": 1,
+     "transfer_bytes": 0
     },
     "is_biz_admin": 1,
     "can_del": 1,
@@ -494,9 +298,27 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
+Method: listCompareLogs
+body: {
+ "_": "3f5350a9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: listCompareStatus
 body: {
- "_": "3ec77fb5"
+ "_": "3f76dc9c"
 }
 response: {
  "ret": 200,
@@ -554,53 +376,14 @@ body: {
   "random_str": "",
   "data_ip_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
  },
- "_": "3f12d712"
+ "_": "3e0252dd"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10011001,
-  "message": "[10011001] Node does not exist"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listCompareLogs
-body: {
- "_": "3f1eb06a"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "",
-  "logs": [],
-  "total": 0,
-  "current_page": 1
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: startImmediatelyCompare
-body: {
- "operate": "download",
- "task_uuids": [
-  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
- ],
- "_": "3d6b237b"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success",
-  "file_name": "CPR_20201022142608.zip",
-  "download_url": "/download/CPR_20201022142608.zip"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -612,38 +395,14 @@ body: {
  "task_uuids": [
   "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
  ],
- "_": "3f5313b4"
+ "_": "3f6786e9"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  The operate field must be one of: download,delete,start_immediately.;\n"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: collectCompareResult
-body: {
- "code": "",
- "time": "",
- "files": "",
- "bytes": "",
- "missing": "",
- "diff": "",
- "erro": "",
- "equal": "",
- "task_uuid": "",
- "_": "3f1b2d1d"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10220000,
-  "message": "[10220000] Compare task not exists"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: download,delete,start,start_immediately,stop;\n"
  }
 }
 -----------------------------------------------------------END>
