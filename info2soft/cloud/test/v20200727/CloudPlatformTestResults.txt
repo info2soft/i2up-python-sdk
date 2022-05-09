@@ -4,14 +4,14 @@ body: {
  "cloud_uuids": [
   "11111111-1111-1111-1111-111111111111"
  ],
- "_": "3ddd65a8"
+ "_": "3f189d08"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -23,8 +23,8 @@ response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -34,7 +34,24 @@ Method: listCloudPlatform
 body: {
  "page": 1,
  "limit": 10,
- "_": "3d1b1af4"
+ "_": "3e80d9a0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCloudPlatformRegion
+body: {
+ "_": "3ec747ff"
 }
 response: {
  "ret": 200,
@@ -44,43 +61,86 @@ response: {
   "message": "[0] success",
   "info_list": [
    {
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "random_str": "422E90E0-6618-1B3A-3FC3-A5247CC6C94E",
-    "vp_addr": null,
-    "os_pwd": "Rf5e9tCgwUs8QndHYAaoegEFDXy0bdWVt5pQRZX99HXg9PYrlRDbk0d1+3l04qhR1t6YUv/OzNNDyyGVIACCmGE1W6nehbIcdwNNCZ2E4H/D7PfyD5f9fTfu9riYMS74GBMUQeMJA5EY5V3hE3ialaGVV66NEZSx+yk+imMs4f5mrFWeuWHI3URAzW4lJx9xHpUXkNU1aTchPhawotaftE2UcHT1j+SysMZjG48NWDDdcM43hKVtZL2m5zwXLQ3MbJPTxK8E9VCyhxcFrLiCKvoERALGFlC17WvEQ2nvuYjxkRuQguumb08moMFFB17GES0q8zPj9pw4D6y+fPGtOA==",
-    "config_addr": "172.20.68.211",
-    "config_port": "26823",
-    "comment": null,
-    "create_time": 1599554962,
-    "npsvr_uuid": null,
-    "cred_uuid": null,
-    "is_drill": "0",
-    "drill_config": "{}",
-    "authurl": "https://iam.cn-north-1.myhuaweicloud.com/v3",
-    "project_id": "37680d9bf3df4bf3813967d0a7f4f290",
-    "user_domain_id": "e4dcb2f24b8e4f68b199ba2b61119179",
-    "rehearse_net_conf": null,
-    "register_type": "common",
-    "iam_user": "",
-    "cc_ip_uuid": "87B7DFC3-16E1-09DF-17DA-B0D484B0943C",
-    "cc_ip": "192.168.7.250",
-    "is_backup_center": "0",
-    "region": "\u534e\u5317-\u5317\u4eac\u4e00",
-    "user_domain_name": "",
-    "state": "{\"vp_uuid\":\"4A1F80DE-379D-C5E7-C495-7D55E0795275\",\"status\":\"OFFLINE\",\"data_agent_version\":\"\",\"drill_status\":\"\",\"npsvr_version\":\"\",\"code\":11110001,\"message\":\"[11110001] Call failed. Can't connect to a node , platform or Address\"}",
-    "platform_type": "0",
-    "os_user": "info2soft",
-    "cloud_uuid": "4A1F80DE-379D-C5E7-C495-7D55E0795275",
-    "cloud_name": "beijing01",
-    "cloud_type": 4,
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
+    "cloud_name": "\u975e\u6d32-\u7ea6\u7ff0\u5185\u65af\u5821",
+    "region": "af-south-1",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u4e9a\u592a-\u9999\u6e2f",
+    "region": "ap-southeast-1",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u4e9a\u592a-\u66fc\u8c37",
+    "region": "ap-southeast-2",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u4e9a\u592a-\u65b0\u52a0\u5761",
+    "region": "ap-southeast-3",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u534e\u4e1c-\u4e0a\u6d77\u4e8c",
+    "region": "cn-east-2",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u534e\u4e1c-\u4e0a\u6d77\u4e00",
+    "region": "cn-east-3",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u534e\u5317-\u5317\u4eac\u4e00",
+    "region": "cn-north-1",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u534e\u5317-\u5317\u4eac\u56db",
+    "region": "cn-north-4",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u4e1c\u5317-\u5927\u8fde",
+    "region": "cn-northeast-1",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u534e\u5357-\u5e7f\u5dde",
+    "region": "cn-south-1",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u897f\u5357-\u8d35\u9633\u4e00",
+    "region": "cn-southwest-2",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u62c9\u7f8e-\u5723\u5730\u4e9a\u54e5\u4e00",
+    "region": "la-south-2",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
+   },
+   {
+    "cloud_name": "\u534e\u4e1c\u4e13\u5c5e-\u91d1\u878d\u4e00",
+    "region": "cn-east-201",
+    "end_point": "https://iam.myhuaweicloud.com/v3"
    }
-  ],
-  "total": 1
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCloudPlatformStatus
+body: {
+ "_": "3ed95f43"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuids[0];\n"
  }
 }
 -----------------------------------------------------------END>
@@ -90,14 +150,14 @@ Method: listFlavor
 body: {
  "cloud_uuid": "",
  "server_zone": "cn-east-2a",
- "_": "3f4127e1"
+ "_": "3f523e51"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 11110001,
-  "message": "[11110001] Call failed. Can't connect to a node , platform or Address"
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
  }
 }
 -----------------------------------------------------------END>
@@ -108,14 +168,14 @@ body: {
  "page": 1,
  "limit": 10,
  "cloud_uuid": "",
- "_": "3f7d4380"
+ "_": "3f3f8874"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: cloud_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -130,14 +190,14 @@ body: {
  "iam_user": "",
  "cloud_uuid": "",
  "bind_lic_list": "",
- "_": "3db3ed70"
+ "_": "3f4b45fa"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -159,14 +219,14 @@ body: {
  "region": "",
  "vp_addr": "",
  "bind_lic_list": [],
- "_": "3f7abdb1"
+ "_": "3f11e9d1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: os_user;\n Lost: os_pwd;\n Lost: cloud_name;\n The cloud_type field must be one of: 4,5.;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: os_user;\n Lost: os_pwd;\n Lost: cloud_name;\n The cloud_type field must be one of: 4,5,9;\n Lost: maintenance;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -175,14 +235,14 @@ response: {
 Method: syncEcs
 body: {
  "cloud_uuid": "",
- "_": "3edb779a"
+ "_": "3da76a82"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: cloud_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -191,111 +251,31 @@ response: {
 Method: syncVolume
 body: {
  "cloud_uuid": "",
- "_": "3eebc2b2"
+ "_": "3f2910d8"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: cloud_uuid;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listCloudPlatformRegion
+Method: switchMaintenance
 body: {
- "_": "3e8be5b7"
+ "uuid": "",
+ "switch": 0,
+ "_": "3f48bdef"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 0,
-  "message": "[0] success",
-  "info_list": [
-   {
-    "cloud_name": "\u975e\u6d32-\u7ea6\u7ff0\u5185\u65af\u5821",
-    "region": "af-south-1",
-    "end_point": "https://iam.af-south-1.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u4e9a\u592a-\u9999\u6e2f",
-    "region": "ap-southeast-1",
-    "end_point": "https://iam.ap-southeast-1.myhwclouds.com/v3"
-   },
-   {
-    "cloud_name": "\u4e9a\u592a-\u66fc\u8c37",
-    "region": "ap-southeast-2",
-    "end_point": "https://iam.ap-southeast-2.myhwclouds.com/v3"
-   },
-   {
-    "cloud_name": "\u4e9a\u592a-\u65b0\u52a0\u5761",
-    "region": "ap-southeast-3",
-    "end_point": "https://iam.ap-southeast-3.myhwclouds.com/v3"
-   },
-   {
-    "cloud_name": "\u534e\u4e1c-\u4e0a\u6d77\u4e8c",
-    "region": "cn-east-2",
-    "end_point": "https://iam.cn-east-2.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u534e\u4e1c-\u4e0a\u6d77\u4e00",
-    "region": "cn-east-3",
-    "end_point": "https://iam.cn-east-3.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u534e\u5317-\u5317\u4eac\u4e00",
-    "region": "cn-north-1",
-    "end_point": "https://iam.cn-north-1.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u534e\u5317-\u5317\u4eac\u56db",
-    "region": "cn-north-4",
-    "end_point": "https://iam.cn-north-4.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u4e1c\u5317-\u5927\u8fde",
-    "region": "cn-northeast-1",
-    "end_point": "https://iam.cn-northeast-1.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u534e\u5357-\u5e7f\u5dde",
-    "region": "cn-south-1",
-    "end_point": "https://iam.cn-south-1.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u897f\u5357-\u8d35\u9633\u4e00",
-    "region": "cn-southwest-2",
-    "end_point": "https://iam.cn-southwest-2.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u62c9\u7f8e-\u5723\u5730\u4e9a\u54e5\u4e00",
-    "region": "la-south-2",
-    "end_point": "https://iam.la-south-2.myhuaweicloud.com/v3"
-   },
-   {
-    "cloud_name": "\u534e\u4e1c\u4e13\u5c5e-\u91d1\u878d\u4e00",
-    "region": "cn-east-201",
-    "end_point": "https://iam.cn-east-201.jrzq.myhuaweicloud.com/v3"
-   }
-  ]
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listCloudPlatformStatus
-body: {
- "_": "3f56e4ce"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: vp_uuids[0];\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
  }
 }
 -----------------------------------------------------------END>

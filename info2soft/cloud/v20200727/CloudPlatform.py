@@ -150,3 +150,42 @@ class CloudPlatform (object):
         
         res = https._get(url, body, self.auth)
         return res
+
+    '''
+     * 云平台 - 切换维护
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def switchMaintenance(self, body):
+
+        url = '{0}/cloud/platform/maintenance'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 云平台 - 获取区域列表（从Npsvr）
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listRegions(self, body):
+
+        url = '{0}/cloud/platform/regions'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 云平台 - 获取项目列表（从Npsvr）
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listProjects(self, body):
+
+        url = '{0}/cloud/platform/projects'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res

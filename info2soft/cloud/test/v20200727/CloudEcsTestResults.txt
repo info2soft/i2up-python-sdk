@@ -2,14 +2,30 @@
 Method: attachPoint
 body: {
  "ecs_id": "",
- "_": "3f7d1310"
+ "_": "3f1374ae"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: bindNode
+body: {
+ "operate": "bind",
+ "_": "3f2204f7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n Lost: node_uuid;\n Lost: node_name;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -74,7 +90,7 @@ body: {
   }
  ],
  "network_switch": 1,
- "_": "3f071486"
+ "_": "3f634277"
 }
 response: {
  "ret": 200,
@@ -109,14 +125,14 @@ body: {
   ]
  },
  "from_backup": 0,
- "_": "3f1b0f4c"
+ "_": "3f549a1d"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: ecs_name;\n Lost: cloud_uuid;\n Lost: flavorid;\n Lost: server_zone;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_name;\n Lost: cloud_uuid;\n Lost: flavorid;\n Lost: server_zone;\n Lost: ecs_type;\n"
  }
 }
 -----------------------------------------------------------END>
@@ -131,14 +147,31 @@ body: {
   "f3ca421d-9b6e-42b9-b911-36ebbeabb485"
  ],
  "group_content": "",
- "_": "3e4d59be"
+ "_": "3f0b69b8"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: group_name;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteEcs
+body: {
+ "ecs_ids": [],
+ "complete_delete": 1,
+ "_": "3f1849f0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
  }
 }
 -----------------------------------------------------------END>
@@ -150,7 +183,7 @@ body: {
   "A14875A3-738E-3E5B-65D3-483CADE35E5D",
   "A14875A3-738E-3E5B-65D3-483CADE35E5D"
  ],
- "_": "3f13a511"
+ "_": "3f4ad07b"
 }
 response: {
  "ret": 200,
@@ -177,12 +210,31 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
+Method: getTakeover
+body: {
+ "ecs_id": "",
+ "_": "3e3cf129"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "private_networks": [],
+  "public_networks": [],
+  "detail_info": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: listEcs
 body: {
  "cloud_uuid": "",
  "page": 1,
  "limit": 1,
- "_": "3e94c9ed"
+ "_": "3f575732"
 }
 response: {
  "ret": 200,
@@ -190,39 +242,8 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [
-   {
-    "node_name": null,
-    "node_uuid": null,
-    "wk_node_name": null,
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "id": "1",
-    "create_time": 0,
-    "ecs_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "random_str": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "cloud_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "ecs_name": "centos7",
-    "ecs_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "ecs_type": null,
-    "server_zone": null,
-    "flavorid": "adfadlfjkljfkldjfskldjflkasdjfkldasfj",
-    "volume_sys_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "volume_data_ids": null,
-    "image_ref": null,
-    "status": null,
-    "ip": null,
-    "rc_point": null,
-    "from_backup": "0",
-    "private_ips": null,
-    "security_groups": null,
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   }
-  ],
-  "total": 1
+  "info_list": [],
+  "total": 0
  }
 }
 -----------------------------------------------------------END>
@@ -230,7 +251,7 @@ response: {
 <START-----------------------------------------------------------
 Method: listEcsStatus
 body: {
- "_": "3dd61adb"
+ "_": "3e88263e"
 }
 response: {
  "ret": 200,
@@ -238,39 +259,7 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [
-   {
-    "node_name": null,
-    "node_uuid": null,
-    "wk_node_name": null,
-    "username": "admin",
-    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
-    "id": "1",
-    "create_time": 0,
-    "ecs_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "random_str": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "cloud_uuid": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "ecs_name": "centos7",
-    "ecs_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "ecs_type": null,
-    "server_zone": null,
-    "flavorid": "adfadlfjkljfkldjfskldjflkasdjfkldasfj",
-    "volume_sys_id": "85BBF40B-24A2-E679-73AB-FE89FBDD54EE",
-    "volume_data_ids": null,
-    "image_ref": null,
-    "status": null,
-    "ip": null,
-    "rc_point": null,
-    "from_backup": "0",
-    "private_ips": null,
-    "security_groups": null,
-    "is_biz_admin": 1,
-    "can_del": 1,
-    "can_op": 1,
-    "can_up": 1
-   }
-  ],
-  "total": 1
+  "status": []
  }
 }
 -----------------------------------------------------------END>
@@ -281,7 +270,7 @@ body: {
  "limit": 1,
  "page": 1,
  "cloud_uuid": "",
- "_": "3e1e44ce"
+ "_": "3f4fe37b"
 }
 response: {
  "ret": 200,
@@ -299,29 +288,48 @@ response: {
 Method: listVncConsole
 body: {
  "ecs_id": "",
- "_": "3f028dab"
+ "_": "3f404e55"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: bindNode
+Method: startECS
 body: {
- "_": "3ebbb989"
+ "ecs_ids": [],
+ "operate": "start",
+ "_": "3d8714d0"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n Lost: node_uuid;\n Lost: node_name;\n Lost: operate;\n"
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopECS
+body: {
+ "ecs_ids": [],
+ "operate": "stop",
+ "_": "3ef1153b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
  }
 }
 -----------------------------------------------------------END>
@@ -329,14 +337,34 @@ response: {
 <START-----------------------------------------------------------
 Method: untieNode
 body: {
- "_": "3f6c95c5"
+ "operate": "untie",
+ "_": "3f2253f1"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter  Lost: ecs_id;\n Lost: node_uuid;\n Lost: node_name;\n Lost: operate;\n"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n Lost: node_uuid;\n Lost: node_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getTakeoverECSInfo
+body: {
+ "ecs_id": "",
+ "_": "3e26b812"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "private_networks": [],
+  "public_networks": [],
+  "detail_info": []
  }
 }
 -----------------------------------------------------------END>

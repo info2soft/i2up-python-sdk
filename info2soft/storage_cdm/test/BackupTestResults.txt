@@ -1,0 +1,93 @@
+<START-----------------------------------------------------------
+Method: startSnapshotTask
+body: {
+ "operate": "start",
+ "task_uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3f40073d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopSnapshotTask
+body: {
+ "operate": "stop",
+ "task_uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3f405c7a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelySnapshotTask
+body: {
+ "operate": "start_immediately",
+ "task_uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3f009bc0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

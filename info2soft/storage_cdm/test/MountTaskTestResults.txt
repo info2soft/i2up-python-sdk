@@ -1,0 +1,198 @@
+<START-----------------------------------------------------------
+Method: createMountTask
+body: {
+ "task_name": "task_name",
+ "wk_uuid": "1CCDB5EB848C180F02814E96C2909202",
+ "if_mount": 0,
+ "mount_point": "/dev/sda",
+ "protocol": "iscsi",
+ "bk_uuid": "5CC2B5EB848C180F02814E96C2F09202",
+ "volume_uuid": "4CC2B52B845C180F02112E96C2F09H02",
+ "snapshot": {
+  "snapshot_name": "testpool/13CB1D17-D0E7-169A-D6DC-9CFB32341989@2020-06-17-11:30:51",
+  "snapshot_time": "2020-06-17-11:30:51",
+  "protocol": "iscsi",
+  "target": "iqn.2000-01.com.tandbergdata:nas.027s.li",
+  "volume_uuid": "13CB1D17-D0E7-169A-D6DC-9CFB32341989",
+  "storage": {
+   "storage_name": "Base64StorageName",
+   "storage_type": "BlockStorage",
+   "storage_host": "127.0.0.1",
+   "storage_pool": "ZFSPool001"
+  },
+  "partition": [
+   {
+    "size": "1024000",
+    "fs_type": "xfs",
+    "fs_path": "/home/",
+    "offset": 9600
+   }
+  ],
+  "dev_id": "A613CF45-524C-EC6B-CD47-83B8A8A527BB",
+  "size": "1024000",
+  "init_partition": 1
+ },
+ "iscsi_initiator": "iscsi_initiator",
+ "_": "3f36186d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not uuid: wk_uuid;\n The protocol field must be one of: iSCSI,FC;\n Not uuid: bk_uuid;\n Not uuid: volume_uuid;\n Lost: volume_name;\n Lost: volume_type;\n Lost: snapshot_name;\n Lost: snapshot_time;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteMountTask
+body: {
+ "task_uuids": [],
+ "force": "",
+ "_": "3f1bdbd3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[0];\n Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVolumeSnapshotTarget
+body: {
+ "protocol": "",
+ "target": "",
+ "volume_uuid": "",
+ "storage": [
+  {
+   "storage_name": "",
+   "storage_type": "",
+   "storage_host": "",
+   "storage_pool": ""
+  }
+ ],
+ "partition": [
+  {
+   "size": "",
+   "fs_type": "",
+   "fs_path": "",
+   "offset": ""
+  }
+ ],
+ "dev_id": "",
+ "bk_uuid": "",
+ "_": "3f4c0bf0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeMountTask
+body: {
+ "": "",
+ "_": "3efeb19f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getIscsiInitiatorInfo
+body: {
+ "node_uuid": "1407E778CBFE9C4E9ACB766B94F1E102",
+ "_": "3f503dee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not uuid: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMountTaskStatus
+body: {
+ "_": "3f09fb6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: mountMountTask
+body: {
+ "task_uuids": [],
+ "operate": "mount",
+ "_": "3ea00faa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: unmountMountTask
+body: {
+ "task_uuids": [],
+ "operate": "unmount",
+ "_": "3bed0ec8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMountTask
+body: {
+ "_": "3ebcf778"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

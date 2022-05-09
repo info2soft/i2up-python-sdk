@@ -208,6 +208,20 @@ class AppSystemTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'AppSystem', 'getVmList', body)
 
+    def testGetMembersList(self):
+        a = Auth(username, pwd)
+        body = {
+            'sys_uuid': '',
+            'page': 1,
+            'limit': 1,
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.getMembersList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'getMembersList', body)
+
     def testRecoveryList(self):
         a = Auth(username, pwd)
         body = {
@@ -243,6 +257,40 @@ class AppSystemTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'AppSystem', 'resourceView', body)
+
+    def testListBackupCenter(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.listBackupCenter(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'listBackupCenter', body)
+
+    def testGetBackupCenterInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'vp_uuid': '',
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.getBackupCenterInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'getBackupCenterInfo', body)
+
+    def testListHosts(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        appSystem = AppSystem(a)
+        r = appSystem.listHosts(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'AppSystem', 'listHosts', body)
 
     def testResourceProtectionCoverage(self):
         a = Auth(username, pwd)

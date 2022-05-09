@@ -99,6 +99,18 @@ class CopyVolumeTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'CopyVolume', 'deleteCopyVolume', body)
 
+    def testListCopyVolumeStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'volume_uuids': [],
+        }
+
+        copyVolume = CopyVolume(a)
+        r = copyVolume.listCopyVolumeStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CopyVolume', 'listCopyVolumeStatus', body)
+
     def testListSnapshotList(self):
         a = Auth(username, pwd)
         body = {
@@ -109,6 +121,34 @@ class CopyVolumeTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'CopyVolume', 'listSnapshotList', body)
+
+    def testListCopyCdmVolume(self):
+        a = Auth(username, pwd)
+        body = {
+            'volume_uuid': '',
+            'volume_type': 1,
+            'bk_uuid': '',
+        }
+
+        copyVolume = CopyVolume(a)
+        r = copyVolume.listCopyCdmVolume(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CopyVolume', 'listCopyCdmVolume', body)
+
+    def testListCopyVolumeClient(self):
+        a = Auth(username, pwd)
+        body = {
+            'limit': 300,
+            'page': 1,
+            'type': 1,
+        }
+
+        copyVolume = CopyVolume(a)
+        r = copyVolume.listCopyVolumeClient(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CopyVolume', 'listCopyVolumeClient', body)
 
 
 if __name__ == '__main__':

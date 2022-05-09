@@ -30,7 +30,7 @@ class CopyVolume (object):
             exit()
         url = '{0}/copy_volume/{1}'.format(config.get_default('default_api_host'), uuid)
         
-        res = https._put(url, None, self.auth)
+        res = https._put(url, body, self.auth)
         return res
 
     '''
@@ -74,6 +74,19 @@ class CopyVolume (object):
         return res
 
     '''
+     * 复制卷 - 状态
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listCopyVolumeStatus(self, body):
+
+        url = '{0}/copy_volume/status'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 获取单个卷快照列表
      * 
      * @body['uuid'] String  必填 节点uuid
@@ -82,8 +95,35 @@ class CopyVolume (object):
     def listSnapshotList(self, body, uuid):
         if uuid is None:
             exit()
-        url = '{0}/copy_volume//snapshot_list{1}'.format(config.get_default('default_api_host'), uuid)
+        url = '{0}/copy_volume/{1}/snapshot_list'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
         return res
+
+    '''
+     * 复制卷/副本卷 - 列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listCopyCdmVolume(self, body):
+
+        url = '{0}/copy_volume/copy_cdm_volume'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 复制卷 - 新建 准备 获取客户端列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listCopyVolumeClient(self, body):
+
+        url = '{0}/copy_volume/client_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
 

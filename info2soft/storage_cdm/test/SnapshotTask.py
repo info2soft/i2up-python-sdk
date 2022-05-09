@@ -5,7 +5,7 @@ import sys
 sys.path.append(r'E:/python-sdk')
 
 import unittest
-from info2soft import SnapshotTask
+from info2soft.storage_cdm.SnapshotTask import SnapshotTask
 # from info2soft.snapshotTask.v20200722.SnapshotTask import SnapshotTask
 from info2soft import Auth
 from info2soft.fileWriter import write
@@ -56,6 +56,17 @@ class SnapshotTaskTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'SnapshotTask', 'createSnapshotTask', body)
 
+    def testModifySnapshotTask(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        snapshotTask = SnapshotTask(a)
+        r = snapshotTask.modifySnapshotTask(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SnapshotTask', 'modifySnapshotTask', body)
+
     def testListSnapshotTask(self):
         a = Auth(username, pwd)
         body = {
@@ -103,6 +114,51 @@ class SnapshotTaskTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'SnapshotTask', 'describeSnapshotTask', body)
+
+    def testStartSnapshotTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediately',
+            'task_uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        snapshotTask = SnapshotTask(a)
+        r = snapshotTask.startSnapshotTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SnapshotTask', 'startSnapshotTask', body)
+
+    def testStopSnapshotTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediately',
+            'task_uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        snapshotTask = SnapshotTask(a)
+        r = snapshotTask.stopSnapshotTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SnapshotTask', 'stopSnapshotTask', body)
+
+    def testStartImmediatelySnapshotTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'start_immediately',
+            'task_uuids': [
+                '22D03E06-94D0-5E2C-336E-4BEEC2D28EC4',
+            ],
+        }
+
+        snapshotTask = SnapshotTask(a)
+        r = snapshotTask.startImmediatelySnapshotTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SnapshotTask', 'startImmediatelySnapshotTask', body)
 
     def testListSnapshotList(self):
         a = Auth(username, pwd)

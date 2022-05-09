@@ -58,11 +58,81 @@ class CloudEcs (object):
         return res
 
     '''
+     * 云主机 - 删除
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def deleteEcs(self, body):
+
+        url = '{0}/cloud/ecs'.format(config.get_default('default_api_host'))
+
+        res = https._delete(url, body, self.auth)
+        return res
+
+    '''
+     * 云主机 - 操作 启动
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startECS(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
+
+        url = '{0}/cloud/ecs/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 云主机 - 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopECS(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
+
+        url = '{0}/cloud/ecs/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 云主机 - 获取公网私网IP等信息
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getTakeoverECSInfo(self, body):
+
+        url = '{0}/cloud/ecs/takeover_ecs_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      *  云主机 - 节点操作 绑定
      * 
      * @return list
     '''
     def bindNode(self, body):
+        if body is None:
+            body = {
+                'operate': 'bind'
+            }
+        else:
+            body['operate'] = 'bind'
         
         url = '{0}/cloud/ecs/node_operate'.format(config.get_default('default_api_host'))
         
@@ -75,6 +145,12 @@ class CloudEcs (object):
      * @return list
     '''
     def untieNode(self, body):
+        if body is None:
+            body = {
+                'operate': 'untie'
+            }
+        else:
+            body['operate'] = 'untie'
 
         url = '{0}/cloud/ecs/node_operate'.format(config.get_default('default_api_host'))
 

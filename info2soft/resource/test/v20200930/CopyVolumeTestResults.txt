@@ -1,47 +1,48 @@
 <START-----------------------------------------------------------
-Method: createVolume
+Method: copyVolumeList
+body: {
+ "where_args['bk_uuid']": "",
+ "_": "3f1f6a75"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCopyVolume
 body: {
  "volume_name": "",
- "cloud_uuid": "",
+ "bk_uuid": "",
+ "pool_uuid": "",
  "volume_size": "",
- "volume_type": "",
- "server_zone": "",
- "image_ref": "",
- "_": "3e69108f"
+ "link_protocol": "",
+ "create_fs": 1,
+ "fs_type": "",
+ "attach_point": [],
+ "_": "3e8dd204"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
   "code": 1010001002,
-  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n Lost: volume_name;\n Lost: volume_size;\n Lost: volume_type;\n Lost: server_zone;\n"
+  "message": "[1010001002] Invalid Parameter  Lost: volume_name;\n Lost: volume_size;\n Lost: link_protocol;\n Lost: bk_uuid;\n Lost: pool_uuid;\n Lost: fs_type;\n"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: deleteVolume
-body: {
- "volume_uuids": [
-  "11111111-1111-1111-1111-111111111111"
- ],
- "_": "3e623964"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 0,
-  "message": "[0] success"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: detachVolume
+Method: deleteCopyVolume
 body: {
  "volume_uuids": [],
- "_": "3f166c67"
+ "force": 1,
+ "_": "3bdbb263"
 }
 response: {
  "ret": 200,
@@ -54,28 +55,53 @@ response: {
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listImage
+Method: describeCopyVolume
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotList
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCopyVolume
 body: {
- "cloud_uuid": "",
- "_": "3f00ffd3"
+ "_": "3f615d3a"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
   "code": 1010001002,
-  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+  "message": "[1010001002] Invalid Parameter  Lost: volume_name;\n Lost: bk_uuid;\n Lost: volume_size;\n"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listVolume
+Method: listCopyCdmVolume
 body: {
- "cloud_uuid": "",
- "page": 1,
- "limit": 1,
- "_": "3f325091"
+ "volume_uuid": "",
+ "volume_type": 1,
+ "bk_uuid": "",
+ "_": "3f78dbde"
 }
 response: {
  "ret": 200,
@@ -83,60 +109,23 @@ response: {
  "data": {
   "code": 0,
   "message": "[0] success",
-  "info_list": [],
-  "total": 0
+  "list": []
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: listVolumeEcs
+Method: listCopyVolumeStatus
 body: {
- "volume_uuid": "501C1AD2-9BE0-D9EF-E860-0F2A10448076",
- "_": "3f45d767"
+ "_": "3ec1ec40"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 1011110001,
-  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: listZone
-body: {
- "cloud_uuid": "",
- "_": "3f0cbe6e"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 1011110001,
-  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
-  "info_list": [],
-  "count": 0
- }
-}
------------------------------------------------------------END>
-
-<START-----------------------------------------------------------
-Method: modifyVolume
-body: {
- "volume_uuids": [],
- "ecs_id": "",
- "attach_point": "",
- "_": "3f799d19"
-}
-response: {
- "ret": 200,
- "msg": "",
- "data": {
-  "code": 1010001002,
-  "message": "[1010001002] Invalid Parameter  Lost: volume_uuids[0];\n Lost: ecs_id;\n Lost: attach_point;\n"
+  "code": 0,
+  "message": "[0] success",
+  "status": []
  }
 }
 -----------------------------------------------------------END>

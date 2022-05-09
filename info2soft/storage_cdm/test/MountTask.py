@@ -5,7 +5,7 @@ import sys
 sys.path.append(r'E:/python-sdk')
 
 import unittest
-from info2soft import MountTask
+from info2soft.storage_cdm.MountTask import MountTask
 # from info2soft.mountTask.v20200722.MountTask import MountTask
 from info2soft import Auth
 from info2soft.fileWriter import write
@@ -118,6 +118,31 @@ class MountTaskTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'MountTask', 'listMountTaskStatus', body)
+
+    def testMountMountTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'task_uuids': [],
+            'operate': ''
+        }
+
+        mountTask = MountTask(a)
+        r = mountTask.mountMountTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'MountTask', 'mountMountTask', body)
+
+    def testUnmountMountTask(self):
+        a = Auth(username, pwd)
+        body = {
+            'task_uuids': [],
+        }
+
+        mountTask = MountTask(a)
+        r = mountTask.unmountMountTask(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'MountTask', 'unmountMountTask', body)
 
     def testGetIscsiInitiatorInfo(self):
         a = Auth(username, pwd)

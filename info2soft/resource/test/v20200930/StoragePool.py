@@ -121,6 +121,80 @@ class StoragePoolTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'StoragePool', 'listStoragePoolStatus', body)
 
+    def testAvailablePoolMemberList(self):
+        a = Auth(username, pwd)
+        body = {
+            'config_addr': '',
+            'pool_type': 'BlockStorage',
+            'storage_conf_ip': '',
+        }
+
+        storagePool = StoragePool(a)
+        r = storagePool.availablePoolMemberList(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'StoragePool', 'availablePoolMemberList', body)
+
+    def testListHbaInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'ip': '',
+        }
+
+        storagePool = StoragePool(a)
+        r = storagePool.listHbaInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'StoragePool', 'listHbaInfo', body)
+
+    def testDeleteFcTarget(self):
+        a = Auth(username, pwd)
+        body = {
+            'pool_uuid': '',
+            'wwpn': '',
+            'force': 1,
+        }
+
+        storagePool = StoragePool(a)
+        r = storagePool.deleteFcTarget(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'StoragePool', 'deleteFcTarget', body)
+
+    def testResetStoragePool(self):
+        a = Auth(username, pwd)
+        body = {
+            'pool_uuids': [],
+            'operate': '',
+            'add_disk_list': [{
+            'name': '/dev/sdb',
+            'size': 2000398934016,
+            'type': 'disk'}],
+        }
+
+        storagePool = StoragePool(a)
+        r = storagePool.resetStoragePool(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'StoragePool', 'resetStoragePool', body)
+
+    def testExtendStoragePool(self):
+        a = Auth(username, pwd)
+        body = {
+            'pool_uuids': [],
+            'operate': '',
+            'add_disk_list': [{
+            'name': '/dev/sdb',
+            'size': 2000398934016,
+            'type': 'disk'}],
+        }
+
+        storagePool = StoragePool(a)
+        r = storagePool.extendStoragePool(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'StoragePool', 'extendStoragePool', body)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -95,6 +95,12 @@ class UpMonitor(object):
      '''
 
     def refreshUpMonitor(self, body):
+        if body is None:
+            body = {
+                'operate': 'refresh'
+            }
+        else:
+            body['operate'] = 'refresh'
         url = '{0}/up_monitor/operate'.format(config.get_default('default_api_host'))
 
         res = https._post(url, body, self.auth)

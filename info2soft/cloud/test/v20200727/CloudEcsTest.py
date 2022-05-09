@@ -97,6 +97,57 @@ class CloudEcsTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'CloudEcs', 'listEcsStatus', body)
 
+    def testDeleteEcs(self):
+        a = Auth(username, pwd)
+        body = {
+            'ecs_ids': [],
+            'complete_delete': 1,
+        }
+
+        cloudEcs = CloudEcs(a)
+        r = cloudEcs.deleteEcs(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudEcs', 'deleteEcs', body)
+
+    def testStartECS(self):
+        a = Auth(username, pwd)
+        body = {
+            'ecs_ids': [],
+            'operate': '',
+        }
+
+        cloudEcs = CloudEcs(a)
+        r = cloudEcs.startECS(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudEcs', 'startECS', body)
+
+    def testStopECS(self):
+        a = Auth(username, pwd)
+        body = {
+            'ecs_ids': [],
+            'operate': '',
+        }
+
+        cloudEcs = CloudEcs(a)
+        r = cloudEcs.stopECS(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudEcs', 'stopECS', body)
+
+    def testGetTakeoverECSInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'ecs_id': '',
+        }
+
+        cloudEcs = CloudEcs(a)
+        r = cloudEcs.getTakeoverECSInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudEcs', 'getTakeoverECSInfo', body)
+
     def testAttachPoint(self):
         a = Auth(username, pwd)
         body = {

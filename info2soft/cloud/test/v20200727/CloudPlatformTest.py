@@ -187,5 +187,42 @@ class CloudPlatformTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'CloudPlatform', 'listRelativeNode', body)
 
+    def testSwitchMaintenance(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'switch': 0,
+        }
+
+        cloudPlatform = CloudPlatform(a)
+        r = cloudPlatform.switchMaintenance(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudPlatform', 'switchMaintenance', body)
+
+    def testListRegions(self):
+        a = Auth(username, pwd)
+        body = {
+            'vp_uuid': '',
+        }
+
+        cloudPlatform = CloudPlatform(a)
+        r = cloudPlatform.listRegions(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudPlatform', 'listRegions', body)
+
+    def testListProjects(self):
+        a = Auth(username, pwd)
+        body = {
+            'vp_uuid': '',
+        }
+
+        cloudPlatform = CloudPlatform(a)
+        r = cloudPlatform.listProjects(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'cloudPlatform', 'listProjects', body)
+
 if __name__ == '__main__':
     unittest.main()

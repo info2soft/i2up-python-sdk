@@ -24,11 +24,11 @@ class MountTask (object):
      * 
      * @return list
     '''
-    def listMountTask(self, ):
+    def listMountTask(self, body):
         
         url = '{0}/mount_task'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -70,6 +70,44 @@ class MountTask (object):
         url = '{0}/mount_task/status'.format(config.get_default('default_api_host'))
         
         res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 挂载
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def mountMountTask(self, body):
+        if body is None:
+            body = {
+                'operate': 'mount'
+            }
+        else:
+            body['operate'] = 'mount'
+
+        url = '{0}/mount_task/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 卸载
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def unmountMountTask(self, body):
+        if body is None:
+            body = {
+                'operate': 'unmount'
+            }
+        else:
+            body['operate'] = 'unmount'
+
+        url = '{0}/mount_task/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
 
     '''

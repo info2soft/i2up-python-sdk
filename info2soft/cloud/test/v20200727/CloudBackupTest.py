@@ -44,6 +44,17 @@ class CloudBackupTestCase(unittest.TestCase):
         print(r[0])
         # assert r[0]['ret'] == 200
         write(r[0], 'CloudBackup', 'listDevice', body)
+    def testListIdleDevice(self):
+        a = Auth(username, pwd)
+        body = {
+            'node_uuid': '',
+        }
+
+        cloudBackup = CloudBackup(a)
+        r = cloudBackup.listIdleDevice(body)
+        print(r[0])
+        # assert r[0]['ret'] == 200
+        write(r[0], 'CloudBackup', 'listIdleDevice', body)
 
     def testCreateBackup(self):
         a = Auth(username, pwd)
@@ -127,7 +138,7 @@ class CloudBackupTestCase(unittest.TestCase):
         r = cloudBackup.modifyCloudBackup(body, uuid)
         print(r[0])
         # assert r[0]['ret'] == 200
-        write(r[0], 'CloudBackup', 'modifyCloudBackup', body)
+        write(r[0], 'CloudBackup', 'modifyBackup', body)
 
     def testDeleteCloudBackup(self):
         a = Auth(username, pwd)
@@ -203,6 +214,18 @@ class CloudBackupTestCase(unittest.TestCase):
         print(r[0])
         # assert r[0]['ret'] == 200
         write(r[0], 'CloudBackup', 'describeBackup', body)
+
+    def testVerifySourceVirtioDriver(self):
+        a = Auth(username, pwd)
+        body = {
+            'wk_uuid': '',
+        }
+
+        cloudBackup = CloudBackup(a)
+        r = cloudBackup.verifySourceVirtioDriver(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'CloudBackup', 'verifySourceVirtioDriver', body)
 
 
 if __name__ == '__main__':

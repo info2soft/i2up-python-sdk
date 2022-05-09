@@ -154,6 +154,19 @@ class AppSystem (object):
         return res
 
     '''
+     * 查看全部成员列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getMembersList(self, body):
+
+        url = '{0}/app_sys/members_list'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
      * 获取接管列表
      * 
      * @param dict $body  参数详见 API 手册
@@ -188,6 +201,43 @@ class AppSystem (object):
         
         url = '{0}/dashboard/source'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 资源概览 - 获取资源池列表
+     * 
+     * @return list
+    '''
+    def listBackupCenter(self, body):
+
+        url = '{0}/dashboard/list_backup_center'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 资源概览 - 获取资源使用率和保护覆盖率
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def getBackupCenterInfo(self, body):
+
+        url = '{0}/dashboard/backup_center_info'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 资源概览 - 获取接管、演练平台列表
+     * 
+     * @return list
+    '''
+    def listHosts(self, body):
+
+        url = '{0}/dashboard/list_hosts'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
@@ -262,6 +312,12 @@ class AppSystem (object):
      * @return list
     '''
     def startBatchTask(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
         url = '{0}/batch_task/operate'.format(config.get_default('default_api_host'))
 
@@ -275,6 +331,12 @@ class AppSystem (object):
      * @return list
     '''
     def stopBatchTask(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/batch_task/operate'.format(config.get_default('default_api_host'))
 
@@ -288,6 +350,12 @@ class AppSystem (object):
      * @return list
     '''
     def deleteBatchTask(self, body):
+        if body is None:
+            body = {
+                'operate': 'delete'
+            }
+        else:
+            body['operate'] = 'delete'
 
         url = '{0}/batch_task/operate'.format(config.get_default('default_api_host'))
 

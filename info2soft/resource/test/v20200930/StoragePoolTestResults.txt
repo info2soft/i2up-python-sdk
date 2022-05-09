@@ -1,0 +1,199 @@
+<START-----------------------------------------------------------
+Method: createStoragePool
+body: {
+ "pool_name": "",
+ "pool_type": "",
+ "ip": "",
+ "disk_list": [
+  {
+   "name": "",
+   "size": "",
+   "type": ""
+  }
+ ],
+ "capacity": "",
+ "_": "3f208b5e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: pool_type;\n Lost: ip;\n Lost: data_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStoragePool
+body: {
+ "pool_uuids": [],
+ "force": 1,
+ "_": "3f4731ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStoragePool
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: extendStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "extend",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3edf4d1c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHbaInfo
+body: {
+ "ip": "",
+ "_": "3f45bc99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStoragePoolStatus
+body: {
+ "_": "3f3796c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStoragePool
+body: {
+ "pool_name": "",
+ "pool_type": "",
+ "ip": "",
+ "disk_list": [
+  {
+   "name": "",
+   "size": "",
+   "type": ""
+  }
+ ],
+ "capacity": "",
+ "random_str": "",
+ "_": "3eb4fd2e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "reset",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3e1f260b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: storagePoolList
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3f00c089"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: availablePoolMemberList
+body: {
+ "config_addr": "",
+ "pool_type": "BlockStorage",
+ "storage_conf_ip": "",
+ "_": "3f4a3953"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+

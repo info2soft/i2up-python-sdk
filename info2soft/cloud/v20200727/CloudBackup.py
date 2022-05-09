@@ -6,6 +6,7 @@ from info2soft import https
 class CloudBackup (object):
     def __init__(self, auth):
         self.auth = auth
+
     '''
      *  准备 - 工作机获取设备列表
      * 
@@ -16,6 +17,19 @@ class CloudBackup (object):
         
         url = '{0}/cloud/ecs/device_info'.format(config.get_default('default_api_host'))
         
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     *  准备 - 工作机获取设备列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listIdleDevice(self, body):
+
+        url = '{0}/cloud/ecs/idle_device_info'.format(config.get_default('default_api_host'))
+
         res = https._get(url, body, self.auth)
         return res
 
@@ -78,10 +92,16 @@ class CloudBackup (object):
      * @return list
     '''
     def stopBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
         
-        url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
+        url = '{0}/cloud/backup/operate'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, body, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -91,10 +111,16 @@ class CloudBackup (object):
      * @return list
     '''
     def startBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
 
-        url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
+        url = '{0}/cloud/backup/operate'.format(config.get_default('default_api_host'))
 
-        res = https._get(url, body, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -104,10 +130,16 @@ class CloudBackup (object):
      * @return list
     '''
     def startImmediatelyBackup(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_immediately'
+            }
+        else:
+            body['operate'] = 'start_immediately'
 
-        url = '{0}/cloud/backup'.format(config.get_default('default_api_host'))
+        url = '{0}/cloud/backup/operate'.format(config.get_default('default_api_host'))
 
-        res = https._get(url, body, self.auth)
+        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -122,4 +154,17 @@ class CloudBackup (object):
         url = '{0}/cloud/backup/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
+        return res
+
+    '''
+     * 整机复制 源端virtio驱动检查
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def verifySourceVirtioDriver(self, body):
+
+        url = '{0}/cloud/backup/verify_source_virtio_driver'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
         return res
