@@ -115,15 +115,40 @@ class Mask (object):
         return res
 
     '''
-     * 操作脱敏规则
+     * 操作脱敏规则 启动
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def operateMaskRule(self, body):
+    def startMaskRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/mask/rule/operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作脱敏规则 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopMaskRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
+
+        url = '{0}/mask/rule/operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -421,5 +446,30 @@ class Mask (object):
         url = '{0}/mask/rule/{1}'.format(config.get_default('default_api_host'), uuid)
 
         res = https._put(url, body, self.auth)
+        return res
+
+    '''
+     * 总览页面
+     * 
+     * @return list
+    '''
+    def listSummary(self, body):
+
+        url = '{0}/mask/summary'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
+        return res
+
+    '''
+     * 获取总览列表
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def listSummaryView(self, body):
+
+        url = '{0}/mask/summary/list_view'.format(config.get_default('default_api_host'))
+
+        res = https._get(url, body, self.auth)
         return res
 

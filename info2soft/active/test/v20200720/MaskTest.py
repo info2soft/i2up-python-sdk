@@ -200,7 +200,7 @@ class MaskTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'createMaskRules', body)
 
-    def testOperateMaskRule(self):
+    def testStartMaskRule(self):
         a = Auth(username, pwd)
         body = {
             'operate': '',
@@ -208,10 +208,23 @@ class MaskTestCase(unittest.TestCase):
         }
 
         mask = Mask(a)
-        r = mask.operateMaskRule(body)
+        r = mask.startMaskRule(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Mask', 'operateMaskRule', body)
+        write(r[0], 'Mask', 'startMaskRule', body)
+
+    def testStopMaskRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'uuids': '',
+        }
+
+        mask = Mask(a)
+        r = mask.stopMaskRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mask', 'stopMaskRule', body)
 
     def testDeleteMaskRule(self):
         a = Auth(username, pwd)
@@ -644,6 +657,33 @@ class MaskTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mask', 'modifyMaskRules', body)
+
+    def testListSummary(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+
+        mask = Mask(a)
+        r = mask.listSummary(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mask', 'listSummary', body)
+
+    def testListSummaryView(self):
+        a = Auth(username, pwd)
+        body = {
+            'src': '',
+            'dst': '',
+            'status': '',
+            'type': '',
+            'ip': '',
+        }
+
+        mask = Mask(a)
+        r = mask.listSummaryView(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mask', 'listSummaryView', body)
 
 
 if __name__ == '__main__':
