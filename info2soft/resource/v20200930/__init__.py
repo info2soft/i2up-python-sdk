@@ -13,3 +13,5 @@ from .Monitor import Monitor
 from .NodeProxy import NodeProxy
 
 from .ActiveNode import ActiveNode
+
+from .DedupePool import DedupePool
