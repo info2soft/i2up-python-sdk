@@ -154,15 +154,40 @@ class ScriptMask (object):
         return res
 
     '''
-     * 启/停规则
+     * 操作 启动
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def operateRule(self, body):
+    def startRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start'
+            }
+        else:
+            body['operate'] = 'start'
         
         url = '{0}/mask/script_rule/operate'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
+
+        url = '{0}/mask/script_rule/operate'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 

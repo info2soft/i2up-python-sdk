@@ -1,4 +1,120 @@
 <START-----------------------------------------------------------
+Method: descriptRule
+body: {
+ "uuid": "",
+ "_": "3e94a8a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptScript
+body: {
+ "uuid": "",
+ "_": "3f2bfb6d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleStatus
+body: {
+ "_": "3f0ebc98"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   null
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyScript
+body: {
+ "uuid": "",
+ "rule_uuid": "",
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "node_uuid": "",
+ "config": {
+  "script": [],
+  "src_type": "",
+  "dyn_thd": 1,
+  "lderrset": "continue",
+  "policy": {
+   "policy_type": "immediate",
+   "one_time": "",
+   "time_policy": ""
+  }
+ },
+ "_": "3f1cf9eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startRule
+body: {
+ "operate": "start",
+ "uuids": [],
+ "_": "3f1f97df"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopRule
+body: {
+ "operate": "stop",
+ "uuids": [],
+ "_": "3f08e1f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
 Method: createRule
 body: {
  "rule_name": "",
@@ -16,14 +132,14 @@ body: {
    "time_policy": ""
   }
  },
- "_": "3dfff6c1"
+ "_": "3e651559"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001008,
-  "message": "[10001008] Invalid Name"
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
  }
 }
 -----------------------------------------------------------END>
@@ -46,14 +162,14 @@ body: {
    "time_policy": ""
   }
  },
- "_": "3ead4acf"
+ "_": "3f09c66c"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001008,
-  "message": "[10001008] Invalid Name"
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
  }
 }
 -----------------------------------------------------------END>
@@ -62,14 +178,14 @@ response: {
 Method: deleteRule
 body: {
  "uuids": "",
- "_": "3f12d34f"
+ "_": "3f77a801"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -78,14 +194,14 @@ response: {
 Method: deleteScript
 body: {
  "uuids": "",
- "_": "3f749a7c"
+ "_": "3eedc6d2"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001002,
-  "message": "[10001002] Invalid Parameter"
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
  }
 }
 -----------------------------------------------------------END>
@@ -94,14 +210,14 @@ response: {
 Method: descriptRule
 body: {
  "uuid": "",
- "_": "3eae37ff"
+ "_": "3f3d1057"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -110,14 +226,14 @@ response: {
 Method: descriptScript
 body: {
  "uuid": "",
- "_": "3f58c016"
+ "_": "3e1bed09"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001011,
-  "message": "[10001011] Item does not exist"
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
  }
 }
 -----------------------------------------------------------END>
@@ -125,7 +241,7 @@ response: {
 <START-----------------------------------------------------------
 Method: listRuleStatus
 body: {
- "_": "3f5ef0a8"
+ "_": "3f329e49"
 }
 response: {
  "ret": 200,
@@ -147,7 +263,7 @@ body: {
  "page": 1,
  "search_field": "rule_name",
  "search_value": "",
- "_": "3f46e5c1"
+ "_": "3e4e9bf3"
 }
 response: {
  "ret": 200,
@@ -168,7 +284,7 @@ body: {
  "limit": 10,
  "search_field": "",
  "search_value": "",
- "_": "3f378f0d"
+ "_": "3f36edca"
 }
 response: {
  "ret": 200,
@@ -200,14 +316,14 @@ body: {
  "policy_type": "immediate",
  "one_time": "",
  "time_policy": "",
- "_": "3ea5af19"
+ "_": "3e879173"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001008,
-  "message": "[10001008] Invalid Name"
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
  }
 }
 -----------------------------------------------------------END>
@@ -232,24 +348,41 @@ body: {
    "time_policy": ""
   }
  },
- "_": "3e7c898b"
+ "_": "3cee7878"
 }
 response: {
  "ret": 200,
  "msg": "",
  "data": {
-  "code": 10001008,
-  "message": "[10001008] Invalid Name"
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
  }
 }
 -----------------------------------------------------------END>
 
 <START-----------------------------------------------------------
-Method: operateRule
+Method: startRule
+body: {
+ "operate": "start",
+ "uuids": [],
+ "_": "3dd0622e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopRule
 body: {
  "operate": "stop",
  "uuids": [],
- "_": "3f1995eb"
+ "_": "3f011378"
 }
 response: {
  "ret": 200,

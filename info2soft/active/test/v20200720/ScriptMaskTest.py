@@ -224,7 +224,7 @@ class ScriptMaskTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'ScriptMask', 'listRuleStatus', body)
 
-    def testOperateRule(self):
+    def testStartRule(self):
         a = Auth(username, pwd)
         body = {
             'operate': 'stop',
@@ -232,10 +232,23 @@ class ScriptMaskTestCase(unittest.TestCase):
         }
         
         scriptMask = ScriptMask(a)
-        r = scriptMask.operateRule(body)
+        r = scriptMask.startRule(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'ScriptMask', 'operateRule', body)
+        write(r[0], 'ScriptMask', 'startRule', body)
+
+    def testStopRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': 'stop',
+            'uuids': [],
+        }
+
+        scriptMask = ScriptMask(a)
+        r = scriptMask.stopRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ScriptMask', 'stopRule', body)
 
 
 if __name__ == '__main__':
