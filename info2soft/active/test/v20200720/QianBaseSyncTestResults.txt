@@ -1,0 +1,484 @@
+<START-----------------------------------------------------------
+Method: createQbTbCmp
+body: {
+ "tb_cmp_name": "ctt->ctt",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cmp_type": "user,table,db",
+ "db_user_map": "{\"CTT\":\"CTT\"}",
+ "filter_table": "[\u7528\u6237.\u8868\u540d]",
+ "db_tb_map": "\u8868\u6620\u5c04",
+ "dump_thd": 1,
+ "rule_uuid": "b37F8d05-Cbbb-bA96-C04b-bcAD5BB2Aa23",
+ "polices": "\"0|00:00",
+ "policy_type": "one_time",
+ "concurrent_table": [
+  "hh.ww"
+ ],
+ "try_split_part_table": 0,
+ "one_time": "2019-05-27 16:07:08",
+ "repair": 0,
+ "fix_related": 0,
+ "config": {
+  "tab_cmp_filter": [
+   {
+    "user": "test",
+    "table": "test",
+    "condition": "select * from xxx"
+   }
+  ]
+ },
+ "_": "3daf85c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "uuid": "F5C0D854-BA18-D12F-4C13-F2596541E54F"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createQianbaseRule
+body: {
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "map_type": "table",
+ "config": {
+  "start_rule_now": 1,
+  "db_set": [
+   {
+    "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+    "filter_type": "[1:filter_table,0:no_fileter]",
+    "table_map": [
+     {
+      "src_table": "",
+      "dst_table": ""
+     }
+    ],
+    "custom_config": [
+     {
+      "key": "",
+      "value": ""
+     }
+    ],
+    "tgt_type": ""
+   }
+  ],
+  "all_custom_config": [
+   {
+    "key": "",
+    "value": ""
+   }
+  ],
+  "sync_content": [
+   {
+    "sync_col": ""
+   }
+  ],
+  "jointing": {
+   "table": "",
+   "op": "",
+   "content": ""
+  },
+  "save_json_text": "",
+  "kafka_db_uuid": "",
+  "conn_num": 1,
+  "loader": 1,
+  "schema_name": ""
+ },
+ "_": "3e97d3a1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteQbTbCmp
+body: {
+ "force": "",
+ "uuids": [
+  "2EE43CC5-AdA5-3ba7-B2F9-BA5B10dAcfeB"
+ ],
+ "_": "3f59b49c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteQianbaseRule
+body: {
+ "uuids": [],
+ "force": "true",
+ "_": "3f20a639"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQbTbCmp
+body: {
+ "uuid": "ac73b16C-12Bb-3b8f-2fcD-9DDe66db98B7",
+ "_": "3ed8d2bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQbTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "3d908EDd-87ac-8bBd-bAA3-8c67D2cd2FF2",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3e100e3e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQbTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "eAB0060c-e5D1-65ec-2E53-C5A18EEa0c8D",
+ "start_time": "",
+ "_": "3f75469e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQbTbCmpResuluTimeList
+body: {
+ "time_list": "298dDDE9-3Db5-a6a9-c9F6-AC77D5D8040E",
+ "uuid": "",
+ "_": "3c15f7cd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQianbaseRules
+body: {
+ "rule_uuid": "",
+ "_": "3f2db6de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQbTbCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f275ab5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQbTbCmpResultTimeList
+body: {
+ "uuid": "",
+ "_": "3ebc7f79"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "time_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQbTbCmpStatus
+body: {
+ "uuids": "Ba98fc88-0e5D-2Be6-a24c-8FAFBEC62B5c",
+ "_": "3f1c76f4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQianbaseRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "where_args": {
+  "rule_uuid": ""
+ },
+ "_": "3e85f57d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQianbaseStatus
+body: {
+ "_": "3f4966f0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyQianbaseRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": [],
+  "full_sync": 0,
+  "incre_sync": 1,
+  " full_sync_mode": "1",
+  "db_user_map": "",
+  "dbmap_topic": "",
+  "row_map_mode": "",
+  "kafka_time_out": "",
+  "part_load_balance": "",
+  "kafka_message_encoding": "",
+  "db_set": [
+   {
+    "tgt_db_uuid": "",
+    "filter_type": "",
+    "tgt_type": "",
+    "table_map": [
+     {
+      "src_table": "",
+      "dst_table": ""
+     }
+    ],
+    "custom_config": [
+     {
+      "key": "",
+      "value": ""
+     }
+    ]
+   }
+  ],
+  "all_custom_config": [
+   {
+    "key": "",
+    "value": ""
+   }
+  ],
+  "sync_content": [
+   {
+    "sync_col": ""
+   }
+  ]
+ },
+ "rule_uuid": "",
+ "_": "3f744d4f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartQbTbCmp
+body: {
+ "operate": "cmp_restart",
+ "tb_cmp_uuids": "6B58f6c9-fe7A-7f5b-1bd8-E7CB773fb5Ac",
+ "_": "3e373c3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeQianbaseRules
+body: {
+ "operate": "resume",
+ "uuids": [
+  "2EE43CC5-AdA5-3ba7-B2F9-BA5B10dAcfeB"
+ ],
+ "_": "3f13444c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopQbTbCmp
+body: {
+ "operate": "cmp_stop",
+ "tb_cmp_uuids": "6B58f6c9-fe7A-7f5b-1bd8-E7CB773fb5Ac",
+ "_": "3f184eaf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopQianbaseRules
+body: {
+ "operate": "stop",
+ "uuids": [
+  "2EE43CC5-AdA5-3ba7-B2F9-BA5B10dAcfeB"
+ ],
+ "_": "3dd26bb1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -67,7 +67,7 @@ from .tools.v20181227.Diagnose import Diagnose
 
 from .vp.VirtualizationSupport import VirtualizationSupport
 
-from .active import Db, Mask, Node, ScriptMask, Sqlserver, SyncRules
+from .active import DataChk, Db2, Dm, Gauss, Hetero, Infomix, Log, Mask, MongoDB, Mysql, Node, Notifications, Oceanbase, Postgres, QianBaseSync, QianBasexTP, ScriptMask, Sqlserver, Summary, SyncRules, Tidb
 
 
 from .ha import haCluster

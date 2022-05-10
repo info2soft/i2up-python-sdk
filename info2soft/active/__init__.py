@@ -1,1 +1,1 @@
-from .v20200720 import Db, Mask, Node, ScriptMask, Sqlserver, SyncRules
+from .v20200720 import DataChk, Db2, Dm, Gauss, Hetero, Infomix, Log, Mask, MongoDB, Mysql, Node, Notifications, Oceanbase, Postgres, QianBaseSync, QianBasexTP, ScriptMask, Sqlserver, Summary, SyncRules, Tidb

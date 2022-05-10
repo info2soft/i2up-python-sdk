@@ -1,0 +1,632 @@
+<START-----------------------------------------------------------
+Method: cmpRestartDb2Cmp
+body: {
+ "tb_cmp_uuids": "6ef11d7e-2791-4ddC-A39D-fCFbeC53f72A",
+ "operate": "cmp_restart",
+ "_": "3eac6f2d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpStopDb2Cmp
+body: {
+ "tb_cmp_uuids": "6ef11d7e-2791-4ddC-A39D-fCFbeC53f72A",
+ "operate": "cmp_stop",
+ "_": "3e81fed2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDb2Cmp
+body: {
+ "tb_cmp_name": "ctt->ctt",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cmp_type": "table, database, all",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "filter_table": "[\"\u7528\u6237.\u8868\u540d\"]",
+ "db_tb_map": "\u8868\u6620\u5c04",
+ "dump_thd": 1,
+ "rule_uuid": "d7bed65D-4B9b-C1a2-eEfe-9Ce8BDfb8e48",
+ "polices": "\"0|00:00",
+ "policy_type": "one_time",
+ "try_split_part_table": 0,
+ "one_time": "",
+ "concurrent_table": [],
+ "repair": 1,
+ "fix_related": 1,
+ "_": "3f41aab2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: report_msg;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDbRule
+body: {
+ "start_rule_now": 1,
+ "rule_name": "12321",
+ "src_db_uuid": "2C4C2E77-774D-C604-9A32-5038D8E590C4",
+ "tgt_type": "db2",
+ "tgt_db_uuid": "953C47CB-3F6C-E72F-DF1C-31522468A566",
+ "map_type": "db",
+ "db_user_map": "",
+ "table_map": "",
+ "dbmap_topic": "",
+ "row_map_mode": "rowid",
+ "sync_mode": 1,
+ "start_scn": "",
+ "kafka_time_out": "120000",
+ "part_load_balance": "by_table",
+ "kafka_message_encoding": "UTF-8",
+ "kafka": {
+  "binary_code": "hex"
+ },
+ "dml_track": {
+  "enable": 0,
+  "urp": 0,
+  "drp": 0,
+  "tmcol": "",
+  "delcol": ""
+ },
+ "storage_settings": {
+  "src_max_mem": "512",
+  "src_max_disk": "5000",
+  "txn_max_mem": "10000",
+  "tf_max_size": "100",
+  "max_ld_mem": "512",
+  "tgt_extern_table": ""
+ },
+ "other_settings": {
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "fill_lob_column": 0,
+  "keep_seq_sync": 0,
+  "keep_usr_pwd": 0,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "gen_txn": 0,
+  "run_time": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\"",
+  "jointing": {
+   "table": "",
+   "op": "append",
+   "content": ""
+  }
+ },
+ "error_handling": {
+  "irp": "irpafterdel",
+  "urp": "toirp",
+  "drp": "ignore",
+  "load_err_set": "continue",
+  "report_failed_dml": 0
+ },
+ "bw_settings": {
+  "bw_limit": ""
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": [],
+  "table_space_name": []
+ },
+ "full_sync_settings": {
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "dump_thd": 1,
+  "load_thd": 1,
+  "try_split_part_table": 1,
+  "clean_user_before_dump": 0,
+  "existing_table": "drop_to_recycle",
+  "concurrent_table": "[]"
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": []
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "ALTER TABLE CHECKED",
+   "ALTER TABLE REORG",
+   "ALTER TABLE ATTACH PARTITION",
+   "CREATE INDEX NOT PART",
+   "DROP INDEX NOT PART"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": "[]"
+ },
+ "etl_settings": {
+  "etl_table": []
+ },
+ "save_json_text": "",
+ "_": "3ec74601"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCmpResult
+body: {
+ "time_list": "DAfbCAeA-aE6e-cF7b-9bc5-9d5b0C6Fbf7E",
+ "uuid": "",
+ "_": "3ecf87fb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDb2Rules
+body: {
+ "uuids": "7eCFCA3d-ebc2-DbB2-6DAb-BA0AE4BcDFD1",
+ "_": "3ec24eb7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: uuids;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "_": "3e8aa789"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "ADeEf4b3-E5da-82DF-FCFF-fCe76EE288D6",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3f714040"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDb2Cmp
+body: {
+ "uuid": "",
+ "_": "3d2f95d3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDbRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "DecFc58D-BAf2-83CD-641D-a1dEE29BF875",
+ "start_time": "",
+ "_": "3ef9a96e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCmpDiffMap
+body: {
+ "uuid": "",
+ "time": "",
+ "_": "3f335e31"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCmpResult
+body: {
+ "limit": "",
+ "offset": "",
+ "uuid": "",
+ "_": "3f142c26"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "time_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDb2CmpStatus
+body: {
+ "uuids": [],
+ "_": "3f792f85"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDb2Cmps
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3e48b89d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbRule
+body: {
+ "_": "3e0ab650"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbRuleLog
+body: {
+ "offset": 0,
+ "limit": 10,
+ "date_start": "",
+ "date_end": "",
+ "type": 1,
+ "module_type": 1,
+ "query_type": 1,
+ "rule_uuid": "3FCdeF6f-9CC5-B9Ee-C4F2-8e19eb118528",
+ "_": "3f508ba2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed",
+    "log_type": "Export",
+    "flag": 0
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDbRule
+body: {
+ "_": "3d004473"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetAnalysisDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "reset_analysis",
+ "_": "3f733f75"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "restart",
+ "_": "3f5a53f0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "resume",
+ "_": "3f03bb5d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startAnalysisDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "start_analysis",
+ "_": "3e9d977a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startScheduleDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "start_schedule",
+ "_": "3f2cc5f9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAnalysisDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "stop_analysis",
+ "_": "3e723806"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAndStopAnalysisDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "stop_and_stopanalysis",
+ "_": "3ebf4885"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "stop",
+ "_": "3f46ad2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopScheduleDbRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "operate": "stop_schedule",
+ "_": "3ed3c9a2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

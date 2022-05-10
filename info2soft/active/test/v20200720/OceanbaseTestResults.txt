@@ -1,0 +1,363 @@
+<START-----------------------------------------------------------
+Method: createOceanRule
+body: {
+ "start_rule_now": 1,
+ "rule_name": "12321",
+ "src_db_uuid": "2C4C2E77-774D-C604-9A32-5038D8E590C4",
+ "tgt_type": "db2",
+ "tgt_db_uuid": "953C47CB-3F6C-E72F-DF1C-31522468A566",
+ "map_type": "db",
+ "db_user_map": "",
+ "table_map": "",
+ "dbmap_topic": "",
+ "row_map_mode": "rowid",
+ "sync_mode": 1,
+ "start_scn": "",
+ "kafka_time_out": "120000",
+ "part_load_balance": "by_table",
+ "kafka_message_encoding": "UTF-8",
+ "kafka": {
+  "binary_code": "hex"
+ },
+ "dml_track": {
+  "enable": 0,
+  "urp": 0,
+  "drp": 0,
+  "tmcol": "",
+  "delcol": ""
+ },
+ "storage_settings": {
+  "src_max_mem": "512",
+  "src_max_disk": "5000",
+  "txn_max_mem": "10000",
+  "tf_max_size": "100",
+  "max_ld_mem": "512",
+  "tgt_extern_table": ""
+ },
+ "other_settings": {
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "fill_lob_column": 0,
+  "keep_seq_sync": 0,
+  "keep_usr_pwd": 0,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "gen_txn": 0,
+  "run_time": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "error_handling": {
+  "irp": "irpafterdel",
+  "urp": "toirp",
+  "drp": "ignore",
+  "load_err_set": "continue",
+  "report_failed_dml": 0
+ },
+ "bw_settings": {
+  "bw_limit": ""
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": [],
+  "table_space_name": []
+ },
+ "full_sync_settings": {
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "dump_thd": 1,
+  "load_thd": 1,
+  "try_split_part_table": 1,
+  "clean_user_before_dump": 0,
+  "existing_table": "drop_to_recycle",
+  "concurrent_table": "[]",
+  "sync_mode": 0,
+  "start_scn": ""
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": []
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": []
+ },
+ "filter_table_settings": {
+  "exclude_table": "[]"
+ },
+ "etl_settings": {
+  "etl_table": []
+ },
+ "_": "3e3b56c5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteOceanRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "_": "3f49e72e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeOceanRule
+body: {
+ "_": "3f348f29"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOceanRule
+body: {
+ "_": "3f6bf58d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOceanRuleLog
+body: {
+ "offset": 0,
+ "limit": 10,
+ "date_start": "",
+ "date_end": "",
+ "type": 1,
+ "module_type": 1,
+ "query_type": 1,
+ "rule_uuid": "3FCdeF6f-9CC5-B9Ee-C4F2-8e19eb118528",
+ "_": "3edd015c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed",
+    "log_type": "Export",
+    "flag": 0
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyOceanRule
+body: {
+ "_": "3e6b893c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "reset",
+ "scn": 0,
+ "_": "3cfcc9f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: resume,stop,restart,start_analysis,stop_analysis,reset_analysis,stop_and_stopanalysis,start_schedule,stop_schedule;\n Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "restart",
+ "scn": 0,
+ "_": "3ca866ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "resume",
+ "scn": 0,
+ "_": "3f2f6a31"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startAnalysisOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "start_analysis",
+ "scn": 0,
+ "_": "3f1be733"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startScheduleOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "start_schedule",
+ "scn": 0,
+ "_": "3f3e913a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAnalysisOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "stop_analysis",
+ "scn": 0,
+ "_": "3f3762d1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAndStopAnalysisOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "stop_and_stopanalysis",
+ "scn": 0,
+ "_": "3f3ef138"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "stop",
+ "scn": 0,
+ "_": "3ee60746"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopScheduleOceanRule
+body: {
+ "rule_uuid": [],
+ "operate": "stop_schedule",
+ "scn": 0,
+ "_": "3f0d5267"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
