@@ -144,6 +144,12 @@ class Hetero (object):
      * @return list
     '''
     def stopConsumerRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/hetero/consumer/operate'.format(config.get_default('default_api_host'))
 
@@ -157,6 +163,12 @@ class Hetero (object):
      * @return list
     '''
     def resumeConsumerRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'resume'
+            }
+        else:
+            body['operate'] = 'resume'
 
         url = '{0}/hetero/consumer/operate'.format(config.get_default('default_api_host'))
 

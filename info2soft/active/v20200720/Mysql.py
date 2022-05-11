@@ -39,6 +39,12 @@ class Mysql (object):
      * @return list
     '''
     def resumeStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'resume'
+            }
+        else:
+            body['operate'] = 'resume'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -52,19 +58,12 @@ class Mysql (object):
      * @return list
     '''
     def stopStreamRule(self, body):
-
-        url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
-
-        res = https._post(url, body, self.auth)
-        return res
-
-    '''
-     * mysql规则管理-操作 修改
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def modifyStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -78,6 +77,12 @@ class Mysql (object):
      * @return list
     '''
     def restartStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'restart'
+            }
+        else:
+            body['operate'] = 'restart'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -91,6 +96,12 @@ class Mysql (object):
      * @return list
     '''
     def startParsingStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_parsing'
+            }
+        else:
+            body['operate'] = 'start_parsing'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -104,6 +115,12 @@ class Mysql (object):
      * @return list
     '''
     def stopParsingStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop_parsing'
+            }
+        else:
+            body['operate'] = 'stop_parsing'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -117,6 +134,12 @@ class Mysql (object):
      * @return list
     '''
     def resetParsingStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'reset_parsing'
+            }
+        else:
+            body['operate'] = 'reset_parsing'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -130,6 +153,12 @@ class Mysql (object):
      * @return list
     '''
     def startLoadStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_load'
+            }
+        else:
+            body['operate'] = 'start_load'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -143,6 +172,12 @@ class Mysql (object):
      * @return list
     '''
     def stopLoadStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop_load'
+            }
+        else:
+            body['operate'] = 'stop_load'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -156,6 +191,12 @@ class Mysql (object):
      * @return list
     '''
     def resetLoadStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'reset_load'
+            }
+        else:
+            body['operate'] = 'reset_load'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -169,6 +210,107 @@ class Mysql (object):
      * @return list
     '''
     def removeStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'remove'
+            }
+        else:
+            body['operate'] = 'remove'
+
+        url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql规则管理-操作 停止调度
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopScheduleStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop_schedule'
+            }
+        else:
+            body['operate'] = 'stop_schedule'
+
+        url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql规则管理-操作 启动调度
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startScheduleStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_schedule'
+            }
+        else:
+            body['operate'] = 'start_schedule'
+
+        url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql规则管理-操作 停止解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopAnalysisStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop_analysis'
+            }
+        else:
+            body['operate'] = 'stop_analysis'
+
+        url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql规则管理-操作 开始解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startAnalysisStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_analysis'
+            }
+        else:
+            body['operate'] = 'start_analysis'
+
+        url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql规则管理-操作 重置解析
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def resetAnalysisStreamRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'reset_analysis'
+            }
+        else:
+            body['operate'] = 'reset_analysis'
 
         url = '{0}/stream/rule/operate'.format(config.get_default('default_api_host'))
 
@@ -350,6 +492,44 @@ class Mysql (object):
         return res
 
     '''
+     * mysql-表比较-操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def cmpStopStreamCmp(self, body):
+        if body is None:
+            body = {
+                'operate': 'cmp_stop'
+            }
+        else:
+            body['operate'] = 'cmp_stop'
+
+        url = '{0}/stream/tb_cmp/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql-表比较-操作
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def cmpRestartStreamCmp(self, body):
+        if body is None:
+            body = {
+                'operate': 'cmp_restart'
+            }
+        else:
+            body['operate'] = 'cmp_restart'
+
+        url = '{0}/stream/tb_cmp/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * mysql-表比较-比较结果的删除
      * 
      * @param dict $body  参数详见 API 手册
@@ -402,7 +582,7 @@ class Mysql (object):
         return res
 
     '''
-     * 比较结果列表的修复
+     * 历史结果中的修复
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
@@ -428,7 +608,7 @@ class Mysql (object):
         return res
 
     '''
-     * 历史结果中的修复
+     * 比较结果列表的修复
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
@@ -465,19 +645,6 @@ class Mysql (object):
         url = '{0}/stream/bk_takeover/{1}'.format(config.get_default('default_api_host'), uuid)
         
         res = https._get(url, None, self.auth)
-        return res
-
-    '''
-     * mysql对象比较 - 新建
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def createObjCmp(self, body):
-        
-        url = '{0}/stream/obj_cmp'.format(config.get_default('default_api_host'))
-        
-        res = https._post(url, body, self.auth)
         return res
 
     '''
@@ -524,11 +691,11 @@ class Mysql (object):
      * 
      * @return list
     '''
-    def listTakeoverList(self, ):
+    def listTakeoverList(self, body):
         
         url = '{0}/stream/bk_takeover'.format(config.get_default('default_api_host'))
         
-        res = https._get(url, None, self.auth)
+        res = https._get(url, body, self.auth)
         return res
 
     '''
@@ -586,6 +753,44 @@ class Mysql (object):
         return res
 
     '''
+     * mysql-对象修复 - 操作 重启
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartObjFix(self, body):
+        if body is None:
+            body = {
+                'operate': 'restart'
+            }
+        else:
+            body['operate'] = 'restart'
+
+        url = '{0}/stream/obj_fix/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql-对象修复 - 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopObjFix(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
+
+        url = '{0}/stream/obj_fix/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * 对象修复 - 修复结果
      * 
      * @param dict $body  参数详见 API 手册
@@ -608,6 +813,19 @@ class Mysql (object):
         
         url = '{0}/stream/obj_fix/status'.format(config.get_default('default_api_host'))
         
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * mysql对象比较 - 新建
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def createObjCmp(self, body):
+
+        url = '{0}/stream/obj_cmp'.format(config.get_default('default_api_host'))
+
         res = https._post(url, body, self.auth)
         return res
 
@@ -714,31 +932,5 @@ class Mysql (object):
         url = '{0}/stream/obj_cmp/result'.format(config.get_default('default_api_host'))
         
         res = https._get(url, body, self.auth)
-        return res
-
-    '''
-     * mysql-表比较-操作 停止
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def cmpStopStreamCmp(self, body):
-
-        url = '{0}/stream/tb_cmp/operate'.format(config.get_default('default_api_host'))
-
-        res = https._post(url, body, self.auth)
-        return res
-
-    '''
-     * mysql-表比较-操作 重启
-     * 
-     * @param dict $body  参数详见 API 手册
-     * @return list
-    '''
-    def cmpRestartStreamCmp(self, body):
-
-        url = '{0}/stream/tb_cmp/operate'.format(config.get_default('default_api_host'))
-
-        res = https._post(url, body, self.auth)
         return res
 

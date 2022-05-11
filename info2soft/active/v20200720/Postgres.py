@@ -59,6 +59,101 @@ class Postgres (object):
         return res
 
     '''
+     * 操作 停止
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopPgsqlRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop'
+            }
+        else:
+            body['operate'] = 'stop'
+
+        url = '{0}/pgsql/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 重新同步
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def restartPgsqlRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'restart'
+            }
+        else:
+            body['operate'] = 'restart'
+
+        url = '{0}/pgsql/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 继续
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def resumePgsqlRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'resume'
+            }
+        else:
+            body['operate'] = 'resume'
+
+        url = '{0}/pgsql/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 停止调度
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def stopSchedulePgsqlRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'stop_schedule'
+            }
+        else:
+            body['operate'] = 'stop_schedule'
+
+        url = '{0}/pgsql/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * 操作 启动调度
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def startSchedulePgsqlRule(self, body):
+        if body is None:
+            body = {
+                'operate': 'start_schedule'
+            }
+        else:
+            body['operate'] = 'start_schedule'
+
+        url = '{0}/pgsql/rule/operate'.format(config.get_default('default_api_host'))
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
      * postgres规则-状态
      * 
      * @param dict $body  参数详见 API 手册

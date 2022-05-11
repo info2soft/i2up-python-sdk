@@ -291,6 +291,81 @@ class MysqlTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Mysql', 'removeStreamRule', body)
 
+    def testStopScheduleStreamRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'mysql_uuid': '',
+            'scn': '',
+            'tf': '',
+        }
+
+        mysql = Mysql(a)
+        r = mysql.stopScheduleStreamRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'stopScheduleStreamRule', body)
+
+    def testStartScheduleStreamRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'mysql_uuid': '',
+            'scn': '',
+            'tf': '',
+        }
+
+        mysql = Mysql(a)
+        r = mysql.startScheduleStreamRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'startScheduleStreamRule', body)
+
+    def testStopAnalysisStreamRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'mysql_uuid': '',
+            'scn': '',
+            'tf': '',
+        }
+
+        mysql = Mysql(a)
+        r = mysql.stopAnalysisStreamRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'stopAnalysisStreamRule', body)
+
+    def testStartAnalysisStreamRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'mysql_uuid': '',
+            'scn': '',
+            'tf': '',
+        }
+
+        mysql = Mysql(a)
+        r = mysql.startAnalysisStreamRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'startAnalysisStreamRule', body)
+
+    def testResetAnalysisStreamRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'mysql_uuid': '',
+            'scn': '',
+            'tf': '',
+        }
+
+        mysql = Mysql(a)
+        r = mysql.resetAnalysisStreamRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'resetAnalysisStreamRule', body)
+
     def testListStreamRules(self):
         a = Auth(username, pwd)
         body = {
@@ -814,6 +889,32 @@ class MysqlTestCase(unittest.TestCase):
         print(r[0])
         assert r[0]['ret'] == 200
         write(r[0], 'Mysql', 'listObjFixStatus', body)
+
+    def testRestartObjFix(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+            'operate': ''
+        }
+
+        mysql = Mysql(a)
+        r = mysql.restartObjFix(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'restartObjFix', body)
+
+    def teststopObjFix(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+            'operate': ''
+        }
+
+        mysql = Mysql(a)
+        r = mysql.stopObjFix(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Mysql', 'stopObjFix', body)
 
     def testListObjCmp(self):
         a = Auth(username, pwd)

@@ -202,6 +202,48 @@ class GaussTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Gauss', 'deleteGaussRule', body)
 
+    def testResumeGaussRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [
+            'DBED8CDE-435D-7865-76FE-149AA54AC7F7',],
+            'operate': '',
+        }
+
+        gauss = Gauss(a)
+        r = gauss.resumeGaussRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Gauss', 'resumeGaussRule', body)
+
+    def testStopGaussRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [
+            'DBED8CDE-435D-7865-76FE-149AA54AC7F7',],
+            'operate': '',
+        }
+
+        gauss = Gauss(a)
+        r = gauss.stopGaussRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Gauss', 'stopGaussRule', body)
+
+    def testRestartGaussRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [
+            'DBED8CDE-435D-7865-76FE-149AA54AC7F7',],
+            'operate': '',
+        }
+
+        gauss = Gauss(a)
+        r = gauss.restartGaussRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Gauss', 'restartGaussRule', body)
+
     def testListGaussRules(self):
         a = Auth(username, pwd)
         body = {

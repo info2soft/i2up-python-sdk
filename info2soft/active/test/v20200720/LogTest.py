@@ -46,6 +46,24 @@ class LogTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Log', 'listLogWarning', body)
 
+    def testListRuleLog(self):
+        a = Auth(username, pwd)
+        body = {
+            'offset': 0,
+            'limit': 10,
+            'date_start': '',
+            'date_end': '',
+            'type': 1,
+            'module_type': 1,
+            'query_type': 1,
+        }
+
+        log = Log(a)
+        r = log.listRuleLog(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Log', 'listRuleLog', body)
+
 
 if __name__ == '__main__':
     unittest.main()

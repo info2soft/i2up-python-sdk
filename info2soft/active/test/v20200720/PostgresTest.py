@@ -130,6 +130,66 @@ class PostgresTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Postgres', 'deletePgsqlRule', body)
 
+    def testStopPgsqlRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+
+        postgres = Postgres(a)
+        r = postgres.stopPgsqlRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Postgres', 'stopPgsqlRule', body)
+
+    def testRestartPgsqlRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+
+        postgres = Postgres(a)
+        r = postgres.restartPgsqlRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Postgres', 'restartPgsqlRule', body)
+
+    def testResumePgsqlRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+
+        postgres = Postgres(a)
+        r = postgres.resumePgsqlRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Postgres', 'resumePgsqlRule', body)
+
+    def testStopSchedulePgsqlRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+
+        postgres = Postgres(a)
+        r = postgres.stopSchedulePgsqlRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Postgres', 'stopSchedulePgsqlRule', body)
+
+    def testStartSchedulePgsqlRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+
+        postgres = Postgres(a)
+        r = postgres.startSchedulePgsqlRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Postgres', 'startSchedulePgsqlRule', body)
+
     def testListPgsqlStatus(self):
         a = Auth(username, pwd)
         body = {

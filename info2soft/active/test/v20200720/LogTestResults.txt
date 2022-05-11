@@ -1,0 +1,48 @@
+<START-----------------------------------------------------------
+Method: listLogWarning
+body: {
+ "limit": 1,
+ "offset": "",
+ "_": "3f056930"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleLog
+body: {
+ "offset": 0,
+ "limit": 10,
+ "date_start": "",
+ "date_end": "",
+ "type": 1,
+ "module_type": 1,
+ "query_type": 1,
+ "_": "3d2b6876"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed"
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+

@@ -6,6 +6,7 @@ from info2soft import https
 class Summary (object):
     def __init__(self, auth):
         self.auth = auth
+
     '''
      * 获取总览列表
      * 
@@ -25,32 +26,20 @@ class Summary (object):
      * @return list
     '''
     def listSummary(self, body):
-        
+
         url = '{0}/active/summary'.format(config.get_default('default_api_host'))
-        
-        res = https._get(url, body, self.auth)
-        return res
-
-    '''
-     * 总览 操作 停止
-     * 
-     * @return list
-    '''
-    def stopView(self, body):
-
-        url = '{0}/view/operate'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
         return res
 
     '''
-     * 总览 操作 继续
+     * 测试-总览拓补图
      * 
      * @return list
     '''
-    def resumeView(self, body):
+    def listSummaryChart(self, body):
 
-        url = '{0}/view/operate'.format(config.get_default('default_api_host'))
+        url = '{0}/active/summary/chart'.format(config.get_default('default_api_host'))
 
         res = https._get(url, body, self.auth)
         return res

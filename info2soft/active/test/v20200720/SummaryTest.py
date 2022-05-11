@@ -60,35 +60,16 @@ class SummaryTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Summary', 'listSummary', body)
 
-    def testStopView(self):
+    def testListSummaryChart(self):
         a = Auth(username, pwd)
         body = {
-            'operate': 'stop',
-            'rule_uuids': [
-
-            ]
         }
 
         summary = Summary(a)
-        r = summary.stopView(body)
+        r = summary.listSummaryChart(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Summary', 'stopView', body)
-
-    def testResumeView(self):
-        a = Auth(username, pwd)
-        body = {
-            'operate': 'stop',
-            'rule_uuids': [
-
-            ]
-        }
-
-        summary = Summary(a)
-        r = summary.resumeView(body)
-        print(r[0])
-        assert r[0]['ret'] == 200
-        write(r[0], 'Summary', 'resumeView', body)
+        write(r[0], 'Summary', 'listSummaryChart', body)
 
 
 if __name__ == '__main__':

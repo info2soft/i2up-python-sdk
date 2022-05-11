@@ -1,0 +1,240 @@
+<START-----------------------------------------------------------
+Method: createPgsqlRule
+body: {
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+ "tgt_type": "sqlserver",
+ "map_type": "table",
+ "config": {
+  "table_map": [
+   {
+    "src_user": "1",
+    "src_table": "2",
+    "dst_user": "1",
+    "dst_table": "2",
+    "column": []
+   }
+  ],
+  "start_rule_now": 1,
+  "db_user_map": "",
+  "dbmap_topic": "",
+  "full_sync": 1,
+  "incre_sync": 1,
+  "full_sync_mode": "logic",
+  "row_map_mode": "rowid",
+  "kafka_time_out": "120000",
+  "part_load_balance": "by_table",
+  "kafka_message_encoding": "UTF-8"
+ },
+ "_": "3e8f3c28"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deletePgsqlRule
+body: {
+ "uuids": [],
+ "_": "3ee6025f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describePgsqlRules
+body: {
+ "rule_uuid": "",
+ "_": "3eac6a8b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPgsqlRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "where_args": {
+  "rule_uuid": ""
+ },
+ "_": "3f0c1c7c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPgsqlStatus
+body: {
+ "_": "3f0d7637"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyPgsqlRule
+body: {
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+ "tgt_type": "sqlserver",
+ "map_type": "table",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": [
+   {
+    "src_user": "1",
+    "src_table": "2",
+    "dst_user": "1",
+    "dst_table": "2",
+    "column": []
+   }
+  ],
+  "full_sync": 1,
+  "incre_sync": 1,
+  "full_sync_mode": "",
+  "db_user_map": {},
+  "dbmap_topic": "",
+  "row_map_mode": "",
+  "kafka_time_out": "",
+  "part_load_balance": "",
+  "kafka_message_encoding": ""
+ },
+ "rule_uuid": "",
+ "_": "3ec7ee09"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node / virtual platform has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartPgsqlRule
+body: {
+ "uuids": [],
+ "operate": "restart",
+ "_": "3c77cc40"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumePgsqlRule
+body: {
+ "uuids": [],
+ "operate": "resume",
+ "_": "3f7060bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startSchedulePgsqlRule
+body: {
+ "uuids": [],
+ "operate": "start_schedule",
+ "_": "3e97366b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopPgsqlRule
+body: {
+ "uuids": [],
+ "operate": "stop",
+ "_": "3f026533"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopSchedulePgsqlRule
+body: {
+ "uuids": [],
+ "operate": "stop_schedule",
+ "_": "3dae53b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
