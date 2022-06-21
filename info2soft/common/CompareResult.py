@@ -3,7 +3,7 @@ from info2soft import config
 from info2soft import https
 
 
-class FfoMount (object):
+class CompareResult (object):
     def __init__(self, auth):
         self.auth = auth
     '''

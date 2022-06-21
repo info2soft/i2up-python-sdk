@@ -5,8 +5,8 @@ import sys
 sys.path.append(r'E:/python-sdk')
 
 import unittest
-from info2soft.common.FfoMount import FfoMount
-# from info2soft.common.v20200722.FfoMount import FfoMount
+from info2soft.common.CompareResult import CompareResult
+# from info2soft.common.v20200722.CompareResult import CompareResult
 from info2soft import Auth
 from info2soft.fileWriter import write
 from info2soft.compat import is_py2, is_py3
@@ -28,10 +28,10 @@ if is_py3:
     urlopen = urllib.request.urlopen
 
 username = 'admin'
-pwd = 'Info1234'
+pwd = 'xxxxxxxx'
 
 
-class FfoMountTestCase(unittest.TestCase):
+class CompareResultTestCase(unittest.TestCase):
 
     def testListCompareResult(self):
         a = Auth(username, pwd)
@@ -40,11 +40,11 @@ class FfoMountTestCase(unittest.TestCase):
             'limit': '',
         }
         uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
-        ffoMount = FfoMount(a)
-        r = ffoMount.listCompareResult(body, uuid)
+        compareResult = CompareResult(a)
+        r = compareResult.listCompareResult(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FfoMount', 'listCompareResult', body)
+        write(r[0], 'CompareResult', 'listCompareResult', body)
 
     def testOperateCompareResult(self):
         a = Auth(username, pwd)
@@ -53,11 +53,11 @@ class FfoMountTestCase(unittest.TestCase):
             'operate': '',
         }
         
-        ffoMount = FfoMount(a)
-        r = ffoMount.operateCompareResult(body)
+        compareResult = CompareResult(a)
+        r = compareResult.operateCompareResult(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FfoMount', 'operateCompareResult', body)
+        write(r[0], 'CompareResult', 'operateCompareResult', body)
 
     def testDeleteCompareResult(self):
         a = Auth(username, pwd)
@@ -65,22 +65,22 @@ class FfoMountTestCase(unittest.TestCase):
             'result_uuids': [],
         }
         
-        ffoMount = FfoMount(a)
-        r = ffoMount.deleteCompareResult(body)
+        compareResult = CompareResult(a)
+        r = compareResult.deleteCompareResult(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FfoMount', 'deleteCompareResult', body)
+        write(r[0], 'CompareResult', 'deleteCompareResult', body)
 
     def testViewConfig(self):
         a = Auth(username, pwd)
         body = {
         }
         uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
-        ffoMount = FfoMount(a)
-        r = ffoMount.viewConfig(body, uuid)
+        compareResult = CompareResult(a)
+        r = compareResult.viewConfig(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FfoMount', 'viewConfig', body)
+        write(r[0], 'CompareResult', 'viewConfig', body)
 
     def testListDiffDetail(self):
         a = Auth(username, pwd)
@@ -91,11 +91,11 @@ class FfoMountTestCase(unittest.TestCase):
             'limit': 10,
         }
 
-        ffoMount = FfoMount(a)
-        r = ffoMount.listDiffDetail(body)
+        compareResult = CompareResult(a)
+        r = compareResult.listDiffDetail(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'FfoMount', 'listDiffDetail', body)
+        write(r[0], 'CompareResult', 'listDiffDetail', body)
 
 
 if __name__ == '__main__':
