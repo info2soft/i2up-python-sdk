@@ -1,0 +1,551 @@
+<START-----------------------------------------------------------
+Method: addNotifications
+body: {
+ "type": "timing",
+ "uuid": "82275AFD-97D0-15B4-D477-011E397113D6",
+ "msg": "\u89c4\u5219/\u4efb\u52a1\u6267\u884c\u5931\u8d25/\u6210\u529f/\u8d85\u65f6/\u7b56\u7565\u53d6\u6d88",
+ "name": "timing_test",
+ "table": "",
+ "module": "",
+ "_": "3f00eea1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotifications
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotificationsConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "config": [
+   {
+    "type": "res",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "rule",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "nas",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp_move",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "cdm",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "cloud",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "vp",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "timing",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "ha",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "active",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "routing_inspection",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "all_status",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "alarm",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "storage",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "lic",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "dto",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotificationsCount
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "count": [
+   {
+    "type": 0,
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "active",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "alarm",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "all_status",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "cdm",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "cloud",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "dto",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "fsp",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "fsp_move",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "ha",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "lic",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "nas",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "res",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "routing_inspection",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "storage",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "timing",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   },
+   {
+    "type": "vp",
+    "read": 0,
+    "total": 0,
+    "unread": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEmailTemplate
+body: {
+ "order_by": "status",
+ "direction": "ASC",
+ "type": "",
+ "_": "3e476bf9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNotifications
+body: {
+ "type": 1,
+ "where_args[status]": 1,
+ "order_by": "status",
+ "direction": "ASC",
+ "_": "3f1f03cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "type": "1"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyEmailTemplate
+body: {
+ "content": "",
+ "comment": "",
+ "random_str": "",
+ "_": "3d8b3590"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateNotifications
+body: {
+ "operate": "",
+ "uuids": [],
+ "type": 1,
+ "_": "3dee5f32"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateNotificationsTemplate
+body: {
+ "uuid": "",
+ "operate": "",
+ "_": "3f639c5b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetNotificationsTimes
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNotificationsEmail
+body: {
+ "email": "lis@info2soft.com",
+ "_": "3f663c3d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001012,
+  "message": "[1010001012] Operation faild \u90ae\u4ef6\u901a\u77e5\u672a\u5f00\u542f"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNotificationsSms
+body: {
+ "temp_id": "",
+ "mobile": "13123456789",
+ "_": "3e3cb62c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001012,
+  "message": "[1010001012] Operation faild Sms notification is disabled"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNotificationsConfig
+body: {
+ "config": [
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": ""
+  }
+ ],
+ "_": "3d9d231f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] \u53c2\u6570\u65e0\u6548 res"
+ }
+}
+-----------------------------------------------------------END>
+

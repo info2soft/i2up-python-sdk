@@ -1,0 +1,1068 @@
+<START-----------------------------------------------------------
+Method: createAk
+body: {
+ "_": "3eaf67a4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createUser
+body: {
+ "username": "test2",
+ "password": "11111111",
+ "roles": [
+  "3"
+ ],
+ "active": "1",
+ "email": "11@info2soft.com",
+ "mobile": "12366666666",
+ "comment": "",
+ "_": "3f55e94b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The password field must be exactly 344 characters in length;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteAk
+body: {
+ "access_key": "pytDWihn3NscXewH8UYLIZq2gE7ufGoQ",
+ "_": "3d3825de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBakConfig
+body: {
+ "obj_uuid": "",
+ "_": "3f613365"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNpsvr
+body: {
+ "npsvr_uuid": "",
+ "_": "3f3644a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteUser
+body: {
+ "ids": [
+  "20"
+ ],
+ "_": "3f55bec8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describe
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "ips": [
+   "192.168.7.250",
+   "192.168.123.1",
+   "192.168.132.1",
+   "fe80::a0c4:a2f5:da48:5359",
+   "fe80::d044:a57b:6c26:506d",
+   "fe80::6c8e:cadb:9c4:e4f"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBakConfig
+body: {
+ "obj_uuid": "",
+ "_": "3e38a30e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCCip
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "ips": [
+   "192.168.7.250",
+   "192.168.123.1",
+   "192.168.132.1",
+   "fe80::a0c4:a2f5:da48:5359",
+   "fe80::d044:a57b:6c26:506d",
+   "fe80::6c8e:cadb:9c4:e4f"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNpsvr
+body: {
+ "npsvr_uuid": "9C865EB7-6999-65D6-C029-0615735C137E",
+ "_": "3e47b9b0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUser
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "users": [
+   {
+    "id": 2,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "username": "admin",
+    "email": "",
+    "mobile": null,
+    "active": 1,
+    "first_name": "Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 3,
+      "user_id": 2,
+      "role_id": 3,
+      "name": "admin",
+      "is_system": 1,
+      "allow_new_user": 1,
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "user_uuid": "1EE80198-20FB-33F9-7C24-F835A34C7440",
+    "username": "auditor",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "auditor",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 4,
+      "user_id": 3,
+      "role_id": 4,
+      "name": "auditor",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Auditor",
+      "description": "Business auditor",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "operator",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 5,
+      "user_id": 4,
+      "role_id": 5,
+      "name": "operator",
+      "is_system": 1,
+      "allow_new_user": 1,
+      "display_name": "Operator",
+      "description": "Operation Clerk",
+      "dynamic_perms": 1,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "user_uuid": "2BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DD",
+    "username": "sysadmin",
+    "email": null,
+    "mobile": null,
+    "active": 1,
+    "first_name": "System Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973353,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 2,
+      "user_id": 5,
+      "role_id": 2,
+      "name": "sysadmin",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Administrator",
+      "description": "Super User",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 1,
+    "user_uuid": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+    "username": "system",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "System",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 1,
+      "user_id": 1,
+      "role_id": 1,
+      "name": "tenant_admin",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Tenant Administrator",
+      "description": "Super Administrator",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   }
+  ],
+  "total": 5,
+  "track_login_attempts": true
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAk
+body: {
+ "_": "3f6c31fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "access_key": "f9J8NX603amWEiLerzPlHvqSsYkZVTuo",
+    "secret_key": "9BrJ4ekFGvd8wWPmSy2HhK6X7jZCpz1AM53lcDTI",
+    "status": 1,
+    "created_at": 1656048535
+   }
+  ],
+  "total": 1,
+  "keys": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "access_key": "f9J8NX603amWEiLerzPlHvqSsYkZVTuo",
+    "secret_key": "9BrJ4ekFGvd8wWPmSy2HhK6X7jZCpz1AM53lcDTI",
+    "status": 1,
+    "created_at": 1656048535
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakConfig
+body: {
+ "page": 1,
+ "limit": 10,
+ "obj_type": "dto",
+ "_": "3f3394b9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakConfigStatus
+body: {
+ "_": "3e9f970a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakHistory
+body: {
+ "obj_uuid": "",
+ "_": "3f573fb5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvr
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f204d86"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrBakList
+body: {
+ "npsvr_uuid": "",
+ "_": "3eb4fc7a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrStatus
+body: {
+ "npsvr_uuids": "",
+ "_": "3ddf8394"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listProfile
+body: {
+ "_": "3e2ec853"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "profile": {
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "username": "admin",
+   "mobile": null,
+   "email": "",
+   "nickname": null,
+   "company": "",
+   "address": null,
+   "comment": null,
+   "pwd_change_time": 1656034022,
+   "theme": null,
+   "is_biz_admin": 1,
+   "main_role": "admin",
+   "biz_admin_view": 1
+  },
+  "access_log": [
+   {
+    "id": 118,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "user_name": "admin",
+    "op_time": 1656044872,
+    "start_time": 1656044872,
+    "end_time": 1656044872,
+    "address": "192.168.7.250",
+    "description": "{\"op_name\":\"auth_login\",\"op_detail_arr\":{\"username\":\"admin\"}}",
+    "result": 0,
+    "failure_reason": "[0] success",
+    "type": 0,
+    "sent": false
+   },
+   {
+    "id": 117,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "user_name": "admin",
+    "op_time": 1656044779,
+    "start_time": 1656044778,
+    "end_time": 1656044779,
+    "address": "192.168.7.250",
+    "description": "{\"op_name\":\"auth_login\",\"op_detail_arr\":{\"username\":\"admin\"}}",
+    "result": 0,
+    "failure_reason": "[0] success",
+    "type": 0,
+    "sent": false
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPublicSettings
+body: {
+ "_": "3e99fe32"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "product_title": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRole
+body: {
+ "filter_value": "operator",
+ "filter_type": "name",
+ "page": "1",
+ "limit": "10",
+ "_": "3f27745f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "roles": [
+   {
+    "id": 3,
+    "name": "admin",
+    "is_system": 1,
+    "allow_new_user": 1,
+    "display_name": "Business Administrator",
+    "description": "Admin User",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 4,
+    "name": "auditor",
+    "is_system": 1,
+    "allow_new_user": 0,
+    "display_name": "Auditor",
+    "description": "Business auditor",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 5,
+    "name": "operator",
+    "is_system": 1,
+    "allow_new_user": 1,
+    "display_name": "Operator",
+    "description": "Operation Clerk",
+    "dynamic_perms": 1,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 2,
+    "name": "sysadmin",
+    "is_system": 1,
+    "allow_new_user": 0,
+    "display_name": "Administrator",
+    "description": "Super User",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 1,
+    "name": "tenant_admin",
+    "is_system": 1,
+    "allow_new_user": 0,
+    "display_name": "Tenant Administrator",
+    "description": "Super Administrator",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   }
+  ],
+  "total": 5
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSysSetting
+body: {
+ "_": "3e549333"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "configs": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUser
+body: {
+ "limit": 10,
+ "page": 1,
+ "_": "3df5767e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "users": [
+   {
+    "id": 2,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "username": "admin",
+    "email": "",
+    "mobile": null,
+    "active": 1,
+    "first_name": "Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 3,
+      "user_id": 2,
+      "role_id": 3,
+      "name": "admin",
+      "is_system": 1,
+      "allow_new_user": 1,
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "user_uuid": "1EE80198-20FB-33F9-7C24-F835A34C7440",
+    "username": "auditor",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "auditor",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 4,
+      "user_id": 3,
+      "role_id": 4,
+      "name": "auditor",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Auditor",
+      "description": "Business auditor",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "operator",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 5,
+      "user_id": 4,
+      "role_id": 5,
+      "name": "operator",
+      "is_system": 1,
+      "allow_new_user": 1,
+      "display_name": "Operator",
+      "description": "Operation Clerk",
+      "dynamic_perms": 1,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "user_uuid": "2BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DD",
+    "username": "sysadmin",
+    "email": null,
+    "mobile": null,
+    "active": 1,
+    "first_name": "System Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973353,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 2,
+      "user_id": 5,
+      "role_id": 2,
+      "name": "sysadmin",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Administrator",
+      "description": "Super User",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   },
+   {
+    "id": 1,
+    "user_uuid": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+    "username": "system",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "System",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1655973352,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 1,
+      "user_id": 1,
+      "role_id": 1,
+      "name": "tenant_admin",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Tenant Administrator",
+      "description": "Super Administrator",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0
+     }
+    ]
+   }
+  ],
+  "total": 5,
+  "track_login_attempts": true
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: logout
+body: {
+ "_": "3e033ff8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyAk
+body: {
+ "access_key": "pytDWihn3NscXewH8UYLIZq2gE7ufGoQ",
+ "status": 0,
+ "_": "3f37008e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001162,
+  "message": "[1010001162] AccessKey does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBakConfig
+body: {
+ "obj_uuid": "9C865EB7-6999-65D6-C029-0615735C137E",
+ "bkup_switch": "0",
+ "policy": {
+  "limit": 30,
+  "bkup_type": 0,
+  "time": 24
+ },
+ "random_str": "9C865EB7-6999-65D6-C029-0615735C137E",
+ "_": "3f55b387"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNpsvr
+body: {
+ "npsvr_uuid": "9C865EB7-6999-65D6-C029-0615735C137E",
+ "bkup_switch": "0",
+ "policy": {
+  "limit": "30",
+  "bkup_type": "0",
+  "time": "24"
+ },
+ "random_str": "9C865EB7-6999-65D6-C029-0615735C137E",
+ "_": "3f07e862"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyProfile
+body: {
+ "mobile": "15354254585",
+ "email": "test@info2soft.com",
+ "nickname": "test",
+ "company": "info2soft",
+ "address": "test",
+ "comment": "",
+ "_": "3e020bd7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUser
+body: {
+ "username": "admin",
+ "password": "11111111",
+ "roles": [
+  "3"
+ ],
+ "active": "1",
+ "email": "123@info2soft.com",
+ "mobile": "12332145248",
+ "comment": "",
+ "first_name": "",
+ "last_name": "",
+ "_": "3f11891b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The password field must be exactly 344 characters in length;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUserPwd
+body: {
+ "old_password": "Info1234",
+ "password": "Info1234",
+ "_": "3f1eaa1f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The old_password field must be exactly 344 characters in length;\n The password field must be exactly 344 characters in length;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: npsvrBakRecovery
+body: {
+ "id": "",
+ "operate": "",
+ "_": "3ecbafee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: recoveryBakConfigInfo
+body: {
+ "id": 1,
+ "operate": "",
+ "_": "3e925932"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist id: 1"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateSetting
+body: {
+ "cc_ip": "192.168.72.70",
+ "log_save_time": "30",
+ "page_size": "10",
+ "refresh_interval": "10",
+ "email_smtp_svr": "test",
+ "email_smtp_port": "25",
+ "email_smtp_ssl": "0",
+ "email_smtp_auth": "1",
+ "email_account": "test@info2soft.com",
+ "email_pwd": "M/9tG3spMK/tDoTyeGJrSnJiiGyZN8ybnvgz0tpTEzJboxtQ4t/w/S5VKR7OAR5xyK9f86Ab6j0Ky5s0kyD0D3zRZIk7kEmZm9UpsngdutDDDu4rzdUvA+YB3i0OmtRKJpZbqm+RZuBeIs20R+Dpeg2ZfQSfcRS2UofOdy4UIIZu51T0Z5iFP5fdD7af7h3picjjhz7hBo9Xy5DpDqDaxqHZI1WXBWEViirY/sI9X+zyfHsmiTLXuZjN55L/FLesz0Y9y8pK0tFr2QWOrldsPclaws4M3R1FUwS/LekJHcXmZNs6E22I8GiE/FI84JwoumBxCrdFSMOVGoUb8NRJ6g==",
+ "email_switch": "1",
+ "sms_switch": "1",
+ "sms_platform": "ali",
+ "sms_app_key": "AppKey",
+ "sms_secret_key": "SecretKey",
+ "sms_sign_name": "SignName",
+ "sms_template_code": "template",
+ "sms_server": "",
+ "sms_username": "",
+ "sms_password": "VXw5yLwe1ffwiRhM+5qlWNTiNgYlDx5OhYOaCchgZbQ5yEUgj1o4LG8yvCMuAQ1r/d6IKjWB+Q7wm/YyRKV5p7n67/kezTSQJOoHyq5oK24GrdZVpsDWkHXYvFaELR81k8KwDCRpp39W1TVvxxVbfzb6/n+JKNuOBeJFcWXLdjC/+rAxWULDu0q8PaS2YBP5PYJftL8gyZDcSleFBPWh9KPb4FQnSBC4eY4OT02fbUWlypU2FTlD59xvTKCb4gAUdj3NXjb5tKWsec82PwXK6cbfeFnUxlpqD/9k1Z7dgFZ9g8issn+WGONkiaoBP1KkiWrvpgC8kJ6ngrOivCyX8A==",
+ "sms_domain_name": "",
+ "sms_region_name": "",
+ "sms_topic_urn": "",
+ "notify_contact_biz": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com"
+ },
+ "notify_contact_chk": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com",
+  "policy": {
+   "every": "1",
+   "days": "5"
+  }
+ },
+ "notify_contact_status": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com",
+  "policy": {
+   "every": "3",
+   "gap": "4"
+  }
+ },
+ "node_latest_ver": "",
+ "node_upgrade_server": "",
+ "node_upgrade_path": "",
+ "node_online_upgrade": "0",
+ "mirr_skip": "0",
+ "passwd_expire": "30",
+ "passwd_length": "8",
+ "passwd_strong": "1",
+ "login_attempt": "13",
+ "login_lock": "10",
+ "notify_limit": "10",
+ "client_lang": "zh_cn",
+ "_": "3cdb9e05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The notify_contact_chk[policy][every] field must be one of: month,season;\n The notify_contact_status[policy][every] field must be one of: hour,day;\n"
+ }
+}
+-----------------------------------------------------------END>
+

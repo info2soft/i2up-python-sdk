@@ -1,0 +1,82 @@
+<START-----------------------------------------------------------
+Method: createTenant
+body: {
+ "tenant_name": "",
+ "display_name": "",
+ "description": "",
+ "enabled": 1,
+ "_": "3f7d1a12"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tenant_name;\n Lost: display_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTenant
+body: {
+ "ids": [
+  {
+   "": ""
+  }
+ ],
+ "_": "3ddb51f4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The ids[0] field must contain only numbers;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTenant
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 1,
+ "page": 1,
+ "like_args[xxx]": "",
+ "where_args[xxx]": "",
+ "order_by": "",
+ "direction": "",
+ "_": "3f2b3aa8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTenant
+body: {
+ "display_name": "",
+ "description": "",
+ "enabled": 0,
+ "random_str": "",
+ "tenant_name": "",
+ "_": "3f7fbc62"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tenant_name;\n Lost: display_name;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

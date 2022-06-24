@@ -1,0 +1,27 @@
+<START-----------------------------------------------------------
+Method: listOpLog
+body: {
+ "page": 1,
+ "end": 1548950400,
+ "limit": 10,
+ "start": 1546272000,
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "address": "",
+ "username": "",
+ "_": "3f3417d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "logs": []
+ }
+}
+-----------------------------------------------------------END>
+

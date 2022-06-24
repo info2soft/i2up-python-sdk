@@ -1,0 +1,292 @@
+<START-----------------------------------------------------------
+Method: collectCompareResult
+body: {
+ "code": "",
+ "time": "",
+ "files": "",
+ "bytes": "",
+ "missing": "",
+ "diff": "",
+ "erro": "",
+ "equal": "",
+ "task_uuid": "",
+ "_": "3e9c788f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCompare
+body: {
+ "compare": {
+  "excl_path": [],
+  "bkup_one_time": 0,
+  "bkup_schedule": {
+   "sched_gap_min": 60,
+   "sched_time": [
+    "00:00:00"
+   ],
+   "sched_day": [
+    "1"
+   ],
+   "sched_time_end": "23:59",
+   "limit": 5,
+   "sched_time_start": "00:00",
+   "sched_every": 0
+  },
+  "mirr_file_check": "1",
+  "task_name": "testCompare1",
+  "wk_path": [
+   "E:\\test\\"
+  ],
+  "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+  "cmp_type": 0,
+  "bk_path": [
+   "E:\\test\\"
+  ],
+  "bkup_policy": 2,
+  "compress": 0,
+  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+ },
+ "_": "3d956edb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: compare[compress_switch];\n Lost: compare[encrypt_switch];\n Lost: compare[mirr_sync_attr];\n Lost: compare[oph_policy];\n Lost: compare[file_type_filter_switch];\n Lost: compare[traversing_sync];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCompare
+body: {
+ "task_uuids": [
+  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ ],
+ "_": "3f016b36"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCompare
+body: {
+ "compare": {
+  "task_uuid": "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCompareResults
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadCompare
+body: {
+ "operate": "download",
+ "task_uuids": [
+  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ ],
+ "_": "3f10e820"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "file_name": "CPR_20220624152330.zip"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCircleCompareResult
+body: {
+ "search_field": "",
+ "limit": 10,
+ "search_value": "",
+ "page": 1,
+ "_": "3e12fbdd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompare
+body: {
+ "search_value": "",
+ "limit": 10,
+ "page": 1,
+ "search_field": "",
+ "_": "3f196464"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompareLogs
+body: {
+ "_": "3f294bb8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompareStatus
+body: {
+ "_": "3f379d8b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCompare
+body: {
+ "compare": {
+  "excl_path": [],
+  "bkup_one_time": 0,
+  "bkup_schedule": {
+   "sched_gap_min": 60,
+   "sched_time": [
+    "00:00:00"
+   ],
+   "sched_day": [
+    "1"
+   ],
+   "sched_time_end": "23:59",
+   "limit": 5,
+   "sched_time_start": "00:00",
+   "sched_every": 0
+  },
+  "mirr_file_check": "1",
+  "task_name": "testCompare1",
+  "wk_path": [
+   "E:\\test\\"
+  ],
+  "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+  "cmp_type": 0,
+  "bk_path": [
+   "E:\\test\\"
+  ],
+  "bkup_policy": 2,
+  "compress": 0,
+  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+  "mirr_sync_attr": 1,
+  "encrypt_switch": "",
+  "secret_key": "",
+  "biz_grp_list": [],
+  "oph_policy": "",
+  "ct_name_str1": "",
+  "ct_name_str2": "",
+  "ct_name_str3": "",
+  "ct_name_str4": "",
+  "task_uuid": "",
+  "random_str": "",
+  "data_ip_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+ },
+ "_": "3dd17d1d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelyCompare
+body: {
+ "operate": "start_immediate",
+ "task_uuids": [
+  "88FE607E-6826-5F1F-FC70-9B3036DA79C6"
+ ],
+ "_": "3f20a78c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: download,delete,start,start_immediately,stop;\n"
+ }
+}
+-----------------------------------------------------------END>
+

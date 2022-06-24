@@ -1,0 +1,131 @@
+<START-----------------------------------------------------------
+Method: describeStatistics
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatistics
+body: {
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "status": "",
+ "type": "",
+ "result": 1,
+ "group_uuid": "",
+ "uuid": "",
+ "time_used_rate": 1,
+ "sub_type": 1,
+ "obj_name": "",
+ "time_consuming": 1,
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "_": "3f7e195a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The start field must be exactly 10 characters in length;\n The end field must be exactly 10 characters in length;\n The sub_type field must be one of: bak_bk,bak_rc,cmp_all,ffo,sys_cdm,rule,vp,sys_cloud,bb,DB2,MSSQL,MySQL,Informix,block,file,Oracle,cmp,cmp_nas,ffo_bk,ffo_rc,ffo_or,sys_cdm_bk,sys_cdm_rc,cdm_or,rule_rc,rule_rep,vp_bk,vp_mv,vp_rc,vp_pt,vp_or,ha,ha_switch,sys_cloud_bk,bb_bk,bb_rc,dto,dto_bk,dto_rc,dto_cmp;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsChart
+body: {
+ "start": 1,
+ "sub_type": "0",
+ "end": 2,
+ "type": "vp",
+ "page": 1,
+ "limit": 10,
+ "_": "3d244fb6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The sub_type field must be one of: bak_bk,bak_rc,cmp_all,ffo,sys_cdm,rule,vp,sys_cloud,bb,DB2,MSSQL,MySQL,Informix,block,file,Oracle,cmp,cmp_nas,ffo_bk,ffo_rc,ffo_or,sys_cdm_bk,sys_cdm_rc,cdm_or,rule_rc,rule_rep,vp_bk,vp_mv,vp_rc,vp_pt,vp_or,ha,ha_switch,sys_cloud_bk,bb_bk,bb_rc,dto,dto_bk,dto_rc,dto_cmp;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "statistics_report_conf": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateStatisticsConfig
+body: {
+ "daily_report": {
+  "daily_sw": 1,
+  "daily_st": "11:43",
+  "all_sw": 1,
+  "bak_bk_sw": 1,
+  "bak_rc_sw": 1,
+  "cmp_sw": 1,
+  "ffo_sw": 1,
+  "rule_sw": 1,
+  "vp_sw": 1
+ },
+ "weekly_report": {
+  "weekly_sw": "",
+  "weekly_st": "1,00:00",
+  "all_sw": 1,
+  "bak_bk_sw": 1,
+  "bak_rc_sw": 1,
+  "cmp_sw": 1,
+  "ffo_sw": 1,
+  "rule_sw": 1,
+  "vp_sw": 1
+ },
+ "monthly_report": {
+  "monthly_sw": "",
+  "monthly_st": "1,00:00",
+  "all_sw": 1,
+  "bak_bk_sw": 1,
+  "bak_rc_sw": 1,
+  "cmp_sw": 1,
+  "ffo_sw": 1,
+  "rule_sw": 1,
+  "vp_sw": 1
+ },
+ "email": "xxx@info2soft.com",
+ "_": "3ddd348b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

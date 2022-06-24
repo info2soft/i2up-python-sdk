@@ -1,0 +1,105 @@
+<START-----------------------------------------------------------
+Method: deleteAk
+body: {
+ "access_key": "VqUyHS2YQkxnAEZBjFP38e9ht7IaJNlO",
+ "_": "3ed36097"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRole
+body: {
+ "filter_value": "operator",
+ "filter_type": "name",
+ "page": "1",
+ "limit": "10",
+ "_": "3ec9bc44"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "roles": [
+   {
+    "id": 3,
+    "name": "admin",
+    "is_system": 1,
+    "allow_new_user": 1,
+    "display_name": "Business Administrator",
+    "description": "Admin User",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 4,
+    "name": "auditor",
+    "is_system": 1,
+    "allow_new_user": 0,
+    "display_name": "Auditor",
+    "description": "Business auditor",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 5,
+    "name": "operator",
+    "is_system": 1,
+    "allow_new_user": 1,
+    "display_name": "Operator",
+    "description": "Operation Clerk",
+    "dynamic_perms": 1,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 2,
+    "name": "sysadmin",
+    "is_system": 1,
+    "allow_new_user": 0,
+    "display_name": "Administrator",
+    "description": "Super User",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   },
+   {
+    "id": 1,
+    "name": "tenant_admin",
+    "is_system": 1,
+    "allow_new_user": 0,
+    "display_name": "Tenant Administrator",
+    "description": "Super Administrator",
+    "dynamic_perms": 0,
+    "biz_admin_view": 0
+   }
+  ],
+  "total": 5
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyAk
+body: {
+ "access_key": "VqUyHS2YQkxnAEZBjFP38e9ht7IaJNlO",
+ "status": 0,
+ "_": "3e153477"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001162,
+  "message": "[1010001162] AccessKey does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,127 @@
+<START-----------------------------------------------------------
+Method: dbCheckGuass
+body: {
+ "src_db_uuid": "",
+ "dst_db_uuid": "",
+ "_": "3f1b8425"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGaussTraffic
+body: {
+ "set_time": 1,
+ "type": "",
+ "interval": "\u65f6\u95f4\u95f4\u9694",
+ "set_time_init": "",
+ "rule_uuid": "",
+ "_": "3f7dd99a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGaussRules
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "where_args": {
+  "rule_uuid": ""
+ },
+ "_": "3f69090b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGaussStatus
+body: {
+ "_": "3f77928e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "has_false_rule": false,
+  "info_list": [
+   {
+    "uuid": "",
+    "rule_uuid": "",
+    "load": 0,
+    "extract": 0,
+    "peak": 0,
+    "delay": 0,
+    "has_new_err": 0,
+    "dst_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "src_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "work_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "back_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "relay_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "track_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "data_info": {
+     "dst": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "log_read_type": null,
+      "orcl": null
+     },
+     "src": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "log_read_type": null,
+      "orcl": null
+     }
+    },
+    "stage": "UNKNOWN",
+    "state": 0,
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

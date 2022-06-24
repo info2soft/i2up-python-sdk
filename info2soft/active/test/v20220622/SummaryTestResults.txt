@@ -1,0 +1,56 @@
+<START-----------------------------------------------------------
+Method: listSummary
+body: {
+ "_": "3b65422f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "proxyStatus": "online",
+  "info": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSummaryChart
+body: {
+ "_": "3e8ab86e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "proxyStatus": "online",
+  "info": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSummaryView
+body: {
+ "src": "",
+ "dst": "",
+ "status": "",
+ "type": "",
+ "ip": "",
+ "_": "3ecf79ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

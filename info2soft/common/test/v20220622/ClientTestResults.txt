@@ -1,0 +1,146 @@
+<START-----------------------------------------------------------
+Method: collectCompareResult
+body: {
+ "code": "",
+ "start_time": "",
+ "files": "",
+ "bytes": "",
+ "missing": "",
+ "diff": "",
+ "erro": "",
+ "equal": "",
+ "task_uuid": "",
+ "cc_uuid": "",
+ "send_bytes": "",
+ "end_time": "",
+ "_": "3e8fdd30"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCompareResult
+body: {
+ "uuid": "65DA3916-AF53-CE70-0B47-A142414AA140",
+ "result_uuid": "25DA3916-AF13-CE70-0B47-B142414AA142",
+ "result": {
+  "code": "0",
+  "time": "10",
+  "files": "100",
+  "bytes": "1111111",
+  "missing": "2",
+  "diff": "48",
+  "equal": "50",
+  "erro": ""
+ },
+ "result_type": "rep",
+ "_": "3f66751a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoStorageList
+body: {
+ "cc_uuid": "",
+ "_": "3f7e7d2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVirtualPlatformRules
+body: {
+ "vp_uuids": [
+  "3C334EF3",
+  "3C334EF3"
+ ],
+ "_": "3eb0e5df"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVirtualPlatforms
+body: {
+ "npsvr_uuid": "",
+ "_": "3f127259"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateSlaveNode
+body: {
+ "config": "",
+ "_": "3e202876"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: uploadCompareDiffDetail
+body: {
+ "files": [],
+ "missing_files": [
+  "file",
+  "file"
+ ],
+ "diff_files": [],
+ "uuid": "",
+ "cc_uuid": "",
+ "is_new": 0,
+ "_": "3f62af7b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+

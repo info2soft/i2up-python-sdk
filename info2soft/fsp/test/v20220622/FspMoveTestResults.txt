@@ -1,0 +1,245 @@
+<START-----------------------------------------------------------
+Method: createFspMove
+body: {
+ "fsp_move": {
+  "fsp_name": "linuxMove",
+  "service_uuid": "",
+  "monitor_type": 0,
+  "bk_path": [
+   "/",
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "compress": "0",
+  "net_mapping": [],
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "encrypt_switch": "0",
+  "mirr_open_type": "0",
+  "sync_item": "/",
+  "mirr_sync_flag": "0",
+  "net_mapping_type": "2",
+  "mirr_sync_attr": "1",
+  "band_width": "3*03:00-04:00*2m",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "fsp_wk_shut_flag": "2",
+  "secret_key": "",
+  "wk_path": [
+   "/",
+   "/bin/",
+   "/boot/",
+   "/etc/",
+   "/lib/",
+   "/lib64/",
+   "/root/",
+   "/sbin/",
+   "/usr/bin/",
+   "/usr/lib/",
+   "/usr/lib64/",
+   "/usr/libexec/",
+   "/usr/local/",
+   "/usr/sbin/",
+   "/var/lib/nfs/"
+  ],
+  "mirr_file_check": "0",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "failover": "2"
+ },
+ "_": "3e9d9dd0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_move[compress_switch];\n The fsp_move[failover] field must be one of: 0,1;\n Lost: fsp_move[wk_data_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspMove
+body: {
+ "fsp_uuids": [
+  "3C6B932A-9140-7C37-9639-EB8F44654F18"
+ ],
+ "_": "3ed94167"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspMove
+body: {
+ "fsp_move": {
+  "fsp_uuid": "3C6B932A-9140-7C37-9639-EB8F44654F18",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "random_str": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "fsp_wk_shut_flag": "2",
+  "monitor_type": 0,
+  "mirr_sync_attr": "1",
+  "net_mapping_type": "2",
+  "mirr_sync_flag": "0",
+  "mirr_file_check": "0",
+  "sync_item": "/",
+  "secret_key": "",
+  "failover": "2",
+  "fsp_name": "linuxMove",
+  "mirr_open_type": "0",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "bk_path": [
+   "/",
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "net_mapping": [],
+  "service_uuid": "",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "compress": "0",
+  "encrypt_switch": "0",
+  "move_type": "0",
+  "wk_path": [
+   "/",
+   "/bin/",
+   "/boot/",
+   "/etc/",
+   "/lib/",
+   "/lib64/",
+   "/root/",
+   "/sbin/",
+   "/usr/bin/",
+   "/usr/lib/",
+   "/usr/lib64/",
+   "/usr/libexec/",
+   "/usr/local/",
+   "/usr/sbin/",
+   "/var/lib/nfs/"
+  ],
+  "band_width": "3*03:00-16:00*2m"
+ },
+ "_": "3f095fb8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_move[compress_switch];\n The fsp_move[failover] field must be one of: 0,1;\n Lost: fsp_move[wk_data_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveEnvironment
+body: {
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "wk_path": [
+  {
+   "": ""
+  }
+ ],
+ "bk_path": [
+  {
+   "": ""
+  }
+ ],
+ "_": "3dd42b0b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveOsVersion
+body: {
+ "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+ "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+ "_": "3f49d108"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mode;\n"
+ }
+}
+-----------------------------------------------------------END>
+

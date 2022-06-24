@@ -1,0 +1,219 @@
+<START-----------------------------------------------------------
+Method: createFspBackup
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "3*03:00-14:00*2m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:12",
+    "sched_day": 23,
+    "sched_gap_min": 61,
+    "sched_time": "11:31",
+    "sched_time_start": "04:10",
+    "sched_every": 2,
+    "limit": 9
+   }
+  ],
+  "fsp_type": 1
+ },
+ "_": "3f2109ab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 1,2,3,4,8;\n Lost: fsp_backup[start_type];\n The fsp_backup[fsp_type] field must be one of: 3,10;\n Lost: fsp_backup[cbt_switch];\n Lost: fsp_backup[bk_file_crypt];\n Lost: fsp_backup[compress_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspBackup
+body: {
+ "fsp_uuids": [
+  "90534F82-221E-08FE-9B4F-AA1029A0CFF8"
+ ],
+ "_": "3ed3a0de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackup
+body: {
+ "type": 1,
+ "_": "3e1f45db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The type field must be one of: 3,5,10,11;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDriverInfo
+body: {
+ "node_uuid": "",
+ "_": "3da71ea1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspBackup
+body: {
+ "fsp_backup": {
+  "fsp_uuid": "90534F82-221E-08FE-9B4F-AA1029A0CFF8",
+  "secret_key": "",
+  "band_width": "3*03:00-19:00*16m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/FSPback0107/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "2",
+  "wk_path": [
+   "/",
+   "/boot/"
+  ],
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "LinuxBackup",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "backup_type": 1,
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "bkup_schedule": [
+   {
+    "sched_time_end": "18:50",
+    "sched_day": 22,
+    "sched_gap_min": 31,
+    "sched_time": "01:06",
+    "sched_time_start": "13:35",
+    "sched_every": 2,
+    "limit": 29
+   }
+  ],
+  "fsp_type": 1
+ },
+ "_": "3ed26bb6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 1,2,3,4,8;\n Lost: fsp_backup[start_type];\n The fsp_backup[fsp_type] field must be one of: 3,10;\n Lost: fsp_backup[cbt_switch];\n Lost: fsp_backup[bk_file_crypt];\n Lost: fsp_backup[compress_switch];\n Lost: fsp_backup[random_str];\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,417 @@
+<START-----------------------------------------------------------
+Method: addHeteroGraph
+body: {
+ "graph_uuid": "",
+ "rule_number": "",
+ "src_type": "",
+ "rule_uuid": "",
+ "_": "3d080089"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createConsumerRule
+body: {
+ "name": "",
+ "src_db_uuid": "",
+ "tgt_type": "",
+ "init_offset": [
+  {
+   "topic": "",
+   "offset": "",
+   "partition": ""
+  }
+ ],
+ "modify": "false",
+ "topic": "",
+ "dst_topic": "",
+ "tgt_db_uuid": "",
+ "init_offset_type": "earlist",
+ "tabmap": "{111:222}",
+ "consumer_thread_num": "2",
+ "actload_thread_num": "4",
+ "kudu_partition_config": [],
+ "impala_connected": "",
+ "config": {
+  "goldendb_config": {
+   "machine_number": 1,
+   "distribute_type": ""
+  },
+  "insert_date_config": {},
+  "primary_key_config": {}
+ },
+ "_": "3e931bde"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: tabmap;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroGraph
+body: {
+ "graph_name": "",
+ "is_parent": "",
+ "is_rule": "",
+ "consume_rule": [
+  {
+   "id": "",
+   "rule_number": 1,
+   "rule_name": "",
+   "src_type": "",
+   "src_uuid": "",
+   "dst_type": "",
+   "dst_uuid": "",
+   "rule_status": "",
+   "is_parent": "",
+   "is_rule": "",
+   "src_name": "",
+   "dst_name": "",
+   "rule_traffic": ""
+  }
+ ],
+ "_": "3ef7033e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroRule
+body: {
+ "name": "",
+ "kfk_ver": "",
+ "dst_node": "",
+ "conn_type": "",
+ "host": "",
+ "port": "",
+ "broker": "",
+ "tabmap": {},
+ "consumer_thread_num": 2,
+ "actload_thread_num": 4,
+ "_": "3f0a9e84"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteConsumerRules
+body: {
+ "uuid": [],
+ "force": 1,
+ "_": "3e146283"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHeteroGraph
+body: {
+ "graph_uuids": [
+  {
+   "graph_uuid": "CcB11Bf6-1D15-dcF4-Ed71-60c7d3CBeDcA",
+   "rule_uuids": [
+    {
+     "uuid": "86d28b2c-b6E1-2c1F-3F0D-ECbfB5dE3A50",
+     "is_rule": "1",
+     "rule_number": "4",
+     "src_type": "oracle"
+    }
+   ]
+  }
+ ],
+ "is_whole": "1",
+ "_": "3d383b85"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeConsumerRules
+body: {
+ "uuid": "",
+ "_": "3ea40621"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptGraphDetail
+body: {
+ "page": 1,
+ "limit": 10,
+ "start_time": "",
+ "end_time": "",
+ "graph_uuid": "",
+ "_": "3eced468"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerRules
+body: {
+ "search_field": "tgt_type",
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "where_args": {
+  "uuid": ""
+ },
+ "_": "3e4b57e7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerStatus
+body: {
+ "_": "3e07960a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGraph
+body: {
+ "graph_uuid": "",
+ "_": "3f212b14"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHeteroGraph
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f163c99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHeteroRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "kafka_name",
+ "search_value": "",
+ "_": "3eb1d183"
+}
+response: {
+ "ret": 200,
+ "data": "\n<div style=\"border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;\">\n\n<h4>An uncaught Exception was encountered</h4>\n\n<p>Type: RuntimeException</p>\n<p>Message: Class Hetero_rule already exists and doesn't extend CI_Model</p>\n<p>Filename: F:\\i2up-api\\system\\core\\Loader.php</p>\n<p>Line Number: 353</p>\n\n\n\t<p>Backtrace:</p>\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\third_party\\MX\\Loader.php<br />\n\t\t\tLine: 213<br />\n\t\t\tFunction: model\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\core\\Api_controller.php<br />\n\t\t\tLine: 596<br />\n\t\t\tFunction: model\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\core\\Api_controller.php<br />\n\t\t\tLine: 250<br />\n\t\t\tFunction: get_base_list_from_db\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\modules\\hetero\\controllers\\Hetero_rule.php<br />\n\t\t\tLine: 35<br />\n\t\t\tFunction: index_get\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\third_party\\restserver\\libraries\\REST_Controller.php<br />\n\t\t\tLine: 797<br />\n\t\t\tFunction: index_get\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\public\\api\\index.php<br />\n\t\t\tLine: 323<br />\n\t\t\tFunction: require_once\t\t\t</p>\n\t\t\n\t\n\n</div>"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyConsumerRule
+body: {
+ "init_offset_type": "earlist",
+ "modify": "false",
+ "tabmap": "{111:222}",
+ "consumer_thread_num": "2",
+ "actload_thread_num": "4",
+ "tgt_db_uuid": "",
+ "name": "",
+ "src_db_uuid": "",
+ "tgt_type": "",
+ "init_offset": [
+  {
+   "topic": "",
+   "offset": "",
+   "partition": ""
+  }
+ ],
+ "topic": "",
+ "dst_topic": "",
+ "uuid": "@guuid",
+ "user_uuid": "@guuid",
+ "_": "3f1f8a20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeConsumerRule
+body: {
+ "uuid": "",
+ "operate": "resume",
+ "_": "3dfb14c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: runHeteroGraph
+body: {
+ "graphs": [],
+ "graph_uuid": "",
+ "rule_uuids": [
+  {
+   "uuid": "",
+   "src_type": ""
+  }
+ ],
+ "_": "3f54314b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopConsumerRule
+body: {
+ "uuid": "",
+ "operate": "stop",
+ "_": "3eb2741f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopHeteroGraph
+body: {
+ "graphs": [
+  {
+   "graph_uuid": "",
+   "rule_uuids": [
+    {
+     "uuid": "",
+     "src_type": ""
+    }
+   ]
+  }
+ ],
+ "_": "3f1235be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+

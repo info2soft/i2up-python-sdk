@@ -1,0 +1,18 @@
+<START-----------------------------------------------------------
+Method: listStorageInfo
+body: {
+ "node_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "rep_uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C",
+ "byte_format": 1,
+ "_": "3d12296e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": "1010031017",
+  "message": "[1010031017] rule.not_exist"
+ }
+}
+-----------------------------------------------------------END>
+

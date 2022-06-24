@@ -1,0 +1,129 @@
+<START-----------------------------------------------------------
+Method: createDtoLm
+body: {
+ "rule_name": "",
+ "status": 0,
+ "type": 1,
+ "prefix": "",
+ "lfa_stor": {
+  "config_sw": 1,
+  "days": 1
+ },
+ "arch_stor": {
+  "config_sw": 1,
+  "days": 1
+ },
+ "expr_del": {
+  "config_sw": 1,
+  "days": 1
+ },
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_id": "",
+ "_": "3f6ee46b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoLm
+body: {
+ "type": "delete",
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_names": [],
+ "_": "3e9fbdad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoLm
+body: {
+ "rule_name": "",
+ "status": 0,
+ "type": 1,
+ "prefix": "",
+ "lfa_stor": {
+  "config_sw": "",
+  "days": ""
+ },
+ "arch_stor": {
+  "config_sw": "",
+  "days": ""
+ },
+ "expr_del": {
+  "config_sw": "",
+  "days": ""
+ },
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "_": "3e633927"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startDtoLm
+body: {
+ "type": "start",
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_names": [],
+ "_": "3f268d4b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopDtoLm
+body: {
+ "type": "stop",
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_names": [],
+ "_": "3da8ebcd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+

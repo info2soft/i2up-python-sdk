@@ -1,0 +1,127 @@
+<START-----------------------------------------------------------
+Method: addRestRpcCluster
+body: {
+ "cluster_uuid": "",
+ "center_node_ip": "",
+ "_": "3f690605"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1022221005,
+  "message": "[1022221005] Wrong Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addRestRpcHa
+body: {
+ "rule_uuid": "",
+ "failed_node_uuid": "",
+ "new_node_uuid": "",
+ "_": "3ee918f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1022221005,
+  "message": "[1022221005] Wrong Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addRestRpcLog
+body: {
+ "method": "",
+ "cc_uuid": "",
+ "node_uuid": "",
+ "content": "",
+ "_": "3f3cc5dd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addRestRpcresult
+body: {
+ "type": "result",
+ "code": 1,
+ "ip": "",
+ "_": "3e8415d3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1022221005,
+  "message": "[1022221005] Wrong Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRestRpcCcip
+body: {
+ "method": "get_node_mode",
+ "uuid": "65E3E4A5-D089-8B6A-25F3-096F6997E3F0",
+ "_": "3f2ab6c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010360006,
+  "message": "[1010360006] Set tenant db failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRestRpcTasks
+body: {
+ "method": "get_rules",
+ "node_uuid": "10F2C96C-EA17-ED89-C592-2AD2E50C8896",
+ "node_role": "",
+ "node_type": "",
+ "_": "3e578c07"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyEcs
+body: {
+ "restored_uuid": "",
+ "ecs_id": "",
+ "code": 1,
+ "_": "3f3309d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

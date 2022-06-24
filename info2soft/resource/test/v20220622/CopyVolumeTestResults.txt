@@ -1,0 +1,150 @@
+<START-----------------------------------------------------------
+Method: copyVolumeList
+body: {
+ "where_args['bk_uuid']": "",
+ "_": "3f473960"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCopyVolume
+body: {
+ "volume_name": "",
+ "bk_uuid": "",
+ "pool_uuid": "",
+ "volume_size": "",
+ "link_protocol": "",
+ "create_fs": 1,
+ "fs_type": "",
+ "attach_point": [],
+ "_": "3ec31045"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_name;\n Lost: volume_size;\n Lost: link_protocol;\n Lost: bk_uuid;\n Lost: pool_uuid;\n Lost: fs_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCopyVolume
+body: {
+ "volume_uuids": [],
+ "force": 1,
+ "_": "3ea20c6f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCopyVolume
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCopyCdmVolume
+body: {
+ "volume_uuid": "",
+ "volume_type": 1,
+ "bk_uuid": "",
+ "_": "3f337a68"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCopyVolumeClient
+body: {
+ "limit": 300,
+ "page": 1,
+ "type": 1,
+ "_": "3f40cce9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCopyVolumeStatus
+body: {
+ "_": "3ec95cb1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotList
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCopyVolume
+body: {
+ "_": "3ef34b4e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_name;\n Lost: bk_uuid;\n Lost: volume_size;\n"
+ }
+}
+-----------------------------------------------------------END>
+

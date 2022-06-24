@@ -1,0 +1,196 @@
+<START-----------------------------------------------------------
+Method: authBigdataPlatform
+body: {
+ "auth_key": "",
+ "auth_name": "",
+ "cred_uuid": "",
+ "bk_uuid": "",
+ "_": "3f05cc79"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBigdataRecovery
+body: {
+ "bigdata_recovery": {
+  "rule_name": "",
+  "rule_uuid": "",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "bk_path": "\u5907\u4efd\u6570\u636e\u76ee\u5f55",
+  "baked_paths": "\u8981\u6062\u590d\u7684\u76ee\u5f55",
+  "rc_data_path": "\u76ee\u6807\u5e73\u53f0\u76ee\u5f55",
+  "rc_point": "\u8fd8\u539f\u65f6\u95f4\u70b9",
+  "data_type": "",
+  "cred_switch": "",
+  "cred_uuid": "",
+  "auth_user": "",
+  "auth_key": "",
+  "mirr_file_check": "0",
+  "mirr_sync_flag": ""
+ },
+ "_": "3f1a16ad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bigdata_recovery[rule_name];\n Not array: bigdata_recovery[bk_path];\n Lost: bigdata_recovery[data_type];\n Lost: bigdata_recovery[cred_switch];\n Lost: bigdata_recovery[cluster_config_path];\n Lost: bigdata_recovery[mirr_sync_flag];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigdataRecovery
+body: {
+ "uuids": "",
+ "_": "3de18613"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupHistory
+body: {
+ "bk_node_uuid": "",
+ "bk_rule_uuid": "",
+ "_": "3f4c9d53"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_node_uuid;\n Lost: bk_path[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataRecovery
+body: {
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "search_value": "",
+ "type": 0,
+ "_": "3e0a1d15"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataRecoveryStatus
+body: {
+ "_": "3d82b5ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startBigdataRecovery
+body: {
+ "operate": "start",
+ "uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3f5c5028"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBigdataRecovery
+body: {
+ "operate": "stop",
+ "uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3e54e396"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

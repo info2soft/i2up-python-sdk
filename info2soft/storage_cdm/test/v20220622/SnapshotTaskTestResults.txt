@@ -1,0 +1,256 @@
+<START-----------------------------------------------------------
+Method: createSnapshotTask
+body: {
+ "task_name": "",
+ "bk_uuid": "",
+ "copy_volume_list": [],
+ "quiet_switch": 1,
+ "quiet_obj_type": 1,
+ "quiet_obj_config": {},
+ "schedule": {
+  "interval": 1,
+  "retetion_days": 1,
+  "limit": 1,
+  "type": "",
+  "unit": 1
+ },
+ "_": "3f392f41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n Lost: volume_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotList
+body: {
+ "snapshot_list": [
+  {
+   "volume_uuid": "",
+   "snapshot_name": "",
+   "snapshot_time": ""
+  }
+ ],
+ "_": "3e918fc3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist",
+    "volume_uuid": "",
+    "volume_name": null,
+    "snapshot_name": "",
+    "snapshot_time": ""
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist",
+    "volume_uuid": "",
+    "volume_name": null,
+    "snapshot_name": "",
+    "snapshot_time": ""
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotTask
+body: {
+ "task_uuids": [
+  "16CB63E1-13FA-FB32-EB49-D790682C9648"
+ ],
+ "force": "",
+ "_": "3de85ec8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n Lost: del_snap;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSnapshotTask
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotList
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotTask
+body: {
+ "_": "3f422a4d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotTaskStatus
+body: {
+ "_": "3f533229"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifySnapshotTask
+body: {
+ "_": "3ee546a0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110033,
+  "message": "[1010110033] The valid license capacity has been used up, please check the license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelySnapshotTask
+body: {
+ "operate": "start_immediately",
+ "task_uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3f4178d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startSnapshotTask
+body: {
+ "operate": "start",
+ "task_uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3e8f52df"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopSnapshotTask
+body: {
+ "operate": "stop",
+ "task_uuids": [
+  "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ ],
+ "_": "3d22526a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

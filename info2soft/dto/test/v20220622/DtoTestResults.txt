@@ -1,0 +1,231 @@
+<START-----------------------------------------------------------
+Method: createDtoRule
+body: {
+ "enable": 0,
+ "rule_name": "",
+ "rule_type": 0,
+ "sync_uuid": "",
+ "policy_type": 0,
+ "policy_str": "",
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_uuid": "",
+ "bk_path": [],
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "compare_type": 0,
+ "oph_policy": 0,
+ "bk_name_opt": 0,
+ "trans_thread_num": 0,
+ "obj_scan_thread_num": 0,
+ "cmp_thread_num": 0,
+ "cmp_algorithm": 0,
+ "cmp_result_limit": 0,
+ "band_width": "",
+ "app_db_up_switch": 0,
+ "app_db_up_type": "0",
+ "app_db_up_sql": "0",
+ "sync_type": 1,
+ "archive_flag": 1,
+ "archive_type": 1,
+ "archive_days": 1,
+ "compress": 0,
+ "encrypt": 0,
+ "encrypt_pass": "",
+ "rc_point": 1,
+ "rc_type": 1,
+ "scan_obj_flag": 1,
+ "archive_object": {
+  "name_feature": "",
+  "file_type": "",
+  "create_time": 1,
+  "modify_time": 1,
+  "access_time": 1,
+  "type": ""
+ },
+ "_": "3c8637a9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoRule
+body: {
+ "rule_uuids": [],
+ "_": "3e975c35"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleFile
+body: {
+ "type": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3f5ca722"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleStatus
+body: {
+ "_": "3da09c13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoRule
+body: {
+ "enable": 0,
+ "rule_name": "",
+ "sync_uuid": "",
+ "policy_type": 0,
+ "policy_str": "",
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_uuid": "",
+ "bk_path": [],
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "compare_type": 0,
+ "oph_policy": 0,
+ "bk_name_opt": 0,
+ "trans_thread_num": 0,
+ "obj_scan_thread_num": 0,
+ "cmp_thread_num": 0,
+ "cmp_algorithm": 0,
+ "cmp_result_limit": 0,
+ "band_width": "",
+ "app_db_up_switch": 0,
+ "app_db_up_type": 0,
+ "app_db_up_sql": 0,
+ "random_str": "",
+ "sync_type": 1,
+ "archive_flag": 1,
+ "archive_type": 1,
+ "archive_days": 1,
+ "compress": 0,
+ "encrypt": 0,
+ "encrypt_pass": "",
+ "scan_obj_flag": 1,
+ "archive_object": {
+  "name_feature": "",
+  "file_type": "",
+  "create_time": 1,
+  "modify_time": 1,
+  "access_time": 1,
+  "type": ""
+ },
+ "_": "3f0f4227"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: rule_type;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartDtoRule
+body: {
+ "operate": "restart",
+ "rule_uuids": [],
+ "_": "3f7827f0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeDtoRule
+body: {
+ "operate": "resume",
+ "rule_uuids": [],
+ "_": "3ea46170"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startDtoRule
+body: {
+ "operate": "start",
+ "rule_uuids": [],
+ "_": "3e433bcd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopDtoRule
+body: {
+ "operate": "stop",
+ "rule_uuids": [],
+ "_": "3e41bad7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+

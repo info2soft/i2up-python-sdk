@@ -1,0 +1,34 @@
+<START-----------------------------------------------------------
+Method: createUser
+body: {
+ "username": "test2",
+ "password": "11111111",
+ "roles": [
+  "3"
+ ],
+ "active": 1,
+ "email": "11@info2soft.com",
+ "mobile": "12366666666",
+ "comment": "",
+ "full_name": "",
+ "property": 1,
+ "type": 1,
+ "begin_date": "",
+ "end_date": "",
+ "product_name": "",
+ "sys_name": "",
+ "lab_name": "",
+ "contact": "",
+ "address": "",
+ "_": "3d43f3cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The password field must be exactly 344 characters in length;\n"
+ }
+}
+-----------------------------------------------------------END>
+

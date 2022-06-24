@@ -1,0 +1,120 @@
+<START-----------------------------------------------------------
+Method: createDtoStorage
+body: {
+ "sto_name": "",
+ "sto_type": 0,
+ "address": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "comment": "",
+ "user": "",
+ "pwd": "",
+ "remote_path": "",
+ "_": "3f6ef805"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoStorage
+body: {
+ "sto_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f6ad0ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoStorage
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBuckets
+body: {
+ "sto_uuid": "",
+ "_": "3df5664c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoStorage
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "_": "3f689933"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoStorage
+body: {
+ "random_str": "",
+ "sto_name": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "address": "",
+ "user": "",
+ "pwd": "",
+ "comment": "",
+ "remote_path": "",
+ "_": "3f6e13e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_name;\n Lost: sto_type;\n Lost: access_key;\n Lost: secret_key;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

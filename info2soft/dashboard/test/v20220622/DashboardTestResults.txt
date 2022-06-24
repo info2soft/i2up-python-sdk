@@ -1,0 +1,20 @@
+<START-----------------------------------------------------------
+Method: describeVpRuleRate
+body: {
+ "uuid": "",
+ "wk_uuid": "F28BA5A6-4FF9-E596-4371-1ED203D45143",
+ "mode": "month",
+ "type": "I2VP_BK",
+ "group_uuid": "",
+ "_": "3c4475ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The type field must be one of: VP_PT,VP_MV,VP_RC,VP_BK,VP_OR,FFO_OR,CDM_OR;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,695 @@
+<START-----------------------------------------------------------
+Method: createBatchRehearse
+body: {
+ "rehearse_list": [
+  {
+   "cloud_backup_uuid": "",
+   "source": {
+    "node_name": "8.180",
+    "host_name": "Windows Ftp Server",
+    "host_ip": "192.168.8.180",
+    "node_os": "Windows Server 2012 R2 64bits",
+    "vcpus": "8",
+    "memory": "40957",
+    "disk_num": "2",
+    "disk_size": "64420392960",
+    "ecs_id": ""
+   },
+   "zone": {
+    "zone_name": "\u534e\u5317-\u5317\u4eac\u4e00",
+    "availability_zone": "cn-east-2c"
+   },
+   "rc_point": {
+    "time": "2019-08-13 17:13:28",
+    "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f33dd",
+    "disk_num": 2,
+    "total_size": "8000",
+    "list": [
+     {
+      "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f41dd",
+      "size": "4000",
+      "boot_index": 0
+     }
+    ]
+   },
+   "ecs_name": "Rehearse lij-test",
+   "flavor": {
+    "id": "ai1.2xlarge.4",
+    "name": "ai1.2xlarge.4",
+    "vcpus": "8",
+    "ram": 32768,
+    "disk": "0",
+    "disabled": "false",
+    "is_public": 1
+   },
+   "vpc": {
+    "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+    "name": "vpc-49a5,192.168.0.0/16"
+   },
+   "subnet": {
+    "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+    "name": "subnet-1df4,192.168.64.0/24"
+   },
+   "ip_address": "192.168.192.101",
+   "security_group": [
+    {
+     "group_id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+     "group_name": "i2",
+     "ingress": "ICMP,TCP/22,80,443,26821-26868,55443",
+     "egress ": "ICMP"
+    }
+   ],
+   "network_switch": 1
+  }
+ ],
+ "_": "3f221173"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "fail_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+    "ecs_name": "Rehearse lij-test"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+    "ecs_name": "Rehearse lij-test"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createEvacuateGroup
+body: {
+ "job_id": "",
+ "_": "3f2e84ac"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createGroup
+body: {
+ "group_uuid": "",
+ "group_config": [],
+ "rehearse_name": "",
+ "cloud_uuid": "",
+ "_": "3e396613"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNetwork
+body: {
+ "cloud_uuid": "",
+ "_": "3f66bc23"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRehearse
+body: {
+ "cloud_backup_uuid": "",
+ "source": {
+  "node_name": "8.180",
+  "host_name": "Windows Ftp Server",
+  "host_ip": "192.168.8.180",
+  "node_os": "Windows Server 2012 R2 64bits",
+  "vcpus": "8",
+  "memory": "40957",
+  "disk_num": "2",
+  "disk_size": "64420392960",
+  "ecs_id": ""
+ },
+ "zone": {
+  "zone_name": "\u534e\u5317-\u5317\u4eac\u4e00",
+  "availability_zone": "cn-east-2c"
+ },
+ "rc_point": {
+  "time": "2019-08-13 17:13:28",
+  "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f33dd",
+  "disk_num": 2,
+  "total_size": "8000",
+  "list": [
+   {
+    "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f41dd",
+    "size": "4000",
+    "boot_index": 0
+   }
+  ]
+ },
+ "ecs_name": "Rehearse lij-test",
+ "flavor": {
+  "id": "ai1.2xlarge.4",
+  "name": "ai1.2xlarge.4",
+  "vcpus": "8",
+  "ram": 32768,
+  "disk": "0",
+  "disabled": "false",
+  "is_public": 1
+ },
+ "vpc": {
+  "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+  "name": "vpc-49a5,192.168.0.0/16"
+ },
+ "subnet": {
+  "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+  "name": "subnet-1df4,192.168.64.0/24"
+ },
+ "ip_address": "192.168.192.101",
+ "security_group": [
+  {
+   "group_id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+   "group_name": "i2",
+   "ingress": "ICMP,TCP/22,80,443,26821-26868,55443",
+   "egress ": "ICMP"
+  }
+ ],
+ "network_switch": 1,
+ "_": "3f01e3b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteGroup
+body: {
+ "job_ids": [],
+ "_": "3f4bdc20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRehearse
+body: {
+ "job_ids": [],
+ "_": "3d89fcc8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_ids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeEcs
+body: {
+ "cloud_backup_uuid": "",
+ "_": "3f1b389d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_backup_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRehearse
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: evacuateBatchRehearse
+body: {
+ "job_ids": [],
+ "is_group": 1,
+ "_": "3f08b7f9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: evacuateRehearse
+body: {
+ "job_id": "",
+ "is_group": 1,
+ "_": "3f603e0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAvailabilityZone
+body: {
+ "ecs_id": "",
+ "_": "3f5e346b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBatchRehearse
+body: {
+ "_": "3f37a9f2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "rehearse_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEcs
+body: {
+ "cloud_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "group_uuid": "",
+ "_": "3f56c2b7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEvacuatedGroup
+body: {
+ "_": "3b4c47a8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEvacuatedRehearse
+body: {
+ "limit": 1,
+ "page": 1,
+ "_": "3f1b8032"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFlavor
+body: {
+ "ecs_id": "",
+ "_": "3eed788a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGroup
+body: {
+ "_": "3f203ad3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGroupStatus
+body: {
+ "_": "3f29c7db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "job_id": null,
+    "status": "UNKNOWN"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHost
+body: {
+ "_": "3f0f0ab2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNetwork
+body: {
+ "cloud_uuid": "8E6FB8D2-F830-D67B-DA35-8E16F175053B",
+ "network_conf": [
+  {
+   "vpc": {
+    "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+    "name": "vpc-49a5,192.168.0.0/16"
+   },
+   "subnet": {
+    "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+    "name": "subnet-1df4,192.168.64.0/24"
+   }
+  }
+ ],
+ "_": "3eb616b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrRehearseProgress
+body: {
+ "_": "3eaf6d29"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrRehearseStatus
+body: {
+ "_": "3eb014af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRecoveryPoint
+body: {
+ "cloud_backup_uuid": "",
+ "_": "3f790214"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_backup_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearse
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3c92a9e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearseDetail
+body: {
+ "job_id": "",
+ "type": "",
+ "_": "3f030216"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearseStatus
+body: {
+ "_": "3f1c93ab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": [
+   {
+    "job_id": null,
+    "status": "UNKNOWN"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSecureGroup
+body: {
+ "cloud_uuid": "",
+ "ecs_id": "",
+ "_": "3f6eb699"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSubnet
+body: {
+ "vpc_id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+ "cloud_uuid": "",
+ "_": "3e97381f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSubnetUsedIp
+body: {
+ "cloud_uuid": "",
+ "subnet_id": "",
+ "_": "3f0f3e57"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n Lost: subnet_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVncConsole
+body: {
+ "job_id": "",
+ "ecs_id": "",
+ "_": "3dc969be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpc
+body: {
+ "cloud_uuid": "",
+ "_": "3f58f68b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

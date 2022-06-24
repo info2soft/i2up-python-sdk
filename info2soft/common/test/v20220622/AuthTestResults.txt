@@ -1,0 +1,124 @@
+<START-----------------------------------------------------------
+Method: authGenerate
+body: {
+ "_": "3f15164c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "content": {
+   "uuid": "a1e531cd60f38fa280516df3cdae4534d013e0c5",
+   "t": "165603941037391230"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkCaptcha
+body: {
+ "username": "admin",
+ "_": "3e947927"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "need_captcha": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkLoginStatus
+body: {
+ "access_token": "a10b45cd8b94ad53UEsc8H-gxjMU-jX76eFd2z4eoDh0vlVkPPDWaJyBWssjwWdYAtk4SdFaL8dQH48QQv29c3TRNX3FQo4Ub_V1qwehbRQ28KBEtYqTG6wy8sbAEWPVcBoE2uWXnmP_J5R9hXl8yHbeyaMwMjLpWe0onA"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "username": "admin"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimeStamp
+body: {
+ "timestamp": 1546847673,
+ "_": "3efc4b60"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "t": "165603941404872747"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVerificationCode
+body: {
+ "uuid": "",
+ "mobile": 18501767968,
+ "email": "",
+ "type": "sms",
+ "_": "3e2c3e16"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001301,
+  "message": "[1010001301] Invalid code uuid, please obtain again"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: heartbeat
+body: {
+ "refresh_token": "null",
+ "_": "3e9d1793"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001109,
+  "message": "[1010001109] Refresh token invalid"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: tokendef
+body: {
+ "pwd": "Info1234",
+ "username": "admin",
+ "_": "3edd7b7d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "token": "c9ce3a771bffb74d45db10eaff12813aed639ce2",
+  "sso_token": "d26308100d8bbb90rk3q3vV09Jx-Jeno-WHr9TUT6OWAnVh7Tp-J5tvNgFMEHGoHQKO9pgt5P0pZe0-BIwcTH9Rxav63-5oq57Ll8_3gYIX_hPiruHAQOmR_3P-oWKF3gigARuuAv73nuEF38gDOriWtCcAy5WacWQb9hA",
+  "refresh_token": "2c95b760090ddb17YYBIpa3xzOkrexjCszjBSqTutJpRtY2wKQW08ORmcDVx42aCadGZBMk39PFqTvmiFVh8W3fyt_Otlrri-AiYBlTTTX44sdO494Zx3wOi_-jqgrLMdqM0p93v2--0XG7l0YW2izfKGtn5GBUUeeP8XA"
+ }
+}
+-----------------------------------------------------------END>
+

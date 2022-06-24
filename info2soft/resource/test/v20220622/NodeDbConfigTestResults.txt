@@ -1,0 +1,57 @@
+<START-----------------------------------------------------------
+Method: createNodeDbConfig
+body: {
+ "node_uuid": "",
+ "db_type": "",
+ "config_sw": "",
+ "os_user": "",
+ "os_passwd": "",
+ "instance_info": [],
+ "_": "3eb5713d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: db_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeDbConfig
+body: {
+ "node_uuid": "",
+ "db_type": "oracle",
+ "_": "3ea9fb39"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetDatabaseInstances
+body: {
+ "node_uuid": "",
+ "os_user": "",
+ "os_passwd": "",
+ "db_type": 1,
+ "_": "3f1be7c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: os_user;\n Lost: os_passwd;\n The db_type field must be one of: oracle,sqlserver,db2;\n"
+ }
+}
+-----------------------------------------------------------END>
+

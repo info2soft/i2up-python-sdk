@@ -1,0 +1,187 @@
+<START-----------------------------------------------------------
+Method: checkDir
+body: {
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "path": "E:\\test2\\",
+ "_": "3f1ec75e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDir
+body: {
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "path": "E:\\test2\\",
+ "_": "3e13c6e2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDir
+body: {
+ "sto_uuid": "",
+ "path": "aliyun--oos:/TestDir",
+ "names": [
+  {
+   "name": "222 - \u526f\u672c (2).txt",
+   "is_dir": "0"
+  }
+ ],
+ "host_uuid": "",
+ "_": "3e6d863d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuid;\n Lost: sto_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDirDelStatus
+body: {
+ "sto_uuid": "",
+ "task_uuid": "",
+ "host_uuid": "",
+ "_": "3f152988"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n Lost: task_uuid;\n Lost: host_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDir
+body: {
+ "show_file": 1,
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "dev": 0,
+ "path": "",
+ "rep_uuid": "",
+ "bs_time": "",
+ "_": "3e5d3a20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "dir_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEtcdDir
+body: {
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "path": "",
+ "_": "3ee796cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "dir_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateDtoDir
+body: {
+ "type": 1,
+ "sto_uuid": "",
+ "host_uuid": "",
+ "sto_type": "",
+ "archive_data_direct": 1,
+ "valid_period": 1,
+ "rate_type": 1,
+ "path": [],
+ "names": [
+  {
+   "name": "",
+   "is_dir": ""
+  }
+ ],
+ "_": "3ee4bcc5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDir
+body: {
+ "sto_uuid": "",
+ "path": "aliyun--oos:/TestDir",
+ "names": [
+  {
+   "name": "222 - \u526f\u672c (2).txt",
+   "is_dir": "0"
+  }
+ ],
+ "host_uuid": "",
+ "_": "3e002c20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuid;\n Lost: sto_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDirDelStatus
+body: {
+ "sto_uuid": "",
+ "task_uuid": "",
+ "host_uuid": "",
+ "_": "3e67cd6c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n Lost: task_uuid;\n Lost: host_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,217 @@
+<START-----------------------------------------------------------
+Method: availablePoolMemberList
+body: {
+ "config_addr": "",
+ "pool_type": "BlockStorage",
+ "storage_conf_ip": "",
+ "_": "3f54388f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStoragePool
+body: {
+ "pool_name": "",
+ "pool_type": "",
+ "ip": "",
+ "disk_list": [
+  {
+   "name": "",
+   "size": "",
+   "type": ""
+  }
+ ],
+ "capacity": "",
+ "_": "3ec17181"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: pool_type;\n Lost: ip;\n Lost: data_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFcTarget
+body: {
+ "pool_uuid": "",
+ "wwpn": "",
+ "force": 1,
+ "_": "3f6951f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStoragePool
+body: {
+ "pool_uuids": [],
+ "force": 1,
+ "_": "3f2b9602"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStoragePool
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: extendStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "extend",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3e917841"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHbaInfo
+body: {
+ "ip": "",
+ "_": "3ef30740"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStoragePoolStatus
+body: {
+ "_": "3efc09b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStoragePool
+body: {
+ "pool_name": "",
+ "pool_type": "",
+ "ip": "",
+ "disk_list": [
+  {
+   "name": "",
+   "size": "",
+   "type": ""
+  }
+ ],
+ "capacity": "",
+ "random_str": "",
+ "_": "3f5239ef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "reset",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3d41de15"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: storagePoolList
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3ebecc55"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

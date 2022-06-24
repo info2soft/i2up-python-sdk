@@ -1,0 +1,122 @@
+<START-----------------------------------------------------------
+Method: createColumnExt
+body: {
+ "type": "",
+ "list_col": {
+  "wk_ip": {
+   "display": "1",
+   "width": "100"
+  },
+  "bk_ip": {
+   "display": "1"
+  },
+  "cdp_switch": {
+   "display": "1"
+  },
+  "name": {
+   "display": 1,
+   "width": 80
+  }
+ },
+ "_": "3e96c590"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeColumnext
+body: {
+ "type": "",
+ "_": "3f17bf7e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVersion
+body: {
+ "_": "3f75ba6a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "version": "7.1.74.22042912",
+  "prod_type": "STD",
+  "api_version": "2.0.0",
+  "build_date": "202204291211",
+  "migration_version": 71742203231118,
+  "server_time": 1656043184
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: latestVersion
+body: {
+ "plat": "example_plat",
+ "_": "3e8cc1dd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "returnCode": 0,
+  "version": null,
+  "downloadUrl": "/upgrade//example_plat-.zip"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeConnectTest
+body: {
+ "ip": "",
+ "port": "",
+ "type": "node",
+ "node_uuids": [],
+ "_": "3f5b3d44"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n Lost: port;\n Lost: node_uuids[0];\n Lost: arbit_protocol;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDatabase
+body: {
+ "_": "3e414f19"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "Successfully updated to the latest version"
+ }
+}
+-----------------------------------------------------------END>
+

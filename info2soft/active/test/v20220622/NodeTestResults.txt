@@ -1,0 +1,259 @@
+<START-----------------------------------------------------------
+Method: activeNode
+body: {
+ "node_name": "Gary Wilson",
+ "address": "75.82.95.60",
+ "data_port": "26804",
+ "cache_dir": "/var/i2data/cache/",
+ "ipctoken": "82Fa2CFD-bC93-cbBB-5Fe6-d543C88693C8",
+ "log_dir": "/var/i2data/log/",
+ "node_uuid": "b719ecBa-8187-D3BE-dB9C-cd30d5802BCD",
+ "registered": 1,
+ "relay_node": 0,
+ "source_node": 1,
+ "back_node": 0,
+ "active_flag": "0",
+ "comment": "string",
+ "web_uuid": "0DC713bE-e93b-67dC-3DfD-34F5CDd44C9E",
+ "port": {
+  "iawork": "",
+  "iaback": "",
+  "iarelay": "",
+  "iatrack": "",
+  "iamsk": "",
+  "iaload": "",
+  "iamsg": "",
+  "iagauss": ""
+ },
+ "_": "3f291049"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNode
+body: {
+ "uuids": [
+  "95215Ac5-A4f9-bA8A-991a-D89F8EAb79e2",
+  "3070f557-CACE-4Ae4-7b3e-fFC8Df9Ec0cD"
+ ],
+ "_": "3da31dfb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "fail_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+   },
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+   },
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptNode
+body: {
+ "registered": 1,
+ "node_uuid": "750c83B6-e656-d12C-e98B-1A61675b93e4",
+ "_": "3f20761d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "active_node": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptNodeDebugInfo
+body: {
+ "uuid": "41D1C1E8-60AE-4853-9694-5599560EEB0F",
+ "_": "3cd50396"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "debug_node": [
+   {
+    "conn_bk": null,
+    "conn_wk": null,
+    "thd_bk": null,
+    "thd_wk": null,
+    "conf_bk": "",
+    "conf_wk": "",
+    "obj_bk": null,
+    "obj_wk": null
+   }
+  ],
+  "process_status": {
+   "iawork": "off",
+   "iatrack": "off",
+   "iaback": "off",
+   "iarelay": "off",
+   "iamask": "off",
+   "iaconsumer": "off",
+   "iamss": "off",
+   "iadbmon": "off",
+   "iaqianbase": "off",
+   "iadiff": "off",
+   "ialoader": "off"
+  },
+  "cpu_useage": [],
+  "cpu_useage_info": [],
+  "memory_useage": [],
+  "memory_useage_info": [],
+  "network_useage_netsend": [],
+  "network_useage_netrecv": [],
+  "network_useage_info": [],
+  "time": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "uuids": [
+  "ECe4aEFE-CF4d-2AE1-eD7A-a3dbB2eAB419",
+  "BFBaebeC-AC43-E92f-0ADF-F0c71b3ABBC8"
+ ],
+ "_": "3eaff1b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "ECe4aEFE-CF4d-2AE1-eD7A-a3dbB2eAB419",
+    "status": "OFFLINE",
+    "version": "-",
+    "os": "-",
+    "process_status": []
+   },
+   {
+    "uuid": "BFBaebeC-AC43-E92f-0ADF-F0c71b3ABBC8",
+    "status": "OFFLINE",
+    "version": "-",
+    "os": "-",
+    "process_status": []
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodes
+body: {
+ "page": 0,
+ "limit": 10,
+ "nodetype": "@pick{\"name\",\"source\",\"backup\"]}",
+ "search_field": "",
+ "order_by": "",
+ "sort": "@pick",
+ "search_value": "",
+ "_": "3e9a3582"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNode
+body: {
+ "node_name": "Helen Clark",
+ "address": "246.73.219.231",
+ "data_port": "26804",
+ "cache_dir": "/var/i2data/cache/",
+ "iptoken": "B5E1f5fB-bAD9-DDaE-b4d1-D0a9fe46FD33",
+ "logdir": "/var/i2data/log/",
+ "node_uuid": "EEdf64f4-CEf7-B62c-a26e-3b3Bc89BcFf0",
+ "registered": 1,
+ "relay_node": 0,
+ "source_node": 1,
+ "back_node": 1,
+ "active_flag": "0",
+ "comment": "string",
+ "web_uuid": "a2dbD81B-8e87-bd59-cA2e-b5C9EAB738db",
+ "port": {
+  "iawork": "26804",
+  "iaback": "26805",
+  "iarelay": "26806",
+  "iatrack": "26807",
+  "iamask": "26808",
+  "iaload": "26809",
+  "iamsg": "26810",
+  "iaguass": ""
+ },
+ "_": "3d47205b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeNode
+body: {
+ "uuids": [],
+ "_": "3ed95a57"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,283 @@
+<START-----------------------------------------------------------
+Method: createTbCmp
+body: {
+ "tb_cmp_name": "ctt->ctt",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cmp_type": "table",
+ "filter_table": "[\u7528\u6237.\u8868\u540d]",
+ "db_tb_map": "\u8868\u6620\u5c04",
+ "dump_thd": 1,
+ "polices": "\"0|00:00",
+ "policy_type": "one_time",
+ "concurrent_table": [
+  "hh.ww"
+ ],
+ "try_split_part_table": 0,
+ "one_time": "2019-05-27 16:07:08",
+ "config": {
+  "data_select": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "src_query": "",
+    "dst_user": "",
+    "dst_tb": "",
+    "dst_query": ""
+   }
+  ],
+  "compare_key": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "dst_user": "",
+    "dst_tb": "",
+    "src_dst_key": ""
+   }
+  ],
+  "globalConfig": {
+   "dkdiff_enable_step_count_table": "",
+   "dkdbsource_diff_only_key_columns": "",
+   "dkmagic_plan_max_diffs": 10000,
+   "dkfilesink_enable_sqlpatch_file": "",
+   "dkmagic_plan_number_tolerance_type": "absolute",
+   "dkmagic_plan_number_tolerance": 1,
+   "dkmagic_plan_datetime_tolerance": 1,
+   "split_table_schedule_cron": "",
+   "split_table_single_segment_max_rows": 5000000,
+   "split_table_result_expire_in_seconds": 0,
+   "dkdiffengine_recursion_max_steps": 1,
+   "dkdiffengine_recursion_interval_step_delay": 0,
+   "dkdbsource_left_ignore_type_names": "\u2018\u2019",
+   "dkdbsource_right_ignore_type_names": "\u2018\u2019",
+   "dkdbsource_left_ignore_column_names": "\u2018\u2019",
+   "dkdbsource_right_ignore_column_names": "",
+   "globalconfig": [
+    {
+     "key": "",
+     "value": ""
+    }
+   ],
+   "tolerance": ""
+  },
+  "globals": [
+   {
+    "src_user": "",
+    "dst_user": "",
+    "src_query": "",
+    "dst_query": ""
+   }
+  ],
+  "exclude_tables": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "dst_user": "",
+    "dst_tb": ""
+   }
+  ],
+  "timestamps": {
+   "column_name": "",
+   "back_delay_in_seconds": 1,
+   "end_time": ""
+  },
+  "global_time_limit": ""
+ },
+ "_": "3f077fc9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "uuid": "72FF34C9-901C-5822-AFF5-190030EF27B9"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTbCmp
+body: {
+ "force": "",
+ "uuids": "A1AdAf11-BBA1-11f1-a8aC-7E44bE8BBDb3",
+ "_": "3ed1c489"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmp
+body: {
+ "uuid": "3D3c7Fbc-da44-BDD2-cCdE-dbB5dc21ef8F",
+ "_": "3f6d0409"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "B7CBcC47-807b-8Cb8-a347-cbEc24fBEBBC",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3daab801"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "A7DE1FC2-DfAE-FC91-18f2-1CcF8FBEf8cC",
+ "start_time": "",
+ "flag": 1,
+ "_": "3ddf98ef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResuluTimeList
+body: {
+ "time_list": "cbD2EA8b-f83D-0cea-bb35-e4eDbe62BEA3",
+ "uuid": "",
+ "_": "3f74b150"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3d8dd00e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmpResultTimeList
+body: {
+ "uuid": "",
+ "_": "3f40b9b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "time_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartTbCmp
+body: {
+ "operate": "restart",
+ "tb_cmp_uuids": "eff2C655-5f9B-2d3e-2eCA-D73Bf976D982",
+ "_": "3e853b61"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTbCmp
+body: {
+ "operate": "stop",
+ "tb_cmp_uuids": "eff2C655-5f9B-2d3e-2eCA-D73Bf976D982",
+ "_": "3f50b793"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
