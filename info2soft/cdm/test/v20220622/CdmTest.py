@@ -28,12 +28,12 @@ if is_py3:
     urlopen = urllib.request.urlopen
 
 username = 'admin'
-pwd = 'Info1234'
+pwd = 'Info@1234'
     
                 
 class CdmTestCase(unittest.TestCase):
 
-    def testCreateVpDrill(self):
+    def testCreateCdmDrill(self):
         a = Auth(username, pwd)
         body = {
             'vm_name': '测试5',
@@ -73,32 +73,32 @@ class CdmTestCase(unittest.TestCase):
         }
 
         cdm = Cdm(a)
-        r = cdm.createVpDrill(body)
+        r = cdm.createCdmDrill(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cdm', 'createVpDrill', body)
+        write(r[0], 'Cdm', 'createCdmDrill', body)
 
-    def testDescribeVpDrillGroup(self):
+    def testDescribeCdmDrillGroup(self):
         a = Auth(username, pwd)
         body = {
         }
 
         cdm = Cdm(a)
-        r = cdm.describeVpDrillGroup(body)
+        r = cdm.describeCdmDrillGroup(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cdm', 'describeVpDrillGroup', body)
+        write(r[0], 'Cdm', 'describeCdmDrillGroup', body)
 
-    def testDescribeVpDrill(self):
+    def testDescribeGroupCdmDrill(self):
         a = Auth(username, pwd)
         body = {
         }
         uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
         cdm = Cdm(a)
-        r = cdm.describeVpDrill(body, uuid)
+        r = cdm.describeGroupCdmDrill(body, uuid)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Cdm', 'describeVpDrill', body)
+        write(r[0], 'Cdm', 'describeGroupCdmDrill', body)
 
     def testDeleteCdmDrill(self):
         a = Auth(username, pwd)

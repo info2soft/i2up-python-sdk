@@ -13,7 +13,7 @@ class Cdm (object):
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def createVpDrill(self, body):
+    def createCdmDrill(self, body):
 
         url = '{0}/cdm_drill'.format(config.get_default('default_api_host'))
 
@@ -25,7 +25,7 @@ class Cdm (object):
      * 
      * @return list
     '''
-    def describeVpDrillGroup(self, body):
+    def describeCdmDrillGroup(self, body):
 
         url = '{0}/cdm_drill/group'.format(config.get_default('default_api_host'))
 
@@ -38,7 +38,7 @@ class Cdm (object):
      * @body['uuid'] String  必填 节点uuid
      * @return list
     '''
-    def describeVpDrill(self, body, uuid):
+    def describeGroupCdmDrill(self, body, uuid):
         if uuid is None:
             exit()
         url = '{0}/cdm_drill/group/{1}'.format(config.get_default('default_api_host'), uuid)

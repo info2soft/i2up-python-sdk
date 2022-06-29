@@ -1120,3 +1120,57 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: createCdmDrill
+body: {
+ "vm_name": "\u6d4b\u8bd55",
+ "vm_ref": "vm-10811",
+ "limit": 3,
+ "sched_day": [
+  "1",
+  "2",
+  "3"
+ ],
+ "sched_time": [
+  "00:00"
+ ],
+ "sched_every": 0,
+ "bkup_type": 0,
+ "rule_name": "",
+ "rule_type": 0,
+ "vp_uuid": "",
+ "auto": 0,
+ "vm_list": [
+  {
+   "vm_name": "",
+   "new_vm_name": "",
+   "bk_uuid": "",
+   "time": "",
+   "original_rule_uuid": "",
+   "scripts": "",
+   "bk_path": "",
+   "scripts_type": 1,
+   "os_type": 1,
+   "wk_uuid": "",
+   "src_uuid": "",
+   "data_ip_uuid": "",
+   "ver_sig": "",
+   "os_ip": ""
+  }
+ ],
+ "backup_type": "i",
+ "del_bkup_data": 0,
+ "automate": 0,
+ "auto_shutdown": 1,
+ "_": "3f15b7f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010121001,
+  "message": "[1010121001] VP does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
