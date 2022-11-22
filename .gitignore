@@ -12,6 +12,8 @@ info2soft/common/token.txt
 # C extensions
 *.so
 
+.idea
+
 # Distribution / packaging
 .Python
 build/
