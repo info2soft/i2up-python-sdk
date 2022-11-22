@@ -5,7 +5,8 @@ import configparser
 import sys
 import os
 
-# sys.path.append(r'C:\Users\xxx\Desktop\i2soft-i2up-python-sdk-master\i2up-python-sdk')
+sys.path.append(r'B:\workspace\code\SDK\python-sdk')
+from info2soft import config
 from info2soft import Auth
 from info2soft.resource.v20181227 import Node
 
@@ -14,8 +15,12 @@ from info2soft.resource.v20181227 import Node
 # appTable = json.loads(conf.get('appTable', 'value'))
 # print(appTable)
 
+## 设置控制台地址
+config.set_default(None, None, None, 'https://172.20.68.203:58086/api')
+
+
 username = 'admin'
-pwd = 'Info1234'
+pwd = 'Info@1234'
 
 auth = Auth(username, pwd)
 nodebody = {
