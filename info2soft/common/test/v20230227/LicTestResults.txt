@@ -1,0 +1,272 @@
+<START-----------------------------------------------------------
+Method: activateLicAll
+body: {
+ "_": "3efb821e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001020,
+  "message": "[1010001020] List empty."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cdmCapacity
+body: {
+ "_": "3ebd3bdb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "lic_list": [],
+  "storage_list": [],
+  "total_num": 0,
+  "total_used": 0,
+  "total_authorized": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteLic
+body: {
+ "lic_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f0e2351"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "success_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "lic_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "lic_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeActivateInfo
+body: {
+ "group_sn": "20-4570098558",
+ "_": "3e19441b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLic
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLicCcHwCode
+body: {
+ "_": "3f379e77"
+}
+response: {
+ "ret": 200,
+ "data": {
+  "code": "1010001022",
+  "message": "[1011113017] The console ID failed to be obtained. Please check if CtrlServer is running normally."
+ },
+ "msg": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLicObjHwCode
+body: {
+ "_": "3f0fba4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeMoveLicBind
+body: {
+ "sn": "sn=40-4622191169-01",
+ "_": "3ea1a693"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "count": 0,
+  "list": {}
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadLicInfo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "file_name": "Collect_mac&license_20230306145518.zip"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: hdfsCapacity
+body: {
+ "_": "3f4b1e54"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLic
+body: {
+ "search_value": "",
+ "search_field": "",
+ "direction": "",
+ "page": 1,
+ "limit": 1,
+ "order_by": "",
+ "_": "3f58f81b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicBind
+body: {
+ "lic_uuid": "11111111-1111-1111-1111-111111111111",
+ "order_by": "",
+ "direction": "",
+ "_": "3f5a7469"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicObjBind
+body: {
+ "obj_uuid": "11111111-1111-1111-1111-111111111111",
+ "obj_type": 0,
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "proxy_switch": 1,
+ "i2id": "",
+ "obj_subtype": 1,
+ "_": "3f4b2fe8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: unsubscribeLic
+body: {
+ "sn": "",
+ "operate": "unsubscribe",
+ "_": "3eeee701"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateLicBind
+body: {
+ "_": "3e94b119"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: lic_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

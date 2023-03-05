@@ -1,0 +1,128 @@
+<START-----------------------------------------------------------
+Method: deleteMongoRule
+body: {
+ "uuids": [],
+ "force": "true",
+ "_": "3de8b153"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeListRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMongoRuleLog
+body: {
+ "offset": 0,
+ "limit": 10,
+ "date_start": "",
+ "date_end": "",
+ "type": 1,
+ "module_type": 1,
+ "query_type": 1,
+ "rule_uuid": "9F9D6fC5-F6bd-7bBD-a9FF-e1dBfCbBDf4C",
+ "_": "3eb16aeb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed",
+    "log_type": "Export"
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMongoStatus
+body: {
+ "_": "3f09df6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyMongoRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": "",
+  "full_sync": 0,
+  "incre_sync": 1,
+  "kafka": {
+   "binary_code": ""
+  },
+  "kafka_time_out": "",
+  "part_load_balance": "",
+  "kafka_message_encoding": ""
+ },
+ "_": "3f2bb678"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeMongoRule
+body: {
+ "operate": "",
+ "uuids": "",
+ "_": "3c78f710"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

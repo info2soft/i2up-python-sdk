@@ -1,0 +1,141 @@
+<START-----------------------------------------------------------
+Method: createWebhook
+body: {
+ "id": "",
+ "name": "",
+ "type": "",
+ "config": {
+  "method": "",
+  "secret": "",
+  "headers": []
+ },
+ "url": "",
+ "_": "3ec0b986"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: url;\n Lost: type;\n Lost: config[method];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createWebhookContentTemplate
+body: {
+ "name": "",
+ "warn_type": "",
+ "config": {
+  "dd|qywx|fs|kafka|generalsms": {
+   "language": "zh",
+   "title": "",
+   "content": "",
+   "method": "",
+   "count": 1
+  }
+ },
+ "id": "",
+ "_": "3f179227"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: warn_type;\n Lost: config[sms];\n Lost: config[kafka];\n Lost: config[dd];\n Lost: config[qywx];\n Lost: config[fs];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteWebhook
+body: {
+ "uuids": [],
+ "_": "3f0f2d1f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: delteWebhookContentTemplate
+body: {
+ "uuids": [],
+ "_": "3ea2589d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeWebhook
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyWebhook
+body: {
+ "name": "",
+ "random_str": "",
+ "config": {},
+ "url": "",
+ "id": "",
+ "_": "3f72e2ee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: url;\n Lost: type;\n Lost: config[method];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyWebhookContentTemplate
+body: {
+ "id": "",
+ "name": "",
+ "warn_type": "",
+ "webhook_type": "",
+ "random_str": "",
+ "config": {
+  "language": "",
+  "title": "",
+  "content": ""
+ },
+ "_": "3f548ff6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: warn_type;\n Lost: config[sms];\n Lost: config[kafka];\n Lost: config[dd];\n Lost: config[qywx];\n Lost: config[fs];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,155 @@
+<START-----------------------------------------------------------
+Method: createCopyVolume
+body: {
+ "volume_name": "",
+ "bk_uuid": "",
+ "pool_uuid": "",
+ "volume_size": "",
+ "link_protocol": "",
+ "create_fs": 1,
+ "fs_type": "",
+ "attach_point": [],
+ "fc_initiator_wwpn": "",
+ "fc_target_wwpn": "",
+ "exclusive": 1,
+ "bk_type": "",
+ "auto_switch": 1,
+ "sparse_switch": 1,
+ "raw_uuid": "",
+ "volume_type": 0,
+ "_": "3e75b75e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_name;\n Lost: volume_size;\n Lost: link_protocol;\n Lost: pool_uuid;\n Lost: fs_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCopyVolume
+body: {
+ "volume_uuids": [],
+ "force": 1,
+ "_": "3f12df20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCopyVolume
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCopyCdmVolume
+body: {
+ "volume_uuid": "",
+ "volume_type": 1,
+ "bk_uuid": "",
+ "_": "3f436b35"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCopyVolumeClient
+body: {
+ "limit": 300,
+ "page": 1,
+ "type": 1,
+ "_": "3e807fc4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The type field must be one of: node,rac,service_cls;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCopyVolumeStatus
+body: {
+ "force_refresh": 1,
+ "_": "3c9042a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotList
+body: {
+ "page": 1,
+ "limit": 10,
+ "from": 0,
+ "to": 0,
+ "volume_type": 0,
+ "storage_uuid": "",
+ "storage_pool_uuid": "",
+ "_": "3f11f99b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCopyVolume
+body: {
+ "volume_name": "",
+ "bk_uuid": "",
+ "volume_size": "",
+ "_": "3ef9ffe9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_name;\n Lost: bk_uuid;\n Lost: volume_size;\n"
+ }
+}
+-----------------------------------------------------------END>
+

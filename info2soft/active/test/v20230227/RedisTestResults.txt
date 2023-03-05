@@ -1,0 +1,133 @@
+<START-----------------------------------------------------------
+Method: createRedisRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": "",
+  "full_sync": 0,
+  "incre_sync": 1,
+  "kafka": {
+   "binary_code": ""
+  },
+  "kafka_time_out": "",
+  "part_load_balance": "",
+  "kafka_message_encoding": "",
+  "dbmap_topic": "",
+  "db_user_map": ""
+ },
+ "kafka": {},
+ "sync_mode": "\u662f\u5426\u5168\u91cf\u540c\u6b65",
+ "_": "3f19c136"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRedisRule
+body: {
+ "uuids": [],
+ "force": "true",
+ "_": "3f020538"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRedisRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRedisStatus
+body: {
+ "_": "3f30d4e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRedisRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": "",
+  "full_sync": 0,
+  "incre_sync": 1,
+  "kafka": {
+   "binary_code": ""
+  },
+  "kafka_time_out": "",
+  "part_load_balance": "",
+  "kafka_message_encoding": ""
+ },
+ "_": "3e6e7ae0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeRedisRule
+body: {
+ "operate": "",
+ "uuids": "",
+ "_": "3f722ef3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,463 @@
+<START-----------------------------------------------------------
+Method: appSystemList
+body: {
+ "search_value": "",
+ "limit": 1,
+ "page": 1,
+ "search_field": "",
+ "_": "3c37f11d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: appSystemMembersList
+body: {
+ "rule_type": 1,
+ "name": "",
+ "os_type": 1,
+ "_": "3f3b7bb8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchTaskStatus
+body: {
+ "_": "3f52a213"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: batch_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createAppSystem
+body: {
+ "dir_uuid": "73412DAD-A7A6-4605-A9FF-081495C8800B",
+ "sys_name": "\u5e94\u7528\u7cfb\u7edfname",
+ "level_cfg": [
+  {
+   "day": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "periods": [
+    {
+     "level": 0,
+     "start_time": "10:10",
+     "end_time": "12:20"
+    }
+   ]
+  }
+ ],
+ "node_uuids": [
+  "EA52A961-9883-66FE-188B-D7266AD9594B",
+  "09EEA553-C3B8-0D7A-4797-F7A7E2D4FAE1"
+ ],
+ "vm_uuids": [],
+ "_": "3f6143e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createSecDir
+body: {
+ "dir_name": "",
+ "pid": 1,
+ "_": "3e1b65c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: dir_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteAppSystem
+body: {
+ "sys_uuids": [],
+ "_": "3eecba28"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sys_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSecDir
+body: {
+ "dir_uuids": [],
+ "_": "3e81bcb6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: dir_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeAppSystem
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getBackupCenterInfo
+body: {
+ "vp_uuid": "",
+ "_": "3f0f323e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getMembersList
+body: {
+ "sys_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3e9647af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "dir_name": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "sys_uuid": "A25F5302-FCB7-47AB-B6C0-ECDF10DACB3F",
+    "sys_name": "\u5e94\u7528\u7cfb\u7edfname",
+    "dir_uuid": "73412DAD-A7A6-4605-A9FF-081495C8800B",
+    "random_str": "01E51F2A-7D93-45B6-9A39-F705CB46A501",
+    "level_cfg": [
+     {
+      "day": [
+       "0",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5",
+       "6"
+      ],
+      "periods": [
+       {
+        "level": 0,
+        "start_time": "10:10",
+        "end_time": "12:20"
+       }
+      ]
+     }
+    ],
+    "total_member": 0,
+    "current_level": null
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupCenter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHosts
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsReport
+body: {
+ "start_time": "",
+ "end_time": "",
+ "_": "3f5892f6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: start_time;\n Lost: end_time;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyAppSystem
+body: {
+ "dir_uuid": "",
+ "sys_name": "",
+ "level_cfg": [
+  {
+   "day": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "periods": [
+    {
+     "level": 1,
+     "start_time": "10:10",
+     "end_time": "12:20"
+    }
+   ]
+  }
+ ],
+ "random_str": "",
+ "node_uuids": [
+  "EF4825D6-7FB3-7961-6271-5E5B2603414D"
+ ],
+ "vm_uuids": [
+  "EF4825D6-7FB3-7961-6271-5E5B2603414D"
+ ],
+ "_": "3e9c82a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: dir_uuid;\n Lost: sys_name;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifySecDir
+body: {
+ "dir_name": "",
+ "_": "3f2d8e5a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: dir_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: recoveryList
+body: {
+ "limit": 1,
+ "page": 1,
+ "type": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f61cd05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: recoveryStatus
+body: {
+ "_": "3ed28e4b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resourceProtectionCoverage
+body: {
+ "level_a": 1,
+ "level_b": 1,
+ "level_c": 1,
+ "vp_uuid": "",
+ "_": "3f5f796b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resourceView
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: secDirList
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": null,
+    "user_uuid": null,
+    "id": 1,
+    "pid": 0,
+    "dir_uuid": "8EB319F2-6621-789A-166A-468E613DE93D",
+    "dir_name": "\u6240\u6709",
+    "path": "/1",
+    "depth": 1,
+    "create_time": 1677487172
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: taskView
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "id": 1,
+    "pid": 0,
+    "path": "/1",
+    "depth": 1,
+    "dir_uuid": "8EB319F2-6621-789A-166A-468E613DE93D",
+    "dir_name": "\u6240\u6709",
+    "user_uuid": null,
+    "create_time": 1677487172,
+    "key": 1,
+    "bk_uuid_list": [],
+    "wk_uuid_list": [],
+    "level_c": 0,
+    "level_b": 0,
+    "level_a": 0,
+    "app_sys_list": [],
+    "wk_num": 0,
+    "bk_num": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

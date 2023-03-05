@@ -1,0 +1,93 @@
+<START-----------------------------------------------------------
+Method: createCommonTemplate
+body: {
+ "common_template": {
+  "template_name": "",
+  "template_type": 1,
+  "template_text": ""
+ },
+ "_": "3f731159"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCommonTemplate
+body: {
+ "template_uuid": [],
+ "_": "3de06af6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCommonTemplate
+body: {
+ "template_uuid": "",
+ "_": "3ee344d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCommonTemplate
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f7fbb72"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCommonTemplate
+body: {
+ "common_template": {
+  "template_name": "",
+  "template_type": 1,
+  "template_text": ""
+ },
+ "_": "3d3f7277"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+

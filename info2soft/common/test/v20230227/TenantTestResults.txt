@@ -1,0 +1,39 @@
+<START-----------------------------------------------------------
+Method: createTenant
+body: {
+ "tenant_name": "Sarah",
+ "display_name": "Donald",
+ "description": "Jessica",
+ "enabled": 1,
+ "_": "3ecee6fa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001142,
+  "message": "[1010001142] auth.permission_denied tenant"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTenant
+body: {
+ "ids": [
+  {
+   "": ""
+  }
+ ],
+ "_": "3f0458a2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The ids[0] field must contain only numbers;\n"
+ }
+}
+-----------------------------------------------------------END>
+

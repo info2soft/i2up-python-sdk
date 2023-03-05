@@ -1,0 +1,26 @@
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "node_ip": "",
+ "start_time": 1,
+ "last_time": 1,
+ "_": "3f1d0fe0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info": {
+   "load": null,
+   "storage": null,
+   "iaproxy": null,
+   "ctrlcenter": null,
+   "cpu": [],
+   "mem": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+

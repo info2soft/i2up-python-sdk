@@ -1,0 +1,89 @@
+<START-----------------------------------------------------------
+Method: createTapeCopy
+body: {
+ "task_name": "",
+ "node_uuid": "",
+ "src_library_sn": "",
+ "dst_library_sn": "",
+ "pool_copy": 0,
+ "done_export_tape": 0,
+ "src_pool_uuid": "",
+ "dst_pool_uuid": "",
+ "src_slot_info": [],
+ "dst_slot_info": [],
+ "tape_uuid": "",
+ "_": "3e5102dc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n Lost: tape_uuid;\n Lost: node_uuid;\n Lost: src_library_sn;\n Lost: dst_library_sn;\n Lost: src_pool_uuid;\n Lost: dst_pool_uuid;\n Lost: src_slot_info[0][slot_index];\n Lost: src_slot_info[0][slot_flag];\n Lost: src_slot_info[0][slot_barcode];\n Lost: dst_slot_info[0][slot_index];\n Lost: dst_slot_info[0][slot_flag];\n Lost: dst_slot_info[0][slot_barcode];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapeCopy
+body: {
+ "task_uuids": [],
+ "_": "3e954e56"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTapeCopy
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeCopy
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f65cf45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeCopyStatus
+body: {
+ "_": "3f2b6164"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+

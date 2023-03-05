@@ -1,0 +1,1473 @@
+<START-----------------------------------------------------------
+Method: createBatchOracleRule
+body: {
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [
+  {}
+ ],
+ "dbmap_topic": "",
+ "sync_mode": 1,
+ "start_scn": "",
+ "full_sync_settings": {
+  "dump_thd": 1,
+  "clean_user_before_dump": 0,
+  "existing_table": "drop_to_recycle",
+  "sync_mode": 0,
+  "start_scn": "",
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_thd": 1,
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ]
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   "hh.ww"
+  ]
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "",
+    "user": "",
+    "process": "SKIP",
+    "addInfo": ""
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": "",
+  "max_ld_mem": ""
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "gen_txn": "",
+  "table_delay_load": [],
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "run_time": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\"",
+  "table_change_info": 1,
+  "jointing": {
+   "table": "",
+   "op": "append",
+   "content": []
+  },
+  "encrypt_switch": 1,
+  "encrypt_type": 1,
+  "encrypt_key": "",
+  "merge_track": "",
+  "message_format": "",
+  "json_format": "",
+  "fill_lob_column": "",
+  "keep_seq_sync": "",
+  "enable_truncate_frequence": 1
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "save_json_text": "",
+ "error_handling": {
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp",
+  "report_failed_dml": 1
+ },
+ "part_load_balanceby_table": "",
+ "kafka_time_out": "R8^Z%6mNb#JisQu1OC7z&FIb[DPsHoV1bbwA$*FJLr3Fdsr5hf[#pEN7SKOyX0rx9*AH!^$i5U2Ym(O@W&tp$XajC*X%!oBEdm%21lO4FMKndj5(bZ3AxVjf05#&AmHV#DHsnNcG*!YLVtyyH0CMgxkQ2nwX5V)OJn2aug5i&[C]vH[fD8xv$4nH8#TEs4RHGHBd3nPuQJC$9TXy&Vo!o1[!rfT0$Q@R&JuREiqlgW4C!NGNx&)sm]ovcGLC[47Wy%Dk)qlLlHYdoHBwr!vb&ybwsmI*ttLG856X*OCFeRo!nIToB*wV(1g*tsYsy7GXy%*%g6jU#TOx[Bq!%EnIhyTHGU8^BE&N@e2%j5UWd3HTG0%yhD!G9t*)ceS5Yiw]BH$z#XtpsTpYrCef#]&F4SBCEmHAVCG7MX@kC5P$twKT@D%#mzfiNB%)TqWN(2M5(&Kb%Aq8HNj5FRw!hEfj##l(M5Ont%q6@&3RA5)!SiSx@CwR[y2qnMByBK7HSitKovolZzEyTyR&Az(hvkAQXi&z]ej5msM!M3OgXxc0DuQ2AmAyy3XiFb4gcSjvu@YAcxxlQ1KjMv400D$NdzJ[56E9uheQ167lewDA^M8!L6L3R%NvQ9L8kwAhp*EjcpwN*!4l87f6aK9$K0Qf%IOWg*638!Ry*NxbygZ0)kQu4IeeR911M6OCeB7Kp)bUr)))^dOewz)F90)I^@gr$NhP#wNHI^3hwnARZ5Xsw0cWpXJ!Xf!@GP%TL]A2o&Mu)ZA8gip7c5qn&xon&vJeX2QxgrYqTI2%qfN[ARw!lKLg#Zub[AnAAd^!LhNa@bqxhWDpK&cA$Nsd(3k6b74NVS99MRZ5Z@&n$kpthRmYAX[8r^Dcb1I%moQpF2fPw]MMmZVA%feGxA4ojJm820fb(&xALZiVNIZ]7o)HV5Ak2Vycb&M0yF8ZWJKH8Mv4@J(!^IbWySubT5uO@Yuo3&y7c*WwOTdffHBzi$LDjd3[R@Sppa6GZK#co)MH8XIDt6u&0&I4bvnxUfB)]1ax(rMu[PeAK39SyTi587G)rj8KlPqU5zBkx7s(^m(F[Ezi3%QRBqE#p$oPtA3B7cj&ERGX@3&Xm*fUZbKCDf(cfh^3slyw(^RDx6H6W0b9^kksLbyws[)5QtO6evzt0m7(MO2V1pZnoVYVZI0h91Lbujj)R@NuG*pMPA8JcLYUd79l#GFIxEak3M02$Rkc!VEQCk0gVPHZ!nd#ANE(!Gv6N!rH0tEaB5k[$xwVGA6hYnjCRUXUJd5naIPhQR$!P6[m]O1F0yY2O3[@i!SI#Fdm^gt*e$2jq3Q@gSoj6hts3qUsqtCrZxsHnDP%rK)OdzVIvLtQ2tIK%9$dY1nj%m3nnbgl2@I2(&O7dCYXX7(uJdS$WG0Q]e30!]riS$g@lY&x*J7Pj0YV6hTbZOa7iLeh1XS5RVe2clDY196jLrrTYHdQT!hfI%M%c5t)5B$z8!Ofy#@qMu1$2ea[QI8oCqZ7WeCAe4QV2ORFn(imt6M@v*%6PNJr*%juh7g$lZo)vQa4vwduMbx1[nq8q4UJNjMd^6!MeH0SmXb5c*9EttpYtNXDMfAbLk$Iu@YDqnt8Cy5dzN08S!tT2xE]1ZWuK$iyV]59v78w*$(HBFCH2tqielmyjbzIUK%)AZX*hRmxf7$AU*LQ6^cZIrmIkXMTL$tu!HELV)mUXECxs@4m1sb)Dn0ivlL6FTUyyUBgJMeW3s)ZP7f7NWw27&g3(O[[bq]4RV88FjwiAL2%Z9K&2(1VeUv1uT^DN5eyNlxK#P[3h#%%JSh8offeWqJv&E@nppPtP7Apjn9q5RHZzYpqqT6(tX0*Y7JB9mkAhtvi6QvCw5foyHMhdS(sg!2(MdXdGt4!8C8MMwPGb33[sg@p$pZ64@W$PIllo9ZtlVEZc9mD)R0UcrnZx(g8vdQJcoAM9[WNj%o6VvWZ2m[MtN40c#mrs&$izl2LO1qZ)o7Of]k$J#$k5f#KvsEh!F@*yfVJ4**[!f5ix&zInH6xIy8LI5Dz&Pcl78fjvrwmXJsWl#u)4(Mmtj8jls#$#nl2%C)Lp#(s0gVCVTzH!*X1[9QXpxM(j6tZ@dF9paZhp[L5EH[@E%foY6c#sKnd6hJ9&KJpwS(7[rKubH@fU1xfSj(GdtbMwZkV8Ti#wT^G7uuquJN@(8w7#OrRry^)p5cCI@mRTiPvQVY7@^lUYXfVY)m2S4Swx(Fd2f&PiQy(9#M0Fm9XBeRQuMp)FruU9o6LdCKbXKU%$htq7b)qsfrU$D%%UVr)$EE6q]eLU^k5nnTl!T*vslb9UgXpXco^n[b!w]&QOSb]KRGVjx)4rH14hznpIWkD8[zkJ&dc!Rh^$$PiivbgbzoGgS[L@x5jQiSM5o%wEqJE(PP37KD7h0PXkIGhLK0c0094MqhMb^VGFkanSa&XV1J%u3u5%JlYze%(@wU%GMpCqgU@$rz]P6qvtN)ZQNbKb5mtsp[5QH@xminEQKoBlB2pPqLqmV#zYWLPER&iufsqz6J6wmW[xiA&AE#ht2tV74bZlLbr)rMD5z[dLQ#c^HEnK@tPPJw1cd!QOfxlk&X*seBjP0LKKPQ8LLwujOs(LiHEn4skqer69j(yylKm7ifQxukYKE4nbSkj*gI!)o%413GvZuOi]xBssnFA0V^KB58O[)7OHSxbpy8ESWXJXyK*354s1$6#7gMo*E32i9Ox7qTlLY[ye)qG0iLj!^1X8loAqzXJPGFc!PXp[0pdmhaZmY6OK&tKT9dpiYpUNrDHgV!U(K5sg]R6O$HL)3v)&H]8JUBqfWWq8#NL8]CnOGv2t6ZgmtGxC4dM!n(&F@VbdqU43xwWvZwoBkgLcHM3%BJwuJm@^gMV7oAH7goFxUTMpEqNbms59V@&T%n5&@U#[*[f8TOZk&Li)zZZ#9vcxeamHI%kCvupRQVXlzGwoZ8Tcw9Z$FxiR3E6KUjrZrKsjdl[Y$NyENf(b3DF%miA%FINmgU(8sk500i&NRtdC^&L&^uw@dMDLFr3^2zMT(rPic9032RWZCmP&vay$SjX8%)sJjx9B^150Xt5mKY$wgE(Ue9#qvDWLMLt7aViFF)yET088!gDCOTK$CUu3HCZuPdN3KYkf*pQUk1t0vTfOYC*ME6VMrLBCy!A)jbXuZQj(RnlRX8d)$x@&u1YMw4APb1fKsk%DCQw4XKO([ce2Cxq8FH1#ekEgbNVhDOUlNEKrWxVnrIfwE6w!A%GgybaNiUhdD@yJ8LMD@O$Q6fP5WV5xMsQXFQW2ep1Pos0nc2gUj(pw%T%V$UlncrhW72pqJM4th8xSimI1wN1VYrVh8bbqUAQaLVKVUO[x&S*!9uR)QWdotb@0EtvJFprFZUVf0wlXkhcK3PKZ[O)LVd^qj0Gs1p@U6XtKNk6d8UcYpp9CIXG]y9AM4GE9kdeZjIgz#r^XU2^LM^emfRDzUS9jc65QxZA&[gmSpp^jn)LB2$dtWcUYrWVrf09w#tCKgL4@tVYbHYk%$nXfowMA%&GiHGm21oPt&X5)VpxQop7x9sU*ku]Vd@tPo(H0K!0LabCDf%nC&SuW1$S#FlE^6skX&P6QUBPfjuwBA!T[u&x*gYMC#HQYi8UN&4)RcVy5WK^(DoI$%QmfRbVj6a9#ru^FHUeIc&rRmVWjWVTb&B*wdGEqjs0TK]cz$Qdlwvi*RFvW4R7CoE9EOTIlydUcM1kk3UpA@VioK44H!6L3u1&JXWaoui&C3Ce$8BFk*6nFQiqokzIz^ZicmW@RTY6LO9i(lrYs3JK30M8Ss$p8#0C$TaxMs6(B9p#v$g[]@F&$)v5LGf$O!mZkG1W[il&HLKcf3QBLo1X#Bz%lFA@)vznmWJ(NqCtMdH9UG3UFUE3aiNnl&(2uVTSmCfkVK8UtkN)52R4Zv[S*SoHn21VmJYElj#$AbixKntU(7X0KsTK#(%72b2P2Mw&E)7Aqm^vUJFSO8!ujMc0N95JKRghiBD#uyO@*iL40ExDq1rPUu12(d99icFzXIG9N5i)VpJ3AsO(JgHP3n6j3$6xx6m%O1NjJx7PT%1qKct0fAK$q5Sw2v9x)Ec[^emROvdYOk[0^(ogEvynZC#b1Qwf*LwfZ^C0DdKFU!4loqGN(TBzRN8zn2no35iv#Hf%(Lqh%J99*DFzEq6j7L3A**s1Y1YHjG6p(dB(Djq$qwo*56lpUwhCgZukB%S60ly)P&xTMra4R&8Y!&AQYvjI)nVSSj)A48IcA777KD]HkBeh6WT$j1U@$lwX4iJd3cT4ZOP^e7PJI#frr)CB7$F@$VmMlLUXDF0#3mOmlucTMnLl[x0*MzuP55Hex#WX2dIIxCmIso87%hdG6^(e5^UsIe17L*m254TWNi1D(zQrf$)^KAxyF!BgOgrf6EWXb$FtUA#!Cj]dhQz9gY5voq)YXcM5gNQUlnNmdCS!owT[pBNqFH(%YnJvosSSuwK1hIjMEm1eM2)DStFBH0tIv(ouH4C5Y^U#d@nAJylECXfcoyKw#NshggrqeCj[V0BBn1S9VgUYZ5QF6PX&8[yu50dPmhUA(C2csvlFIrfWiVSyI7$jXO&$IL)bMLLTqmN%U#rEK8iX!j4M7qP4Tl%IlDFE0ng[mNT33SB!&JrcsUlWQGQePN4XoZdD@OXVGPMJHxzG!MXfKRErhpZzXxiqiswqDxb%oyJD*W8kfbMZfjM2o&qnD98xyss#zN3f*Ff^Nd5Xg!gn[4dwXBoh*YAe6X21N@6%G88]5)s5Q4Tlq)(v4xiEcoYwSd!T*)wfNwISdbGfVDvA#cS7tD]10nNb6^JJr)iT3CFn[2Q0jVWZ$uP1)!BgZz8w9w2)x5xoVWoRRDeIISqFHxDiBZ5e5Hg!@pt18$%F#!KZ2ReUd1SIWnfEWM#%C$dBA7p4NxYxdyG9A*mR6irBj%AaV]W4YKAWLW)J(VqHE%*Bks2Rp17!uI^(NfPLxN3)cgM49Kv9sqQjLvH2sRgl6oZt4nbihPffhA&nqJ%0)dFq#fgk@eZh*5!$s)*g$SNWQ6eP2Gl(gcAjNS[$t[AV*kSS7lVsUHqXf!AR]f[FTpyZhhmyM5#dHT658icU!z^lzu35ywPJ52T)V8b%J5(cEoy4%7WhH$zq50tCa3QRt(Bn9Yd4qCs5UB$qM0@SsjfcLpH2ZJAGvf8F@Qb^R96Bj0XtFb[^OWy1#%6IkbzcrFH9T95evOUX[&b[BUtHG8c1sF*&Z@CG8TO!pv8gBIpRI90tgsC[%D&W[PPr@$[nj[@RFcZi!)I(cZpOK5PH*3[AQjgm@q32IGYMdZ6!&^RJEH1IY*0$7GmzZtuIw&2%NnxBdzS4uW89BS5t4l^Vw6I8d0Gw9ftI8^jW1*uGjwT$HaOFcVIrd^^&$043afpPRHmJ!z!cbj5r)tYDIqY9m1[Y)HsKFRIVa4gfVwq8V1Xor^64g$5I(twFrA41RLV9Roki[mX[ySHjKfH[%*TqmCXiukNsZs[wcLzy^*r3C%8fu$v88V981JClUovOR2Srs2UkrNsrgLt91U)940$#CsDSzrcq%3ry!O!@WnARXS^v2QSUPrSQ9FTzmk!pLOK6yhx$gg8DKBT@Y5X%BWKqoHQ^cx@mzQ0JZe4nXzK)^)ySpwk3pSyobT$jJwv1DcTt82tn&[GEdvsM(vEEVmhX]sT7mhAA7dUSG9Jj(N#GvO6TP7Dzu8E*mgXdRnFmc6QvJ21wY]YXu&3gQJqCKxLO6layY(%5v^j8#hgONeUK03e(&*53G)rs^35s#j!pN45@DixnzSH)qIoFx3)fRQ4qk3SPyP)hW8npsX6!i[PheY4ZIH(A#mxuNpr)bgFP9g@N*t@phGdgc7aCJ$dVJ%oHHXu5%I0kRNv(2rlkEkEEo3toZYKKr#PNP(Rk1ED$aiSS@gg9VHN0AhL)96hZuroJJ3g^YE4T9[Mda*PRJmPd^x^7IUm9CznQYvA)XSz&576c%nO@Ez9JDPw$vFrp8BcG)UeeQc*H$MJP[(z^7Vxv1#4U6wjdvhAAPiq%x)BsW4kJYV5M!FE!bnV1zX63DPJUT[Omkd!Wzf9ipXrE5Jsx!e4YJ)IHGd[L2x1n2tC11l!8[0wMz!ncq1C#L](Ji8i6XmbV%pR$7QqM4m76YO)N]$mLU&Y&nB1(KDx5vUQ3I!wj(#T9SGe%2tTd^#pGn(KwuV4K7aIwb2FHe7t2VG@J9JGJuZ^PAhg&HzYEZ#B6vBllzNmJ]3Qn8Nm3SigmEMx%sY3c]DdEsHXy4wOme*GmwLNbzUb2k9HWZ(tdhUKWSdM#9lAFeSZWZxWA$PUU44x5oTGzfx3^(*54bd&x1Q*KzbutxmwxS47dWHh0#%]YKH$EVAx$7B21!reWTxt9!EwHeYBM%7heNHaQHZ4XQlyxYk!LWpXutjeSXEtGEvh8gL037irt^s28deZ)RR59nLdm7[mc@wUt&fQ1MwJ#O#Tf&giLdZ6ofOl[wj%XS2)fAqb#z^wHJYjYy4rd!^hJHf8UE&gvzC!%BY&OIt2nx#inu9FyU)8RobRC1(n6!ugu(W#8qvYK[IpD$KJgRNGQj]WlRY(Qu8YSFu)QEbCS@gVed3BwczbrrI!F2UAJHY!JJZ5guKhc9Dle14SkK5Fg(S]YiOoY)mIM&cIOx4)N5Tqh1yAfiG)U[UXlpW]$@5riJCqichtWsR%trBF0miGW9Nu4VguPxSo8Pn@CK*($[NNWNoDLp^lnUat*49oSd)bL^cfoNjl@)6IcIzG#fIC$px1[]nnWGquzFS(36r%O@H%DB@qwlosucZJyK8(H]g#Z1prNCYb%Fw!82$Rev&#CvB!1EPz#N![mKAWm2vW^Z%Tg*ORjJ71$GR14CIaCkvhd57($onN&98SDZ3i0Wus!j4OkJX*^W39ycJN[mj$mJofU5k9h)024F((NtqWx@S#)3Rppr0H2%yYNsTTj&w5G32gsqJLHloGc90DV%SJw9Tj!F0gxYuk(jj8J91fvRj9o7qXcbnP@W)&PNyZ4Dl(oKJmnP2gonZhXE]cuns&#*[F)Bp!mhPaKii899IW]s9uixA4I)9j@#GTRFFph5W6$i6XYgoz^Lux4WAWDehIBN6OzH5bm4ME4Gk7eXL9$gXPSvsWJKJpJe!vS7ECRVfL[8$TlPZSDbUdZAMBw*YfT@u29G09Xu6uvd0R##86gjj^wT6mcxucCRuG)Wk93O)3R1lWT&]iqvw46rk#C9&@t6Qe#mqa%H0IFx@Zlvr0zn658lP!$hvR5RDAft%e!VX0rwAvmqlbR$3@cWIWx#Su!vJ!CDEFDVCS)*df*q8RvPP#n#297IHIY3P4GQKJ%R&b@TkLiA1F#kd&OywBfZbunF*9FkxoUEeprOW0AABDq9@*t8Ia@&b@7@Ksl8Jz$sGY4bHESLnvHLMN#nt@D7GNKh(%Tm%n5$j&LvxDsms8DtsbJKO3wF[B[&4O7q6r[pg*Rm1fmffRFsDCDDz*3M*pv4U&dacOrV3MlvdzBfo*D*75!CK^h8K]rpMO0Ncexqv(er6y[E8PG[V2BeohNS&1QN@b7VvSzBgWz1otmGUwodQywXz!XZTHL6wH7FCy[OZdKVmJEnFqC0%tTCzurnkJO83WJ#3G!EQ8[4[lJ4fd0N#0rzUVu05M!(Qzh8I5x7HX8&BMYu)TVptRx![3lTETPPioJV5[Ru%&u*CEZu3AC@4n(QriJk#E]zTliVJUoWG%J4hdqk$NJ)kTkRkRtqfzm9wIKP@@D[)&wUXPE!6ue2Qr65jEqqhIwswE*$3)t#2t3W(Bpns6@d&w5wsLkp&kzY3bO4)!EUI^g42dno*4XSp)ac(jUT*fezlhwV[HvH)Rfch*$2TsBZK9D!3qZO0RM9uQ44cCPDX2f4^Z@@f#90NUhOA(rNjb^MfOrrvBa1ur2Z9PDlb)W*HpJRQ&oF9tg9tEo(I)Ve!uADhBj^xsRdD1ucut^hDIcQPmF$N&o3WZpqV9DF5Vu&(X1KZgvVi1KeDPmT$%BMNvf0QcvwZV^3usWkjZFuQ(lVcQkEsrjd@Fqr04&Fc$6r#wtqYusjk*y!18jmimVfhbOndQ8NoF*cTQR!1GfObhrPKb$ydId7iS)an1FB1^gCQkAXxPty4oE9Av(IW1cxw445hFkN*okL2O(^h3DRf(b^20eK8k3jSR$WcGe@ps^]t^Ph)y2JM^rPSWul2Pmep2b[zCMj2XWpmomsxTH1Cbc#dhPg5*^pAJCxZKo9N3#QGQRQYblnqD(RdouHdG@4xR9DusArldSR$RHrN4O2Bg4peUX3V8bS1dLgd#TY1^chGWjXiv1hK$PYH3#Qye97CcGJD!wbf75uzTv1qlqgr#o&Ktj839nXLgjx$&7JfABaWnj*@E9P@j&$ffv(RVqQHmIGcN1YQ2*7M0b&2wB1h*bV87!^%WExyGaTi&8UrsbB3hYPjV@Ox@nKNOSF(oualpWxk)Xrm)q0U9xXDLjmxtQ!)yJGHHdgqur&h8FvQfyfYwuj($t1j*ht3q3^pT%oEyjc$J)eDF3r(LLcu8k[nT!vOtxVD3Xd[3(QuuMq0RVcU#f$0C9HSrpwcl992FnRVKWA(K[7FlJuWcPW)EC^B0WcFlBr&656dp5oTP6XRlY7C2fp[$Jc7g7UBndp01((F#Tr*sFvBxrksw7B6FQ3$FsdI5kcr%OE4raabZXFz&*GwUTB)%R%kbpl0hf@6e[UoVSZR#6BAEmv&P&^nfgNepDQ*ZO7aNoScd*t9wPeSU)x$pbI)9yRP0(!vs2(slDwTjHTf]2CDb#dTH&GfC801WFT$bg0my8WLEjG#e[IC3@bH*o9x&EF4@JbAs^kc9hUKDm%5xzKPG![4y#$%XQ2[BkR8B$0fL6[7KEO!cYaoheRpCqODRNObyuTtl[hGE2G1mHuu8P7Fasg$5$7sO2gDwVR8erTC3Qf!&GW5n9LpCmGvT3Hdk)u8%kKjXre6uOb[UhP%pxz4B3ge2IZVg3nO^R^7tBWi#&(YiekLf52gu%4FJTfzNa7&qOpm5H#HihV5IKQekp(#gr4qxWG4wJC3(6$y%KFveh$j(eYAxXCp8%iA[v@m!nKCmB)$i9BG#0WDib5QqL%I408wwfR5GAwwPjFscZjR7L[!$WrDo664$!8&G1GLjVPfWEss$ytOEO77)mN24hOKFNw5c#&ao1exYrJ0R441fpXvcOC69^JuzU4V[12ZrlfHsCTrGv*PfT&yl9BAzqLS$l&6DY7EsWVCPVk5ZzosUy0Nae7v9U8#2s(#8X((SB8#UG$mzzERw2UjIt69b#!KViyp2kc)E(S9VRbm@B!UCcYZF9]4%hucvBqrcFiLycDVWI[tpqpmbScQc1gLY%CxV#aUDY9EOXZv9!)!Mwo#77[)RCB2rwA*#FbT*F5o$L^U^0@@JQ]n3hQig92TT6B6eumdr$m[8sm3sXZK&M9&bqD1u5bXP5pRK)3e3J6Ibec*b1D3A%YMQ(9!!YGSkbjst2&#ubYk5t#khy7e3Lzc8y[MyLwbHA8H]#o9QJqjcefKGPo[uRSzG18uAgW0[RQ!RGV[kf7i](wv$nf#lCC1vvjamf2f!fPb4^^301XU$QIaJug@Gw)cli$uQ8m!HfYG1l7zdaakGcypJiyIxqMX9!t]VtyH1d**k(CJo@zWezJ@Cv^qH&tig3ZoSSGqUHRkKQtky2]Ls[^V@cWj#hgyw7GwEtiRY4E7kV9KIb!QEY!fMP0q0*NC00ullziFJRyj8ThVxvXoi(iJhsvHBhIfgqZO*(3vIUflhW4bBnp8!tQkMiqtUYn!kKoS6$df@ALn)$xPE^Q#q5A@hO()WSqCManNjhJhfvdIGuuyc$(iCLO6rXFl*m(iF5f(u#U@)F(YW5Y3rNr2$UyJ)MeDO([3Nk@egz2pe[96nieLAsOjfsAvx)07e1KPPE3hEz#K@Rz!$7lsqV*Qe#1mf&@BrWzNO4$fjq&bWaI&W[g0FAF#7HSTRD5yPLJVL2U5(8dei^iEvE!md5ki[uV&[FE48C6FlT22LUvuIGdAk0eHzRrlfqH5agfzWryuzQvdXhvnkCN1TmesnEJCOFm%t$*7Uij$Skd17ZJbvdKFG(N#j9Bs%Q^o1Oxcxg0CF12LMM&OY3o#sig7YG3r2[0^iaCwM(1q@IW]x^w$czJGE[A$y^2625D!f))xGRjoqzmh2@xvpwLeg2El6Q&rLOuCi&(li[oWQf[uQi#PY9fN$vN*UkKxQ8z9(CP[Oga1%xJ8CY[f8nNd&rM%F%joJ%F9s^sTl4T0WNpgky7LImnMQ3bK&FECh5Iz5xy9TyCm9Ytrlh@HlEO7QMWw%RnPLrXiZT(58FfZI[Rlzrec!gj(pdyOu(5bF]HLlfn[k6hf!xnDN[161!bkA6a5U&aXaaJC!GhtPMqU*#!^2bD4QY8^85OxrPTJPnAR9Be5&8Z]YScRthWUDiLs#t#$ztMBdi]drtp9Wq2*vZSDd5AyiMzYsZGkLp[mus*vVS*p*@&eQ%^pC^D5$@oO(*hW8ymvijsC*EepHl9GvzM)UNXRo9X#rZ#@3UNUjJr%Oucb)[A[*FIhK0ktwmKB7135XIhq0D3j5OTf8eCN(IAmoHBJdflyZz$B[yMG5w*%FlMN4pc#SS45xMVKjIkfCivUogguyCw2jN2e4g%Vi(YPCj75h^A8xpkvKtW6!u3D1MO0KvC5M($2J*oImzR)L9PtHda[oOD(*ih!j%&g$ARplGJLJH@&jQxBMWH!UpDAxlKS]8AQ^vgTxjfibBt5C8dHwpvln7wbdXDl3Z8B1FdtI0UZe^[yW9F2!pWt1UdOe#2yDD52SLLXuOoZA^WeiHw62IjzSPWIb$KC]A!#2iyMl2NVFkB1#uxxUL)@X]F%0&aQOA%8#cqBzGppMdMPs8)Z@P6OwM773s%7LUv@YfYWnrpv!Bho)AjVvWm4K%jbGK([z@&gGXA%LAwCob@qp2YH#R!8*jslrt@OjhrU3*R9)2fFiQ^cPu@N@@#)i1*xYyau8Zp63g$ZDfYqsbiCm$)^4Xkk(dupHqhtUtoFU)Q]8fAQ!($JNZfYQ2l)mHjJ9zB$JMw(nXXxvY8B&JKA%GmDiKNpe3dplD%Zno1i(mwcrQ*JC$v$[NMoGU&@*JBv4xRcI6(Fh2gLF[BhDbBk%T)EKHfxF0JtCQX1X!j2bW&a5N04)*&WcU4X(lBo2fGM62fNYaNNWN2@W[24N$lp9(rZxI[qT$*RlvmNXfDMDB&dmYT(5Ab[(pZXzWSX2yIK@5n$*[8y(GiKHiVXnqx7moS9JwqwJ8JMK%AL0rSwIr&Vi@dd6NEd)VlAgv*SXrIZR4PlzH42CcQVFk&U(w6Xk0DNLN#q(o83@pr4fResD#P^4$#@yKh4N4#^Cz0GArDFFeDqGX3zLnFZUOWay!Q]c6&Ur2dXMKdA@kwDnO#bizS^krSkgTCzOZ@@Ar0liDE8uSCPpcI70yzQHEB9cs9pOuKlNftkJfwp*mDkgy*aGoPlFqzu4P[((*vKduq@xd58qV896Q%lg7VqiYQYpQsn[mzG$Nyc16))ysdGNz)lE*@CMC#I0[%LoaYYLE3tVVSqDI[S[P^K3zGviB!HzUvz^EXPWjEUTQY6!UKDl&y[m*HVY9JgHQzWWuBhgM@BKBvkbTRxtrMGMRTnZ!nDFxh97rPEipSZJopUdcu2oo5$T8Af4kmLh9tzYmx6rs6Xg#%USFpGcaai&[Ldu7(rt)AC$aE@iekwfP3QBEjOr[gXNwip[x1hFk4nsdSFeoEw$$BUT!6VOgC0$gq(DO1FKCz1j9iD]zBxKZF4!PCfEk8UtR56e#VVk8l)TDXo[9mSDldL4Ct4pvE^EN)z[TEmTy4kGy0#7@X&)iXx(zlRj#D81@1*y15VSzt!izBr!ohg4wYrW1$A0BPq3%rhw5*(GxUY@80IXDMJM[MHMFb8&b^hRcBQ(LyzkKoaDVDYH!8##sw1%bJnQnXRRu6Eow!Np)HfWvbl7ZYCu#a!3NNeD)SoMY",
+ "kafka_message_encodingUTF-8": "",
+ "kafka": [
+  {
+   "binary_codehex": ""
+  }
+ ],
+ "dml_track": [
+  {
+   "op_column": "",
+   "opv_insert": "",
+   "opv_update": "",
+   "opv_update_key": "",
+   "opv_delete": "",
+   "audit": "",
+   "audit_prefix": "",
+   "audit_appendix": "",
+   "identity_column": "AUTO_INCR",
+   "load_date_column": "",
+   "load_time_column": "",
+   "load_date_time_column": "",
+   "enable": "",
+   "keep_deleted_row": "",
+   "date_column": "",
+   "time_column": "",
+   "date_time_column": ""
+  }
+ ],
+ "prefix": "temp",
+ "db_list": [
+  {
+   "src_db_uuid": " 6C4AEF37-6496-6DCD-E085-DD640001E4EC",
+   "tgt_db_uuid": ""
+  }
+ ],
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "tgt_type": "",
+ "_": "3f26a877"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "code": 0,
+    "message": "[0] success",
+    "rule_uuid": "E2F0B2A7-2136-4F96-93E2-4B7E1F42D401",
+    "rule_name": "temp->"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createOracleRule
+body: {
+ "rule_name": "ctt->ctt",
+ "src_db_uuid": " 6C4AEF37-6496-6DCD-E085-DD640001E4EC",
+ "tgt_db_uuid": " 1C5F3C4B-7333-9518-7349-9712BC9ED664",
+ "tgt_type": "oracle",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [
+  {
+   "dst_table": "a",
+   "dst_user": "b",
+   "src_table": "c",
+   "src_user": "d",
+   "column": [
+    {
+     "dst_column": "e",
+     "src_column": "f"
+    }
+   ],
+   "key": "YoungMillerJones",
+   "split_dst_table": [
+    {
+     "condition": "",
+     "dst_table": "",
+     "dst_user": ""
+    }
+   ]
+  }
+ ],
+ "dbmap_topic": "",
+ "sync_mode": 1,
+ "start_scn": "",
+ "full_sync_settings": {
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_thd": 1,
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ],
+  "dump_thd": 1,
+  "clean_user_before_dump": 0,
+  "existing_table": "drop_to_recycle",
+  "sync_mode": 0,
+  "start_scn": "",
+  "full_sync_custom_cfg": [
+   {
+    "key": "",
+    "value": ""
+   }
+  ]
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   {
+    "user": "",
+    "table": ""
+   }
+  ],
+  "exclude_tab_with_column": [],
+  "exclude_tab_with_column_switch": 1
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "",
+    "user": "",
+    "process": "SKIP",
+    "addInfo": ""
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": "",
+  "max_ld_mem": ""
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "table_delay_load": [],
+  "merge_track": "",
+  "fill_lob_column": "",
+  "keep_seq_sync": "",
+  "gen_txn": "",
+  "encrypt_switch": 1,
+  "encrypt_type": 1,
+  "encrypt_key": "",
+  "table_change_info": 1,
+  "message_format": "",
+  "json_format": "",
+  "run_time": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\"",
+  "jointing": {
+   "table": "",
+   "op": "append",
+   "content": []
+  },
+  "enable_truncate_frequence": 1
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "kafka_time_out": "MwZvEYlHN3Mp#ci9GjUzL8AXcj^@7EDH3r3m9rEdqb04J0SpPup*6dt&iLGUslH*RaI!!$FT2WGTv^Q%PwW*V%&YB#JnCg@lEx(nK&VTmCfQqs*!*rN&1G*1sB*V9J91R[n*I27qy$u0Eh3]Ho(%!O!WWt9[9H^S4M]nmDUj1KXtK)[8FQifAWr7&Ki3m&*Iym0wDQ*nl7UF81Oy1fh7Kw^LzEeQPk#5G74KHzWQQO0PEeHdWBI#$PXNAD!5(8*0^zWthGen]6g%Ja8k2wm1CqJP2G&edv2cr^OcGiQNNBVcrsOX!3pIL7[xf]sTApPuk&ptvlw!Jk0fSHkIfDP*V2nY*BWE#Y*HzO&0b[KGpqr8f)*e)#3ZjmdvqJLq4N2uJvA6F5l!cFoNV@$syX0&dhsI5ATK$zs18925XIQmVJc9sf#gU40!xwTvgkWgwhKghJVS2sN7Z3j1#cseZnRSVe4iCD&y5Wu2dr1Mj&lCWjfi)iiJxz*TcIH(*5vziS@pbtfwKGI)*6qzrlYYJC1rhBhTo2jTR2$Ikh&koMF79#RSVXxx2*MTX[jo2gw!7zoK4cn4MvbYR[Rhq!Ky6(P%kn&Za*$VIHBrEhj[kV6VlDppu^KPhhMmL#4FZPh)0Q@$ZQQ*XjZRhh4WP&aW1D&VZRhqY[wbIjp1xFPIRN&C4$tt4rxrj8IHFykUJGq9DSDBZWbN(fDZR]m!3Y^zOjP2iX7XXZ8obIgJiAX4jCwyvYnVe(LuUvO$ZO7@8X$L7J7mC[(LW[TP0Lhj$$vz6Z%^HED%mFN]O9VJzJ@3Q&yFsbSb^07LwsPXfeJGRN(4GjkJDFCDbAuwE6LHBI1h[&mZG$bW5FyF]LzNqI*Vgd%W*q&]&P9shsC!mGHGm^KCpmkFhGdLPt@u7QLOqaamEz4SVbA]h&nd6*mP8hK^8m5P5dPv*I3AOh0Ij9EMIn%n%o)@NE@a^Q$t[wT3Xsv0wAK5R[&5ZXDlaMtdwXQ4]S!]H9A@n9Er]6!y%[Z5TClyC)Pb4e^A(fJXJosXq3LyW1VK$3PZoM3#e&Rm4MkUlBEYbKsleum(mr^@NF94eDSy!9bKB2)2kPX^j[zR]D@i*i0JwdrA&h[u4$b$3TdutWRcH0PRMnVntJLq*8c7K@Xu4VZIEMRT*Sr!IcMy)yQC7Dyl3O3tmbRgY[7KA6i2PEr![Qs%MALxKTOGR15$HFzA(r]&L!3zb9iWi3r9574w$7Jc&tz@ONu&bh4WOGqZ2k[Ijn1QuPCw!hk0%3ybw^2!iiKedeSbW3A%o7[zpGIcWvP]c@2e@ap$OEdZ(#h0YGm0Qw7YftmLQz[BC7&([T$9wSqTFoS59Y[Kx1frL@yFL6xk66*!5eHDM19F1rSjrOA&IaB@]Wu0fgh6IgwU*fk@YCc4G#jX3i5trpgMV[n*@81h4AaL@B0O@v^dY%F^hIllY!xW7JwV9gufmcEbhB^K8v9S8cjpNpDPWaXlF@woFi%)mWrcN]Tdi)k9x9M58QVC5LvgmW&uj@bIX&y(CxxuIm[DABc(0dLKwC*O8T81JVagPq0yR6IdG%UUt2vW7K0m3ox[eKj0b[SIOZZ3P7efJ86J[uTnqNH7tGESP)kfwq[UjZ])eMfDsf%Jm[#*W7DqwD1[Q)TAdQpR2#eW&n4IllBzTwSO01ld00QW]31Ugu@3q64AgYHr[wwn7R@&Mo*4JEkldj#ixg#RZl@3@ls!J2t&ygDCqwjbqwC5FU*95i!XrpM8Pndas!8gB[sT3cg$CjEZ$Z(b2^xW]3DmXsHvL0&s69]S!DBM4PBANE9is(RGHAoQXLU^Y!Lktj^iBfW81pKsf46ktn$DHW9cEV(VxWVf@p4j4&H8GQf3wByo@t9iryWCuA(KnoV646ze)g3QCoWdliXnFm22Un@0NN7b^UD304UVuNRssg%83&mJM7W^SaToEry[%Sfw$DW1&YLA@n4zA(WHm&c9v8lAjtDFUlTb!^&$Dgke7&Bb&bV)Ucm@lX[27s&4p@8x3%LOxKgVOQ&FLC!$G0T@XxzRI0KlryA7Dm8S6bqof&mHOr^iK%NHjB$8d2oMiC]FsH!B*oi8oc9p$aLv5WGy8U*eS4YS@P3KQvf*ehwEz3HxWgPax2o410dTnv%Xgq$VK(1D[POPpdSP@Cn4*cI@@(oWtiU&lY^TP9p1Yqa2eAmzTbAzIcPWz)EIu4EeyG]gzX$HAfn(anA6M9NRPcmXJ4fgrPGoyslc0@Fp^vAr!E7vLY(F^Oy8ji*e8^^6Hgd5x1tQW44XdnvB!Nh*KnF%3WdEREkUAtUz[ZACxIqq#yQ*mT(@#H&vSyDFhu6(0UUSbWq^#WKw(XQ7On#VownsIYQ7w*esQn5sTW4xfHVq9SD!FBS01$5LNQMDeS[U8Qm9[KFY&IDumuJ5@gt)Ptpn!&4)#8!0D2ddG*AbKhO@Fn!soFRegswmM!lCjI@5iAjP*UDqH0#gi^RlwWDmZgFiiUqnKLAVl)dGu2@tKn7d!V[$pO^ol*Pc7yx2nNS5L#WC]xeOF3uSgN2B78bgbzrLtDCs3k^dJB0&OgdFN(XuI%t^l*Z0C#wQsD&LrxpTp@UVCMN4EQGDEHxihFVxnz[8qFeD6FKm62WZz*!va9z6BL4MTwNcK8fh#Nff#$R3qf&ovLozzAfXYk9ReyMiMq]]zMw4J0wCc6R%rckz2j&GtR3TRx!l6qEJnW!WBzINbPMF*HKe!(pCfxO@SUYFUqioPwmp0Z*jd#0T3pnDjjx1tw2s!oc3crYmpZKZXKJ17uWTY^t6HD5w75Pr^K@l9q4%AW1NPZ5!RTVsbyBl[b(fREEkwNWgU%GEef[yp^fTd*F*dMz&V22X!MzkepguW!xEq9Z5d1(krCjkSmbcFNA2PsBjxTYmv290LAH4H6%&0NBYHf7rd@EPUgu1ZCp#KbE&M%4yF^BlvFWb6D5yS$5QgNXRQUWH^![83qs08dABZkfike)ShS)nAbY5*r5eVUZo%aE2OOflf3ye22f1McZFQnHiduNH%[rn2E)2(zGksx83nrgYIi(VugaLd%JLi]GDA5o8B5)o4@d2O[xdey7Bgm$VYz]pLtqNfhis!L(Xs[L**nAawSgw$lFDUtiMfnIn5mgZCm6sGmqJO9h*voVUb4o7gl&hM#qNg#gN4)QhWmU9dNjQeNR^(0CSqox^wv&Rp&s9iMdt%Ntcyt8A4R9CNSH4]ykL1hEX8xZp0!4e#NRSt@I98AEpdzkkJQSD9DROMZI^q00Aj7oq0QcYI7U!GLw1CU4xb)QlhXg&61eERvfv&mWo*8B)p*D!p%e7Qckeb&D56N71wrwPyO^CXEpfKh@DjoxWUe(ghrSZp21qB)Kn@y#FF)2k(Noqu[wDLQB*IY^0fRbgOjg*$92mLzvBvg[12nzPwW8myGfnWl8T#(uB&d&fY*eWn3GvT*kbzI@YJr7GsAkSC5XKtg15D9A6Omc)oQHspR!h&^jqG%twoVb5WG5*^y5dA3q[Th1EzT6J]3!$HdjtoMCo^0x7Q4lOANyK%2RFw@Qg#pfZwUD))H7gwT)F8f$$eLcnXcC5lRypEDpd[wP)oFdmRAze$wvFk5CTl%qyrNNs!7ZLzTpK4o)vWYv3L4[ni$3BLgYI2V7Ir1v%a!@!vE9FMP9LPH6Ix[DpcUQpjS&tv9zAgeeYhctU$mRStDYto88GDI)%weNSz4QGGHuL1^ll8B7N(36J6#7^@8G*!^XE*#MJkWtfZfUG*txvLhUCaeX*wH#WVw4ETh9SPuLg#j6P[U5i*HsRmOBD19nFsrq]Ko(%I3uV2GEW*qoo%&5iwQs2KHw4)0(JuTp84dbvq#grt!WLp](z2r)uZ*!$[QAXJ!oDa7A2n&hB7Ra%j4lcG7!Igf^vmv7orHP!VLSHnOo2Ur5S#cSgwiD[hJJ@QeAvAeT4tyTL*afRu[3ZvPQ&$Qpv3m(Z*ue7z4LrtQq)A6*U)cfCgN$tsc2k)jO8m&%wqGBHbish(H^AUvNlxh^!&5050Hzea3tnB(Tn%ec*ZHZBf#@c0s#z1U3]]cUh!zr6XQIoS^h$@$6wLWbQl4yZK81eNfQrs[sUo4QoNIh*igZesh(MKh@hlwAcCb@3klPXPq$dYbU5sfhCpwwcPj$EhEioj#3*)R8feuuERR*i8)UJRohVg!9bt0tEIgx8&0mpc3SXqY0LpLCzJlnZR%)ySlQ%jz3Bkb(!#Q$hQv#SBYgbUkS6slSOfBPK6jvq)yHcs[G*@SiM&P1!V%N5n$q6owC!g&XDOeGXdIokLn0MN$LbHsA(p[a00&rY9KOle!VX2&7kpJWgd[I[^8&%jX!$fozLDtw%@1KprJLNIpnw^j#hhUCBGdOQHK49NpsB1mL)WIRuBU#zU2gxqz*4osP0@%)%KXh]$&3biuE!c38WE*IKJyDu&ZY6hfyKKmqgjQ6!UP&oQPYKpFueq5[$4gfyrNI6%U5TC1JW(HsGi*xA1H1XD)F^cmdU*fg%Nc3vtj29HJhHIetSsub1Y0bbSv1YX!BZqv&4@X8P6CWsZwxn[qX)RklKo*YFySbOZ(TZgQ7293cpcy09VMIoD1x9$CmJ6oob8Y3LcXhPwo@#Hq60EMqFe!^c2us[QhWsBIhyfFw78JCj5FmdnYhxm*AGxt7KuE9zrwkn1Hz*XDy650VKT$qbOlpmsRWE3w)kP4!sB1Zx[GpyKtY#7yPHReWs1Jm[Kkeb57^gTo1!LyW3LBW#SxyWy$s*7i($1SI#C5#ZosGHMMUbPVh)^Z9AYip06zNB(xhiKNImErem*3KyVF89&HYpHG^@X9V#efO0SM2B%(V27!v3TQPtPlDPu2f@@n0TT72zYYACcR[!sfWwn[8sV2Q7z)j0OH%K)j51tcmSOxW7*W7iG&Y(YE*R74IRuR45%deM)LG5b5tvM!&O^8FpxRT26QjDGbfnVkq0*Nd3t6h%iCBGneKUzexdldTX1%IYkTNGrGb1VdN[*vpJ^i%avp$2S0iX4k72Vu6O6G86UNv)V4*bmGr!2Ckr[*kI$Wp)8gQGeN6HA8IJqcd@)umS]#U4GkSLO[mt5rEbb$xG%YBd*h2x6[lBZ3S%8lFfvAm$yXvW(t)iPWrOjHiV)mO2vpH2[oHHrPF$3!DBzsI!KN9*y1FGPP9CgS%ToCme[p!kYaqor0Mky)L#(Gio#!XcN7hTLh2NmaNcV5Q2DDO5(TnRRfXI6Q$nWV03mZ7hoBQ%*1TS(H]V])yQUzU&Ny7QDNbTzSUxAcbhDvr&RgxfvJQuEP%O6!B5us%pwU@J*Tfcn#juzpiAdTQN#o@)Ct9YB1B7ZOMCbXfriN^S%jqP3b7o9%(yOWBU7s15$CZOSMs%(c9yRLbTe[3kmwQ1TKoXfj7(Bf%oUK(QH#Buxl31]JjNz7(J82k6EG45H^Y4XPV2krfAnGBQA$YUReLxs8Vi@*nk[$6F4n!ljum3v&xl7zY%CAXKqsmWyFeKIpNBdg6rGXBk9p@m*1L5z#r2Bjd#LNKvIz5^ElVr1dQMI1id^q$8kKrlDDuuBoZ)sVYWrD*sPi2^je9SNF[)@)TJBiH@kF1YMWA!Ya2187JTrZVGjtcN66zFnJdZSykj^tiq(mpvC)0(NKU^WJ$$pxwk#4OfxIW)vimcXmc$ADeoxe43%P%wI@c@7vySslJg6o4rAdrxjl64c%Qzab8G)2GZf&u)O[g[NBlfC*IGJz7MeSRCbGLf7BQNxXQYy49DunucuCJSJ&$@EFuUU$1s22$P2@7pvf$$WwpyWkeHU8lOLw0Q7pWGPTXk2eutZK)!mm@92NzN766afgUv8@Cm%FhKsp^l7JFnI2y71QFB(KfR8#!R^Vjx)ho!OSoDZ77*bjRsNvRW[KZJ&#9UjG[TIjUwSLo9RPRq2w)rGOT^x9nkBBa5(endF3l$Wuizv$KMguBkJ*lR^zJ%j[P#fk7QsiQYeyiVz$npIpCh^c^euZ]LAVWXjmk60Cxbi$^$rCrx]mIO7gnXtTXe7%Zp^GlKXoZjM7fS!cDShNBzqfRmJK8[^&9!!6v98bHup*hf832F^sPp4$DFwMdqxoK9WXcGHok]!xNgrqTU%DZHJFcpxe0knQ549fA#oJ&32fqL@tK!u%Ugc))FvawgBXMd#iM4yvlpWQyFv*GfLb[#J5ZwoeXN5(hDvAqpIkgt0@d353z7x)*HeFDAWf8$Mw3[Z(BN3NQumNti9#DrtiL(bYuU^MmlL97gvAB)O&^HA]840Qm3w8IA@(mhwC!tD&ppcfAkiXiUCeEEeHtKO])X9OPC!1XcsC^rKAr$)R%TO#phWF)TEw*7r5vM*[fxFRLZQI7Gu2bo*sT3V*Z]qgN#F@Ke9B53NQDfz4G5Gsx6%%4vZhDKHJMJCMi(wSf(&RHFpcn[SIu$bt!STLCWz^XVG*BSI2S2vP)j1td*xtB(6@A87!KSrp^*FPH3]sPpLMj1psItBJ6ARqkEnJG5YORW4NhjO@8XQtNg#hcH%P5FOvC[M6rV!K0mb5LVxp2f^BfyxVu2bkhY]tUlZ5Sxo(OjpNFH[%@&k9j[)wpS!Ia)qUfaofivO#LlyJBCDxJpk7@P(A!Be]hQs1Y6)AR&h(HudHuT91bGbRPSE19g4a&^967j*xy)yjk(ZXaG!#xyBnUvzV(Pw5t0LTvk]yfVLeminv(4XHA9G$ceYHWE$EYY[OZA#W^bB1OI[IRtDS7Txo(n34FGb*$fk$(R1MR$5)Cn(gT%Hkbf0p3@xhU4hD88HO6B6im4#f)QcGNHQXWoC2(%xH6cHDslRYGksiFQ^%(T1quO^(8O8RklPWinzBf3b19sf0)oDvwwDr4$a(2cjYn)1TFzD&*IL(0xs@S(Rxv0(zZ$ff5i!zE!Jxj*[Lfl^L)wcD$RcyR8bB[Q@oJz57*8j1WWJy*mT89VrtURACMC7r*LD&sI33QzcXpi&X[G%N)o2pG[UGrQv%NmEnWIljV4%g3j(ohv%IBCw4hcb%!g73w[zc&xRZLStSuSl0P^w@AnC2zf9Hgo2Acdtt3utI3T!J9XLE8XpWY*sz8RWRT5FdC*NJoimtS]9!pv!Un(nGzVW4XN7t%yspoUoDDTeECG#fR&cbp21a%[PUW[AXsly(6O58!PxoWwsKqIbcND1mq&367u2LxJepr34QWYw)*7gEDKd@vm)&hUZ54HU*4XN)FxeSg%DrOt2nFhBPmC12BmSes[84AwTsB80Rc9LC9E44]KV%jUct@bBRC#energXYn8PR47aGH9Dq(E19e#ANelC^J7XRBb)m63DXr#0@]yEMZzFA)SJkUDiAj!Fzd3SS)nKJd%i@4%w]c*^ko(eEL4v*OfKSNQUdR]6UpwO3Bb05L%*wwF6jxFZgozJ#AdxZ3)mJch2%sab4[hHjxbxR7rHQR^n(BYu*k$iY]uW76!MCe6uAq#irtmq[#I6cS(lh@Mdgi*AsXswqQl*wWA9k30nYbKI*OnZDzq@Sxf4zppeJ*@^BjrCp)6KNpf]5caDfgrZp1[C45!*CC#9tmYXojci)(SzPONuUZZZ#r7r)RXrgQR5lfu]iZJeYpHHoQ@)8vaSV!M2uCBitcxC#o*YcE(W3%ljnuG[JumHs6X3YruSCKwmAOx89(@&Q0!mIq0Z4Mzlwie$f5wRY8*khANW*kb3%C1xe9M2hbtrv3dZ&qAt4@XXMhOWIZxFfD0qIY@ELc#S]cYd#b[RhFOVcy]ghmEG5qMzZckOg[!EDb!vf6pIvFxsVJ7Zs]ZYrgX^4XkK6dNAH$kLBSUiC4Io6Z@pag5mS!5pfumJw98A3!@aOJ!zLzAvJfnukc%873Y&6)t]w2ncR0e]*&G2VT7vD1KJJw8f)JT^p&)15ZqEeIB0yb0hYd19l]oHUYVBzWY8TYT(XpVp#2&No0pLw8j%OXFESVQU1FWQdqU0jDwxOg8JEOO49Bm^9mSngN0I(K9lAfkfzKQjg$(Rr*!@Krxs55t1d8FO)7#^O3R#Br5nQQHUWib%6%pBc1*)bi!LV3AqvFb)^Yd1aizPN8h7z2QV@ohokkeC)9jIG8050c98jKHyJc9GVxG(69yt@xb0IHMC8D&im(RswtG)(&RTWw6s5psRI[A%EFNLt$jLLobZNfPYg%@&Hu!tjm4ji#ShvCoI3Q7#tDGT9I773!YoQZ%TWXL!iy0koDWc3RVC@#hmb()puinpt93*whP#ztt@MLa3e2cTYk3xZi!wfuoUq7WHVpp^&u2wjhkXaY*q7UzkBx846veR8(WLKOL(gdir1k4N*6Br5eVHIDI0ApnV63wk!@EWjdeo4FbdrIside$QmB#(CUgJDM(XIzPDZnPokXZ9uSGHM5IxnhgODl(XSoFbo1CPD7mfSxKRM0HUBV[MMrT#5krBps5PWw!rDKw$$m^rqO9Co)TkL&x)vu2gWg!TJepD)F5ZRFMhNJeP4fO6RZO@VH@2ZUr6RGg5(hEf4$RpzcsDE6nBZvHR[v3hxWdceN1eeTH5(ppx#CQ4#WuN*bm%knPlj#$v2GC]Sp]%vK($4e[D*Sx0D^seUrqSxf]xbG#C4aOroqiRI[vQsR]5PzPYBD[*g1Gq@lfrAYx%g%y]vzC1^7yhzIpcf0RCAy00qbEQ2YYgfbe7r7ry[mnHmLmM!78]s3qbMo#jicAnhPUu@X3wsn98J%[%a)nkXEbDMHxdv7v8jdmPlF6%0@Wc[vrLirAEUquqeDIlr@KRZ!]Jzc6)@Vf@2ggzBw5EIzNXiTRc$8TYh9NOvqyY*b^iOolLPIpm4SNd9P0VpebnpNUVo2pe!q!bGnkHh!COlStLuzK7Vsycs^$q&uA^yFtk(TXLJ7N[l!71g0vKKDcEoL0P6d)2^k!&HGA8M4&NpfQzp@8EFIqP3t^Xmpu7M5IT8zTCO4w69cNMORHR53YJj9MVsl@UX0[iQAxyWjM2wd^tv8qPN4Rt@)NeWh!R25w^iiVrCgim3B3bIJe*tCFgMt2XCw@sX$s!A(v4NkJN0!hbmOWL94zEOX&G^RzAK6%MeKxA!64VFo6BmWVJ5q^0M)YRW75j2Qj[oY6lJ^&ZWoNiBFt4toZ$nBIc$%D[HMmae*ekx5O9SN&Vm22ItGjmvX1BD2wTROXFU&vEM%pXx42um7cEYz!IdjR4hxrpNHw(#a(!m(ziLO3LIB139YfrmF$CgsDwN2LgSQ(yv9@W(Q6r98cNlI)SDVmeBxtw&PezvmMUX5T4GK[RBqjqhuyY[MGCXd#EP^6i%0W^iLxn)MX9k*FoH&EBWzdUp&T&Bv6rB*J9WinOPNmRFyE3fT#*%l1ffhdcPkxM8&#tKRNS9mid0bRnxS#0f[sEbDn0LovCIu@oM1isASsePU@8ff%8kS%m%Lbu0e@#h(0nHqQTYQ#cZi0OC1P)5*k6%^8Vr%ox4T2gHtwiZ67%oE%qPA%T6#m(#m)M@4yICARG&Pqcw6tv$zkVe%jQNfp156Utr1SvdytvfQsSf1ZzNAsKIACiXGPFob$qJO#zfWH]WTa7JQ2vgQlPHklqG&8tdF0&43D0t%uUjss&1&]yN%E5Oe%z!xIv&8zj$clZb7krpjjZhC6g4[2chgaoE*#phhz%8vxAtbg0p3y#oig!SvtLtxJ$5of$9)wBCT$Evm%7)lmfq525PHbM(Yr4OPKva7Oz1LgB31R0U9r9)b139RS*hjqJS2FxKNS0qo7$SYqG]hW$BJ2#)fH0&MdRcidRpRj!]v]%1(rCFU[T)uCv@qxX8SVGE7fCE(ZE($FTmzIuYNL0vvol3NLf%58Wx[uyJ#OvIBVunPUYULAe[#n[RDU)Cu65P(Ib5N)d)MSgnL^gB#1Z2oIuqkeWH5#$JG$pZ(4M]iVvj2ZbwzH(&WtdbFE5MUr7U#KyvzlsigrY[yROsf[kbHh7PwA8Q9yeQi2Fhy7V72lAKX^&m3pt46YT$(b2!WHLKYkCMeX3WZWr!72R&S2pj5c0B6vP9T$S3@Cb(Js@xKbJn]CdO@U$vTwuUDMUiw$4D)Oqyr9H[h7K)bJHZI3[NDu24U9t44OJTwvK%k@Tj78MqZM0&1pe&EmuTxYpjy&Erpcm*sLxtzsk0yDbp$YEw#zF2bw0%5lXitN@(oekzc7Yt*VUq(j*e%d4F#05(k$A6v7Buj[[NgqR$fdoLohm1991wWE0P$Fv%5QBWo^Hd&Eoa%]MIJyMC&mhP6%rhvxPrCcOKKwBuhOX[0g^&Y0dOAGSgRiGj%5*zp$$HGZW*D*@3(Q(gKJmPnqrpbuyqj)s^^Hz!ZP(vknyG8VRV%N42zE4gPBBDX#q#B*v(uqeQD@hXe3C671UU!q1Zj8kU5Mm@7b4F%TUNWK#3LzYXMhZglJ8Q@ehp3SAVl1fCR7*W5h[Rrm8Pe5l]TW%ul%RoyxE^VvyFBR5T3ZpjNvlxkxYJMP2YvgZ%CfM*JXjVnaR$80sUsm0CvC7Fh4I^VK4)[YMwd$@z3#5XSwn$RhoMc9iAji@^g)RaMFrVVr8$jx(bk4cideZuGCmNm6Hz)gFAy%SKjldD*QE^[M6Jx]YTY2rP8tx][3[xJ(55Od6$GDdr#wz6i*BQfwZhBK^)CePLm!(mfAVHsP[qyKBZEZ0]eg2X0dSijkAezkTDHco6k7ld&WX^tBY$fDrfS30TU6nwI0peTNChpL)ypCkE[fjLkPWSVhd(ic8INn4#kBBLEd8uhr17N7qQ^UB^WZ&Fx[[Flw2sXhF5UUh#hOZ@$Bs[f[0)dBVIPHfWMDMeHIr&2G9!MeiUVT&T!n&5!^6HJjlnlyQS30$RFlN74XQjrpH0#&JpF@H1p@bi%eCCD#opetK0[!KCv)j(yQ52S$QbY@kmC%fH6krYQYh$5LEB5tz32Gtp^ZO(Qa)jvj7G5fe#e]eVWOgRqxiMf3L6@q9Ab*6p#9(F0aFGapWGP0Yyd%t2EkojYDQkOWh7iV0vR)d^APhj&E[21w*1Yf7V5o9oC@90Sc)ifI]@y^hxnFSfyj5H!I!8q(bwiK^KqPMBb39D@ePXL)#ReTIhS5$v@g@RCrmd![go^!Hp85)T^9qN(dPkDC(!b!HpSP7[CEvLNXcvfq)bojo1&CJUlDC(MkdBZuL@3AHWLGzrqiXSoYOr2mY!LguGpdhvD!dG*R&!qI4Lgq83@VTXxqZ^4gwvWcH]AMn#[bYXTzbeTlruYlAPZKFvVQ5^KH*Tn&L9k7cxgy8@sy3x2%cssiWVtF8HOZRqFz&8h58DiHm7BFl^o%$usSLAb%8y7(@ggPahm!%q#sQ%@1tYj6%%4A^qmVY*FVoCrY^Q*[Ul*qEn^O)U&Z]5dE6kxNX&L)Fj2MUt^k8sv[h%3sx8)1uv(kRRHxT72XnXlbScx9o9ZDSpI$ra0ovZEm$6P[P7NrErS5Hg&TV3$vAd@F6Ng0WhM2RZqlmpB5bCUzP[N$5Y73CyGe2@%VpOTPOETv%viC3p3N!9Pu@0wpLp@BYmzk]zcisVMvwQfb&P71F7pXpP2yj7[x!VI9YLn0(pEgm]ZiIeRMg%1d[[yF[u]F[KCj]q8md(3)D4qrsnZmgLApl&fqSl9lYcLZOBU$%m5*F1FP6oRE]39)O7fsA(WBMuA1%oZ8R7vKnnv5x7QPiZynk$lR(BSL@AGbGdCxsCLxHMWsRY!mwR3flu9Z0UEDvE5CcvMZ8hssVOEdwrtJVYcSqX!)4nKaFMpwYXkknNQlD^Vu^D^aympHz6#tgHIdw7poXf6qEs%msm&)S#rgcBVY&QtS5QRTE&@!hlUy[^dGMM626i^cedn(AN70kId^xDqEgS1*prmI@GrrFyxwTRGAi7TfAVI5jeRUwn%)e(d^jYrKSKdV^%J*d67D6w&R&34YROcGy0(5DyBOyBImgvbNYKLRQHFHOOLAuWdFrsiuZrkj@J0*w51E1K$sFeU8FBYXTIE&bpkuHpDq!9vQWcV8[B(8yB8(O0V*l$YvUcZyNk(!)x!p*^EALIsdOkLyhaE9(R1@A^tvKfUNVI@&k40FYk2ztEWbN(X95^03vJKOr3YmSQCS#dubCI1",
+ "part_load_balanceby_table": "",
+ "kafka_message_encodingUTF-8": "",
+ "kafka": [
+  {
+   "binary_codehex": ""
+  }
+ ],
+ "dml_track": [
+  {
+   "enable": "",
+   "keep_deleted_row": "",
+   "date_column": "",
+   "time_column": "",
+   "date_time_column": "",
+   "op_column": "",
+   "opv_insert": "",
+   "opv_update": "",
+   "opv_update_key": "",
+   "opv_delete": "",
+   "audit": "",
+   "audit_prefix": "",
+   "audit_appendix": "",
+   "identity_column": "AUTO_INCR",
+   "load_date_column": "",
+   "load_time_column": "",
+   "load_date_time_column": "",
+   "change_table_structure": "",
+   "date_time_column_unique": "",
+   "load_date_time_column_unique": ""
+  }
+ ],
+ "error_handling": {
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp",
+  "report_failed_dml": 1,
+  "info": ""
+ },
+ "save_json_text": "",
+ "include_tab_with_column": [
+  {
+   "user": "",
+   "target": "",
+   "column": ""
+  }
+ ],
+ "include_tab_with_column_switch": 1,
+ "full_map_switch": 1,
+ "map_type_list": [],
+ "encrypt_switch": "",
+ "encrypt": "",
+ "secret_key": "",
+ "compress_switch": "",
+ "compress": "",
+ "src_db_auth_uuid": "",
+ "tgt_db_auth_uuid": "",
+ "comment": "",
+ "_": "3e184b31"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node has no license associated with this feature. UUID:  1C5F3C4B-7333-9518-7349-9712BC9ED664"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteOracleRule
+body: {
+ "rule_uuids": [
+  "DBED8CDE-435D-7865-76FE-149AA54AC7F7"
+ ],
+ "type": "",
+ "force": "",
+ "_": "3f4f15f8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeExtractSyncRulesObjInfo
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "B0afA282-C14C-cb4D-F48d-e8ebAA8Fc7Eb",
+ "usr": "",
+ "sort": "",
+ "sort_order": "",
+ "search": "",
+ "_": "3f49151e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLoadSyncRulesObjInfo
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "A8EEC7CE-cBB1-FB28-b736-6b3B39E872b5",
+ "usr": "",
+ "sort": "",
+ "sort_order": "",
+ "search": "",
+ "_": "3ea7ca1a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleDbCheck
+body: {
+ "src_db_uuid": "",
+ "dst_db_uuid": "",
+ "_": "3eb95e27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: src_db_uuid;\n Lost: dst_db_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleDbCheckMult
+body: {
+ "db_uuid": [],
+ "_": "3e663e1e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "notice": null,
+    "uuid": []
+   },
+   {
+    "notice": null,
+    "uuid": "3e663e1e"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleGetFalseRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleGetScn
+body: {
+ "uuid": "cF220c3B-e301-F39a-9FAe-D2896BfCFbAF",
+ "_": "3f6b3bc6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "scn": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleSelectUser
+body: {
+ "db_uuid": "675FFDEd-9259-f22B-B2b3-cF45E28F97AF",
+ "_": "3f6ff239"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "db_name": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleTableFix
+body: {
+ "rule_uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "tab": [
+  "I2.table"
+ ],
+ "fix_relation": 0,
+ "_": "3f13d32b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRuleZStructure
+body: {
+ "db_uuid": "EcaDF365-dD2D-cb3f-Ad5e-c4130Dad3dA9",
+ "level": "",
+ "type": "",
+ "tab_name": "",
+ "type_value": "",
+ "_": "3ed12f6f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRules
+body: {
+ "uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "_": "3f400e0c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesDML
+body: {
+ "offset": 1,
+ "limit": "10",
+ "usr": "",
+ "rule_uuid": "c84F4bDB-ccAF-E739-32e2-4Ca24A31c5dB",
+ "sort_order": "asc",
+ "search": "",
+ "sort": "",
+ "_": "3ead4cd4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": null,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesFailObj
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "3d345F8a-0879-B7CD-0ff0-6dBDd23F16FA",
+ "search": "",
+ "type": 1,
+ "stage": 1,
+ "_": "3e8ae908"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesHasSync
+body: {
+ "offset": "0",
+ "limit": 10,
+ "row_uuid": "Ae5f2bdb-bFE7-FE67-161d-709b0062976b",
+ "search": "",
+ "_": "3ef4fb86"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesIncreDdl
+body: {
+ "offset": 0,
+ "limit": "10",
+ "rule_uuid": "8b08274c-EfdF-8eF6-f849-e692ef88dfFF",
+ "_": "3f6c11cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed"
+   }
+  },
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesLoadInfo
+body: {
+ "rule_uuid": "",
+ "_": "3ecf60be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesMrtg
+body: {
+ "set_time": 1,
+ "type": "",
+ "interval": "\u65f6\u95f4\u95f4\u9694",
+ "set_time_init": "",
+ "rule_uuid": "",
+ "_": "3ec7d979"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSyncRulesObjInfo
+body: {
+ "offset": 0,
+ "limit": 10,
+ "rule_uuid": "EaFFff79-FA06-e1fc-B7AE-abbF3B1cc5Eb",
+ "usr": "",
+ "sort": "",
+ "sort_order": "",
+ "search": "",
+ "_": "3f641c01"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadLog
+body: {
+ "rule_uuid": "",
+ "type": 1,
+ "module_type": 1,
+ "date_start": 1,
+ "date_end": 1,
+ "_": "3ec02381"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listExtractHeatMap
+body: {
+ "rule_uuid": "",
+ "top": "",
+ "_": "3d8a5254"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "extract_info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listIncreDmlLoad
+body: {
+ "offset": 1,
+ "limit": 1,
+ "rule_uuid": "fAFeACB8-F12B-Ada4-1Fdf-B4B67B3d27C7",
+ "_": "3e9544ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": null,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listKafkaOffsetInfo
+body: {
+ "rule_uuid": "2C17E76b-344e-7A68-8D36-7A68E3BFdeB9",
+ "_": "3de58d99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null,
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLoadHeatMap
+body: {
+ "rule_uuid": "",
+ "top": "",
+ "_": "3f45f957"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "load_info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleIncreDml
+body: {
+ "offset": 0,
+ "limit": "10",
+ "rule_uuid": "8bC65C56-e392-FD8D-3239-4D412E91d483",
+ "_": "3f1d3505"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleLoadDelayReport
+body: {
+ "type": "sec",
+ "start_time": "",
+ "end_time": "",
+ "limit": 10,
+ "offset": 0,
+ "uuid": "1d2F6Fed-DAC6-FE94-A6cB-5Ab55415E9fd",
+ "_": "3f1c8373"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleLoadReport
+body: {
+ "type": "sec",
+ "start_time": "",
+ "end_time": "",
+ "limit": 10,
+ "offset": 0,
+ "uuid": "1d2F6Fed-DAC6-FE94-A6cB-5Ab55415E9fd",
+ "_": "3e87ba0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleLog
+body: {
+ "offset": 0,
+ "limit": 10,
+ "date_start": "1981-10-03",
+ "date_end": "2001-10-31",
+ "type": -1,
+ "module_type": -1,
+ "query_type": 1,
+ "rule_uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "_": "3e50938d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed",
+    "log_type": "Export",
+    "flag": 0
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleSyncTable
+body: {
+ "row_uuid": "77F29212-3B7c-Af79-8815-d0671Fcf92F4",
+ "limit": 15,
+ "offset": 1,
+ "_": "3e5e873a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null,
+  "total": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncRulesGeneralStatus
+body: {
+ "_": "3ef4b217"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "f79DFcc5-df53-547E-CCEc-F00fDEcbdF9B",
+    "stage": "UNKNOWN",
+    "state": 0,
+    "progress": 0
+   },
+   {
+    "uuid": "8BE54c6d-562E-dc3D-2efF-d10c3F814FeD",
+    "stage": "UNKNOWN",
+    "state": 0,
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncRulesStatus
+body: {
+ "_": "3f6a17d8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "has_false_rule": false,
+  "info_list": [
+   {
+    "uuid": "",
+    "rule_uuid": "",
+    "load": 0,
+    "extract": 0,
+    "peak": 0,
+    "delay": 0,
+    "has_new_err": 0,
+    "dst_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "src_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "work_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "back_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "relay_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "track_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "data_info": {
+     "dst": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "db_type": null,
+      "log_read_type": null,
+      "orcl": null
+     },
+     "src": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "db_type": null,
+      "log_read_type": null,
+      "orcl": null
+     }
+    },
+    "stage": "UNKNOWN",
+    "state": 0,
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyOracleRule
+body: {
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [
+  {}
+ ],
+ "dbmap_topic": "test1",
+ "sync_mode": 1,
+ "start_scn": "1",
+ "full_sync_settings": {
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ],
+  "dump_thd": 1,
+  "clean_user_before_dump": 1,
+  "existing_table": "s",
+  "sync_mode": 1,
+  "start_scn": "1",
+  "load_thd": 1
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   "hh.ww"
+  ]
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "1",
+    "user": "user",
+    "process": "SKIP",
+    "addInfo": "1"
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": "1",
+  "max_ld_mem": "1"
+ },
+ "error_handling": {
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp",
+  "report_failed_dml": 1
+ },
+ "table_space_map": {
+  "tgt_table_space": "1",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "table_delay_load": [
+   {
+    "table": "",
+    "user": ""
+   }
+  ],
+  "keep_seq_sync": "1",
+  "gen_txn": "1",
+  "merge_track": "",
+  "fill_lob_colum": "",
+  "sync_lob": 1,
+  "table_change_info": 1,
+  "message_format": "",
+  "json_format": "",
+  "run_time": "",
+  "enable_truncate_frequence": 1
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "part_load_balance": "12",
+ "kafka_time_out": "12000",
+ "rule_name": "ctt->ctt",
+ "src_db_uuid": " 6C4AEF37-6496-6DCD-E085-DD640001E4EC",
+ "tgt_db_uuid": "  1C5F3C4B-7333-9518-7349-9712BC9ED664",
+ "tgt_type": "oracle",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "rule_uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "kafka": [
+  {
+   "binary_code": "base64"
+  }
+ ],
+ "dml_track": [
+  {
+   "enable": 1,
+   "urp": 1,
+   "drp": 1,
+   "tmcol": "1",
+   "delcol": "1"
+  }
+ ],
+ "save_json_text": "",
+ "_": "3d9b5476"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node has no license associated with this feature. UUID:   1C5F3C4B-7333-9518-7349-9712BC9ED664"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyOracleRuleBatch
+body: {
+ "kafka": [
+  {
+   "binary_code": "base64"
+  }
+ ],
+ "dml_track": [
+  {
+   "enable": 1,
+   "urp": 1,
+   "drp": 1,
+   "tmcol": "1",
+   "delcol": "1"
+  }
+ ],
+ "save_json_text": "",
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [
+  {}
+ ],
+ "dbmap_topic": "test1",
+ "sync_mode": 1,
+ "start_scn": "1",
+ "full_sync_settings": {
+  "dump_thd": 1,
+  "clean_user_before_dump": 1,
+  "existing_table": "s",
+  "sync_mode": 1,
+  "start_scn": "1",
+  "load_thd": 1,
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ]
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   "hh.ww"
+  ]
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "1",
+    "user": "user",
+    "process": "SKIP",
+    "addInfo": "1"
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "max_ld_mem": "1",
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": "1"
+ },
+ "error_handling": {
+  "report_failed_dml": 1,
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp"
+ },
+ "table_space_map": {
+  "tgt_table_space": "1",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "table_delay_load": [
+   {
+    "table": "",
+    "user": ""
+   }
+  ],
+  "keep_seq_sync": "1",
+  "gen_txn": "1",
+  "merge_track": "",
+  "fill_lob_colum": "",
+  "run_time": "",
+  "sync_lob": 1,
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "table_change_info": 1,
+  "message_format": "",
+  "json_format": "",
+  "enable_truncate_frequence": ""
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "part_load_balance": "12",
+ "kafka_time_out": "12000",
+ "tgt_type": "oracle",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "rule_uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "rule_uuids": [],
+ "batch_basic_settings": 0,
+ "batch_full_sync_settings": 0,
+ "batch_incre_sync_settings": 0,
+ "batch_advanced_settings": 0,
+ "batch_full_sync_obj_filter": 0,
+ "batch_inc_sync_ddl_filter": 0,
+ "batch_encrypt_compress": 0,
+ "_": "3da35505"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result": [
+   {
+    "code": 1010202020,
+    "message": "[1010202020] Batch update failed, incorrect target type",
+    "rule_uuid": null,
+    "rule_name": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeOracleRule
+body: {
+ "operate": "restart",
+ "rule_uuid": "9CCd1346-9CcC-DECe-bc3C-8b29c8dfd23d",
+ "scn": "1",
+ "all": 1,
+ "rule_name": "",
+ "_": "3f0d202e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listIncreDmlExtract
+body: {
+ "rule_uuid": "20971Ce3-71D9-914E-f408-d7cD612EAF69",
+ "offset": 1,
+ "limit": 1,
+ "_": "3f4ce024"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": null,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+

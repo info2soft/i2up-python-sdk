@@ -1,0 +1,102 @@
+<START-----------------------------------------------------------
+Method: dbConvertImport
+body: {
+ "_": "3ea101ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001031,
+  "message": "[1010001031] cc.upload_error  You did not select a file to upload. "
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dbConvertListConverts
+body: {
+ "type": "",
+ "_": "3c4e2456"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   {
+    "version": "010",
+    "file": "convertions/010_trans_sys_conf.php",
+    "description": "System config"
+   },
+   {
+    "version": "009",
+    "file": "convertions/009_trans_timing.php",
+    "description": "App protect (Backup, Restore)"
+   },
+   {
+    "version": "008",
+    "file": "convertions/008_trans_compare.php",
+    "description": "Compare"
+   },
+   {
+    "version": "007",
+    "file": "convertions/007_trans_vp.php",
+    "description": "Virtual Host, Virtual Workload (Backup, Recovery, Replicate, Move)"
+   },
+   {
+    "version": "006",
+    "file": "convertions/006_trans_nas.php",
+    "description": "NAS Synchronize"
+   },
+   {
+    "version": "005",
+    "file": "convertions/005_trans_fsp.php",
+    "description": "Full Server (Fsp backup, Fsp restore), Business Migration"
+   },
+   {
+    "version": "004",
+    "file": "convertions/004_trans_ha.php",
+    "description": "Availability"
+   },
+   {
+    "version": "003",
+    "file": "convertions/003_trans_rep.php",
+    "description": "Real Time (Replication, Recovery)"
+   },
+   {
+    "version": "002",
+    "file": "convertions/002_trans_nodes.php",
+    "description": "Data Guard Node (Node, User Cluster)"
+   },
+   {
+    "version": "001",
+    "file": "convertions/001_trans_user.php",
+    "description": "User"
+   }
+  ],
+  "last_version": "010",
+  "current_version": "000"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dbConvertMigrate
+body: {
+ "version": "",
+ "type": "",
+ "_": "3f138cda"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001096,
+  "message": "[1010001096] Database not exists, please import the old version data first"
+ }
+}
+-----------------------------------------------------------END>
+

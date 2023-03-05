@@ -1,0 +1,104 @@
+<START-----------------------------------------------------------
+Method: createDiagnose
+body: {
+ "item_uuid": "",
+ "check_type": 1,
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "config_addr": "",
+ "config_port": "",
+ "start_date": "2022-10-24",
+ "end_date": "2022-10-27",
+ "time_switch": 0,
+ "_": "3db98457"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDiagnose
+body: {
+ "check_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3e31f0db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiagnose
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3ec70f28"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 1,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "EF8AAF3D-A4EA-4972-A988-B912C38502DB",
+    "check_type": 1,
+    "status": "DIAGNOSE",
+    "result": null,
+    "download_url": null,
+    "create_time": 1678085792,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRules
+body: {
+ "_": "3f6f2ea9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+

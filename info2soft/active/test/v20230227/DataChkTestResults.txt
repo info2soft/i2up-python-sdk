@@ -1,0 +1,190 @@
+<START-----------------------------------------------------------
+Method: deleteTbCmp
+body: {
+ "force": "",
+ "uuids": "A1AdAf11-BBA1-11f1-a8aC-7E44bE8BBDb3",
+ "_": "3f061972"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmp
+body: {
+ "uuid": "3D3c7Fbc-da44-BDD2-cCdE-dbB5dc21ef8F",
+ "_": "3f13f524"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpCmpDesc
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "b1E1d998-3a61-f4e3-F7Ff-D3D0192EfC85",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3e8cf81d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "B7CBcC47-807b-8Cb8-a347-cbEc24fBEBBC",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3f12e45e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "A7DE1FC2-DfAE-FC91-18f2-1CcF8FBEf8cC",
+ "start_time": "",
+ "flag": 1,
+ "_": "3f72551e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResuluTimeList
+body: {
+ "time_list": "cbD2EA8b-f83D-0cea-bb35-e4eDbe62BEA3",
+ "uuid": "",
+ "_": "3f1bdfbf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f7a9b24"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmpResultTimeList
+body: {
+ "uuid": "",
+ "_": "3dfd9842"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "eff2C655-5f9B-2d3e-2eCA-D73Bf976D982",
+ "_": "3ea51bfd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,104 @@
+<START-----------------------------------------------------------
+Method: authGenerate
+body: {
+ "_": "3f6410d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "content": {
+   "uuid": "f6035cc41a9aef396d5797986e285e48f07f54ab",
+   "t": "167808525858140694"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkCaptcha
+body: {
+ "username": "admin",
+ "_": "3f397097"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "need_captcha": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkLoginStatus
+body: {
+ "access_token": "a10b45cd8b94ad53UEsc8H-gxjMU-jX76eFd2z4eoDh0vlVkPPDWaJyBWssjwWdYAtk4SdFaL8dQH48QQv29c3TRNX3FQo4Ub_V1qwehbRQ28KBEtYqTG6wy8sbAEWPVcBoE2uWXnmP_J5R9hXl8yHbeyaMwMjLpWe0onA"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "username": "admin"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimeStamp
+body: {
+ "timestamp": 1546847673,
+ "_": "3e5c3d64"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "t": "167808526115643544"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVerificationCode
+body: {
+ "uuid": "",
+ "mobile": 18501767968,
+ "email": "",
+ "type": "sms",
+ "_": "3eeab0a0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001301,
+  "message": "[1010001301] Invalid code uuid, please obtain again"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: heartbeat
+body: {
+ "refresh_token": "null",
+ "_": "3e488185"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001109,
+  "message": "[1010001109] Refresh token invalid"
+ }
+}
+-----------------------------------------------------------END>
+

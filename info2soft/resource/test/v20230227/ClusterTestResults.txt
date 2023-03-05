@@ -1,0 +1,215 @@
+<START-----------------------------------------------------------
+Method: authCls
+body: {
+ "cls_is_local": 1,
+ "os_pwd": "info2soft_125",
+ "os_user": "i2test2018.com/administrator",
+ "config_addr": "192.168.87.14",
+ "config_port": 26821,
+ "node_type": 3,
+ "_": "3f481109"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011203,
+  "message": "[1010011203] Node server authentication fail"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsDetail
+body: {
+ "operate": "detail",
+ "node_uuid": "11111111-1111-1111-1111-111111111111",
+ "_": "3eff0ef0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsNodeInfo
+body: {
+ "cls_ip": "",
+ "_": "3e1490f2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCls
+body: {
+ "node_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "_": "3e10bf2d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCls
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getGaussInfo
+body: {
+ "config_addr": "",
+ "user": "",
+ "config_port": "",
+ "_": "3e9cb123"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: config_port;\n Lost: user;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listClsStatus
+body: {
+ "force_refresh": 1,
+ "_": "3e9badfd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRacStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f25c3de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCls
+body: {
+ "cls": {
+  "comment": "",
+  "cls_disk": [
+   "E:/"
+  ],
+  "config_port": "26821",
+  "cls_node": [
+   "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C"
+  ],
+  "node_type": 1,
+  "cls_is_local": 1,
+  "os_user": "i2test2018.com/administrator",
+  "config_addr": "192.168.74.25",
+  "node_name": "cls",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "maintenance": 0,
+  "other_params": {
+   "ora_home": "",
+   "grid_home": "",
+   "user": ""
+  }
+ },
+ "_": "3f417ef0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address Failed to register"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchMaintenance
+body: {
+ "uuid": "",
+ "switch": 0,
+ "_": "3f36ffd2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyClsNode
+body: {
+ "node_uuid": "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C",
+ "cls_name": "cluster-2018",
+ "cls_node_name": "cluster-node1",
+ "node_type": 1,
+ "_": "3f07c29b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010071103,
+  "message": "[1010071103] Failed to verify cluster node [11110]",
+  "node_name": null,
+  "node_uuid": null,
+  "config_addr": null,
+  "version": null
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,85 @@
+<START-----------------------------------------------------------
+Method: checkQrStatus
+body: {
+ "uuid": "0d6e290f9c8414bac0bb105b97232771ec3e5178",
+ "_": "3dd13cc9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[1010001301] Invalid code uuid, please obtain again",
+  "status": 9
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: confirmLogin
+body: {
+ "action": 1,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3ed090b9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001301,
+  "message": "[1010001301] Invalid code uuid, please obtain again"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createQrPic
+body: {
+ "point_size": 1,
+ "text": "test",
+ "format": "",
+ "_": "3ec5e816"
+}
+response: {
+ "ret": 200,
+ "data": "\ufffdPNG\r\n\u001a\n\u0000\u0000\u0000\rIHDR\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\ufffd\u0001\u0003\u0000\u0000\u0000\ufffd\\\u001c6\u0000\u0000\u0000\u0006PLTE\ufffd\ufffd\ufffd\u0000\u0000\u0000U\ufffd\ufffd~\u0000\u0000\u0000\tpHYs\u0000\u0000\u000e\ufffd\u0000\u0000\u000e\ufffd\u0001\ufffd+\u000e\u001b\u0000\u0000\u0000\ufffdIDATH\ufffd\ufffd1\u0012\ufffd \fD\u05f1\ufffd\ufffdG\ufffd(\u001e\r\ufffd\ufffdQ<\ufffd\ufffd\ufffdc~\u0012\ufffd\f\ufffdK\ufffd\ufffd\ufffdi\ufffd\ufffd\ufffd\u000e\ufffd\u001b\ufffd\ufffd\ufffd\ufffd(V\ufffd\u000f\ufffd\u007f\ufffd\u0285\u000f\ufffdy\ufffd\ufffdY\u0007\ufffd\ufffd\rO\ufffdT\ufffdl\ufffd\ufffd\ufffd7Z,\ufffd\u001ac\ufffd9'.'\u000f\u033e\ufffd]\b\u0002\u001c\ufffd9L\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdn\u0383G\ufffd\ufffd\ufffd\ufffdr\ufffdX\u001a\ufffd;\ufffd4\ufffd\uc22bYt\ufffd`5\ufffd\ufffd\ufffd\ufffdO\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdNr\ufffdg\ufffd)t\ufffd`\ufffd$\ufffd\ufffdh\u001a\f\u0019\ufffd)9\ufffd7\ufffd\u00148\ufffd\u01fd#!\ufffd\u000b\ufffd\ufffd\ufffd\u001b\ufffd\u0016\ufffd\u001b\f\u0001\ufffd\u000eX\u00069\ufffd\ufffdPbO\u0252E`\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd>\ufffd\ufffdn\ufffd\b\ufffd7\u0004\ufffd\ufffd\rt\ufffd&\ufffdo=\ufffd/ ]\ufffd\u000eb\u000eA\ufffd\u0000\u0000\u0000\u0000IEND\ufffdB`\ufffd"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimeStamp
+body: {
+ "timestamp": 1546847673,
+ "_": "3f41c259"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "t": "167808523016769024"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: obtainQrContent
+body: {
+ "app_name": "enterpriseApp",
+ "_": "3d979481"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "content": {
+   "uuid": "06f7c630bc86c265273ad38e521d7ea2898d24d2",
+   "t": "167808523092067204"
+  }
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,1137 @@
+<START-----------------------------------------------------------
+Method: addDtrackBackupHistory
+body: {
+ "type": 1,
+ "status": 1,
+ "create_time": 1563257893,
+ "end_time": 1563257893,
+ "job_id": "",
+ "reason": 1,
+ "sync_option": {
+  "analyze_fs": 0,
+  "take_snapshot": 0,
+  "quiesce": 0
+ },
+ "scan_option": {
+  "analyze_fs": 0,
+  "base_on_driver": 1,
+  "sync_after_scan": 1
+ },
+ "sync_statistic": {
+  "read_sector": 1,
+  "send_sector": 1,
+  "write_sector": 1
+ },
+ "scan_statistic": {
+  "local_scan_bit": 1,
+  "remote_scan_bit": 1,
+  "total_delta_bit": 1,
+  "clean_bit": 1
+ },
+ "Content-Type": "application/json",
+ "_": "3e799f59"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cancelScanDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "cancel_scan",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3f4dd37c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cancelSyncDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "cancel_sync",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3ed39dba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cancelSyncDtrackGroup
+body: {
+ "group_uuid": "",
+ "operate": "cancel_sync",
+ "fs_analyze": 1,
+ "snapshot": 1,
+ "quiesce": 1,
+ "reason": 1,
+ "snapshot_name": "",
+ "force": 0,
+ "_": "3dd87daf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtrackBackup
+body: {
+ "policy_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "config": {
+  "source_disk_id": "",
+  "mirror_file": "",
+  "mirror_disk_path": "",
+  "resolution": 1,
+  "fs_analyze": 0,
+  "scan_first": 0,
+  "run_now": "0",
+  "sync_type": 1,
+  "schedule_config": "",
+  "quiesce": 0,
+  "snapshot": 0,
+  "read_thread_count": 1,
+  "send_thread_count": 1,
+  "write_thread_count": 1,
+  "mirror_fs_mountpoint": "",
+  "source_disk_path": "",
+  "track_length": 1,
+  "job_history_start_time": "",
+  "job_history_save_max_num": 1,
+  "job_history_save_period": 1,
+  "retry_times": 1,
+  "retry_interval": 1,
+  "compress": 1,
+  "compress_method": "",
+  "encryption": 1,
+  "encryption_method": "",
+  "mysql_db_array": [],
+  "oracle_tablespace_array": [],
+  "sqlserver_enable": 1,
+  "max_snap_cnt": 1,
+  "target_type": ""
+ },
+ "data_ip_uuid": "28C36A2E-230D-E66A-F0A6-A55C0134EA17",
+ "_": "3f135500"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: config[source_disk_id];\n Lost: config[source_disk_path];\n Lost: config[mirror_file];\n Lost: config[mirror_fs_mountpoint];\n Lost: config[mirror_disk_path];\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtrackGroup
+body: {
+ "wk_uuid": "",
+ "group_name": "",
+ "config": {
+  "sync_type": 1,
+  "schedule_config": "",
+  "snapshot": 1,
+  "quiesce": 1,
+  "retry_times": 1,
+  "retry_interval": 1,
+  "compress": 1,
+  "compress_method": "",
+  "encryption": 1,
+  "encryption_method": "",
+  "mysql_db_array": [],
+  "oracle_tablespace_array": [],
+  "sqlserver_enable": 1,
+  "max_snap_cnt": 1
+ },
+ "_": "3e298165"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: group_name;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtrackBackup
+body: {
+ "delete_mirror": 1,
+ "policy_uuids": [],
+ "force": 1,
+ "_": "3f5f981b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtrackGroup
+body: {
+ "group_uuids": [],
+ "_": "3f646ea9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuids[0];\n Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotCloneDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "delete_snapshot_clone",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3ee859b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n Lost: snapshot_clone_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "delete_snapshot",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3f707b34"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotDtrackGroup
+body: {
+ "group_uuid": "",
+ "operate": "delete_snapshot",
+ "fs_analyze": 1,
+ "snapshot": 1,
+ "quiesce": 1,
+ "reason": 1,
+ "snapshot_name": "",
+ "force": 0,
+ "_": "3ef90278"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtrackBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtrackGroup
+body: {
+ "_": "3e894f6d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtrackNodeInitiatorName
+body: {
+ "config_addr": "",
+ "node_uuid": "",
+ "_": "3f26c169"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtrackNodeInitiatorStatus
+body: {
+ "config_addr": "",
+ "node_uuid": "",
+ "_": "3f0a4ca6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtrackNodeInitiatorVersion
+body: {
+ "node_uuid": "",
+ "config_addr": "",
+ "_": "3f05c357"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtrackRecoveryTargetDiscovered
+body: {
+ "node_uuid": "",
+ "address": "",
+ "_": "3ed6eda6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dtrackBackupCtlDrv
+body: {
+ "node_uuid": "",
+ "ctl_flag": "INSTALL_DRIVER",
+ "_": "3f1010b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dtrackBackupFeatureMatrix
+body: {
+ "node_uuid": "",
+ "type": "tc",
+ "_": "3e91cc91"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dtrackBackupRebootSystem
+body: {
+ "node_uuid": "",
+ "_": "3f6236a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackup
+body: {
+ "bind_group_uuid": "",
+ "_": "3ed248bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackupDev
+body: {
+ "node_uuid": "",
+ "_": "3f37f00c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackupHistory
+body: {
+ "start": 1,
+ "end": 1,
+ "page": 1,
+ "limit": 1,
+ "_": "3e467634"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackupSnap
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackupStatus
+body: {
+ "_": "3b35d3f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackBackupSystemInfo
+body: {
+ "node_uuid": "",
+ "_": "3f26eed3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackGroup
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3ec1e2d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackGroupSnap
+body: {
+ "_": "3f526e9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackGroupStatus
+body: {
+ "_": "3ec08c93"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtrackRecoveryTarget
+body: {
+ "node_uuid": "",
+ "address": "",
+ "_": "3f6c2e24"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMysqlConf
+body: {
+ "node_uuid": "",
+ "_": "3e81a44f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMysqlDb
+body: {
+ "node_uuid": "",
+ "_": "3ec2aef1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOracleConf
+body: {
+ "node_uuid": "",
+ "_": "3ce0c828"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOracleDb
+body: {
+ "node_uuid": "",
+ "_": "3ea0dc3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSqlserverConf
+body: {
+ "node_uuid": "",
+ "_": "3de3be69"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtrackBackup
+body: {
+ "policy_name": "",
+ "config": {
+  "sync_type": 1,
+  "schedule_config": "",
+  "snapshot": 1,
+  "quiesce": 1,
+  "read_thread_count": 1,
+  "send_thread_count": 1,
+  "write_thread_count": 1,
+  "job_history_start_time": "",
+  "job_history_save_max_num": 1,
+  "job_history_save_period": 1,
+  "track_length": 1,
+  "retry_times": 1,
+  "retry_interval": 1,
+  "compress": 1,
+  "compress_method": "",
+  "encryption": 1,
+  "encryption_method": "",
+  "mysql_db_array": [],
+  "oracle_tablespace_array": [],
+  "sqlserver_enable": 1,
+  "max_snap_cnt": 1
+ },
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "random_str": "",
+ "data_ip_uuid": "28C36A2E-230D-E66A-F0A6-A55C0134EA17",
+ "_": "3f1f12a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtrackGroup
+body: {
+ "group_name": "",
+ "config": {
+  "sync_type": 1,
+  "schedule_config": "",
+  "snapshot": 1,
+  "quiesce": 1,
+  "retry_times": 1,
+  "retry_interval": 1,
+  "compress": 1,
+  "compress_method": "",
+  "encryption": 1,
+  "encryption_method": "",
+  "mysql_db_array": [],
+  "oracle_tablespace_array": [],
+  "sqlserver_enable": 1,
+  "max_snap_cnt": 1
+ },
+ "wk_uuid": "",
+ "random_str": "",
+ "_": "3f0b7782"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: group_name;\n Lost: config[compress_method];\n Lost: config[encryption_method];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: mysqlConf
+body: {
+ "node_uuid": "",
+ "username": "",
+ "password": "",
+ "timeout": 1,
+ "port": 1,
+ "mysql_path": "",
+ "_": "3f5001c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: username;\n Lost: password;\n Lost: mysql_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: oracleConf
+body: {
+ "node_uuid": "",
+ "username": "",
+ "password": "",
+ "timeout": 1,
+ "port": 1,
+ "sqlplus_path": "",
+ "sid": "",
+ "_": "3d550b77"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "resume",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3f20a1b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeDtrackGroup
+body: {
+ "group_uuid": "",
+ "operate": "resume",
+ "fs_analyze": 1,
+ "snapshot": 1,
+ "quiesce": 1,
+ "reason": 1,
+ "snapshot_name": "",
+ "force": 0,
+ "_": "3c82a150"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: scanDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "scan",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3ee406c5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: sqlserverConf
+body: {
+ "node_uuid": "",
+ "timeout": 1,
+ "_": "3f5fc4ad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: suspendDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "suspend",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3f75ac48"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: suspendDtrackGroup
+body: {
+ "group_uuid": "",
+ "operate": "suspend",
+ "fs_analyze": 1,
+ "snapshot": 1,
+ "quiesce": 1,
+ "reason": 1,
+ "snapshot_name": "",
+ "force": 0,
+ "_": "3ef1b8b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "sync",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3d53c994"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncDtrackGroup
+body: {
+ "group_uuid": "",
+ "operate": "sync",
+ "fs_analyze": 1,
+ "snapshot": 1,
+ "quiesce": 1,
+ "reason": 1,
+ "snapshot_name": "",
+ "force": 0,
+ "_": "3f4e2e16"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: takeSnapshotCloneDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "take_snapshot_clone",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3ea2c26a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n Lost: snapshot_clone_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: takeSnapshotDtrackBackup
+body: {
+ "policy_uuid": "",
+ "snapshot_name": "",
+ "quiesce": 1,
+ "fs_analyze": 0,
+ "base_on_driver": 0,
+ "sync_after_scan": 0,
+ "reason": 128,
+ "snapshot": 0,
+ "operate": "take_snapshot",
+ "force": 1,
+ "snapshot_clone_name": "",
+ "_": "3f4e5dd1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuid;\n Lost: snapshot_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: takeSnapshotDtrackGroup
+body: {
+ "group_uuid": "",
+ "operate": "take_snapshot",
+ "fs_analyze": 1,
+ "snapshot": 1,
+ "quiesce": 1,
+ "reason": 1,
+ "snapshot_name": "",
+ "force": 0,
+ "_": "3e95b71a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n Lost: snapshot_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDtrackBackupBind
+body: {
+ "group_uuid": "",
+ "_": "3eba0d87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDtrackGroupBind
+body: {
+ "policy_uuids": [],
+ "_": "3f006452"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyDtrackBackupName
+body: {
+ "policy_uuid": "",
+ "policy_name": "",
+ "_": "3f4d21de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+

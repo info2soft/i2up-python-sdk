@@ -1,0 +1,315 @@
+<START-----------------------------------------------------------
+Method: addHeteroGraph
+body: {
+ "graph_uuid": "",
+ "rule_number": "",
+ "src_type": "",
+ "rule_uuid": "",
+ "_": "3cd05e6e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroGraph
+body: {
+ "graph_name": "",
+ "is_parent": "",
+ "is_rule": "",
+ "consume_rule": [
+  {
+   "id": "",
+   "rule_number": 1,
+   "rule_name": "",
+   "src_type": "",
+   "src_uuid": "",
+   "dst_type": "",
+   "dst_uuid": "",
+   "rule_status": "",
+   "is_parent": "",
+   "is_rule": "",
+   "src_name": "",
+   "dst_name": "",
+   "rule_traffic": ""
+  }
+ ],
+ "_": "3e85624d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroRule
+body: {
+ "name": "",
+ "kfk_ver": "",
+ "dst_node": "",
+ "conn_type": "",
+ "host": "",
+ "port": "",
+ "broker": "",
+ "tabmap": {},
+ "consumer_thread_num": 2,
+ "actload_thread_num": 4,
+ "_": "3f0a386d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteConsumerRules
+body: {
+ "uuids": [
+  "5b4D9EAc-97Ca-3c3b-Cef6-4f28eA9dC271",
+  "553f3Ca3-b1AA-3D2e-3dfE-bcEBAcF3f548"
+ ],
+ "force": 1,
+ "_": "3e71e6b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHeteroGraph
+body: {
+ "graph_uuids": [
+  {
+   "graph_uuid": "e0C7c7C8-5365-356B-b35e-2a69ADe91e6d",
+   "rule_uuids": [
+    {
+     "uuid": "e5CBcEd6-f93c-5Ab3-76C2-e3b1FEF3AD58",
+     "is_rule": "1",
+     "rule_number": "4",
+     "src_type": "oracle"
+    }
+   ]
+  }
+ ],
+ "is_whole": "1",
+ "_": "3ebcd9ce"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeConsumerRules
+body: {
+ "uuid": "75DF8EA3-6480-4137-451B-731F04F368AF",
+ "_": "3f45f590"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptGraphDetail
+body: {
+ "page": 1,
+ "limit": 10,
+ "start_time": "",
+ "end_time": "",
+ "graph_uuid": "",
+ "_": "3ee39e91"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerStatus
+body: {
+ "_": "3dc2a540"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGraph
+body: {
+ "graph_uuid": "",
+ "_": "3f24cfe4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGraphStatus
+body: {
+ "_": "3dbcb64e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHeteroGraph
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3ebb2027"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHeteroRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "kafka_name",
+ "search_value": "",
+ "_": "3ebe7056"
+}
+response: {
+ "ret": 200,
+ "data": "\n<div style=\"border:1px solid #990000;padding-left:20px;margin:0 0 10px 0;\">\n\n<h4>An uncaught Exception was encountered</h4>\n\n<p>Type: RuntimeException</p>\n<p>Message: Class Hetero_rule already exists and doesn't extend CI_Model</p>\n<p>Filename: F:\\i2up-api\\system\\core\\Loader.php</p>\n<p>Line Number: 354</p>\n\n\n\t<p>Backtrace:</p>\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\third_party\\MX\\Loader.php<br />\n\t\t\tLine: 213<br />\n\t\t\tFunction: model\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\core\\Api_controller.php<br />\n\t\t\tLine: 678<br />\n\t\t\tFunction: model\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\core\\Api_controller.php<br />\n\t\t\tLine: 271<br />\n\t\t\tFunction: get_base_list_from_db\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\modules\\hetero\\controllers\\Hetero_rule.php<br />\n\t\t\tLine: 35<br />\n\t\t\tFunction: index_get\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\application\\third_party\\restserver\\libraries\\REST_Controller.php<br />\n\t\t\tLine: 797<br />\n\t\t\tFunction: index_get\t\t\t</p>\n\t\t\n\t\n\t\t\n\t\n\t\t\n\t\t\t<p style=\"margin-left:10px\">\n\t\t\tFile: F:\\i2up-api\\public\\api\\index.php<br />\n\t\t\tLine: 323<br />\n\t\t\tFunction: require_once\t\t\t</p>\n\t\t\n\t\n\n</div>"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: runHeteroGraph
+body: {
+ "graphs": [],
+ "graph_uuid": "",
+ "rule_uuids": [
+  {
+   "uuid": "",
+   "src_type": ""
+  }
+ ],
+ "_": "3f5f2589"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopConsumerRule
+body: {
+ "uuid": "C63cd277-70bB-5769-9AEe-2416b7BD2454",
+ "operate": "resume",
+ "_": "3f539936"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopHeteroGraph
+body: {
+ "graphs": [
+  {
+   "graph_uuid": "",
+   "rule_uuids": [
+    {
+     "uuid": "",
+     "src_type": ""
+    }
+   ]
+  }
+ ],
+ "_": "3f3db797"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+

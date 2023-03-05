@@ -1,0 +1,774 @@
+<START-----------------------------------------------------------
+Method: attachVpFileRecovery
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3e8e63af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter ID_LIST"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpDrill
+body: {
+ "rule_name": "",
+ "rule_type": 0,
+ "vp_uuid": "",
+ "auto": 0,
+ "vm_list": [
+  {
+   "vm_name": "",
+   "new_vm_name": "",
+   "vm_ref": "99",
+   "cpu": 1,
+   "ver_sig": "",
+   "core_per_sock": 1,
+   "mem_mb": 1024,
+   "scripts": "",
+   "bk_uuid": "",
+   "bk_path": "",
+   "time": "",
+   "original_rule_uuid": "",
+   "scripts_type": 1,
+   "os_type": 1,
+   "wk_uuid": "",
+   "src_uuid": "",
+   "data_ip_uuid": "",
+   "bk_type": 0,
+   "bucket_": "",
+   "sto_uuid": "",
+   "bucket_path": "",
+   "disk_list": [
+    {
+     "datastore": "",
+     "new_ds": "",
+     "is_ignored": 1,
+     "size": "",
+     "boot_index": 1,
+     "disk_dir": "",
+     "disk_name": "",
+     "id": ""
+    }
+   ],
+   "networks": [
+    {
+     "source_network_name": "",
+     "source_network_id": "",
+     "mac_address": "",
+     "keep_mac": "",
+     "network_id": "",
+     "network_name": "",
+     "ip_address": "",
+     "subnet_name": "",
+     "auto_ip": 1,
+     "ip": "",
+     "security_group_name": ""
+    }
+   ]
+  }
+ ],
+ "quick_back": 1,
+ "backup_type": "i",
+ "lan_free": 23,
+ "del_bkup_data": 0,
+ "automate": 0,
+ "auto_shutdown": 1,
+ "bkup_policy": 0,
+ "bkup_schedule": {
+  "sched_time_start": "0",
+  "limit": 0,
+  "sched_day": 6,
+  "sched_every": 0,
+  "sched_time": [],
+  "sched_gap_min": 0
+ },
+ "_": "3f351aa7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: vp_uuid;\n Lost: vm_list[0][vm_name];\n Lost: vm_list[0][new_vm_name];\n Lost: vm_list[0][original_rule_uuid];\n Lost: vm_list[0][time];\n Lost: vm_list[0][src_uuid];\n Lost: del_bkup_swap;\n Lost: auto_startup;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVpFileRecovery
+body: {
+ "rule_name": "",
+ "attach_dir": "",
+ "config_addr": "",
+ "config_port": "",
+ "bk_uuid": "",
+ "bk_path": "",
+ "vm_name": "",
+ "version_id": "",
+ "tgt_uuid": "",
+ "tgt_path": "",
+ "files": [],
+ "version_time": "",
+ "bk_type": 0,
+ "sto_uuid": "",
+ "bucket": "",
+ "bucket_path": "",
+ "_": "3ee1daae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: config_addr;\n Lost: config_port;\n Lost: bk_uuid;\n Lost: bk_path;\n Lost: vm_name;\n Lost: version_id;\n Lost: version_time;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpBackup
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "group_uuids": [],
+ "force": 1,
+ "delete_bk_data": 0,
+ "recycle": 0,
+ "_": "3f3200a0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpBackupPoint
+body: {
+ "rule_uuid": "",
+ "version_list": [],
+ "_": "3f70e586"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n Lost: version_list[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpDrill
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "group_uuids": [],
+ "delete_tgtvm": 0,
+ "_": "3f52693e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpFileRecovery
+body: {
+ "rule_uuids": [],
+ "_": "3ea3e290"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpMove
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "group_uuids": [],
+ "delete_tgtvm": 1,
+ "_": "3f6e9499"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVpRecovery
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "group_uuids": [],
+ "delete_tgtvm": 1,
+ "_": "3f1599f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVmProtectRate
+body: {
+ "vp_uuid": "F28BA5A6-4FF9-E596-4371-1ED203D45143",
+ "_": "3f532df5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "vm_total": 0,
+  "vm_protected": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpBackupGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpDrill
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpFileRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpMove
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpRecoveryGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpRuleRate
+body: {
+ "uuid": "",
+ "wk_uuid": "F28BA5A6-4FF9-E596-4371-1ED203D45143",
+ "mode": "month",
+ "type": "I2VP_BK",
+ "group_uuid": "",
+ "_": "3f6fb751"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The type field must be one of: VP_PT,VP_MV,VP_RC,VP_BK,VP_OR,FFO_OR,CDM_OR;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getConsoleUrl
+body: {
+ "rule_uuid": "",
+ "_": "3f56f80f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackup
+body: {
+ "page": 1,
+ "limit": 10,
+ "type": 0,
+ "status": "",
+ "_": "3f3e0271"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpBackupStatus
+body: {
+ "force_refresh": 1,
+ "_": "3efd7071"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpDrill
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f15c471"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpDrillStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f7dc4fa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpFileRecovery
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f0bf2e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpFileRecoveryStatus
+body: {
+ "force_refresh": 1,
+ "_": "3c6a4ca8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMove
+body: {
+ "page": 1,
+ "limit": 10,
+ "type": "",
+ "status": "",
+ "_": "3e3bc991"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpMoveStatus
+body: {
+ "force_refresh": 1,
+ "_": "3e8f4d75"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRecoveryStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f34ec82"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRepPointList
+body: {
+ "type": "",
+ "all": 1,
+ "_": "3f2160ae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist 22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpBackup
+body: {
+ "_": "3f3a97e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: del_bkup_data;\n Lost: bkup_one_time;\n Lost: quick_back;\n Lost: bk_type;\n Lost: bk_path;\n Lost: rule_type;\n Lost: vp_uuid;\n Lost: vm_list[0][vm_name];\n Lost: vm_list[0][vm_ref];\n Lost: quiet_snap;\n Lost: lan_free;\n Lost: rule_name;\n Lost: bkup_policy;\n Lost: bk_uuid;\n Lost: band_width;\n Lost: compress;\n Lost: mem_snap;\n Lost: add_drill;\n Lost: data_verify;\n Lost: transfer_compression;\n Lost: fail_retry;\n Lost: concurrent_disk_threads;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpFileRecovery
+body: {
+ "rule_uuid": "",
+ "rule_name": "",
+ "config_addr": "",
+ "config_port": "",
+ "attach_dir": "",
+ "bk_uuid": "",
+ "bk_path": "",
+ "vm_name": "",
+ "version_id": "",
+ "tgt_uuid": "",
+ "random_str": "",
+ "attach_path": "",
+ "tgt_path": "",
+ "files": [],
+ "version_time": "",
+ "_": "3eef2c64"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: config_addr;\n Lost: config_port;\n Lost: bk_uuid;\n Lost: bk_type;\n Lost: bk_path;\n Lost: vm_name;\n Lost: version_id;\n Lost: version_time;\n Lost: tgt_uuid;\n Lost: tgt_path;\n Lost: files[0];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVpMove
+body: {
+ "new_ds": "",
+ "support_cbt": 1,
+ "tgt_uuid": "",
+ "del_bkup_swap": 1,
+ "src_uuid": "4C9beAfD-d55E-9Fee-e11A-3F76044eBadb",
+ "bk_uuid": "",
+ "automate": 1,
+ "rule_name": "",
+ "new_dc": "",
+ "bk_path": "",
+ "backup_type": "",
+ "new_host": "",
+ "quiet_snap": 1,
+ "bkup_schedule": {},
+ "quick_back": 1,
+ "del_bkup_data": 1,
+ "lan_free": 1,
+ "vm_list": [],
+ "time_window": "",
+ "new_dc_mor": "",
+ "bkup_policy": 1,
+ "_": "3f5ce3bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpBackup
+body: {
+ "operate": "",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "group_uuids": [],
+ "bkup_type": "",
+ "force": 0,
+ "_": "3e898ab2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: rule_uuids;\n Not uuid: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startVpRecovery
+body: {
+ "operate": "start",
+ "rule_uuids": "641A27BB-B4D1-F482-1FB8-E856898626DA",
+ "rule_type": 0,
+ "group_uuids": [],
+ "_": "3de05a5a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: rule_uuids;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpDrill
+body: {
+ "operate": "",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "group_uuids": [],
+ "status": "",
+ "msg": "",
+ "_": "3f2289d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: rule_uuids;\n Not uuid: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopVpMove
+body: {
+ "operate": "start",
+ "rule_uuids": "1C89A121-6B03-24B2-9273-D4B93C0687AD",
+ "snap_point": "",
+ "op_code": "",
+ "group_uuids": [],
+ "power_on": 1,
+ "power_off": 1,
+ "bkup_type": "",
+ "_": "3f680705"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: rule_uuids;\n"
+ }
+}
+-----------------------------------------------------------END>
+

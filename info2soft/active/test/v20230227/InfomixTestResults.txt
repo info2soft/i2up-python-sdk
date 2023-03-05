@@ -1,0 +1,65 @@
+<START-----------------------------------------------------------
+Method: deleteInformixRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "_": "3dbaa5e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeInformixRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listinformixRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeInformixRule
+body: {
+ "rule_uuid": "",
+ "scn": "",
+ "operate": "",
+ "_": "3f215a85"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node has no license associated with this feature. UUID: 2C4C2E77-774D-C604-9A32-5038D8E590C4"
+ }
+}
+-----------------------------------------------------------END>
+

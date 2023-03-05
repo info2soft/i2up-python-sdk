@@ -1,0 +1,137 @@
+<START-----------------------------------------------------------
+Method: authNpsvr
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "_": "3e66c70b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNpsvr
+body: {
+ "npsvr_name": "",
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "maintenance": "",
+ "comment": "",
+ "cc_ip": "",
+ "_": "3f3e2539"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_name;\n Lost: config_addr;\n Lost: config_port;\n Lost: username;\n Lost: password;\n Lost: cc_ip_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNpsvr
+body: {
+ "npsvr_uuids": [],
+ "force": 1,
+ "_": "3f6f93df"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNpsvrStatus
+body: {
+ "_": "3edd2664"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvr
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": "",
+ "page": "",
+ "order_by": "",
+ "_": "3ea4b16b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNpsvr
+body: {
+ "npsvr_name": "",
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "maintenance": "",
+ "comment": "",
+ "cc_ip": "",
+ "_": "3f4a01fb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchNpsvrMaintenance
+body: {
+ "maintenance_switch": 0,
+ "npsvr_uuid": "C760f833-A549-acAd-efe6-7ee01d5Ff07f",
+ "_": "3f4ee5c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

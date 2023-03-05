@@ -58,7 +58,7 @@ def _post(url, data, auth=None, headers=None, head_config=None):
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, sk, 'post', url, data['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'post', url, data['_'], data)
 
         if headers is not None:
             for k, v in headers.items():
@@ -114,7 +114,7 @@ def _get(url, params=None, auth=None):
                 '_': _
             }
 
-        header_config = _generate_header(auth_type, token, ak, sk, 'get', url, _)
+        header_config = _generate_header(auth_type, token, ak, sk, 'get', url, _, params)
 
         requests.packages.urllib3.disable_warnings()
         r = requests.get(
@@ -145,7 +145,7 @@ def _put(url, data, auth=None, headers=None):
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, sk, 'put', url, data['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'put', url, data['_'], data)
 
         data = json.dumps(data)
 
@@ -181,7 +181,7 @@ def _delete(url, data, auth=None, headers=None):
         # 3eb647b1
         data['_'] = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
 
-        header_config = _generate_header(auth_type, token, ak, sk, 'delete', url, data['_'])
+        header_config = _generate_header(auth_type, token, ak, sk, 'delete', url, data['_'], data)
 
         data = json.dumps(data)
 
@@ -232,7 +232,7 @@ def _post_with_auth(url, data, auth):
 #     return signature
 
 
-def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=''):
+def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _='', data=None):
     timestamp = int(round(time.time() * 1000))/1000
     nonce = uuid.uuid4()
     header_config = {
@@ -255,6 +255,38 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
             bytes(sign_str, encoding='utf-8'),
             digestmod=hashlib.sha256
         ).digest()
+
+        # enable_sign_enhance
+        print(url)
+        sign_fields = []
+        url_params = urllib.parse.parse_qs(url_parse.query, keep_blank_values=True)
+        url_params.update(data)
+        print(url_params)
+        if data is not None:
+            for k, v in sorted(url_params.items(), key=lambda x: x[0]):
+                if method is 'get':
+                    if isinstance(v, list):
+                        k = k[0:-2]
+                        v = '[' + ','.join(v) + ']'
+                elif type(v) != str:
+                    v = json.dumps(v, separators=(',', ':')).replace('\\\\\\\\', '\\\\').replace('\"', '').replace('{}', '[]')
+
+                if v is '':
+                    continue
+                sign_fields.append(str(k) + '=' + str(v))
+            enhance_sign_str = '&' . join(sign_fields)
+            enhance_sign_str = enhance_sign_str
+            enhance_signature_bytes = hmac.new(
+                bytes(token or 'token', encoding='utf-8'),
+                bytes(enhance_sign_str, encoding='utf-8'),
+                digestmod=hashlib.sha256
+            ).digest()
+            header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
+
+            # print('===== enhance sign str start =====')
+            # print(enhance_sign_str)
+            # print(enhance_signature_bytes.hex().lower())
+            # print('===== enhance sign str end =====')
     else:
         signature_bytes = hmac.new(
             bytes(sk or 'ak', encoding='utf-8'),

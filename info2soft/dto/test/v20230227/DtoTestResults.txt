@@ -1,0 +1,259 @@
+<START-----------------------------------------------------------
+Method: deleteDtoRule
+body: {
+ "rule_uuids": [],
+ "force": 1,
+ "_": "3f48acdb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRule
+body: {
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "search_field": "",
+ "type": 1,
+ "_": "3f2fcd37"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleCmpResult
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleFile
+body: {
+ "type": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3d7b0098"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleSourcePath
+body: {
+ "host_uuid": "c5eD2dCA-Ee2A-5d73-628e-9e6D04b2E513",
+ "timepoint": "@timestamp()",
+ "host_ip": "",
+ "prefix": "",
+ "mapper_path": "",
+ "_": "3ea4e5e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleStatus
+body: {
+ "force_refresh": 1,
+ "_": "3cc2c0d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoRule
+body: {
+ "enable": 0,
+ "rule_name": "",
+ "sync_uuid": "",
+ "policy_type": 0,
+ "policy_str": "",
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_uuid": "",
+ "bk_path": [],
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "compare_type": 0,
+ "oph_policy": 0,
+ "bk_name_opt": 0,
+ "trans_thread_num": 0,
+ "obj_scan_thread_num": 0,
+ "cmp_thread_num": 0,
+ "cmp_algorithm": 0,
+ "cmp_result_limit": 0,
+ "band_width": "",
+ "app_db_up_switch": 0,
+ "app_db_up_type": 0,
+ "app_db_up_sql": 0,
+ "random_str": "",
+ "sync_type": 1,
+ "archive_flag": 1,
+ "archive_type": 1,
+ "archive_days": 1,
+ "compress": 0,
+ "encrypt": 0,
+ "encrypt_pass": "",
+ "scan_obj_flag": 1,
+ "archive_object": {
+  "name_feature": "",
+  "file_type": "",
+  "create_time": 1,
+  "modify_time": 1,
+  "access_time": 1,
+  "type": ""
+ },
+ "real_path": "",
+ "_": "3ef302b5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: rule_type;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n Lost: file_record;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3e0f4706"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtoRule
+body: {
+ "enable": 0,
+ "rule_name": "",
+ "rule_type": 0,
+ "sync_uuid": "",
+ "policy_type": 0,
+ "policy_str": "",
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_uuid": "",
+ "bk_path": [],
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "compare_type": 0,
+ "oph_policy": 0,
+ "bk_name_opt": 0,
+ "trans_thread_num": 0,
+ "obj_scan_thread_num": 0,
+ "cmp_thread_num": 0,
+ "cmp_algorithm": 0,
+ "cmp_result_limit": 0,
+ "band_width": "",
+ "app_db_up_switch": 0,
+ "app_db_up_type": "0",
+ "app_db_up_sql": "0",
+ "sync_type": 1,
+ "archive_flag": 1,
+ "archive_type": 1,
+ "archive_days": 1,
+ "compress": 0,
+ "encrypt": 0,
+ "encrypt_pass": "",
+ "rc_point": 1,
+ "rc_type": 1,
+ "scan_obj_flag": 1,
+ "archive_object": {
+  "name_feature": "",
+  "file_type": "",
+  "create_time": 1,
+  "modify_time": 1,
+  "access_time": 1,
+  "type": ""
+ },
+ "valid_period": 1,
+ "rate_type": 1,
+ "real_path": [],
+ "volume_uuid": "",
+ "file_record": 1,
+ "_": "3ef962f2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n"
+ }
+}
+-----------------------------------------------------------END>
+

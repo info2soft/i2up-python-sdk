@@ -1,0 +1,137 @@
+<START-----------------------------------------------------------
+Method: closeService
+body: {
+ "_": "3f4a275e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001110,
+  "message": "[1010001110] User does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createServer
+body: {
+ "ip": "46.166.61.44",
+ "_": "3eb65d24"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQuota
+body: {
+ "_": "3f0bd06d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "status": 0,
+  "node_num": 0,
+  "quota": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSummary
+body: {
+ "_": "3e927286"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "node_num": 0,
+  "rep_num": 0,
+  "ha_num": 0,
+  "node": {
+   "UNKNOWN": 0,
+   "OFFLINE": 0,
+   "ONLINE": 0
+  },
+  "rep": {
+   "UNKNOWN": 0,
+   "FINISH": 0,
+   "STOP": 0,
+   "REPLICATION": 0,
+   "MIRROR": 0,
+   "EXCEPTION": 0,
+   "STALE": 0,
+   "SWITCH": 0,
+   "WAITING": 0,
+   "EXECUTING": 0,
+   "IDLE": 0,
+   "DEAD": 0,
+   "EXCPT": 0,
+   "M_STOP": 0
+  },
+  "ha": {
+   "master_status": {
+    "HA_UNKNOWN": 0,
+    "HA_STOP": 0,
+    "HA_START": 0,
+    "HA_RUN": 0,
+    "HA_MIRROR": 0,
+    "HA_READY": 0,
+    "HA_WARN": 0,
+    "HA_FAIL": 0
+   },
+   "master_role": {
+    "HA_UNKNOWN": 0,
+    "HA_UNJOIN": 0,
+    "HA_MASTER": 0,
+    "HA_SLAVE": 0,
+    "HA_PREOVER": 0,
+    "HA_POSTOVER": 0,
+    "HA_PREBACK": 0,
+    "HA_POSTBACK": 0,
+    "HA_SWITCH": 0
+   }
+  },
+  "summary": {
+   "status": "",
+   "tenant_num": 1,
+   "sold_num": 0,
+   "offline_num": 0,
+   "reg_num": 0,
+   "rule_num": 0,
+   "exception_num": 0,
+   "near_expired_num": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listService
+body: {
+ "tenant_id@guid": "",
+ "_": "3f07589b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001110,
+  "message": "[1010001110] User does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

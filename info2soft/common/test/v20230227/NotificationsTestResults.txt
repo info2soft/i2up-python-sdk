@@ -1,0 +1,812 @@
+<START-----------------------------------------------------------
+Method: addNotifications
+body: {
+ "type": "timing",
+ "uuid": "82275AFD-97D0-15B4-D477-011E397113D6",
+ "msg": "\u89c4\u5219/\u4efb\u52a1\u6267\u884c\u5931\u8d25/\u6210\u529f/\u8d85\u65f6/\u7b56\u7565\u53d6\u6d88",
+ "name": "timing_test",
+ "table": "",
+ "module": "",
+ "cc_uuid": "",
+ "_": "3f4beb0b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010360008,
+  "message": "[1010360008] Tenant not exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotifications
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotificationsConfig
+body: {
+ "_": "3f545fd7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "config": [
+   {
+    "type": "res",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "rule",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "nas",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp_move",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "cdm",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "cloud",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "vp",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "timing",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "ha",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "active",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "routing_inspection",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "all_status",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "alarm",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "storage",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "lic",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "dto",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotificationsCount
+body: {
+ "_": "3f5babf8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "count": [
+   {
+    "type": 0,
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "active",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "alarm",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "all_status",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "cdm",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "cdm_remote_coopy",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "cloud",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "dto",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "fsp",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "fsp_move",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "ha",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "lic",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "nas",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "res",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "routing_inspection",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "storage",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "timing",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "vp",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEmailTemplate
+body: {
+ "order_by": "status",
+ "direction": "ASC",
+ "type": "",
+ "_": "3f52f05b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNotifyConf
+body: {
+ "_": "3e9fcbd4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "configs": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyEmailTemplate
+body: {
+ "content": "",
+ "comment": "",
+ "random_str": "",
+ "_": "3f78561c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateNotifications
+body: {
+ "operate": "",
+ "uuids": [],
+ "type": 1,
+ "_": "3ee34c3f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateNotificationsTemplate
+body: {
+ "uuid": "",
+ "operate": "",
+ "_": "3e90f6b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetNotificationsTimes
+body: {
+ "_": "3f31ba56"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNotificationsEmail
+body: {
+ "email": "lis@info2soft.com",
+ "_": "3f5cf80c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001012,
+  "message": "[1010001012] Operation faild \u90ae\u4ef6\u901a\u77e5\u672a\u5f00\u542f"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNotificationsSms
+body: {
+ "temp_id": "",
+ "mobile": "13123456789",
+ "_": "3f218837"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "type": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNotificationsConfig
+body: {
+ "config": [
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0
+  }
+ ],
+ "_": "3bca902f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] \u53c2\u6570\u65e0\u6548 res"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNotifyConf
+body: {
+ "maintenance_switch": 0,
+ "maintenance_source_id": "",
+ "stop_alerts": 1,
+ "maintenance_default_ip": "",
+ "maintenance_user_id": "",
+ "audio_alert_notify": 1,
+ "single_alert_loop_broadcast_times": 1,
+ "custom_audio": "",
+ "notify_contact_biz": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com"
+ },
+ "notify_contact_chk": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com",
+  "policy": {
+   "every": "month",
+   "days": "5,6"
+  }
+ },
+ "notify_contact_status": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com",
+  "policy": {
+   "every": "hour",
+   "gap": "4"
+  }
+ },
+ "maintenance_ip": "",
+ "sms_id": "",
+ "wechat_id": "",
+ "notify_limit": "10",
+ "normal_notify_switch": 0,
+ "alarm_shield": {
+  "type": {
+   "node": "",
+   "db": "",
+   "rule": "",
+   "task": ""
+  },
+  "level": {
+   "info": "",
+   "warn": "",
+   "report": "",
+   "err": "",
+   "fatal": "",
+   "recover": ""
+  },
+  "code": ""
+ },
+ "_": "3e93bb6d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

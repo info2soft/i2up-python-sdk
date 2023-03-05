@@ -1,0 +1,968 @@
+<START-----------------------------------------------------------
+Method: createCdmDrill
+body: {
+ "vm_name": "\u6d4b\u8bd55",
+ "vm_ref": "vm-10811",
+ "limit": 3,
+ "sched_day": [
+  "1",
+  "2",
+  "3"
+ ],
+ "sched_time": [
+  "00:00"
+ ],
+ "sched_every": 0,
+ "bkup_type": 0,
+ "rule_name": "",
+ "rule_type": 0,
+ "vp_uuid": "",
+ "auto": 0,
+ "vm_list": [
+  {
+   "vm_name": "",
+   "new_vm_name": "",
+   "bk_uuid": "",
+   "time": "",
+   "original_rule_uuid": "",
+   "scripts": "",
+   "bk_path": "",
+   "scripts_type": 1,
+   "os_type": 1,
+   "wk_uuid": "",
+   "src_uuid": "",
+   "data_ip_uuid": "",
+   "ver_sig": "",
+   "os_ip": ""
+  }
+ ],
+ "backup_type": "i",
+ "del_bkup_data": 0,
+ "automate": 0,
+ "auto_shutdown": 1,
+ "_": "3f3b4e44"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010121001,
+  "message": "[1010121001] VP does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCdmRecovery
+body: {
+ "fsp_recovery": {
+  "dst_path": "",
+  "monitor_type": 0,
+  "net_mapping": [
+   {
+    "bk_nic": {
+     "type": "0",
+     "name": "Ethernet0",
+     "ip": "192.168.72.74/255.255.240.0"
+    },
+    "wk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.73/255.255.240.0"
+    }
+   }
+  ],
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "mirr_sync_attr": "1",
+  "bk_path": [
+   "/fsp_bk/192.168.71.77_26821/20190111113656/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/bin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/boot/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/etc/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/lib/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/lib64/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/root/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/sbin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/bin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/lib/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/lib64/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/libexec/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/local/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/sbin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/var/lib/nfs/"
+  ],
+  "band_width": "",
+  "fsp_name": "testRC",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "net_mapping_type": "2",
+  "mirr_open_type": "0",
+  "restore_point": "20190111113656",
+  "mirr_file_check": "0",
+  "service_uuid": "",
+  "excl_path": [],
+  "wk_path": [
+   "/",
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "mirr_sync_flag": "0",
+  "fsp_wk_shut_flag": "2",
+  "sync_item": "/",
+  "failover": "0",
+  "fsp_type": "5",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "data_ip_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "by_type": "",
+  "bak_wk_uuid": "",
+  "bak_wk_address": "",
+  "vp_uuid": "",
+  "storage_uuid": "",
+  "bak_wk_name": "",
+  "vm_name": "",
+  "vm_ref": "",
+  "compress_switch": 1,
+  "compress": 1,
+  "encrypt_switch": 1,
+  "encrypt": "",
+  "secret_key": ""
+ },
+ "_": "3f5a14a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_recovery[encrypt];\n Lost: fsp_recovery[secret_key];\n Lost: fsp_recovery[by_type];\n Lost: fsp_recovery[bak_wk_uuid];\n Lost: fsp_recovery[vp_uuid];\n Lost: fsp_recovery[storage_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCdmRemoteCoopy
+body: {
+ "old_bk_uuid": "",
+ "old_platform_uuid": "",
+ "old_storage_uuid": "",
+ "rule_uuids": [],
+ "proxy_uuid": "",
+ "new_bk_uuid": "",
+ "new_platform_uuid": "",
+ "data_addr": "",
+ "new_storage_uuid": "",
+ "bkup_policy": "",
+ "bkup_one_time": "",
+ "bkup_schedule": {
+  "sched_gap_min": "60",
+  "sched_time": "[  \"00:00:00\"]",
+  "sched_day": "[  \"1\"]",
+  "sched_time_end": "23:59",
+  "limit": "5",
+  "sched_time_start": "00:00",
+  "sched_every": "0"
+ },
+ "compress_switch": "",
+ "encrypt_switch": "",
+ "band_width": "",
+ "rule_uuid": "",
+ "start_type": "",
+ "prefix": "",
+ "_": "3f387c4b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110033,
+  "message": "[1010110033] The valid license capacity has been used up, please check the license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFfoMount
+body: {
+ "vp_uuid": "",
+ "bk_version": "",
+ "os_version": "",
+ "storage_uuid": "",
+ "mount_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "protocol": "",
+ "fsp_uuid": "",
+ "acl": "",
+ "by_type": "",
+ "wk_address": "",
+ "wk_name": "",
+ "client_uuid": "",
+ "specify_client": 0,
+ "_": "3f7bd4cc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_name;\n Lost: by_type;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: vp_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: os_version;\n Lost: protocol;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTakeOverDrill
+body: {
+ "vm_name": "",
+ "rule_type": 1,
+ "wk_uuid": "",
+ "bk_version": "",
+ "vm_cpu_core": "",
+ "vm_mem": "",
+ "vm_network": {
+  "cards": [
+   {
+    "mac": "",
+    "gateway": [],
+    "dns": {
+     "domain": "",
+     "servers": []
+    },
+    "cidr": [],
+    "network_id": "",
+    "network_name": ""
+   }
+  ],
+  "dns": {
+   "domain": "",
+   "servers": ""
+  }
+ },
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "bios_type": "",
+ "vp_uuid": "",
+ "timezone": "",
+ "storage_uuid": "",
+ "bk_path": "",
+ "os_version": "",
+ "fsp_uuid": "",
+ "by_type": 1,
+ "wk_address": "",
+ "wk_name": "",
+ "has_virtio": "false",
+ "has_virtio_scsi": "false",
+ "has_net_kvm": "false",
+ "network_switch": 0,
+ "restore_info": {},
+ "_": "3c9dea9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vm_name;\n Lost: vp_uuid;\n Lost: wk_address;\n Lost: wk_name;\n Lost: bk_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: vm_cpu_core;\n Lost: vm_mem;\n Lost: bios_type;\n Lost: os_version;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCdmDrill
+body: {
+ "rule_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "group_uuids": [],
+ "delete_tgtvm": 0,
+ "_": "3e9eeec9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCdmRemoteCoopy
+body: {
+ "del_policy": "",
+ "rule_uuids": [],
+ "_": "3ed907e5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+  "fail_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+    "rule_uuid": null
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] Call failed. Can't connect to a node , platform or Address",
+    "rule_uuid": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFfoMount
+body: {
+ "mount_uuids": [],
+ "_": "3da9a7f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "force": 1,
+ "del_policy": 0,
+ "_": "3f10a9ef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCdm
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCdmDrillGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCdmRemoteCoopy
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "cdm_remote_coopy": {
+   "new_move_uuid": null,
+   "is_biz_admin": 1,
+   "can_del": 1,
+   "can_op": 1,
+   "can_up": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFfomount
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTakeOverDrill
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: ffoMountList
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "mount_name",
+ "search_value": "mount_name",
+ "_": "3df719b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getByWk
+body: {
+ "wk_uuid": "",
+ "vp_uuid": "",
+ "_": "3f6f2e1d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getHostStorageList
+body: {
+ "vp_uuid": "",
+ "_": "3eb86b41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNetworkList
+body: {
+ "uuid": "",
+ "type": "",
+ "storage_id": "",
+ "_": "3f4fe1de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: type;\n Lost: storage_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodeList
+body: {
+ "path": "",
+ "type": "",
+ "bk_uuid": "",
+ "_": "3f5b869b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getPointList
+body: {
+ "bk_uuid": "",
+ "path": "",
+ "type": "",
+ "suffix": "",
+ "page": 1,
+ "limit": 1,
+ "rule_uuid": "",
+ "search_key": "",
+ "search_value": "2",
+ "start": 1,
+ "end": 1,
+ "order": "",
+ "_": "3ea32278"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getResourceList
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f0c91f4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVmInfo
+body: {
+ "vp_uuid": "",
+ "bk_uuid": "",
+ "vm_ref": "",
+ "_": "3f1ce261"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: bk_uuid;\n Lost: vm_ref;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVmStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f2c9465"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdm
+body: {
+ "type": 3,
+ "limit": 10,
+ "page": 1,
+ "status": "",
+ "_": "3ee3595f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmDrillStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f275129"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRecovery
+body: {
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3f04c4bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRemoteCoopy
+body: {
+ "limit": "",
+ "page": "",
+ "search_args": "",
+ "search_value": "",
+ "_": "3f078463"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRemoteCoopyLicense
+body: {
+ "old_storage_uuid": "",
+ "new_storage_uuid": "",
+ "_": "3f00f0a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The node has no license associated with this feature."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRemoteCoopyStatus
+body: {
+ "rule_uuids": "",
+ "force_refresh": 1,
+ "_": "3e84e991"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f19f95f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFfoMountStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f0ec99e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFfoMount
+body: {
+ "vp_uuid": "",
+ "bk_version": "",
+ "os_version": "",
+ "storage_uuid": "",
+ "mount_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "protocol": "",
+ "acl": "",
+ "random_str": "",
+ "fsp_uuid": "",
+ "specify_client": 1,
+ "client_uuid": "",
+ "_": "3ed91915"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_name;\n Lost: by_type;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: vp_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: os_version;\n Lost: protocol;\n Lost: client_uuid;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateCdmRecovery
+body: {
+ "fsp_uuids": [],
+ "_": "3f5c99a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: fsp_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "type": "",
+ "_": "3ce3c6e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: queryGroupVmStatus
+body: {
+ "rule_uuid": "",
+ "group_uuid": "",
+ "_": "3f580e47"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopCdmDrill
+body: {
+ "msg": "",
+ "operate": "",
+ "rule_uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "group_uuids": [],
+ "status": "",
+ "_": "3f3120f0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyCdmCapacity
+body: {
+ "old_storage_uuid": "",
+ "new_storage_uuid": "",
+ "old_vp_uuid": "",
+ "new_vp_uuid": "",
+ "_": "3f3a6b1e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyCdmRemoteCoopyDiskSpace
+body: {
+ "bk_uuid": "",
+ "_": "3f0333fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyDuplicateCdmCoopyRule
+body: {
+ "fsp_uuids": [],
+ "_": "3e719947"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyOracleArchiveMode
+body: {
+ "username": "",
+ "password": "",
+ "sqlplus_path": "",
+ "sid": "",
+ "timeout": "",
+ "port": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "_": "3ebacb7c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n Lost: timeout;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+

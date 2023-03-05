@@ -719,3 +719,27 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: authNode
+body: {
+ "proxy_switch": 0,
+ "config_addr": "192.168.72.76",
+ "config_port": 26821,
+ "node_uuid": "",
+ "os_user": "chenky",
+ "os_pwd": "O36jjEXFPW39UHTyiSRrs/dMo4043T+JbZSSSR3Iop4jox9s4IeKhDNGpy/u9uKTBf3coOkTuenw3VffAgIqj6DtvKGzqpf0/dePsAl7o6HjXMI0L6LpE/FQd203+5Kzp+Enr4h6FigjAZIMc5dGnHoQEYdzopDdTzhL7eltW1uZ/4hAEN1VWxlnufY6peD5nE2GzpZ5drEu5HK8pVdf2ffJI61fN480in4a2IwKfc6nSaw7EVnbU0sylFKm7XXbrHSjtiSbsmAjSsUkq8plC1LEvTQFirwf+9xvB5vVvP2wbt0Ws1eRAeK4Q9vDOjvCskHOz++Mv3oHGAWQTYSXnQ==",
+ "i2id": "",
+ "use_credential": 0,
+ "cred_uuid": "",
+ "_": "3e07ce12"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] Call failed. Can't connect to a node , platform or Address Node server authentication fail"
+ }
+}
+-----------------------------------------------------------END>
+

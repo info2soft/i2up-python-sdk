@@ -1,0 +1,69 @@
+<START-----------------------------------------------------------
+Method: getActiveLogAlarm
+body: {
+ "limit": 5,
+ "page": 1,
+ "start_time": "2022-07-15 10:15:13",
+ "end_time": "2022-07-19 10:15:13",
+ "success": 1,
+ "_": "3f6f8fab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "syncRecords": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLogWarning
+body: {
+ "limit": 1,
+ "offset": "",
+ "_": "3f2594ab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleLog
+body: {
+ "offset": 0,
+ "limit": 10,
+ "date_start": "",
+ "date_end": "",
+ "type": 1,
+ "module_type": 1,
+ "query_type": 1,
+ "_": "3f42e584"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": {
+   "error": {
+    "code": 1010001017,
+    "message": "[1010001017] Database op failed"
+   }
+  }
+ }
+}
+-----------------------------------------------------------END>
+
