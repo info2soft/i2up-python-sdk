@@ -126,18 +126,33 @@ class NpsvrTestCase(unittest.TestCase):
         assert r[0]['ret'] == 200
         write(r[0], 'Npsvr', 'getNpsvrStatus', body)
 
-    def testSwitchNpsvrMaintenance(self):
+    def testMaintainNpsvr(self):
         a = Auth(username, pwd)
         body = {
-            'maintenance_switch': 0,
+            'switch': 0,
+            'operate': 'maintain',
             'npsvr_uuid': 'C760f833-A549-acAd-efe6-7ee01d5Ff07f',
         }
         
         npsvr = Npsvr(a)
-        r = npsvr.switchNpsvrMaintenance(body)
+        r = npsvr.maintainNpsvr(body)
         print(r[0])
         assert r[0]['ret'] == 200
-        write(r[0], 'Npsvr', 'switchNpsvrMaintenance', body)
+        write(r[0], 'Npsvr', 'maintainNpsvr', body)
+
+    def testRenewKeyNpsvr(self):
+        a = Auth(username, pwd)
+        body = {
+            'switch': 0,
+            'operate': 'renew_key',
+            'npsvr_uuid': 'C760f833-A549-acAd-efe6-7ee01d5Ff07f',
+        }
+
+        npsvr = Npsvr(a)
+        r = npsvr.renewKeyNpsvr(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Npsvr', 'renewKeyNpsvr', body)
 
 
 if __name__ == '__main__':

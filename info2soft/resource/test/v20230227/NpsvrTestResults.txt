@@ -135,3 +135,39 @@ response: {
 }
 -----------------------------------------------------------END>
 
+<START-----------------------------------------------------------
+Method: maintainNpsvr
+body: {
+ "switch": 0,
+ "operate": "maintain",
+ "npsvr_uuid": "C760f833-A549-acAd-efe6-7ee01d5Ff07f",
+ "_": "3f58bd46"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewKeyNpsvr
+body: {
+ "switch": 0,
+ "operate": "renew_key",
+ "npsvr_uuid": "C760f833-A549-acAd-efe6-7ee01d5Ff07f",
+ "_": "3f6548fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+

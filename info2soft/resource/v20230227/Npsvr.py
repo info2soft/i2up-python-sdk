@@ -87,15 +87,40 @@ class Npsvr (object):
         return res
 
     '''
-     * npsvr - 维护模式修改
+     * npsvr - 操作 维护模式修改
      * 
      * @param dict $body  参数详见 API 手册
      * @return list
     '''
-    def switchNpsvrMaintenance(self, body):
+    def maintainNpsvr(self, body):
         
-        url = '{0}/vp/npsvr/maintenance'.format(config.get_default('default_api_host'))
-        
+        url = '{0}/vp/npsvr/operate'.format(config.get_default('default_api_host'))
+        if body is None:
+            body = {
+                'operate': 'maintain'
+            }
+        else:
+            body['operate'] = 'maintain'
+
+        res = https._post(url, body, self.auth)
+        return res
+
+    '''
+     * npsvr - 操作 更新公钥
+     * 
+     * @param dict $body  参数详见 API 手册
+     * @return list
+    '''
+    def renewKeyNpsvr(self, body):
+
+        url = '{0}/vp/npsvr/operate'.format(config.get_default('default_api_host'))
+        if body is None:
+            body = {
+                'operate': 'renew_key'
+            }
+        else:
+            body['operate'] = 'renew_key'
+
         res = https._post(url, body, self.auth)
         return res
 
