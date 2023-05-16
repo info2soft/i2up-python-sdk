@@ -1,3 +1,4 @@
+from info2soft.common.Rsa import Rsa
 from info2soft import https
 from info2soft import config
 import linecache
@@ -26,9 +27,10 @@ def getToken(username, pwd):
             code = -1
     if code != 0 or token == '':
         url = '{0}/auth/token'.format(config.get_default('default_api_host'))
+        rsa = Rsa()
         data = {
             'username': username,
-            'pwd': pwd
+            'pwd': rsa.rsaEncrypt(pwd)
         }
         r = https._post(url, data)
         if r[0] is not None and r[0]['ret'] == 200 and r[0]['data']['code'] == 0:
