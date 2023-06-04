@@ -48,7 +48,7 @@ def __return_wrapper(resp):
     return ret, ResponseInfo(resp)
 
 
-def _post(url, data, auth=None, headers=None, head_config=None):
+def _post(url, data, auth=None, headers=None, head_config=None, skip_retry=False):
     try:
         src_data = data
         auth_type = 'token' if auth is None else auth.auth_type
@@ -79,13 +79,13 @@ def _post(url, data, auth=None, headers=None, head_config=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 401 or ret[0]['ret'] == 403:
-        return _post(url, src_data, auth.refresh_token(), headers, head_config)
+    if (not skip_retry) and (ret[0]['ret'] == 401 or ret[0]['ret'] == 403 or r.status_code == 403):
+        return _post(url, src_data, auth.refresh_token(), headers, head_config, True)
     else:
         return ret
 
 
-def _get(url, params=None, auth=None):
+def _get(url, params=None, auth=None, skip_retry=False):
     try:
         src_url = url
         auth_type = 'token' if auth is None else auth.auth_type
@@ -129,13 +129,13 @@ def _get(url, params=None, auth=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 401 or ret[0]['ret'] == 403:
-        return _get(src_url, params, auth.refresh_token())
+    if (not skip_retry) and (ret[0]['ret'] == 401 or ret[0]['ret'] == 403 or r.status_code == 403):
+        return _get(src_url, params, auth.refresh_token(), True)
     else:
         return ret
 
 
-def _put(url, data, auth=None, headers=None):
+def _put(url, data, auth=None, headers=None, skip_retry=False):
     try:
         src_data = data
         auth_type = 'token' if auth is None else auth.auth_type
@@ -165,13 +165,13 @@ def _put(url, data, auth=None, headers=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 401 or ret[0]['ret'] == 403:
-        return _put(url, src_data, auth.refresh_token(), headers)
+    if (not skip_retry) and (ret[0]['ret'] == 401 or ret[0]['ret'] == 403 or r.status_code == 403):
+        return _put(url, src_data, auth.refresh_token(), headers, True)
     else:
         return ret
 
 
-def _delete(url, data, auth=None, headers=None):
+def _delete(url, data, auth=None, headers=None, skip_retry=False):
     try:
         src_data = data
         auth_type = 'token' if auth is None else auth.auth_type
@@ -201,8 +201,8 @@ def _delete(url, data, auth=None, headers=None):
         return None, ResponseInfo(None, e)
 
     ret = __return_wrapper(r)
-    if ret[0]['ret'] == 401 or ret[0]['ret'] == 403:
-        return _delete(url, src_data, auth.refresh_token(), headers)
+    if (not skip_retry) and (ret[0]['ret'] == 401 or ret[0]['ret'] == 403 or r.status_code == 403):
+        return _delete(url, src_data, auth.refresh_token(), headers, True)
     else:
         return ret
 
