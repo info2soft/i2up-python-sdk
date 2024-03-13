@@ -1,0 +1,2156 @@
+<START-----------------------------------------------------------
+Method: createTapeLibrary
+body: {
+ "library_name": "\u78c1\u5e26\u5e931",
+ "comment": "\u8bf4\u660e",
+ "bk_uuid_list": [
+  "D42BF707-C971-EEA9-521F-BB0F3F7A92FC"
+ ],
+ "library_list": [
+  {
+   "bk_uuid": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+   "library_sn": "SYZZ_A",
+   "library_vendor": "STK",
+   "library_product": "L80",
+   "library_revision": "0106",
+   "drive_num": 1,
+   "slot_num": 1,
+   "dev_path": "/dev",
+   "checked": ""
+  }
+ ],
+ "ctrl_host_uuid": "",
+ "library_sn": "",
+ "library_vendor": "",
+ "library_product": "",
+ "library_revision": "",
+ "drive_num": "",
+ "dev_path": "",
+ "slot_num": "",
+ "driver_info": [
+  {
+   "bk_uuid": "",
+   "library_sn": "",
+   "driver_list": [
+    {
+     "checked": "",
+     "index": "",
+     "barcode": "",
+     "driver_sn": "",
+     "dev_path": "",
+     "status": "",
+     "last_write": ""
+    }
+   ]
+  }
+ ],
+ "robotic_arm_info": [],
+ "slave": 1,
+ "_": "3e0ca3ab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ctrl_host_uuid;\n Lost: library_sn;\n Lost: library_vendor;\n Lost: library_product;\n Lost: library_revision;\n Lost: drive_num;\n Lost: slot_num;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTapePool
+body: {
+ "pool_name": "",
+ "comment": "",
+ "note": "",
+ "_": "3ddc63cd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapeLibrary
+body: {
+ "library_uuids": [],
+ "force": 1,
+ "_": "3e7d29eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapePool
+body: {
+ "pool_uuids": [],
+ "_": "3edd1831"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTapeLibrary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusyIeSlot
+body: {
+ "library_uuid": "",
+ "_": "3ccaf1a2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusySlot
+body: {
+ "library_uuid": "",
+ "_": "3e881b9e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibrary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "ctrl_host_name": "192.168.31.31",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "ctrl_host_uuid": "269C3D29-3131-4F21-9392-17F0A3CD9368",
+    "library_name": "31Tape-A",
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "library_sn": "XYZZY_A",
+    "library_vendor": "STK",
+    "library_revision": "0105",
+    "drive_num": 4,
+    "slot_num": 39
+   },
+   {
+    "ctrl_host_name": "Tape35",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "ctrl_host_uuid": "D6C9CAA4-B1C3-4184-8A07-1D0F3B1CB536",
+    "library_name": "Tape35-30",
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "library_vendor": "ADIC",
+    "library_revision": "7000",
+    "drive_num": 8,
+    "slot_num": 200
+   }
+  ],
+  "total": 2
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibraryDrivers
+body: {
+ "library_uuid": "",
+ "list": [
+  {
+   "bk_uuid": "",
+   "library_sn": ""
+  }
+ ],
+ "_": "3ed5113b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "library_name": null,
+  "ctrl_host_uuid": null,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibraryRoboticArm
+body: {
+ "library_sn": "",
+ "bk_uuid_list": "",
+ "_": "3f5482aa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid_list[];\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMediaBkData
+body: {
+ "slot_barcode": "",
+ "limit": "",
+ "page": "",
+ "begin_time": "",
+ "end_time": "",
+ "check_rule": 1,
+ "task_uuid": "",
+ "_": "3f648244"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: slot_barcode;\n Lost: limit;\n Lost: page;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMediaBkFiles
+body: {
+ "slot_barcode": "",
+ "bk_index": "",
+ "bk_path": "",
+ "limit": "",
+ "page": "",
+ "_": "3e23cb8d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: slot_barcode;\n Lost: bk_index;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMediaDetails
+body: {
+ "slot_barcode": "",
+ "bk_index": "",
+ "bk_path": "",
+ "limit": 1,
+ "page": 1,
+ "_": "3f32f6dd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: slot_barcode;\n Lost: bk_index;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapePools
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "pool_list": [
+   {
+    "id": 1,
+    "pool_uuid": "F03AB7C7-BAD6-4B3D-903C-5590029758BA",
+    "pool_name": "Public",
+    "note": "Public",
+    "comment": null,
+    "random_str": "1F563ACA-AD4F-4223-8A94-59EA40E3B46A",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1709286935
+   },
+   {
+    "id": 2,
+    "pool_uuid": "B75BF13D-93ED-4350-87AD-775FCEA88D35",
+    "pool_name": "pool",
+    "note": "pool",
+    "comment": "",
+    "random_str": "5BDC012D-CD7C-48AF-BC6C-01E8B873F700",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1709350652
+   },
+   {
+    "id": 3,
+    "pool_uuid": "61C52142-AE69-4087-BAD7-03A845DA88A0",
+    "pool_name": "pooltest",
+    "note": "pooltest",
+    "comment": null,
+    "random_str": "8B1035EA-A92C-4DF4-B7B9-6C8085C5E3C2",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1709698441
+   },
+   {
+    "id": 4,
+    "pool_uuid": "CC872FC8-316C-4EBA-8C9E-45A3959F9FA5",
+    "pool_name": "Files_D2T",
+    "note": "Files_D2T",
+    "comment": "",
+    "random_str": "7E10046B-F765-4494-A248-3EDC01909516",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "create_time": 1709883982
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTapeLibrary
+body: {
+ "library_name": "\u78c1\u5e26\u5e931",
+ "library_uuid": "",
+ "random_str": "",
+ "comment": "\u8bf4\u660e",
+ "bk_uuid_list": [
+  "D42BF707-C971-EEA9-521F-BB0F3F7A92FC"
+ ],
+ "library_list": [
+  {
+   "bk_uuidtrue": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+   "library_sn": "SYZZ_A",
+   "library_vendor": "STK",
+   "library_product": "L80",
+   "library_revision": "0106",
+   "drive_num": 1,
+   "slot_num": 1,
+   "dev_path": "/dev",
+   "checked": 1
+  }
+ ],
+ "curl_host_uuid": "",
+ "library_sn": "",
+ "library_vendor": "",
+ "library_product": "",
+ "library_revision": "",
+ "drive_num": "",
+ "dev_path": "",
+ "slot_num": "",
+ "driver_info": [
+  {
+   "bk_uuid": "",
+   "library_sn": "",
+   "driver_list": {
+    "checked": "",
+    "index": "",
+    "barcode": "",
+    "driver_sn": "",
+    "dev_path": "",
+    "status": "",
+    "last_write": ""
+   }
+  }
+ ],
+ "_": "3f64cd71"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ctrl_host_uuid;\n Lost: library_sn;\n Lost: library_vendor;\n Lost: library_product;\n Lost: library_revision;\n Lost: drive_num;\n Lost: slot_num;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshTapeLibrary
+body: {
+ "_": "3c7d4f8a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: bk_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshTapeLibrarySlot
+body: {
+ "library_uuid": "",
+ "_": "3f4b25cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: sanTapeLibraries
+body: {
+ "_": "3ea0298b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: bk_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: scanSlot
+body: {
+ "library_uuid": "",
+ "_": "3e8d574e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setTapeLibraryFreezeNumber
+body: {
+ "medium_type": 1,
+ "library_sn": "",
+ "freeze_number": 1,
+ "_": "3f13a4e2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateTapePool
+body: {
+ "comment": "",
+ "note": "",
+ "_": "3e4e54e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: browseTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "browse",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "_": "3f37f1e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "task_uuids": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: enableTapeLibraryDrivers
+body: {
+ "library_uuid": "",
+ "driver_index": "",
+ "status": "",
+ "dev_path": "",
+ "driver_sn": "",
+ "operate": "enable",
+ "slot_index": "",
+ "slot_flag": "",
+ "barcode": "",
+ "tape_uuid": "",
+ "_": "3f07e6a8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n Lost: driver_index;\n Lost: status;\n Lost: dev_path;\n Lost: driver_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: eraseTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "erase",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "_": "3f71c868"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "task_uuids": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "export",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "_": "3e8cfdf9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "task_uuids": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: freezeTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "freeze",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "_": "3ea41d20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "task_uuids": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importTapeLibrary
+body: {
+ "library_uuids": [],
+ "operate": "import",
+ "list": [
+  {
+   "ieslot_barcode": "",
+   "ieslot_index": ""
+  }
+ ],
+ "_": "3f465361"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuids[];\n Lost: list[0][ieslot_index];\n Lost: list[0][ieslot_barcode];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveTapeLibraryDrivers
+body: {
+ "library_uuid": "",
+ "driver_index": "",
+ "status": "",
+ "dev_path": "",
+ "driver_sn": "",
+ "operate": "move",
+ "slot_index": "",
+ "slot_flag": "",
+ "barcode": "",
+ "tape_uuid": "",
+ "_": "3f3a44f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n Lost: slot_index;\n Lost: slot_flag;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "move",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "_": "3e66f76c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "task_uuids": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebuildTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "rebuild",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "_": "3f5b167d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "task_uuids": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshTapeMedia
+body: {
+ "list": [],
+ "operate": "refresh",
+ "_": "3e7791eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: list[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMedia
+body: {
+ "type": 1,
+ "flag": 1,
+ "content_init": "",
+ "_": "3f72e8d9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8659,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "9",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01010L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8658,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "8",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01009L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8657,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "7",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01008L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8656,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "6",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01007L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8655,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "5",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01006L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8654,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "4",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01005L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8681,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "38",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01039L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8680,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "37",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01038L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8679,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "36",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01037L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8678,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "35",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01036L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8677,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "34",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01035L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8676,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "33",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01034L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8675,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "32",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01033L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8674,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "31",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01032L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8673,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "30",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01031L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8653,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "3",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01004L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8672,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "29",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "F01030L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8671,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "22",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "CLN102L5",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8670,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "21",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "CLN101L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8652,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "2",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01003L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8669,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "19",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01020L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8668,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "18",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01019L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8667,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "17",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01018L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8666,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "16",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01017L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8665,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "15",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01016L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8664,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "14",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01015L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8663,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "13",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01014L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8662,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "12",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01013L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8661,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "11",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01012L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8660,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "10",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01011L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8651,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "1",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01002L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "31Tape-A",
+    "library_sn": "XYZZY_A",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8650,
+    "library_uuid": "20F01CFC-2BF7-471C-9CFF-78DAA4570922",
+    "slot_index": "0",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "E01001L4",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895158,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710488877,
+    "id": 8632,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "9",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL163S",
+    "slot_tapename": "8372071024821254",
+    "slot_tapesequence": "0",
+    "pool_name": "Files_D2T",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709884075,
+    "move_times": 2,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8631,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "8",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "VTL007S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710487309,
+    "id": 8630,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "7",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL161S",
+    "slot_tapename": "8356002493957127",
+    "slot_tapesequence": "0",
+    "pool_name": "pool",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709882502,
+    "move_times": 11,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710487309,
+    "id": 8629,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "6",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL160S",
+    "slot_tapename": "8356002493957126",
+    "slot_tapesequence": "0",
+    "pool_name": "pool",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709882510,
+    "move_times": 11,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710487309,
+    "id": 8628,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "5",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL159S",
+    "slot_tapename": "8361764739679237",
+    "slot_tapesequence": "0",
+    "pool_name": "pool",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709882508,
+    "move_times": 3,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8627,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "4",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL008S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 1,
+    "last_write": null,
+    "move_times": 1,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8626,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "3",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "VTL006S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8649,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "26",
+    "slot_flag": "UNKNOWN_DATA",
+    "slot_barcode": "VTL171S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 1,
+    "last_write": null,
+    "move_times": 1,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8648,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "25",
+    "slot_flag": "UNKNOWN_DATA",
+    "slot_barcode": "VTL170S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 1,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8647,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "24",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL178S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 1,
+    "last_write": null,
+    "move_times": 3,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710333019,
+    "id": 8646,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "23",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL177S",
+    "slot_tapename": "8356002493957125",
+    "slot_tapesequence": "0",
+    "pool_name": "pool",
+    "outbound": 0,
+    "status": 1,
+    "last_write": 0,
+    "move_times": 24,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8645,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "22",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL169S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 1,
+    "last_write": null,
+    "move_times": 2,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8644,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "21",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL167S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 1,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710488877,
+    "id": 8643,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "20",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL166S",
+    "slot_tapename": "8372071024821256",
+    "slot_tapesequence": "0",
+    "pool_name": "Files_D2T",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709884076,
+    "move_times": 2,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8625,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "2",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL002S",
+    "slot_tapename": "test",
+    "slot_tapesequence": "0",
+    "pool_name": "pooltest",
+    "outbound": 0,
+    "status": 1,
+    "last_write": 0,
+    "move_times": 4,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8642,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "19",
+    "slot_flag": "UNKNOWN_DATA",
+    "slot_barcode": "VTL173S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 1,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8641,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "18",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "VTL172S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 1,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710488877,
+    "id": 8640,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "17",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL165S",
+    "slot_tapename": "8372071024821255",
+    "slot_tapesequence": "0",
+    "pool_name": "Files_D2T",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709884075,
+    "move_times": 2,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": 1709814821,
+    "id": 8639,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "16",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL164S",
+    "slot_tapename": "8361866654974981",
+    "slot_tapesequence": "0",
+    "pool_name": "pooltest",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 0,
+    "move_times": 6,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710487309,
+    "id": 8638,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "15",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL162S",
+    "slot_tapename": "8356002493957128",
+    "slot_tapesequence": "0",
+    "pool_name": "pool",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709882504,
+    "move_times": 12,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8637,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "14",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL168S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 1,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "ACTIVE",
+    "slot_expiretime": 1710488877,
+    "id": 8636,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "13",
+    "slot_flag": "ACTIVE",
+    "slot_barcode": "VTL003S",
+    "slot_tapename": "8372071024821253",
+    "slot_tapesequence": "0",
+    "pool_name": "Files_D2T",
+    "outbound": 0,
+    "status": 0,
+    "last_write": 1709884077,
+    "move_times": 2,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8635,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "12",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "VTL004S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8634,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "11",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "VTL005S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8633,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "10",
+    "slot_flag": "UNKNOWN",
+    "slot_barcode": "VTL009S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "Public",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 0,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8624,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "1",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL001S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "pooltest",
+    "outbound": 0,
+    "status": 0,
+    "last_write": null,
+    "move_times": 5,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   },
+   {
+    "library_name": "Tape35-30",
+    "library_sn": "A4C082AC6B9943C4AEC10000",
+    "content_init": "BLANK",
+    "slot_expiretime": null,
+    "id": 8623,
+    "library_uuid": "F0E9C550-FD63-4D11-8D4B-E2A42640CFEF",
+    "slot_index": "0",
+    "slot_flag": "BLANK",
+    "slot_barcode": "VTL000S",
+    "slot_tapename": "",
+    "slot_tapesequence": null,
+    "pool_name": "pooltest",
+    "outbound": 0,
+    "status": 1,
+    "last_write": null,
+    "move_times": 7,
+    "update_time": 1709895157,
+    "slot_mtype": "tape",
+    "write_protected": 0
+   }
+  ],
+  "total": 59
+ }
+}
+-----------------------------------------------------------END>
+

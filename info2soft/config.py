@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
 # 数据 Host
-API_HOST = 'https://192.168.7.250:58086/api'
+API_HOST = 'https://192.168.63.40:58086/api'
+API_HOST_WEBAPI = 'https://192.168.63.40:58086/api/vers/v3'
 # API_HOST = ''
 
 _config = {
-    'default_api_host': API_HOST,
+    'default_api_host': API_HOST,  # i2up 分支
+    'webapi_api_host': API_HOST_WEBAPI,  # webapi 分支
     'connection_timeout': 30,        # 链接超时为时间为30s
     'connection_retries': 3,         # 链接重试次数为3次
     'connection_pool': 10,           # 链接池个数为10

@@ -1,0 +1,282 @@
+<START-----------------------------------------------------------
+Method: describeCcGeneralInfo
+body: {
+ "type": "all",
+ "process_sort_by": "cpu",
+ "process_filter_name": "",
+ "process_limit": 1,
+ "_": "3f4c07eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110003,
+  "message": "[1011110003] cntlsvr not running"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCcMonitor
+body: {
+ "_": "3f19024a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "request_stat": {
+   "normal": 270304,
+   "illegal": 69846,
+   "error": {
+    "401": 0,
+    "404": 0,
+    "500": 0,
+    "502": 0,
+    "503": 0
+   }
+  },
+  "alarm_stat": [
+   "2024-03-11 17:08:53 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:07:52 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:06:51 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:05:50 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:04:49 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:03:48 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:02:47 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:01:46 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 17:00:45 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:59:44 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:58:43 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:57:42 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:56:41 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:55:40 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:54:39 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:53:38 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:52:37 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:51:36 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:50:35 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start",
+   "2024-03-11 16:49:34 Find Free Tape Drives A4C082AC6B9943C4AEC10000 Start"
+  ],
+  "login_stat": [
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 0,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 0,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 0,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 0,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 0,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.7.250",
+    "result": 1,
+    "cc_ip": "192.168.63.40"
+   }
+  ],
+  "cc_status": [
+   {
+    "ip": "192.168.63.40",
+    "status": 0,
+    "load": "0.13%",
+    "cpu": "4.1%",
+    "mem": "14.4%",
+    "storage": [
+     {
+      "label": "/",
+      "value": "74%"
+     }
+    ],
+    "iaproxy": 1,
+    "ctrlcenter": 1
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCronTask
+body: {
+ "page": 1,
+ "limit": 15,
+ "_": "3ddb51b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "node_ip": "",
+ "start_time": 1,
+ "last_time": 1,
+ "_": "3d10aebd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info": {
+   "load": null,
+   "storage": null,
+   "iaproxy": null,
+   "ctrlcenter": null,
+   "cpu": [],
+   "mem": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCronTask
+body: {
+ "id": "",
+ "interval": 1,
+ "_": "3f10b922"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetCronTask
+body: {
+ "id": 4,
+ "_": "3b8cd3b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+

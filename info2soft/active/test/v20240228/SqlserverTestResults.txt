@@ -1,0 +1,632 @@
+<START-----------------------------------------------------------
+Method: batchCreateRule
+body: {
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "enable_cdc": 0,
+  "start_rule_now": 1,
+  "dump_thd": 1,
+  "sync_mode": 1,
+  "drop_old_tab": 1,
+  "table_map": "",
+  "etl_settings": {
+   "etl_table": [
+    {
+     "oprType": "",
+     "table": "",
+     "user": "",
+     "process": "",
+     "addInfo": ""
+    }
+   ]
+  }
+ },
+ "rule_list": [
+  {
+   "rule_name": "",
+   "src_db_uuid": "",
+   "tgt_db_uuid": "",
+   "mirror_db_uuid": ""
+  }
+ ],
+ "_": "3e272498"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkName
+body: {
+ "_": "3f3d3957"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": [
+   {
+    "src_table": "",
+    "dst_table": "",
+    "src_user": "",
+    "dst_user": "",
+    "column": [
+     {
+      "src_column": "",
+      "dst_column": ""
+     }
+    ]
+   }
+  ],
+  "enable_cdc": 0,
+  "mirror_db_uuid": "",
+  "sync_mode": 1,
+  "dump_thd": 1,
+  "drop_old_tab": 1,
+  "lsn": "",
+  "etl_settings": {
+   "etl_table": [
+    {
+     "oprType": "",
+     "table": "",
+     "user": "",
+     "process": "",
+     "addInfo": ""
+    }
+   ]
+  },
+  "loader": 1,
+  "ip": "",
+  "datport": "",
+  "db_user_map": {},
+  "src_connect_user": "",
+  "dst_connect_user": "",
+  "bw_settings": {
+   "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+  },
+  "inc_sync_ddl_data": [],
+  "filter_table_settings": {
+   "exclude_table": []
+  },
+  "full_sync_obj_filter": {
+   "full_sync_obj_data": [
+    "PROCEDURE",
+    "PACKAGE",
+    "PACKAGE BODY",
+    "DATABASE LINK",
+    "OLD JOB",
+    "JOB",
+    "PRIVS",
+    "CONSTRAINT",
+    "JAVA RESOURCE",
+    "JAVA SOURCE"
+   ]
+  },
+  "run_time": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\"",
+  "save_json_text": "",
+  "enable_cdc_table": "",
+  "publish_sub_switch": 1
+ },
+ "_": "3e848d04"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRule
+body: {
+ "uuids": [],
+ "force": "true",
+ "_": "3cee9d73"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTbCmp
+body: {
+ "force": "",
+ "uuids": "bCdA1DB9-6b5A-45D6-A423-FCa01bece3bf",
+ "_": "3d90c0df"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeListRule
+body: {
+ "rule_uuid": "6FBC9EB9-A10A-E226-9F2B-A77B3CF1D337",
+ "_": "3e92ccd3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmp
+body: {
+ "uuid": "a3fdBC55-38f3-Bedb-C8e1-3FC3bBC13D29",
+ "_": "3f28971c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "aaB69AFd-f6d8-193e-3df7-2f5Cfff926D2",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3e65d51e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "95b56bbE-c7AC-3DE8-9b4C-A55AED956Aa5",
+ "start_time": "",
+ "_": "3ecda866"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "only_count": 0,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResuluTimeList
+body: {
+ "time_list": "07EDef69-79D0-ef3d-e1a1-6C3DE9B7AA81",
+ "uuid": "",
+ "_": "3ed7df2c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "_": "3f626bf8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleStatus
+body: {
+ "_": "3f02612e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "has_false_rule": false,
+  "info_list": [
+   {
+    "uuid": "",
+    "rule_uuid": "",
+    "load": 0,
+    "extract": 0,
+    "peak": 0,
+    "delay": 0,
+    "has_new_err": 0,
+    "dst_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "src_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "work_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "back_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "relay_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "track_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "data_info": {
+     "dst": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "db_type": null,
+      "log_read_type": null,
+      "orcl": null
+     },
+     "src": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "db_type": null,
+      "log_read_type": null,
+      "orcl": null
+     }
+    },
+    "stage": "UNKNOWN",
+    "state": 0,
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f176fb8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmpResultTimeList
+body: {
+ "uuid": "",
+ "_": "3e231e71"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmpStatus
+body: {
+ "uuids": "de55DF0e-6D45-0023-C8AA-cDcEE2Fbe4C5",
+ "_": "3d008df4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRule
+body: {
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+ "tgt_type": "sqlserver",
+ "map_type": "table",
+ "start_rule_now": 1,
+ "enable_cdc": 0,
+ "mirror_db_uuid": "",
+ "sync_mode": 1,
+ "dump_thd": 1,
+ "drop_old_tab": 1,
+ "_": "3ed9c39a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeSqlserverRule
+body: {
+ "operate": "resume",
+ "uuids": [],
+ "_": "3f77ba10"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "f8f7Ba2C-CD59-f1Fe-728C-E8A76Cd1c6Ac",
+ "_": "3f1287b7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: duplicateSqlserverRule
+body: {
+ "operate": "resume",
+ "uuids": [],
+ "_": "3eb3e5de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartSqlserverRule
+body: {
+ "operate": "start",
+ "uuids": [],
+ "_": "3f719cda"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startAnalysisSqlserverRule
+body: {
+ "operate": "start_analysis",
+ "uuids": [],
+ "_": "3e66ec5a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAnalysisSqlserverRule
+body: {
+ "operate": "stop_analysis",
+ "uuids": [],
+ "_": "3d73cd0f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAndStopAnalysisSqlserverRule
+body: {
+ "operate": "stop_and_stopanalysis",
+ "uuids": [],
+ "_": "3f47eb9b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopSqlserverRule
+body: {
+ "operate": "stop",
+ "uuids": [],
+ "_": "3f5a48cb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartTbCmp
+body: {
+ "operate": "cmp_restart",
+ "tb_cmp_uuids": "f8f7Ba2C-CD59-f1Fe-728C-E8A76Cd1c6Ac",
+ "_": "3f140731"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTbCmp
+body: {
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cmp_type": "user,table,db",
+ "repair": 0,
+ "fix_related": 0,
+ "_": "3ed06c81"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name",
+  "uuid": "7E233CF0-D269-4DDC-B451-B9C8645A88BC"
+ }
+}
+-----------------------------------------------------------END>
+

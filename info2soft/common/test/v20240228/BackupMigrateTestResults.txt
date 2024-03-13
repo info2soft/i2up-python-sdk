@@ -1,0 +1,292 @@
+<START-----------------------------------------------------------
+Method: createCcMove
+body: {
+ "cc_ip": "172.0.0.1",
+ "access_key": "",
+ "secret_key": "",
+ "module_list": [
+  "cmp",
+  "rep",
+  "fsp",
+  "dto"
+ ],
+ "prefix": "",
+ "suffix": "",
+ "cc_port": "",
+ "_": "3d9c39af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] \u53c2\u6570\u65e0\u6548  Lost: cc_port;\n Lost: access_key;\n Lost: secret_key;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveModules
+body: {
+ "_": "39b47e2d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "modules": [
+   {
+    "storage": "storage"
+   },
+   {
+    "data_guard_node": "data_guard_node"
+   },
+   {
+    "virtualization": "virtualization"
+   },
+   {
+    "dto_resource": "dto_resource"
+   },
+   {
+    "database_node": "database_node"
+   },
+   {
+    "oracle": "oracle"
+   },
+   {
+    "mysql": "mysql"
+   },
+   {
+    "sql_server": "sql_server"
+   },
+   {
+    "postgreSql": "postgreSql"
+   },
+   {
+    "db2": "db2"
+   },
+   {
+    "kafka": "kafka"
+   },
+   {
+    "qianbase": "qianbase"
+   },
+   {
+    "oceanbase": "oceanbase"
+   },
+   {
+    "tidb": "tidb"
+   },
+   {
+    "informixRule": "informixRule"
+   },
+   {
+    "redisRule": "redisRule"
+   },
+   {
+    "mongo": "mongoRule"
+   },
+   {
+    "repBackup": "repBackup"
+   },
+   {
+    "repRecovery": "repRecovery"
+   },
+   {
+    "compare": "compare"
+   },
+   {
+    "nasSync": "nasSync"
+   },
+   {
+    "ha": "ha"
+   },
+   {
+    "dto": "dto"
+   },
+   {
+    "cloud_disaster_relief": "cloud_disaster_relief"
+   },
+   {
+    "cdm": "cdm"
+   },
+   {
+    "fspMove": "fspMove"
+   }
+  ],
+  "siblings": {
+   "storage": [],
+   "vp": [],
+   "dto_resource": [],
+   "database_node": [],
+   "oracle": [
+    "database_node"
+   ],
+   "mysql": [
+    "database_node"
+   ],
+   "sql_server": [
+    "database_node"
+   ],
+   "postgreSql": [
+    "database_node"
+   ],
+   "db2": [
+    "database_node"
+   ],
+   "kafka": [
+    "database_node"
+   ],
+   "qianbase": [
+    "database_node"
+   ],
+   "oceanbase": [
+    "database_node"
+   ],
+   "tidb": [
+    "database_node"
+   ],
+   "informixRule": [
+    "database_node"
+   ],
+   "rep_bk": [],
+   "repRecovery": [
+    "repBackup"
+   ],
+   "compare": [],
+   "Dtrack_backup": [],
+   "nas": [],
+   "ha": [
+    "repBackup"
+   ],
+   "virtual_workload": [
+    "virtualization"
+   ],
+   "dto": [
+    "dto_resource"
+   ],
+   "full_server": [
+    "virtualization"
+   ],
+   "timing": [],
+   "big_data": [],
+   "cloud_disaster_relief": [
+    "virtualization"
+   ],
+   "cdm": [],
+   "fspMove": [
+    "virtualization"
+   ]
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveRemoteStatus
+body: {
+ "access_key": "",
+ "secret_key": "",
+ "cc_ip": "172.0.0.1:58086",
+ "cc_port": "",
+ "_": "3e630a4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] \u53c2\u6570\u65e0\u6548  Lost: cc_port;\n Lost: access_key;\n Lost: secret_key;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveStatus
+body: {
+ "_": "3d34b9f2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveTable
+body: {
+ "table": "",
+ "_": "3f0fba44"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCcMove
+body: {
+ "rule_uuids": [],
+ "_": "3f6c7db0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] \u6570\u636e\u5e93\u64cd\u4f5c\u5931\u8d25\u3002"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCcMove
+body: {
+ "_": "3f516c05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: makeCcMoveRemigrate
+body: {
+ "rule_uuid": "",
+ "conflict_uuid": "",
+ "module": "",
+ "model_name": "",
+ "new_name": "",
+ "_": "3f2312cd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002"
+ }
+}
+-----------------------------------------------------------END>
+

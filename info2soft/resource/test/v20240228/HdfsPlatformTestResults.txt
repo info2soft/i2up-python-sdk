@@ -1,0 +1,160 @@
+<START-----------------------------------------------------------
+Method: createHdfsPlatform
+body: {
+ "hdfs_name": "",
+ "hdfs_type": "0",
+ "config_addr": "",
+ "config_port": 1,
+ "end_point": "",
+ "conf_path": "",
+ "user": "",
+ "kerberos_switch": 0,
+ "keytab": "",
+ "principal": "",
+ "comment": "",
+ "hive_switch": 1,
+ "hive": {
+  "end_point": "",
+  "conf_path": "",
+  "user": "",
+  "kerberos_switch": "",
+  "keytab": "",
+  "principal": ""
+ },
+ "bind_lic_list": [],
+ "cc_ip_uuid": "",
+ "_": "3e482b24"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: hdfs_name;\n Lost: config_addr;\n Lost: cc_ip_uuid;\n Lost: end_point;\n Lost: conf_path;\n Lost: user;\n Lost: hive[end_point];\n Lost: hive[conf_path];\n Lost: hive[user];\n Lost: hive[kerberos_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHdfsPlatform
+body: {
+ "uuids": [],
+ "force": 0,
+ "_": "3daaca72"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHdfsPlatform
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsHiveEntity
+body: {
+ "uuid": "",
+ "database": "",
+ "_": "3ec5a1ac"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsPath
+body: {
+ "uuid": "",
+ "path": "",
+ "_": "3f3cb5fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsPlatform
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 15,
+ "page": 1,
+ "_": "3f5dad1a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyHdfsPlatform
+body: {
+ "hdfs_name": "",
+ "hdfs_type": "0",
+ "config_addr": "",
+ "config_port": 1,
+ "end_point": "",
+ "conf_path": "",
+ "user": "",
+ "kerberos_switch": 0,
+ "keytab": "",
+ "principal": "",
+ "comment": "",
+ "hive_switch": 1,
+ "hive": {
+  "end_point": "",
+  "conf_path": "",
+  "user": "",
+  "kerberos_switch": "",
+  "keytab": "",
+  "principal": ""
+ },
+ "random_str": "",
+ "bind_lic_list": [],
+ "cc_ip_uuid": "",
+ "_": "3f2a1fc8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: hdfs_name;\n Lost: config_addr;\n Lost: cc_ip_uuid;\n Lost: end_point;\n Lost: conf_path;\n Lost: user;\n Lost: hive[end_point];\n Lost: hive[conf_path];\n Lost: hive[user];\n Lost: hive[kerberos_switch];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

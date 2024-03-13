@@ -1,0 +1,270 @@
+<START-----------------------------------------------------------
+Method: createContainerClusterRecovery
+body: {
+ "task_name": "",
+ "task_type": "",
+ "biz_grp_list": [],
+ "cls_type": 1,
+ "cls_uuid": "",
+ "location_uuid": "",
+ "backup_task_uuid": "",
+ "rc_point_in_time": "",
+ "callback_uuid_list": [],
+ "save_nodeport": 1,
+ "tag": "",
+ "namespace_mapping": "",
+ "src_cls_uuid": "",
+ "_": "3f4f205e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createContinerClusterBackup
+body: {
+ "task_name": "",
+ "biz_grp_list": [],
+ "cls_type": 1,
+ "cls_uuid": "",
+ "location_uuid": "",
+ "resource_type": [],
+ "resource_label": "",
+ "resource_namespace": [],
+ "callback_uuid_list": [],
+ "tag": "",
+ "backup_one_time": 1,
+ "backup_schedule": [],
+ "backup_policy": 1,
+ "save_days": 1,
+ "task_type": 1,
+ "_": "3f3697f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteContainerClusterBackup
+body: {
+ "task_uuids": [],
+ "sub_task_uuid": "",
+ "_": "3e912f1d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteContainerClusterRecovery
+body: {
+ "task_uuids": [],
+ "_": "3df19f62"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeContainerClusterBackup
+body: {
+ "sub_time": "",
+ "_": "3ef15839"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeContainerClusterRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClusterBackup
+body: {
+ "where_args[task_type]": "",
+ "_": "3f0f2d05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClusterBackupStatus
+body: {
+ "_": "3f55773d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task uuids.0 must be a valid UUID."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClusterRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClusterRecoveryPoint
+body: {
+ "backup_task_uuid": "",
+ "_": "3f20e3f7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The backup task uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClusterRecoveryStatus
+body: {
+ "_": "3f17f48d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task uuids.0 must be a valid UUID."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyContainerClusterBackup
+body: {
+ "task_name": "",
+ "biz_grp_list": [],
+ "cls_type": 1,
+ "cls_uuid": "",
+ "location_uuid": "",
+ "resource_type": "",
+ "resource_label": "",
+ "resource_namespace": "",
+ "callback_uuid": "",
+ "tag": "",
+ "backup_type": 1,
+ "bkup_one_time": "",
+ "bkup_schedule": {
+  "limit": "",
+  "sched_day": "",
+  "sched_every": "",
+  "sched_time": "",
+  "sched_gap_min": "",
+  "backup_type": ""
+ },
+ "bkup_policy": 1,
+ "save_days": 1,
+ "bkup_window": {
+  "sched_time_start": "",
+  "sched_time_end": ""
+ },
+ "task_uuid": "",
+ "random_str": "",
+ "_": "3ee96403"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyContainerClusterRecovery
+body: {
+ "task_name": "",
+ "task_type": "",
+ "biz_grp_list": [],
+ "cls_type": 1,
+ "cls_uuid": "",
+ "location_uuid": "",
+ "backup_task_uuid": "",
+ "rc_point_in_time": "",
+ "callback_uuid": "",
+ "save_nodeport": 1,
+ "tag": "",
+ "user_uuid": "",
+ "random_str": "",
+ "_": "3e77ba9b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,161 @@
+<START-----------------------------------------------------------
+Method: createWebhook
+body: {
+ "id": "",
+ "name": "",
+ "type": "",
+ "url": "",
+ "_": "3f20be21"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: url;\n Lost: type;\n Lost: config[method];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createWebhookContentTemplate
+body: {
+ "name": "",
+ "warn_type": "",
+ "id": "",
+ "_": "3b07ac42"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: warn_type;\n Lost: config[sms];\n Lost: config[kafka];\n Lost: config[dd];\n Lost: config[qywx];\n Lost: config[fs];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteWebhook
+body: {
+ "uuids": [],
+ "_": "3f006fcf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: delteWebhookContentTemplate
+body: {
+ "uuids": [],
+ "_": "3ef1c8ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeWebhook
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listWebhookContentTemplate
+body: {
+ "uuid": "",
+ "limit": 1,
+ "page": 1,
+ "_": "3da7ea9e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyWebhook
+body: {
+ "name": "",
+ "random_str": "",
+ "config": {},
+ "url": "",
+ "id": "",
+ "_": "3ecde8cc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: url;\n Lost: type;\n Lost: config[method];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyWebhookContentTemplate
+body: {
+ "id": "",
+ "name": "",
+ "warn_type": "",
+ "webhook_type": "",
+ "random_str": "",
+ "_": "3f625f4d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: name;\n Lost: warn_type;\n Lost: config[sms];\n Lost: config[kafka];\n Lost: config[dd];\n Lost: config[qywx];\n Lost: config[fs];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listWebhook
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3efbd7e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

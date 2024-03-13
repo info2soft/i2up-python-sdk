@@ -1,0 +1,153 @@
+<START-----------------------------------------------------------
+Method: boxVmList
+body: {
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "search_field": "",
+ "_": "3f1cc0a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBoxVm
+body: {
+ "vm_name": "win2008",
+ "bk_uuid": "xxxxx",
+ "template": "win2008r2",
+ "disk": [
+  {
+   "name": "D",
+   "size": "1"
+  },
+  {
+   "name": "D",
+   "size": "1"
+  }
+ ],
+ "hardware": {
+  "cpu": "2",
+  "mem": "4"
+ },
+ "network": {
+  "ip": "192.168.20.8",
+  "gateway": "192.168.1.10",
+  "netmask": "255.255.192.0"
+ },
+ "_": "3e503078"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not uuid: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBoxVm
+body: {
+ "vm_uuids": [],
+ "force": 1,
+ "_": "3f008872"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vm_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBoxVm
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBoxVmStatus
+body: {
+ "_": "3f29dd46"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: vm_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateBoxVm
+body: {
+ "operate": "register",
+ "vm_uuids": [],
+ "_": "3f39306d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vm_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: templateList
+body: {
+ "bk_uuid": "",
+ "_": "3f1223fd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: registerBoxVm
+body: {
+ "operate": "register",
+ "vm_uuids": [],
+ "_": "3e8bbf99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vm_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+

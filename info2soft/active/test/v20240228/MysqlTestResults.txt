@@ -1,0 +1,1051 @@
+<START-----------------------------------------------------------
+Method: cmpRestartStreamCmp
+body: {
+ "tb_cmp_uuids": "bDa7dFA5-7C84-6FB6-6Cd0-B3f264f6DC34",
+ "operate": "cmp_restart",
+ "_": "3ed5377e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpStopStreamCmp
+body: {
+ "tb_cmp_uuids": "bDa7dFA5-7C84-6FB6-6Cd0-B3f264f6DC34",
+ "operate": "cmp_stop",
+ "_": "3eaf1a5d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createObjCmp
+body: {
+ "policies": "",
+ "policy_type": "periodic",
+ "one_time": "2019-05-27 16:07:08",
+ "repair": 1,
+ "obj_cmp_name": "test",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cal_table_recoders": 1,
+ "cmp_type": "user",
+ "rule_uuid": "751A03F5-C97D-645B-82B2-316A5D198528",
+ "_": "3f17a57a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "uuid": "414F5BEE-F8CA-4C6B-AFE9-1E6FB545B470"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStreamRule
+body: {
+ "mysql_name": 1,
+ "src_db_uuid": " 1B1153F6-DAD9-BC39-888A-A743FCC208E5",
+ "tgt_db_uuid": " D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "tgt_type": "oracle",
+ "start_rule_now": 0,
+ "dbmap_topic": "",
+ "map_type": "table",
+ "tab_map": [
+  {
+   "src_table": "src_table",
+   "dst_table": "dst_table",
+   "src_db": "111",
+   "dst_db": "222"
+  }
+ ],
+ "full_sync": 0,
+ "incre_sync": 1,
+ "model_type": "1:0",
+ "full_sync_mode": "auto",
+ "db_set": {
+  "binlog_format": "row",
+  "binlog_row_image": "full",
+  "default_storage_engine": "innoDB",
+  "sync_binlog": "1",
+  "innodb_flush_log": "2",
+  "innodb_flush_method": "O_DIRECT",
+  "max_allowed_packet": "52",
+  "open_files_limit": "65535",
+  "server_id": "123456",
+  "expire_logs_days": "7",
+  "nat_mode": 0,
+  "ip": ""
+ },
+ "full_sync_set": {
+  "support_ddl": 1,
+  "change_tf_path": "",
+  "tf_file_save_time": 7,
+  "nat_mode": 0,
+  "foreign_ip": "",
+  "extraction": 0,
+  "start_lsn": 1
+ },
+ "primary_db_one": "",
+ "primary_map_type_one": "",
+ "primary_map_one": "",
+ "primary_db_two": "",
+ "primary_map_type_two": "",
+ "primary_map_two": "",
+ "db_map": [
+  {
+   "dst_table": "",
+   "src_table": ""
+  }
+ ],
+ "modify": "",
+ "start_src_db_set": 0,
+ "dst_db_set": {
+  "binlog_format": "",
+  "binlog_row_image": "",
+  "default_storage_engine": "",
+  "sync_binlog": "",
+  "innodb_flush_log": "",
+  "innodb_flush_method": "",
+  "max_allowed_packet": "",
+  "open_files_limit": "",
+  "server_id": "",
+  "expire_logs_days": "",
+  "nat_mode": 1,
+  "ip": ""
+ },
+ "dst_full_sync_set": {
+  "support_ddl": 1,
+  "change_tf_path": "",
+  "tf_file_save_time": "",
+  "nat_mode": "",
+  "foreign_ip": "",
+  "extraction": 0,
+  "start_lsn": 1
+ },
+ "start_dst_db_set": 0,
+ "_": "3f710190"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCmpResult
+body: {
+ "time_list": "D1Ae87Bb-b589-CD63-afcd-D3DfebcFEc17",
+ "uuid": "",
+ "_": "3e90c69e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteObjCmp
+body: {
+ "uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f6dc5b5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStreamRule
+body: {
+ "mysql_uuids": [],
+ "_": "3ebabb2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mysql_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStreamRules
+body: {
+ "uuids": "25E74fa8-1BE8-Cf55-8b2a-27F1f72c7eAb",
+ "_": "3f01754c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "cEb95b0A-7F69-28d9-fD29-235AAE85B66e",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3e907b75"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHistory
+body: {
+ "mysql_uuid": "aAAAEAeB-733F-2dbb-2CaB-CDEfFf3ED9af",
+ "start_time": "2019-10-11 14:23:13",
+ "end_time": "2019-10-11 15:23:13",
+ "_": "3f7523fe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeObjCmp
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeObjCmpResult
+body: {
+ "BackLackOnly": 0,
+ "uuid": "fce8efF9-2B4c-EBDE-AC17-6f3DC3Ff851D",
+ "start_time": "",
+ "limit": 1,
+ "offset": "",
+ "search_value": "",
+ "_": "3ea46694"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "obj_cmp_name": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeObjCmpResultTimeList
+body: {
+ "uuid": "E9bA4e43-cE72-1a7f-6F12-eAC69Dff2A65",
+ "time_list": [],
+ "_": "3cf27118"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStreamCmp
+body: {
+ "uuid": "",
+ "_": "3f1fe4d9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStreamRules
+body: {
+ "mysql_uuid": "",
+ "_": "3e131790"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "212dc6dD-42AD-e95D-d2bf-14edcbb52C47",
+ "start_time": "",
+ "_": "3e322d10"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "only_count": 0,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCmpDiffMap
+body: {
+ "uuid": "",
+ "time": "",
+ "_": "3f16f060"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCmpResult
+body: {
+ "uuid": "",
+ "limit": "",
+ "offset": "",
+ "_": "3ef24bda"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listObjCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f01db7e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listObjCmpCmpInfo
+body: {
+ "filed": "",
+ "uuid": "",
+ "start_time": "",
+ "offset": 1,
+ "limit": 10,
+ "search_value": "",
+ "usr": "I2",
+ "_": "3f617a0a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": {
+   "total": null,
+   "cal_table_recoders": false,
+   "rows": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listObjCmpResultTimeList
+body: {
+ "uuid": "e1CdbB6F-bBDf-eB0F-3caB-63e85A89209e",
+ "_": "3d1ba314"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listObjCmpStatus
+body: {
+ "uuids": [],
+ "_": "3d371f4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStreamCmpStatus
+body: {
+ "uuids": [],
+ "_": "3d94f4ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStreamCmps
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3c976218"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStreamRules
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3ea1085d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStreamStatus
+body: {
+ "_": "3df17dea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStreamSyncStatus
+body: {
+ "node_uuid": "3dfE3CB4-5654-9BEE-cCf9-15fDdAecDB3F",
+ "mysql_uuid": "",
+ "_": "3da293c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStreamRule
+body: {
+ "operate": "modify",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3eac1dd2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: removeStreamRule
+body: {
+ "operate": "remove",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3bc2452c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartStreamRule
+body: {
+ "operate": "restart",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3d5caf31"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetAnalysisStreamRule
+body: {
+ "operate": "reset_analysis",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3f718d73"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetLoadStreamRule
+body: {
+ "operate": "reset_load",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3f17eb17"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetParsingStreamRule
+body: {
+ "operate": "reset_parsing",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3d538604"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeStreamRule
+body: {
+ "operate": "resume",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3e923a00"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startAnalysisStreamRule
+body: {
+ "operate": "start_analysis",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3f7511b0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startLoadStreamRule
+body: {
+ "operate": "start_load",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3df20111"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startParsingStreamRule
+body: {
+ "operate": "start_parsing",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3e993183"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startScheduleStreamRule
+body: {
+ "operate": "start_schedule",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3ec97863"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAnalysisStreamRule
+body: {
+ "operate": "stop_analysis",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3ef6a632"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopLoadStreamRule
+body: {
+ "operate": "stop_load",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3e23fa9f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopParsingStreamRule
+body: {
+ "operate": "stop_parsing",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3f221b3b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: duplicate,resume,stop,restart,start_schedule,stop_schedule,start_analysis,stop_analysis,reset_analysis;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopScheduleStreamRule
+body: {
+ "operate": "stop_schedule",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3f0ed013"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopStreamRule
+body: {
+ "operate": "stop",
+ "mysql_uuid": "",
+ "scn": "",
+ "tf": "",
+ "_": "3e7da73c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStreamCmp
+body: {
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "_": "3d7a4719"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tb_cmp_name;\n Lost: cmp_type;\n Lost: policy_type;\n Lost: try_split_part_table;\n Lost: dump_thd;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStreamCmp
+body: {
+ "uuid": "",
+ "_": "3f3a2043"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStreamCmp
+body: {
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "_": "3ca19ad9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tb_cmp_name;\n Lost: cmp_type;\n Lost: policy_type;\n Lost: try_split_part_table;\n Lost: dump_thd;\n"
+ }
+}
+-----------------------------------------------------------END>
+

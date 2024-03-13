@@ -1,0 +1,191 @@
+<START-----------------------------------------------------------
+Method: authNpsvr
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "_": "3f7fcebf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNpsvr
+body: {
+ "npsvr_name": "",
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "maintenance": "",
+ "comment": "",
+ "cc_ip": "",
+ "_": "3f7b3f93"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_name;\n Lost: config_addr;\n Lost: config_port;\n Lost: username;\n Lost: password;\n Lost: cc_ip_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNpsvr
+body: {
+ "npsvr_uuids": [],
+ "force": 1,
+ "_": "3e530754"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNpsvrStatus
+body: {
+ "_": "3f73e497"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvr
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": "",
+ "page": "",
+ "order_by": "",
+ "_": "3e87bf21"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainNpsvr
+body: {
+ "switch": 0,
+ "operate": "maintain",
+ "npsvr_uuid": "C760f833-A549-acAd-efe6-7ee01d5Ff07f",
+ "_": "3ed800a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNpsvr
+body: {
+ "npsvr_name": "",
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "maintenance": "",
+ "comment": "",
+ "cc_ip": "",
+ "_": "3f387c5c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewKeyNpsvr
+body: {
+ "switch": 0,
+ "operate": "renew_key",
+ "npsvr_uuid": "C760f833-A549-acAd-efe6-7ee01d5Ff07f",
+ "_": "3efb3920"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConfigItems
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateConfigItems
+body: {
+ "config_items": [
+  {
+   "name": "",
+   "value": ""
+  }
+ ],
+ "_": "3f266ff6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_items[0][name];\n Lost: config_items[0][value];\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,491 @@
+<START-----------------------------------------------------------
+Method: createRecovery
+body: {
+ "task_name": "",
+ "auto_start": 1,
+ "start_time": 1,
+ "biz_grp_list": [],
+ "priority": 90000,
+ "rc_mode": 1,
+ "bk_set_uuid": "",
+ "bk_path": [],
+ "wk_uuid": "",
+ "rc_path_policy": 1,
+ "thread_num_max": 1,
+ "thread_num_min": 1,
+ "mirr_file_check": 1,
+ "mirr_sync_flag": 1,
+ "wk_path": "",
+ "compress_switch": 0,
+ "compress": 1,
+ "encrypt_switch": 0,
+ "encrypt": 1,
+ "bk_file_crypt": 0,
+ "bk_crypt_type": 1,
+ "bk_crypt_key": "",
+ "ora_content_type": 1,
+ "rman_num_streams_df_max": 1,
+ "rman_num_streams_df_min": 1,
+ "ora_pdbs_name": [],
+ "ora_do_restore": 0,
+ "ora_do_recovery": 0,
+ "ora_rst_type": 0,
+ "ora_rc_type": 0,
+ "ora_open_mode": 0,
+ "ora_rst_limit_type": 0,
+ "ora_rst_limit_date": "",
+ "ora_rst_limit_scn": 0,
+ "ora_rst_limit_log_seq": "",
+ "ora_rst_record": {},
+ "ora_rc_point_type": 1,
+ "ora_rc_record": {},
+ "ora_rc_point_scn": 1,
+ "ora_rc_point_log_seq": "",
+ "ora_rc_point_date": "",
+ "ora_rst_file_name": "",
+ "ora_rst_arch_limit_type": 2,
+ "ora_rst_arch_limit_log_seq": 1,
+ "ora_rst_endarch_limit_log_seq": 1,
+ "ora_dbid": "",
+ "ora_rst_spfile_path": "",
+ "ora_tab_mode": 1,
+ "ora_tab_names": [
+  {
+   "user": "",
+   "ori_table": "",
+   "tgt_table": ""
+  }
+ ],
+ "ora_tab_aux_path": "",
+ "ora_sid_name": "",
+ "ora_home_path": "",
+ "wk_data_type": 1,
+ "ora_rc_point_thread": "",
+ "ora_rst_limit_thread": "",
+ "ora_tab_pdb_name": "",
+ "wk_path_list": [
+  {
+   "bk_path": "",
+   "wk_path": ""
+  }
+ ],
+ "pre_recover_script": "",
+ "post_recover_script": "",
+ "script_timeout": 1,
+ "ora_rst_recory_point": 1,
+ "ora_rc_recory_point": 1,
+ "excl_path": [],
+ "trans_mode": 1,
+ "hcs_name": "",
+ "hcs_instance_id": "",
+ "recovery_to_new": 1,
+ "new_hcs_uuid": "",
+ "new_instance_name": "",
+ "availability_zone": "",
+ "flavor_ref": "",
+ "volume_type": "",
+ "volume_size": "",
+ "vpc_id": "",
+ "subnet_id": "",
+ "security_group_id": "",
+ "db_password": "",
+ "configuration_id": "",
+ "time_zone": "",
+ "master_az": "",
+ "arbitration_az": "",
+ "backup_chain_policy": 1,
+ "client_list": [
+  {
+   "node_uuid": "",
+   "bmaster": 1
+  }
+ ],
+ "_": "3f099935"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n Lost: bk_set_uuid;\n Lost: bk_path[];\n Lost: wk_uuid;\n Lost: wk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRecoveryRule
+body: {
+ "task_uuids": [],
+ "force": 1,
+ "_": "3e93ed06"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRecoveryRule
+body: {
+ "version": "",
+ "_": "3ecc483d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSbtDbid
+body: {
+ "file_name": "",
+ "_": "3f68dfbf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: file_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDir
+body: {
+ "top_dir": "",
+ "page": 1,
+ "limit": 1,
+ "bk_set_uuid": "",
+ "search": "",
+ "_": "3ea42f59"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRecoveryRuleStatus
+body: {
+ "_": "3f4240c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: task_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSbtContrlFile
+body: {
+ "bk_set_uuid": "",
+ "ora_content_type": 1,
+ "_": "3f520313"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n The ora_content_type field must be one of: 6,7;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryOracleRcPointInfo
+body: {
+ "page": 1,
+ "limit": 1,
+ "bk_set_uuid": "",
+ "_": "3f73335a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVerifyBackupMedia
+body: {
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "_": "3ec48c7b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "bk_set_id": null,
+    "bk_node_name": null,
+    "bk_start_tm": null,
+    "bk_end_tm": null,
+    "wk_node_name": "192.168.31.30",
+    "wk_hostname": "admin",
+    "wk_config_ip": "192.168.31.30",
+    "wk_ip": "192.168.31.30",
+    "wk_os_type": 0,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "task_uuid": "1F7FC544-F9B0-4AE7-8982-6D59EA0FF884",
+    "task_name": "D2T\u5355\u901a\u9053\u6062\u590d",
+    "wk_data_type": 1,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "bk_set_id": null,
+    "bk_node_name": null,
+    "bk_start_tm": null,
+    "bk_end_tm": null,
+    "wk_node_name": "192.168.31.30",
+    "wk_hostname": "admin",
+    "wk_config_ip": "192.168.31.30",
+    "wk_ip": "192.168.31.30",
+    "wk_os_type": 0,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "task_uuid": "33BC6F00-F9C5-4BEC-A70D-7114570A1271",
+    "task_name": "FIleD2D\u6062\u590d",
+    "wk_data_type": 1,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "bk_set_id": null,
+    "bk_node_name": null,
+    "bk_start_tm": null,
+    "bk_end_tm": null,
+    "wk_node_name": "192.168.31.30",
+    "wk_hostname": "admin",
+    "wk_config_ip": "192.168.31.30",
+    "wk_ip": "192.168.31.30",
+    "wk_os_type": 0,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "task_uuid": "484477EF-1570-4B17-8464-DC97710E845B",
+    "task_name": "D2T\u6062\u590d",
+    "wk_data_type": 1,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRecoveryRule
+body: {
+ "task_name": "",
+ "auto_start": 1,
+ "start_time": 1,
+ "biz_grp_list": [],
+ "priority": 90000,
+ "rc_mode": 1,
+ "bk_set_uuid": "",
+ "bk_path": [],
+ "wk_uuid": "",
+ "rc_tgt_position": 1,
+ "rc_tgt_dir_list": [
+  {
+   "bk_path": "",
+   "wk_path": ""
+  }
+ ],
+ "thread_num_max": 1,
+ "thread_num_min": 1,
+ "mirr_file_check": 1,
+ "mirr_sync_flag": 1,
+ "rc_tgt_dir": "",
+ "compress_switch": 0,
+ "compress": 1,
+ "encrypt_switch": 0,
+ "encrypt": 1,
+ "bk_file_crypt": 0,
+ "bk_crypt_type": 1,
+ "bk_crypt_key": "",
+ "ora_content_type": 1,
+ "rman_num_streams_df_max": 1,
+ "rman_num_streams_df_min": 1,
+ "ora_pdbs_name": [],
+ "ora_do_restore": 0,
+ "ora_do_recovery": 0,
+ "ora_rst_type": 0,
+ "ora_rc_type": 0,
+ "ora_open_mode": 0,
+ "ora_rst_limit_type": 0,
+ "ora_rst_limit_date": "",
+ "ora_rst_limit_scn": 0,
+ "ora_rst_limit_log_seq": "",
+ "ora_rst_record": {},
+ "ora_rc_point_type": 1,
+ "ora_rc_record": {},
+ "ora_rc_point_scn": 1,
+ "ora_rc_point_log_seq": "",
+ "ora_rc_point_date": "",
+ "ora_rst_ctrl_name": "",
+ "ora_rst_arch_limit_type": 2,
+ "ora_rst_arch_limit_log_seq": 1,
+ "ora_rst_endarch_limit_log_seq": 1,
+ "ora_dbid": "",
+ "ora_rst_spfile_path": "",
+ "ora_rst_spfile_name": "",
+ "ora_tab_mode": 1,
+ "ora_tab_names": [
+  {
+   "user": "",
+   "ori_table": "",
+   "tgt_table": ""
+  }
+ ],
+ "ora_tab_aux_path": "",
+ "ora_sid_name": "",
+ "ora_home_path": "",
+ "wk_data_type": 1,
+ "ora_rc_point_thread": "",
+ "ora_rst_limit_thread": "",
+ "random_str": "",
+ "trans_mode": 1,
+ "_": "3f5611d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001013,
+  "message": "[1010001013] This entry has been updated, please refresh."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cancelRecoveryRule
+body: {
+ "operate": "cancel",
+ "task_uuids": [],
+ "_": "3e5f1b39"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The operate field must be one of: start,stop;\n Lost: task_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startRecoveryRule
+body: {
+ "operate": "start",
+ "task_uuids": [],
+ "_": "3e6ab245"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopRecoveryRule
+body: {
+ "operate": "stop",
+ "task_uuids": [],
+ "_": "3f117066"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRecoveryRule
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_by_biz_grp": 1,
+ "status": "",
+ "_": "3ea5318c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "bk_set_id": null,
+    "bk_node_name": null,
+    "bk_start_tm": null,
+    "bk_end_tm": null,
+    "wk_node_name": "192.168.31.30",
+    "wk_hostname": "admin",
+    "wk_config_ip": "192.168.31.30",
+    "wk_ip": "192.168.31.30",
+    "wk_os_type": 0,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "task_uuid": "1F7FC544-F9B0-4AE7-8982-6D59EA0FF884",
+    "task_name": "D2T\u5355\u901a\u9053\u6062\u590d",
+    "wk_data_type": 1,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 3
+ }
+}
+-----------------------------------------------------------END>
+

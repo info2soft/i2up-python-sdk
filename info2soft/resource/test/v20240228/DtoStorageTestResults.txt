@@ -1,0 +1,162 @@
+<START-----------------------------------------------------------
+Method: createBucket
+body: {
+ "sto_uuid": "",
+ "bucket_name": "",
+ "_": "3de9ed46"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n Lost: bucket_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtoStorage
+body: {
+ "sto_name": "",
+ "sto_type": 0,
+ "address": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "comment": "",
+ "user": "",
+ "pwd": "",
+ "remote_path": "",
+ "region": "",
+ "signature_version": "v2",
+ "access_mode": 1,
+ "bind_lic_list": [],
+ "bucket": "",
+ "ssl_verify": 1,
+ "_": "3e840e50"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_name;\n The ssl_verify field must be of type Boolean;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoStorage
+body: {
+ "sto_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f513f59"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoStorage
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoStorageStatus
+body: {
+ "force_refresh": 1,
+ "_": "3e4f953c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBuckets
+body: {
+ "sto_uuid": "",
+ "address": "",
+ "access_key": "",
+ "secret_key": "",
+ "_": "3ef43507"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoStorage
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "_": "3ee35729"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoStorage
+body: {
+ "random_str": "",
+ "sto_name": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "address": "",
+ "user": "",
+ "pwd": "",
+ "comment": "",
+ "remote_path": "",
+ "_": "3eaf2fa4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_name;\n Lost: sto_type;\n Lost: access_key;\n Lost: secret_key;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

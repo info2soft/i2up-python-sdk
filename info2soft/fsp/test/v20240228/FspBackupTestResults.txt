@@ -1,0 +1,1474 @@
+<START-----------------------------------------------------------
+Method: batchCreateFspBackup
+body: {
+ "base_info_list": {
+  "secret_key": "",
+  "band_width": "",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "mirr_sync_attr": "1",
+  "wk_data_type": 1,
+  "sync_item": "/",
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "0",
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 1,
+  "fsp_type": 3,
+  "del_policy": 1,
+  "timeout": 1,
+  "cbt_switch": 1,
+  "threshold_vaild_byte": "",
+  "advanced_policy": {
+   "bk_cdp": 1,
+   "execute_interval": 1,
+   "cdp_detail": 1,
+   "cdp_daily": 1,
+   "cdp_param": "",
+   "cdp_switch": 1
+  },
+  "tgt_uuid": "",
+  "new_dc": "",
+  "new_dc_mor": "",
+  "new_host": "",
+  "new_ds": "",
+  "network_name": "",
+  "network_id": ""
+ },
+ "common_params": {
+  "batch_name": "",
+  "rep_prefix": "",
+  "rep_sufix": "",
+  "variable_type": 1
+ },
+ "node_list": [
+  {
+   "bk_uuid": "",
+   "excl_path": [],
+   "bk_path": [],
+   "wk_uuid": "",
+   "wk_path": [],
+   "vm_name": "",
+   "new_vm_name": "",
+   "custom_config": 1,
+   "cpu": "",
+   "core_per_sock": "",
+   "mem_mb": "",
+   "dynamic_mem": "",
+   "add_drill": 1,
+   "auto": 1,
+   "orch_vm_name": "",
+   "scripts_type": "",
+   "scripts": "",
+   "os_type": 1
+  }
+ ],
+ "_": "3e4db755"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchCreateFspMove
+body: {
+ "base_info_list": {
+  "service_uuid": "",
+  "monitor_type": 0,
+  "compress": 0,
+  "net_mapping": [
+   {
+    "bk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.74/255.255.240.0"
+    },
+    "wk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.73/255.255.240.0"
+    }
+   }
+  ],
+  "encrypt_switch": 0,
+  "mirr_open_type": "0",
+  "mirr_sync_flag": "0",
+  "net_mapping_type": "2",
+  "mirr_sync_attr": "1",
+  "band_width": "",
+  "fsp_wk_shut_flag": 2,
+  "secret_key": "",
+  "mirr_file_check": "0",
+  "failover": 0,
+  "excl_driver": [
+   "inf1",
+   "inf2"
+  ],
+  "compress_switch": 1,
+  "encrypt": 1,
+  "wk_data_type": 1,
+  "auto_start": 1,
+  "bkup_one_time": 1,
+  "backup_type": ""
+ },
+ "common_params": {
+  "batch_name": "",
+  "rep_prefix": "",
+  "rep_sufix": "",
+  "variable_type": 0
+ },
+ "node_list": [
+  {
+   "bk_uuid": "",
+   "excl_path": [],
+   "bk_path": [],
+   "wk_uuid": "",
+   "wk_path": [],
+   "proxy_uuid": "",
+   "data_ip_uuid": "",
+   "sync_item": "/"
+  }
+ ],
+ "_": "3f6a196d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFspBackup
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "mirr_sync_attr": "1",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/fsp_bk/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": 0,
+  "fsp_name": "test",
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 1,
+  "fsp_type": 3,
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "del_policy": 1,
+  "timeout": 1,
+  "cbt_switch": 1,
+  "threshold_vaild_byte": "",
+  "storage_uuid": "",
+  "resource_settings": {
+   "new_host": "",
+   "new_ds": "",
+   "new_dc_mor": "",
+   "new_dc": "",
+   "tgt_uuid": "",
+   "network_name": "",
+   "vm_list": [
+    {
+     "vm_name": "",
+     "new_vm_name": "",
+     "custom_config": "",
+     "cpu": "",
+     "core_per_sock": "",
+     "mem_mb": "",
+     "networks": [
+      {
+       "source_network_name": "",
+       "mac_address": "",
+       "keep_mac": "",
+       "network_id": "",
+       "network_name": "",
+       "subnet_name": "",
+       "ip": "",
+       "security_group_name": "",
+       "auto_ip": ""
+      }
+     ],
+     "disk_list": [
+      {
+       "is_ignored": "",
+       "disk_name": "",
+       "disk_path": "",
+       "new_ds": "",
+       "id": "",
+       "boot_index": "",
+       "file_name": "",
+       "size": ""
+      }
+     ],
+     "dynamic_mem": ""
+    }
+   ],
+   "network_id": "",
+   "bk_uuid": "",
+   "bk_path": []
+  },
+  "data_ip_uuid": "",
+  "bk_file_crypt": 0,
+  "bk_crypt_type": 1,
+  "bk_crypt_key": "",
+  "encrypt": 0,
+  "thread_num": 1,
+  "start_type": 0,
+  "src_dedupe_switch": 1,
+  "oph_policy": 0,
+  "dedupe_uuid": "",
+  "dedupe_secret_key": "",
+  "database_switch": 0,
+  "database_type": 0,
+  "bk_storage": 1,
+  "pool_uuid": ""
+ },
+ "_": "3e326d93"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bkup_policy] field must be one of: 0,1;\n Lost: fsp_backup[wk_path][0];\n Lost: fsp_backup[threshold_vaild_byte];\n Lost: fsp_backup[advanced_policy][bk_cdp];\n Lost: fsp_backup[advanced_policy][cdp_keep_data];\n Lost: fsp_backup[advanced_policy][cdp_switch];\n Lost: fsp_backup[compress_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFspMove
+body: {
+ "fsp_move": {
+  "fsp_name": "testMove",
+  "service_uuid": "",
+  "monitor_type": 0,
+  "bk_path": [
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "compress": "0",
+  "net_mapping": [
+   {
+    "bk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.74/255.255.240.0"
+    },
+    "wk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.73/255.255.240.0"
+    }
+   }
+  ],
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "encrypt_switch": "0",
+  "mirr_open_type": "0",
+  "sync_item": "/",
+  "mirr_sync_flag": "0",
+  "net_mapping_type": "2",
+  "mirr_sync_attr": "1",
+  "band_width": "",
+  "excl_path": [
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/"
+  ],
+  "fsp_wk_shut_flag": "2",
+  "secret_key": "",
+  "wk_path": [
+   "/bin/",
+   "/boot/",
+   "/etc/",
+   "/lib/",
+   "/lib64/",
+   "/root/",
+   "/sbin/",
+   "/usr/bin/",
+   "/usr/lib/",
+   "/usr/lib64/",
+   "/usr/libexec/",
+   "/usr/local/",
+   "/usr/sbin/",
+   "/var/lib/nfs/"
+  ],
+  "mirr_file_check": "0",
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "failover": "0",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "excl_driver": [
+   "inf1",
+   "inf2"
+  ],
+  "data_ip_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "wk_data_type": 1,
+  "bk_file_crypt": 0,
+  "encrypt": 0,
+  "thread_num": 1,
+  "fsp_type": 1,
+  "auto_start": 1,
+  "bkup_one_time": 1,
+  "backup_type": "",
+  "keep_hostname": 1
+ },
+ "_": "3f1d1bf3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_move[compress_switch];\n Lost: fsp_move[bios_convert];\n Lost: fsp_move[bios_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFspRecovery
+body: {
+ "fsp_recovery": {
+  "dst_path": "/fsp_bk/192.168.71.77_26821/20190111113656/",
+  "encrypt_switch": "0",
+  "net_mapping": [
+   {
+    "bk_nic": {
+     "type": "0",
+     "name": "Ethernet0",
+     "ip": "192.168.72.74/255.255.240.0"
+    },
+    "wk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.73/255.255.240.0"
+    }
+   }
+  ],
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "mirr_sync_attr": "1",
+  "secret_key": "",
+  "bk_path": [
+   "/fsp_bk/192.168.71.77_26821/20190111113656/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/bin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/boot/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/etc/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/lib/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/lib64/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/root/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/sbin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/bin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/lib/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/lib64/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/libexec/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/local/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/sbin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/var/lib/nfs/"
+  ],
+  "band_width": "",
+  "fsp_name": "testRC",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "net_mapping_type": "2",
+  "mirr_open_type": "0",
+  "restore_point": "20190111113656",
+  "mirr_file_check": "0",
+  "compress": "0",
+  "service_uuid": "",
+  "excl_path": [],
+  "wk_path": [
+   "/",
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "mirr_sync_flag": "0",
+  "fsp_wk_shut_flag": "2",
+  "sync_item": "/",
+  "failover": "0",
+  "fsp_type": "5",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "data_ip_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "by_type": "",
+  "bk_file_crypt": 1,
+  "encrypt": 1,
+  "thread_num": 1,
+  "excl_driver": [
+   "inf1",
+   "inf2"
+  ],
+  "monitor_type": 1,
+  "driver_url": "",
+  "rc_method": "",
+  "backup_task_uuid": ""
+ },
+ "_": "3eda6cc6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_recovery[compress_switch];\n Lost: fsp_recovery[bios_convert];\n Lost: fsp_recovery[bios_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspBackup
+body: {
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "del_policy": 1,
+ "force": 1,
+ "recycle": 0,
+ "_": "3f0a697d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010031017,
+  "message": "[1010031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspMove
+body: {
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "_": "3e525c12"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010031017,
+  "message": "[1010031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspRecovery
+body: {
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "_": "3f4d2250"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010031017,
+  "message": "[1010031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFspBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFspMove
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: desribeFspRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getFspMoveBiosType
+body: {
+ "node_uuid": "",
+ "_": "3f7a91ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: device_list[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackup
+body: {
+ "type": 3,
+ "limit": 10,
+ "page": 1,
+ "_": "3f0ecaad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDir
+body: {
+ "wk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "fsp_uuid": "",
+ "_": "3f75d247"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "hd_list": [],
+  "dir_list": null,
+  "os_type": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDriverInfo
+body: {
+ "node_uuid": "",
+ "_": "3e34adca"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupNic
+body: {
+ "wk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "bk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3eec0783"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "wk_nic_list": 1011110001,
+  "bk_nic_list": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f71d78b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspMove
+body: {
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "search_value": "",
+ "status": "",
+ "_": "3f19325d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspMoveDir
+body: {
+ "fsp_uuid": "",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3ef6b853"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist 42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "hd_list": [],
+  "dir_list": null,
+  "os_type": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspMoveDriverInfo
+body: {
+ "wk_uuid": "",
+ "_": "3da1e337"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010061101,
+  "message": "[1010061101] Fail to connect work node.",
+  "driver_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspMoveNic
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3f62e4fa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "wk_nic_list": 1011110001,
+  "bk_nic_list": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspMoveStatus
+body: {
+ "force_refresh": 1,
+ "_": "3eb735a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecovery
+body: {
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3f726e83"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryDir
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "dst_path": "/fsp_bk/192.168.71.77_26821/20190111113656/",
+ "fsp_uuid": "",
+ "_": "3f5329e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "hd_list": [],
+  "dir_list": null,
+  "os_type": null,
+  "bk_file_crypt": null,
+  "bk_crypt_type": null,
+  "bk_crypt_key": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryDriverListUrl
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "driver_url_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryNic
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "dst_path": "/fsp_bk/192.168.71.77_26821/20190111113656/",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3e9fbe90"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "wk_nic_list": 1011110001,
+  "bk_nic_list": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryPoint
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "rc_data_path": "/fsp_bk/192.168.71.77_26821/",
+ "_": "3e5df586"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "point_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspBackup
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "3*03:00-14:00*2m",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "bkup_one_time": 1515568566,
+  "encrypt_switch": "0",
+  "bk_type": 0,
+  "mirr_sync_attr": "1",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "wk_data_type": 1,
+  "bk_path": "[\"/FSPback0107/\"],",
+  "sync_item": "/",
+  "bkup_policy": 0,
+  "net_mapping_type": "2",
+  "snapshot_policy": "0",
+  "mirr_file_check": "0",
+  "snapshot_interval": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "0",
+  "wk_path": "[\"/\",\"/boot/\"],",
+  "snapshot_limit": "24",
+  "snapshot_switch": 0,
+  "fsp_name": "rrrrr",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 0,
+  "fsp_type": 1,
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "timeout": 1,
+  "cbt_switch": 1,
+  "threshold_vaild_byte": 1,
+  "advanced_policy": {
+   "bk_cdp": 1,
+   "execute_interval": 1,
+   "cdp_detail": 1,
+   "cdp_daily": 1,
+   "cdp_switch": 1,
+   "cdp_param": ""
+  },
+  "data_ip_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "thread_num": 1
+ },
+ "_": "3f10dfd3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 1,2,3,4,8;\n Lost: fsp_backup[start_type];\n The fsp_backup[fsp_type] field must be one of: 3,10;\n Lost: fsp_backup[advanced_policy][cdp_keep_data];\n Lost: fsp_backup[bk_file_crypt];\n Lost: fsp_backup[compress_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspMove
+body: {
+ "fsp_move": {
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "random_str": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "fsp_wk_shut_flag": "2",
+  "monitor_type": 0,
+  "mirr_sync_attr": "1",
+  "net_mapping_type": "2",
+  "mirr_sync_flag": "0",
+  "mirr_file_check": "0",
+  "sync_item": "/",
+  "secret_key": "",
+  "failover": "0",
+  "fsp_name": "changeName",
+  "mirr_open_type": "0",
+  "bk_uuid": "C11FE572-5207-3359-DB85-001E95F5F185",
+  "bk_path": [
+   "/",
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "net_mapping": [
+   {
+    "wk_nic": {
+     "ip": "192.168.72.73/255.255.240.0",
+     "type": "0",
+     "name": "Ethernet0"
+    },
+    "bk_nic": {
+     "type": "0",
+     "name": "Ethernet0",
+     "ip": "192.168.72.74/255.255.240.0"
+    }
+   }
+  ],
+  "service_uuid": "",
+  "wk_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "compress": "0",
+  "encrypt_switch": "0",
+  "move_type": "0",
+  "wk_path": [
+   "/",
+   "/bin/",
+   "/boot/",
+   "/etc/",
+   "/lib/",
+   "/lib64/",
+   "/root/",
+   "/sbin/",
+   "/usr/bin/",
+   "/usr/lib/",
+   "/usr/lib64/",
+   "/usr/libexec/",
+   "/usr/local/",
+   "/usr/sbin/",
+   "/var/lib/nfs/"
+  ],
+  "band_width": "3*03:00-14:00*2m",
+  "excl_driver": [
+   "inf1",
+   "inf2"
+  ],
+  "data_ip_uuid": "CE77F3D6-A6E3-A385-CE66-712313B7DDE8",
+  "thread_num": 1
+ },
+ "_": "3e8992e1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_move[compress_switch];\n Lost: fsp_move[keep_hostname];\n Lost: fsp_move[wk_data_type];\n Lost: fsp_move[bios_convert];\n Lost: fsp_move[bios_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspRecovery
+body: {
+ "fsp_recovery": {
+  "restore_point": "20180724164452",
+  "fsp_wk_shut_flag": "2",
+  "excl_path": [],
+  "secret_key": "",
+  "band_width": "3*03:00-14:00*2m",
+  "compress": "0",
+  "wk_path": [],
+  "net_mapping": [
+   {
+    "wk_nic": {
+     "ip": "192.168.72.73/255.255.240.0",
+     "type": "0",
+     "name": "Ethernet0"
+    },
+    "bk_nic": {
+     "type": "0",
+     "ip": "192.168.72.74/255.255.240.0",
+     "name": "Ethernet0"
+    }
+   }
+  ],
+  "service_uuid": "",
+  "wk_uuid": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "net_mapping_type": "2",
+  "bk_path": [],
+  "fsp_name": "rrrrr",
+  "mirr_sync_flag": "0",
+  "mirr_file_check": "0",
+  "monitor_type": 0,
+  "sync_item": "C:",
+  "mirr_sync_attr": "1",
+  "random_str": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "dst_path": "???",
+  "encrypt_switch": "0",
+  "bk_uuid": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "mirr_open_type": "0",
+  "failover": "0",
+  "fsp_type": "",
+  "data_ip_uuid": "",
+  "thread_num": 1
+ },
+ "_": "3e06cefc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_recovery[bk_path][0];\n Lost: fsp_recovery[compress_switch];\n Lost: fsp_recovery[fsp_type];\n Lost: fsp_recovery[wk_path][0];\n Lost: fsp_recovery[bios_convert];\n Lost: fsp_recovery[bios_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspBackup
+body: {
+ "operate": "start",
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "bk_type": "",
+ "continue_last_backup": 0,
+ "stop_later": "",
+ "op_code": "",
+ "snap_point": "",
+ "power_on": 1,
+ "_": "3f533333"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspMove
+body: {
+ "operate": "start",
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "bk_type": "",
+ "_": "3df72dc9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspRecovery
+body: {
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "operate": "start",
+ "_": "3eee65c8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupCoopySpace
+body: {
+ "bk_path": [
+  "fsp_bk"
+ ],
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "excl_path": [
+  "/cgroup/",
+  "/dev/",
+  "/etc/X11/xorg.conf/",
+  "/etc/init.d/i2node/",
+  "/etc/rc.d/init.d/i2node/",
+  "/etc/sdata/",
+  "/lost+found/",
+  "/media/",
+  "/mnt/",
+  "/proc/",
+  "/run/",
+  "/selinux/",
+  "/sys/",
+  "/tmp/",
+  "/usr/local/sdata/",
+  "/var/i2/",
+  "/var/i2data/",
+  "/var/lock/",
+  "/var/run/vmblock-fuse/"
+ ],
+ "wk_path": [
+  "/"
+ ],
+ "storage_left_size": "",
+ "_": "3f5ab955"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist 42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "bk_disk_need": 0,
+  "bk_disk_free": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupLicense
+body: {
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3ed3066c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupOldRule
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "bk_path": [
+  "/fsp_bk/"
+ ],
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3f279beb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspBackupOsVersion
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3e999f69"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "wk_os_ver": 0,
+  "bk_os_ver": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveEnvironment
+body: {
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "wk_path": [
+  {
+   "": ""
+  }
+ ],
+ "bk_path": [
+  {
+   "": ""
+  }
+ ],
+ "_": "3e9ec850"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveLicense
+body: {
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "_": "3f6c678b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveOldRule
+body: {
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "_": "3f354535"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveOsVersion
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "mode": 1,
+ "_": "3dc66ce3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "wk_os_ver": 0,
+  "bk_os_ver": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspMoveVolumeSpace
+body: {
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "sync_item": "/",
+ "wk_device_list": [
+  {
+   "name": ""
+  }
+ ],
+ "bk_device_list": [
+  {
+   "name": ""
+  }
+ ],
+ "is_block_move": 0,
+ "pool_uuid": "",
+ "_": "3f3d25d1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist 42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "wk_vol_list": [],
+  "bk_vol_list": [],
+  "lost_volume": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspRecoveryLicense
+body: {
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3ed65cf4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspRecoveryOldRule
+body: {
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3e4a3f52"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspRecoveryOsVersion
+body: {
+ "dst_path": "/fsp_bk/192.168.71.77_26821/20190111113656/",
+ "wk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "bk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "_": "3e668b2c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "wk_os_ver": 0,
+  "bk_os_ver": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyFspRecoveryVolumeSpace
+body: {
+ "sync_item": "/",
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "dst_path": "/fsp_bk/192.168.71.77_26821/20190111113656/",
+ "device_list": [
+  {
+   "name": ""
+  }
+ ],
+ "vmdk_list": [
+  {
+   "name": ""
+  }
+ ],
+ "fsp_type": "",
+ "path": "",
+ "type": "",
+ "suffix": "",
+ "restore_point": "",
+ "vp_uuid": "",
+ "vm_ref": "",
+ "by_type": 0,
+ "_": "3eb64c90"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist 42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "wk_vol_list": [],
+  "bk_vol_list": [],
+  "lost_volume": [],
+  "insufficient_volume": []
+ }
+}
+-----------------------------------------------------------END>
+

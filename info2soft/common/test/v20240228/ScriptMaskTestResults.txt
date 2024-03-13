@@ -1,0 +1,68 @@
+<START-----------------------------------------------------------
+Method: killCcProcess
+body: {
+ "operate": "kill",
+ "pid": "",
+ "_": "3e885dff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110003,
+  "message": "[1011110003] cntlsvr not running"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: reloadCcService
+body: {
+ "operate": "reload",
+ "service_name": "",
+ "_": "3f1df358"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110003,
+  "message": "[1011110003] cntlsvr not running"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startCcService
+body: {
+ "operate": "start",
+ "service_name": "",
+ "_": "3f0730b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110003,
+  "message": "[1011110003] cntlsvr not running"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopCcService
+body: {
+ "operate": "stop",
+ "service_name": "",
+ "_": "3e4fa402"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110003,
+  "message": "[1011110003] cntlsvr not running"
+ }
+}
+-----------------------------------------------------------END>
+

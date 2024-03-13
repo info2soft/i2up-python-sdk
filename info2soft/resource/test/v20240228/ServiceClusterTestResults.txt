@@ -1,0 +1,221 @@
+<START-----------------------------------------------------------
+Method: chkServiceClsNode
+body: {
+ "cls_uuid": "",
+ "node_uuid": "",
+ "_": "3e63a0b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cls_uuid;\n Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: configServiceCls
+body: {
+ "config": {
+  "cc_ip_uuid": "",
+  "log_path": "",
+  "keep_log_days": 1,
+  "mem_limit": 1,
+  "disk_limit": 1,
+  "disk_free_space_limit": 1,
+  "security_check": 1,
+  "comment": "",
+  "monitor_switch": 1,
+  "mon_send_interval": 1,
+  "mon_data_path": "",
+  "db_save_day": 1,
+  "mon_save_day": 1
+ },
+ "cls_uuid": "",
+ "_": "3f2df620"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createServiceCls
+body: {
+ "service_cls": {
+  "cls_name": "",
+  "label_list": [],
+  "cls_node": [
+   {
+    "hostname": "",
+    "ip": "",
+    "port": "",
+    "version": "",
+    "data_addr": "",
+    "os_user": ""
+   }
+  ],
+  "service_type": [],
+  "bind_lic_list": [],
+  "cc_ip_uuid": "",
+  "cc_ip": "",
+  "os_type": 1,
+  "etcd_url_uuid": "",
+  "etcd_url": [
+   {
+    "ip": "",
+    "port": ""
+   }
+  ]
+ },
+ "_": "3d2c0144"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: service_cls[label_list][0];\n Lost: service_cls[service_type][0];\n Lost: service_cls[cls_name];\n Lost: service_cls[cc_ip];\n Lost: service_cls[cc_ip_uuid];\n Lost: service_cls[etcd_url_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteServiceCls
+body: {
+ "cls_uuids": [],
+ "force": 1,
+ "_": "3d56fada"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeServiceCls
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeServiceClsConfig
+body: {
+ "cls_uuid": "",
+ "_": "3f2a48af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "config": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listServiceCls
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "_": "3f2c6273"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listServiceClsStatus
+body: {
+ "force_refresh": 1,
+ "_": "3d8c3b3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listServiceClsValidNode
+body: {
+ "cls_uuid": "",
+ "_": "3ea87bcc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "valid_uuid": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyServiceCls
+body: {
+ "service_cls": {
+  "cls_name": "svc1",
+  "cls_uuid": "AB790C28-62D6-7236-612F-65D73C80036F",
+  "label_list": [],
+  "random_str": "AB790B28-62D6-7236-612F-65D73C80036F",
+  "cls_node": [
+   {
+    "hostname": "",
+    "ip": "",
+    "port": ""
+   }
+  ],
+  "service_type": [],
+  "bind_lic_list": []
+ },
+ "_": "3dd645bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: service_cls[label_list][0];\n Lost: service_cls[service_type][0];\n Lost: service_cls[cc_ip];\n Lost: service_cls[cc_ip_uuid];\n Lost: service_cls[etcd_url_uuid];\n Lost: service_cls[etcd_url][0];\n"
+ }
+}
+-----------------------------------------------------------END>
+

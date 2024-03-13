@@ -1,0 +1,264 @@
+<START-----------------------------------------------------------
+Method: createRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "node_uuid": "",
+ "config": {
+  "script": [],
+  "src_type": "",
+  "dyn_thd": 1,
+  "lderrset": "continue",
+  "policy": {
+   "policy_type": "immediate",
+   "one_time": "",
+   "time_policy": ""
+  }
+ },
+ "_": "3d20602b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createScript
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "node_uuid": "",
+ "config": {
+  "script": [],
+  "src_type": "",
+  "dyn_thd": 1,
+  "lderrset": "continue",
+  "policy": {
+   "policy_type": "immediate",
+   "one_time": "",
+   "time_policy": ""
+  }
+ },
+ "_": "3e50a1b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRule
+body: {
+ "uuids": "",
+ "force": 1,
+ "_": "3e0c35a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteScript
+body: {
+ "uuids": "",
+ "_": "3f545b11"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptRule
+body: {
+ "uuid": "",
+ "_": "3f1ad4c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptScript
+body: {
+ "uuid": "",
+ "_": "3e6d36ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleStatus
+body: {
+ "_": "3ec680e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   null
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRules
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "rule_name",
+ "search_value": "",
+ "_": "3e5dd706"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listScript
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "_": "3ec40d0e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDb
+body: {
+ "uuid": "",
+ "rule_uuid": "",
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "node_uuid": "",
+ "config": {},
+ "script": [],
+ "src_type": "",
+ "dyn_thd": 1,
+ "lderrset": "continue",
+ "policy": {},
+ "policy_type": "immediate",
+ "one_time": "",
+ "time_policy": "",
+ "_": "3de29715"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyScript
+body: {
+ "uuid": "",
+ "rule_uuid": "",
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "node_uuid": "",
+ "config": {
+  "script": [],
+  "src_type": "",
+  "dyn_thd": 1,
+  "lderrset": "continue",
+  "policy": {
+   "policy_type": "immediate",
+   "one_time": "",
+   "time_policy": ""
+  }
+ },
+ "_": "3ee446ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateRule
+body: {
+ "operate": "stop",
+ "uuids": [],
+ "_": "3ef4ff08"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

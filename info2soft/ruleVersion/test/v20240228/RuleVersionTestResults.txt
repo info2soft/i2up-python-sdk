@@ -1,0 +1,187 @@
+<START-----------------------------------------------------------
+Method: describeRuleVersionInfo
+body: {
+ "id": 1,
+ "_": "3eb1b8ab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "rule_version_info": {
+   "create_time": 1709556533,
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "random_str": "F265EADA-BF1F-4BA9-9663-FF36207514D6",
+   "task_uuid": "E6BD26C8-B0CA-4BFB-AB8F-6D064D6F3802",
+   "group_uuid": "831900A9-2006-490D-953D-28E395C0168B",
+   "is_duplicate": 0,
+   "task_name": "Files_D2T",
+   "wk_data_type": 1,
+   "timeout": 0,
+   "priority": 0,
+   "trans_mode": 2,
+   "disable": 0,
+   "client_list": [
+    {
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7"
+    }
+   ],
+   "unit_uuid": "029A614F-CF3D-4CC2-AF22-AE92BB783699",
+   "bkup_schedule": [
+    {
+     "backup_type": 0,
+     "bkup_one_time": 1709553174,
+     "bkup_policy": 13,
+     "bkup_window": [
+      {
+       "wday": 0,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 1,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 2,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 3,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 4,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 5,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 6,
+       "from": "00:00",
+       "to": "23:59"
+      }
+     ],
+     "cron_policies": "0 0 15 2 *",
+     "exclude_days": [],
+     "retention": 0,
+     "sched_name": "FULL",
+     "start_window": [
+      {
+       "wday": 0,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 1,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 2,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 3,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 4,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 5,
+       "from": "00:00",
+       "to": "23:59"
+      },
+      {
+       "wday": 6,
+       "from": "00:00",
+       "to": "23:59"
+      }
+     ],
+     "levelLabel": "1\u5468\uff08\u4fdd\u7559\u7b49\u7ea7: 0\uff09",
+     "overview": "2\u6708\u7b2c15\u5929\u8fd0\u884c"
+    }
+   ],
+   "effective_time_switch": 0,
+   "effective_time": 0,
+   "biz_grp_list": [],
+   "tape_pool_uuid": "B75BF13D-93ED-4350-87AD-775FCEA88D35",
+   "wk_path": [
+    "/var/i2data/log/"
+   ],
+   "excl_path": [],
+   "mirr_file_check": 1,
+   "mirr_sync_flag": 0,
+   "mirr_open_type": 0,
+   "mirr_sync_attr": 1,
+   "ora_sid_name": "",
+   "ora_home_path": "",
+   "ora_content_type": 0,
+   "ora_pdbs_name": [
+    "CDB$ROOT",
+    "PDB$SEED"
+   ],
+   "rman_compress_df": 0,
+   "rman_num_streams_df_max": 4,
+   "rman_num_streams_df_min": 4,
+   "rman_filespertset_df": 20,
+   "rman_include_arch_flag": 1,
+   "rman_db_readonly": 0,
+   "rman_del_arch": 0,
+   "rman_arch_retain": 3,
+   "rman_filespertset_arch": 20,
+   "rman_num_streams_arch": 4,
+   "rman_include_spfile_flag": 1,
+   "replica_uuids": [],
+   "thread_num_max": 4,
+   "thread_num_min": 4,
+   "pre_backup_script": "",
+   "post_backup_script": "",
+   "script_timeout": 3600,
+   "retry_num": 0,
+   "retry_time": 0,
+   "expire_policy": 0,
+   "compress_switch": 0,
+   "compress": 1,
+   "encrypt_switch": 0,
+   "encrypt": 1,
+   "bk_file_crypt": 0,
+   "bk_crypt_type": 2,
+   "bk_crypt_key": "",
+   "band_width": ""
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleVersion
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f4b64f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: where_args[uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+

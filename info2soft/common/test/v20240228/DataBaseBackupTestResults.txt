@@ -1,0 +1,16 @@
+<START-----------------------------------------------------------
+Method: importConfig
+body: {
+ "keep_cc_ip": 1,
+ "_": "3ee83d33"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001031,
+  "message": "[1010001031] Upload error  You did not select a file to upload. "
+ }
+}
+-----------------------------------------------------------END>
+

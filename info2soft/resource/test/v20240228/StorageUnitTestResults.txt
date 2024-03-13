@@ -1,0 +1,319 @@
+<START-----------------------------------------------------------
+Method: chkStorageUnitRules
+body: {
+ "storage_path": "",
+ "_": "3f7dc2d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: storage_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStorageUnit
+body: {
+ "unit_name": "",
+ "unit_type": 1,
+ "bk_uuid": "",
+ "data_ip_uuid": "",
+ "storage_path": "",
+ "max_concurrent": 1,
+ "fragment_switch": 1,
+ "fragment_size": 1,
+ "high_water_mark": 1,
+ "low_water_mark": 1,
+ "auto_expand": 1,
+ "library_uuid": "",
+ "drivers_num": 1,
+ "rootfs": 1,
+ "pool_uuid": "",
+ "fs_uuid": "",
+ "biz_grp_list": "",
+ "access_limit": 1,
+ "_": "3f3b41b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_name;\n Lost: unit_uuid;\n Lost: bk_uuid;\n Lost: data_ip_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStorageUnitGroup
+body: {
+ "group_name": "",
+ "group_type": 1,
+ "unit_list": [],
+ "policy": 1,
+ "_": "3f064d70"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_name;\n Lost: unit_list[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStorageUnit
+body: {
+ "unit_uuids": [],
+ "force": 1,
+ "_": "3e06bb77"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStorageUnitGroup
+body: {
+ "group_uuids": [],
+ "force": 1,
+ "_": "3f227f1b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageUnit
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageUnitGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getStorageUnitBkCapacity
+body: {
+ "bk_uuid": "",
+ "storage_path": "",
+ "unit_type": 1,
+ "fs_uuid": "",
+ "_": "3ed29464"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist",
+  "storage_path": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getStorageUnitDrivers
+body: {
+ "library_uuid": "",
+ "_": "3ee9962d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageUnit
+body: {
+ "_": "3ea7b8d6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "bk_node_name": "192.168.31.30",
+    "bk_ip": "192.168.31.30",
+    "bk_os_type": 0,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "unit_uuid": "59D1B41B-F99B-4C74-9711-BEFB5B046C69",
+    "unit_name": "30_DISK",
+    "unit_type": 0,
+    "bk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "data_ip_uuid": "165E1588-E409-4FC3-8EC5-B24CFC8D9158",
+    "fragment_switch": 1,
+    "fragment_size": 4096,
+    "storage_path": "/bk_30/",
+    "state": {
+     "unit_uuid": "59D1B41B-F99B-4C74-9711-BEFB5B046C69",
+     "status": "NORMAL",
+     "time": 1710138139,
+     "total_size": 209273229312,
+     "avail_size": 135443705856,
+     "used_rate": "35.28"
+    },
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   },
+   {
+    "bk_node_name": "192.168.31.30",
+    "bk_ip": "192.168.31.30",
+    "bk_os_type": 0,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "unit_uuid": "029A614F-CF3D-4CC2-AF22-AE92BB783699",
+    "unit_name": "30_Tape",
+    "unit_type": 2,
+    "bk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "data_ip_uuid": "165E1588-E409-4FC3-8EC5-B24CFC8D9158",
+    "fragment_switch": 1,
+    "fragment_size": 4096,
+    "storage_path": "",
+    "state": {
+     "unit_uuid": "029A614F-CF3D-4CC2-AF22-AE92BB783699",
+     "status": "NO_AVAIL_DRIVER",
+     "time": 1710138139,
+     "total_size": 0,
+     "avail_size": 0,
+     "used_rate": null
+    },
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 2
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageUnitGroup
+body: {
+ "_": "3e138d29"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageUnitStatus
+body: {
+ "force_refresh": 1,
+ "_": "3eadb747"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: unit_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStorageUnit
+body: {
+ "unit_name": "",
+ "unit_type": "",
+ "bk_uuid": "",
+ "data_addr": "",
+ "storage_path": "",
+ "max_concurrent": 1,
+ "fragment_switch": 1,
+ "fragment_size": 1,
+ "high_water_mark": 1,
+ "low_water_mark": 1,
+ "auto_expand": 1,
+ "library_uuid": "",
+ "drivers_num": 1,
+ "rootfs": 1,
+ "_": "3f7c139a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_name;\n Lost: unit_uuid;\n Lost: unit_type;\n Lost: bk_uuid;\n Lost: data_ip_uuid;\n Lost: storage_path;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStorageUnitGroup
+body: {
+ "group_name": "",
+ "group_type": "",
+ "unit_list": [],
+ "policy": 1,
+ "group_uuid": "",
+ "random_str": "",
+ "_": "3f0512d2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_name;\n Lost: group_type;\n Lost: unit_list[];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

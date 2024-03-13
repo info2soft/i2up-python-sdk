@@ -1,0 +1,1589 @@
+<START-----------------------------------------------------------
+Method: bakDataArchive
+body: {
+ "task_uuid": "",
+ "list": [
+  {
+   "time": "",
+   "size": "",
+   "data_type": "",
+   "list_map": []
+  }
+ ],
+ "_": "3f6bcf17"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuid;\n Lost: list[0][time];\n Lost: list[0][size];\n Lost: list[0][data_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTimingBackup
+body: {
+ "timing_backup": {
+  "mirr_sync_attr": 1,
+  "secret_key": "",
+  "oracle_settings": {
+   "ora_sid_name": "",
+   "ora_content_type": 0,
+   "ora_use_script": 0,
+   "ora_port": 1,
+   "ora_script_path": "",
+   "ora_passwd": "Info1234",
+   "ora_home_path": "",
+   "ora_pdbs_name": "",
+   "ora_login_name": "",
+   "ora_login_pwd": "",
+   "ora_server_name": "",
+   "ora_server_port": "",
+   "pool_uuid": "",
+   "volume_uuid": "",
+   "volume_name": "",
+   "attach_point": "",
+   "pool_name": "",
+   "ora_tab_mode": 1,
+   "ora_tab_pdb_name": "",
+   "ora_tab_names": [
+    {
+     "user": "",
+     "ori_table": "",
+     "tgt_table": ""
+    }
+   ],
+   "ora_tab_aux_path": "",
+   "ora_tab_rctype": 1,
+   "ora_tab_time": "",
+   "ora_tab_scn": "",
+   "ora_tab_log": ""
+  },
+  "wk_data_type": 1,
+  "task_name": "testTiming",
+  "backup_type": 0,
+  "del_policy": 0,
+  "mirr_sync_flag": 0,
+  "snap_type": 0,
+  "oracle_rman_settings": {
+   "rman_skip_offline": 0,
+   "rman_num_streams_arch": 20,
+   "rman_del_arch": 1,
+   "rman_include_arch_flag": 1,
+   "rman_num_streams_df": 1,
+   "rman_filespertset_arch": 20,
+   "rman_maxsetsize_df": 0,
+   "rman_set_limit_arch_flag": 0,
+   "rman_skip_readonly": 0,
+   "rman_maxsetsize_arch": 0,
+   "rman_cold_bkup": 0,
+   "rman_filespertset_df": 20,
+   "rman_db_readonly": 0,
+   "rman_compress_df": 1,
+   "rman_include_spfile_flag": 1,
+   "rman_arch_retain": 3
+  },
+  "compress": 0,
+  "encrypt_switch": 0,
+  "wk_path": [
+   "E:/test/"
+  ],
+  "excl_path": [],
+  "bk_data_type": 1,
+  "mirr_blk_size": 0,
+  "bk_path": [
+   "E:/t/"
+  ],
+  "blk_direct_copy": 0,
+  "mirr_open_type": 0,
+  "mssql_settings": {
+   "instance_name": "MSSQLSERVER",
+   "time_out": "",
+   "data_source": "",
+   "win_verify": 1,
+   "user_id": "",
+   "pass_word": "",
+   "port": "",
+   "protocol": 1,
+   "db_info": [],
+   "lanfree": 1,
+   "volume_uuid": "",
+   "mount_point": ""
+  },
+  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "bkup_policy": 2,
+  "bkup_window": {
+   "sched_time_start": "00:00",
+   "sched_time_end": "00:00"
+  },
+  "bkup_one_time": 1547538235,
+  "bkup_schedule": [
+   {
+    "limit": 13,
+    "sched_day": 23,
+    "sched_every": 2,
+    "sched_time": "07:15",
+    "sched_gap_min": 24,
+    "backup_type": 1
+   }
+  ],
+  "task_type": 0,
+  "file_check_dir": "",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "file_check_switch": 0,
+  "timing_type": 1,
+  "data_ip_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "bk_file_crypt": 0,
+  "mirr_file_check": 0,
+  "mysql_settings": {
+   "pool_uuid": "",
+   "pool_name": "",
+   "volume_uuid": "",
+   "volume_name": "",
+   "attach_point": "",
+   "mysql_port": "",
+   "mysql_user": "",
+   "mysql_passwd": "",
+   "time_out": 1,
+   "mysql_path": "",
+   "log_ccopy": 1,
+   "log_volume_uuid": "",
+   "log_mount_point": "",
+   "log_volume_name": "",
+   "data_dir": "",
+   "config_path": "/etc/my.cnf",
+   "lanfree": 1,
+   "mysql_host": "127.0.0.1",
+   "backup_mode": 0,
+   "tables": []
+  },
+  "tape_uuid": "E8566905-411E-B2CD-A742-77B1346D8E84",
+  "archive_pen": 0,
+  "library_sn": "SYZZY_A",
+  "content_type": 1,
+  "db_name": "",
+  "tables": "",
+  "bk_crypt_key": "",
+  "bk_crypt_type": 1,
+  "informix_settings": {
+   "oper_user": "",
+   "is_ori_machine": 1,
+   "config_recover": 1,
+   "informix_instance": {
+    "is_default": 1,
+    "install_dir": "",
+    "instance_name": "",
+    "onconfig_name": ""
+   },
+   "verify_only": 1
+  },
+  "encrypt": 1,
+  "thread_num": 0,
+  "dm_settings": {
+   "dm_home": "",
+   "host": "",
+   "port": "",
+   "user": "",
+   "password": "",
+   "content_type": 1,
+   "is_bk_arch": 1,
+   "is_del_arch": 1,
+   "specify_time": "",
+   "time_type": 1,
+   "since_time": "",
+   "since_lsn": "",
+   "compress": 0,
+   "compress_switch": 0,
+   "encrypt_switch": 0,
+   "encrypt_type": 1,
+   "encrypt_password": "",
+   "encrypt_algorithm": "",
+   "parallel_num": 4,
+   "thread_num": 4,
+   "block_size": 1,
+   "parallel_switch": 0,
+   "block_unit": "",
+   "table_space": "",
+   "table_name": "",
+   "schema_name": ""
+  },
+  "timeout": "",
+  "db2_settings": {
+   "db2_user": "",
+   "db2_group": "",
+   "db_info": [
+    {
+     "db_name": ""
+    }
+   ]
+  },
+  "synthetic_bkup_settings": {
+   "pool_uuid": "",
+   "pool_name": "",
+   "volume_uuid": "",
+   "volume_name": "",
+   "lanfree": ""
+  },
+  "pre_backup_script": "",
+  "post_backup_script": "",
+  "script_timeout": 1,
+  "retry_time": 5,
+  "retry_num": 5,
+  "obs_settings": {
+   "sto_uuid": "",
+   "bucket_name": "",
+   "bucket_path": ""
+  },
+  "bk_storage": 1,
+  "inc_type": 1,
+  "tape_pool_uuid": "",
+  "tape_name": "",
+  "tape_reserve": 1,
+  "tape_pool_name": "",
+  "gsdbt_settings": {
+   "gsdbt_home": "",
+   "oper_user": "",
+   "user": "",
+   "password": "",
+   "port": ""
+  },
+  "ukey_crypt_switch": 1,
+  "ukey_cred_uuid": "",
+  "dedupe_uuid": "",
+  "storage_pool_uuid": "",
+  "goldendb_settings": {
+   "manager_user_name": "",
+   "manager_user_home_dir": "",
+   "tenant_name": "",
+   "db_user_name": "",
+   "db_user_passwd": ""
+  }
+ },
+ "_": "3f65df7d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_backup[compress_switch];\n Lost: timing_backup[obs_settings][sto_uuid];\n Lost: timing_backup[obs_settings][bucket_name];\n The timing_backup[script_timeout] field must contain a number greater than or equal to 60;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTimingRecovery
+body: {
+ "timing_recovery": {
+  "bk_path": [
+   "E:/t/2019-01-15_15-49-00/E/test/"
+  ],
+  "bk_data_type": 1,
+  "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+  "backup_type": 0,
+  "backup_task_uuid": "",
+  "wk_data_type": 1,
+  "oracle_settings": {
+   "ora_rst_limit_scn": 0,
+   "ora_rc_point_scn": 0,
+   "ora_rst_limit_thread": 1,
+   "ora_rc_point_log_seq": "",
+   "ora_rst_limit_date": "2017-12-21 13:26:00",
+   "ora_rst_limit_type": 0,
+   "ora_home_path": "",
+   "ora_rc_point_type": 0,
+   "ora_passwd": "Info1234",
+   "ora_port": 1,
+   "ora_rc_point_date": "2017-12-21 13:26:00",
+   "ora_do_restore": 0,
+   "ora_rst_limit_log_seq": "",
+   "ora_content_type": 0,
+   "ora_rc_point_thread": 1,
+   "ora_sid_name": "",
+   "ora_do_recovery": 0,
+   "ora_rc_type": 0,
+   "ora_rst_type": 0,
+   "ora_pdbs_name": "",
+   "ora_rst_arch_limit_type": 1,
+   "ora_rst_arch_limit_log_seq": 1,
+   "ora_dbid": "",
+   "ora_rst_ctrl_name": "",
+   "ora_rst_spfile_path": "",
+   "ora_rst_spfile_name": "",
+   "ora_rst_record": {},
+   "ora_rc_record": {},
+   "ora_rst_recory_point": 1,
+   "ora_rc_recory_point": 1,
+   "ora_login_pwd": "",
+   "ora_login_name": "",
+   "snapshot_time": "",
+   "snapshot_name": "",
+   "rst_control": 1,
+   "ora_tab_mode": 0,
+   "ora_tab_pdb_name": "",
+   "ora_tab_names": [
+    {
+     "user": "",
+     "ori_table": "",
+     "tgt_table": ""
+    }
+   ],
+   "ora_tab_aux_path": "",
+   "ora_open_mode": 0,
+   "ora_rst_endarch_limit_log_seq": 1
+  },
+  "task_name": "task",
+  "rc_data_path": "E://t//",
+  "mssql_settings": {
+   "pass_word": "",
+   "instance_name": "",
+   "win_verify": 0,
+   "user_id": "",
+   "time_out": "",
+   "data_source": "",
+   "port": "",
+   "protocol": 1,
+   "db_info": [
+    {
+     "src_db_name": "",
+     "new_db_name": "",
+     "lgc_infos": [
+      {
+       "lgc_name": "test",
+       "lgc_path": "C:/Program Files/Microsoft SQL Server/MSSQL12.MSSQLSERVER/MSSQL/DATA/test.mdf"
+      }
+     ],
+     "check_out": "0",
+     "db_size": "",
+     "tab_num": "",
+     "tab_info": "",
+     "ln_num": "",
+     "db_file_save_path": "",
+     "rc_point_in_time": "2019-01-15_15-49-00",
+     "db_name": "",
+     "ldf_name": "",
+     "mdf_name": ""
+    }
+   ],
+   "lanfree": 0,
+   "volume_uuid": "",
+   "mount_point": "",
+   "data_fetch": 0,
+   "rep_dir": ""
+  },
+  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "rc_style": 1,
+  "wk_path": [
+   "E:/test/"
+  ],
+  "rc_point_in_time": "2019-01-15_15-49-00",
+  "db2_settings": {
+   "log_file_dir": "",
+   "db_info": [
+    {
+     "new_db_name": "",
+     "db_path": "",
+     "rc_point_in_time": "",
+     "db_name": ""
+    }
+   ],
+   "db2_user": "",
+   "db2_group": ""
+  },
+  "excl_path": [],
+  "blk_direct_copy": 1,
+  "compress": "",
+  "encrypt_switch": "",
+  "secret_key": "",
+  "data_ip_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "mysql_settings": {
+   "pool_uuid": "",
+   "pool_name": "",
+   "volume_uuid": "",
+   "volume_name": "",
+   "attach_point": "",
+   "mysql_port": "",
+   "mysql_user": "",
+   "mysql_passwd": "",
+   "snapshot_time": "",
+   "mysql_rc_type": 1,
+   "mysql_rc_time": "",
+   "time_out": 1,
+   "mysql_path": "",
+   "snapshot_name": "",
+   "log_ccopy": 1,
+   "log_volume_uuid": "",
+   "log_mount_point": "",
+   "data_dir": "",
+   "lanfree": 1,
+   "mysql_host": "127.0.0.1",
+   "mysql_startup_instance": 1,
+   "backup_mode": 0,
+   "tables": []
+  },
+  "oracle_rman_settings": {
+   "rman_num_streams_df": 1
+  },
+  "synthetic_bkup_settings": {
+   "mount_dir": "",
+   "storage": {},
+   "volume_uuid": "BE54F165-107C-4435-18E0-0D6471A87FDE",
+   "rc_dir": ""
+  },
+  "db_name": "",
+  "content_type": 0,
+  "tables": "",
+  "res_by_path": "",
+  "informix_settings": {
+   "oper_user": "",
+   "is_ori_machine": 1
+  },
+  "thread_num": 1,
+  "protocol": "",
+  "fc_initiator_wwpn": "",
+  "fc_target_wwpn": "",
+  "data_return": 0,
+  "data_dir": "",
+  "dm_settings": {
+   "dm_home": "",
+   "host": "",
+   "port": 1,
+   "user": "",
+   "password": "",
+   "is_create": "",
+   "ini_path": "",
+   "intance_name": "",
+   "db_name": "",
+   "data_dir": "",
+   "content_type": "",
+   "bk_type": 1,
+   "restore_switch": 1,
+   "recover_switch": 1,
+   "is_restore_resent": 1,
+   "rt_point": "",
+   "is_restore_arch": "",
+   "arch_type": 1,
+   "restore_time_type": 1,
+   "restore_until_time": "",
+   "restore_until_lsn": "",
+   "is_rt_arch_to_dir": 1,
+   "table_space": "",
+   "arch_dir": "",
+   "table_name": "",
+   "schema_name": "",
+   "arch_from": 0,
+   "is_force": 0,
+   "log_dirs": [],
+   "magic_num": "",
+   "recover_time_type": 0,
+   "recover_until_time": "",
+   "recover_until_lsn": "",
+   "encrypt_switch": 1,
+   "encrypt_password": "",
+   "encrypt_algorithm": "",
+   "thread_num": 4,
+   "is_index": 0,
+   "is_constraint": 1,
+   "is_table_struct": 0,
+   "is_table_data": 1,
+   "system_user": ""
+  },
+  "rc_path_policy": 0,
+  "bk_storage": 1,
+  "obs_settings": {},
+  "storage_uuid": "",
+  "storage_pool_uuid": "",
+  "is_remote_rc": 0,
+  "gsdbt_settings": {
+   "gsdbt_home": "",
+   "oper_user": "",
+   "user": "",
+   "password": "",
+   "port": ""
+  },
+  "bk_crypt_type": "",
+  "bk_file_crypt": "",
+  "bk_crypt_key": "",
+  "tape_uuid": "",
+  "tape_pool_uuid": "",
+  "tape_pool_name": "",
+  "tape_name": "",
+  "library_sn": "",
+  "ukey_crypt_switch": 1,
+  "ukey_cred_uuid": "",
+  "dedupe_uuid": "",
+  "rc_method": 1,
+  "select_data_path": "",
+  "pre_recover_script": "",
+  "post_recover_script": "",
+  "goldendb_settings": {
+   "manager_user_name": "",
+   "manager_user_home_dir": "",
+   "tenant_name": "",
+   "db_user_name": "",
+   "db_user_passwd": "",
+   "custom_rc_point": "",
+   "resultset_datetime": ""
+  }
+ },
+ "force": "",
+ "_": "3dd7f59a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_recovery[compress_switch];\n Lost: timing_recovery[encrypt_switch];\n Lost: timing_recovery[obs_settings][sto_uuid];\n Lost: timing_recovery[obs_settings][bucket_name];\n Lost: timing_recovery[bk_file_crypt];\n Lost: timing_recovery[timing_type];\n Lost: timing_recovery[mirr_file_check];\n Lost: timing_recovery[mirr_sync_flag];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTimingBackup
+body: {
+ "task_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "del_policy": 1,
+ "force": 1,
+ "recycle": 0,
+ "_": "3f45fb3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTimingBackupPoint
+body: {
+ "task_uuid": "",
+ "time_point": "",
+ "_": "3eaf2b07"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTimingRecovery
+body: {
+ "task_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "del_clone": 0,
+ "_": "3f7a8a77"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTimingWork
+body: {
+ "work_uuids": [],
+ "_": "3e9a6f14"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: work_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descibeDmDbInfo
+body: {
+ "dm_home": "",
+ "host": "",
+ "port": "",
+ "user": "",
+ "password": "",
+ "type": 1,
+ "schema_name": "",
+ "node_uuid": "",
+ "_": "3f05ee32"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: dm_home;\n Lost: host;\n Lost: port;\n Lost: user;\n Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descibeTimingBackupOracleSriptPath
+body: {
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "_": "3f09fc91"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGoldebDBInfo
+body: {
+ "node_uuid": "",
+ "is_backup": "",
+ "_": "3f207fd0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGroupTimingRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter UUID"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRcMysqlInfo
+body: {
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "E://mssqlBK//ts-11111111-1111-1111-1111-111111111111//",
+ "_": "3f313109"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSbtDbid
+body: {
+ "file_name": "",
+ "bk_uuid": "",
+ "_": "3f1063a2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: file_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimingBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimingBackupMssqlSource
+body: {
+ "wk_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
+ "_": "3f1488ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimingBackupOracleContent
+body: {
+ "oracle_settings": {
+  "ora_passwd": "Info1234",
+  "ora_port": 1,
+  "ora_sid_name": "",
+  "ora_content_type": 0
+ },
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "_": "3d0ebc44"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: oracle_settings[ora_sid_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimingRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimingRecoveryDmBackupInfo
+body: {
+ "node_uuid": "",
+ "bk_path": "",
+ "_": "3cdb03d1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimingRecoveryMssqlInitInfo
+body: {
+ "rc_point_in_time": "2017-12-21_13-16-53",
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "",
+ "_": "3f24d110"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rc_data_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVer
+body: {
+ "task_uuid": "",
+ "_": "3ee15ddb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCustomTypes
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbNames
+body: {
+ "volume_uuid": "",
+ "rc_point_in_time": "",
+ "mount_point": "",
+ "lanfree": 1,
+ "node_uuid": "",
+ "_": "3bd3d12c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_uuid;\n Lost: rc_point_in_time;\n Lost: mount_point;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFileSnapshot
+body: {
+ "volume_uuid": "",
+ "_": "3e77b96f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGaussDBDatabaseTables
+body: {
+ "node_uuid": "",
+ "content_type": 1,
+ "page_no": "",
+ "page_size": "",
+ "top_dir": "",
+ "_": "3ecf43ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSbtContrlFile
+body: {
+ "rc_data_path": "",
+ "ora_content_type": 1,
+ "bk_uuid": "",
+ "bk_storage": "",
+ "tape_pool_uuid": "",
+ "tape_name": "",
+ "library_sn": "",
+ "_": "3ecac306"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n The ora_content_type field must be one of: 6,7;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingBackup
+body: {
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "search_value": "",
+ "type": 0,
+ "status": "",
+ "_": "3f56e0de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingBackupMssqlDbList
+body: {
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "mssql_settings": {
+  "win_verify": 0,
+  "instance_name": "MSSQLSERVER",
+  "pass_word": "123456",
+  "data_source": "WIN-EGKN86NF3PM",
+  "user_id": "sa",
+  "port": "",
+  "protocol": 1
+ },
+ "_": "3e945788"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mssql_settings[port];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingBackupPoint
+body: {
+ "task_uuid": "",
+ "_": "3ee7b207"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingBackupStatus
+body: {
+ "force_refresh": 1,
+ "_": "3e7693c0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecovery
+body: {
+ "search_value": "",
+ "page": 1,
+ "limit": 1,
+ "search_field": "",
+ "_": "3f70aaf9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryDb2Time
+body: {
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "E://mssqlBK//ts-11111111-1111-1111-1111-111111111111//",
+ "_": "3f63c331"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryDbInfo
+body: {
+ "rc_data_path": "",
+ "bk_uuid": "",
+ "wk_data_type": "4",
+ "bk_storage": 1,
+ "tape_uuid": "",
+ "tape_pool_uuid": "",
+ "tape_name": "",
+ "library_sn": "",
+ "_": "3e054c32"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n Lost: obs_settings[sto_uuid];\n Lost: obs_settings[bucket_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryGaussTime
+body: {
+ "uuid": "",
+ "bk_path": "",
+ "_": "3d934a3d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryMssqlTime
+body: {
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "rc_data_path": "E://mssqlBK//ts-11111111-1111-1111-1111-111111111111//",
+ "bk_storage": 1,
+ "tape_pool_uuid": "",
+ "tape_name": "",
+ "library_sn": "",
+ "_": "3d153587"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: obs_settings[sto_uuid];\n Lost: obs_settings[bucket_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryOracleRcPointInfo
+body: {
+ "page": 1,
+ "limit": 1,
+ "bk_uuid": "",
+ "bk_path": "",
+ "_": "3f7dffc1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryPathList
+body: {
+ "rc_data_path": "C://back//",
+ "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "backup_task_uuid": "11111111-1111-1111-1111-111111111111",
+ "volume_uuid": "",
+ "bk_storage": "",
+ "tape_pool_uuid": "",
+ "tape_name": "",
+ "library_sn": "",
+ "dedupe_uuid": "",
+ "_": "3f35054a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingRecoveryStatus
+body: {
+ "force_refresh": 1,
+ "_": "3f455eee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTimingWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3ebcc612"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTimingBackup
+body: {
+ "timing_backup": {
+  "mirr_sync_attr": 1,
+  "secret_key": "",
+  "oracle_settings": {
+   "ora_sid_name": "",
+   "ora_content_type": 0,
+   "ora_use_script": 0,
+   "ora_port": 1,
+   "ora_script_path": "",
+   "ora_passwd": "Info1234",
+   "ora_home_path": ""
+  },
+  "policy_uuid": "38FFA6E2-2A40-31D6-7A94-E8168EBA9FF1",
+  "wk_data_type": 0,
+  "task_name": "",
+  "backup_type": 1,
+  "del_policy": 0,
+  "mirr_sync_flag": 0,
+  "snap_type": 0,
+  "oracle_rman_settings": {
+   "rman_skip_offline": 0,
+   "rman_num_streams_arch": 1,
+   "rman_del_arch": 1,
+   "rman_include_arch_flag": 1,
+   "rman_num_streams_df": 1,
+   "rman_filespertset_arch": 20,
+   "rman_maxsetsize_df": 0,
+   "rman_set_limit_arch_flag": 0,
+   "rman_skip_readonly": 0,
+   "rman_maxsetsize_arch": 0,
+   "rman_cold_bkup": 0,
+   "rman_filespertset_df": 20
+  },
+  "compress": 0,
+  "encrypt_switch": 0,
+  "wk_path": [],
+  "excl_path": [],
+  "bk_data_type": 1,
+  "mirr_blk_size": 0,
+  "bk_path": [],
+  "blk_direct_copy": 0,
+  "mirr_open_type": 0,
+  "mssql_settings": {
+   "instance_name": "",
+   "time_out": "2",
+   "data_source": "",
+   "dbsize": "",
+   "win_verify": 0,
+   "user_id": "",
+   "db_info": [
+    {
+     "db_name": ""
+    }
+   ],
+   "pass_word": ""
+  },
+  "wk_uuid": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "bk_uuid": "Jane",
+  "bkup_policy": 0,
+  "bkup_window": {
+   "sched_time_start": "15:18",
+   "sched_time_end": "14:37"
+  },
+  "bkup_one_time": 1515568566,
+  "bkup_schedule": [
+   {
+    "limit": 25,
+    "sched_day": 24,
+    "sched_every": 2,
+    "sched_time": "04:07",
+    "sched_gap_min": 49
+   }
+  ],
+  "task_type": 0,
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "data_ip_uuid": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "db2_settings": {
+   "db2_user": "",
+   "db2_group": "",
+   "db_info": [
+    {
+     "db_name": "",
+     "task_uuid": "",
+     "task_name": ""
+    }
+   ]
+  },
+  "bk_storage": "",
+  "dedupe_uuid": ""
+ },
+ "_": "3e456af0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_backup[task_name];\n Lost: timing_backup[compress_switch];\n Lost: timing_backup[wk_path][0];\n Lost: timing_backup[bk_path][0];\n Lost: timing_backup[mirr_file_check];\n Not uuid: timing_backup[bk_uuid];\n Lost: timing_backup[timing_type];\n Lost: timing_backup[file_check_switch];\n Lost: timing_backup[bk_file_crypt];\n Lost: timing_backup[ukey_crypt_switch];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTimingRecovery
+body: {
+ "timing_recovery": {
+  "wk_uuid": "7AD64D7A-7D1D-AC51-5DF1-29A58345A288",
+  "task_name": "task",
+  "random_str": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "wk_path": [],
+  "bk_data_type": 1,
+  "bk_path": [],
+  "backup_type": 0,
+  "oracle_settings": {
+   "ora_rc_point_thread": 1,
+   "ora_rc_point_date": "2017-12-21 13:26:00",
+   "ora_passwd": "Info1234",
+   "ora_port": 1,
+   "ora_rc_point_type": 0,
+   "ora_do_recovery": 0,
+   "ora_do_restore": 0,
+   "ora_home_path": "",
+   "ora_rst_type": 0,
+   "ora_rst_limit_type": 0,
+   "ora_sid_name": "",
+   "ora_rst_limit_thread": 1,
+   "ora_rst_limit_date": "2017-12-21 13:26:00",
+   "ora_content_type": 0,
+   "ora_rst_limit_log_seq": "",
+   "ora_rst_limit_scn": 0,
+   "ora_rc_type": 0,
+   "ora_rc_point_log_seq": "",
+   "ora_rc_point_scn": 0
+  },
+  "bk_uuid": "0DD4E727-70AB-62C6-BEB5-D012DFAE46E3",
+  "task_uuid": "7AD64D7A-7D1D-AC51-5DF1-29A58345A288",
+  "backup_task_uuid": "",
+  "mssql_settings": {
+   "win_verify": 0,
+   "mdf_name": "",
+   "src_db_name": "",
+   "user_id": "",
+   "ldf_name": "",
+   "ldf_path": "",
+   "instance_name": "",
+   "pass_word": "",
+   "db_file_save_path": "",
+   "mdf_path": "",
+   "new_db_name": ""
+  },
+  "rc_data_path": "C://back//",
+  "rc_style": 1,
+  "wk_data_type": 0,
+  "rc_point_in_time": "2017-12-21_13-16-53",
+  "db2_settings": {
+   "db2_user": "",
+   "db2_group": "",
+   "log_file_dir": "",
+   "db_info": [
+    {
+     "db_name": "",
+     "new_db_name": "",
+     "db_path": "",
+     "rc_point_in_time": "",
+     "task_uuid": "",
+     "task_name": ""
+    }
+   ]
+  },
+  "excl_path": [],
+  "data_ip_uuid": "7AD64D7A-7D1D-AC51-5DF1-29A58345A288",
+  "res_by_path": "",
+  "data_dir": "",
+  "data_return": 0,
+  "rc_path_policy": 0,
+  "bk_storage": "",
+  "dedupe_uuid": ""
+ },
+ "force": "",
+ "_": "3e6a5977"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: timing_recovery[bk_path][0];\n Lost: timing_recovery[compress_switch];\n Lost: timing_recovery[encrypt_switch];\n Lost: timing_recovery[wk_path][0];\n Lost: timing_recovery[blk_direct_copy];\n Lost: timing_recovery[bk_file_crypt];\n Lost: timing_recovery[ukey_crypt_switch];\n Lost: timing_recovery[timing_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateVolume
+body: {
+ "volume_uuid": "",
+ "node_uuid": "",
+ "operate": "mount",
+ "_": "3f4e5f58"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001094,
+  "message": "[1010001094] Failed to connect etcd"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: showTimingBackupDetailInfo
+body: {
+ "task_uuid": "",
+ "timing_type": 3,
+ "_": "3f7d2709"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startTimingBackup
+body: {
+ "operate": "start",
+ "task_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "bk_type": 1,
+ "_": "3f3f0b2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startTimingRecovery
+body: {
+ "task_uuids": [],
+ "operate": "start",
+ "force": 1,
+ "_": "3ec72ddf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: taskMountDir
+body: {
+ "node_uuid": "",
+ "bakdir": "",
+ "rc_point": "",
+ "bk_storage": "",
+ "tape_pool_uuid": "",
+ "tape_name": "",
+ "library_sn": "",
+ "_": "3f31c4c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: bakdir;\n Lost: rc_point;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: timingRecoveryCheckDir
+body: {
+ "check_type": 1,
+ "file_dir": [],
+ "node_uuid": "",
+ "_": "3f3ed234"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: file_dir[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyGoldebDB
+body: {
+ "node_uuid": "",
+ "bak_dir": "",
+ "golden_db_opt": {
+  "manager_user_name": "",
+  "manager_user_home_dir": "",
+  "tenant_name": "",
+  "db_user_name": "",
+  "db_user_passwd": ""
+ },
+ "is_backup": 1,
+ "_": "3f452283"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyTimingBackupOracleInfo
+body: {
+ "oracle_settings": {
+  "ora_sid_name": "",
+  "ora_port": 1,
+  "ora_home_path": "",
+  "ora_passwd": "Info1234"
+ },
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "_": "3f51f2a4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: oracle_settings[ora_sid_name];\n Lost: oracle_settings[ora_home_path];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyTimingBackupOracleLogin
+body: {
+ "wk_uuid": "",
+ "oracle_settings": {
+  "ora_sid_name": "",
+  "ora_login_name": "",
+  "ora_login_pwd": "",
+  "ora_server_name": "",
+  "ora_server_port": ""
+ },
+ "_": "3d98164e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyTimingRecoveryMssqlInfo
+body: {
+ "mssql_settings": {
+  "win_verify": 0,
+  "pass_word": "123456",
+  "instance_name": "MSSQLSERVER",
+  "user_id": "sa",
+  "data_source": "",
+  "port": "",
+  "protocol": 1
+ },
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "_": "3e773e09"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mssql_settings[data_source];\n Lost: mssql_settings[port];\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,184 @@
+<START-----------------------------------------------------------
+Method: createBizGroup
+body: {
+ "biz_grp": {
+  "grp_name": "",
+  "type": 1,
+  "subtype": 1,
+  "comment": ""
+ },
+ "_": "3f2f3a87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: biz_grp[grp_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBizGroup
+body: {
+ "grp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3ecb2674"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "grp_uuid": "11111111-1111-1111-1111-111111111111",
+    "grp_name": null
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "grp_uuid": "11111111-1111-1111-1111-111111111111",
+    "grp_name": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBizGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroup
+body: {
+ "limit": 1,
+ "search_field": "",
+ "search_value": "",
+ "direction": "",
+ "order_by": "",
+ "page": 1,
+ "filter_and_or": 1,
+ "_": "3e9cfb57"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 1,
+    "grp_uuid": "1A47587D-4E18-4D02-AFE2-5907E9C96A0D",
+    "grp_name": "grp_name",
+    "type": 1,
+    "subtype": 0,
+    "comment": "123",
+    "create_time": 1709889075,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupBind
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupResource
+body: {
+ "type": 1,
+ "subtype": 0,
+ "uuid": "",
+ "group_uuid": "",
+ "name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "_": "3e1a33b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBizGroup
+body: {
+ "biz_grp": {
+  "comment": "123",
+  "grp_name": "grp_name",
+  "type": 3,
+  "subtype": 10
+ },
+ "_": "3f7f4eb2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateBizGroupBind
+body: {
+ "uuids": [
+  "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+ ],
+ "_": "3f0638a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+

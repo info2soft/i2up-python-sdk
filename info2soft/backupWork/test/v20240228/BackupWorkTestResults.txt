@@ -1,0 +1,901 @@
+<START-----------------------------------------------------------
+Method: createBackupWorkFilter
+body: {
+ "filter_name": "",
+ "description": "",
+ "and_or": 1,
+ "rules": [
+  {
+   "key": "",
+   "operator": "",
+   "value": ""
+  }
+ ],
+ "_": "3f1d61a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: filter_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupWork
+body: {
+ "work_uuids": [],
+ "_": "3f184fe9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupWorkFilter
+body: {
+ "filter_uuids": [],
+ "force": 0,
+ "_": "3f2a5bab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: filter_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupWorkFilter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "backup_work_filter": {
+   "rules": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupWorkResult
+body: {
+ "op_switch": 1,
+ "_": "3ed3d532"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "detail": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3effac88"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 144,
+  "run": 0,
+  "wait": 0,
+  "finish": 136,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWorkFilter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBackupWorkFilter
+body: {
+ "filter_name": "",
+ "description": "",
+ "and_or": 1,
+ "rules": [
+  {
+   "key": "",
+   "operator": "",
+   "value": ""
+  }
+ ],
+ "_": "3f0f9fd2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: filter_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebootBackupWork
+body: {
+ "operate": "reboot",
+ "work_uuids": [],
+ "_": "3e31a267"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBackupWork
+body: {
+ "operate": "stop",
+ "work_uuids": [],
+ "_": "3f773a10"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3e8bea67"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 142,
+  "run": 0,
+  "wait": 0,
+  "finish": 134,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3d852680"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 137,
+  "run": 0,
+  "wait": 0,
+  "finish": 129,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3e2f2ae8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 137,
+  "run": 0,
+  "wait": 0,
+  "finish": 129,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3f099a5b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 131,
+  "run": 0,
+  "wait": 0,
+  "finish": 123,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3f13d47f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 131,
+  "run": 0,
+  "wait": 0,
+  "finish": 123,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3e85f734"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 131,
+  "run": 0,
+  "wait": 0,
+  "finish": 123,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3f444d4d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 195,
+    "work_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+    "work_type": 60,
+    "version": "20240306091011",
+    "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+    "bak_task_name": null,
+    "rc_task_name": null,
+    "replica_task_name": null,
+    "wk_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+    "wk_name": null,
+    "bk_name": null,
+    "unit_name": null,
+    "sched_name": null,
+    "progress": "0",
+    "status": "FINISH",
+    "result": null,
+    "start": 1710301316,
+    "end": 1710301316,
+    "ftotal": "0",
+    "trans_data_num": "0",
+    "stage": 0,
+    "create_time": 1710301316,
+    "src_copy_id": 0,
+    "dst_copy_id": 0,
+    "ori_job": {
+     "event_time": 1710301316,
+     "ftotal": 0,
+     "job_type": 60,
+     "job_uuid": "9A99B27A-CE4D-4073-B145-761364DD51CA",
+     "library_sn": "",
+     "node_uuid": "1299C63B-5955-47F3-9BB9-AEBBE58542B7",
+     "progress": 0,
+     "stage": 0,
+     "status": "FINISH",
+     "task_uuid": "86AD0380-B7F6-456A-9BBB-6FFBD2C7A472",
+     "trans_data_num": 0,
+     "version": "20240306091011",
+     "start": 1710301316,
+     "end": 1710301316,
+     "result": "FINISH",
+     "state": 0
+    },
+    "library_sn": "",
+    "detail": null,
+    "state": 0,
+    "wk_hostname": null,
+    "bk_set_id": null,
+    "bak_task_type": null,
+    "unit_group_name": null,
+    "priority": null,
+    "trans_mode": null,
+    "library_name": null,
+    "library_node_name": null,
+    "src_unit_name": null,
+    "src_unit_group_name": null,
+    "src_bk_name": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1
+   }
+  ],
+  "total": 131,
+  "run": 0,
+  "wait": 0,
+  "finish": 123,
+  "stop": 0,
+  "failed": 5,
+  "skip": 0,
+  "timeout": 3
+ }
+}
+-----------------------------------------------------------END>
+

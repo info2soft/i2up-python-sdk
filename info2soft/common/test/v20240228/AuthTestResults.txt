@@ -1,0 +1,103 @@
+<START-----------------------------------------------------------
+Method: authGenerate
+body: {
+ "_": "3f1f0637"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "content": {
+   "uuid": "aa61a4c0523554abcddfb0c3c4964a0a1d21e550",
+   "t": "171014283011460214"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkCaptcha
+body: {
+ "username": "admin",
+ "_": "3f72e0fa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "need_captcha": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkLoginStatus
+body: {
+ "access_token": "a10b45cd8b94ad53UEsc8H-gxjMU-jX76eFd2z4eoDh0vlVkPPDWaJyBWssjwWdYAtk4SdFaL8dQH48QQv29c3TRNX3FQo4Ub_V1qwehbRQ28KBEtYqTG6wy8sbAEWPVcBoE2uWXnmP_J5R9hXl8yHbeyaMwMjLpWe0onA"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001108,
+  "message": "[1010001108] Access token invalid"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimeStamp
+body: {
+ "timestamp": 1546847673,
+ "_": "3f17fda6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "t": "171014283079170604"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVerificationCode
+body: {
+ "uuid": "",
+ "mobile": 18501767968,
+ "email": "",
+ "type": "sms",
+ "_": "3dbc5d03"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001125,
+  "message": "[1010001125] Invalid credentials (mobile, email) or verification code, please re-enter or re obtain"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: heartbeat
+body: {
+ "refresh_token": "null",
+ "_": "3f2ae09e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001109,
+  "message": "[1010001109] Refresh token invalid"
+ }
+}
+-----------------------------------------------------------END>
+

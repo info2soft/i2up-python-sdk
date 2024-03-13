@@ -1,0 +1,196 @@
+<START-----------------------------------------------------------
+Method: checkDir
+body: {
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "path": "E:/test2",
+ "_": "3f1a030b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDir
+body: {
+ "node_uuid": "A608F04B-0CA4-2ECD-794C-5AFD4580E5B9",
+ "path": "C:/test2/12347",
+ "type": "bigdata_wk",
+ "_": "3ec0318c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDir
+body: {
+ "sto_uuid": "",
+ "path": "aliyun--oos:/TestDir",
+ "host_uuid": "",
+ "bucket": "",
+ "_": "3e917f12"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid[];\n Lost: bucket;\n Lost: names[0][name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDirDelStatus
+body: {
+ "sto_uuid": "",
+ "task_uuid": "",
+ "host_uuid": "",
+ "_": "3e98588a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n Lost: task_uuid;\n Lost: host_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDir
+body: {
+ "show_file": 1,
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "dev": 0,
+ "path": "",
+ "rep_uuid": "",
+ "bs_time": "2018-10-23_13-23-08",
+ "host_uuid": "",
+ "sto_uuid": "",
+ "for_vp_file_rc": 1,
+ "ftp_uuid": "",
+ "cred_uuid": "",
+ "auth_user": "",
+ "auth_key": "",
+ "for_big_data": 1,
+ "mscs_group_ip": "",
+ "vm_name": "",
+ "cluster_config_path": "",
+ "page": 1,
+ "type": "bk_snap",
+ "mount_dir": "",
+ "mount_uuid": "",
+ "bk_path": "",
+ "rc_point_in_time": "",
+ "marker": "",
+ "protocol": "",
+ "fc_initiator_wwpn": "",
+ "fc_target_wwpn": "",
+ "timepoint": 1,
+ "mapper_path": "",
+ "bk_type": "service_type",
+ "task_uuid": "",
+ "volume_uuid": "",
+ "bucket": "",
+ "is_ssl": 1,
+ "pool_uuid": "",
+ "bk_storage": "",
+ "dedupe_uuid": "",
+ "_": "3eaa7125"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEtcdDir
+body: {
+ "node_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+ "path": "",
+ "_": "3f392637"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFileBackupDir
+body: {
+ "bk_uuid": "",
+ "rc_data_path": "",
+ "bk_storage": 1,
+ "tape_pool_uuid": "",
+ "tape_name": "",
+ "library_sn": "",
+ "dedupe_uuid": "",
+ "rc_point": "",
+ "sto_uuid": "",
+ "bucket_name": "",
+ "path": "",
+ "_": "3f712a98"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: rc_data_path;\n Lost: rc_point;\n Lost: rc_pathlist_response[bk_path][0];\n Lost: rc_pathlist_response[rc_time_point_list][0];\n Lost: rc_pathlist_response[bk_data_type];\n Lost: rc_pathlist_response[wk_data_type];\n Lost: rc_pathlist_response[backup_type];\n Lost: rc_pathlist_response[task_uuid];\n Lost: rc_pathlist_response[blk_direct_copy];\n Lost: rc_pathlist_response[mount_point];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateDtoDir
+body: {
+ "type": 1,
+ "sto_uuid": "",
+ "host_uuid": "",
+ "sto_type": "",
+ "archive_data_direct": 1,
+ "valid_period": 1,
+ "rate_type": 1,
+ "path": [],
+ "names": [
+  {
+   "name": "",
+   "is_dir": ""
+  }
+ ],
+ "_": "3f28afe0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
