@@ -39,7 +39,9 @@ $ pip3 install flake8
 
 $ pip3 install rsa
 
-$ pip3 install pycrypto
+$ pip3 install crypto pycryptodome
+
+$ pip3 install pyopenssl
 
 ```
 
