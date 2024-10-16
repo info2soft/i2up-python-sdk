@@ -259,11 +259,13 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
     ).digest()
 
     # enable_sign_enhance
-    print(url)
     sign_fields = []
     url_params = urllib.parse.parse_qs(url_parse.query, keep_blank_values=True)
     url_params.update(data)
-    print(url_params)
+    if config.get_default('log_switch'):
+        print(url)
+        print(url_params)
+
     if data is not None:
         for k, v in sorted(url_params.items(), key=lambda x: x[0]):
             if method == 'get':
@@ -285,6 +287,7 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
         ).digest()
         header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
 
+    if config.get_default('log_switch'):
         print('===== enhance sign str start =====')
         print(enhance_sign_str)
         print(enhance_signature_bytes.hex().lower())
