@@ -16,13 +16,13 @@ from info2soft.resource.v20181227 import Node
 # print(appTable)
 
 ## 设置控制台地址
-config.set_default(None, None, None, 'https://172.20.68.203:58086/api')
+config.set_default(None, None, None, 'https://****:58086/api')
 
 
-username = 'admin'
-pwd = 'Info@1234'
+username = ''
+pwd = ''
 
-auth = Auth(username, pwd)
+auth = Auth(username, pwd, 'ak', 'aBvktc7e***', '***')
 nodebody = {
     # 'limit': 1000,
     # 'page': 1,

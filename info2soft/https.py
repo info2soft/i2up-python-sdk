@@ -249,50 +249,47 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
     sign_str = method.upper() + '\n' + url_parse.path + '\n' + _ + '\n' + str(timestamp) + '\n' + str(nonce)
     # signature = hmac.new(token, sign_str, digestmod=hashlib.sha256).hexdigest()
     # signature_bytes = ''
-    if auth_type == 'token':
-        signature_bytes = hmac.new(
-            bytes(token or 'token', encoding='utf-8'),
-            bytes(sign_str, encoding='utf-8'),
+
+    sign_key = sk if auth_type == 'ak' else token
+
+    signature_bytes = hmac.new(
+        bytes(sign_key, encoding='utf-8'),
+        bytes(sign_str, encoding='utf-8'),
+        digestmod=hashlib.sha256
+    ).digest()
+
+    # enable_sign_enhance
+    print(url)
+    sign_fields = []
+    url_params = urllib.parse.parse_qs(url_parse.query, keep_blank_values=True)
+    url_params.update(data)
+    print(url_params)
+    if data is not None:
+        for k, v in sorted(url_params.items(), key=lambda x: x[0]):
+            if method == 'get':
+                if isinstance(v, list):
+                    k = k[0:-2]
+                    v = '[' + ','.join(v) + ']'
+            elif type(v) != str:
+                v = json.dumps(v, separators=(',', ':')).replace('\\\\\\\\', '\\\\').replace('\"', '').replace('{}', '[]')
+
+            if v == '':
+                continue
+            sign_fields.append(str(k) + '=' + str(v))
+        enhance_sign_str = '&' . join(sign_fields)
+        enhance_sign_str = enhance_sign_str.replace('"', '')
+        enhance_signature_bytes = hmac.new(
+            bytes(sign_key, encoding='utf-8'),
+            bytes(enhance_sign_str, encoding='utf-8'),
             digestmod=hashlib.sha256
         ).digest()
+        header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
 
-        # enable_sign_enhance
-        print(url)
-        sign_fields = []
-        url_params = urllib.parse.parse_qs(url_parse.query, keep_blank_values=True)
-        url_params.update(data)
-        print(url_params)
-        if data is not None:
-            for k, v in sorted(url_params.items(), key=lambda x: x[0]):
-                if method is 'get':
-                    if isinstance(v, list):
-                        k = k[0:-2]
-                        v = '[' + ','.join(v) + ']'
-                elif type(v) != str:
-                    v = json.dumps(v, separators=(',', ':')).replace('\\\\\\\\', '\\\\').replace('\"', '').replace('{}', '[]')
+        print('===== enhance sign str start =====')
+        print(enhance_sign_str)
+        print(enhance_signature_bytes.hex().lower())
+        print('===== enhance sign str end =====')
 
-                if v is '':
-                    continue
-                sign_fields.append(str(k) + '=' + str(v))
-            enhance_sign_str = '&' . join(sign_fields)
-            enhance_sign_str = enhance_sign_str.replace('"', '')
-            enhance_signature_bytes = hmac.new(
-                bytes(token or 'token', encoding='utf-8'),
-                bytes(enhance_sign_str, encoding='utf-8'),
-                digestmod=hashlib.sha256
-            ).digest()
-            header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
-
-            # print('===== enhance sign str start =====')
-            # print(enhance_sign_str)
-            # print(enhance_signature_bytes.hex().lower())
-            # print('===== enhance sign str end =====')
-    else:
-        signature_bytes = hmac.new(
-            bytes(sk or 'ak', encoding='utf-8'),
-            bytes(sign_str, encoding='utf-8'),
-            digestmod=hashlib.sha256
-        ).digest()
     signature = signature_bytes.hex().lower()
 
     header_config['Signature'] = signature

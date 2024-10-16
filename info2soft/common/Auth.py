@@ -21,7 +21,7 @@ class Auth(object):
 
     def __init__(self, username, pwd, auth_type='token', access_key='', secret_key=''):
         """初始化Auth类"""
-        self.__checkKey(username, pwd)
+        self.__checkKey(username, pwd, access_key, secret_key)
         self._username = username
         self._pwd = pwd
         self._token = ''
@@ -179,8 +179,8 @@ class Auth(object):
         return '{0}'.format(self._token)
 
     @staticmethod
-    def __checkKey(username, pwd):
-        if not (username and pwd):
+    def __checkKey(username, pwd, access_key, secret_key):
+        if (not (username and pwd)) and (not (access_key and secret_key)):
             raise ValueError('invalid key')
 
     def verify_callback(self, origin_authorization, url, body, content_type='application/x-www-form-urlencoded'):
