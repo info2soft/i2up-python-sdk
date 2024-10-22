@@ -1,0 +1,141 @@
+<START-----------------------------------------------------------
+Method: createFfoMount
+body: {
+ "vp_uuid": "",
+ "bk_version": "",
+ "os_version": "",
+ "storage_uuid": "",
+ "mount_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "protocol": "",
+ "fsp_uuid": "",
+ "acl": "",
+ "by_type": "",
+ "wk_address": "",
+ "wk_name": "",
+ "client_uuid": "",
+ "specify_client": 0,
+ "_": "3e47fd92"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_name;\n Lost: by_type;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: vp_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: os_version;\n Lost: protocol;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFfoMount
+body: {
+ "mount_uuids": [],
+ "_": "3f77b3b0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFfomount
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: ffoMountList
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "mount_name",
+ "search_value": "mount_name",
+ "_": "3ee73956"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFfoMountStatus
+body: {
+ "mount_uuids": [],
+ "force_refresh": 1,
+ "_": "3e51e219"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFfoMount
+body: {
+ "vp_uuid": "",
+ "bk_version": "",
+ "os_version": "",
+ "storage_uuid": "",
+ "mount_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "protocol": "",
+ "acl": "",
+ "random_str": "",
+ "fsp_uuid": "",
+ "specify_client": 1,
+ "client_uuid": "",
+ "_": "3f0d927d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mount_name;\n Lost: by_type;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: vp_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: os_version;\n Lost: protocol;\n Lost: client_uuid;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

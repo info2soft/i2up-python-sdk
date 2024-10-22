@@ -1,0 +1,209 @@
+<START-----------------------------------------------------------
+Method: avoidAlert
+body: {
+ "lic_uuids": [],
+ "_": "3f656f65"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cdmCapacity
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f3c6acc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "lic_list": [],
+  "storage_list": [],
+  "total": 0,
+  "total_num": 0,
+  "total_used": 0,
+  "total_authorized": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeActivateInfo
+body: {
+ "group_sn": "20-4570098558",
+ "_": "3e674da1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpAuthDetail
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f22c92e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "lic_list": [],
+  "vp_vm_num": 0,
+  "vp_vm_num_used": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodeListForLicense
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: hdfsCapacity
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "lic_list": [],
+  "platform_list": [],
+  "total_num": 0,
+  "total_used": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicAlert
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicBackupAuthDetail
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3eeb3ed4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "backup9_detail": {
+   "lic_list": [],
+   "total": 0,
+   "capacity_used_info": {
+    "total": 0,
+    "disk": 0,
+    "storage_pool": 0,
+    "dedupe_pool": 0,
+    "tape": 0,
+    "nas": 0,
+    "object": 0,
+    "iso": 0,
+    "capacity": 0
+   },
+   "obj_list": [],
+   "func_list": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNearExpirationLicenses
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: unsubscribeLic
+body: {
+ "sn": "",
+ "operate": "unsubscribe",
+ "_": "3f40fff1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateLic
+body: {
+ "config": {
+  "warn_sw": 1,
+  "usage_threshold": 1
+ },
+ "_": "3f210a9f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

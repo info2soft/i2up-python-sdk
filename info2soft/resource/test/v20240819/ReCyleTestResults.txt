@@ -1,0 +1,53 @@
+<START-----------------------------------------------------------
+Method: deleteRecycle
+body: {
+ "uuids": [],
+ "_": "3f128d3b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRecycle
+body: {
+ "page": 1,
+ "limit": 1,
+ "type": "",
+ "where_args": "{xxx:}",
+ "_": "3eb29770"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRecycleStatus
+body: {
+ "uuids": "uuids[]=AacdFdE5-4cB2-Ccc7-bB2E-FeFA7fE82236",
+ "force_refresh": 0,
+ "_": "3e85f641"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+

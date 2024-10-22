@@ -1,0 +1,48 @@
+<START-----------------------------------------------------------
+Method: dbConvertImport
+body: {
+ "_": "3ee072da"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dbConvertListConverts
+body: {
+ "type": "",
+ "_": "3e9d1906"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dbConvertMigrate
+body: {
+ "version": "",
+ "type": "",
+ "_": "3d933d3c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+

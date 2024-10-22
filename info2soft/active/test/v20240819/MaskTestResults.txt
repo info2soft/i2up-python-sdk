@@ -1,0 +1,1426 @@
+<START-----------------------------------------------------------
+Method: algoTest
+body: {
+ "example": {
+  "orig": "1231",
+  "mask": "-"
+ },
+ "parent_id": 308,
+ "ava_sens_type": 8,
+ "type_arg": "",
+ "id": 308,
+ "params": [],
+ "_": "3d2b0808"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010201014,
+  "message": "[1010201014] active.mask_node_empty"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createAlgo
+body: {
+ "ava_sens_type": 1,
+ "parent_id": 1,
+ "algo_name": "",
+ "description": "",
+ "params": "",
+ "sort": "",
+ "_": "3f688fde"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createApprove
+body: {
+ "uuids": "bf6FFDeC-cEDb-Dec9-76AB-A71f8bB8DaC3",
+ "_": "3f3a05d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDbMap
+body: {
+ "db_uuid": "",
+ "map_name": "",
+ "_": "3df51294"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createMap
+body: {
+ "map_name": "",
+ "sens_type_id": "",
+ "sens_column": [
+  {
+   "user": "I2MASK",
+   "table": "MP",
+   "column": "MP"
+  }
+ ],
+ "src_type": "",
+ "src_path": "",
+ "_": "3e001bd8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createMaskRules
+body: {
+ "rule_name": "1231",
+ "node_uuid": "A6ABF8BC-38AF-41FE-ACF7-DD9F28B0FA3F",
+ "tgt_db_uuid": "32C50055-A267-1E9E-65EE-FC6AAB75D390",
+ "src_db_uuid": "38F1AD45-5F72-2E51-DC01-0593A14A8D17",
+ "other_settings": {
+  "src_type": "oracle",
+  "tgt_type": "oracle",
+  "src_path": "/var/i2data/cache/",
+  "file_names": [],
+  "size": 1024,
+  "tgt_path": "/var/i2data/cache/",
+  "compress_level": 0,
+  "policy": {
+   "policy_type": "immediate",
+   "one_time": "",
+   "time_policy": ""
+  },
+  "etl_settings": {
+   "etl_table": [
+    {
+     "table": "",
+     "user": "",
+     "addInfo": "",
+     "oprType": "",
+     "process": ""
+    }
+   ]
+  },
+  "can_approve": 0
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": [],
+  "table_space_name": []
+ },
+ "full_sync_obj_filter": [
+  "INDEX",
+  "VIEW",
+  "FUNCTION",
+  "PROCEDURE",
+  "PACKAGE",
+  "PACKAGE BODY",
+  "SYNONYM",
+  "TRIGGER",
+  "SEQUENCE",
+  "JAVA CLASS",
+  "TYPE",
+  "TYPE BODY",
+  "MATERIALIZED VIEW",
+  "OLD JOB",
+  "JOB",
+  "PRIVS",
+  "CONSTRAINT",
+  "JAVA RESOURCE",
+  "JAVA SOURCE"
+ ],
+ "db_user_map": "",
+ "table_map": "",
+ "map_type": "db",
+ "full_sync_settings": {
+  "his_thread": 1
+ },
+ "db_map_uuid": "71D59BCE-17F3-ED0D-BC76-132833F72498",
+ "strate": "",
+ "modify": false,
+ "_": "3f2e3883",
+ "bw_settings": {
+  "bw_limit": ""
+ }
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createSensCheck
+body: {
+ "rule_uuid": "",
+ "rule_name": "adsas",
+ "src_db_uuid": "38F1AD45-5F72-2E51-DC01-0593A14A8D17",
+ "mask_node_uuid": "A6ABF8BC-38AF-41FE-ACF7-DD9F28B0FA3F",
+ "user": "",
+ "tabs": "",
+ "row": 100,
+ "min": 90,
+ "sens_types": "1,2,3,4,5,6,7,8,9,10,12,13,14,15,20",
+ "map_type": "db",
+ "mix": 0,
+ "white": 1,
+ "_": "3ed33a4b",
+ "src_type": "",
+ "src_path": ""
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDbMap
+body: {
+ "uuid": "",
+ "_": "3e138bf1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter ID_LIST"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteMap
+body: {
+ "uuids": [],
+ "_": "3e04a869"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteMaskRule
+body: {
+ "uuids": "",
+ "_": "3eef28b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSensCheck
+body: {
+ "uuids": "",
+ "_": "3f77453c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeMaskRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptAlgo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptMap
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptSensCheck
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptSensType
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importMaskRuleInfo
+body: {
+ "db_uuid": "",
+ "_": "3b808733"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010480006,
+  "message": "[1010480006] Upload error, you did not select a file to upload"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAlgos
+body: {
+ "page": 0,
+ "limit": 10,
+ "_": "3ea4917b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "sens_type_name": "\u59d3\u540d",
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 10000,
+    "algo_name": "",
+    "description": "",
+    "type": 1,
+    "params": null,
+    "parent_id": 1,
+    "ava_sens_type": 1,
+    "sort": 1000,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u6570\u503c",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 403,
+    "algo_name": "\u4fdd\u7559\u6570\u503c\u6709\u6548\u6570\u5b57",
+    "description": "\u4fdd\u6301\u6570\u503c\u7684\u6709\u6548\u6570\u5b57\u524d\u51e0\u4f4d\u4e0d\u53d8\uff0c\u5176\u4f59\u7f6e\u4e3a\u96f6",
+    "type": 0,
+    "params": [
+     {
+      "name": "\u6307\u5b9a\u4f4d\u6570",
+      "key": "val",
+      "value": "",
+      "setted": 0,
+      "type": "int"
+     }
+    ],
+    "parent_id": 403,
+    "ava_sens_type": 100,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u6570\u503c",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 402,
+    "algo_name": "\u6570\u503c\u53d6\u6574",
+    "description": "\u5c06\u6570\u503c\u4ee5\u5341\u7684\u6307\u5b9a\u6b21\u65b9\u53d6\u6574",
+    "type": 0,
+    "params": [
+     {
+      "name": "\u5341\u7684\u6b21\u65b9\u6570",
+      "key": "val",
+      "value": "",
+      "setted": 0,
+      "type": "int"
+     }
+    ],
+    "parent_id": 402,
+    "ava_sens_type": 100,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u6570\u503c",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 401,
+    "algo_name": "\u9650\u5236\u6570\u503c\u8303\u56f4",
+    "description": "\u5c06\u6570\u503c\u9650\u5236\u5728\u6700\u5c0f\u503c\u548c\u6700\u5927\u503c\u8303\u56f4\u5185",
+    "type": 0,
+    "params": [
+     {
+      "name": "\u6700\u5c0f\u503c",
+      "key": "min",
+      "value": "",
+      "setted": 0,
+      "type": "int"
+     },
+     {
+      "name": "\u6700\u5927\u503c",
+      "key": "max",
+      "value": "",
+      "setted": 0,
+      "type": "int"
+     }
+    ],
+    "parent_id": 401,
+    "ava_sens_type": 100,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "IPv4\u5730\u5740",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 340,
+    "algo_name": "\u751f\u6210IPv4\u5730\u5740",
+    "description": "\u968f\u673a\u751f\u6210\u7684IPv4\u5730\u5740",
+    "type": 0,
+    "params": [],
+    "parent_id": 340,
+    "ava_sens_type": 20,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u65e5\u671f\u5b57\u7b26\u4e32",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 333,
+    "algo_name": "\u751f\u6210\u533a\u95f4\u65e5\u671f\u5b57\u7b26\u4e32",
+    "description": "\u968f\u673a\u751f\u6210\u6307\u5b9a\u524d\u540e\u8303\u56f4\u5185\u7684\u65e5\u671f\u5b57\u7b26\u4e32",
+    "type": 0,
+    "params": [
+     {
+      "name": "\u524d\u540e\u5929\u6570",
+      "key": "val",
+      "value": "30",
+      "setted": 0,
+      "type": "int"
+     }
+    ],
+    "parent_id": 333,
+    "ava_sens_type": 31,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u65e5\u671f",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 332,
+    "algo_name": "\u751f\u6210\u533a\u95f4\u65e5\u671f\u5b57\u7b26",
+    "description": "\u968f\u673a\u751f\u6210\u6307\u5b9a\u524d\u540e\u8303\u56f4\u5185\u7684\u65e5\u671f\u65f6\u95f4",
+    "type": 0,
+    "params": [
+     {
+      "name": "\u524d\u540e\u5929\u6570",
+      "key": "val",
+      "value": "30",
+      "setted": 0,
+      "type": "int"
+     }
+    ],
+    "parent_id": 332,
+    "ava_sens_type": 30,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u65e5\u671f\u5b57\u7b26\u4e32",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 331,
+    "algo_name": "\u751f\u6210\u65e5\u671f\u5b57\u7b26\u4e32",
+    "description": "\u968f\u673a\u751f\u6210\u65e5\u671f\u5b57\u7b26\u4e32",
+    "type": 0,
+    "params": [],
+    "parent_id": 331,
+    "ava_sens_type": 31,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u65e5\u671f",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 330,
+    "algo_name": "\u751f\u6210\u65e5\u671f\u65f6\u95f4",
+    "description": "\u968f\u673a\u751f\u6210\u65e5\u671f\u65f6\u95f4",
+    "type": 0,
+    "params": [],
+    "parent_id": 330,
+    "ava_sens_type": 30,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   },
+   {
+    "sens_type_name": "\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 313,
+    "algo_name": "\u751f\u6210\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801",
+    "description": "\u968f\u673a\u751f\u6210\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801",
+    "type": 0,
+    "params": [],
+    "parent_id": 313,
+    "ava_sens_type": 13,
+    "sort": 900,
+    "example": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   }
+  ],
+  "total": 59
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbMap
+body: {
+ "page": 0,
+ "limit": 10,
+ "_": "3bc2b3af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMap
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f7a49ee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "can_op": 1,
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMaskRuleStatus
+body: {
+ "uuids": [],
+ "_": "3eaf7c73"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMaskRules
+body: {
+ "limit": 10,
+ "page": 0,
+ "_": "3eaa2db2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSensCheck
+body: {
+ "page": 0,
+ "limit": 10,
+ "_": "3e3d05bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSensCheckIgnoreCol
+body: {
+ "rule_uuid": "",
+ "col": "",
+ "_": "3f2e946c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSensCheckResult
+body: {
+ "uuid": "",
+ "type": "",
+ "user": "",
+ "table": "",
+ "limit": 1,
+ "page": 1,
+ "_": "3ef2108b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSensCheckStatus
+body: {
+ "uuids": "",
+ "_": "3f18c623"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSummary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "proxyStatus": "online",
+  "info": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSummaryView
+body: {
+ "src": "",
+ "dst": "",
+ "status": "",
+ "type": "",
+ "ip": "",
+ "_": "3dfbe3ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTypes
+body: {
+ "page": 0,
+ "limit": 10,
+ "_": "3e7d0175"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "algo_name": null,
+    "algo_desc": null,
+    "algo_params": null,
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 100,
+    "type_name": "\u6570\u503c",
+    "description": "\u7528\u6570\u636e\u5e93\u6570\u503c\u7c7b\u578b\u5b58\u50a8\u7684\u6570\u503c\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 100,
+    "default_algo": 0,
+    "default_algo_params": null
+   },
+   {
+    "algo_name": null,
+    "algo_desc": null,
+    "algo_params": null,
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 50,
+    "type_name": "\u901a\u7528\u5b57\u7b26\u4e32",
+    "description": "\u7528\u6570\u636e\u5e93\u5b57\u7b26\u4e32\u7c7b\u578b\u5b58\u50a8\u7684\u5b57\u7b26\u4e32\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 50,
+    "default_algo": 0,
+    "default_algo_params": null
+   },
+   {
+    "algo_name": "\u4fdd\u7559\u65e5\u671f\u5b57\u7b26\u4e32\u7684\u5e74\u4efd",
+    "algo_desc": "\u4fdd\u7559\u65e5\u671f\u5b57\u7b26\u4e32\u7684\u5e74\u4efd\u4e0d\u53d8",
+    "algo_params": "[]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 31,
+    "type_name": "\u65e5\u671f\u5b57\u7b26\u4e32",
+    "description": "\u7528\u65f6\u95f4\u683c\u5f0f\uff08\u4f8bYYYY-MM-DD HH24:MI:SS\uff09\u5b58\u50a8\u7684\u65e5\u671f\u5b57\u7b26\u4e32\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 31,
+    "default_algo": 251,
+    "default_algo_params": []
+   },
+   {
+    "algo_name": "\u4fdd\u7559\u65e5\u671f\u7c7b\u578b\u7684\u5e74\u4efd",
+    "algo_desc": "\u4fdd\u7559\u65e5\u671f\u7c7b\u578b\u7684\u5e74\u4efd\u4e0d\u53d8",
+    "algo_params": "[]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 30,
+    "type_name": "\u65e5\u671f",
+    "description": "\u7528\u6570\u636e\u5e93\u65e5\u671f\u7c7b\u578b\uff08date\uff09\u5b58\u50a8\u7684\u65e5\u671f\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 30,
+    "default_algo": 250,
+    "default_algo_params": []
+   },
+   {
+    "algo_name": "\u5c4f\u853dIPv4\u5730\u5740",
+    "algo_desc": "\u5c4f\u853dIPv4\u5730\u5740\u7684\u70b9\u5206\u5341\u8fdb\u5236\u540e\u4e24\u6bb5",
+    "algo_params": "[]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 20,
+    "type_name": "IPv4\u5730\u5740",
+    "description": "\u7f51\u7edc\u4e0a\u7684\u6bcf\u53f0\u4e3b\u673a\u88ab\u5206\u914d\u7684\u4e00\u4e2a32\u4f4d\u5b57\u8282\u7684\u5730\u5740\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 20,
+    "default_algo": 204,
+    "default_algo_params": []
+   },
+   {
+    "algo_name": "\u5c4f\u853d\u5f80\u6765\u6e2f\u6fb3\u901a\u884c\u8bc1",
+    "algo_desc": "\u5c4f\u853d\u5f80\u6765\u6e2f\u6fb3\u901a\u884c\u8bc1\u53f7\u7801\uff08\u533a\u95f4[4,7]\uff09",
+    "algo_params": "[{\"name\":\"\u504f\u79fb\u91cf\",\"key\":\"off\",\"value\":\"3\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u957f\u5ea6\",\"key\":\"len\",\"value\":\"4\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u5c4f\u853d\u5b57\u7b26\",\"key\":\"val\",\"value\":\"*\",\"setted\":0,\"type\":\"string\"}]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 15,
+    "type_name": "\u5f80\u6765\u6e2f\u6fb3\u901a\u884c\u8bc1",
+    "description": "\u5185\u5730\u5c45\u6c11\u5f80\u6765\u9999\u6e2f\u6216\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a\u901a\u884c\u8bc1\u7684\u8bc1\u4ef6\u53f7\u7801\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 15,
+    "default_algo": 1312,
+    "default_algo_params": [
+     {
+      "name": "\u504f\u79fb\u91cf",
+      "key": "off",
+      "value": "3",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u957f\u5ea6",
+      "key": "len",
+      "value": "4",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u5c4f\u853d\u5b57\u7b26",
+      "key": "val",
+      "value": "*",
+      "setted": 0,
+      "type": "string"
+     }
+    ]
+   },
+   {
+    "algo_name": "\u5c4f\u853d\u6e2f\u6fb3\u5c45\u6c11\u6765\u5f80\u5185\u5730\u901a\u884c\u8bc1",
+    "algo_desc": "\u5c4f\u853d\u6e2f\u6fb3\u5c45\u6c11\u6765\u5f80\u5185\u5730\u901a\u884c\u8bc1\u53f7\u7801\uff08\u533a\u95f4[4,7]\uff09",
+    "algo_params": "[{\"name\":\"\u504f\u79fb\u91cf\",\"key\":\"off\",\"value\":\"3\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u957f\u5ea6\",\"key\":\"len\",\"value\":\"4\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u5c4f\u853d\u5b57\u7b26\",\"key\":\"val\",\"value\":\"*\",\"setted\":0,\"type\":\"string\"}]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 14,
+    "type_name": "\u6e2f\u6fb3\u6765\u5f80\u5185\u5730\u901a\u884c\u8bc1",
+    "description": "\u9999\u6e2f\u6216\u6fb3\u95e8\u7279\u522b\u884c\u653f\u533a\u5c45\u6c11\u6765\u5f80\u5185\u5730\u901a\u884c\u8bc1\u7684\u8bc1\u4ef6\u53f7\u7801\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 14,
+    "default_algo": 1310,
+    "default_algo_params": [
+     {
+      "name": "\u504f\u79fb\u91cf",
+      "key": "off",
+      "value": "3",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u957f\u5ea6",
+      "key": "len",
+      "value": "4",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u5c4f\u853d\u5b57\u7b26",
+      "key": "val",
+      "value": "*",
+      "setted": 0,
+      "type": "string"
+     }
+    ]
+   },
+   {
+    "algo_name": "\u5c4f\u853d\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801",
+    "algo_desc": "\u5c4f\u853d\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801\u4e2d\u5176\u4e2d\u4e09\u4f4d\uff08\u533a\u95f4[-5,-2]\uff09",
+    "algo_params": "[{\"name\":\"\u504f\u79fb\u91cf\",\"key\":\"off\",\"value\":\"-5\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u957f\u5ea6\",\"key\":\"len\",\"value\":\"3\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u5c4f\u853d\u5b57\u7b26\",\"key\":\"val\",\"value\":\"*\",\"setted\":0,\"type\":\"string\"}]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 13,
+    "type_name": "\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801",
+    "description": "\u56fa\u5b9a\u7535\u8bdd\u53f7\u7801\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 13,
+    "default_algo": 1311,
+    "default_algo_params": [
+     {
+      "name": "\u504f\u79fb\u91cf",
+      "key": "off",
+      "value": "-5",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u957f\u5ea6",
+      "key": "len",
+      "value": "3",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u5c4f\u853d\u5b57\u7b26",
+      "key": "val",
+      "value": "*",
+      "setted": 0,
+      "type": "string"
+     }
+    ]
+   },
+   {
+    "algo_name": "\u5c4f\u853d\u4e2d\u56fd\u62a4\u7167\u53f7\u7801",
+    "algo_desc": "\u5c4f\u853d\u4e2d\u56fd\u62a4\u7167\u53f7\u7801\u4e2d\u95f4\u4e09\u4f4d\u5b57\u7b26\uff08\u533a\u95f4[3,5]\uff09",
+    "algo_params": "[{\"name\":\"\u504f\u79fb\u91cf\",\"key\":\"off\",\"value\":\"2\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u957f\u5ea6\",\"key\":\"len\",\"value\":\"3\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u5c4f\u853d\u5b57\u7b26\",\"key\":\"val\",\"value\":\"*\",\"setted\":0,\"type\":\"string\"}]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 12,
+    "type_name": "\u4e2d\u56fd\u62a4\u7167\u53f7\u7801",
+    "description": "\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u62a4\u7167\u7684\u8bc1\u4ef6\u53f7\u7801\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 12,
+    "default_algo": 1309,
+    "default_algo_params": [
+     {
+      "name": "\u504f\u79fb\u91cf",
+      "key": "off",
+      "value": "2",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u957f\u5ea6",
+      "key": "len",
+      "value": "3",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u5c4f\u853d\u5b57\u7b26",
+      "key": "val",
+      "value": "*",
+      "setted": 0,
+      "type": "string"
+     }
+    ]
+   },
+   {
+    "algo_name": "\u5c4f\u853d\u7edf\u4e00\u793e\u4f1a\u4fe1\u7528\u4ee3\u7801",
+    "algo_desc": "\u5c4f\u853d\u7edf\u4e00\u793e\u4f1a\u4fe1\u7528\u4ee3\u7801\u4e2d\u7684\u4e3b\u4f53\u6807\u8bc6\u7801\uff08\u533a\u95f4[9,17]\uff09",
+    "algo_params": "[{\"name\":\"\u504f\u79fb\u91cf\",\"key\":\"off\",\"value\":\"8\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u957f\u5ea6\",\"key\":\"len\",\"value\":\"9\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u5c4f\u853d\u5b57\u7b26\",\"key\":\"val\",\"value\":\"*\",\"setted\":0,\"type\":\"string\"}]",
+    "username": null,
+    "user_uuid": "00000000-0000-0000-0000-000000000000",
+    "id": 10,
+    "type_name": "\u7edf\u4e00\u793e\u4f1a\u4fe1\u7528\u4ee3\u7801",
+    "description": "\u6cd5\u4eba\u548c\u5176\u4ed6\u7ec4\u7ec7\u7edf\u4e00\u793e\u4f1a\u4fe1\u7528\u4ee3\u7801\u3002",
+    "sort": 0,
+    "create_time": 0,
+    "params": "",
+    "parent_id": 10,
+    "default_algo": 1308,
+    "default_algo_params": [
+     {
+      "name": "\u504f\u79fb\u91cf",
+      "key": "off",
+      "value": "8",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u957f\u5ea6",
+      "key": "len",
+      "value": "9",
+      "setted": 1,
+      "type": "int"
+     },
+     {
+      "name": "\u5c4f\u853d\u5b57\u7b26",
+      "key": "val",
+      "value": "*",
+      "setted": 0,
+      "type": "string"
+     }
+    ]
+   }
+  ],
+  "total": 19,
+  "can_up": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDbMap
+body: {
+ "_": "3f1e87cd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyMap
+body: {
+ "map_name": "",
+ "sens_type_id": "",
+ "sens_column": [
+  {
+   "user": "I2MASK",
+   "table": "MP",
+   "column": "MP"
+  }
+ ],
+ "src_type": "",
+ "src_path": "",
+ "_": "3f1033c6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyMaskRules
+body: {
+ "username": "admin",
+ "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+ "rule_uuid": "BFD56508-9FCB-1FFF-749B-FCA2E78B4CD6",
+ "src_db_uuid": "38F1AD45-5F72-2E51-DC01-0593A14A8D17",
+ "tgt_db_uuid": "32C50055-A267-1E9E-65EE-FC6AAB75D390",
+ "rule_type": 1,
+ "rule_name": "123123",
+ "node_uuid": "A6ABF8BC-38AF-41FE-ACF7-DD9F28B0FA3F",
+ "tgt_type": "oracle",
+ "db_user_map": "",
+ "row_map_mode": "",
+ "map_type": "db",
+ "table_map": "",
+ "dbmap_topic": "",
+ "sync_mode": "1",
+ "start_scn": "",
+ "storage_settings": [],
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": [],
+  "table_space_name": []
+ },
+ "other_settings": {
+  "src_type": "oracle",
+  "tgt_type": "oracle",
+  "src_path": "/var/i2data/cache/",
+  "file_names": [],
+  "size": 1024,
+  "tgt_path": "/var/i2data/cache/",
+  "compress_level": 0,
+  "policy": {
+   "policy_type": "immediate",
+   "one_time": "",
+   "time_policy": ""
+  }
+ },
+ "error_handling": [],
+ "bw_settings": [],
+ "strate": [
+  {
+   "type_id": 1,
+   "type_arg": "",
+   "algo_pid": 4,
+   "algo_id": 1301,
+   "sens_column": [
+    {
+     "user": "123",
+     "table": "123",
+     "column": "123"
+    }
+   ],
+   "algo_arg": [
+    {
+     "name": "\u504f\u79fb\u91cf",
+     "key": "off",
+     "value": "1",
+     "setted": 1,
+     "type": "int"
+    },
+    {
+     "name": "\u957f\u5ea6",
+     "key": "len",
+     "value": "0",
+     "setted": 2,
+     "type": "int"
+    },
+    {
+     "name": "\u5c4f\u853d\u5b57\u7b26",
+     "key": "val",
+     "value": "*",
+     "setted": 3,
+     "type": "string"
+    }
+   ],
+   "sens_map_id": "1",
+   "algo_name": "\u5c4f\u853d\u59d3\u540d",
+   "sens_type_name": "\u59d3\u540d"
+  },
+  {
+   "type_id": 2,
+   "type_arg": "",
+   "algo_pid": 4,
+   "algo_id": 1302,
+   "sens_column": [
+    {
+     "user": "123",
+     "table": "123",
+     "column": "123"
+    }
+   ],
+   "algo_arg": [
+    {
+     "name": "\u504f\u79fb\u91cf",
+     "key": "off",
+     "value": "1",
+     "setted": 4,
+     "type": "int"
+    },
+    {
+     "name": "\u957f\u5ea6",
+     "key": "len",
+     "value": "0",
+     "setted": 5,
+     "type": "int"
+    },
+    {
+     "name": "\u5c4f\u853d\u5b57\u7b26",
+     "key": "val",
+     "value": "*",
+     "setted": 6,
+     "type": "string"
+    }
+   ],
+   "sens_map_id": "2",
+   "algo_name": "\u5c4f\u853d\u8eab\u4efd\u8bc1\u51fa\u751f\u6708\u65e5",
+   "sens_type_name": "\u8eab\u4efd\u8bc1\u53f7"
+  }
+ ],
+ "full_sync_settings": {
+  "his_thread": 1
+ },
+ "full_sync_obj_filter": [
+  "INDEX",
+  "VIEW",
+  "FUNCTION",
+  "PROCEDURE",
+  "PACKAGE",
+  "PACKAGE BODY",
+  "SYNONYM",
+  "TRIGGER",
+  "SEQUENCE",
+  "JAVA CLASS",
+  "TYPE",
+  "TYPE BODY",
+  "MATERIALIZED VIEW",
+  "OLD JOB",
+  "JOB",
+  "PRIVS",
+  "CONSTRAINT",
+  "JAVA RESOURCE",
+  "JAVA SOURCE"
+ ],
+ "inc_sync_ddl_filter": "",
+ "filter_table_settings": "",
+ "etl_settings": "",
+ "create_time": 1601345043,
+ "start_rule_now": 1,
+ "db_map_uuid": "71D59BCE-17F3-ED0D-BC76-132833F72498",
+ "dml_track": "",
+ "kafka_time_out": "12000",
+ "part_load_balance": "by_key",
+ "kafka_message_encoding": "UTF-8",
+ "kafka": "",
+ "biz_grp_list": [],
+ "biz_grp_name": [],
+ "modify": true,
+ "_": "3ec2989c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifySensCheck
+body: {
+ "username": "admin",
+ "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+ "rule_uuid": "F895D958-F435-47AC-664D-805BA7DFEE89",
+ "rule_name": "asd",
+ "map_type": "db",
+ "src_db_uuid": "38F1AD45-5F72-2E51-DC01-0593A14A8D17",
+ "user": "",
+ "tabs": "",
+ "row": 100,
+ "min": 90,
+ "sens_types": "1,2,3,4,5,6,7,8,9,10,12,13,14,15,20",
+ "create_time": "1601344305",
+ "mask_node_uuid": "A6ABF8BC-38AF-41FE-ACF7-DD9F28B0FA3F",
+ "mix": 0,
+ "status": 0,
+ "start": "2020-09-29 09:51:45",
+ "end": "",
+ "white": 1,
+ "info": "",
+ "_": "3eccee94"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifySensType
+body: {
+ "algo_name": "\u5c4f\u853d\u59d3\u540d",
+ "algo_desc": "\u5c4f\u853d\u59d3\u540d\u4e2d\u7684\u540d\u5b57",
+ "algo_params": "[{\"name\":\"\u504f\u79fb\u91cf\",\"key\":\"off\",\"value\":\"1\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u957f\u5ea6\",\"key\":\"len\",\"value\":\"0\",\"setted\":1,\"type\":\"int\"},{\"name\":\"\u5c4f\u853d\u5b57\u7b26\",\"key\":\"val\",\"value\":\"*\",\"setted\":0,\"type\":\"string\"}]",
+ "username": "test",
+ "user_uuid": "00000000-0000-0000-0000-000000000000",
+ "id": 1,
+ "type_name": "\u59d3\u540d",
+ "description": "\u7531\u59d3\u6c0f\u4e0e\u540d\u5b57\u7ec4\u6210\uff0c\u7528\u4e8e\u8bc6\u522b\u67d0\u4e00\u4e2a\u4eba\u3002",
+ "sort": 0,
+ "create_time": "0",
+ "params": "",
+ "parent_id": 1,
+ "default_algo": 1301,
+ "default_algo_params": [
+  {
+   "name": "\u504f\u79fb\u91cf",
+   "key": "off",
+   "value": "1",
+   "setted": 1,
+   "type": "int"
+  },
+  {
+   "name": "\u957f\u5ea6",
+   "key": "len",
+   "value": "0",
+   "setted": 2,
+   "type": "int"
+  },
+  {
+   "name": "\u5c4f\u853d\u5b57\u7b26",
+   "key": "val",
+   "value": "*",
+   "setted": 3,
+   "type": "string"
+  }
+ ],
+ "_": "3f2262c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startMaskRule
+body: {
+ "operate": "",
+ "uuids": "",
+ "_": "3eb7ffa6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopMaskRule
+body: {
+ "operate": "",
+ "uuids": "",
+ "_": "3f3713f7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

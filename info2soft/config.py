@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 # 数据 Host
-API_HOST = 'https://192.168.63.40:58086/api'
-API_HOST_WEBAPI = 'https://192.168.63.40:58086/api/vers/v3'
+API_HOST = 'https://172.20.2.19:58086/api'
+API_HOST_WEBAPI = 'https://172.20.2.19:58086/api/vers/v3'
 # API_HOST = ''
 
 _config = {

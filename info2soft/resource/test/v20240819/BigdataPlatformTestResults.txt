@@ -1,0 +1,342 @@
+<START-----------------------------------------------------------
+Method: authBigdataBackupHost
+body: {
+ "os_user": "",
+ "os_pwd": "",
+ "address": "",
+ "config_port": 1,
+ "_": "3e2d700b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: os_user;\n Lost: os_pwd;\n Lost: address;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: bigdataBackupHostDbAuth
+body: {
+ "db_user": "",
+ "db_pwd": "",
+ "db_type": 1,
+ "db_address": "",
+ "db_port": 1,
+ "db_name": "",
+ "os_user": "",
+ "os_pwd": "",
+ "address": "",
+ "_": "3db145bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBigdataBackupHost
+body: {
+ "host_name": "",
+ "address": "",
+ "cc_ip_uuid": "",
+ "os_user": "",
+ "os_pwd": "",
+ "db_type": 1,
+ "db_address": "",
+ "db_user": "",
+ "db_pwd": "",
+ "dto_switch": 1,
+ "dto_address": "",
+ "cls_switch": 1,
+ "follower_address": "",
+ "bind_lic_list": "",
+ "db_name": "",
+ "db_port": 1,
+ "_": "3ca4fc5b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_name;\n Lost: address;\n Lost: os_user;\n Lost: os_pwd;\n Lost: db_name;\n Lost: db_address;\n Lost: db_user;\n Lost: db_pwd;\n Lost: dto_address;\n Lost: follower_address;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBigdataPlatform
+body: {
+ "platform_name": "",
+ "host_uuid": "",
+ "hdfs_ha": 1,
+ "hdfs_config_path": "",
+ "hdfs_default_fs": "",
+ "hdfs_kerberos": 1,
+ "hdfs_krb5_conf_path": "",
+ "hdfs_keytab_path": "",
+ "hdfs_principal": "",
+ "hdfs_snapshot": 1,
+ "hive_settings": {
+  "hive_switch": 1,
+  "hive_ha": 1,
+  "hive_address": "",
+  "hive_port": "",
+  "hive_kerberos": 1,
+  "hive_krb5_conf_path": "",
+  "hive_keytab_path": "",
+  "hive_principal": "",
+  "hive_username": "",
+  "hive_config_path": ""
+ },
+ "hive_password": "",
+ "_": "3f63018b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: platform_name;\n Lost: host_uuid;\n Lost: hdfs_config_path;\n Lost: hdfs_default_fs;\n Lost: hdfs_krb5_conf_path;\n Lost: hdfs_principal;\n Lost: hdfs_keytab_path;\n Lost: hive_settings[hive_username];\n Lost: hive_settings[hive_config_path];\n Lost: hive_settings[hive_krb5_conf_path];\n Lost: hive_settings[hive_keytab_path];\n Lost: hive_settings[hive_principal];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigdataBackupHost
+body: {
+ "host_uuids": [],
+ "force": 1,
+ "_": "3d1330e7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigdataPlatform
+body: {
+ "platform_uuids": "",
+ "force": "",
+ "_": "3ef7b812"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: platform_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataBackupHost
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataPlatform
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "bigdata_platform": {
+   "hive_password": "******",
+   "is_biz_admin": 1,
+   "can_del": 1,
+   "can_op": 1,
+   "can_up": 1,
+   "can_view": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupHost
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupHoststatus
+body: {
+ "host_uuids": [],
+ "force_refresh": 1,
+ "_": "3e0988ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataPlatform
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataPlatformStatus
+body: {
+ "platform_uuids": [],
+ "force_refresh": 1,
+ "_": "3f52c122"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: platform_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBigdataBackupHost
+body: {
+ "host_name": "",
+ "host_uuid": "",
+ "random_str": "",
+ "address": "",
+ "cc_ip_uuid": "",
+ "os_user": "",
+ "os_pwd": "",
+ "db_type": 1,
+ "db_address": "",
+ "db_user": "",
+ "db_pwd": "",
+ "dto_switch": 1,
+ "dto_address": "",
+ "cls_switch": 1,
+ "follower_address": "",
+ "bind_lic_list": "",
+ "username": "admin",
+ "biz_grp_list": "",
+ "can_del": 1,
+ "can_up": 1,
+ "can_op": 1,
+ "is_biz_admin": "0",
+ "status": "",
+ "state": {
+  "host_uuid": "62D0DAD4-8B60-9627-824D-A217F8489B89",
+  "status": "ONLINE",
+  "time": "1692690022"
+ },
+ "db_name": "",
+ "db_port": 1,
+ "_": "3f590629"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_name;\n Lost: address;\n Lost: os_user;\n Lost: os_pwd;\n Lost: db_name;\n Lost: db_address;\n Lost: db_user;\n Lost: db_pwd;\n Lost: dto_address;\n Lost: follower_address;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBigdataPlatform
+body: {
+ "platform_name": "",
+ "platform_uuid": "",
+ "host_uuid": "",
+ "hdfs_ha": 1,
+ "hdfs_config_path": "",
+ "hdfs_default_fs": "",
+ "hdfs_kerberos": 1,
+ "hdfs_krb5_conf_path": "",
+ "hdfs_keytab_path": "",
+ "hdfs_principal": "",
+ "hdfs_snapshot": 1,
+ "hive_settings": {
+  "hive_switch": 1,
+  "hive_ha": 1,
+  "hive_address": "",
+  "hive_port": "",
+  "hive_kerberos": 1,
+  "hive_krb5_conf_path": "",
+  "hive_keytab_path": "",
+  "hive_principal": "",
+  "hive_username": "",
+  "hive_password": "",
+  "hive_config_path": ""
+ },
+ "username": "admin",
+ "biz_grp_list": "",
+ "can_del": 1,
+ "can_up": 1,
+ "can_op": 1,
+ "is_biz_admin": "0",
+ "status": "",
+ "state": {
+  "platform_uuid": "62D0DAD4-8B60-9627-824D-A217F8489B89",
+  "status": "ONLINE",
+  "time": "1692690022"
+ },
+ "create_time": "",
+ "user_uuid": "",
+ "_": "3dcc503b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: platform_name;\n Lost: host_uuid;\n Lost: hdfs_config_path;\n Lost: hdfs_default_fs;\n Lost: hdfs_krb5_conf_path;\n Lost: hdfs_principal;\n Lost: hdfs_keytab_path;\n Lost: hive_settings[hive_username];\n Lost: hive_settings[hive_config_path];\n Lost: hive_settings[hive_krb5_conf_path];\n Lost: hive_settings[hive_keytab_path];\n Lost: hive_settings[hive_principal];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

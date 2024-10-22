@@ -1,0 +1,533 @@
+<START-----------------------------------------------------------
+Method: addHeteroGraph
+body: {
+ "graph_uuid": "",
+ "rule_number": "",
+ "src_type": "",
+ "rule_uuid": "",
+ "_": "3f348dff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createConsumerRule
+body: {
+ "name": "George Clark",
+ "src_db_uuid": "B5CED857-275C-77C4-0561-887F7C890FF2",
+ "tgt_type": "oracle",
+ "init_offset": [
+  {
+   "topic": "test",
+   "offset": "1",
+   "partition": "1"
+  }
+ ],
+ "topic": "test1",
+ "dst_topic": "topic1",
+ "tgt_db_uuid": "1C5F3C4B-7333-9518-7349-9712BC9ED664",
+ "init_offset_type": "earlist",
+ "tabmap": [
+  {
+   "src_table": "src_t",
+   "dst_table": "dst_t",
+   "kudu_partition_config": {
+    "hashSetting": false,
+    "hash_definitions": [],
+    "rangSetting": false,
+    "range_definition": {
+     "range_columns": "",
+     "range_partitions": []
+    }
+   },
+   "column": [
+    {
+     "dst_column": "",
+     "src_column": ""
+    }
+   ]
+  }
+ ],
+ "consumer_thread_num": 2,
+ "actload_thread_num": 4,
+ "kudu_partition_config": [],
+ "impala_connected": false,
+ "config": {
+  "goldendb_config": {
+   "machine_number": 1,
+   "distribute_type": ""
+  },
+  "insert_date_config": {
+   "enable": false,
+   "column_name": "ETL_INSERT_DATE"
+  },
+  "primary_key_config": {
+   "primary_key_config": "primaryKey",
+   "use_insert_date": false,
+   "use_rowid": false,
+   "use_source_table_key": false
+  },
+  "target_user": "oracle",
+  "target_db_name": "Sarah Lopez",
+  "db_name": "Margaret Young",
+  "kerberos_certify": false,
+  "dmltrack": {
+   "enable": false,
+   "tmcol": "1"
+  },
+  "target_user_map": {},
+  "part_config": [
+   {
+    "part_index": 1,
+    "part_col_name": "null",
+    "part_type": "ALL",
+    "part_from_col_name": "null",
+    "part_from_date_format": "null"
+   },
+   {
+    "part_index": 0,
+    "part_col_name": "null",
+    "part_type": "ALL",
+    "part_from_col_name": "null",
+    "part_from_date_format": "null"
+   }
+  ],
+  "machine_num": 1,
+  "existing_table": "",
+  "error_deal": "",
+  "binary_code": "",
+  "error_handling": {
+   "load_err_set": "continue"
+  },
+  "load_err_set": "",
+  "hdfs_config": {
+   "auth": "",
+   "principal": "",
+   "keytab": "",
+   "kbsuser": ""
+  },
+  "table_engine": "",
+  "hudi_config": {
+   "capacity": 20000,
+   "table_type": "",
+   "merge_commits": 1,
+   "delay_time": 1,
+   "batch_size": 1,
+   "hive_schema": "default"
+  }
+ },
+ "encrypt_column_switch": 1,
+ "encrypt_column_method": 1,
+ "encrypt_column_key": "",
+ "encrypt_columns": [
+  {
+   "user": "",
+   "table": "",
+   "column": ""
+  }
+ ],
+ "_": "3eab516d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHeteroGraph
+body: {
+ "graph_name": "",
+ "is_parent": "",
+ "is_rule": "",
+ "consume_rule": [
+  {
+   "id": "",
+   "rule_number": 1,
+   "rule_name": "",
+   "src_type": "",
+   "src_uuid": "",
+   "dst_type": "",
+   "dst_uuid": "",
+   "rule_status": "",
+   "is_parent": false,
+   "is_rule": false,
+   "src_name": "",
+   "dst_name": "",
+   "rule_traffic": ""
+  }
+ ],
+ "_": "3f6f06c6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteConsumerRules
+body: {
+ "uuids": [
+  "6c38dd64-b5D7-8871-E9BE-839ba6733E5d",
+  "69E2d9fB-D6aF-21bF-DbA7-e41cEEaaBEfA"
+ ],
+ "force": true,
+ "_": "3f64a1b5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHeteroGraph
+body: {
+ "graph_uuids": [
+  {
+   "graph_uuid": "10FBe5a4-B188-32CE-1A80-5Ef58cCFdcA4",
+   "rule_uuids": [
+    {
+     "uuid": "B5EDebFC-ff09-8D7F-DD5c-AcCA852BeB71",
+     "is_rule": "1",
+     "rule_number": "4",
+     "src_type": "oracle"
+    }
+   ]
+  }
+ ],
+ "is_whole": "1",
+ "_": "3f19a280"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeConsumerRules
+body: {
+ "uuid": "75DF8EA3-6480-4137-451B-731F04F368AF",
+ "_": "3f115b87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptGraphDetail
+body: {
+ "page": 1,
+ "limit": 10,
+ "start_time": "",
+ "end_time": "",
+ "graph_uuid": "",
+ "_": "3f4dc338"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerRules
+body: {
+ "search_field": "tgt_type",
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "where_args": "{uuid:c1EdCb3e-F1fF-94A7-4D56-AefcBAdEBAE7,status:,src_db_name:test,tgt_db_name:,db_ip:,node_ip:,username:,name:}",
+ "_": "3f6eeb87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConsumerStatus
+body: {
+ "uuids": [],
+ "_": "3f6ff54f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGraph
+body: {
+ "graph_uuid": "",
+ "_": "3f2d9a10"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGraphStatus
+body: {
+ "rule_uuids": "rule_uuids[]=e2a2e7dB-5A09-5D2A-139D-9Bc9946e9cFB",
+ "_": "3e7948af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHeteroGraph
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f30b8bc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyConsumerRule
+body: {
+ "init_offset_type": "seek",
+ "modify": true,
+ "tabmap": [
+  {
+   "src_table": "src-t6",
+   "dst_table": "dst-t6"
+  }
+ ],
+ "consumer_thread_num": 41,
+ "actload_thread_num": 41,
+ "tgt_db_uuid": "773AE76A-7DB6-E465-2508-3919C875916E",
+ "name": "m-k-hive",
+ "src_db_uuid": "86A56D69-72DE-AA2F-1C7E-C0A843F1D9EA",
+ "tgt_type": "hive",
+ "init_offset": [
+  {
+   "topic": "test4",
+   "offset": "18684815",
+   "partition": "0"
+  }
+ ],
+ "dst_topic": "dst_topic",
+ "uuid": "356FF271-0D32-C35A-75A2-C68AD3A70FB3",
+ "kudu_partition_config": [
+  {
+   "hashSetting": false,
+   "hash_definitions": [],
+   "rangSetting": false,
+   "rang_definition": [
+    {
+     "range_colums": "",
+     "range_partitions": 1
+    }
+   ]
+  }
+ ],
+ "impala_connected": false,
+ "config": {
+  "goldendb_config": {
+   "machine_number": 1,
+   "distribute_type": ""
+  },
+  "insert_date_config": {
+   "enable": false,
+   "column_name": ""
+  },
+  "primary_key_config": {
+   "primary_key_config": "",
+   "use_insert_date": false,
+   "use_rowid": false,
+   "use_source_table_key": false
+  },
+  "target_user": "oracle",
+  "target_db_name": "Edward Martin",
+  "db_name": "Anthony Rodriguez",
+  "kerberos_certify": false,
+  "dmltrack": {
+   "enable": false,
+   "tmcol": ""
+  },
+  "target_user_map": "",
+  "part_config": "none",
+  "machine_num": 1,
+  "existing_table": "",
+  "error_deal": "",
+  "error_handling": {
+   "load_err_set": ""
+  },
+  "load_err_set": "",
+  "binary_code": ""
+ },
+ "start_rule_now": 1,
+ "topic": "test4",
+ "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+ "_": "3f3f5110"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeConsumerRule
+body: {
+ "uuid": "F2a0AE9A-34Cf-b674-E70D-b4bcFf2dC68a",
+ "operate": "resume",
+ "_": "3ef76ce4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: runHeteroGraph
+body: {
+ "graphs": [],
+ "graph_uuid": "",
+ "rule_uuids": [
+  {
+   "uuid": "",
+   "src_type": ""
+  }
+ ],
+ "_": "3f4de07f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopConsumerRule
+body: {
+ "uuid": "A6cbeee5-458a-bDC5-ADbd-AE8D0BEf2cf4",
+ "operate": "resume",
+ "_": "3f16eedc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopHeteroGraph
+body: {
+ "graphs": [
+  {
+   "graph_uuid": "",
+   "rule_uuids": [
+    {
+     "uuid": "",
+     "src_type": ""
+    }
+   ]
+  }
+ ],
+ "_": "3d0a74d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+

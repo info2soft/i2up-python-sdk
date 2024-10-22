@@ -1,0 +1,178 @@
+<START-----------------------------------------------------------
+Method: createNAS
+body: {
+ "compress": 0,
+ "secret_key": "",
+ "wk_list": [
+  {
+   "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+   "wk_path": "E:\\nas\\"
+  }
+ ],
+ "type": 0,
+ "sync_path": "",
+ "encrypt_switch": 0,
+ "band_width": "",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "E:\\t\\",
+ "sync_uuid": "",
+ "nas_name": "test2",
+ "cmp_schedule": [],
+ "cmp_file_check": 0,
+ "cmp_switch": 0,
+ "file_type_filter_switch": 1,
+ "file_type_filter": "",
+ "thread_num": 1,
+ "mirr_sync_attr": 1,
+ "cmp_sync_file": 1,
+ "runtime_range": "12345*09:00-18:00,06*10:00-14:00",
+ "runtime_switch": 1,
+ "filter_delete": 0,
+ "cmp_limit": "",
+ "data_ip_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "sync_data_ip_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "oph_path": "E:\\test4\\",
+ "oph_policy": 0,
+ "dir_type_filter": "",
+ "dir_type_filter_switch": 1,
+ "bk_path_policy": 1,
+ "bk_file_crypt": 0,
+ "encrypt": 0,
+ "compress_switch": 0,
+ "nas_type": 1,
+ "traversing_sync": 1,
+ "_": "3e14927c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The resource has no license associated with this feature UUID: 67E33CDB-D75B-15B3-367D-50C764F5A26F"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNAS
+body: {
+ "nas_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "_": "3e6d49cc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNASGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter UUID"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNas
+body: {
+ "limit": 10,
+ "page": 1,
+ "_": "3dc4cc37"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNasStatus
+body: {
+ "nas_uuids": "nas_uuids[]=11111111-1111-1111-1111-111111111111",
+ "force_refresh": 1,
+ "_": "3e0845c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNAS
+body: {
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "_": "3f410131"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_path;\n Lost: bk_uuid;\n Lost: cmp_switch;\n Lost: compress_switch;\n Lost: encrypt_switch;\n Lost: nas_name;\n Lost: type;\n Lost: nas_type;\n Lost: wk_list[0][wk_path];\n Lost: wk_list[0][wk_uuid];\n Lost: bk_path_policy;\n Lost: file_type_filter_switch;\n Lost: dir_type_filter_switch;\n Lost: traversing_sync;\n Lost: thread_num;\n Lost: mirr_sync_attr;\n Lost: filter_delete;\n Lost: runtime_switch;\n Lost: oph_policy;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startNAS
+body: {
+ "nas_uuids": [
+  "-111100003333"
+ ],
+ "operate": "start",
+ "_": "3f6e31c0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: nas_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopNAS
+body: {
+ "nas_uuids": [
+  "-111100003333"
+ ],
+ "operate": "start",
+ "_": "3f525d27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Contains illegal UUID: nas_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+

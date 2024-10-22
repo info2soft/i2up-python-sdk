@@ -1,0 +1,195 @@
+<START-----------------------------------------------------------
+Method: createFspRecoveryRule
+body: {
+ "rule_name": "",
+ "rule_type": 1,
+ "auto_start": 1,
+ "priority": 1,
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_path": [],
+ "bios_convert": 1,
+ "bios_type": 1,
+ "driver_url": "",
+ "compress_switch": 1,
+ "compress": 1,
+ "encrypt_switch": 1,
+ "encrypt": 1,
+ "start_time": 1,
+ "_": "3f4c37ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspRecoveryRule
+body: {
+ "rule_uuids": [],
+ "force": 1,
+ "_": "3e1c86b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getFspRecoveryRuleBiosType
+body: {
+ "device_list": [],
+ "node_uuid": "",
+ "_": "3f74cb4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRuleDriverListUrl
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "driver_url_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRuleStatus
+body: {
+ "rule_uuids": [],
+ "_": "3e31b67b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspRecoveryRule
+body: {
+ "rule_name": "",
+ "rule_uuid": "",
+ "rule_type": "",
+ "random_str": "",
+ "create_time": "",
+ "auto_start": 1,
+ "priority": 1,
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "wk_uuid": "",
+ "wk_path": "",
+ "bk_path": "",
+ "bios_convert": 1,
+ "bios_type": 1,
+ "driver_url": "",
+ "compress_switch": 1,
+ "compress": 1,
+ "encrypt_switch": 1,
+ "encrypt": 1,
+ "start_time": 1,
+ "_": "3e5f2abb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebootFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3f26e7f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3f281759"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3f7835d9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

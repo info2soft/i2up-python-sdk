@@ -1,0 +1,435 @@
+<START-----------------------------------------------------------
+Method: createDtoRule
+body: {
+ "enable": 0,
+ "rule_name": "",
+ "rule_type": 0,
+ "sync_uuid": "",
+ "policy_type": 0,
+ "policy_str": "",
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_uuid": "",
+ "bk_path": [],
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "compare_type": 0,
+ "oph_policy": 0,
+ "bk_name_opt": 0,
+ "trans_thread_num": 0,
+ "obj_scan_thread_num": 0,
+ "cmp_thread_num": 0,
+ "cmp_algorithm": 0,
+ "cmp_result_limit": 0,
+ "band_width": "",
+ "app_db_up_switch": 0,
+ "app_db_up_type": "0",
+ "app_db_up_sql": "0",
+ "sync_type": 1,
+ "archive_flag": 1,
+ "archive_type": 1,
+ "archive_days": 1,
+ "compress": 0,
+ "encrypt": 0,
+ "encrypt_pass": "",
+ "rc_point": 1,
+ "rc_type": 1,
+ "scan_obj_flag": 1,
+ "archive_object": {
+  "name_feature": "",
+  "file_type": "",
+  "create_time": 1,
+  "modify_time": 1,
+  "access_time": 1,
+  "type": ""
+ },
+ "valid_period": 1,
+ "rate_type": 1,
+ "real_path": [],
+ "volume_uuid": "",
+ "file_record": 1,
+ "encrypt_key_type": 1,
+ "encrypt_type": "",
+ "file_date_filter_switch": 1,
+ "file_date_filter_regex": "",
+ "archive_name": 1,
+ "acl_sync": 1,
+ "file_list_sto_uuid": "",
+ "bucket_log_path": "",
+ "snapshot_rc_point": "",
+ "_": "3f3ccc46"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoRule
+body: {
+ "rule_uuids": [],
+ "force": 1,
+ "_": "3f37cc66"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoRuleFile
+body: {
+ "_": "3f713f26"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "dto_rule": {
+   "encrypt_pass": "******",
+   "is_biz_admin": 1,
+   "can_del": 1,
+   "can_op": 1,
+   "can_up": 1,
+   "can_view": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: disableDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3f278c15"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadDtoRuleReport
+body: {
+ "rule_uuid": "",
+ "exec_id": "",
+ "_": "3e4ac653"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: enableDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3f4cb54f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoRecoveryPoint
+body: {
+ "host_uuid": "",
+ "path": [],
+ "start": 1,
+ "end": 1,
+ "page": 1,
+ "limit": 1,
+ "_": "3e3f9cf9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRule
+body: {
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "search_field": "",
+ "type": 1,
+ "status": "LIST_STOP",
+ "where_args": "{rule_uuid:D76cF747-B242-B0DC-1894-b349fA71Ef5B,status:STOP}",
+ "_": "3f42c61d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleCmpResult
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleFile
+body: {
+ "type": "",
+ "page": 1,
+ "limit": 1,
+ "result_id": "",
+ "_": "3f2fc8fe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleSourcePath
+body: {
+ "host_uuid": "2D4e7d66-7dcc-Ef6f-bDe3-e6BD6522EB5d",
+ "timepoint": "@timestamp()",
+ "host_ip": "",
+ "prefix": "",
+ "mapper_path": "",
+ "_": "3ec4c245"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoRuleStatus
+body: {
+ "rule_uuids": [],
+ "force_refresh": 1,
+ "_": "3e490dd6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoRule
+body: {
+ "enable": 0,
+ "rule_name": "",
+ "sync_uuid": "",
+ "policy_type": 0,
+ "policy_str": "",
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_uuid": "",
+ "bk_path": [],
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "compare_type": 0,
+ "oph_policy": 0,
+ "bk_name_opt": 0,
+ "trans_thread_num": 0,
+ "obj_scan_thread_num": 0,
+ "cmp_thread_num": 0,
+ "cmp_algorithm": 0,
+ "cmp_result_limit": 0,
+ "band_width": "",
+ "app_db_up_switch": 0,
+ "app_db_up_type": 0,
+ "app_db_up_sql": 0,
+ "random_str": "",
+ "sync_type": 1,
+ "archive_flag": 1,
+ "archive_type": 1,
+ "archive_days": 1,
+ "compress": 0,
+ "encrypt": 0,
+ "encrypt_pass": "",
+ "scan_obj_flag": 1,
+ "archive_object": {
+  "name_feature": "",
+  "file_type": "",
+  "create_time": 1,
+  "modify_time": 1,
+  "access_time": 1,
+  "type": ""
+ },
+ "real_path": "",
+ "_": "3f2ee379"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: rule_type;\n Lost: sync_uuid;\n Lost: wk_path[0];\n Lost: bk_path[0];\n The file_type_filter_switch field must be one of: 1,2;\n Lost: file_record;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3ddbbb90"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3f500cd7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3f0c466a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopDtoRule
+body: {
+ "operate": "",
+ "rule_uuids": [
+  "dCf2732A-fBdA-5F3F-cE3f-7989AA8De4cd",
+  "17b99b8e-2e11-C1b2-7302-b8ee1BCdF3Bd"
+ ],
+ "_": "3f298612"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,245 @@
+<START-----------------------------------------------------------
+Method: createBackupWorkFilter
+body: {
+ "filter_name": "",
+ "description": "",
+ "and_or": 1,
+ "rules": [
+  {
+   "key": "",
+   "operator": "",
+   "value": ""
+  }
+ ],
+ "_": "3f101289"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: filter_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupWork
+body: {
+ "work_uuids": [],
+ "force": 1,
+ "_": "3f0d008f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: work_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupWorkFilter
+body: {
+ "filter_uuids": [],
+ "force": 0,
+ "_": "3d5ebcc6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: filter_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupWork
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupWorkFilter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "backup_work_filter": {
+   "rules": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupWorkResult
+body: {
+ "work_uuids": [],
+ "op_switch": 1,
+ "barcode_list": [],
+ "_": "3f3e6ee8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "detail": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_uuid": "",
+ "_": "3e4fe4f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "run": 0,
+  "wait": 0,
+  "finish": 0,
+  "stop": 0,
+  "failed": 0,
+  "skip": 0,
+  "timeout": 0,
+  "prepare": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWorkFilter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWorkKeyEvents
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWorkLogs
+body: {
+ "page": 1,
+ "limit": 1,
+ "start": 1,
+ "end": 1,
+ "level": 1,
+ "search_content": "",
+ "type": 1,
+ "node_uuid": "",
+ "_": "3f73ac98"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBackupWorkFilter
+body: {
+ "filter_name": "",
+ "description": "",
+ "and_or": 1,
+ "rules": [
+  {
+   "key": "",
+   "operator": "",
+   "value": ""
+  }
+ ],
+ "_": "3efafd3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: filter_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebootBackupWork
+body: {
+ "operate": "",
+ "work_uuids": [],
+ "_": "3f0346bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: work_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBackupWork
+body: {
+ "operate": "",
+ "work_uuids": [],
+ "_": "3e3c3ad5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: work_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

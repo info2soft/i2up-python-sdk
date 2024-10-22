@@ -1,0 +1,1112 @@
+<START-----------------------------------------------------------
+Method: activeNode
+body: {
+ "node_name": "Donald Williams",
+ "address": "55.18.241.141",
+ "data_port": 26804,
+ "cache_dir": "/var/i2data/cache/",
+ "password": "A34fcB6E-d44b-63dE-9A3E-31EEAd41cefd",
+ "log_dir": "/var/i2data/log/",
+ "registered": 1,
+ "comment": "string",
+ "web_uuid": "C82Aed4a-d95C-C1Fc-fcdB-73615fBED36F",
+ "port": {
+  "iarelay": "",
+  "iamsk": "",
+  "iasync": ""
+ },
+ "maintenance": 0,
+ "node_type": "",
+ "phy_type": 1,
+ "biz_grp_list": [],
+ "cluster_switch": 1,
+ "node_uuids": "",
+ "node_cluster_type": "",
+ "_": "3deed9e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchCreateDbs
+body: {
+ "csv_file": "",
+ "type": "",
+ "_": "3efe6bbf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001060,
+  "message": "[1010001060] \u4e0a\u4f20\u51fa\u9519  You did not select a file to upload. "
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchCreateSqlserverDbs
+body: {
+ "bind_lic_list": [],
+ "db_list": "",
+ "db_type": "",
+ "node_uuid": "",
+ "prefix": "",
+ "role": "",
+ "_": "3f3368af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkDbLink
+body: {
+ "uuid": "6C4AEF37-6496-6DCD-E085-DD640001E4EC",
+ "type": "oracle",
+ "conf": [
+  {
+   "id": 1,
+   "name": "kfk",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "none",
+   "pass": {
+    "user": "i2",
+    "pass": "i2"
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   },
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "kerberos",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "0",
+   "sniff": "0"
+  },
+  {
+   "id": 2,
+   "name": "oracle",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "pass",
+   "pass": {
+    "user": "i2",
+    "pass": "i2"
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   },
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "1",
+   "sniff": "1"
+  },
+  {
+   "id": 3,
+   "name": "kfk",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "kerberos",
+   "pass": {
+    "user": "",
+    "pass": ""
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   },
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "0",
+   "sniff": "0"
+  },
+  {
+   "id": 4,
+   "name": "kudu",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "none",
+   "pass": {
+    "user": "",
+    "pass": ""
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   },
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "kerberos",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "1",
+   "sniff": "1"
+  }
+ ],
+ "jsonver": {},
+ "_": "3eabae0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDbUnified
+body: {
+ "biz_grp_list": [],
+ "db_name": "Melissa Lewis",
+ "node_uuid": "db7FA79e-fCA9-92af-fe82-9EfC986EE612",
+ "db_type": "oracle",
+ "file_open_type": "0",
+ "deploy_mode": "0",
+ "log_read_type": "file",
+ "config": {
+  "model": 1,
+  "sniff": "",
+  "user_management": [
+   {
+    "user": "",
+    "passwd": "",
+    "default_db": "",
+    "cred_uuid": "",
+    "cred_login": 1,
+    "url": "",
+    "auth_uuid": ""
+   }
+  ],
+  "role": [
+   {
+    "source": 0,
+    "target": 1
+   }
+  ],
+  "log_read": {
+   "os_auth": 1,
+   "asm_instance": "",
+   "asm_username": "",
+   "asm_port": 1,
+   "asm_password": "12323131"
+  },
+  "filter_session": 1,
+  "relay": {
+   "enable": 1,
+   "relay_node_uuid": ""
+  },
+  "remote_file_agent": {
+   "enable": 1,
+   "port": 1,
+   "compress": "no"
+  },
+  "db_list": [
+   {
+    "disable": 0,
+    "ip": "",
+    "thread": "",
+    "port": "",
+    "http_port": ""
+   }
+  ],
+  "transport": {
+   "auth": "",
+   "ssl_mode": "",
+   "certificate": ""
+  },
+  "auth": "",
+  "replication_num": "",
+  "zookeeper": {
+   "set": [
+    {
+     "ip": "",
+     "port": "",
+     "zk_node": ""
+    }
+   ]
+  },
+  "pdserver": [
+   {
+    "ip": "",
+    "port": ""
+   }
+  ],
+  "ocp_server": [
+   {
+    "ip": "",
+    "rpcport": "",
+    "sqlport": ""
+   }
+  ],
+  "manual_ocp_conf": 1,
+  "ob_sharding_nodes": [
+   {
+    "cluster_name": "",
+    "tenant_name": "",
+    "ip": "",
+    "port": "",
+    "tenant_user": "",
+    "tenant_pass": "",
+    "tenant_cred_switch": "",
+    "tenant_cred_uuid": "",
+    "manage_user": "",
+    "manage_pass": "",
+    "manage_cred_switch": "",
+    "manage_cred_uuid": ""
+   }
+  ],
+  "manage_port": "",
+  "ob_sharding_inst": [],
+  "table_type": ""
+ },
+ "db_uuid": "Eed9dD81-9dA2-8EEe-df1b-9f59Fbc5C4c6",
+ "db_mode": "",
+ "cdb": "8C3c7da6-2714-AbFB-2FBE-08b68A1f3292",
+ "maintenance": "",
+ "password": "",
+ "comment": "",
+ "node_type": 1,
+ "cluster_uuid": "",
+ "_": "3d61af6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bind_lic_list[];\n Lost: config[auth];\n Lost: db_mode;\n Lost: config[password];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDb
+body: {
+ "uuids": [
+  "A0A0526D-6503-5C2A-E3D8-7D85813967F1"
+ ],
+ "force": 0,
+ "_": "3ef99413"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNode
+body: {
+ "uuids": [
+  "8A46c1F5-ABDc-85D7-26ce-1C1bC1fe7eB8",
+  "3efEF0F3-BA97-67b3-Ed48-46db4Be872Ec"
+ ],
+ "force": 0,
+ "_": "3ef43f9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   },
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   },
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDb
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDbSpace
+body: {
+ "uuid": "A0A0526D-6503-5C2A-E3D8-7D85813967F1",
+ "_": "3f1ae721"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptNode
+body: {
+ "registered": 1,
+ "uuid": "31424826-A97D-4085-81AE-FD64EC58B6CE1",
+ "_": "3ece8a1e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "active_node": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptNodeDebugInfo
+body: {
+ "uuid": "41D1C1E8-60AE-4853-9694-5599560EEB0F",
+ "last_time": 1,
+ "_": "3f39ec0e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "debug_node": [
+   {
+    "conn_bk": null,
+    "conn_wk": null,
+    "thd_bk": null,
+    "thd_wk": null,
+    "conf_bk": "",
+    "conf_wk": "",
+    "obj_bk": null,
+    "obj_wk": null
+   }
+  ],
+  "cpu_useage": [],
+  "cpu_usage": [],
+  "cpu_useage_info": [],
+  "cpu_usage_info": [],
+  "memory_useage": [],
+  "memory_usage": [],
+  "memory_useage_info": [],
+  "memory_usage_info": [],
+  "network_useage_netsend": [],
+  "network_usage_netsend": [],
+  "network_useage_netrecv": [],
+  "network_usage_netrecv": [],
+  "network_useage_info": [],
+  "network_usage_info": [],
+  "time": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getActiveDbAuthInfo
+body: {
+ "db_uuid": "",
+ "_": "3ec7e620"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getCharset
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "charset": [
+   "AL16UTF16",
+   "AL24UTFFSS",
+   "AL32UTF8",
+   "AR8ADOS710",
+   "AR8ADOS710T",
+   "AR8ADOS720",
+   "AR8ADOS720T",
+   "AR8APTEC715",
+   "AR8APTEC715T",
+   "AR8ARABICMAC",
+   "AR8ARABICMACS",
+   "AR8ARABICMACT",
+   "AR8ASMO708PLUS",
+   "AR8ASMO8X",
+   "AR8EBCDIC420S",
+   "AR8EBCDICX",
+   "AR8HPARABIC8T",
+   "AR8ISO8859P6",
+   "AR8MSWIN1256",
+   "AR8MUSSAD768",
+   "AR8MUSSAD768T",
+   "AR8NAFITHA711",
+   "AR8NAFITHA711T",
+   "AR8NAFITHA721",
+   "AR8NAFITHA721T",
+   "AR8SAKHR706",
+   "AR8SAKHR707",
+   "AR8SAKHR707T",
+   "AR8XBASIC",
+   "AZ8ISO8859P9E",
+   "BG8MSWIN",
+   "BG8PC437S",
+   "BLT8CP921",
+   "BLT8EBCDIC1112",
+   "BLT8EBCDIC1112S",
+   "BLT8ISO8859P13",
+   "BLT8MSWIN1257",
+   "BLT8PC775",
+   "BN8BSCII",
+   "CDN8PC863",
+   "CE8BS2000",
+   "CEL8ISO8859P14",
+   "CH7DEC",
+   "CL8BS2000",
+   "CL8EBCDIC1025",
+   "CL8EBCDIC1025C",
+   "CL8EBCDIC1025R",
+   "CL8EBCDIC1025S",
+   "CL8EBCDIC1025X",
+   "CL8EBCDIC1158",
+   "CL8EBCDIC1158R",
+   "CL8ISO8859P5",
+   "CL8ISOIR111",
+   "CL8KOI8R",
+   "CL8KOI8U",
+   "CL8MACCYRILLIC",
+   "CL8MACCYRILLICS",
+   "CL8MSWIN1251",
+   "D7DEC",
+   "D7SIEMENS9780X",
+   "D8BS2000",
+   "D8EBCDIC1141",
+   "D8EBCDIC273",
+   "DK7SIEMENS9780X",
+   "DK8BS2000",
+   "DK8EBCDIC1142",
+   "DK8EBCDIC277",
+   "E7DEC",
+   "E7SIEMENS9780X",
+   "E8BS2000",
+   "EE8BS2000",
+   "EE8EBCDIC870",
+   "EE8EBCDIC870C",
+   "EE8EBCDIC870S",
+   "EE8ISO8859P2",
+   "EE8MACCE",
+   "EE8MACCES",
+   "EE8MACCROATIAN",
+   "EE8MACCROATIANS",
+   "EE8MSWIN1250",
+   "EE8PC852",
+   "EEC8EUROASCI",
+   "EEC8EUROPA3",
+   "EL8DEC",
+   "EL8EBCDIC423R",
+   "EL8EBCDIC875",
+   "EL8EBCDIC875R",
+   "EL8EBCDIC875S",
+   "EL8GCOS7",
+   "EL8ISO8859P7",
+   "EL8MACGREEK",
+   "EL8MACGREEKS",
+   "EL8MSWIN1253",
+   "EL8PC437S",
+   "EL8PC737",
+   "EL8PC851",
+   "EL8PC869",
+   "ET8MSWIN923",
+   "F7DEC",
+   "F7SIEMENS9780X",
+   "F8BS2000",
+   "F8EBCDIC1147",
+   "F8EBCDIC297",
+   "HU8ABMOD",
+   "HU8CWI2",
+   "I7DEC",
+   "I7SIEMENS9780X",
+   "I8EBCDIC1144",
+   "I8EBCDIC280",
+   "IN8ISCII",
+   "IS8MACICELANDIC",
+   "IS8MACICELANDICS",
+   "IS8PC861",
+   "IW7IS960",
+   "IW8EBCDIC1086",
+   "IW8EBCDIC424",
+   "IW8EBCDIC424S",
+   "IW8ISO8859P8",
+   "IW8MACHEBREW",
+   "IW8MACHEBREWS",
+   "IW8MSWIN1255",
+   "IW8PC1507",
+   "JA16DBCS",
+   "JA16DBCSFIXED",
+   "JA16EBCDIC930",
+   "JA16EUC",
+   "JA16EUCFIXED",
+   "JA16EUCTILDE",
+   "JA16EUCYEN",
+   "JA16MACSJIS",
+   "JA16SJIS",
+   "JA16SJISFIXED",
+   "JA16SJISTILDE",
+   "JA16SJISYEN",
+   "JA16VMS",
+   "KO16DBCS",
+   "KO16DBCSFIXED",
+   "KO16KSC5601",
+   "KO16KSC5601FIXED",
+   "KO16KSCCS",
+   "KO16MSWIN949",
+   "LA8ISO6937",
+   "LA8PASSPORT",
+   "LT8MSWIN921",
+   "LT8PC772",
+   "LT8PC774",
+   "LV8PC1117",
+   "LV8PC8LR",
+   "LV8RST104090",
+   "N7SIEMENS9780X",
+   "N8PC865",
+   "NDK7DEC",
+   "NE8ISO8859P10",
+   "NEE8ISO8859P4",
+   "NL7DEC",
+   "RU8BESTA",
+   "RU8PC855",
+   "RU8PC866",
+   "S7DEC",
+   "S7SIEMENS9780X",
+   "S8BS2000",
+   "S8EBCDIC1143",
+   "S8EBCDIC278",
+   "SE8ISO8859P3",
+   "SF7ASCII",
+   "SF7DEC",
+   "TH8MACTHAI",
+   "TH8MACTHAIS",
+   "TH8TISASCII",
+   "TH8TISEBCDIC",
+   "TH8TISEBCDICS",
+   "TR7DEC",
+   "TR8DEC",
+   "TR8EBCDIC1026",
+   "TR8EBCDIC1026S",
+   "TR8MACTURKISH",
+   "TR8MACTURKISHS",
+   "TR8MSWIN1254",
+   "TR8PC857",
+   "US7ASCII",
+   "US8BS2000",
+   "US8ICL",
+   "US8PC437",
+   "UTF8",
+   "UTFE",
+   "VN8MSWIN1258",
+   "VN8VN3",
+   "WE8BS2000",
+   "WE8BS2000E",
+   "WE8BS2000L5",
+   "WE8DEC",
+   "WE8DG",
+   "WE8EBCDIC1047",
+   "WE8EBCDIC1047E",
+   "WE8EBCDIC1140",
+   "WE8EBCDIC1140C",
+   "WE8EBCDIC1145",
+   "WE8EBCDIC1146",
+   "WE8EBCDIC1148",
+   "WE8EBCDIC1148C",
+   "WE8EBCDIC284",
+   "WE8EBCDIC285",
+   "WE8EBCDIC37",
+   "WE8EBCDIC37C",
+   "WE8EBCDIC500",
+   "WE8EBCDIC500C",
+   "WE8EBCDIC871",
+   "WE8EBCDIC924",
+   "WE8GCOS7",
+   "WE8HP",
+   "WE8ICL",
+   "WE8ISO8859P1",
+   "WE8ISO8859P15",
+   "WE8ISO8859P9",
+   "WE8ISOICLUK",
+   "WE8MACROMAN8",
+   "WE8MACROMAN8S",
+   "WE8MSWIN1252",
+   "WE8NCR4970",
+   "WE8NEXTSTEP",
+   "WE8PC850",
+   "WE8PC858",
+   "WE8PC860",
+   "WE8ROMAN8",
+   "YUG7ASCII",
+   "ZHS16CGB231280",
+   "ZHS16CGB231280FIXED",
+   "ZHS16DBCS",
+   "ZHS16DBCSFIXED",
+   "ZHS16GBK",
+   "ZHS16GBKFIXED",
+   "ZHS16MACCGB231280",
+   "ZHS32GB18030",
+   "ZHT16BIG5",
+   "ZHT16BIG5FIXED",
+   "ZHT16CCDC",
+   "ZHT16DBCS",
+   "ZHT16DBCSFIXED",
+   "ZHT16DBT",
+   "ZHT16HKSCS",
+   "ZHT16HKSCS31",
+   "ZHT16MSWIN950",
+   "ZHT32EUC",
+   "ZHT32EUCFIXED",
+   "ZHT32SOPS",
+   "ZHT32TRIS",
+   "ZHT32TRISFIXED"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbStatus
+body: {
+ "uuids": "0AAff5db-F2fD-939c-ed24-7EEcd412C2De",
+ "_": "3ef3b850"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "proxy": "OFF",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbs
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "db_name",
+ "search_value": "",
+ "role": "",
+ "direction": "",
+ "db_type": "",
+ "ip": "",
+ "port": "",
+ "service_name": "",
+ "_": "3e8b32f6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listInactiveNodes
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "uuids": [
+  "64e8Bd28-5fa3-4BCD-55bB-FB9bFf4Fca3f",
+  "2fD3Acff-67F7-fE9E-b5E8-7edAdC0Ca1af"
+ ],
+ "_": "3ee5f758"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "64e8Bd28-5fa3-4BCD-55bB-FB9bFf4Fca3f",
+    "status": "OFFLINE",
+    "version": "-",
+    "os": "-",
+    "process_status": []
+   },
+   {
+    "uuid": "2fD3Acff-67F7-fE9E-b5E8-7edAdC0Ca1af",
+    "status": "OFFLINE",
+    "version": "-",
+    "os": "-",
+    "process_status": []
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodes
+body: {
+ "page": 1,
+ "limit": 10,
+ "nodetype": "@pick{\"name\",\"source\",\"backup\"]}",
+ "search_field": "",
+ "order_by": "",
+ "sort": "@pick{\"name\", \"address\"}",
+ "search_value": "",
+ "where_args": "[\"node_cluster_type\"=1]",
+ "_": "3d3a8357"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDb
+body: {
+ "db_name": "Brian Young",
+ "db_uuid": "A0A0526D-6503-5C2A-E3D8-7D85813967F1",
+ "node_uuid": "0596a77C-64Fd-cAf2-DB9c-cAaeBD56eD88",
+ "db_type": "oracle",
+ "file_open_type": "0",
+ "deploy_mode": "0",
+ "log_read_type": "file",
+ "config": {
+  "username": "Ruth Garcia",
+  "password": "",
+  "server_name": "",
+  "port": 1,
+  "log_read": {
+   "os_auth": 1,
+   "asm_instance": "",
+   "asm_username": "",
+   "asm_port": 1,
+   "asm_password": "12323131"
+  },
+  "filter_session": 1,
+  "relay": {
+   "enable": 1,
+   "relay_node_uuid": ""
+  },
+  "remote_file_agent": {
+   "enable": 1,
+   "port": 1,
+   "compress": "no"
+  },
+  "db_list": [
+   {
+    "ip": "",
+    "thread": ""
+   }
+  ],
+  "broker_server": " ",
+  "conn_pool_max": 1,
+  "instance_name": "",
+  "database_name": ""
+ },
+ "random_str": "",
+ "cdb": "7C86fcE5-47BF-3DDC-AdeC-7A09B91F3cBe",
+ "maintenance": "",
+ "_": "3f438b65"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNode
+body: {
+ "node_name": "Ronald Hall",
+ "address": "192.168.12.199",
+ "data_port": 26804,
+ "cache_dir": "/var/i2data/cache/",
+ "iptoken": "780B4F1B-6FB9-46C4-98AC-02A8DF4A1C76",
+ "log_dir": "/var/i2data/log/",
+ "node_uuid": "31424826-A97D-4085-81AE-FD64EC58B6CE1",
+ "registered": 1,
+ "comment": "string",
+ "web_uuid": "0B81b82c-C67b-4F6A-A096-2343DC52543b",
+ "port": {
+  "iarelay": "26806",
+  "iamask": "26808",
+  "iasync": "26803"
+ },
+ "maintenance": 0,
+ "node_type": "1111010000",
+ "phy_type": 2,
+ "os_type": 0,
+ "biz_grp_list": [],
+ "_": "3f10c2a7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebuildActiveNode
+body: {
+ "uuid": "",
+ "_": "3edc2ca3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refresgActiveNode
+body: {
+ "uuid": "xxxxxxxxx",
+ "_": "3f68c121"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewActiveNode
+body: {
+ "uuids": [
+  "556F698D-ecd7-26bC-e40B-d4e39b1934E3"
+ ],
+ "_": "3f033f14"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartAllProcess
+body: {
+ "uuid": "",
+ "process": "process[]=iawork&process[]=iaback",
+ "_": "3f60b34b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchDbMaintenance
+body: {
+ "maintenance_switch": 0,
+ "uuid": "bBae9dCA-f6cc-BA66-bF59-8DFc395eD094",
+ "_": "3f581431"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchMaintenance
+body: {
+ "maintenance_switch": 0,
+ "uuid": "bBae9dCA-f6cc-BA66-bF59-8DFc395eD094",
+ "_": "3f6b03b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeNode
+body: {
+ "uuids": [
+  "86e756c5-A9aA-dFda-72Ad-D23FE9D78Baa"
+ ],
+ "_": "3ee0fd27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

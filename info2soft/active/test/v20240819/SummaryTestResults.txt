@@ -1,0 +1,40 @@
+<START-----------------------------------------------------------
+Method: listSummary
+body: {
+ "status": [],
+ "_": "3dd4dbb4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "proxyStatus": "online",
+  "info": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSummaryView
+body: {
+ "src_db": "",
+ "tgt_db": "",
+ "status": "",
+ "type": "",
+ "rule_name": "",
+ "_": "3ef1f218"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

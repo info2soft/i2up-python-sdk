@@ -1,0 +1,120 @@
+<START-----------------------------------------------------------
+Method: checkDiskPool
+body: {
+ "bk_uuid": "",
+ "storage_path": "",
+ "pool_uuid": "",
+ "_": "3f4dda4c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDiskPool
+body: {
+ "pool_name": "",
+ "pool_uuid": "",
+ "pool_type": 1,
+ "bk_uuid": "",
+ "storage_path": "",
+ "rootfs": 1,
+ "zfs_pool_uuid": "",
+ "auto_expand": 1,
+ "zfs_fs_uuid": "",
+ "max_concurrent": 1,
+ "dedupe_sto_uuid": "",
+ "domain_uuid": "",
+ "sto_uuid": "",
+ "bucket_uuid": "",
+ "nas_type": "NFS",
+ "export_path": "",
+ "_": "3f43092a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDiskPool
+body: {
+ "pool_uuids": [],
+ "_": "3ebe90bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDiskPool
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiskPool
+body: {
+ "like_args": "{pool_name:}",
+ "where_args": "{pool_type:1,bk_uuid:[]}",
+ "_": "3f45ec9c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: like_args;\n Not array: where_args;\n The where_args[pool_type] field must be one of: 0,1,2,3,4,5;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDiskPool
+body: {
+ "pool_uuid": "",
+ "pool_name": "",
+ "random_str": "",
+ "bk_uuid": "",
+ "max_concurrent": 1,
+ "zfs_pool_uuid": "",
+ "auto_expand": "",
+ "zfs_fs_uuid": "",
+ "_": "3e129e0e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: pool_uuid;\n Lost: pool_type;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,283 @@
+<START-----------------------------------------------------------
+Method: chkStorageUnitRules
+body: {
+ "disk_pool_uuid": "",
+ "_": "3ef46664"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: disk_pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStorageUnit
+body: {
+ "unit_name": "",
+ "unit_type": 1,
+ "bk_uuid": "",
+ "data_ip_uuid": "",
+ "storage_path": "",
+ "max_concurrent": 1,
+ "high_water_mark": 1,
+ "low_water_mark": 1,
+ "auto_expand": 1,
+ "library_uuid": "",
+ "drivers_num": 1,
+ "rootfs": 1,
+ "pool_uuid": "",
+ "fs_uuid": "",
+ "biz_grp_list": "",
+ "access_limit": 1,
+ "bucket_uuid": "",
+ "sto_uuid": "",
+ "disk_pool_uuid": "",
+ "default_tape_pool_uuid": "",
+ "retention": "",
+ "_": "3f243392"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_name;\n Lost: unit_uuid;\n Lost: bk_uuid;\n Lost: data_ip_uuid;\n Lost: disk_pool_uuid;\n Lost: retention;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStorageUnitGroup
+body: {
+ "group_name": "",
+ "group_type": 1,
+ "unit_list": [],
+ "policy": 1,
+ "_": "3f1a20cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStorageUnit
+body: {
+ "unit_uuids": [],
+ "force": 1,
+ "_": "3e6932ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStorageUnitGroup
+body: {
+ "group_uuids": [],
+ "force": 1,
+ "_": "3f47fa99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageUnit
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageUnitGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getStorageUnitAvailableConcurrent
+body: {
+ "disk_pool_uuid": "",
+ "_": "3b27eb70"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "available_num": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getStorageUnitBkCapacity
+body: {
+ "disk_pool_uuid": "",
+ "export_path": "",
+ "_": "3d9e3844"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_type;\n Lost: bk_uuid;\n Lost: storage_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getStorageUnitDrivers
+body: {
+ "library_uuid": "",
+ "_": "3e5d8541"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageUnit
+body: {
+ "where_args": "where_args[]={'unit_type': '', 'unit_name': '', 'unit_uuid': ''}",
+ "like_args": "like_args[]={'bk_node_name': ''}",
+ "filter_by_biz_grp": "",
+ "_": "3eb00630"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: like_args;\n Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageUnitGroup
+body: {
+ "where_args": "where_args[]={'group_type': 1}",
+ "like_args": "like_args[]={'group_name': '', 'unit_name': ''}",
+ "_": "3f44f96a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: like_args;\n Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageUnitStatus
+body: {
+ "unit_uuids": [],
+ "force_refresh": 1,
+ "_": "3f695d72"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStorageUnit
+body: {
+ "unit_name": "",
+ "unit_type": "",
+ "bk_uuid": "",
+ "data_addr": "",
+ "storage_path": "",
+ "max_concurrent": 1,
+ "fragment_switch": 1,
+ "fragment_size": 1,
+ "high_water_mark": 1,
+ "low_water_mark": 1,
+ "auto_expand": 1,
+ "library_uuid": "",
+ "drivers_num": 1,
+ "rootfs": 1,
+ "_": "3eef8a5b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_name;\n Lost: unit_uuid;\n Lost: unit_type;\n Lost: bk_uuid;\n Lost: data_ip_uuid;\n Lost: disk_pool_uuid;\n Lost: retention;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStorageUnitGroup
+body: {
+ "group_name": "",
+ "group_type": "",
+ "unit_list": [],
+ "policy": 1,
+ "group_uuid": "",
+ "random_str": "",
+ "_": "3f08ea1d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_name;\n Lost: group_type;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

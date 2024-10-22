@@ -1,0 +1,901 @@
+<START-----------------------------------------------------------
+Method: cmpImmediateObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3d2b2ebf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpResumeTimeObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f747d37"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpStopTimeObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f3fd3c2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDatacheckObjCmp
+body: {
+ "db_user_map": {
+  "src_user": "dst_user"
+ },
+ "config": {
+  "one_task": "immediate"
+ },
+ "policies": "",
+ "policy_type": "periodic",
+ "one_time": "2019-05-27 16:07:08",
+ "repair": 1,
+ "obj_cmp_name": "test",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cal_table_recoders": 1,
+ "cmp_type": "user",
+ "rule_uuid": "751A03F5-C97D-645B-82B2-316A5D198528",
+ "src_db_auth_uuid": "",
+ "tgt_db_auth_uuid": "",
+ "_": "3f69e67e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "uuid": "71F437E3-119E-4B97-B977-B3856B048D71"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTbCmp
+body: {
+ "tb_cmp_name": "\u89c4\u5219\u540d",
+ "src_db_uuids": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuids": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cmp_type": "table",
+ "filter_table": "[user.table]",
+ "db_tb_map": [
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "dbdziko",
+     "tab": "oirpsb",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "nsuxsjutx",
+     "tab": "abpq",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "dntmmkmyc",
+     "tab": "hwjln",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "jrckuiy",
+     "tab": "ibpgshr",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "wfpp",
+     "tab": "yjnlwshxru",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  }
+ ],
+ "dump_thd": 1,
+ "polices": "0|00:00",
+ "policy_type": "one_time",
+ "concurrent_table": [
+  "hh.ww"
+ ],
+ "try_split_part_table": 0,
+ "one_time": "2019-05-27 16:07:08",
+ "config": {
+  "data_select": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "src_query": "",
+    "dst_user": "",
+    "dst_tb": "",
+    "dst_query": ""
+   }
+  ],
+  "compare_key": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "dst_user": "",
+    "dst_tb": "",
+    "src_dst_key": ""
+   }
+  ],
+  "globalConfig": {
+   "dkdiff_enable_step_count_table": "\"\"",
+   "dkdbsource_diff_only_key_columns": false,
+   "dkmagic_plan_max_diffs": 10000,
+   "dkfilesink_enable_sqlpatch_file": false,
+   "dkmagic_plan_number_tolerance_type": "absolute",
+   "dkmagic_plan_number_tolerance": 1,
+   "dkmagic_plan_datetime_tolerance": 1,
+   "split_table_schedule_cron": "\"\"",
+   "split_table_single_segment_max_rows": 5000000,
+   "split_table_result_expire_in_seconds": 0,
+   "dkdiffengine_recursion_max_steps": 1,
+   "dkdiffengine_recursion_interval_step_delay": 0,
+   "dkdbsource_left_ignore_type_names": "\"\"",
+   "dkdbsource_right_ignore_type_names": "\"\"",
+   "dkdbsource_left_ignore_column_names": "\"\"",
+   "dkdbsource_right_ignore_column_names": "",
+   "globalconfig": [
+    {
+     "key": "",
+     "value": ""
+    }
+   ],
+   "tolerance": false,
+   "execute_patch_after_complete": ""
+  },
+  "globals": [
+   {
+    "src_user": "",
+    "dst_user": "",
+    "src_query": "",
+    "dst_query": ""
+   }
+  ],
+  "exclude_tables": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "dst_user": "",
+    "dst_tb": ""
+   }
+  ],
+  "timestamps": {
+   "column_name": "",
+   "back_delay_in_seconds": 1,
+   "end_time": ""
+  },
+  "global_time_limit": false,
+  "v_tabmap": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "src_sql": "",
+    "tgt_user": "",
+    "tgt_tb": "",
+    "tgt_sql": "",
+    "key": ""
+   }
+  ]
+ },
+ "interval": "10m",
+ "db_user_map": [
+  {
+   "src": [
+    {
+     "user": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "db_map": {
+  "src": [
+   {
+    "db_uuid": "",
+    "auth_uuid": ""
+   }
+  ],
+  "tgt": [
+   {
+    "db_uuid": "",
+    "auth_uuid": ""
+   }
+  ]
+ },
+ "incre_cmp_switch": "",
+ "incre_cmp_db_uuid": "",
+ "incre_cmp_db_type": "",
+ "_": "3f3641a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "uuid": "6DB2BF03-CC06-415A-80C4-6CD0C950CD8E"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDatacheckObjCmp
+body: {
+ "force": false,
+ "uuids": "[@guid]",
+ "_": "3ea2a099"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTbCmp
+body: {
+ "force": false,
+ "uuids": "17B85eCC-dDdf-a8B8-d822-8B60de04F1B8",
+ "_": "3f411aab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDatacheckObjCmp
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDatacheckObjCmpResult
+body: {
+ "BackLackOnly": 0,
+ "uuid": "fdC85A4B-Ab96-E9d5-ADfB-1Ed3Cf2efBC7",
+ "start_time": "",
+ "limit": 1,
+ "offset": "",
+ "search_value": "",
+ "_": "3f1de460"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "obj_cmp_name": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDatacheckObjCmpResultTimeList
+body: {
+ "uuid": "4E8dFa55-e2d5-2DC3-9c2B-65C82CB827F0",
+ "time_list": [],
+ "_": "3ecd0674"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmp
+body: {
+ "uuid": "DEeb90fB-6EbF-0c7D-dDc5-CDe28dFef5CA",
+ "_": "3f0fb2d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpCmpDesc
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "Eefc7DE4-dF7C-bb9C-DBe7-0F893b82F25b",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3f703489"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "FcB58FAc-2b8c-8Add-DA19-Bd13b3B3CcDf",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3f1d5b35"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "29D3be3B-271e-0EAd-CBF8-1f66f9B50c1d",
+ "start_time": "",
+ "flag": 1,
+ "_": "3f6275db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null,
+   "only_count": 0,
+   "rule_related": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResuluTimeList
+body: {
+ "time_list": "1aCDfdAE-8f31-CF69-689A-59FF642F3108",
+ "uuid": "",
+ "_": "3f1b55b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "obj_cmp_name",
+ "search_value": "test",
+ "_": "3f129006"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmpCmpInfo
+body: {
+ "filed": "",
+ "uuid": "",
+ "start_time": "",
+ "offset": 1,
+ "limit": 10,
+ "search_value": "",
+ "usr": "I2",
+ "_": "3f622248"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": {
+   "total": null,
+   "cal_table_recoders": false,
+   "rows": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmpResultTimeList
+body: {
+ "uuid": "5bCB64A2-cCE5-70eB-1e2f-FfB2f2f2f4dB",
+ "_": "3e976351"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmpStatus
+body: {
+ "uuids": [],
+ "_": "3e1a797d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "tb_cmp_name",
+ "search_value": "\u6d4b\u8bd5",
+ "_": "3f138b0e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmpResultTimeList
+body: {
+ "uuid": "",
+ "_": "3f73c935"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3eabd90c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "fdAeDbf9-1b3B-9ae5-EaD1-3f5c3cdfE8dd",
+ "tb_cmp_name": "",
+ "_": "3e47acf6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "fcBc3070-41E4-7Ebc-1fa7-3eC42A13D84D",
+ "tb_cmp_name": "",
+ "_": "3f5b4d1b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f3d0294"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "5DceFADf-5eAC-556C-3dA9-b5a23bd7E951",
+ "tb_cmp_name": "",
+ "_": "3f3dcdd2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
