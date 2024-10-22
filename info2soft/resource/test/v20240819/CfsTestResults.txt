@@ -1,0 +1,168 @@
+<START-----------------------------------------------------------
+Method: createCfs
+body: {
+ "cfs_name": "",
+ "ip": "",
+ "port": 1,
+ "user": "",
+ "pwd": "",
+ "biz_grp_list": [],
+ "maintenance": 1,
+ "db_name": "",
+ "_": "3f74270c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cfs_name;\n Lost: ip;\n Lost: db_name;\n Lost: user;\n Lost: pwd;\n Lost: current_trsf_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCfs
+body: {
+ "cfs_uuids": [],
+ "force": 1,
+ "_": "3ef6f347"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cfs_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCfs
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfs
+body: {
+ "limit": 15,
+ "page": 1,
+ "_": "3f7334b7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfsStatus
+body: {
+ "cfs_uuids": [],
+ "force_refresh": 1,
+ "_": "3f1ae43c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cfs_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfsZoneFs
+body: {
+ "cfs_uuid": "",
+ "_": "3f04cca9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cfs_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainCfs
+body: {
+ "cfs_uuids": [],
+ "operate": "",
+ "switch": 1,
+ "_": "3f30fdc9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cfs_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCfs
+body: {
+ "cfs_name": "",
+ "ip": "",
+ "port": 1,
+ "user": "",
+ "pwd": "",
+ "biz_grp_list": [],
+ "random_str": "",
+ "maintenance": 1,
+ "db_name": "",
+ "_": "3e37bee9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cfs_name;\n Lost: ip;\n Lost: db_name;\n Lost: user;\n Lost: pwd;\n Lost: current_trsf_id;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testConnect
+body: {
+ "ip": "",
+ "port": 1,
+ "user": "",
+ "pwd": "",
+ "db_name": "",
+ "cfs_uuid": "",
+ "_": "3f7b4f99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n Lost: db_name;\n Lost: user;\n Lost: pwd;\n"
+ }
+}
+-----------------------------------------------------------END>
+

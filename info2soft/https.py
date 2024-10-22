@@ -88,24 +88,26 @@ def _post(url, data, auth=None, headers=None, head_config=None, skip_retry=False
 def _get(url, params=None, auth=None, skip_retry=False):
     try:
         src_url = url
+        src_params = params
         auth_type = 'token' if auth is None else auth.auth_type
         token = '' if auth is None else auth.token
         ak = '' if auth is None else auth.access_key
         sk = '' if auth is None else auth.secret_key
         # 3eb647b1
         # 处理 get 请求各种状态接口传入 **uuids 数组类型，做数据处理
-        waitDel = ''
-        if params is not None:
-            for k, v in params.items():
-                # 如果包含了数组形式的数据需要处理一下 url
-                if isinstance(params[k], list):
-                    urlConnectTag = '%s%s%s' % ('&', k, '[]=')
-                    urlSub = urlConnectTag.join(params[k])
-                    urlConnectSub = '%s%s%s' % ('?', k, '[]=')
-                    url = '%s%s%s' % (url, urlConnectSub, urlSub)
-                    waitDel = k
-        if waitDel != '':
-            params.pop(waitDel)
+        # waitDel = ''
+        # if params is not None:
+        #     for k, v in params.items():
+        #         # 如果包含了数组形式的数据需要处理一下 url
+        #         if isinstance(params[k], list):
+        #             urlConnectTag = '%s%s%s' % ('&', k, '[]=')
+        #             urlSub = urlConnectTag.join(params[k])
+        #             urlConnectSub = '%s%s%s' % ('?', k, '[]=')
+        #             url = '%s%s%s' % (url, urlConnectSub, urlSub)
+        #             waitDel = k
+        # if waitDel != '':
+        #     params.pop(waitDel)
+
         _ = hex(struct.unpack('<I', struct.pack('<f', random.random()))[0])[2:]
         if params is not None:
             params['_'] = _
@@ -114,12 +116,32 @@ def _get(url, params=None, auth=None, skip_retry=False):
                 '_': _
             }
 
+        # 用params里的数据生成完整的URL，对字典和列表类型的值作特殊处理，以保证Server端正确解析
+        if params is not None:
+            for key, value in params.items():
+                # 为了保持与签名时所用的字符串保持一致，将True和False替换为true和false
+                if isinstance(value, bool):
+                    params[key] = str(value).lower() # 等效于 params[key] = value.replace('True', 'true').replace('False', 'false')
+                if isinstance(value, dict):
+                    params[key] = json.dumps(value, separators=(',', ':'), ensure_ascii=False).replace('\"', '')
+                if isinstance(value, list):
+                    temp = ''
+                    for i in range(len(value)):
+                        temp += f"{key}[]={value[i]}&"
+                    if temp != '':
+                        temp = temp[0:-1]
+                        params[key] = temp
+
+            query_string = urllib.parse.urlencode(params, doseq=True)
+            if query_string != '':
+                url = '%s?%s' % (url, query_string)
+
         header_config = _generate_header(auth_type, token, ak, sk, 'get', url, _, params)
 
         requests.packages.urllib3.disable_warnings()
         r = requests.get(
             url,
-            params=params,
+            params=None,
             auth=info2soft.common.Auth.RequestsAuth(auth) if auth is not None else None,
             timeout=config.get_default('connection_timeout'),
             headers=header_config,
@@ -130,7 +152,7 @@ def _get(url, params=None, auth=None, skip_retry=False):
 
     ret = __return_wrapper(r)
     if (not skip_retry) and (ret[0]['ret'] == 401 or ret[0]['ret'] == 403 or r.status_code == 403):
-        return _get(src_url, params, auth.refresh_token(), True)
+        return _get(src_url, src_params, auth.refresh_token(), True)
     else:
         return ret
 
@@ -265,24 +287,44 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
     if config.get_default('log_switch'):
         print(url)
         print(url_params)
+        if data is not None:
+            for k, v in sorted(data.items(), key=lambda x: x[0]):
+                if v is '' or v is None:
+                    continue
+                # GET方法中的空数组不参与签名，保持与Server端处理一致
+                if method is 'get' and isinstance(v, list):
+                    if len(v) == 0:
+                        continue
+                # if method is 'get':
+                    # if isinstance(v, list):
+                    #     k = k[0:-2]
+                    #     v = '[' + ','.join(v) + ']'
+                # 非字符串类型的数据转换为json字符串，json.dumps会将bool值False转换为false，True转换为true
+                if type(v) is not str:
+                    original_v = v
+                    v = json.dumps(v, separators=(',', ':'), ensure_ascii=False).replace('\"', '')
 
-    if data is not None:
-        for k, v in sorted(url_params.items(), key=lambda x: x[0]):
-            if method == 'get':
-                if isinstance(v, list):
-                    k = k[0:-2]
-                    v = '[' + ','.join(v) + ']'
-            elif type(v) != str:
-                v = json.dumps(v, separators=(',', ':')).replace('\\\\\\\\', '\\\\').replace('\"', '').replace('{}', '[]')
+                    # 如果是空字典，将大括号替换为中括号（字典内的空字典和数组内的空字典都需要替换为中括号），与Server端处理一致
+                    if type(original_v) is dict or type(original_v) is list:
+                        v = v.replace('{}', '[]')
+                sign_fields.append(str(k) + '=' + str(v))
+            enhance_sign_str = '&' . join(sign_fields)
+            enhance_sign_str = enhance_sign_str.replace('"', '')
+            enhance_signature_bytes = hmac.new(
+                bytes(token or 'token', encoding='utf-8'),
+                bytes(enhance_sign_str, encoding='utf-8'),
+                digestmod=hashlib.sha256
+            ).digest()
+            header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
 
-            if v == '':
-                continue
-            sign_fields.append(str(k) + '=' + str(v))
-        enhance_sign_str = '&' . join(sign_fields)
-        enhance_sign_str = enhance_sign_str.replace('"', '')
-        enhance_signature_bytes = hmac.new(
-            bytes(sign_key, encoding='utf-8'),
-            bytes(enhance_sign_str, encoding='utf-8'),
+            print('===== enhance sign str start =====')
+            print(enhance_sign_str)
+            # print(enhance_signature_bytes.hex().lower())
+            # print('===== enhance sign str end =====')
+    else:
+        signature_bytes = hmac.new(
+            bytes(sk or 'ak', encoding='utf-8'),
+            bytes(sign_str, encoding='utf-8'),
             digestmod=hashlib.sha256
         ).digest()
         header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()

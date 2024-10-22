@@ -1,0 +1,1121 @@
+<START-----------------------------------------------------------
+Method: archerVmConsole
+body: {
+ "rule_uuid": "",
+ "_": "3edaf67e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDatastore
+body: {
+ "host_name": "dev-esxi.6.6.6",
+ "path": "C:\\abc\\",
+ "_": "3ecc30fd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVp
+body: {
+ "comment": "",
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test",
+ "vp_type": 0,
+ "biz_grp_list": [],
+ "use_credential": 0,
+ "cred_uuid": "",
+ "is_drill": 1,
+ "drill_config": {
+  "proxy_name": "",
+  "proxy_ip": "",
+  "proxy_mask": "",
+  "proxy_gw": "",
+  "new_hostname": "",
+  "new_ds": "",
+  "new_dc": "",
+  "new_dcmor": "",
+  "network_name": "",
+  "network_id": "",
+  "rpc_port": "",
+  "orch_vm_network_name": "",
+  "orch_vm_network_id": "",
+  "system_uuid": "",
+  "subnet_name": "",
+  "security_group_name": "",
+  "orch_vm_subnet_name": "",
+  "orch_security_group_name": "",
+  "subnet_cidr": "",
+  "location": "",
+  "location_name": ""
+ },
+ "is_backup_center": 1,
+ "maintenance": 0,
+ "data_transmission_port": 902,
+ "is_ssl": 1,
+ "monitor_storage_switch": 1,
+ "monitor_storages": [
+  {
+   "name": "",
+   "storage_id": ""
+  }
+ ],
+ "monitor_storage_threshold": 1,
+ "npsvr_uuid": "",
+ "connect_port": 443,
+ "region": "",
+ "authurl": "",
+ "register_type": "",
+ "iam_user": "",
+ "user_domain_id": "",
+ "project_id": "",
+ "mfa_switch": 1,
+ "access_key": "",
+ "secret_access_key": "",
+ "user_domain_name": "",
+ "_": "3efc1b3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_uuid;\n Lost: monitor_storages[0][name];\n Lost: monitor_storages[0][storage_id];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVp
+body: {
+ "vp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3cdb4a84"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeAioHostCapability
+body: {
+ "host_id": "",
+ "_": "3f76adc3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeOsVersion
+body: {
+ "vp_uuid": "",
+ "os_versions": [],
+ "_": "3f52c0b7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVp
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpAttribute
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discoveryVm
+body: {
+ "vp_uuid": "",
+ "match_policy": {
+  "vm_name": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "location": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ],
+  "folder": [
+   {
+    "type": "",
+    "value": ""
+   }
+  ]
+ },
+ "project_id": "",
+ "region_id": "",
+ "_": "3f4eeba4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dl
+body: {
+ "type": "vm_ip_csv",
+ "vp_uuid": "",
+ "_": "3c4aa5d8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: drilConfigInfo
+body: {
+ "vp_addr": "",
+ "vp_type": "",
+ "use_credential": "",
+ "cred_uuid": "",
+ "os_usr": "",
+ "os_pwd": "",
+ "npsvr_uuid": "",
+ "vp_uuid": "",
+ "_": "3ed6b9b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportVmList
+body: {
+ "vp_uuid": "",
+ "view_type": "",
+ "type": "",
+ "id": "",
+ "search_name": "",
+ "protected": 1,
+ "force_rpc": 1,
+ "suffix": "",
+ "vm_refs": [],
+ "region_id": "",
+ "project_id": "",
+ "_": "3f24a851"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getTargetVmInfo
+body: {
+ "rule_uuids": [],
+ "group_uuid": "",
+ "rule_type": "",
+ "_": "3f3eb7f4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: group_uuid;\n Lost: rule_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVmInfo
+body: {
+ "vp_uuid": "",
+ "vm_id": "",
+ "region_id": "",
+ "project_id": "",
+ "vm_name": "",
+ "_": "3f7398fb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: vm_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importVmIpMapping
+body: {
+ "vp_uuid": "",
+ "_": "3f0d67b5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAioClusters
+body: {
+ "region_id": "",
+ "datecenter_id": "",
+ "_": "3e31567b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAioHosts
+body: {
+ "cluster_id": "",
+ "_": "3f79dec5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cluster_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAioPools
+body: {
+ "host_id": "",
+ "_": "3d6ef825"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVer
+body: {
+ "bk_path": "H:\\vp_bk5\\test2_BAK_vm-11880_192.168.88.22\\",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "rule_uuid": "",
+ "sto_uuid": "",
+ "bucket": "",
+ "bucket_path": "",
+ "_": "3ec62a0a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerByIp
+body: {
+ "bk_uuid": "",
+ "bk_path": "",
+ "npsvr_uuid": "",
+ "_": "3f0ed8db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: config_port;\n Lost: bk_path;\n Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerInfo
+body: {
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_path": "H:\\vp_bk5\\testRC1_BAK_99_192.168.85.139",
+ "ver_sig": "A59DB76E-E33D-4E22-BB08-59723B1FC539",
+ "group_uuid": "",
+ "time": "2019-01-07_13-10-45",
+ "bucket": "",
+ "sto_uuid": "",
+ "bucket_path": "",
+ "_": "3f4a5afc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakVerInfoByIp
+body: {
+ "time": "",
+ "ver_sig": "",
+ "bk_uuid": "",
+ "bk_path": "",
+ "npsvr_uuid": "",
+ "_": "3f171d4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: config_port;\n Lost: bk_uuid;\n Lost: bk_path;\n Lost: time;\n Lost: ver_sig;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacenterHost
+body: {
+ "dc_name": "ha-datacenter",
+ "dc_mor": "ha-datacenter",
+ "_": "3f160c91"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastore
+body: {
+ "host_name": "dev-esxi.6.6.6",
+ "path": "/",
+ "scope": "",
+ "dc_name": "",
+ "_": "3f394dd8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreDir
+body: {
+ "host_name": "",
+ "scope": "",
+ "is_fusion_storage": 0,
+ "_": "3e673a69"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010121001,
+  "message": "[1010121001] VP does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreFile
+body: {
+ "dir_file": "/",
+ "ds_name": "datastore107\uff081\uff09",
+ "dc_name": "ha-datacenter",
+ "_": "3f50b15c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatastoreInfo
+body: {
+ "ds_name": "datastore107\uff081\uff09",
+ "_": "3f2551d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiskType
+body: {
+ "vp_uuid": "",
+ "region_id": "",
+ "project_id": "",
+ "_": "3f2d37a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNetwork
+body: {
+ "host_name": "",
+ "dc_name": "",
+ "_": "3e5b82bc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNetworkInfo
+body: {
+ "vp_uuid": "",
+ "vm_ids": [],
+ "region_id": "",
+ "project_id": "",
+ "_": "3e48afaf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: vm_ids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPhysicalInterface
+body: {
+ "vp_uuid": "",
+ "resource_pool_id": "",
+ "host_name": "",
+ "_": "3f47d080"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPlatformStorage
+body: {
+ "vp_uuid": "FC151595-EB90-86F5-B659-CA787753CA5D",
+ "_": "3eb25e11"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPoolHosts
+body: {
+ "pool_id": "",
+ "_": "3f6a5b57"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPools
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listResourcePool
+body: {
+ "id": "",
+ "type": "",
+ "_": "3f17194e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010121001,
+  "message": "[1010121001] VP does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listScpHosts
+body: {
+ "resource_pool_id": "",
+ "datastore_name": "",
+ "_": "3f5fac50"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: resource_pool_id;\n Lost: datastore_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSecurityGroup
+body: {
+ "vp_uuid": "",
+ "dc_name": "",
+ "_": "3f49720e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVM
+body: {
+ "type": "",
+ "id": "",
+ "view_type": "",
+ "search_name": "",
+ "force_rpc": "",
+ "show_vm": "",
+ "project_id": "",
+ "region_id": "",
+ "vm_uuid": "",
+ "vm_ref": "",
+ "has_backup_set": 1,
+ "_": "3e882025"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVmDisk
+body: {
+ "vm_ref": "vm-1376",
+ "region_id": "",
+ "project_id": "",
+ "_": "3f6bae7a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVmNoHierarchy
+body: {
+ "search_name": "",
+ "force_rpc": "",
+ "vm_uuid": "",
+ "vm_ref": "",
+ "_": "3f4efa00"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "vm_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVmPagination
+body: {
+ "page": 1,
+ "limit": 1,
+ "vp_uuid": "",
+ "view_type": "",
+ "type": "",
+ "id": "",
+ "search_name": "",
+ "protected": 1,
+ "force_rpc": 1,
+ "region_id": "",
+ "project_id": "",
+ "_": "3ed165ae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVmStatus
+body: {
+ "vp_uuid": "",
+ "vm_uuids": [],
+ "_": "3f40622d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: vm_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "status": "",
+ "filter_by_biz_grp": 1,
+ "where_args": "{vp_type:,vp_uuid:}",
+ "_": "3d99e1cc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpStatus
+body: {
+ "vp_uuids": "vp_uuids[]=11111111-1111-1111-1111-111111111111",
+ "force_refresh": 1,
+ "_": "3ccf8a0b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpStorage
+body: {
+ "where_args": "{enabled:1}",
+ "_": "3e48c711"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpc
+body: {
+ "vp_uuid": "",
+ "_": "3f141a1b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpcSubnets
+body: {
+ "vp_uuid": "",
+ "vpc_id": "",
+ "_": "3eda4877"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyVp
+body: {
+ "comment": "",
+ "os_pwd": "12345678",
+ "os_usr": "root",
+ "vp_addr": "192.168.88.107",
+ "vp_name": "test",
+ "vp_type": 0,
+ "biz_grp_list": [],
+ "use_credential": 0,
+ "cred_uuid": "",
+ "is_drill": 1,
+ "drill_config": {
+  "proxy_name": "",
+  "proxy_ip": "",
+  "proxy_mask": "",
+  "proxy_gw": "",
+  "new_hostname": "",
+  "new_ds": "",
+  "new_dc": "",
+  "new_dcmor": "",
+  "network_name": "",
+  "network_id": "",
+  "rpc_port": "",
+  "orch_vm_network_name": "",
+  "orch_vm_network_id": "",
+  "system_uuid": "",
+  "subnet_name": "",
+  "security_group_name": "",
+  "orch_vm_subnet_name": "",
+  "orch_security_group_name": "",
+  "subnet_cidr": "",
+  "location": "",
+  "location_name": ""
+ },
+ "is_backup_center": 1,
+ "maintenance": 0,
+ "data_transmission_port": 902,
+ "is_ssl": 1,
+ "monitor_storage_switch": 1,
+ "monitor_storages": [
+  {
+   "name": "",
+   "storage_id": ""
+  }
+ ],
+ "monitor_storage_threshold": 1,
+ "npsvr_uuid": "",
+ "connect_port": 443,
+ "region": "",
+ "authurl": "",
+ "register_type": "",
+ "iam_user": "",
+ "user_domain_id": "",
+ "project_id": "",
+ "mfa_switch": 1,
+ "access_key": "",
+ "secret_access_key": "",
+ "user_domain_name": "",
+ "_": "3f3eb9fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: npsvr_uuid;\n Lost: monitor_storages[0][name];\n Lost: monitor_storages[0][storage_id];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: platformAuthorize
+body: {
+ "vp_storage": [
+  {
+   "uuid": "FC151595-EB90-86F5-B659-CA787753CA5D",
+   "enabled": 0,
+   "capacity": "10"
+  }
+ ],
+ "vp_uuid": "DC151595-EB90-86F5-B659-CA787751CA5D",
+ "_": "3f12ae64"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNode
+body: {
+ "node_uuid": "5765E77A-C658-9AF1-83D0-1897B8A5850E",
+ "cred_uuid": "4165E77A-C658-9AF1-83D0-1897B8A5850E",
+ "trans_type": "FTP",
+ "vp_uuid": "6765E77A-C658-9AF1-83D0-1897B8A5850E",
+ "_": "3f53d192"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: tgtVmStatusInfo
+body: {
+ "rule_uuids": [],
+ "_": "3f73912e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateDataAgentVp
+body: {
+ "operate": "update_data_agent",
+ "vp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "switch": 0,
+ "_": "3ea616d6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

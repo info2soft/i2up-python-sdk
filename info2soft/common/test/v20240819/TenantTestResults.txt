@@ -1,0 +1,80 @@
+<START-----------------------------------------------------------
+Method: createTenant
+body: {
+ "tenant_name": "Sarah",
+ "display_name": "Brenda",
+ "description": "Edward",
+ "enabled": 1,
+ "password": "",
+ "_": "3e78a17d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTenant
+body: {
+ "ids": [],
+ "_": "3e761b78"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTenant
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 1,
+ "page": 1,
+ "order_by": "",
+ "direction": "",
+ "like_args": "{xxx:}",
+ "where_args": "{xxx:}",
+ "_": "3ed48512"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: like_args;\n Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTenant
+body: {
+ "display_name": "Cynthia",
+ "description": "Gary",
+ "enabled": 0,
+ "random_str": "9e5DBba6-135d-0EcE-4D2D-6FEcC6aA7F10",
+ "tenant_name": "Amy",
+ "password": "",
+ "_": "3be2a4da"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+

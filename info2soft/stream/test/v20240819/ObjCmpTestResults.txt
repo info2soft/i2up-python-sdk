@@ -1,0 +1,136 @@
+<START-----------------------------------------------------------
+Method: cmpImmediateObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f5de2eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpResumeTimeObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f3e1816"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpStopTimeObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f0239a1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDatacheckObjCmp
+body: {
+ "src_db_auth_uuid": "",
+ "tgt_db_auth_uuid": "",
+ "db_user_map": {
+  "src_user": "dst_user"
+ },
+ "config": {
+  "one_task": "immediate"
+ },
+ "policies": "",
+ "policy_type": "periodic",
+ "one_time": "2019-05-27 16:07:08",
+ "repair": 1,
+ "obj_cmp_name": "test",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cal_table_recoders": 1,
+ "cmp_type": "user",
+ "rule_uuid": "751A03F5-C97D-645B-82B2-316A5D198528",
+ "obj_cmp_type": "",
+ "_": "3ec31a4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDatacheckObjCmp
+body: {
+ "uuids": [],
+ "force": false,
+ "_": "3f47d222"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f6407f1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f0f3ae8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

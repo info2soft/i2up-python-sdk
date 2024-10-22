@@ -1,0 +1,26 @@
+<START-----------------------------------------------------------
+Method: listOpLog
+body: {
+ "page": 1,
+ "end": 1548950400,
+ "limit": 10,
+ "start": 1546272000,
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "address": "",
+ "username": "",
+ "download": "false",
+ "_": "3ec05a64"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+

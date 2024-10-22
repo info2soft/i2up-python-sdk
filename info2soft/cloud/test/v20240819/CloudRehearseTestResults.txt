@@ -1,0 +1,700 @@
+<START-----------------------------------------------------------
+Method: createBatchRehearse
+body: {
+ "rehearse_list": [
+  {
+   "cloud_backup_uuid": "",
+   "source": {
+    "node_name": "8.180",
+    "host_name": "Windows Ftp Server",
+    "host_ip": "192.168.8.180",
+    "node_os": "Windows Server 2012 R2 64bits",
+    "vcpus": "8",
+    "memory": "40957",
+    "disk_num": "2",
+    "disk_size": "64420392960",
+    "ecs_id": ""
+   },
+   "zone": {
+    "zone_name": "\u534e\u5317-\u5317\u4eac\u4e00",
+    "availability_zone": "cn-east-2c"
+   },
+   "rc_point": {
+    "time": "2019-08-13 17:13:28",
+    "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f33dd",
+    "disk_num": 2,
+    "total_size": "8000",
+    "list": [
+     {
+      "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f41dd",
+      "size": "4000",
+      "boot_index": 0
+     }
+    ]
+   },
+   "ecs_name": "Rehearse lij-test",
+   "flavor": {
+    "id": "ai1.2xlarge.4",
+    "name": "ai1.2xlarge.4",
+    "vcpus": "8",
+    "ram": 32768,
+    "disk": "0",
+    "disabled": false,
+    "is_public": true
+   },
+   "vpc": {
+    "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+    "name": "vpc-49a5,192.168.0.0/16"
+   },
+   "subnet": {
+    "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+    "name": "subnet-1df4,192.168.64.0/24"
+   },
+   "ip_address": "192.168.192.101",
+   "security_group": [
+    {
+     "group_id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+     "group_name": "i2",
+     "ingress": "ICMP,TCP/22,80,443,26821-26868,55443",
+     "egress": "ICMP"
+    }
+   ],
+   "network_switch": 1
+  }
+ ],
+ "_": "3ea05133"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "fail_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+    "ecs_name": "Rehearse lij-test"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+    "ecs_name": "Rehearse lij-test"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createEvacuateGroup
+body: {
+ "job_id": "",
+ "_": "3f77d483"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createGroup
+body: {
+ "group_uuid": "",
+ "group_config": [],
+ "rehearse_name": "",
+ "cloud_uuid": "",
+ "_": "3ee247da"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNetwork
+body: {
+ "cloud_uuid": "",
+ "_": "3f6187bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createRehearse
+body: {
+ "cloud_backup_uuid": "",
+ "source": {
+  "node_name": "8.180",
+  "host_name": "Windows Ftp Server",
+  "host_ip": "192.168.8.180",
+  "node_os": "Windows Server 2012 R2 64bits",
+  "vcpus": "8",
+  "memory": "40957",
+  "disk_num": "2",
+  "disk_size": "64420392960",
+  "ecs_id": ""
+ },
+ "zone": {
+  "zone_name": "\u534e\u5317-\u5317\u4eac\u4e00",
+  "availability_zone": "cn-east-2c"
+ },
+ "rc_point": {
+  "time": "2019-08-13 17:13:28",
+  "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f33dd",
+  "disk_num": 2,
+  "total_size": "8000",
+  "list": [
+   {
+    "id": "7a268c3f-4d73-4e6c-b4fd-c3be235f41dd",
+    "size": "4000",
+    "boot_index": 0
+   }
+  ]
+ },
+ "ecs_name": "Rehearse lij-test",
+ "flavor": {
+  "id": "ai1.2xlarge.4",
+  "name": "ai1.2xlarge.4",
+  "vcpus": "8",
+  "ram": 32768,
+  "disk": "0",
+  "disabled": false,
+  "is_public": true
+ },
+ "vpc": {
+  "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+  "name": "vpc-49a5,192.168.0.0/16"
+ },
+ "subnet": {
+  "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+  "name": "subnet-1df4,192.168.64.0/24"
+ },
+ "ip_address": "192.168.192.101",
+ "security_group": [
+  {
+   "group_id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+   "group_name": "i2",
+   "ingress": "ICMP,TCP/22,80,443,26821-26868,55443",
+   "egress": "ICMP"
+  }
+ ],
+ "network_switch": 1,
+ "cpu": 1,
+ "ram": 1,
+ "_": "3f05d9d3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteGroup
+body: {
+ "job_ids": [],
+ "_": "3d22200c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRehearse
+body: {
+ "job_ids": [],
+ "_": "3d962f8e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_ids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFlavor
+body: {
+ "flavor_id": "",
+ "server_zone": "",
+ "cloud_uuid": "",
+ "_": "3ec9e78c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "flavor_info": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRehearse
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: evacuateBatchRehearse
+body: {
+ "job_ids": [],
+ "is_group": 1,
+ "_": "3f4bee13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: evacuateRehearse
+body: {
+ "job_id": "",
+ "is_group": 1,
+ "_": "3de02ef7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAvailabilityZone
+body: {
+ "ecs_id": "",
+ "_": "3e962a6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBatchRehearse
+body: {
+ "job_ids": [],
+ "_": "3f1dedd1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEcs
+body: {
+ "cloud_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "group_uuid": "",
+ "_": "3f729d49"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEvacuatedGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEvacuatedRehearse
+body: {
+ "limit": 1,
+ "page": 1,
+ "_": "3f1546f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFlavor
+body: {
+ "ecs_id": "",
+ "region_id": "",
+ "project_id": "",
+ "_": "3e8a9f60"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ecs_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGroupStatus
+body: {
+ "job_ids": [],
+ "_": "3eb3ead7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHost
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNetwork
+body: {
+ "cloud_uuid": "8E6FB8D2-F830-D67B-DA35-8E16F175053B",
+ "network_conf": [
+  {
+   "vpc": {
+    "id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+    "name": "vpc-49a5,192.168.0.0/16"
+   },
+   "subnet": {
+    "id": "3509d824-1a5b-41e5-9570-4cf51440078f",
+    "name": "subnet-1df4,192.168.64.0/24"
+   }
+  }
+ ],
+ "_": "3f689221"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrRehearseProgress
+body: {
+ "_": "3f7516b0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrRehearseStatus
+body: {
+ "_": "3f0fb119"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRecoveryPoint
+body: {
+ "cloud_backup_uuid": "",
+ "page": 1,
+ "size": 1,
+ "rc_point": "",
+ "_": "3f1e6215"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_backup_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearse
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f055d35"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearseDetail
+body: {
+ "job_id": "",
+ "type": "",
+ "_": "3f1d400a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRehearseStatus
+body: {
+ "job_ids": "job_ids[]=f1312ce5-7cb0-4e0c-a687-4ba4e5475e4c",
+ "_": "3f478d52"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSecureGroup
+body: {
+ "cloud_uuid": "",
+ "ecs_id": "",
+ "region_id": "",
+ "_": "3f672f39"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSubnet
+body: {
+ "vpc_id": "356c3295-afd0-4a09-8e6f-03620ef70854",
+ "cloud_uuid": "",
+ "region_id": "",
+ "project_id": "",
+ "cloud_backup_uuid": "",
+ "zone_id": "",
+ "_": "3f06861d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSubnetUsedIp
+body: {
+ "cloud_uuid": "",
+ "subnet_id": "",
+ "region_id": "",
+ "project_id": "",
+ "_": "3f5fd6d3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n Lost: subnet_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVncConsole
+body: {
+ "job_id": "",
+ "ecs_id": "",
+ "_": "3f31dd23"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpc
+body: {
+ "cloud_uuid": "",
+ "region_id": "",
+ "zone_id": "",
+ "_": "3f24e60f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

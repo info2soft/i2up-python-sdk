@@ -1,0 +1,80 @@
+<START-----------------------------------------------------------
+Method: createDbInstance
+body: {
+ "instance_type": 1,
+ "node_uuid": "",
+ "data_source": "",
+ "instance_list": [
+  {
+   "instance_name": "",
+   "version_info": {
+    "version": ""
+   },
+   "is_verified": 1,
+   "protocol": 1,
+   "port": 1,
+   "win_verify": 1,
+   "user": "",
+   "password": "",
+   "timeout": 1,
+   "driver": "",
+   "host": "",
+   "bin_path": "",
+   "config_path": "",
+   "data_path": "",
+   "sys_user": "",
+   "hostname": "",
+   "sys_password": ""
+  }
+ ],
+ "_": "3eaca50c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discoveryDbInstances
+body: {
+ "node_uuid": "",
+ "instance_type": "",
+ "_": "3f5bd074"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbInstances
+body: {
+ "search_field": "",
+ "search_value": "",
+ "page": 1,
+ "limit": 1,
+ "type": 1,
+ "_": "3e9292ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

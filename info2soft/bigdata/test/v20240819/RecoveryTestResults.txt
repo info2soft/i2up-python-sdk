@@ -1,0 +1,226 @@
+<START-----------------------------------------------------------
+Method: createBigdataRecovery
+body: {
+ "bigdata_recovery": {
+  "rule_name": "",
+  "rule_uuid": "",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "bk_path": "\u5907\u4efd\u6570\u636e\u76ee\u5f55",
+  "baked_paths": "\u8981\u6062\u590d\u7684\u76ee\u5f55",
+  "rc_data_path": "\u76ee\u6807\u5e73\u53f0\u76ee\u5f55",
+  "rc_point": "\u8fd8\u539f\u65f6\u95f4\u70b9",
+  "data_type": "",
+  "cred_switch": "",
+  "cred_uuid": "",
+  "auth_user": "",
+  "auth_key": "",
+  "mirr_file_check": "0",
+  "mirr_sync_flag": "",
+  "sel_db": [],
+  "sel_tbl": [],
+  "hive_bktype": 1,
+  "rc_path_policy": "",
+  "platform_uuid": "",
+  "sel_part": [],
+  "approver_uuid": "",
+  "band_width": ""
+ },
+ "obs_settings": {
+  "sto_uuid": "",
+  "bucket": "",
+  "bucket_path": ""
+ },
+ "_": "3e324ceb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bigdata_recovery[rule_name];\n Not array: bigdata_recovery[bk_path];\n Lost: bigdata_recovery[data_type];\n Lost: bigdata_recovery[cred_switch];\n Lost: bigdata_recovery[mirr_sync_flag];\n Lost: bigdata_recovery[bk_type];\n Lost: bigdata_recovery[rc_type_policy];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigdataRecovery
+body: {
+ "uuids": "",
+ "force": 1,
+ "_": "3f37f11a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getBigdataRecoveryPartitionInfoDetail
+body: {
+ "cluster_config_path": "",
+ "back_path": "",
+ "rec_time": "",
+ "table_name": "",
+ "obs_settings": "{sto_uuid:,bucket_name:,bucket_path:}",
+ "bk_type": "",
+ "bk_uuid": "",
+ "partition_name": "",
+ "_": "3f10bf41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupHistory
+body: {
+ "bk_path": [],
+ "bk_node_uuid": "",
+ "bk_rule_uuid": "",
+ "cluster_config_path": "",
+ "obs_settings": "{sto_uuid:,bucket:}",
+ "bk_type": "",
+ "_": "3f1e399d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_node_uuid;\n Lost: bk_path[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataRecovery
+body: {
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "search_value": "",
+ "type": 0,
+ "_": "3f7f1e27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataRecoveryStatus
+body: {
+ "uuids": [],
+ "force_refresh": 1,
+ "_": "3e901d82"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: pauseBigdataRecovery
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "_": "3f519d36"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeBigdataRecovery
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "_": "3e3749a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startBigdataRecovery
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "_": "3e224122"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBigdataRecovery
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "_": "3f564921"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

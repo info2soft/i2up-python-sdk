@@ -1,0 +1,262 @@
+<START-----------------------------------------------------------
+Method: clsDetail
+body: {
+ "operate": "detail",
+ "node_uuid": "11111111-1111-1111-1111-111111111111",
+ "_": "3f53843e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: clsNodeInfo
+body: {
+ "cls_ip": "",
+ "_": "3f243da6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCls
+body: {
+ "node_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "_": "3e837ece"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCls
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getGaussInfo
+body: {
+ "config_addr": "",
+ "user": "",
+ "config_port": "",
+ "node_uuid": "",
+ "invasion": "",
+ "cn_ip": "",
+ "_": "3f55a021"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: config_port;\n Lost: user;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCls
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "where_args": "{node_type:1,status:}",
+ "_": "3dab75eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listClsStatus
+body: {
+ "node_uuids": "node_uuids[]=11111111-1111-1111-1111-111111111111",
+ "force_refresh": 1,
+ "_": "3f76567d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGaussHcsDefaultInstance
+body: {
+ "node_uuid": "",
+ "hcs_instance_uuid": "",
+ "_": "3e2cf75a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "flavors": [],
+  "vpcs": [],
+  "subnets": [],
+  "security_groups": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGaussHcsInstances
+body: {
+ "limit": "",
+ "page": "",
+ "where_args": "where_args[]={'node_uuid': ''}",
+ "search_field": "node_name",
+ "search_value": "",
+ "_": "3e5e126f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRacStatus
+body: {
+ "node_uuids": [],
+ "force_refresh": 1,
+ "_": "3e8c7987"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCls
+body: {
+ "cls": {
+  "comment": "",
+  "cls_disk": [
+   "E:\\"
+  ],
+  "config_port": "26821",
+  "cls_node": [
+   "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C"
+  ],
+  "node_type": 1,
+  "cls_is_local": 1,
+  "os_user": "i2test2018.com\u0007dministrator",
+  "config_addr": "192.168.74.25",
+  "node_name": "cls",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "maintenance": 0,
+  "other_params": {
+   "ora_home": "",
+   "grid_home": "",
+   "user": ""
+  }
+ },
+ "_": "3e6b12b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API) Failed to register"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchMaintenance
+body: {
+ "uuid": "",
+ "switch": 0,
+ "_": "3f078151"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyClsNode
+body: {
+ "node_uuid": "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C",
+ "cls_name": "cluster-2018",
+ "cls_node_name": "cluster-node1",
+ "node_type": 1,
+ "_": "3eb43605"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010071103,
+  "message": "[1010071103] Failed to verify cluster node [11110]",
+  "node_name": null,
+  "node_uuid": null,
+  "config_addr": null,
+  "version": null
+ }
+}
+-----------------------------------------------------------END>
+

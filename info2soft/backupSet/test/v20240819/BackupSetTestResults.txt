@@ -1,0 +1,388 @@
+<START-----------------------------------------------------------
+Method: createBackupSetRepRule
+body: {
+ "bk_set_uuids": [],
+ "unit_uuid": "",
+ "tape_pool_uuid": "",
+ "retention_level": "",
+ "start_time": 1,
+ "encrypt_setting": {
+  "encrypt": 1,
+  "encrypt_switch": 1
+ },
+ "compress_setting": {
+  "compress": 1,
+  "compress_switch": 1
+ },
+ "trans_mode": 1,
+ "thread_num": 1,
+ "concurrent_mode": 1,
+ "_": "3d875e1c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuids[];\n Lost: unit_uuid;\n Lost: retention_level;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "bk_set_id": "",
+   "bk_rule_uuid": "",
+   "copy_id": ""
+  }
+ ],
+ "delete_from_db": 1,
+ "_": "3e4b0c68"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDbBackupSet
+body: {
+ "uuids": [],
+ "force": "",
+ "_": "3c490130"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupSet
+body: {
+ "bk_set_uuid": "",
+ "bk_set_id": "",
+ "_": "3ef3b26f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupSetCopy
+body: {
+ "page": 1,
+ "limt": 10,
+ "search_field": "",
+ "search_value": "",
+ "bk_set_uuid": "",
+ "_": "3f0c2adb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDeletedBackupSet
+body: {
+ "bk_set_uuid": "",
+ "_": "3eef6543"
+}
+response: {
+ "ret": 200,
+ "data": ""
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: drillBackupSet
+body: {
+ "vp_uuid": "",
+ "drill_list": [
+  {
+   "bk_set_uuid": "",
+   "orch_vm_name": "",
+   "scripts": "",
+   "scripts_type": 1,
+   "new_flavor_id": "",
+   "new_network_id": "",
+   "new_network_name": "",
+   "cpu": 1,
+   "core_per_sock": 1,
+   "mem_mb": 1
+  }
+ ],
+ "auto_drill": 0,
+ "_": "3e68b361"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: drill_list[0][bk_set_uuid];\n Lost: drill_list[0][orch_vm_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: expireBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "_": "3eefb703"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: extendBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "_": "3e3a85fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupChain
+body: {
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f59ffc8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupSetRule
+body: {
+ "page": 1,
+ "limt": 10,
+ "search_field": "primary_copy",
+ "search_value": "1",
+ "_": "3ebc1d11"
+}
+response: {
+ "ret": 200,
+ "data": ""
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQueryArgsBackupSet
+body: {
+ "search_field": "",
+ "search_value": "",
+ "delete": 1,
+ "_": "3f17484b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSrcClient
+body: {
+ "where_args": "{src_type:}",
+ "_": "3ef8a19f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The where_args[src_type] field must be one of: 4,9,23,14,28;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: manualForceDeleteDbBackupSet
+body: {
+ "uuids": [],
+ "_": "3f627008"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetPrimaryBackupSet
+body: {
+ "bk_set_id": "",
+ "bk_rule_uuid": "",
+ "expire_tm": 1,
+ "_": "3f7cc0bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setPrimaryBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "_": "3f755438"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: validateBackupSet
+body: {
+ "bk_set_uuids": [],
+ "mode": "",
+ "_": "3f15e57b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

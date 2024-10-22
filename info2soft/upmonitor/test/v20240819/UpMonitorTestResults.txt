@@ -1,0 +1,390 @@
+<START-----------------------------------------------------------
+Method: authUpMonitor
+body: {
+ "access_key": "oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk",
+ "secret_key": "fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo",
+ "ip": "172.20.2.70",
+ "port": "58086",
+ "_": "3f76c893"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createUpMonitor
+body: {
+ "access_key": "oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk",
+ "biz_grp_list": [],
+ "comment": "\u5907\u6ce8xxx",
+ "secret_key": "fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo",
+ "ip": "172.20.2.70",
+ "port": "58086",
+ "up_uuid": "CE753C48-96F9-6C38-C3DE-A25E7405D03F",
+ "up_name": "\u5c31\u8fd9\u4e2a\u63a7\u5236\u673a",
+ "_": "3f4ffdb4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteUpMonitor
+body: {
+ "up_uuids": [
+  "CE753C48-96F9-6C38-C3DE-A25E7405D03F"
+ ],
+ "_": "3e049abe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUpMonitor
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUpMonitorToken
+body: {
+ "up_uuid": "CE753C48-96F9-6C38-C3DE-A25E7405D03F",
+ "_": "3f3ed98e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadStatistics
+body: {
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "status": "",
+ "type": "",
+ "result": 1,
+ "group_uuid": "",
+ "uuid": "",
+ "statistics_start": 1,
+ "statistics_end": 1,
+ "src_type": 1,
+ "obj_name": "",
+ "time_consuming": 1,
+ "suffix": ".csv",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "_": "3d6d60ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportUsers
+body: {
+ "for_import": 0,
+ "suffix": "csv",
+ "sub_type": "0",
+ "uuids": [],
+ "where_args": "{timing_type:,raw_uuid:}",
+ "_": "3f0850c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOpLog
+body: {
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "address": "",
+ "username": "",
+ "page": 1,
+ "end": 1548950400,
+ "limit": 10,
+ "start": 1546272000,
+ "download": "false",
+ "up_uuds": [],
+ "_": "3ed7be05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatistics
+body: {
+ "obj_name": "",
+ "time_used_rate": 1,
+ "sub_type": 1,
+ "sys_name": "",
+ "protect_name": "",
+ "status": "",
+ "type": "",
+ "result": 1,
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "group_uuid": "",
+ "uuid": "",
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "time_consuming": 1,
+ "up_uuids": [],
+ "duration_operator": "",
+ "duration": 1,
+ "_": "3f6e317a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitor
+body: {
+ "limit": 10,
+ "page": 1,
+ "filter_by_biz_grp": 1,
+ "search_field": "",
+ "search_value": "",
+ "where_args": "{up_uuid:}",
+ "_": "3ed2137f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitorPlatSummary
+body: {
+ "filter_by_biz_grp": 1,
+ "search_field": "",
+ "search_value": "",
+ "where_args": "{up_uuid:}",
+ "_": "3eb69404"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitorRules
+body: {
+ "type": 1,
+ "search_field": "",
+ "search_value": "",
+ "up_uuid": "",
+ "_": "3e712317"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitorStatus
+body: {
+ "up_uuids": "up_uuids[]=CE753C48-96F9-6C38-C3DE-A25E7405D03F",
+ "_": "3f2988eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUser
+body: {
+ "page": 1,
+ "limit": 10,
+ "up_uuids": [],
+ "like_args": "{username:,email:,mobile:}",
+ "_": "3f0ec660"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUpMonitor
+body: {
+ "up_name": "\u5c31\u8fd9\u4e2a\u63a7\u5236\u673a",
+ "access_key": "oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk",
+ "secret_key": "fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo",
+ "ip": "172.20.2.70",
+ "port": "58086",
+ "comment": "\u5907\u6ce8xxx",
+ "biz_grp_list": [],
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "_": "3f0fb698"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshUpMonitor
+body: {
+ "up_uuids": [
+  "CE753C48-96F9-6C38-C3DE-A25E7405D03F"
+ ],
+ "operate": "refresh",
+ "_": "3f320b13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upMonitorOverall
+body: {
+ "up_uuids": [],
+ "_": "3e950b8b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upMonitorVpRuleStat
+body: {
+ "up_uuids": "",
+ "_": "3ee721b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,347 @@
+<START-----------------------------------------------------------
+Method: createCfsBackup
+body: {
+ "cfs_backup": {
+  "mirr_sync_attr": 1,
+  "oph_path": "E:\\test4\\",
+  "rep_name": "rep_backup",
+  "bk_path_policy": 1,
+  "mirr_open_type": 0,
+  "compress": 0,
+  "encrypt_switch": 0,
+  "auto_start": 1,
+  "wk_path": [
+   "E:\\test\\"
+  ],
+  "band_width": "",
+  "mirr_sync_flag": 0,
+  "bk_path": [
+   "E:\\test2\\"
+  ],
+  "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "mirr_file_check": 0,
+  "rep_type": 0,
+  "file_type_filter_switch": 0,
+  "file_type_filter": "",
+  "oph_policy": 2,
+  "mirr_skip": 0,
+  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "excl_path": [],
+  "mirr_sched": "",
+  "bkup_one_time": 1515568566,
+  "mirr_sched_switch": 0,
+  "ct_name_type": 0,
+  "ct_name_str1": "",
+  "ct_name_str2": "",
+  "ct_name_str3": "",
+  "ct_name_str4": "",
+  "thread_num": 0,
+  "latency_threshold": 1,
+  "mir_detect_script": "",
+  "data_ip_uuid": "B8166905-411E-B2CD-A742-77B1346D8E84",
+  "bk_file_crypt": 0,
+  "mir_detect_src_script": "",
+  "traversing_sync": 1,
+  "encrypt": 1,
+  "compress_switch": 1,
+  "rep_uuid": "B8166905-411E-B2CD-A742-77B1346D8E84",
+  "buf_in_bk": 1,
+  "rep_oph_policy": 0,
+  "rep_oph_path": "",
+  "rep_oph_switch": 1,
+  "src_cfs_uuid": "",
+  "tgt_cfs_uuid": "",
+  "src_filesystem_id": "",
+  "tgt_filesystem_id": "",
+  "proxy_uuid": "",
+  "mirr_hash_type": 1,
+  "src_zone_id": "",
+  "tgt_zone_id": ""
+ },
+ "_": "3f2c21ca"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The cfs_backup[rep_type] field must be one of: 3;\n Lost: cfs_backup[src_cfs_uuid];\n Lost: cfs_backup[src_filesystem_id];\n Lost: cfs_backup[src_zone_id];\n Lost: cfs_backup[tgt_cfs_uuid];\n Lost: cfs_backup[tgt_filesystem_id];\n Lost: cfs_backup[tgt_zone_id];\n The cfs_backup[thread_num] field must contain a number greater than or equal to 1;\n The cfs_backup[rep_oph_policy] field must be one of: 1,2,3;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCfsBackup
+body: {
+ "rep_uuids": [],
+ "force": 1,
+ "del_policy": 1,
+ "recycle": 1,
+ "_": "3f380c90"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCfsBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getWatingMoveNumber
+body: {
+ "node_uuid": "",
+ "_": "3ea8645a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfsBackup
+body: {
+ "page": 1,
+ "limit": 1,
+ "search_field": "",
+ "where_args": "{status:NO_MOVE}",
+ "search_value": "",
+ "_": "3f48701c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfsBackupHistory
+body: {
+ "rep_uuid": "",
+ "_": "3f03df8c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfsBackupStatus
+body: {
+ "rep_uuids": [],
+ "force_refresh": "",
+ "_": "3f66032e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCfsBackupSyncStatus
+body: {
+ "rep_uuid": [],
+ "_": "3f123569"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCfsBackup
+body: {
+ "cfs_backup": {
+  "mirr_sync_attr": 1,
+  "oph_path": "E:\\test4\\",
+  "rep_name": "rep_backup",
+  "bk_path_policy": 1,
+  "mirr_open_type": 0,
+  "compress": 0,
+  "encrypt_switch": 0,
+  "auto_start": 1,
+  "wk_path": [
+   "E:\\test\\"
+  ],
+  "band_width": "",
+  "mirr_sync_flag": 0,
+  "bk_path": [
+   "E:\\test2\\"
+  ],
+  "wk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "mirr_file_check": 0,
+  "rep_type": 0,
+  "file_type_filter_switch": 0,
+  "file_type_filter": "",
+  "oph_policy": 2,
+  "mirr_skip": "0",
+  "bk_uuid": "B8566905-411E-B2CD-A742-77B1346D8E84",
+  "excl_path": [],
+  "mirr_sched": "",
+  "bkup_one_time": 1515568566,
+  "mirr_sched_switch": 0,
+  "ct_name_type": 0,
+  "ct_name_str1": "",
+  "ct_name_str2": "",
+  "ct_name_str3": "",
+  "ct_name_str4": "",
+  "thread_num": 0,
+  "latency_threshold": 1,
+  "mir_detect_script": "",
+  "data_ip_uuid": "B8166905-411E-B2CD-A742-77B1346D8E84",
+  "bk_file_crypt": 0,
+  "mir_detect_src_script": "",
+  "traversing_sync": 1,
+  "encrypt": 1,
+  "compress_switch": 1,
+  "rep_uuid": "B8166905-411E-B2CD-A742-77B1346D8E84",
+  "buf_in_bk": 1,
+  "rep_oph_policy": 0,
+  "rep_oph_path": "",
+  "rep_oph_switch": 1,
+  "src_cfs_uuid": "",
+  "tgt_cfs_uuid": "",
+  "src_filesystem_id": "",
+  "tgt_filesystem_id": "",
+  "proxy_uuid": "",
+  "mirr_hash_type": 1,
+  "random_str": "",
+  "src_zone_id": "",
+  "tgt_zone_id": ""
+ },
+ "_": "3f5922fd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The cfs_backup[rep_type] field must be one of: 3;\n Lost: cfs_backup[src_cfs_uuid];\n Lost: cfs_backup[src_filesystem_id];\n Lost: cfs_backup[src_zone_id];\n Lost: cfs_backup[tgt_cfs_uuid];\n Lost: cfs_backup[tgt_filesystem_id];\n Lost: cfs_backup[tgt_zone_id];\n The cfs_backup[thread_num] field must contain a number greater than or equal to 1;\n The cfs_backup[rep_oph_policy] field must be one of: 1,2,3;\n Lost: cfs_backup[random_str];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveCfsBackup
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3e2c2414"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startCfsBackup
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3f09ed57"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startSyncCfsBackup
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3f66d7b9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopCfsBackup
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3f07d072"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopSyncCfsBackup
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3ed3fb50"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

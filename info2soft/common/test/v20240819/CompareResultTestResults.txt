@@ -1,0 +1,85 @@
+<START-----------------------------------------------------------
+Method: deleteCompareResult
+body: {
+ "result_uuids": [],
+ "_": "3f118f0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: result_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadCompareResult
+body: {
+ "result_uuids": [],
+ "operate": "",
+ "_": "3c8b20ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: result_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCompareResult
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3f572e27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiffDetail
+body: {
+ "uuid": "",
+ "type": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3ea5f4d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: viewConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "rule": null
+ }
+}
+-----------------------------------------------------------END>
+

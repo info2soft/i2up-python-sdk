@@ -1,0 +1,452 @@
+<START-----------------------------------------------------------
+Method: createHdfs
+body: {
+ "rule_name": "",
+ "rule_type": 1,
+ "src_uuid": "",
+ "tgt_uuid": "",
+ "src_path": [],
+ "dest_path": [],
+ "filters": [],
+ "src_db": [],
+ "dest_db": [],
+ "filter_tables": [],
+ "sync_type": 0,
+ "overwrite": 0,
+ "band_width": "",
+ "path_mapping_items": [
+  {
+   "src_path": "",
+   "dest_path": ""
+  }
+ ],
+ "retry_count": 3,
+ "time_interval": 1,
+ "batch_count": 1,
+ "alarm_threshold": 1,
+ "_": "3da17518"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: src_uuid;\n Lost: tgt_uuid;\n Lost: src_db[0];\n Lost: dest_db[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createHdfsCompare
+body: {
+ "rule_name": "",
+ "rule_type": 2,
+ "src_uuid": "",
+ "tgt_uuid": "",
+ "src_path": [],
+ "dest_path": [],
+ "filters": [],
+ "src_db": [],
+ "dest_db": [],
+ "filter_tables": [],
+ "path_mapping_items": [
+  {
+   "src_path": "",
+   "dest_path": ""
+  }
+ ],
+ "cmp_type": 1,
+ "include_tables": [],
+ "_": "3f093681"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: src_uuid;\n Lost: tgt_uuid;\n Lost: src_path[0];\n Lost: dest_path[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHdfs
+body: {
+ "uuids": [],
+ "force": 0,
+ "_": "3e8cca3b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHdfsCompare
+body: {
+ "uuids": [],
+ "force": 0,
+ "_": "3f52fcb4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHdfsCompareHistory
+body: {
+ "uuids[]": [],
+ "_": "3f620c01"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHdfs
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHdfsCompare
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHdfsCompareHistory
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: hdfsSummary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfs
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 15,
+ "page": 1,
+ "filter": "{and_or:,rules:[{key:,value:,operator:}]}",
+ "_": "3eadb59b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsCompare
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 15,
+ "page": 1,
+ "_": "3c700b23"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsCompareHistory
+body: {
+ "page": 1,
+ "limit": 1,
+ "rule_uuid": "",
+ "search_field": "",
+ "search_value": "",
+ "_": "3f3927ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsCompareResult
+body: {
+ "page": 1,
+ "limit": 1,
+ "uuid": "",
+ "search_field": "",
+ "search_value": "",
+ "order_by": "diff_name",
+ "direction": "asc",
+ "_": "3e489ea1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsCompareResultDetail
+body: {
+ "page": 1,
+ "limit": 1,
+ "uuid": "",
+ "diff_name": "",
+ "_": "3b29bfaa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: diff_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsCompareStatus
+body: {
+ "rule_uuids": [],
+ "force_refresh": 1,
+ "_": "3ee747b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsStatus
+body: {
+ "rule_uuids": [],
+ "force_refresh": 1,
+ "_": "3cb66728"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyHdfs
+body: {
+ "rule_name": "",
+ "rule_type": 1,
+ "src_uuid": "",
+ "tgt_uuid": "",
+ "src_path": [],
+ "dest_path": [],
+ "filters": [],
+ "src_db": [],
+ "dest_db": [],
+ "filter_tables": [],
+ "sync_type": 0,
+ "overwrite": 0,
+ "band_width": "",
+ "path_mapping_items": [
+  {
+   "src_path": "",
+   "dest_path": ""
+  }
+ ],
+ "random_str": "",
+ "retry_count": 1,
+ "time_interval": 1,
+ "batch_count": 1,
+ "alarm_threshold": 1,
+ "_": "3c1e6470"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: src_uuid;\n Lost: tgt_uuid;\n Lost: src_db[0];\n Lost: dest_db[0];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyHdfsCompare
+body: {
+ "rule_name": "",
+ "rule_type": 2,
+ "src_uuid": "",
+ "tgt_uuid": "",
+ "src_path": [],
+ "dest_path": [],
+ "filters": [],
+ "src_db": [],
+ "dest_db": [],
+ "filter_tables": [],
+ "path_mapping_items": [
+  {
+   "src_path": "",
+   "dest_path": ""
+  }
+ ],
+ "cmp_type": 1,
+ "_": "3f70627a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: src_uuid;\n Lost: tgt_uuid;\n Lost: src_path[0];\n Lost: dest_path[0];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startHdfs
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "_": "3d9f449d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startHdfsCompare
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "_": "3f47aacc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopHdfs
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "_": "3f6cc944"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopHdfsCompare
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "_": "3da8f069"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[0];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

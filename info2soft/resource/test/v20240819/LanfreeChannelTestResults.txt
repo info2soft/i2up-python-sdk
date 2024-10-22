@@ -1,0 +1,148 @@
+<START-----------------------------------------------------------
+Method: createLanfreeChannel
+body: {
+ "channel_name": "",
+ "channel_uuid": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "protocol": 1,
+ "fc_target_wwpn": "",
+ "fc_initiator_wwpn": "",
+ "iscsi_initiator": "",
+ "target_port": "",
+ "data_ip_uuid": "",
+ "sub_channel_num": 1,
+ "_": "3f0b75c6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: channel_name;\n Lost: channel_uuid;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: fc_initiator_wwpn;\n Lost: fc_target_wwpn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteLanfreeChannel
+body: {
+ "channel_uuids": [],
+ "force": 1,
+ "_": "3f5640f6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: channel_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLanfreeChannel
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLanfreeChannel
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLanfreeChannelByWkBk
+body: {
+ "wk_uuids": [],
+ "unit_uuid": "",
+ "bk_set_uuids": [],
+ "bk_uuids": [],
+ "unit_uuids": [],
+ "_": "3e5cbd3f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: unit_uuids[];\n Lost: wk_uuids[];\n Lost: unit_uuid;\n Lost: bk_set_uuids[];\n Lost: bk_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLanfreeChannelInfo
+body: {
+ "channel_uuid": "",
+ "_": "3f12ae24"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLanfreeChannelStatus
+body: {
+ "channel_uuids": [],
+ "force_refresh": 1,
+ "_": "3f758b18"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: channel_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyLanfreeChannel
+body: {
+ "channel_name": "",
+ "channel_uuid": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "protocol": 1,
+ "fc_target_wwpn": "",
+ "fc_initiator_wwpn": "",
+ "random_str": "1CCDB5EB848C180F02814E96C2909202",
+ "iscsi_initiator": "",
+ "_": "3f213501"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: channel_name;\n Lost: channel_uuid;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: fc_initiator_wwpn;\n Lost: fc_target_wwpn;\n Not uuid: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

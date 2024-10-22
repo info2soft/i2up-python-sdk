@@ -1,0 +1,117 @@
+<START-----------------------------------------------------------
+Method: createReplicaTask
+body: {
+ "task_name": "",
+ "task_type": "",
+ "src_unit_uuid": "",
+ "dst_unit_uuid": "",
+ "pool_uuid": "",
+ "retention": 1,
+ "priority": 1,
+ "bkup_window": [
+  {
+   "wday": 1,
+   "from": "",
+   "to": ""
+  }
+ ],
+ "bandwidth": "",
+ "disable": 1,
+ "next_replica_uuid": "",
+ "encrypt_setting": {
+  "encrypt": 1,
+  "encrypt_switch": 1
+ },
+ "compress_setting": {
+  "compress": 1,
+  "compress_switch": 1
+ },
+ "network_type": 1,
+ "thread_num": 1,
+ "concurrent_mode": 1,
+ "_": "3e39918c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n Lost: task_type;\n Lost: src_unit_uuid;\n Lost: dst_unit_uuid;\n Lost: trans_mode;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteReplicaTask
+body: {
+ "task_uuids": [],
+ "force": 1,
+ "_": "3f072f89"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeReplicaTask
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listReplicaTask
+body: {
+ "type": 1,
+ "like_args": "{task_name:,src_unit_name:,dst_unit_name:}",
+ "_": "3f76ada4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: like_args[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyReplicaTask
+body: {
+ "task_name": "",
+ "task_type": "",
+ "src_unit_uuid": "",
+ "dst_unit_uuid": "",
+ "tape_uuid": "",
+ "retention": 1,
+ "priority": 1,
+ "trans_mode": 1,
+ "bkup_window": "",
+ "bandwidth": "",
+ "task_uuid": "",
+ "random_str": "",
+ "_": "3f68bc51"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n Lost: task_type;\n Lost: src_unit_uuid;\n Lost: dst_unit_uuid;\n Lost: disable;\n Lost: encrypt_setting[encrypt_switch];\n Lost: encrypt_setting[encrypt];\n Lost: compress_setting[compress_switch];\n Lost: compress_setting[compress];\n Lost: network_type;\n Lost: bkup_window[0][wday];\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

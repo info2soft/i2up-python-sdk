@@ -1,0 +1,453 @@
+<START-----------------------------------------------------------
+Method: listHaLog
+body: {
+ "uuid": "",
+ "end": 1,
+ "level": 1,
+ "start": 1,
+ "node_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "_": "3e4da91d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": "1"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeLog
+body: {
+ "level": 1,
+ "page": 1,
+ "limit": 10,
+ "start": 1,
+ "uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "end": 1,
+ "log_type": 1,
+ "_": "3d1b4cbb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": "1"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNpsvrLog
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTaskLog
+body: {
+ "uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C",
+ "level": 1,
+ "start": 1,
+ "page": 1,
+ "end": 1,
+ "limit": 10,
+ "search_content": "",
+ "_": "3ed06534"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "logs": [],
+  "total": 0,
+  "current_page": "1"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTrafficLog
+body: {
+ "start_stamp": 1545637314,
+ "type": "month",
+ "uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C",
+ "month_range": "1",
+ "_": "3f403ecb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "traffics": [
+   {
+    "start_time": 1726675200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-19 00:00:00",
+    "date": "09/19",
+    "speed": 0
+   },
+   {
+    "start_time": 1726761600,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-20 00:00:00",
+    "date": "09/20",
+    "speed": 0
+   },
+   {
+    "start_time": 1726848000,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-21 00:00:00",
+    "date": "09/21",
+    "speed": 0
+   },
+   {
+    "start_time": 1726934400,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-22 00:00:00",
+    "date": "09/22",
+    "speed": 0
+   },
+   {
+    "start_time": 1727020800,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-23 00:00:00",
+    "date": "09/23",
+    "speed": 0
+   },
+   {
+    "start_time": 1727107200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-24 00:00:00",
+    "date": "09/24",
+    "speed": 0
+   },
+   {
+    "start_time": 1727193600,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-25 00:00:00",
+    "date": "09/25",
+    "speed": 0
+   },
+   {
+    "start_time": 1727280000,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-26 00:00:00",
+    "date": "09/26",
+    "speed": 0
+   },
+   {
+    "start_time": 1727366400,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-27 00:00:00",
+    "date": "09/27",
+    "speed": 0
+   },
+   {
+    "start_time": 1727452800,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-28 00:00:00",
+    "date": "09/28",
+    "speed": 0
+   },
+   {
+    "start_time": 1727539200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-29 00:00:00",
+    "date": "09/29",
+    "speed": 0
+   },
+   {
+    "start_time": 1727625600,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-09-30 00:00:00",
+    "date": "09/30",
+    "speed": 0
+   },
+   {
+    "start_time": 1727712000,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-01 00:00:00",
+    "date": "10/01",
+    "speed": 0
+   },
+   {
+    "start_time": 1727798400,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-02 00:00:00",
+    "date": "10/02",
+    "speed": 0
+   },
+   {
+    "start_time": 1727884800,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-03 00:00:00",
+    "date": "10/03",
+    "speed": 0
+   },
+   {
+    "start_time": 1727971200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-04 00:00:00",
+    "date": "10/04",
+    "speed": 0
+   },
+   {
+    "start_time": 1728057600,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-05 00:00:00",
+    "date": "10/05",
+    "speed": 0
+   },
+   {
+    "start_time": 1728144000,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-06 00:00:00",
+    "date": "10/06",
+    "speed": 0
+   },
+   {
+    "start_time": 1728230400,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-07 00:00:00",
+    "date": "10/07",
+    "speed": 0
+   },
+   {
+    "start_time": 1728316800,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-08 00:00:00",
+    "date": "10/08",
+    "speed": 0
+   },
+   {
+    "start_time": 1728403200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-09 00:00:00",
+    "date": "10/09",
+    "speed": 0
+   },
+   {
+    "start_time": 1728489600,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-10 00:00:00",
+    "date": "10/10",
+    "speed": 0
+   },
+   {
+    "start_time": 1728576000,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-11 00:00:00",
+    "date": "10/11",
+    "speed": 0
+   },
+   {
+    "start_time": 1728662400,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-12 00:00:00",
+    "date": "10/12",
+    "speed": 0
+   },
+   {
+    "start_time": 1728748800,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-13 00:00:00",
+    "date": "10/13",
+    "speed": 0
+   },
+   {
+    "start_time": 1728835200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-14 00:00:00",
+    "date": "10/14",
+    "speed": 0
+   },
+   {
+    "start_time": 1728921600,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-15 00:00:00",
+    "date": "10/15",
+    "speed": 0
+   },
+   {
+    "start_time": 1729008000,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-16 00:00:00",
+    "date": "10/16",
+    "speed": 0
+   },
+   {
+    "start_time": 1729094400,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-17 00:00:00",
+    "date": "10/17",
+    "speed": 0
+   },
+   {
+    "start_time": 1729180800,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-18 00:00:00",
+    "date": "10/18",
+    "speed": 0
+   },
+   {
+    "start_time": 1729267200,
+    "traffic": 0,
+    "latency": 0,
+    "interval": 0,
+    "qps": 0,
+    "qsr": 0,
+    "date_time": "2024-10-19 00:00:00",
+    "date": "10/19",
+    "speed": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

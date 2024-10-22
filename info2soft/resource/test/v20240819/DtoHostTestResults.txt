@@ -1,0 +1,385 @@
+<START-----------------------------------------------------------
+Method: authDtoHost
+body: {
+ "host_ip": "192.168.72.70",
+ "host_user": "exampleuser",
+ "host_pwd": "dN5BejxqJsnEQOBRig7OBeZzQb1SEYAfs0keD+6z1l658pc/drceaMJa29FDdQpW6FfLLmb1cG1DWvOOGz9sZRUY4wnKNhpHQjVE4wAlLOnVZPGlYSgtURhbIOeLl5uZCWgCSGTbQFMTCD/wql4/8/cMgWspQBvwO/5UbYqcW64Sj8wnuWf6qt4KGqrP9ua2yDFj+5S0MgMLWnAXhBwCCFVBmmmngNr5CUMe4Hqm1/d4OhvTzqTWecLNFnr9NmN4fp1zAQMZstUiedgWGg7uU9Aez2Xf8RsekMeo3O7bnZXyHZL5wpOtiq3gD/12H4bNrgDYuShsGDfEEqzfwXpoew==",
+ "host_port": "",
+ "_": "3f6b03e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_port;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtoHost
+body: {
+ "host_name": "",
+ "host_ip": "",
+ "host_user": "",
+ "host_pwd": "",
+ "sto_uuid": "CCF36C5F-CBA6-8A55-3CA2-C07CF8E0EC4F",
+ "comment": "",
+ "cc_ip": "",
+ "cc_ip_uuid": "",
+ "maintenance": 0,
+ "syncdb_host": "",
+ "syncdb_username": "",
+ "syncdb_password": "",
+ "host_type": 1,
+ "syncdb_type": 1,
+ "node_list": [
+  {
+   "address": "",
+   "port": "",
+   "uuid": ""
+  }
+ ],
+ "host_cluster_type": "",
+ "syncdb_port": "",
+ "syncdb_name": "",
+ "host_port": "",
+ "archive_db_type": 1,
+ "_": "3e9396e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_name;\n Lost: host_ip;\n Lost: host_port;\n Lost: host_user;\n Lost: host_pwd;\n Lost: cc_ip_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoHost
+body: {
+ "force": 1,
+ "host_uuids": [],
+ "_": "3eaf1020"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoHostClusterNode
+body: {
+ "node_uuid": "",
+ "force": 1,
+ "_": "3f55667e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoHost
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listArchiveDate
+body: {
+ "type": 0,
+ "_": "3f471958"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listArchiveFile
+body: {
+ "data_source": "2019",
+ "page": 1,
+ "limit": 100,
+ "wk_path": "",
+ "file_name": "",
+ "create_begin_time": 1,
+ "create_end_time": 1,
+ "modify_begin_time": 1,
+ "modify_end_time": 1,
+ "_": "3f41909d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBakRecord
+body: {
+ "file_name": "",
+ "wk_path": "",
+ "bk_path": "",
+ "begin_backup_time": 1,
+ "end_backup_time": 1,
+ "page": "1",
+ "limit": "100",
+ "_": "3e90860c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoHost
+body: {
+ "limit": 1,
+ "page": 1,
+ "search_value": "",
+ "search_field": "",
+ "_": "3e9ba685"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoHostClusterNode
+body: {
+ "where_args": "{host_uuid:}",
+ "_": "3ca4c677"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoHostStatus
+body: {
+ "host_uuids": [],
+ "force_refresh": 1,
+ "_": "3f49a533"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLoadRules
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRcTimePoint
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRevertRecord
+body: {
+ "data_source": "2019",
+ "page": 1,
+ "limit": 100,
+ "wk_path": "",
+ "file_name": "",
+ "create_begin_time": 1,
+ "create_end_time": 1,
+ "_": "3ea30a78"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainDtoHost
+body: {
+ "host_uuids": [],
+ "operate": "",
+ "switch": 0,
+ "_": "3e56faff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoHost
+body: {
+ "host_uuid": "",
+ "host_name": "",
+ "host_ip": "",
+ "host_user": "",
+ "host_pwd": "",
+ "sto_uuid": 0,
+ "random_str": "",
+ "cc_ip": "",
+ "cc_ip_uuid": "",
+ "maintenance": 0,
+ "_": "3f19a13c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_name;\n Lost: host_ip;\n Lost: host_port;\n Lost: host_user;\n Lost: host_pwd;\n Not uuid: sto_uuid;\n Lost: cc_ip_uuid;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewKeyDtoHost
+body: {
+ "host_uuids": [],
+ "operate": "",
+ "switch": 0,
+ "_": "3d4c3ab8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: revertFile
+body: {
+ "ids": [
+  {
+   "": ""
+  }
+ ],
+ "data_source": "2021",
+ "_": "3e9aba9e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeDtoHost
+body: {
+ "host_uuids": [],
+ "operate": "",
+ "switch": 0,
+ "_": "3f5f45bc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: host_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

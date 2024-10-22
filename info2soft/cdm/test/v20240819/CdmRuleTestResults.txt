@@ -1,0 +1,195 @@
+<START-----------------------------------------------------------
+Method: createTakeOverDrill
+body: {
+ "vm_name": "",
+ "rule_type": 1,
+ "wk_uuid": "",
+ "bk_version": "",
+ "vm_cpu_core": "",
+ "vm_mem": "",
+ "vm_network": {
+  "cards": [
+   {
+    "mac": "",
+    "gateway": [],
+    "dns": {
+     "domain": "",
+     "servers": []
+    },
+    "cidr": [],
+    "network_id": "",
+    "network_name": ""
+   }
+  ],
+  "dns": {
+   "domain": "",
+   "servers": ""
+  }
+ },
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "bios_type": "",
+ "vp_uuid": "",
+ "timezone": "",
+ "storage_uuid": "",
+ "bk_path": "",
+ "os_version": "",
+ "fsp_uuid": "",
+ "by_type": 1,
+ "wk_address": "",
+ "wk_name": "",
+ "has_virtio": "false",
+ "has_virtio_scsi": "false",
+ "has_net_kvm": "false",
+ "network_switch": 0,
+ "restore_info": {},
+ "start_switch": 0,
+ "vpc_settings": [
+  {
+   "work_vpc_id": "",
+   "work_network_id": "",
+   "work_security_group_id": "",
+   "work_ipaddr": "",
+   "vpc_id": ""
+  }
+ ],
+ "_": "3f2b4b2d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vm_name;\n Lost: vp_uuid;\n Lost: wk_address;\n Lost: wk_name;\n Lost: bk_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: vm_cpu_core;\n Lost: vm_mem;\n Lost: bios_type;\n Lost: os_version;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "force": 1,
+ "del_policy": 0,
+ "_": "3f0d0a52"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTakeOverDrill
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVmStatus
+body: {
+ "rule_uuids": "rule_uuids[]=0E807AD3-DD1E-9224-2B9B-E713CF258467&rule_uuids[]=1A807AD3-DD1E-9224-2B9B-E713CF258467",
+ "force_refresh": 1,
+ "_": "3ec46f67"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: openConsoleTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "type": "",
+ "_": "3f5d80e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "type": "",
+ "_": "3f4c4dc2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTakeOverDrill
+body: {
+ "rule_uuids": [],
+ "operate": "",
+ "type": "",
+ "_": "3ecead2f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: takeOverDrillList
+body: {
+ "limit": 10,
+ "page": 1,
+ "where_args": "where_args[]={'wk_uuid': 'BC92C981-D637-AC10-7CB0-450504DF8A3C', 'bk_uuid': 'BC92C981-D637-AC10-7CB0-450504DF8A3C'}",
+ "_": "3f4567b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+

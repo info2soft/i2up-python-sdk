@@ -1,0 +1,67 @@
+<START-----------------------------------------------------------
+Method: createBkTakeover
+body: {
+ "rule_uuid": "B44C23ee-Da81-cBb5-6c0d-fbe641CffdBB",
+ "type": 1,
+ "enable_trgjob": 1,
+ "enable_alter_seq": 1,
+ "start_val": 10,
+ "execute_script": 1,
+ "enable_attachip": 0,
+ "net_adapter": "",
+ "ip": "",
+ "disable_trgjob": 1,
+ "dettach_ip": 1,
+ "script_content": "",
+ "_": "3db4c91a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBkTakeoverResult
+body: {
+ "bk_takeover_uuid": "feB39bFf-E3eC-b9ED-B93b-DcBb746D18C2",
+ "_": "3e457ca8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "0",
+  "result_info": {
+   "seq_err": [],
+   "tri_err": [],
+   "job_err": [],
+   "sch_job_err": [],
+   "takeover_obj": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBkTakeoveNetworkCard
+body: {
+ "rule_uuid": "",
+ "_": "3e44a857"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
