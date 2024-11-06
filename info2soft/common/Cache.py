@@ -39,11 +39,7 @@ def getToken(username, pwd):
         if r[0] is not None and r[0]['ret'] == 200 and r[0]['data']['code'] == 0:
             # 密码错误处理
             token = r[0]['data']['token']
-            # 8.1版本后没有sso_token，这里兼容处理
-            if 'sso_token' in r[0]['data']:
-                ssoToken = r[0]['data']['sso_token']
-            else:
-                ssoToken = ''
+            ssoToken = ''
             refreshToken = r[0]['data']['refresh_token']
             with open(path, mode='w+', encoding='UTF-8') as tokenFile:
                 tokenFile.write(token + '\n' + ssoToken + '\n' + refreshToken)
@@ -73,7 +69,7 @@ def refreshToken():
     if r[0] is not None and r[0]['ret'] == 200 and r[0]['data']['code'] == 0:
         # 密码错误处理
         token = r[0]['data']['token']
-        ssoToken = r[0]['data']['sso_token']
+        ssoToken = ''
         refreshToken = r[0]['data']['refresh_token']
         with open(path, mode='w+', encoding='UTF-8') as tokenFile:
             tokenFile.write(token + '\n' + ssoToken + '\n' + refreshToken)
