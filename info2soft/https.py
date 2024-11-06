@@ -44,7 +44,14 @@ def __return_wrapper(resp):
     # if resp.status_code != 200:
     #     return None, ResponseInfo(resp)
     resp.encoding = 'utf-8'
-    ret = resp.json(encoding='utf-8') if resp.text != '' else {}
+    # ret = resp.json(encoding='utf-8') if resp.text != '' else {}
+    ret = None
+    if resp.text != '':
+        ret = resp.json(encoding='utf-8')
+        if not ret:  # 当resp.text = '[]'时，resp.json会返回空数组，需要特别处理
+            ret = {'ret': resp.status_code}
+        else:
+            ret['ret'] = resp.status_code
     return ret, ResponseInfo(resp)
 
 
