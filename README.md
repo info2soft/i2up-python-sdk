@@ -9,39 +9,42 @@
 |       9.x       |          3.x|
 
 ---
-## 安装
 
-通过 `pip3`
+## 安装方式
 
-> 如果网络不好，可以使用清华大学镜像源
+通过 `pip` 安装
 
+> 如果网络不好，可以使用清华大学镜像源，命令如下：
+
+```bash
+$ pip install somePackage -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
 ```
-$ pip3 install somePackage -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
-```
 
-安装以下库
-
-    如果提示：You are using pip version 10.0.1, however version 18.1 is available.
-    You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+> 如果提示pip版本较低，请升级pip，命令如下：
 
 ```bash
 $ python -m pip install --upgrade pip
 ```
+## 方式1：直接安装SDK及所有依赖
+```
+$ pip install i2up-Python-SDK
+```
+## 方式2：获取SDK源码包，手动安装依赖
 
 ```bash
-$ pip3 install requests
+$ pip install requests
 
-$ pip3 install simplejson
+$ pip install simplejson
 
-$ pip3 install pytest
+$ pip install pytest
 
-$ pip3 install flake8
+$ pip install flake8
 
-$ pip3 install rsa
+$ pip install rsa
 
-$ pip3 install crypto pycryptodome
+$ pip install crypto pycryptodome
 
-$ pip3 install pyopenssl
+$ pip install pyopenssl
 
 ```
 
@@ -89,7 +92,7 @@ $ pip3 install pyopenssl
 
 ###   配置入口文件 config.py
 
-路径: /python_sdk/info2soft/config.py
+路径: /info2soft/config.py
 
 配置 `API_HOST` 参数为你的控制机 IP 地址即可
 
