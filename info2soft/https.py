@@ -294,44 +294,32 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
     if config.get_default('log_switch'):
         print(url)
         print(url_params)
-        if data is not None:
-            for k, v in sorted(data.items(), key=lambda x: x[0]):
-                if v is '' or v is None:
+    if data is not None:
+        for k, v in sorted(data.items(), key=lambda x: x[0]):
+            if v is '' or v is None:
+                continue
+            # GET方法中的空数组不参与签名，保持与Server端处理一致
+            if method is 'get' and isinstance(v, list):
+                if len(v) == 0:
                     continue
-                # GET方法中的空数组不参与签名，保持与Server端处理一致
-                if method is 'get' and isinstance(v, list):
-                    if len(v) == 0:
-                        continue
-                # if method is 'get':
-                    # if isinstance(v, list):
-                    #     k = k[0:-2]
-                    #     v = '[' + ','.join(v) + ']'
-                # 非字符串类型的数据转换为json字符串，json.dumps会将bool值False转换为false，True转换为true
-                if type(v) is not str:
-                    original_v = v
-                    v = json.dumps(v, separators=(',', ':'), ensure_ascii=False).replace('\"', '')
+            # if method is 'get':
+                # if isinstance(v, list):
+                #     k = k[0:-2]
+                #     v = '[' + ','.join(v) + ']'
+            # 非字符串类型的数据转换为json字符串，json.dumps会将bool值False转换为false，True转换为true
+            if type(v) is not str:
+                original_v = v
+                v = json.dumps(v, separators=(',', ':'), ensure_ascii=False).replace('\"', '')
 
-                    # 如果是空字典，将大括号替换为中括号（字典内的空字典和数组内的空字典都需要替换为中括号），与Server端处理一致
-                    if type(original_v) is dict or type(original_v) is list:
-                        v = v.replace('{}', '[]')
-                sign_fields.append(str(k) + '=' + str(v))
-            enhance_sign_str = '&' . join(sign_fields)
-            enhance_sign_str = enhance_sign_str.replace('"', '')
-            enhance_signature_bytes = hmac.new(
-                bytes(token or 'token', encoding='utf-8'),
-                bytes(enhance_sign_str, encoding='utf-8'),
-                digestmod=hashlib.sha256
-            ).digest()
-            header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
-
-            print('===== enhance sign str start =====')
-            print(enhance_sign_str)
-            # print(enhance_signature_bytes.hex().lower())
-            # print('===== enhance sign str end =====')
-    else:
-        signature_bytes = hmac.new(
-            bytes(sk or 'ak', encoding='utf-8'),
-            bytes(sign_str, encoding='utf-8'),
+                # 如果是空字典，将大括号替换为中括号（字典内的空字典和数组内的空字典都需要替换为中括号），与Server端处理一致
+                if type(original_v) is dict or type(original_v) is list:
+                    v = v.replace('{}', '[]')
+            sign_fields.append(str(k) + '=' + str(v))
+        enhance_sign_str = '&' . join(sign_fields)
+        enhance_sign_str = enhance_sign_str.replace('"', '')
+        enhance_signature_bytes = hmac.new(
+            bytes(token or 'token', encoding='utf-8'),
+            bytes(enhance_sign_str, encoding='utf-8'),
             digestmod=hashlib.sha256
         ).digest()
         header_config['enhanceStr'] = enhance_signature_bytes.hex().lower()
