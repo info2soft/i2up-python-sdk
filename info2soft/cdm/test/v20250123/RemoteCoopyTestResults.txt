@@ -1,0 +1,275 @@
+<START-----------------------------------------------------------
+Method: createCdmRemoteCoopy
+body: {
+ "old_bk_uuid": "",
+ "old_platform_uuid": "",
+ "old_storage_uuid": "",
+ "rule_uuids": [],
+ "proxy_uuid": "",
+ "new_bk_uuid": "",
+ "new_platform_uuid": "",
+ "data_addr": "",
+ "new_storage_uuid": "",
+ "bkup_policy": "",
+ "bkup_one_time": "",
+ "bkup_schedule": {
+  "sched_gap_min": "60",
+  "sched_time": "[\"00:00:00\"]",
+  "sched_day": "[\"1\"]",
+  "sched_time_end": "23:59",
+  "limit": "5",
+  "sched_time_start": "00:00",
+  "sched_every": "0"
+ },
+ "compress_switch": "",
+ "encrypt_switch": "",
+ "band_width": "",
+ "rule_uuid": "",
+ "start_type": "",
+ "prefix": "",
+ "_": "3f350452"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110033,
+  "message": "[1010110033] The valid license capacity has been used up, please check the license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCdmRemoteCoopy
+body: {
+ "del_policy": "",
+ "rule_uuids": [],
+ "_": "3f44d642"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "fail_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+    "rule_uuid": null
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+    "rule_uuid": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCdmRemoteCoopy
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "cdm_remote_coopy": {
+   "new_move_uuid": null,
+   "is_biz_admin": 1,
+   "can_del": 1,
+   "can_op": 1,
+   "can_up": 1,
+   "can_view": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRemoteCoopy
+body: {
+ "limit": "",
+ "page": "",
+ "search_args": "",
+ "search_value": "",
+ "_": "3f5ea66f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRemoteCoopyLicense
+body: {
+ "old_storage_uuid": "",
+ "new_storage_uuid": "",
+ "_": "3f0ece32"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110011,
+  "message": "[1010110011] The resource has no license associated with this feature"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRemoteCoopyStatus
+body: {
+ "rule_uuids": "",
+ "force_refresh": 1,
+ "_": "3f3faf8d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: migrateCdmRemoteCoopy
+body: {
+ "rule_uuids": "",
+ "operate": "",
+ "modify_original_rule_name": "",
+ "_": "3e9e578e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startCdmRemoteCoopy
+body: {
+ "rule_uuids": "",
+ "operate": "",
+ "modify_original_rule_name": "",
+ "_": "3f717708"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelyCdmRemoteCoopy
+body: {
+ "rule_uuids": "",
+ "operate": "",
+ "modify_original_rule_name": "",
+ "_": "3d8c6e4e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopCdmRemoteCoopy
+body: {
+ "rule_uuids": "",
+ "operate": "",
+ "modify_original_rule_name": "",
+ "_": "3f1b3e2e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyCdmCapacity
+body: {
+ "old_storage_uuid": "",
+ "new_storage_uuid": "",
+ "old_vp_uuid": "",
+ "new_vp_uuid": "",
+ "_": "3d2ed74f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyCdmDirExist
+body: {
+ "vp_uuid": "",
+ "storage_uuid": "",
+ "wk_uuids": [],
+ "bk_uuid": "",
+ "_": "3eed9830"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": null,
+  "message": "[1023333333] undefined message"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyDuplicateCdmCoopyRule
+body: {
+ "fsp_uuids": [],
+ "_": "3ea4037b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+

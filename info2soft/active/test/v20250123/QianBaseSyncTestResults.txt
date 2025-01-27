@@ -1,0 +1,328 @@
+<START-----------------------------------------------------------
+Method: createQianbaseRule
+body: {
+ "rule_name": "test",
+ "src_db_uuid": "7B1BE386-4CB1-86AA-D39D-B644C2EADD57",
+ "map_type": "table",
+ "config": {
+  "start_rule_now": 1,
+  "db_set": [
+   {
+    "tgt_db_uuid": "CD52E44B-D25A-4CE3-126F-6F5A460731E4",
+    "filter_type": "[1:filter_table,0:no_fileter]",
+    "table_map": [
+     {
+      "src_table": "",
+      "dst_table": ""
+     }
+    ],
+    "custom_config": [
+     {
+      "key": "",
+      "value": ""
+     }
+    ],
+    "tgt_type": ""
+   }
+  ],
+  "all_custom_config": [
+   {
+    "key": "",
+    "value": ""
+   }
+  ],
+  "sync_content": [
+   {
+    "sync_col": ""
+   }
+  ],
+  "jointing": {
+   "table": "",
+   "op": "",
+   "content": ""
+  },
+  "save_json_text": "",
+  "kafka_db_uuid": "",
+  "conn_num": 1,
+  "loader": 1,
+  "schema_name": ""
+ },
+ "_": "3f224420"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteQianbaseRule
+body: {
+ "uuids": [],
+ "force": "true",
+ "_": "3f15a914"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQianbaseRules
+body: {
+ "rule_uuid": "",
+ "_": "3e4f2832"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQianbaseRule
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "group_uuid": "",
+ "where_args": "{rule_uuid:,status:,src_db_name:,tgt_db_name:,db_ip:,node_ip:,username:,rule_name:}",
+ "_": "3e737782"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQianbaseRuleLog
+body: {
+ "offset": 1,
+ "limit": 10,
+ "date_start": 1,
+ "date_end": 1,
+ "type": 1,
+ "module_type": 1,
+ "query_type": 1,
+ "rule_uuid": "b5FDcd8e-98AD-Bbce-E36c-F3AA19DAdbEE",
+ "_": "3ef6ca27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQianbaseStatus
+body: {
+ "uuids": [],
+ "_": "3d56df05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "has_false_rule": false,
+  "info_list": [
+   {
+    "uuid": null,
+    "ACTIVE_RULE_uuid": null,
+    "rule_uuid": null,
+    "load": 0,
+    "extract": 0,
+    "peak": 0,
+    "delay": 0,
+    "has_new_err": 0,
+    "dst_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "src_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "work_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "back_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "relay_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "track_state": {
+     "status": "ACTIVE_RULE_UNKNOWN"
+    },
+    "data_info": {
+     "dst": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "db_type": null,
+      "log_read_type": null,
+      "orcl": null
+     },
+     "src": {
+      "db_ip": [],
+      "node_ip": null,
+      "node_name": null,
+      "db_type": null,
+      "log_read_type": null,
+      "orcl": null
+     }
+    },
+    "stage": "UNKNOWN",
+    "state": 0,
+    "progress": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyQianbaseRule
+body: {
+ "rule_name": "",
+ "src_db_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_type": "sqlserver",
+ "map_type": "db",
+ "config": {
+  "start_rule_now": 1,
+  "table_map": [],
+  "full_sync": 0,
+  "incre_sync": 1,
+  "full_sync_mode": "1",
+  "db_user_map": "",
+  "dbmap_topic": "",
+  "row_map_mode": "",
+  "kafka_time_out": "",
+  "part_load_balance": "",
+  "kafka_message_encoding": "",
+  "db_set": [
+   {
+    "tgt_db_uuid": "",
+    "filter_type": "",
+    "tgt_type": "",
+    "table_map": [
+     {
+      "src_table": "",
+      "dst_table": ""
+     }
+    ],
+    "custom_config": [
+     {
+      "key": "",
+      "value": ""
+     }
+    ]
+   }
+  ],
+  "all_custom_config": [
+   {
+    "key": "",
+    "value": ""
+   }
+  ],
+  "sync_content": [
+   {
+    "sync_col": ""
+   }
+  ]
+ },
+ "rule_uuid": "",
+ "_": "3e76a7ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartQianbaseRule
+body: {
+ "operate": "",
+ "uuids": [],
+ "scn": "",
+ "_": "3f20d155"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeQianbaseRule
+body: {
+ "operate": "",
+ "uuids": [],
+ "scn": "",
+ "_": "3ee9f7ea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopQianbaseRule
+body: {
+ "operate": "",
+ "uuids": [],
+ "scn": "",
+ "_": "3db26af8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+

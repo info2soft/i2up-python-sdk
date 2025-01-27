@@ -1,0 +1,170 @@
+<START-----------------------------------------------------------
+Method: createDtoGateway
+body: {
+ "gateway_name": "",
+ "enable": 1,
+ "http_port": 1,
+ "https_port": 1,
+ "domain": "",
+ "comment": "",
+ "region": [
+  {
+   "name": "",
+   "type": 1,
+   "path": ""
+  }
+ ],
+ "bk_uuid": "",
+ "_": "3f24d2c5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The gateway name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoGateway
+body: {
+ "uuids": [],
+ "force": 1,
+ "_": "3f0f86c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoGateway
+body: {
+ "gateway_name": "",
+ "enable": 1,
+ "http_port": "",
+ "https_port": "",
+ "domain": "",
+ "comment": "",
+ "region": "region[]={'name': '', 'type': 1, 'path': '', 'uuid': ''}",
+ "bk_uuid": "",
+ "gateway_uuid": "",
+ "_": "3f71e2d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoGatewayStatus
+body: {
+ "uuids": [],
+ "force_refresh": 1,
+ "_": "3f42e26e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoGateway
+body: {
+ "search_field": "gateway_name",
+ "search_value": "",
+ "_": "3f2f44c8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoGatewayRegions
+body: {
+ "gateway_uuid": "",
+ "_": "3f36b435"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoGateway
+body: {
+ "gateway_name": "",
+ "enable": 1,
+ "http_port": "",
+ "https_port": "",
+ "domain": "",
+ "comment": "",
+ "region": [
+  {
+   "name": "",
+   "type": 1,
+   "path": "",
+   "uuid": ""
+  }
+ ],
+ "bk_uuid": "",
+ "gateway_uuid": "",
+ "_": "3f1f2405"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The gateway name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetDtoGatewayAccessKey
+body: {
+ "uuids": [],
+ "_": "3f2fdb77"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

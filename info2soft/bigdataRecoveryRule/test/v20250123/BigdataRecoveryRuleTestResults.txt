@@ -1,0 +1,125 @@
+<START-----------------------------------------------------------
+Method: createBigdataRecoveryRule
+body: {
+ "rule_name": "",
+ "data_type": 1,
+ "biz_grp_list": [],
+ "auto_start": 1,
+ "start_time": 1,
+ "priority": 90000,
+ "bk_set_uuid": "",
+ "rc_mode": 1,
+ "platform_uuid": "",
+ "rc_path_policy": 1,
+ "backup_chain_policy": 1,
+ "bk_path": [],
+ "wk_path": [],
+ "mirr_file_check": 1,
+ "mirr_sync_flag": 1,
+ "oph_policy": 1,
+ "sel_db": [],
+ "sel_tbl": [],
+ "sel_part": [],
+ "hive_bk_type": "",
+ "band_width": "",
+ "backup_host_list": [
+  {
+   "host_uuid": ""
+  }
+ ],
+ "_": "3e7df6b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataRecoveryRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataRecoveryRule
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_by_biz_grp": 1,
+ "status": "",
+ "where_args": "{rule_uuid:}",
+ "like_args": "{rule_name:}",
+ "_": "3f4da5aa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataRecoveryRuleStatus
+body: {
+ "rule_uuids": "",
+ "_": "3f6a578f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBigdataRecoveryRule
+body: {
+ "rule_name": "",
+ "data_type": 1,
+ "biz_grp_list": [],
+ "auto_start": 1,
+ "start_time": 1,
+ "priority": 90000,
+ "bk_set_uuid": "",
+ "rc_mode": 1,
+ "platform_uuid": "",
+ "rc_path_policy": 1,
+ "backup_chain_policy": 1,
+ "bk_path": [],
+ "wk_path": [],
+ "mirr_file_check": 1,
+ "mirr_sync_flag": 1,
+ "oph_policy": 1,
+ "random_str": "",
+ "_": "3f48407b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+

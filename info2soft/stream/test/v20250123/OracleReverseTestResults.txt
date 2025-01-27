@@ -1,0 +1,20 @@
+<START-----------------------------------------------------------
+Method: createReverse
+body: {
+ "reverse_name": "",
+ "rule_uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "start_scn": 123,
+ "rowid_thd": 5,
+ "row_map_mode": "\"rowid\"",
+ "_": "3e9c4bf1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": -1,
+  "message": "rpc.db_role"
+ }
+}
+-----------------------------------------------------------END>
+

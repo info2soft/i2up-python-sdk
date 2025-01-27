@@ -1,0 +1,198 @@
+<START-----------------------------------------------------------
+Method: createBucket
+body: {
+ "sto_uuid": "",
+ "bucket_name": "",
+ "_": "3eada061"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n Lost: bucket_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDtoStorage
+body: {
+ "sto_name": "aaa",
+ "sto_type": 0,
+ "address": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "comment": "",
+ "user": "",
+ "pwd": "",
+ "remote_path": "",
+ "region": "",
+ "signature_version": "v2",
+ "access_mode": 1,
+ "bind_lic_list": [],
+ "bucket": "",
+ "ssl_verify": true,
+ "gateway_uuid": "",
+ "region_uuid": "",
+ "protocol": 1,
+ "_": "3f334ee4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoStorage
+body: {
+ "sto_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f53f9a9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoStorage
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoStorageStatus
+body: {
+ "uuids": [],
+ "force_refresh": 1,
+ "_": "3f39f317"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "sto_uuid": "F315D6A8-337E-479F-8559-DBB3B4A82553",
+    "sto_name": "aaa",
+    "sto_type": 0,
+    "address": "",
+    "access_key": "",
+    "protocol": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBuckets
+body: {
+ "sto_uuid": "",
+ "address": "",
+ "access_key": "",
+ "secret_key": "",
+ "_": "3ea4312e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoStorage
+body: {
+ "limit": 1,
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "_": "3f595f29"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "sto_uuid": "F315D6A8-337E-479F-8559-DBB3B4A82553",
+    "sto_name": "aaa",
+    "sto_type": 0,
+    "address": "",
+    "access_key": "",
+    "protocol": null,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoStorage
+body: {
+ "random_str": "",
+ "sto_name": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "address": "",
+ "user": "",
+ "pwd": "",
+ "comment": "",
+ "remote_path": "",
+ "_": "3f4a4c13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_name;\n Lost: sto_type;\n Lost: access_key;\n Lost: secret_key;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

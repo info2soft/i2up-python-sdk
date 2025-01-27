@@ -1,0 +1,205 @@
+<START-----------------------------------------------------------
+Method: createCdmRecovery
+body: {
+ "fsp_recovery": {
+  "dst_path": "",
+  "monitor_type": 0,
+  "net_mapping": [
+   {
+    "bk_nic": {
+     "type": "0",
+     "name": "Ethernet0",
+     "ip": "192.168.72.74/255.255.240.0"
+    },
+    "wk_nic": {
+     "name": "Ethernet0",
+     "type": "0",
+     "ip": "192.168.72.73/255.255.240.0"
+    }
+   }
+  ],
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "mirr_sync_attr": "1",
+  "bk_path": [
+   "/fsp_bk/192.168.71.77_26821/20190111113656/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/bin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/boot/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/etc/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/lib/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/lib64/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/root/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/sbin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/bin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/lib/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/lib64/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/libexec/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/local/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/usr/sbin/",
+   "/fsp_bk/192.168.71.77_26821/20190111113656/var/lib/nfs/"
+  ],
+  "band_width": "",
+  "fsp_name": "testRC",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "net_mapping_type": "2",
+  "mirr_open_type": "0",
+  "restore_point": "20190111113656",
+  "mirr_file_check": "0",
+  "service_uuid": "",
+  "excl_path": [],
+  "wk_path": [
+   "/",
+   "/I2FFO/bin/",
+   "/I2FFO/boot/",
+   "/I2FFO/etc/",
+   "/I2FFO/lib/",
+   "/I2FFO/lib64/",
+   "/I2FFO/root/",
+   "/I2FFO/sbin/",
+   "/I2FFO/usr/bin/",
+   "/I2FFO/usr/lib/",
+   "/I2FFO/usr/lib64/",
+   "/I2FFO/usr/libexec/",
+   "/I2FFO/usr/local/",
+   "/I2FFO/usr/sbin/",
+   "/I2FFO/var/lib/nfs/"
+  ],
+  "mirr_sync_flag": "0",
+  "fsp_wk_shut_flag": "2",
+  "sync_item": "/",
+  "failover": "0",
+  "fsp_type": "5",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "data_ip_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "by_type": "",
+  "bak_wk_uuid": "",
+  "bak_wk_address": "",
+  "vp_uuid": "",
+  "storage_uuid": "",
+  "bak_wk_name": "",
+  "vm_name": "",
+  "vm_ref": "",
+  "compress_switch": 1,
+  "compress": 1,
+  "encrypt_switch": 1,
+  "encrypt": "",
+  "secret_key": ""
+ },
+ "_": "3d772abc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: fsp_recovery[encrypt];\n Lost: fsp_recovery[by_type];\n Lost: fsp_recovery[bak_wk_uuid];\n Lost: fsp_recovery[vp_uuid];\n Lost: fsp_recovery[storage_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRecovery
+body: {
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3df01cbe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmRecoveryStatus
+body: {
+ "fsp_uuids": "fsp_uuids[]=11111111-1111-1111-1111-111111111111",
+ "force_refresh": 1,
+ "_": "3d995346"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebootCdmRecovery
+body: {
+ "fsp_uuids": [],
+ "operate": "",
+ "_": "3e09a500"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: fsp_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: recoveryCdmRecovery
+body: {
+ "fsp_uuids": [],
+ "operate": "",
+ "_": "3d1a372b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: fsp_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startCdmRecovery
+body: {
+ "fsp_uuids": [],
+ "operate": "",
+ "_": "3e9728f8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: fsp_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopCdmRecovery
+body: {
+ "fsp_uuids": [],
+ "operate": "",
+ "_": "3f12aca4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: fsp_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+

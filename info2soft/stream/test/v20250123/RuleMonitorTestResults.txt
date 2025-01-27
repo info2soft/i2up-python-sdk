@@ -1,0 +1,186 @@
+<START-----------------------------------------------------------
+Method: exportSyncRuleMonitorStat
+body: {
+ "stat_type": 1,
+ "start": 1,
+ "end": 1,
+ "user": "",
+ "table": "",
+ "rule_uuid": "",
+ "_": "3e1a078a"
+}
+response: {
+ "ret": 200,
+ "data": "Total load count\tLoad time\tEarliest Timestamp in Source Database\tLoad Failed Recorded Count\tLink latency\n\t0s\t\t\t0s\nInsert : \nUpdate : \nDelete : \nDDL : \nTable/Operation\tTotal load count\tInsert\tUpdate\tDelete\tDDL\tDDL Type\n"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getSyncRuleMonitorConf
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "stream_monitor_settings": {
+   "kafka_switch": "0",
+   "content_temp_uuid": null,
+   "stream_monitor_switch": 0,
+   "stream_monitor_addr": "",
+   "stream_monitor_port": "",
+   "stream_monitor_default_db": "",
+   "stream_monitor_user": "",
+   "stream_monitor_interval": 1,
+   "stream_monitor_log_save_time": "1",
+   "stream_monitor_pass": "******"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listActiveNodeChart
+body: {
+ "node_uuid": "",
+ "strict": 1,
+ "timestamp": 1,
+ "start_offset": 1,
+ "end_offset": 1,
+ "_": "3f1a0ead"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifySyncRuleMonitorConf
+body: {
+ "stream_monitor_settings": {
+  "stream_monitor_switch": "",
+  "stream_monitor_addr": "",
+  "stream_monitor_port": "",
+  "stream_monitor_default_db": "",
+  "stream_monitor_user": "",
+  "stream_monitor_pass": "",
+  "stream_monitor_interval": 1,
+  "stream_monitor_log_save_time": 1,
+  "stream_monitor_type": ""
+ },
+ "_": "3eb1939e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleExtractStatistics
+body: {
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "interval": 1,
+ "_": "3f4e66bc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleLoadStatistics
+body: {
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "_": "3e82b8aa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleTableExtractStatistics
+body: {
+ "limit": "",
+ "page": "",
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "table": "",
+ "user": "",
+ "_": "3f09b448"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleTableLoadStatistics
+body: {
+ "limit": "",
+ "page": "",
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "table": "",
+ "user": "",
+ "_": "3e8143cc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNodeDefaultMonitorPath
+body: {
+ "node_uuid": "",
+ "path": "",
+ "_": "3e3fd9b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+

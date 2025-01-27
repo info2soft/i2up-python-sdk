@@ -1,0 +1,319 @@
+<START-----------------------------------------------------------
+Method: createBigdataBackupRule
+body: {
+ "rule_name": "",
+ "data_type": "",
+ "biz_grp_list": [],
+ "timeout": 1,
+ "priority": 1,
+ "disable": 1,
+ "plat_list": [
+  {
+   "plat_uuid": ""
+  }
+ ],
+ "unit_uuid": "",
+ "tape_pool_uuid": "",
+ "replica_uuids": [],
+ "wk_path": [],
+ "mirr_file_check": "",
+ "mirr_sync_flag": "",
+ "thread_num_max": 1,
+ "thread_num_min": 1,
+ "hive_bk_type": 1,
+ "select_mode": 1,
+ "db_exp": "",
+ "table_exp": "",
+ "partition_exp": "",
+ "sel_db": [],
+ "sel_tbl": [],
+ "sel_part": [],
+ "bkup_schedule": [
+  {
+   "sched_name": "",
+   "backup_type": 1,
+   "retention": 1,
+   "start_window": [
+    {
+     "wday": 1,
+     "from": "",
+     "to": ""
+    }
+   ],
+   "bkup_window": [
+    {
+     "wday": 1,
+     "from": "",
+     "to": ""
+    }
+   ],
+   "bkup_one_time": 1,
+   "bkup_policy": 1,
+   "exclude_days": [
+    "2023-06-02"
+   ],
+   "cron_policies": ""
+  }
+ ],
+ "effective_time_switch": 1,
+ "effective_time": 1,
+ "pre_backup_script": "",
+ "post_backup_script": "",
+ "expire_policy": 1,
+ "band_width": "",
+ "script_timeout": 1,
+ "excl_path": [],
+ "file_type_filter_switch": 0,
+ "file_type_filter": "",
+ "fragment_size": 1,
+ "fragment_switch": 1,
+ "data_encrypt_compress_switch": 1,
+ "data_encrypt_compress_thread_num": 1,
+ "data_encrypt_source": 1,
+ "data_compress_level": 1,
+ "data_encrypt_type": 1,
+ "backup_host_list": [
+  {
+   "host_uuid": ""
+  }
+ ],
+ "_": "3f62408c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataBackupRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: disableBigdataBackupRule
+body: {
+ "operate": "manual_start",
+ "plat_list": [
+  {
+   "rule_uuid": "2F343194-2AE6-4583-A8C1-5EAC23203766",
+   "platform_uuid": "840D24E3-C594-46CC-BC5C-C57C291773B6",
+   "host_uuid": "7D265778-8917-42DF-A5C9-7E2C91E31EBF"
+  }
+ ],
+ "sched_name": "full",
+ "rule_uuids": [
+  "2F343194-2AE6-4583-A8C1-5EAC23203766"
+ ],
+ "_": "3f7e2ec3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: enableBigdataBackupRule
+body: {
+ "operate": "manual_start",
+ "plat_list": [
+  {
+   "rule_uuid": "2F343194-2AE6-4583-A8C1-5EAC23203766",
+   "platform_uuid": "840D24E3-C594-46CC-BC5C-C57C291773B6",
+   "host_uuid": "7D265778-8917-42DF-A5C9-7E2C91E31EBF"
+  }
+ ],
+ "sched_name": "full",
+ "rule_uuids": [
+  "2F343194-2AE6-4583-A8C1-5EAC23203766"
+ ],
+ "_": "3f790cda"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupRuleBakHistory
+body: {
+ "bk_path": "",
+ "_": "3f1c810f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The bk path field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupRuleHivePartitionInfo
+body: {
+ "bk_path": "",
+ "table_name": "",
+ "partition_name": "",
+ "_": "3e574573"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The bk path field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupRuleHiveTableInfo
+body: {
+ "bk_path": "",
+ "table_name": "",
+ "_": "3e3e8b67"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The bk path field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupRuleStatus
+body: {
+ "rule_uuids": [],
+ "force_refresh": 1,
+ "_": "3f4e1eb8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: manualStartBigdataBackupRule
+body: {
+ "operate": "manual_start",
+ "plat_list": [
+  {
+   "rule_uuid": "2F343194-2AE6-4583-A8C1-5EAC23203766",
+   "platform_uuid": "840D24E3-C594-46CC-BC5C-C57C291773B6",
+   "host_uuid": "7D265778-8917-42DF-A5C9-7E2C91E31EBF"
+  }
+ ],
+ "sched_name": "full",
+ "rule_uuids": [
+  "2F343194-2AE6-4583-A8C1-5EAC23203766"
+ ],
+ "_": "3c1420b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] Item does not exist"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBigdataBackupRule
+body: {
+ "_": "3e6cce59"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+

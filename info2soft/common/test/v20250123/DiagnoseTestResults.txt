@@ -1,0 +1,390 @@
+<START-----------------------------------------------------------
+Method: createDiagnose
+body: {
+ "item_uuid": "",
+ "check_type": 1,
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "config_addr": "",
+ "config_port": "",
+ "start_date": "2022-10-24",
+ "end_date": "2022-10-27",
+ "time_switch": 0,
+ "_": "3f2aa79b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDiagnose
+body: {
+ "check_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3e5e9da9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "check_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "check_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiagnose
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3ee78320"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 35,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "4CFB0715-67D6-4E54-BA60-E5819B9FAD0E",
+    "check_type": 1,
+    "status": "DIAGNOSE",
+    "result": null,
+    "download_url": null,
+    "create_time": 1737876216,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 34,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "BEAEF1DE-7621-4E1B-81FB-4684F7D940ED",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1737857524,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 33,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "8B336F56-CFED-4AF6-B578-E8D888D4E47B",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1737714509,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 32,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "9BB6F862-8569-4F2B-B01A-79ED3D4EB94C",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1737709894,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 31,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "45BC8C03-E620-4EF5-B19B-E2D9AE2976D1",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1737702940,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 30,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "FB6C63AC-48A4-4D62-AB78-DB48B4804736",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1734664761,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 29,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "6A009F7D-4540-45E8-BA08-8844F92146D9",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1733466409,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 28,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "18BB80DF-C9DC-461A-8137-E47AD282471A",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1733464942,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 27,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "C212C691-4D98-4327-B6BC-670DD2293123",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1733464035,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 26,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "B73A098F-0DA4-4879-836D-9937EA79D8EB",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1733456336,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   }
+  ],
+  "total": 35
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRules
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+

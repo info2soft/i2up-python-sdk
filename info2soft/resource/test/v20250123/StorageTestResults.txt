@@ -1,0 +1,2347 @@
+<START-----------------------------------------------------------
+Method: addSlotTapePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "tape_info": [
+  {
+   "slot_index": "",
+   "slot_barcode": ""
+  }
+ ],
+ "_": "3f302f6c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: browseTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3f6774d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: catalogTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3f3f878c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createAssignBackStore
+body: {
+ "name": "",
+ "target": "",
+ "tpg_number": "",
+ "initiator": "",
+ "node_uuid": "",
+ "_": "3eaaaee4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: name;\n Lost: target;\n Lost: tpg_number;\n Lost: initiator;\n Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createAutoAddLun
+body: {
+ "node_uuid": "",
+ "auto_add_mapped_luns": 0,
+ "_": "3e0e7900"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createAutoAddPortal
+body: {
+ "node_uuid": "",
+ "auto_add_default_portal": 0,
+ "_": "3ef0f17f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBackStore
+body: {
+ "name": "name",
+ "path": "/path/",
+ "node_uuid": "AFAFDFDF-AFAF-AFAF-AFAF-AFAFAFAFAFAF",
+ "capacity": "100",
+ "_": "3d8964b8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFs
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "fs_name": "",
+ "mountpoint_path": "",
+ "source_disk_size": "",
+ "_": "3f27ee8c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: fs_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFsCloneSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "fs_name": "",
+ "snap_name": "",
+ "clone_name": "",
+ "_": "3ee7a308"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: snap_name;\n Lost: clone_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFsSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "fs_name": "",
+ "snap_name": "",
+ "_": "3f40abdd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: fs_name;\n Lost: snap_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiDiscoverAuth
+body: {
+ "userid": "",
+ "password": "",
+ "mutual_userid": "",
+ "mutual_password": "",
+ "node_uuid": "",
+ "_": "3e950bb3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: userid;\n Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiInitiator
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "initiator_name": "",
+ "node_uuid": "",
+ "_": "3e8cf7ae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: initiator_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiInitiatorConnectAuth
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "initiator_name": "",
+ "user_id": "",
+ "password": "",
+ "mutual_userid": "",
+ "mutual_password": "",
+ "node_uuid": "",
+ "_": "3f2bc4ab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: initiator_name;\n Lost: user_id;\n Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiInitiatorConnectTarget
+body: {
+ "node_uuid": "",
+ "portal_address": "",
+ "portal_port": 1,
+ "auth_type": 1,
+ "user_name": "",
+ "password": "",
+ "target": "",
+ "_": "3f6349bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: portal_address;\n Lost: user_name;\n Lost: password;\n Lost: target;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiInitiatorDiscoverTarget
+body: {
+ "node_uuid": "",
+ "portal_address": "",
+ "portal_port": 1,
+ "auth_type": 1,
+ "user_name": "",
+ "password": "",
+ "hba_name": "",
+ "_": "3ef42fa8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: portal_address;\n Lost: user_name;\n Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiInitiatorLun
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "initiator_name": "",
+ "backstore_name": "",
+ "node_uuid": "",
+ "_": "3f2d7849"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: initiator_name;\n Lost: backstore_name;\n Lost: name;\n Lost: path;\n Lost: capacity;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createIscsiTarget
+body: {
+ "name": "",
+ "node_uuid": "",
+ "_": "3f49e756"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createPool
+body: {
+ "node_uuid": "",
+ "count": 1,
+ "dev_list": [],
+ "pool_name": "",
+ "_": "3e8e8d27"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: dev_list[0];\n Lost: pool_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStorageConfig
+body: {
+ "name": "2.85",
+ "type": 0,
+ "bk_uuid": "7E36A0B7-7C9A-D310-645A-F9FF7972F13F",
+ "config": {
+  "device_info": [
+   {
+    "dev_mount": "C:\\",
+    "alarms": [
+     "80",
+     "90"
+    ]
+   }
+  ],
+  "biz_grp_list": "",
+  "backstore": [
+   {
+    "name": "",
+    "path": "",
+    "capacity": "",
+    "target_name": ""
+   }
+  ],
+  "db_save_day": 2,
+  "mon_storage": 1
+ },
+ "_": "3e45ef2a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config[device_info][0][name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStorageQuota
+body: {
+ "zpool_name": "2.85",
+ "zfs_name": "xxx",
+ "zfs_mount_path": "",
+ "zfs_quota": 1,
+ "user_uuid": "",
+ "compress": 1,
+ "dedup": 1,
+ "create_fs": 1,
+ "_": "3d2eb8a2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: zfs_mount_path;\n Lost: user_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTape
+body: {
+ "tape_name": "\u78c1\u5e26\u5e931",
+ "node_uuid": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "library_info": [
+  {
+   "library_sn": "SYZZ_A",
+   "library_vendor": "STK",
+   "library_product": "L80",
+   "library_revision": "0106",
+   "drive_num": 1,
+   "slot_num": 1
+  }
+ ],
+ "_": "3f3ade68"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTapePool
+body: {
+ "library_sn": "",
+ "pool_name": "",
+ "pool_flag": "",
+ "tape_uuid": "",
+ "_": "3f1d37fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: library_sn;\n Lost: pool_name;\n Lost: pool_flag;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTpg
+body: {
+ "target_name": "",
+ "node_uuid": "",
+ "_": "3f756c74"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTpgConnectAuth
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "userid": "",
+ "password": "",
+ "mutual_userid": "",
+ "mutual_password": "",
+ "node_uuid": "",
+ "_": "3ec9f982"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTpgLun
+body: {
+ "node_uuid": "",
+ "target_name": "",
+ "tpg_number": 1,
+ "backstore_name": "",
+ "name": "name",
+ "path": "/path/",
+ "capacity": "100",
+ "_": "3f533cf3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: backstore_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTpgPortal
+body: {
+ "target_name": "",
+ "tpg_number": "",
+ "ip": "",
+ "node_uuid": "",
+ "_": "3f79d5db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: tpg_number;\n Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVMDK
+body: {
+ "_": "3f3e0b28"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVolume
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "volume_name": "",
+ "volume_size": "",
+ "volume_attr": 1,
+ "_": "3c36a074"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: volume_name;\n Lost: volume_size;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVolumeCloneSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "volume_name": "",
+ "snap_name": "",
+ "clone_name": "",
+ "_": "3f392efe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: snap_name;\n Lost: clone_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createVolumeSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "volume_name": "",
+ "snap_name": "",
+ "_": "3e928581"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: volume_name;\n Lost: snap_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackStore
+body: {
+ "name": "bs",
+ "node_uuid": "AFAFDFDF-AFAF-AFAF-AFAF-AFAFAFAFAFAF",
+ "force": 1,
+ "_": "3f5f6c89"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFs
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "fs_name": "",
+ "force": 1,
+ "_": "3f4dfe18"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: fs_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFsCloneSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "clone_name": "",
+ "_": "3ea0dc89"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: clone_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFsSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "fs_name": "",
+ "snap_name": "",
+ "force": 1,
+ "_": "3e56344d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: snap_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteIscsiDiscoverAuth
+body: {
+ "node_uuid": "",
+ "_": "3e772bd7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteIscsiInitiator
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "initiator_name": "",
+ "node_uuid": "",
+ "force": 1,
+ "_": "3f5d7747"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: initiator_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteIscsiInitiatorConnectTarget
+body: {
+ "node_uuid": "",
+ "target_name": "",
+ "address": "",
+ "_": "3f228558"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteIscsiInitiatorLun
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "initiator_name": "",
+ "initiator_lun_no": 1,
+ "node_uuid": "",
+ "_": "3f5ae8e4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: initiator_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteIscsiInitiatorPortal
+body: {
+ "node_uuid": "",
+ "address": "",
+ "port_no": 1,
+ "_": "3f46f204"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: address;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteIscsiTarget
+body: {
+ "name": "",
+ "node_uuid": "",
+ "force": 1,
+ "_": "3f57e720"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deletePool
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "_": "3d0cd12a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStorageConfig
+body: {
+ "uuids": [],
+ "delete_quota": 1,
+ "force": 1,
+ "_": "3e8fab0a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStorageQuota
+body: {
+ "quota_uuids": [],
+ "force": 0,
+ "_": "3e889ec4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: quota_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTape
+body: {
+ "tape_uuids": [],
+ "_": "3edd3297"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "tape_info": [
+  {
+   "slot_index": "",
+   "slot_barcode": ""
+  }
+ ],
+ "_": "3f5abbab"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTpg
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "node_uuid": "",
+ "force": 1,
+ "_": "3e8210c2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTpgConnectAuth
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "node_uuid": "",
+ "_": "3ca0017e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTpgLun
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "tpg_lun_no": 1,
+ "node_uuid": "",
+ "force": 1,
+ "_": "3e6474d9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTpgPortal
+body: {
+ "target_name": "",
+ "tpg_number": 1,
+ "ip": "",
+ "node_uuid": "",
+ "_": "3c885405"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVMDK
+body: {
+ "_": "3f5625d3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVolume
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "volume_name": "",
+ "force": 1,
+ "_": "3e9f5fd4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: volume_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVolumeCloneSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "clone_name": "",
+ "_": "3f13cad3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: clone_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteVolumeSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "volume_name": "",
+ "snap_name": "",
+ "force": 1,
+ "_": "3e1d7337"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: snap_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeAutoAddLun
+body: {
+ "node_uuid": "",
+ "_": "3edaa520"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeAutoAddPortal
+body: {
+ "node_uuid": "",
+ "_": "3e961134"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeIscsiAuth
+body: {
+ "node_uuid": "",
+ "_": "3eff64c9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeIscsiTargetStatus
+body: {
+ "node_uuid": "",
+ "_": "3f5b12e4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeIscsiVersion
+body: {
+ "node_uuid": "",
+ "_": "3f2cc907"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageDeviceInfo
+body: {
+ "node_uuid": "7E36A0B7-7C9A-D310-645A-F9FF7972F13F",
+ "_": "3f66f52f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStorageHistoryData
+body: {
+ "start": 1565076908,
+ "type": 0,
+ "_": "3e45c55b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTape
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTpgConnectAuth
+body: {
+ "node_uuid": "",
+ "target_name": "",
+ "tpg_number": 1,
+ "_": "3f35378f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discribeTapeDetail
+body: {
+ "library_sn": "",
+ "slot_index": "",
+ "slot_barcode": "",
+ "slot_tapename": "",
+ "slot_tapesequence": "",
+ "pool_uuid": "",
+ "bk_index": "",
+ "bk_path": "",
+ "_": "3efa2fb9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n Lost: library_sn;\n Lost: slot_index;\n Lost: slot_barcode;\n Lost: slot_tapename;\n Lost: slot_tapesequence;\n Lost: bk_index;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: eraseTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3eaae018"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: expandPool
+body: {
+ "node_uuid": "",
+ "count": 1,
+ "dev_list": [],
+ "pool_name": "",
+ "_": "3f638e45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: dev_list[0];\n Lost: pool_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3f525e2c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: formatTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3e9de794"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3efd08f4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: iscsiInitiatorRefreshSession
+body: {
+ "node_uuid": "",
+ "_": "3e8e73d1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAssignBackStore
+body: {
+ "path": "",
+ "node_uuid": "",
+ "_": "3eac8084"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAvailableDevice
+body: {
+ "node_uuid": "",
+ "config_addr": "",
+ "_": "3d21a7a6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAvailableNode
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackStore
+body: {
+ "node_uuid": "",
+ "_": "3d3a0274"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackStoreAvailablePath
+body: {
+ "node_uuid": "",
+ "_": "3f052d10"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBkData
+body: {
+ "tape_uuid": "",
+ "library_sn": "",
+ "slot _index": "",
+ "slot_barcode": "",
+ "slot_tapename": "",
+ "slot_tapesequence": "",
+ "page_num": "0",
+ "page_size": "15",
+ "begin_time": "2021-04-27_00:00:12",
+ "end_time": "2021-04-27_00:00:12",
+ "check_rule": 0,
+ "pool_uuid": "",
+ "task_uuid": "",
+ "_": "3efcd500"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: pool_uuid;\n Lost: library_sn;\n Lost: slot_index;\n Lost: slot_barcode;\n Lost: slot_tapename;\n Lost: slot_tapesequence;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBkFile
+body: {
+ "tape_uuid": "5feFeCdf-32Cf-EA5c-feeA-b2adc0c7b3BB",
+ "library_sn": "DdA7A621-9DF8-b211-FC4D-51F4fEbC94eE",
+ "slot_index": "1",
+ "slot_barcode": "1321607070311984\t",
+ "slot_tapename": "\u6761\u53e3\u4e49\u4eec\u53ca\t",
+ "slot_tapesequence": "3628666494597286\t",
+ "bk_index": "index",
+ "bk_path": "path",
+ "page": 1,
+ "limit": 10,
+ "pool_uuid": "",
+ "_": "3ea21382"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusyDrive
+body: {
+ "tape_uuid": "",
+ "library_sn": "",
+ "_": "3f49bcbb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusyIEslot
+body: {
+ "tape_uuid": "",
+ "library_sn": "",
+ "_": "3ecbbd2f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusySlot
+body: {
+ "tape_uuid": "",
+ "library_sn": "",
+ "_": "3e85e341"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDevice
+body: {
+ "node_uuid": "",
+ "_": "3dc4c8e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFreeIEslot
+body: {
+ "tape_uuid": "",
+ "library_sn": "",
+ "_": "3f4e7586"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFreeSlot
+body: {
+ "tape_uuid": "",
+ "library_sn": "",
+ "_": "3d9474f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFs
+body: {
+ "pool_name": "",
+ "fs_name": "",
+ "node_uuid": "",
+ "eligible_file_system_size": 1,
+ "_": "3e361d5a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFsCloneSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "fs_name": "",
+ "snap_name": "",
+ "_": "3c5062c5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: fs_name;\n Lost: snap_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFsSnapshot
+body: {
+ "pool_name": "",
+ "fs_name": "",
+ "snap_name": "",
+ "node_uuid": "",
+ "_": "3f22bd4c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listIscsiInitiatorPortal
+body: {
+ "node_uuid": "",
+ "_": "3f53355d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listIscsiTarget
+body: {
+ "node_uuid": "",
+ "_": "3f55fd08"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listIscsiTargetList
+body: {
+ "bk_uuid": "",
+ "_": "3ec7fb78"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPool
+body: {
+ "pool_name": "",
+ "node_uuid": "",
+ "_": "3ecf93f8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPoolFromNode
+body: {
+ "node_uuid": "",
+ "_": "3f7b64b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPoolInfo
+body: {
+ "node_uuid": "",
+ "pool_name": "testpool",
+ "_": "3f1733f2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageConfig
+body: {
+ "search_value": "118",
+ "search_field": "bk_node_name",
+ "limit": 1,
+ "page": 1,
+ "direction": "",
+ "_": "3e67f60a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageInfo
+body: {
+ "node_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "rep_uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C",
+ "byte_format": 1,
+ "_": "3ea56e8c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": "1010031017",
+  "message": "[1010031017] rule.not_exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageQuota
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "quota_switch": null,
+  "bk_uuid": null,
+  "random_str": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStorageStatus
+body: {
+ "uuids": "uuids[]=FBDDEBDE-41CC-175B-9D84-4D9693EEB6C6&uuids[]=7D2c3D02-fAF5-b47E-774b-6c2cbB7e623A",
+ "force_refresh": 1,
+ "_": "3f191775"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTape
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_value": "",
+ "search_field": "",
+ "where_args": "{node_uuid:,pool_uuid:}",
+ "_": "3f38024c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeNames
+body: {
+ "pool_uuid": "",
+ "_": "3f76b54f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapePoolSlots
+body: {
+ "type": 1,
+ "pool_uuid": "",
+ "is_public": "",
+ "_": "3e033795"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapePools
+body: {
+ "limit": 1,
+ "page": 1,
+ "where_args": "{tape_uuid:,library_sn:}",
+ "_": "3f215b99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTpg
+body: {
+ "node_uuid": "",
+ "target_name": "",
+ "tpg_number": 1,
+ "_": "3f2e528a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: target_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVolume
+body: {
+ "pool_name": "",
+ "volume_name": "",
+ "node_uuid": "",
+ "eligible_volume_size": 1,
+ "_": "3f45d8c8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVolumeCloneSnapshot
+body: {
+ "node_uuid": "",
+ "pool_name": "",
+ "volume_name": "",
+ "snap_name": "",
+ "_": "3f2d617c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: pool_name;\n Lost: volume_name;\n Lost: snap_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVolumeSnapshot
+body: {
+ "pool_name": "",
+ "volume_name": "",
+ "snap_name": "",
+ "node_uuid": "",
+ "_": "3eee4d5c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: volume_name;\n Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStorageConfig
+body: {
+ "name": "test",
+ "type": 0,
+ "bk_uuid": "7E36A0B7-7C9A-D310-645A-F9FF7972F13F",
+ "config": {
+  "mon_storage": 1,
+  "db_save_day": 30,
+  "device_info": [
+   {
+    "dev_used_percent": 28,
+    "dev_name": "/dev/mapper/centos-root",
+    "dev_mount": "/",
+    "dev_total": "36.97 GB",
+    "dev_free": "26.72 GB",
+    "dev_type": "block",
+    "dev_enb_compress": "N",
+    "dev_enb_wight": "N",
+    "dev_save_rate": "0%",
+    "node_name": "MTQx",
+    "node_role": "3",
+    "dev_used_size": "11006136320",
+    "alarms": [
+     "90",
+     "100",
+     "70"
+    ],
+    "disabled": true,
+    "name": "/"
+   },
+   {
+    "dev_used_percent": 29,
+    "dev_name": "/dev/sda1",
+    "dev_mount": "/boot",
+    "dev_total": "0.99 GB",
+    "dev_free": "871.58 MB",
+    "dev_type": "block",
+    "dev_enb_compress": "N",
+    "dev_enb_wight": "N",
+    "dev_save_rate": "0%",
+    "node_name": "MTQx",
+    "node_role": "3",
+    "dev_used_size": "149336064",
+    "alarms": [
+     "90",
+     "100",
+     "70"
+    ],
+    "disabled": true,
+    "name": "/boot"
+   }
+  ],
+  "biz_grp_list": ""
+ },
+ "random_str": "0289FA79-85C3-5D0B-2835-A454EF4A4237",
+ "_": "3f1d52e9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStorageQuota
+body: {
+ "zpool_name": "2.85",
+ "zfs_name": "xxx",
+ "zfs_mount_path": "",
+ "zfs_quota": 1,
+ "random_str": "",
+ "_": "3f5476a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: create_fs;\n Lost: zfs_mount_path;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTape
+body: {
+ "tape_name": "\u78c1\u5e26\u5e931",
+ "node_uuid": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "library_info": [
+  {
+   "library_sn": "SYZZ_A",
+   "library_vendor": "STK",
+   "library_product": "L80",
+   "library_revision": "0106"
+  }
+ ],
+ "random_str": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "_": "3da89295"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_info[0][drive_num];\n Lost: library_info[0][slot_num];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebuildCatalogTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3e1c5a55"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: registerServer
+body: {
+ "node_uuid": "",
+ "config_addr": "",
+ "_": "3f77bc1d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: removeSlotTapePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "tape_info": [
+  {
+   "slot_index": "",
+   "slot_barcode": ""
+  }
+ ],
+ "_": "3f5f9e6c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: scanTapes
+body: {
+ "node_uuid": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+ "_": "3f6f835f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchStorageQuota
+body: {
+ "quota_switch": 1,
+ "random_str": "A5AE270D-B6E5-A3C4-14B4-CAC997B87AB2",
+ "_": "3e6218d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: unloadTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3f0e7e87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updatePoolsTape
+body: {
+ "tape_uuids": [],
+ "operate": "",
+ "slot": [
+  {
+   "slot _index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "new_slot_tapename": ""
+  }
+ ],
+ "drive_index": "",
+ "slot_index": "",
+ "ieslot_index": "",
+ "library_sn": "",
+ "pool_uuid": "",
+ "_": "3ec51385"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: tape_uuids[];\n Lost: library_sn;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateTapePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "tape_info": [
+  {
+   "slot_index": "",
+   "slot_barcode": ""
+  }
+ ],
+ "_": "3ee731f7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: uploadDeviceInfo
+body: {
+ "node_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "device_info": [
+  {
+   "dev_mount": "C:\\",
+   "dev_total": "42580570112",
+   "dev_free": "9151045632",
+   "dev_used_percent": 20
+  }
+ ],
+ "Content-Type": "application/json",
+ "_": "3f2e43ce"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,102 @@
+<START-----------------------------------------------------------
+Method: listBkNodeOverall
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "phy_info": {
+   "code": 1010001020,
+   "message": "[1010001020] List empty."
+  },
+  "drivers_info": {
+   "code": 1010001020,
+   "message": "[1010001020] List empty."
+  },
+  "chart_data": {
+   "code": 1010001020,
+   "message": "[1010001020] List empty."
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listChartConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listChartData
+body: {
+ "start_time": 1546272000,
+ "last_time": 1548950400,
+ "_": "3ec566d9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDriversInfo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPhyInfo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setChartConfig
+body: {
+ "storage_io": 1,
+ "nic_io": 0,
+ "per_core": 1,
+ "per_disk": 0,
+ "net_in": 0,
+ "net_out": 0,
+ "_": "3e822a52"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

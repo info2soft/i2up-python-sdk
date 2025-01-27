@@ -1,0 +1,1124 @@
+
+# -*- coding: utf-8 -*-
+# flake8: noqa
+import sys
+
+import unittest
+# from info2soft import SyncRule
+from info2soft.stream.v20250123.SyncRule import SyncRule
+from info2soft import Auth
+from info2soft.fileWriter import write
+from info2soft.compat import is_py2, is_py3
+
+if is_py2:
+    import sys
+    import StringIO
+    import urllib
+
+    # reload(sys)
+    sys.setdefaultencoding('utf-8')
+    StringIO = StringIO.StringIO
+    urlopen = urllib.urlopen
+if is_py3:
+    import io
+    import urllib
+
+    StringIO = io.StringIO
+    urlopen = urllib.request.urlopen
+
+username = 'admin'
+pwd = 'Info@123'
+
+
+class SyncRuleTestCase(unittest.TestCase):
+
+    def testCreateSyncRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'table_map': [{
+            'key': 'GonzalezGonzalezGonzalez',
+            'split_dst_table': [{
+            'condition': '',
+            'dst_table': '',
+            'dst_user': '',},],
+            'dst_table': 'a',
+            'dst_user': 'b',
+            'src_table': 'c',
+            'src_user': 'd',
+            'column': [{
+            'dst_column': 'e',
+            'src_column': 'f',
+            'src_field_type': 'INT',
+            'dst_field_type': 'VARCHAR(60)',
+            'pk': False,
+            'flag': 1,},],
+            'filter': 1,},],
+            'full_sync_settings': {
+            'dump_thd': 1,
+            'clean_user_before_dump': 0,
+            'existing_table': 'drop_to_recycle',
+            'full_sync': 0,
+            'start_scn': '',
+            'load_thd': 1,
+            'ld_dir_opt': 0,
+            'try_split_part_table': 0,
+            'concurrent_table': [{
+            'user': '',
+            'table': '',},],
+            'full_sync_custom_cfg': [{
+            'key': '',
+            'value': '',},],
+            'dump_split': {
+            'enable': False,
+            'least_rows': 1,
+            'least_bytes': 1,
+            'expire_seconds': 1,},
+            'end_target_db': '',
+            'end_target_type': '',
+            'end_db_map': [{
+            'src_db': '',
+            'tar_db': '',},],
+            'end_tab_map': [{
+            'src_db': '',
+            'src_table': '',
+            'dst_db': '',
+            'dst_table': '',
+            'column': [{
+            'src_column': '',
+            'dst_column': '',},],},],
+            'isCreateTable': False,
+            'full_max_conn': 1,},
+            'full_sync_obj_filter': {
+            'full_sync_obj_data': [
+            'PROCEDURE',
+            'PACKAGE',
+            'PACKAGE BODY',
+            'DATABASE LINK',
+            'OLD JOB',
+            'JOB',
+            'PRIVS',
+            'CONSTRAINT',
+            'JAVA RESOURCE',
+            'JAVA SOURCE',],},
+            'inc_sync_ddl_filter': {
+            'inc_sync_ddl_data': [
+            'INDEX',
+            'VIEW',
+            'FUNCTION',],},
+            'other_settings': {
+            'keep_usr_pwd': 1,
+            'enable_truncate_frequence': 1,
+            'keep_dyn_data': 0,
+            'table_change_info': 1,
+            'run_time': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',
+            'dly_constraint_load': 0,
+            'ddl_cv': 0,
+            'keep_bad_act': 0,
+            'ignore_foreign_key': 0,
+            'jointing': {
+            'table': '',
+            'op': 'append',
+            'content': [],},
+            'dyn_thread': 1,
+            'convert_urp_of_key': 0,
+            'table_delay_load': [],
+            'tgt_extern_table': '',
+            'bw_limit': '',
+            'etl_table': [{
+            'oprType': '',
+            'table': '',
+            'user': '',
+            'process': '',
+            'addInfo': '',},],
+            'filter_table_settings': {
+            'exclude_table': [{
+            'user': '',
+            'table': '',},],
+            'exclude_tab_with_column': '',
+            'exclude_tab_with_column_switch': 1,},
+            'table_space_map': {
+            'tgt_table_space': '',
+            'table_mapping_way': '',
+            'table_path_map': {},
+            'table_space_name': {},},
+            'create_pk_col': '',
+            'create_pk_col_name': '',
+            'timezone_convert_switch': 1,
+            'src_timezone_switch': 1,
+            'src_timezone': '',
+            'mask_sync_switch': '',
+            'db_map_uuid': '',
+            'byte_extend': 1,
+            'char_extend': 1,
+            'table_attr_cap_switch': 1,
+            'table_attr_cap': '',
+            'is_target': 1,
+            'lsn_keep_time': 1,
+            'lsn_keep_interval': 1,
+            'master_allow': 1,
+            'virtual_key_settings': {
+            'auto_switch': '',
+            'manual_switch': '',
+            'auto_col_name': '',
+            'auto_separate': '',
+            'manual_columns': [{
+            'user': '',
+            'tab': '',
+            'col': '',
+            'composite_col': '',
+            'separator': '',},],},
+            'encrypt_column_switch': 1,
+            'encrypt_column_method': 1,
+            'encrypt_columns': [{
+            'user': '',
+            'table': '',
+            'column': '',},],},
+            'biz_grp_list': [],
+            'map_type_list': [],
+            'src_db_auth_uuid': '',
+            'tgt_db_auth_uuid': '',
+            'comment': '',
+            'rule_name': 'ctt->ctt',
+            'src_db_uuid': ' 6C4AEF37-6496-6DCD-E085-DD640001E4EC',
+            'tgt_db_uuid': ' 1C5F3C4B-7333-9518-7349-9712BC9ED664',
+            'user_map': {
+            'src_user': 'user1',
+            'tgt_user': 'user2',},
+            'base_settings': {
+            'dbmap_topic': '',
+            'json_template': '',
+            'binary_code': '',
+            'kafka_message_encoding': '',
+            'kafka_time_out': 1,
+            'part_load_balance': '',
+            'row_map_mode': '',
+            'save_json_text': False,
+            'message_format': '',
+            'full_sync_mode': '',
+            'lib_name': '',
+            'jnr_name': '',
+            'exclude_dbs': [],
+            'exclude_dbs_switch': '',
+            'start_rule_now': '',
+            'ob_sharding_inst': '',
+            'distribute_mode': '',
+            'ha_switch': '',},
+            'inc_sync_settings': {
+            'incre_sync': 1,
+            'dyn_thread': 1,
+            'convert_urp_of_key': '',
+            'sync_lob': 1,
+            'gen_txn': 1,
+            'merge_track': 1,
+            'keep_bad_act': 1,
+            'fill_lob_column': 1,
+            'ddl_cv': 1,
+            'keep_seq_sync': '',
+            'storage_settings': {
+            'keep_incre_time': 1,
+            'src_max_mem': 1,
+            'src_max_disk': 1,
+            'txn_max_mem': 1,
+            'tf_max_size': 1,
+            'max_ld_mem': 1,},
+            'error_handling': {
+            'load_err_set': '',
+            'drp': '',
+            'irp': '',
+            'urp': '',
+            'info': '',
+            'report_failed_dml': '',},
+            'dml_track': {
+            'change_table_structure': False,
+            'date_time_column_unique': '',
+            'load_date_time_column_unique': False,
+            'op_column': '',
+            'opv_insert': '',
+            'opv_update': '',
+            'opv_update_key': '',
+            'opv_delete': '',
+            'audit': False,
+            'audit_prefix': '',
+            'audit_appendix': '',
+            'identity_column': '',
+            'load_date_column': '',
+            'load_time_column': '',
+            'load_date_time_column': False,
+            'keep_deleted_row': False,
+            'date_column': '',
+            'time_column': '',
+            'date_time_column': '',},
+            'redo_read_thread': 1,
+            'trackmode': '',
+            'incre_full_sync_custom_cfg': [{
+            'key': '',
+            'value': '',},],
+            'log_file_retention': 1,
+            'incre_max_conn': 1,},
+            'compress_encrypt_settings': {
+            'compress_switch': 1,
+            'compress_algo': '',
+            'encrypt': 1,
+            'compress': 1,
+            'compress_level': 1,
+            'encrypt_switch': 1,},
+            'column_map': [{
+            'user': '',
+            'target': '',
+            'column': '',},],
+            'policy_settings': {
+            'policy_type': '',
+            'one_time': '',
+            'policies': '',},
+            'maintenance': 1,
+            'is_duplicate': 1,
+            'full_map_switch': 1,
+            'database_map': [{
+            'src_database': '',
+            'src_schema': '',
+            'tgt_database': '',},],
+            'encrypt_column_key': '',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.createSyncRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'createSyncRule', body)
+
+    def testResumeOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            'a35Ee1De-5512-F597-BBBc-5fCdE429FCaB',
+            '68e26A95-31ED-B5Da-07cC-32fDEBcFc5CE',
+            'bBcFc825-aB14-00d8-Bb1D-4cB119eB7FeD',
+            'D87CaFdF-7095-8F79-45ee-60F1AbE5bbDc',
+            '085aD860-44c9-c3BA-b768-5b1F3DF3E4ca',
+            'bcb9CEa6-faAF-79Ae-ceb8-eBbA6f9b98e7',
+            '524F93Bf-6824-5e9F-A44F-E39Ec4E3571a',
+            'ecd4918c-4Ee9-cc8F-c8d7-DcD34E4EE79b',
+            'Ed7BdfE2-1AeA-f1ef-38B7-AfDc8A18A81c',
+            'FB5ef7b9-6eCe-6eec-d5ED-2ceA5b4A37e1',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.resumeOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'resumeOracleRule', body)
+
+    def testStopOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            '3CbD8b6E-EcE9-fd2f-1b9C-FC347D22bbfF',
+            '67c42cBb-bEbA-AbBC-Ab0e-D31FfB097C94',
+            'B4e3b7B6-ed5D-7c30-D5Fb-eD15c89A9C1d',
+            '9fdFCf0E-AdFA-e729-CAaf-4A164730b513',
+            'ddE179f9-d2fD-3efe-EfEd-92256D7Fb5FA',
+            '26f1928d-8CD5-683F-FC9F-D681F42AbDF9',
+            '354f351b-E4Cf-DAc4-EebC-825e3D6aB1c6',
+            'DdeB16DD-Ccdf-FDdb-e68C-bAEd5c5463Ef',
+            'e4A0E1A6-930e-87D4-e3EF-ec42F7bddD03',
+            '975BA65b-af1F-fC4F-Bf8C-e6DE1d512d88',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.stopOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'stopOracleRule', body)
+
+    def testRestartOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            'dC0F87dE-eCdb-B778-2ae5-D831AcDA9ced',
+            '7eeAc6Dc-F3fC-Aa63-e585-5E4963125468',
+            '12ADdFbF-7c38-9FC6-1aC2-2D95Fcd8bcCc',
+            '54CB47D5-bbe5-59de-CCF1-B6e2535EF1cF',
+            'Ae3d55fE-e74f-cF5d-464A-8CA14dfD7Aff',
+            'ebc1be2b-64BC-CF0f-8e35-c01Fabc4fCDC',
+            'b1aD7DCC-e49f-bF4B-67eD-4D971efc7D4C',
+            '99e3FC8d-6a8B-BFF3-F652-9D99e64c6CB2',
+            '342118dB-3C4A-2fd8-ccA4-061A51839eCe',
+            'd8CcF6A2-dDDF-3c7f-B7E0-5B94f2e899Dc',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.restartOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'restartOracleRule', body)
+
+    def testStartAnalysisOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            'Df8021DB-3fdf-3A11-91e3-B9D6c6fEcbff',
+            'DAEEc4C6-B54c-1c3D-2136-20BeD13c5Fff',
+            '2e9bc938-AAeE-874d-eefb-4BcBC48fd5E7',
+            '8dbe8EF7-ABab-fBf5-dE58-dABD3B9526A9',
+            '6D6bbEEC-6668-3c7F-bAb1-DE65Dabbf1A6',
+            'f4645EBA-8cCE-2F7f-4beE-F179AbCacCF2',
+            'dFf073a6-D1bC-1e1A-BC80-2bF3Bb7D3Ab0',
+            'A4af0F4c-152d-CC8B-76e2-F658CbCe2B2E',
+            'A86457df-A6bA-920a-8C8d-81eAfeD0148D',
+            '86bcE154-BC33-E2c3-52CE-5544c9ca39Ec',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.startAnalysisOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'startAnalysisOracleRule', body)
+
+    def testStopAnalysisOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            '4528B4AD-c8ff-D6Fd-513d-1B41635F4d42',
+            '1c42e525-aDD1-4CcD-cfD1-E7Ad12c1D6dE',
+            '315Dcb6e-F7D1-07E8-21a3-A3afdBC6c5ee',
+            '2CB83564-34FD-cba6-1A0b-E5C9eC409dF4',
+            'E141bF5b-2EA9-16FB-a5F4-9Be3207f98bC',
+            '63A49882-AcFd-3Ab6-351e-f4650BAF7A4E',
+            'Ba8D5485-17e8-De1e-E1AA-b6Dae976C171',
+            'f1cC7F63-86FF-5B1B-226F-0C63B3be2f08',
+            '5e6fe5c2-eFB9-eBcf-0Fdc-673Cad3b5F49',
+            'E3CBeD5b-58cd-0DB5-32c8-E731E35Fcb46',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.stopAnalysisOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'stopAnalysisOracleRule', body)
+
+    def testResetAnalysisOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            'e2A5F19e-b38f-7B4f-265c-859Fc5C0475F',
+            '301240FA-824F-33c4-b33c-36A55ba3B12c',
+            '50ecE182-E1dC-eDD3-cdAc-fEffA1E2BDAf',
+            '8E0E47A9-b9c9-396d-cfd9-cfdcEFb69a1F',
+            'D12eD29d-FfA7-a9a7-12de-9BdAfD6c5CE5',
+            '87c9255c-DD9F-3985-cf92-521cB4DfEdbd',
+            '0dCCC90B-B192-72B5-a824-Dc1A9aFdcE7F',
+            'C4EEbBc7-681A-beAE-294c-21bFcc6CE155',
+            'FB42ebDA-7Ec5-56d3-7bCF-8CAde8f03D46',
+            'AE25fE5B-bC96-83B2-7cEf-eAbA1d70deE6',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.resetAnalysisOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'resetAnalysisOracleRule', body)
+
+    def testStopAndStopanalysisOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            'e6B6BDA3-cF42-9117-8CAc-6ccbf33ba96E',
+            'DDe3C893-c39A-B06B-6A82-455b83Ad2bFE',
+            '827D83d3-23F4-Feb7-43FA-B2Fe4A6c5eDE',
+            'a556fC3e-58cE-443D-44eD-D22e2F723117',
+            'F8a34FC5-3e6F-fB9c-EE4D-3682deB46A6A',
+            'e4cBd57D-52F7-Eaef-c5e7-69b8F99efAFa',
+            'eEA3b2F6-AcCb-78E4-e217-fEf6cECa9ba9',
+            'e4AbbCEE-C2b8-374f-D88f-c42Cf34Ac987',
+            '7e5a7FD6-Df7f-a73F-a4A7-c1EF26766A45',
+            '7e45F5ad-2375-ab69-2342-CFab4E72D6d3',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.stopAndStopanalysisOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'stopAndStopanalysisOracleRule', body)
+
+    def testDuplicateOracleRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'scn': '1',
+            'rule_name': '',
+            'operate': 'restart',
+            'rule_uuids': [
+            '9A95F2Aa-41fC-aD13-Cc1A-2DDAB3Dd5bc7',
+            'a58f67a2-e9B0-2B4d-AAE4-c4Fa9E9bEf5b',
+            '36FCFbaa-eE5B-cFB3-Cbc7-1AF384eAb7Af',
+            '31fDdD62-bBd8-Feff-FCf7-28b126A36329',
+            'a65DCc1e-66F9-0a7A-7b7c-9EcFB179aFA1',
+            '6B1dfBec-d706-CEDC-B65E-3BCD6eA37578',
+            'f5fAeD3b-0B2e-DEfD-6c51-dABB4F57Ef6b',
+            'eb8EDe62-33e3-0F4D-cE4e-d3F5D8CA0A44',
+            'CDEb1795-69DE-d668-23db-c0FFfeEf9251',
+            '2CeAdcD8-ABC6-daAD-7310-faeBe2eADEB8',],
+            'all': 1,
+            'tab': [{
+            'user': '',
+            'table': '',},],
+            'fix_relation': 1,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.duplicateOracleRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'duplicateOracleRule', body)
+
+    def testListSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'page': 1,
+            'limit': 10,
+            'search_field': 'rule_name',
+            'search_value': '',
+            'group_uuid': '',
+            'where_args': {
+            'rule_name': '',
+            'status': '',
+            'src_db_name': '',
+            'tgt_db_name': '',
+            'db_ip': '',
+            'username': '',
+            'node_ip': '',
+            'rule_uuid': '2B15F1f5-9bd6-8733-e4f1-87CBBfB84B39',
+            'src_db_type': '',
+            'tgt_db_type': '',},
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.listSyncRules(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'listSyncRules', body)
+
+    def testCreateBatchSyncRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'base_settings': {
+            'dbmap_topic': '',
+            'json_template': '',
+            'binary_code': '',
+            'kafka_message_encoding': '',
+            'kafka_time_out': 1,
+            'part_load_balance': '',
+            'row_map_mode': '',
+            'save_json_text': False,
+            'message_format': '',},
+            'incre_sync_settings': {
+            'incre_sync': 1,
+            'dyn_thread': 1,
+            'convert_urp_of_key': 1,
+            'sync_lob': 1,
+            'gen_txn': 1,
+            'merge_track': 1,
+            'keep_bad_act': 1,},
+            'compress_encrypt_settings': {
+            'compress_switch': '',
+            'compress_algo': '',
+            'encrypt': '',
+            'compress': '',
+            'compress_level': '',
+            'encrypt_switch': '',},
+            'column_map': {
+            'include_tab_with_column': [{
+            'user': '',
+            'target': '',
+            'column': '',},],
+            'include_tab_with_column_switch': '',},
+            'table_map': [{
+            'key': 'JacksonPerezWhite',
+            'split_dst_table': [{
+            'condition': '',
+            'dst_table': '',
+            'dst_user': '',},],
+            'dst_table': 'a',
+            'dst_user': 'b',
+            'src_table': 'c',
+            'src_user': 'd',
+            'column': [{
+            'dst_column': 'e',
+            'src_column': 'f',},],},],
+            'full_sync_settings': {
+            'dump_thd': 1,
+            'clean_user_before_dump': 0,
+            'existing_table': 'drop_to_recycle',
+            'sync_mode': 0,
+            'start_scn': '',
+            'keep_exist_table': 0,
+            'keep_table': 0,
+            'load_thd': 1,
+            'ld_dir_opt': 0,
+            'try_split_part_table': 0,
+            'his_thread': 1,
+            'concurrent_table': [
+            'hello.world',],
+            'full_sync_custom_cfg': [{
+            'key': '',
+            'value': '',},],},
+            'full_sync_obj_filter': {
+            'full_sync_obj_data': [
+            'PROCEDURE',
+            'PACKAGE',
+            'PACKAGE BODY',
+            'DATABASE LINK',
+            'OLD JOB',
+            'JOB',
+            'PRIVS',
+            'CONSTRAINT',
+            'JAVA RESOURCE',
+            'JAVA SOURCE',],},
+            'inc_sync_ddl_filter': {
+            'inc_sync_ddl_data': [
+            'INDEX',
+            'VIEW',
+            'FUNCTION',],},
+            'filter_table_settings': {
+            'exclude_tab_with_column': [],
+            'exclude_table': [{
+            'table': '',
+            'user': '',},],
+            'exclude_tab_with_column_switch': 1,},
+            'etl_settings': {
+            'etl_table': [{
+            'user': '',
+            'oprType': 'IRP',
+            'table': '',
+            'addInfo': '',
+            'process': 'SKIP',},],},
+            'start_rule_now': 0,
+            'storage_settings': {
+            'src_max_mem': 512,
+            'keep_incre_time': '',
+            'src_max_disk': 5000,
+            'max_ld_mem': '',
+            'tf_max_size': 100,
+            'tgt_extern_table': '',
+            'txn_max_mem': 10000,},
+            'table_space_map': {
+            'table_path_map': {
+            'ddd': 'sss',
+            'ddd1': 'sss1',},
+            'table_mapping_way': 'ptop',
+            'tgt_table_space': '',
+            'table_space_name': {
+            'qq': 'ss',},},
+            'other_settings': {
+            'dly_constraint_load': 0,
+            'keep_seq_sync': '',
+            'ddl_cv': 0,
+            'keep_bad_act': 0,
+            'gen_txn': '',
+            'ignore_foreign_key': 0,
+            'jointing': {
+            'table': '',
+            'op': 'append',
+            'content': [],},
+            'dyn_thread': 1,
+            'convert_urp_of_key': 0,
+            'message_format': '',
+            'table_delay_load': [],
+            'json_format': '',
+            'keep_usr_pwd': 1,
+            'encrypt_switch': 1,
+            'enable_truncate_frequence': 1,
+            'encrypt_type': 1,
+            'fill_lob_column': '',
+            'merge_track': '',
+            'keep_dyn_data': 0,
+            'zip_level': 0,
+            'table_change_info': 1,
+            'run_time': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',},
+            'bw_settings': {
+            'bw_limit': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',},
+            'biz_grp_list': [],
+            'map_type_list': [],
+            'error_handling': {
+            'load_err_set': 'continue',
+            'drp': 'ignore',
+            'irp': 'irpafterdel',
+            'urp': 'toirp',
+            'report_failed_dml': 1,
+            'info': '',},
+            'comment': '',
+            'dml_track': [{
+            'opv_update_key': '',
+            'load_date_time_column_unique': False,
+            'audit_appendix': '',
+            'opv_update': '',
+            'audit': False,
+            'change_table_structure': False,
+            'opv_insert': '',
+            'keep_deleted_row': False,
+            'date_column': '',
+            'time_column': '',
+            'date_time_column': '',
+            'opv_delete': '',
+            'audit_prefix': '',
+            'op_column': '',
+            'identity_column': 'AUTO_INCR',
+            'load_date_column': '',
+            'load_time_column': '',
+            'load_date_time_column': '',
+            'enable': False,
+            'date_time_column_unique': False,},],
+            'user_map': {
+            'CTT': 'CTT',},
+            'prefix': '',
+            'db_list': [{
+            'src_db_uuid': '',
+            'tgt_db_uuid': '',
+            'src_auth_db_uuid': '',
+            'tgt_auth_db_uuid': '',
+            'rule_uuid': '',},],
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.createBatchSyncRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'createBatchSyncRule', body)
+
+    def testBatchModifySyncRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'base_settings': {
+            'dbmap_topic': '',
+            'json_template': '',
+            'binary_code': '',
+            'kafka_message_encoding': '',
+            'kafka_time_out': 1,
+            'part_load_balance': '',
+            'row_map_mode': '',
+            'save_json_text': False,
+            'message_format': '',
+            'start_rule_now': '',
+            'full_sync_mode': '',
+            'lib_name': '',
+            'jnr_name': '',
+            'exclude_dbs': [],
+            'exclude_dbs_switch': '',},
+            'inc_sync_settings': {
+            'incre_sync': 1,
+            'dyn_thread': 1,
+            'convert_urp_of_key': '',
+            'sync_lob': 1,
+            'gen_txn': 1,
+            'merge_track': 1,
+            'keep_bad_act': 1,
+            'fill_lob_column': 1,
+            'ddl_cv': 1,
+            'keep_seq_sync': '',
+            'storage_settings': {
+            'keep_incre_time': 1,
+            'src_max_mem': 1,
+            'src_max_disk': 1,
+            'txn_max_mem': 1,
+            'tf_max_size': 1,
+            'max_ld_mem': 1,},
+            'error_handling': {
+            'load_err_set': '',
+            'drp': '',
+            'irp': '',
+            'urp': '',
+            'info': '',
+            'report_failed_dml': '',},
+            'dml_track': {
+            'change_table_structure': False,
+            'date_time_column_unique': '',
+            'load_date_time_column_unique': False,
+            'op_column': '',
+            'opv_insert': '',
+            'opv_update': '',
+            'opv_update_key': '',
+            'opv_delete': '',
+            'audit': False,
+            'audit_prefix': '',
+            'audit_appendix': '',
+            'identity_column': '',
+            'load_date_column': '',
+            'load_time_column': '',
+            'load_date_time_column': False,
+            'keep_deleted_row': False,
+            'date_column': '',
+            'time_column': '',
+            'date_time_column': '',},},
+            'compress_encrypt_settings': {
+            'compress_switch': '',
+            'compress_algo': '',
+            'encrypt': '',
+            'compress': '',
+            'compress_level': '',
+            'encrypt_switch': '',},
+            'column_map': {
+            'user': '',
+            'target': '',
+            'column': '',},
+            'policy_settings': {
+            'policy_type': '',
+            'one_time': '',
+            'policies': '',},
+            'table_map': [{
+            'key': 'RodriguezRobinsonJohnson',
+            'split_dst_table': [{
+            'condition': '',
+            'dst_table': '',
+            'dst_user': '',},],
+            'dst_table': 'a',
+            'dst_user': 'b',
+            'src_table': 'c',
+            'src_user': 'd',
+            'column': [{
+            'dst_column': 'e',
+            'src_column': 'f',},],},],
+            'full_sync_settings': {
+            'dump_thd': 1,
+            'clean_user_before_dump': 0,
+            'existing_table': 'drop_to_recycle',
+            'full_sync': 0,
+            'start_scn': '',
+            'keep_exist_table': 0,
+            'keep_table': 0,
+            'load_thd': 1,
+            'ld_dir_opt': 0,
+            'try_split_part_table': 0,
+            'concurrent_table': [
+            'hello.world',],
+            'full_sync_custom_cfg': [{
+            'key': '',
+            'value': '',},],},
+            'full_sync_obj_filter': {
+            'full_sync_obj_data': [
+            'PROCEDURE',
+            'PACKAGE',
+            'PACKAGE BODY',
+            'DATABASE LINK',
+            'OLD JOB',
+            'JOB',
+            'PRIVS',
+            'CONSTRAINT',
+            'JAVA RESOURCE',
+            'JAVA SOURCE',],},
+            'inc_sync_ddl_filter': {
+            'inc_sync_ddl_data': [
+            'INDEX',
+            'VIEW',
+            'FUNCTION',],},
+            'other_settings': {
+            'dly_constraint_load': 0,
+            'ddl_cv': 0,
+            'keep_bad_act': 0,
+            'ignore_foreign_key': 0,
+            'jointing': {
+            'table': '',
+            'op': 'append',
+            'content': [],},
+            'dyn_thread': 1,
+            'convert_urp_of_key': 0,
+            'table_delay_load': [],
+            'tgt_extern_table': '',
+            'bw_limit': '',
+            'keep_usr_pwd': 1,
+            'etl_table': [{
+            'oprType': '',
+            'table': '',
+            'user': '',
+            'process': '',
+            'addInfo': '',},],
+            'filter_table_settings': {
+            'exclude_table': [{
+            'user': '',
+            'table': '',},],
+            'exclude_tab_with_column': '',
+            'exclude_tab_with_column_switch': 1,},
+            'table_space_map': {
+            'tgt_table_space': '',
+            'table_mapping_way': '',
+            'table_path_map': {},
+            'table_space_name': {},},
+            'enable_truncate_frequence': 1,
+            'keep_dyn_data': 0,
+            'zip_level': 0,
+            'table_change_info': 1,
+            'run_time': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',},
+            'biz_grp_list': [],
+            'map_type_list': [],
+            'user_map': {
+            'src_user': 'user1',
+            'tgt_user': 'user2',},
+            'maintenance': 1,
+            'is_duplicate': 1,
+            'full_map_switch': 1,
+            'rule_uuids': [],
+            'batch_base_settings': '',
+            'batch_full_sync_settings': '',
+            'batch_inc_sync_settings': '',
+            'batch_full_sync_obj_filter': '',
+            'batch_inc_sync_ddl_filter': '',
+            'batch_other_settings': '',
+            'batch_compress_encrypt_settings': '',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.batchModifySyncRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'batchModifySyncRule', body)
+
+    def testDeleteSyncRule(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuids': [],
+            'force': False,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.deleteSyncRule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'deleteSyncRule', body)
+
+    def testDescribeSyncRules(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': 'F530FB0E-0208-9071-66D3-E595AE7D5A4C',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        
+        syncRule = SyncRule(a)
+        r = syncRule.describeSyncRules(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'describeSyncRules', body)
+
+    def testListSyncRulesStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.listSyncRulesStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'listSyncRulesStatus', body)
+
+    def testListSyncRulesSliceStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'where_args': {
+            'src_slice_id': '540000197602208106',
+            'status': '',
+            'src_slice_ip': '58.240.63.198',
+            'src_slice_status': '',
+            'src_slice_port': '',
+            'cluster_name': '',
+            'phy_addr': '',},
+            'search_field': 'rule_name',
+            'search_value': '',
+            'page': 1,
+            'limit': 10,
+            'rule_uuid': '',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.listSyncRulesSliceStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'listSyncRulesSliceStatus', body)
+
+    def testListRuleLog(self):
+        a = Auth(username, pwd)
+        body = {
+            'offset': 0,
+            'limit': 10,
+            'date_start': '1978-08-27',
+            'date_end': '2007-04-16',
+            'type': -1,
+            'module_type': -1,
+            'query_type': 1,
+            'rule_uuid': 'F530FB0E-0208-9071-66D3-E595AE7D5A4C',
+            'search_content': 'test',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.listRuleLog(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'listRuleLog', body)
+
+    def testSwitchSyncRuleMaintenance(self):
+        a = Auth(username, pwd)
+        body = {
+            'maintenance_switch': '',
+            'uuid': '',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.switchSyncRuleMaintenance(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'switchSyncRuleMaintenance', body)
+
+    def testDescribeRuleUser(self):
+        a = Auth(username, pwd)
+        body = {
+            'db_uuid': 'edb8e935-A9eE-FE65-8A3F-e0f977fBdd65',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.describeRuleUser(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'describeRuleUser', body)
+
+    def testRuleTableFix(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': 'F530FB0E-0208-9071-66D3-E595AE7D5A4C',
+            'tab': [
+            'I2.table',],
+            'fix_relation': 0,
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.ruleTableFix(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'ruleTableFix', body)
+
+    def testRuleGetScn(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '3B6AfB6b-7bf1-0e44-aADA-e12A65c191d7',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.ruleGetScn(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'ruleGetScn', body)
+
+    def testRuleGetRpcScn(self):
+        a = Auth(username, pwd)
+        body = {
+            'db_uuid': '',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.ruleGetRpcScn(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'ruleGetRpcScn', body)
+
+    def testRuleGetReverseScn(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': '',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.ruleGetReverseScn(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'ruleGetReverseScn', body)
+
+    def testListKafkaOffsetInfo(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuid': 'BAfCFffb-2Bf3-BD4a-96Cb-Cb3a4eC0E2fF',
+        }
+        
+        
+        syncRule = SyncRule(a)
+        r = syncRule.listKafkaOffsetInfo(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'SyncRule', 'listKafkaOffsetInfo', body)
+
+
+if __name__ == '__main__':
+    unittest.main()

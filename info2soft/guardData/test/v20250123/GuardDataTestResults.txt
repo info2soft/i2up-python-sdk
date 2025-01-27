@@ -1,0 +1,147 @@
+<START-----------------------------------------------------------
+Method: createGuardData
+body: {
+ "node_uuid": "",
+ "policy_name": "",
+ "subject": "",
+ "object": "",
+ "operate": 1,
+ "decision": 1,
+ "policy_type": 0,
+ "_": "3eed4a3b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: policy_name;\n Lost: subject;\n Lost: object;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteGuardData
+body: {
+ "policy_uuids": [],
+ "_": "3ef9dc91"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: policy_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGuardData
+body: {
+ "node_uuid": "",
+ "_": "3f4c97b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listGuardDataLogs
+body: {
+ "node_uuid": "",
+ "page": 1,
+ "limit": 1,
+ "start": 0,
+ "end": 0,
+ "_": "3f099bc4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "node_uuids": [],
+ "_": "3e1b6714"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyGuardData
+body: {
+ "node_uuid": "",
+ "policy_name": "",
+ "subject": "",
+ "object": "",
+ "operate": 1,
+ "decision": 1,
+ "policy_type": 1,
+ "_": "3f0f7d68"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: policy_name;\n Lost: subject;\n Lost: object;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGuardDataEnabled
+body: {
+ "config_addr": "",
+ "config_port": 1,
+ "_": "3ec1abe2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: threatPerception
+body: {
+ "node_uuid": "",
+ "start": 1,
+ "end": 1,
+ "_": "3ec2828f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,256 @@
+<START-----------------------------------------------------------
+Method: activateLicAll
+body: {
+ "_": "3f42b98c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001020,
+  "message": "[1010001020] List empty."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createLic
+body: {
+ "num": 1,
+ "sn": [
+  "20-4570098558-01"
+ ],
+ "key": "5BrDir",
+ "sign": "",
+ "license": {
+  "20-4570098558-01": {
+   "feature": "cdp",
+   "lic": "joEsLGQImYbDo2/DSG2RGR7VorckQmnPAAvFgLNCVd78KFDFb0Y0xtShHFyQVF6VXRUcHvyeqJEu1/nuMOyyJiO8RMoU4GHZMrK6iLDRoPZHV87tp0Jd80MfuTHrpBc209IjM+AkSsTM66Wdfy0tvLJMfPqhaYdg7M80X+fhRfeP6kj9ikSVvmJMHJ/ms7lrgz5D+s9jhtzW7tv9cz07bbankTgwyZf6rnjbgOI76tsKzYq8rsBttYSGf+oy1qa2nM7x/pQHE6oRiXVy8+Ju2dzpwvLlMurF75r7lWyMRPSniPHBQGrx4yEEeKVwuWCMRaSJVyId13qyP7gPBqes4jgsiVHvt1okhydrAeoq89KOgnOHPqrpS+qI9dvXFmFRiP9AB0i9ra67tDx5ItYNh/neNgxsNpV3q0Tf9PfoTKiKwcYMg0AiFeKuSpynDIL530Ek8Jm/7LbXU7+mUkeGO7BJo9gxEMJRTHuSRLCLIXWm2LY2S58WccsXkL7GFaamkh6lE1VX3quXavLpHC0ishL4D0ocEdAh507s6GKd59oVErFAyBOifEE9EONR+95wD9MQMc4SdNt4l4Z7ATj67JN86UFZ5xZpGEOnMgCSUuuzX/Nx0HSF6uUf3Zs6HcViudmXcvLwwaFeRScRDwHYVLhiABda/qAp8Ovoc8Aw/3w="
+  }
+ },
+ "_": "3f4c7838"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110008,
+  "message": "[1010110008] License parse failed, it is invalid."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteLic
+body: {
+ "lic_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f2ee98c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "lic_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "lic_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLic
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLicCcHwCode
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "hardware_code": "11A761A1A293828314E6B0ADC126A9022F4444CBD6501E8C57371792087A5AAE8FCDE91879F9C21CD6245E94DBD77836"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLicObjHwCode
+body: {
+ "obj_uuids": "obj_uuids[]=11111111-1111-1111-1111-111111111111",
+ "_": "3f125b26"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001070,
+  "message": "[1010001070] No item selected"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeMoveLicBind
+body: {
+ "sn": "sn=40-4622191169-01",
+ "_": "3f26b6b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "count": 0,
+  "list": {}
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadLicInfo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "file_name": "Collect_mac&license_20250126164129.zip"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLic
+body: {
+ "search_value": "",
+ "search_field": "",
+ "direction": "",
+ "page": 1,
+ "limit": 1,
+ "order_by": "",
+ "_": "3f68fc9e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicBind
+body: {
+ "lic_uuid": "11111111-1111-1111-1111-111111111111",
+ "order_by": "",
+ "direction": "",
+ "_": "3c321749"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicObjBind
+body: {
+ "obj_uuid": "11111111-1111-1111-1111-111111111111",
+ "obj_type": 0,
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "proxy_switch": 1,
+ "proxy_id": "",
+ "obj_subtype": 1,
+ "_": "3d27935d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateBatchLic
+body: {
+ "num": 1,
+ "sn": [
+  "20-4570098558-01"
+ ],
+ "key": "5BrDir",
+ "sign": "",
+ "license": {
+  "20-4570098558-01": {
+   "feature": "cdp",
+   "lic": "joEsLGQImYbDo2/DSG2RGR7VorckQmnPAAvFgLNCVd78KFDFb0Y0xtShHFyQVF6VXRUcHvyeqJEu1/nuMOyyJiO8RMoU4GHZMrK6iLDRoPZHV87tp0Jd80MfuTHrpBc209IjM+AkSsTM66Wdfy0tvLJMfPqhaYdg7M80X+fhRfeP6kj9ikSVvmJMHJ/ms7lrgz5D+s9jhtzW7tv9cz07bbankTgwyZf6rnjbgOI76tsKzYq8rsBttYSGf+oy1qa2nM7x/pQHE6oRiXVy8+Ju2dzpwvLlMurF75r7lWyMRPSniPHBQGrx4yEEeKVwuWCMRaSJVyId13qyP7gPBqes4jgsiVHvt1okhydrAeoq89KOgnOHPqrpS+qI9dvXFmFRiP9AB0i9ra67tDx5ItYNh/neNgxsNpV3q0Tf9PfoTKiKwcYMg0AiFeKuSpynDIL530Ek8Jm/7LbXU7+mUkeGO7BJo9gxEMJRTHuSRLCLIXWm2LY2S58WccsXkL7GFaamkh6lE1VX3quXavLpHC0ishL4D0ocEdAh507s6GKd59oVErFAyBOifEE9EONR+95wD9MQMc4SdNt4l4Z7ATj67JN86UFZ5xZpGEOnMgCSUuuzX/Nx0HSF6uUf3Zs6HcViudmXcvLwwaFeRScRDwHYVLhiABda/qAp8Ovoc8Aw/3w="
+  }
+ },
+ "is_trial": 1,
+ "_": "3e88ddda"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110008,
+  "message": "[1010110008] License parse failed, it is invalid."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateLicBind
+body: {
+ "_": "3d88acb0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: lic_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,915 @@
+<START-----------------------------------------------------------
+Method: cmpImmediateObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f4ceacd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpResumeTimeObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f720d9f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpStopTimeObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f5803c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDatacheckObjCmp
+body: {
+ "db_user_map": "{'src_user':'dst_user'}",
+ "config": {
+  "one_task": "immediate"
+ },
+ "policies": "",
+ "policy_type": "periodic",
+ "one_time": "2019-05-27 16:07:08",
+ "repair": 1,
+ "obj_cmp_name": "test",
+ "src_db_uuid": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuid": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cal_table_recoders": 1,
+ "cmp_type": "user",
+ "rule_uuid": "751A03F5-C97D-645B-82B2-316A5D198528",
+ "src_db_auth_uuid": "",
+ "tgt_db_auth_uuid": "",
+ "_": "3d81a3e5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "uuid": "8D3A0905-03C2-48F3-867A-3E652822E5C1"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTbCmp
+body: {
+ "tb_cmp_name": "\u89c4\u5219\u540d",
+ "src_db_uuids": "4CA773F4-36E3-A091-122C-ACDFB2112C21",
+ "tgt_db_uuids": "40405FD3-DB86-DC8A-81C9-C137B6FDECE5",
+ "cmp_type": "table",
+ "filter_table": "[user.table]",
+ "db_tb_map": [
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "jiex",
+     "tab": "jenqhp",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "amon",
+     "tab": "ygigcgywkq",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "ombhqlwrj",
+     "tab": "yvdv",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "qfpuors",
+     "tab": "skphpd",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  },
+  {
+   "regex_switch": "1",
+   "src": [
+    {
+     "user": "fgro",
+     "tab": "zrlrtwmmh",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "tab": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "col": {
+    "col1": "col2",
+    "col3": "col4"
+   }
+  }
+ ],
+ "dump_thd": 1,
+ "polices": "0|00:00",
+ "policy_type": "one_time",
+ "concurrent_table": [
+  "hh.ww"
+ ],
+ "try_split_part_table": 0,
+ "one_time": "2019-05-27 16:07:08",
+ "config": {
+  "data_select": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "src_query": "",
+    "dst_user": "",
+    "dst_tb": "",
+    "dst_query": ""
+   }
+  ],
+  "compare_key": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "dst_user": "",
+    "dst_tb": "",
+    "src_dst_key": ""
+   }
+  ],
+  "globalConfig": {
+   "dkdiff_enable_step_count_table": "\"\"",
+   "dkdbsource_diff_only_key_columns": false,
+   "dkmagic_plan_max_diffs": 10000,
+   "dkfilesink_enable_sqlpatch_file": false,
+   "dkmagic_plan_number_tolerance_type": "absolute",
+   "dkmagic_plan_number_tolerance": 1,
+   "dkmagic_plan_datetime_tolerance": 1,
+   "split_table_schedule_cron": "\"\"",
+   "split_table_single_segment_max_rows": 5000000,
+   "split_table_result_expire_in_seconds": 0,
+   "dkdiffengine_recursion_max_steps": 1,
+   "dkdiffengine_recursion_interval_step_delay": 0,
+   "dkdbsource_left_ignore_type_names": "\"\"",
+   "dkdbsource_right_ignore_type_names": "\"\"",
+   "dkdbsource_left_ignore_column_names": "\"\"",
+   "dkdbsource_right_ignore_column_names": "",
+   "globalconfig": [
+    {
+     "key": "",
+     "value": ""
+    }
+   ],
+   "tolerance": false,
+   "execute_patch_after_complete": ""
+  },
+  "globals": [
+   {
+    "src_user": "",
+    "dst_user": "",
+    "src_query": "",
+    "dst_query": ""
+   }
+  ],
+  "exclude_tables": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "dst_user": "",
+    "dst_tb": ""
+   }
+  ],
+  "timestamps": {
+   "column_name": "",
+   "back_delay_in_seconds": 1,
+   "end_time": ""
+  },
+  "global_time_limit": false,
+  "v_tabmap": [
+   {
+    "src_user": "",
+    "src_tb": "",
+    "src_sql": "",
+    "tgt_user": "",
+    "tgt_tb": "",
+    "tgt_sql": "",
+    "key": ""
+   }
+  ]
+ },
+ "interval": "10m",
+ "db_user_map": [
+  {
+   "src": [
+    {
+     "user": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      },
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ],
+   "tgt": [
+    {
+     "user": "",
+     "dbs": [
+      {
+       "db_uuid": "",
+       "auth_uuid": ""
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "db_map": {
+  "src": [
+   {
+    "db_uuid": "",
+    "auth_uuid": ""
+   }
+  ],
+  "tgt": [
+   {
+    "db_uuid": "",
+    "auth_uuid": ""
+   }
+  ]
+ },
+ "incre_cmp_switch": "",
+ "incre_cmp_db_uuid": "",
+ "incre_cmp_db_type": "",
+ "_": "3f1e48e4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "uuid": "6D52E343-EC92-48F6-9C3A-BDDBA8C7D91A"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDatacheckObjCmp
+body: {
+ "force": false,
+ "uuids": "[@guid]",
+ "_": "3ed139f3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTbCmp
+body: {
+ "force": false,
+ "uuids": "79892Ce4-B1f5-EE16-cd65-7Bbd85D0f375",
+ "_": "3f10a327"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDatacheckObjCmp
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDatacheckObjCmpResult
+body: {
+ "BackLackOnly": 0,
+ "uuid": "19DCAcc2-DE1c-40C3-beDA-EeBda482d6d0",
+ "start_time": "",
+ "limit": 1,
+ "offset": "",
+ "search_value": "",
+ "_": "3cc0b53d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDatacheckObjCmpResultTimeList
+body: {
+ "uuid": "e7de842B-ECEB-F5DE-cA71-1fcCf4df6b3f",
+ "time_list": [],
+ "_": "3e144d8d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": null,
+  "message": "[1023333333] undefined message"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmp
+body: {
+ "uuid": "dD2fFA6B-aE1D-66bA-4F6B-bCd8CFb5afbc",
+ "_": "3c1c2398"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpCmpDesc
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "d267addD-D63d-FBd4-fA2b-4604F6D61DbE",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3f1b6e19"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpCmpResult
+body: {
+ "uuid": "",
+ "_": "3ee130a1"
+}
+response: {
+ "success": true,
+ "errorMessage": "",
+ "data": {
+  "status": "FAIL",
+  "msg": "",
+  "uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4",
+  "check_time": null,
+  "tb_cmp_name": null,
+  "result": true,
+  "head_info": {
+   "total": null,
+   "err": null,
+   "end": null,
+   "start": null,
+   "use_time": null,
+   "all_err": null
+  },
+  "result_info": {
+   "rows": [],
+   "total": null
+  }
+ },
+ "ret": 200
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "fB7B32ca-B1EB-9DB4-AF2A-88ba97aCBe4c",
+ "start_time": "",
+ "name": "",
+ "owner": "admin",
+ "_": "3b9f5351"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResult
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "",
+ "search_value": "",
+ "uuid": "7FDBBf4D-E206-6AD8-Ee2D-20BEF1eb554e",
+ "start_time": "",
+ "flag": 1,
+ "_": "3ef334e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpResuluTimeList
+body: {
+ "time_list": "94CE899f-db8E-1C30-c82A-A02A6dAC8FE7",
+ "uuid": "",
+ "_": "3f2c1586"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpStart
+body: {}
+response: {
+ "success": true,
+ "errorMessage": "",
+ "data": {
+  "result": false,
+  "msg": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ },
+ "ret": 200
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "obj_cmp_name",
+ "search_value": "test",
+ "_": "3d566b9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmpCmpInfo
+body: {
+ "filed": "",
+ "uuid": "",
+ "start_time": "",
+ "offset": 1,
+ "limit": 10,
+ "search_value": "",
+ "usr": "I2",
+ "_": "3f7b372c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmpResultTimeList
+body: {
+ "uuid": "621B33C5-F6BD-D3fC-ABB1-A53f767F00E7",
+ "_": "3e6b2b9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDatacheckObjCmpStatus
+body: {
+ "uuids": [],
+ "_": "3f012255"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmp
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "tb_cmp_name",
+ "search_value": "\u6d4b\u8bd5",
+ "_": "3e9b0c2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTbCmpResultTimeList
+body: {
+ "uuid": "",
+ "_": "3f554b4c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3e73a9dc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "CeDE3FC0-8D9a-D0FF-b61c-7F5dFe217d2C",
+ "tb_cmp_name": "",
+ "_": "3f1685d2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "C3EaA306-96E0-8fa5-Ee7b-C3B3770bf1BD",
+ "tb_cmp_name": "",
+ "_": "3f13a28f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopObjCmp
+body: {
+ "operate": "",
+ "obj_cmp_uuids": [],
+ "_": "3f2cbfb0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "1Ff8e5D0-0231-63d7-6a2d-389A563Efc3b",
+ "tb_cmp_name": "",
+ "_": "3f6f673d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+

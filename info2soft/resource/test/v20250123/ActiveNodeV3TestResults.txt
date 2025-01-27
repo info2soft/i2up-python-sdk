@@ -1,0 +1,887 @@
+<START-----------------------------------------------------------
+Method: activeNode
+body: {
+ "address": "71.3.137.150",
+ "node_cluster_type": "",
+ "biz_grp_list": [],
+ "data_port": 26804,
+ "port": {
+  "iasync": "",
+  "iarelay": "",
+  "iamsk": ""
+ },
+ "cache_dir": "/var/i2data/cache/",
+ "cluster_switch": 1,
+ "node_uuids": "",
+ "password": "f2cb84CB-Cc99-9Cde-AFAC-f7B4bbFEf047",
+ "node_type": "",
+ "phy_type": 1,
+ "log_dir": "/var/i2data/log/",
+ "registered": 0,
+ "maintenance": 0,
+ "node_name": "Maria Hall",
+ "comment": "string",
+ "web_uuid": "C883ffcE-b2Fd-e88a-1EC1-623c76F3cA96",
+ "_": "3f6b0e92"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchCreateSqlserverDbs
+body: {
+ "bind_lic_list": [],
+ "db_list": "",
+ "db_type": "",
+ "node_uuid": "",
+ "prefix": "",
+ "role": "",
+ "_": "3e1fbd0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkDbLink
+body: {
+ "jsonver": {},
+ "uuid": "6C4AEF37-6496-6DCD-E085-DD640001E4EC",
+ "type": "oracle",
+ "conf": [
+  {
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "kerberos",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "0",
+   "sniff": "0",
+   "id": 1,
+   "name": "kfk",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "none",
+   "pass": {
+    "user": "i2",
+    "pass": "i2"
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   }
+  },
+  {
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "1",
+   "sniff": "1",
+   "id": 2,
+   "name": "oracle",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "pass",
+   "pass": {
+    "user": "i2",
+    "pass": "i2"
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   }
+  },
+  {
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "0",
+   "sniff": "0",
+   "id": 3,
+   "name": "kfk",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "kerberos",
+   "pass": {
+    "user": "",
+    "pass": ""
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   }
+  },
+  {
+   "impala": {
+    "ip": "",
+    "port": "",
+    "name": "",
+    "auth": "kerberos",
+    "kerberos": {
+     "realm": "",
+     "name": "",
+     "host": "",
+     "principal": "",
+     "keytab": ""
+    }
+   },
+   "model": "1",
+   "sniff": "1",
+   "id": 4,
+   "name": "kudu",
+   "ip": "172.20.5.116",
+   "port": "1521",
+   "auth": "none",
+   "pass": {
+    "user": "",
+    "pass": ""
+   },
+   "kerberos": {
+    "principal": "",
+    "keytab": ""
+   }
+  }
+ ],
+ "_": "3f0a6b81"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createDbUnified
+body: {
+ "biz_grp_list": [],
+ "db_name": "Jeffrey White",
+ "node_uuid": "274De73F-9ad1-AbBa-aADB-8523fe553269",
+ "db_type": "oracle",
+ "file_open_type": "0",
+ "deploy_mode": "0",
+ "log_read_type": "file",
+ "config": {
+  "zookeeper": {
+   "set": [
+    {
+     "ip": "",
+     "port": "",
+     "zk_node": ""
+    }
+   ]
+  },
+  "pdserver": [
+   {
+    "ip": "",
+    "port": ""
+   }
+  ],
+  "model": 1,
+  "sniff": "",
+  "user_management": [
+   {
+    "user": "",
+    "passwd": "",
+    "default_db": "",
+    "cred_uuid": "",
+    "cred_login": 1,
+    "url": "",
+    "auth_uuid": ""
+   }
+  ],
+  "role": [
+   {
+    "source": 0,
+    "target": 1
+   }
+  ],
+  "log_read": {
+   "os_auth": 1,
+   "asm_instance": "",
+   "asm_username": "",
+   "asm_port": 1,
+   "asm_password": "12323131"
+  },
+  "filter_session": 1,
+  "relay": {
+   "enable": 1,
+   "relay_node_uuid": ""
+  },
+  "remote_file_agent": {
+   "enable": 1,
+   "port": 1,
+   "compress": "no"
+  },
+  "db_list": [
+   {
+    "disable": 0,
+    "ip": "",
+    "thread": "",
+    "port": "",
+    "http_port": ""
+   }
+  ],
+  "transport": {
+   "auth": "",
+   "ssl_mode": "",
+   "certificate": ""
+  },
+  "ocp_server": [
+   {
+    "ip": "",
+    "rpcport": "",
+    "sqlport": ""
+   }
+  ],
+  "manual_ocp_conf": 1,
+  "auth": "",
+  "replication_num": ""
+ },
+ "db_uuid": "75bb2dCB-Ce7D-959E-d41e-f96e1fa9b1e1",
+ "db_mode": "",
+ "cdb": "a4CDED3b-4C6F-22c7-fb63-E288E32b6f8e",
+ "maintenance": "",
+ "password": "",
+ "comment": "",
+ "_": "3f2c8e0c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDb
+body: {
+ "force": 0,
+ "uuids": [
+  "A0A0526D-6503-5C2A-E3D8-7D85813967F1"
+ ],
+ "_": "3e73e691"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDb
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDbSpace
+body: {
+ "uuid": "A0A0526D-6503-5C2A-E3D8-7D85813967F1",
+ "_": "3f1b42e2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptNode
+body: {
+ "registered": 1,
+ "uuid": "31424826-A97D-4085-81AE-FD64EC58B6CE1",
+ "_": "3f36853f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptNodeDebugInfo
+body: {
+ "last_time": 1,
+ "uuid": "41D1C1E8-60AE-4853-9694-5599560EEB0F",
+ "_": "3e0b0108"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "debug_node": [
+   []
+  ],
+  "process_status": {
+   "iawork": "off",
+   "iatrack": "off",
+   "iaback": "off",
+   "iarelay": "off",
+   "iamask": "off",
+   "iamonitor": "off",
+   "iaconsumer": "off",
+   "iaproducer": "off",
+   "iamss": "off",
+   "iadiff": "off",
+   "iaqianbase": "off",
+   "iadumper": "off",
+   "ialoader": "off",
+   "iamongodb": "off",
+   "iaredis": "off"
+  },
+  "cpu_useage": [],
+  "cpu_usage": [],
+  "cpu_useage_info": [],
+  "cpu_usage_info": [],
+  "memory_useage": [],
+  "memory_usage": [],
+  "memory_useage_info": [],
+  "memory_usage_info": [],
+  "network_usage_netsend": [],
+  "network_useage_netrecv": [],
+  "network_usage_netrecv": [],
+  "network_useage_info": [],
+  "network_usage_info": [],
+  "time": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getCharset
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "charset": [
+   "AL16UTF16",
+   "AL24UTFFSS",
+   "AL32UTF8",
+   "AR8ADOS710",
+   "AR8ADOS710T",
+   "AR8ADOS720",
+   "AR8ADOS720T",
+   "AR8APTEC715",
+   "AR8APTEC715T",
+   "AR8ARABICMAC",
+   "AR8ARABICMACS",
+   "AR8ARABICMACT",
+   "AR8ASMO708PLUS",
+   "AR8ASMO8X",
+   "AR8EBCDIC420S",
+   "AR8EBCDICX",
+   "AR8HPARABIC8T",
+   "AR8ISO8859P6",
+   "AR8MSWIN1256",
+   "AR8MUSSAD768",
+   "AR8MUSSAD768T",
+   "AR8NAFITHA711",
+   "AR8NAFITHA711T",
+   "AR8NAFITHA721",
+   "AR8NAFITHA721T",
+   "AR8SAKHR706",
+   "AR8SAKHR707",
+   "AR8SAKHR707T",
+   "AR8XBASIC",
+   "AZ8ISO8859P9E",
+   "BG8MSWIN",
+   "BG8PC437S",
+   "BLT8CP921",
+   "BLT8EBCDIC1112",
+   "BLT8EBCDIC1112S",
+   "BLT8ISO8859P13",
+   "BLT8MSWIN1257",
+   "BLT8PC775",
+   "BN8BSCII",
+   "CDN8PC863",
+   "CE8BS2000",
+   "CEL8ISO8859P14",
+   "CH7DEC",
+   "CL8BS2000",
+   "CL8EBCDIC1025",
+   "CL8EBCDIC1025C",
+   "CL8EBCDIC1025R",
+   "CL8EBCDIC1025S",
+   "CL8EBCDIC1025X",
+   "CL8EBCDIC1158",
+   "CL8EBCDIC1158R",
+   "CL8ISO8859P5",
+   "CL8ISOIR111",
+   "CL8KOI8R",
+   "CL8KOI8U",
+   "CL8MACCYRILLIC",
+   "CL8MACCYRILLICS",
+   "CL8MSWIN1251",
+   "D7DEC",
+   "D7SIEMENS9780X",
+   "D8BS2000",
+   "D8EBCDIC1141",
+   "D8EBCDIC273",
+   "DK7SIEMENS9780X",
+   "DK8BS2000",
+   "DK8EBCDIC1142",
+   "DK8EBCDIC277",
+   "E7DEC",
+   "E7SIEMENS9780X",
+   "E8BS2000",
+   "EE8BS2000",
+   "EE8EBCDIC870",
+   "EE8EBCDIC870C",
+   "EE8EBCDIC870S",
+   "EE8ISO8859P2",
+   "EE8MACCE",
+   "EE8MACCES",
+   "EE8MACCROATIAN",
+   "EE8MACCROATIANS",
+   "EE8MSWIN1250",
+   "EE8PC852",
+   "EEC8EUROASCI",
+   "EEC8EUROPA3",
+   "EL8DEC",
+   "EL8EBCDIC423R",
+   "EL8EBCDIC875",
+   "EL8EBCDIC875R",
+   "EL8EBCDIC875S",
+   "EL8GCOS7",
+   "EL8ISO8859P7",
+   "EL8MACGREEK",
+   "EL8MACGREEKS",
+   "EL8MSWIN1253",
+   "EL8PC437S",
+   "EL8PC737",
+   "EL8PC851",
+   "EL8PC869",
+   "ET8MSWIN923",
+   "F7DEC",
+   "F7SIEMENS9780X",
+   "F8BS2000",
+   "F8EBCDIC1147",
+   "F8EBCDIC297",
+   "HU8ABMOD",
+   "HU8CWI2",
+   "I7DEC",
+   "I7SIEMENS9780X",
+   "I8EBCDIC1144",
+   "I8EBCDIC280",
+   "IN8ISCII",
+   "IS8MACICELANDIC",
+   "IS8MACICELANDICS",
+   "IS8PC861",
+   "IW7IS960",
+   "IW8EBCDIC1086",
+   "IW8EBCDIC424",
+   "IW8EBCDIC424S",
+   "IW8ISO8859P8",
+   "IW8MACHEBREW",
+   "IW8MACHEBREWS",
+   "IW8MSWIN1255",
+   "IW8PC1507",
+   "JA16DBCS",
+   "JA16DBCSFIXED",
+   "JA16EBCDIC930",
+   "JA16EUC",
+   "JA16EUCFIXED",
+   "JA16EUCTILDE",
+   "JA16EUCYEN",
+   "JA16MACSJIS",
+   "JA16SJIS",
+   "JA16SJISFIXED",
+   "JA16SJISTILDE",
+   "JA16SJISYEN",
+   "JA16VMS",
+   "KO16DBCS",
+   "KO16DBCSFIXED",
+   "KO16KSC5601",
+   "KO16KSC5601FIXED",
+   "KO16KSCCS",
+   "KO16MSWIN949",
+   "LA8ISO6937",
+   "LA8PASSPORT",
+   "LT8MSWIN921",
+   "LT8PC772",
+   "LT8PC774",
+   "LV8PC1117",
+   "LV8PC8LR",
+   "LV8RST104090",
+   "N7SIEMENS9780X",
+   "N8PC865",
+   "NDK7DEC",
+   "NE8ISO8859P10",
+   "NEE8ISO8859P4",
+   "NL7DEC",
+   "RU8BESTA",
+   "RU8PC855",
+   "RU8PC866",
+   "S7DEC",
+   "S7SIEMENS9780X",
+   "S8BS2000",
+   "S8EBCDIC1143",
+   "S8EBCDIC278",
+   "SE8ISO8859P3",
+   "SF7ASCII",
+   "SF7DEC",
+   "TH8MACTHAI",
+   "TH8MACTHAIS",
+   "TH8TISASCII",
+   "TH8TISEBCDIC",
+   "TH8TISEBCDICS",
+   "TR7DEC",
+   "TR8DEC",
+   "TR8EBCDIC1026",
+   "TR8EBCDIC1026S",
+   "TR8MACTURKISH",
+   "TR8MACTURKISHS",
+   "TR8MSWIN1254",
+   "TR8PC857",
+   "US7ASCII",
+   "US8BS2000",
+   "US8ICL",
+   "US8PC437",
+   "UTF8",
+   "UTFE",
+   "VN8MSWIN1258",
+   "VN8VN3",
+   "WE8BS2000",
+   "WE8BS2000E",
+   "WE8BS2000L5",
+   "WE8DEC",
+   "WE8DG",
+   "WE8EBCDIC1047",
+   "WE8EBCDIC1047E",
+   "WE8EBCDIC1140",
+   "WE8EBCDIC1140C",
+   "WE8EBCDIC1145",
+   "WE8EBCDIC1146",
+   "WE8EBCDIC1148",
+   "WE8EBCDIC1148C",
+   "WE8EBCDIC284",
+   "WE8EBCDIC285",
+   "WE8EBCDIC37",
+   "WE8EBCDIC37C",
+   "WE8EBCDIC500",
+   "WE8EBCDIC500C",
+   "WE8EBCDIC871",
+   "WE8EBCDIC924",
+   "WE8GCOS7",
+   "WE8HP",
+   "WE8ICL",
+   "WE8ISO8859P1",
+   "WE8ISO8859P15",
+   "WE8ISO8859P9",
+   "WE8ISOICLUK",
+   "WE8MACROMAN8",
+   "WE8MACROMAN8S",
+   "WE8MSWIN1252",
+   "WE8NCR4970",
+   "WE8NEXTSTEP",
+   "WE8PC850",
+   "WE8PC858",
+   "WE8PC860",
+   "WE8ROMAN8",
+   "YUG7ASCII",
+   "ZHS16CGB231280",
+   "ZHS16CGB231280FIXED",
+   "ZHS16DBCS",
+   "ZHS16DBCSFIXED",
+   "ZHS16GBK",
+   "ZHS16GBKFIXED",
+   "ZHS16MACCGB231280",
+   "ZHS32GB18030",
+   "ZHT16BIG5",
+   "ZHT16BIG5FIXED",
+   "ZHT16CCDC",
+   "ZHT16DBCS",
+   "ZHT16DBCSFIXED",
+   "ZHT16DBT",
+   "ZHT16HKSCS",
+   "ZHT16HKSCS31",
+   "ZHT16MSWIN950",
+   "ZHT32EUC",
+   "ZHT32EUCFIXED",
+   "ZHT32SOPS",
+   "ZHT32TRIS",
+   "ZHT32TRISFIXED"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbStatus
+body: {
+ "uuids": "B7F346bd-dd6F-CeFd-c5Ef-a2493cabFC49",
+ "_": "3f22ecd4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The uuids must be an array."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbs
+body: {
+ "search_field": "db_name",
+ "search_value": "",
+ "page": 1,
+ "limit": 10,
+ "direction": "",
+ "db_type": "",
+ "ip": "",
+ "port": "",
+ "service_name": "",
+ "role": "",
+ "_": "3eecec0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listInactiveNodes
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "uuids": [
+  "3CE3dfA9-bcBb-Cc1a-38Ff-9E3FDA21311c",
+  "FEC1FE9c-417D-628B-7b2E-ED98bCdEEEE6"
+ ],
+ "_": "3edc71d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "uuid": "3CE3dfA9-bcBb-Cc1a-38Ff-9E3FDA21311c",
+    "status": "OFFLINE",
+    "version": "-",
+    "os": "-",
+    "process_status": []
+   },
+   {
+    "uuid": "FEC1FE9c-417D-628B-7b2E-ED98bCdEEEE6",
+    "status": "OFFLINE",
+    "version": "-",
+    "os": "-",
+    "process_status": []
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodes
+body: {
+ "search_field": "",
+ "order_by": "",
+ "sort": "@pick{'name',address}",
+ "page": 1,
+ "limit": 10,
+ "search_value": "",
+ "where_args": "[\"node_cluster_type\"=1]",
+ "nodetype": "@pick{\"name\",\"source\",\"backup\"]}",
+ "_": "3edcb0bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The where args must be an array."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDb
+body: {
+ "random_str": "",
+ "db_name": "Donald Brown",
+ "db_uuid": "A0A0526D-6503-5C2A-E3D8-7D85813967F1",
+ "node_uuid": "0596a77C-64Fd-cAf2-DB9c-cAaeBD56eD88",
+ "db_type": "oracle",
+ "file_open_type": "0",
+ "deploy_mode": "0",
+ "log_read_type": "file",
+ "config": {
+  "broker_server": " ",
+  "instance_name": "",
+  "database_name": "",
+  "conn_pool_max": 1,
+  "username": "Cynthia Rodriguez",
+  "password": "",
+  "server_name": "",
+  "port": 1,
+  "log_read": {
+   "os_auth": 1,
+   "asm_instance": "",
+   "asm_username": "",
+   "asm_port": 1,
+   "asm_password": "12323131"
+  },
+  "filter_session": 1,
+  "relay": {
+   "enable": 1,
+   "relay_node_uuid": ""
+  },
+  "remote_file_agent": {
+   "enable": 1,
+   "port": 1,
+   "compress": "no"
+  },
+  "db_list": [
+   {
+    "ip": "",
+    "thread": ""
+   }
+  ]
+ },
+ "cdb": "75d0BB6a-cAfB-fCbe-fD13-8BC8dDDa252b",
+ "maintenance": "",
+ "password": "",
+ "_": "3f73b4db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebuildActiveNode
+body: {
+ "uuid": "",
+ "_": "3f106e11"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeNode
+body: {
+ "uuids": [
+  "fe7d2Eec-AAF1-beD3-965c-F3Db2898fdBa"
+ ],
+ "_": "3f35699e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
