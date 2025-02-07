@@ -318,7 +318,7 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
         enhance_sign_str = '&' . join(sign_fields)
         enhance_sign_str = enhance_sign_str.replace('"', '')
         enhance_signature_bytes = hmac.new(
-            bytes(token or 'token', encoding='utf-8'),
+            bytes(sign_key or 'token', encoding='utf-8'),
             bytes(enhance_sign_str, encoding='utf-8'),
             digestmod=hashlib.sha256
         ).digest()
