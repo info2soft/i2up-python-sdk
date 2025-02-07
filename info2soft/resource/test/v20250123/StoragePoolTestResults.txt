@@ -1,0 +1,358 @@
+<START-----------------------------------------------------------
+Method: availablePoolMemberList
+body: {
+ "config_addr": "",
+ "pool_type": "BlockStorage",
+ "storage_conf_ip": "",
+ "os_user": "",
+ "os_pwd": "",
+ "pool_uuid": "",
+ "storage_conf_user": "",
+ "storage_conf_password": "",
+ "_": "3f64a564"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001072,
+  "message": "[1010001072] Invalid ip"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createStoragePool
+body: {
+ "pool_name": "",
+ "pool_type": "",
+ "ip": "",
+ "disk_list": [
+  {
+   "name": "",
+   "size": "",
+   "type": ""
+  }
+ ],
+ "description": "",
+ "data_addr": "",
+ "storage_conf_ip": "",
+ "compress": 0,
+ "dedup": 0,
+ "fc_as_target": 0,
+ "wwpn_info": [],
+ "tape_uuid": "",
+ "physical_name": "",
+ "node_uuid": "",
+ "bind_lic_list": [],
+ "os_user": "",
+ "os_pwd": "",
+ "monitor_settings": {
+  "warn_sw": 0,
+  "usage_threshold": 80
+ },
+ "storage_conf_user": "",
+ "storage_conf_password": "",
+ "dev_id": "",
+ "_": "3e9711ac"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: physical_name;\n Lost: pool_type;\n Lost: ip;\n Lost: data_addr;\n Lost: os_user;\n Lost: os_pwd;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFcTarget
+body: {
+ "pool_uuid": "",
+ "wwpn": "",
+ "force": 1,
+ "_": "3f602dfc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteStoragePool
+body: {
+ "pool_uuids": [],
+ "force": 1,
+ "_": "3f789f47"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeStoragePool
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: extendStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3e4396db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHbaInfo
+body: {
+ "ip": "",
+ "os_user": "",
+ "os_pwd": "",
+ "_": "3f35bfb2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStoragePoolStatus
+body: {
+ "pool_uuids": [],
+ "force_refresh": "",
+ "_": "3f257fd7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyStoragePool
+body: {
+ "pool_name": "",
+ "pool_type": "",
+ "ip": "",
+ "disk_list": [
+  {
+   "name": "",
+   "size": "",
+   "type": ""
+  }
+ ],
+ "random_str": "",
+ "description": "",
+ "data_addr": "",
+ "compress": 0,
+ "dedup": 0,
+ "fc_as_target": 0,
+ "wwpn_info": [],
+ "tape_uuid": "",
+ "physical_name": "",
+ "node_uuid": "",
+ "os_user": "",
+ "os_pwd": "",
+ "monitor_settings": {
+  "warn_sw": "",
+  "usage_threshold": ""
+ },
+ "storage_conf_user": "",
+ "storage_conf_password": "",
+ "_": "3f33905d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewKeyStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3f6ba97a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetStoragePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "add_disk_list": [
+  {
+   "name": "/dev/sdb",
+   "size": 2000398934016,
+   "type": "disk"
+  }
+ ],
+ "_": "3f146bc6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: storagePoolBatchImport
+body: {
+ "pool_list": [
+  {
+   "pool_name": "",
+   "pool_type": "",
+   "ip": "",
+   "disk_list": [
+    {
+     "name": "",
+     "size": "",
+     "type": ""
+    }
+   ],
+   "description": "",
+   "data_addr": "",
+   "storage_conf_ip": "",
+   "compress": 0,
+   "dedup": 0,
+   "fc_as_target": 0,
+   "wwpn_info": [],
+   "tape_uuid": "",
+   "physical_name": "",
+   "node_uuid": "",
+   "os_user": "",
+   "os_pwd": ""
+  }
+ ],
+ "_": "3a9d90fb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_list[0][pool_name];\n Lost: pool_list[0][physical_name];\n Lost: pool_list[0][pool_type];\n Lost: pool_list[0][node_uuid];\n Lost: pool_list[0][ip];\n Lost: pool_list[0][data_addr];\n Lost: pool_list[0][os_user];\n Lost: pool_list[0][os_pwd];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: storagePoolList
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3e09dd9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: storagePoolLoadPools
+body: {
+ "node_uuid": "",
+ "_": "3da9c57f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: storagePoolUpdateConfig
+body: {
+ "pool_uuid": "",
+ "_": "3f30a376"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

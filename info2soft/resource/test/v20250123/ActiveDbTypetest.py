@@ -1,0 +1,150 @@
+
+# -*- coding: utf-8 -*-
+# flake8: noqa
+import sys
+
+import unittest
+# from info2soft import ActiveDbType
+from info2soft.resource.v20250123.ActiveDbType import ActiveDbType
+from info2soft import Auth
+from info2soft.fileWriter import write
+from info2soft.compat import is_py2, is_py3
+
+if is_py2:
+    import sys
+    import StringIO
+    import urllib
+
+    # reload(sys)
+    sys.setdefaultencoding('utf-8')
+    StringIO = StringIO.StringIO
+    urlopen = urllib.urlopen
+if is_py3:
+    import io
+    import urllib
+
+    StringIO = io.StringIO
+    urlopen = urllib.request.urlopen
+
+username = 'admin'
+pwd = 'Info@123'
+
+
+class ActiveDbTypeTestCase(unittest.TestCase):
+
+    def testListActiveDbType(self):
+        a = Auth(username, pwd)
+        body = {
+            'where_args': {
+            'type_uuid': [],},
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.listActiveDbType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'listActiveDbType', body)
+
+    def testListActiveDbTypeAvailMappingType(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.listActiveDbTypeAvailMappingType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'listActiveDbTypeAvailMappingType', body)
+
+    def testCreateActiveDbType(self):
+        a = Auth(username, pwd)
+        body = {
+            'type_name': '',
+            'mapping_type': '',
+            'is_source': 1,
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.createActiveDbType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'createActiveDbType', body)
+
+    def testModifyActiveDbType(self):
+        a = Auth(username, pwd)
+        body = {
+            'type_name': '',
+            'is_source': '',
+            'mapping_type_name': '',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.modifyActiveDbType(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'modifyActiveDbType', body)
+
+    def testDeleteActiveDbType(self):
+        a = Auth(username, pwd)
+        body = {
+            'type_uuid': '',
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.deleteActiveDbType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'deleteActiveDbType', body)
+
+    def testListAvailActiveDbSourceType(self):
+        a = Auth(username, pwd)
+        body = {
+            'where_args': {
+            'src_type_name': 'mysql',},
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.listAvailActiveDbSourceType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'listAvailActiveDbSourceType', body)
+
+    def testListAvailActiveDbType(self):
+        a = Auth(username, pwd)
+        body = {
+            'where_args': {
+            'type_uuid': '',},
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.listAvailActiveDbType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'listAvailActiveDbType', body)
+
+    def testModifyAvailActiveDbType(self):
+        a = Auth(username, pwd)
+        body = {
+            'type_uuid': '',
+            'dst_type_uuid_list': [
+            '8F26595D-CBB9-4053-9B3A-43F9F23BFCD7',
+            'A4733F57-70B9-4DF8-83D8-43F8557A1C8F',],
+        }
+        
+        
+        activeDbType = ActiveDbType(a)
+        r = activeDbType.modifyAvailActiveDbType(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'ActiveDbType', 'modifyAvailActiveDbType', body)
+
+
+if __name__ == '__main__':
+    unittest.main()

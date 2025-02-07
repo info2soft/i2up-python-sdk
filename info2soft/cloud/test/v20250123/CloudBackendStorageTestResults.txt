@@ -1,0 +1,92 @@
+<START-----------------------------------------------------------
+Method: createBackendStorage
+body: {
+ "ip": "",
+ "port": 1,
+ "vp_uuid": "",
+ "type": 1,
+ "link_type": 1,
+ "user_name": "",
+ "password": "",
+ "_": "3f398ee1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: ip;\n Lost: user_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackendStorage
+body: {
+ "uuids": [],
+ "force": 1,
+ "_": "3f5445af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackendStorage
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackendStorages
+body: {
+ "page": 1,
+ "limit": 1,
+ "where_args": "{vp_uuid:}",
+ "_": "3dff2b86"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not uuid: where_args[vp_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBackendStorage
+body: {
+ "ip": "",
+ "port": 1,
+ "vp_uuid": "",
+ "type": 1,
+ "link_type": 1,
+ "user_name": "",
+ "password": "",
+ "_": "3c6a58a4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: user_name;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

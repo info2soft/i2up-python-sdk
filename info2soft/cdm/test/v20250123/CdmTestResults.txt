@@ -1,0 +1,536 @@
+<START-----------------------------------------------------------
+Method: cdmScriptPathCheck
+body: {
+ "wk_uuid": "",
+ "file_dir": "",
+ "_": "3ef2c16d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCdm
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "mirr_sync_attr": "1",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/fsp_bk/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "0",
+  "wk_path": [
+   "/"
+  ],
+  "fsp_name": "test",
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 1,
+  "bkup_schedule": [
+   {
+    "sched_day": 7,
+    "sched_time": "09:04",
+    "sched_every": 2,
+    "limit": 40,
+    "backup_type": 0,
+    "policys": "\"\u6bcf\u592922:00\u81ea\u52a8\u6267\u884c\"",
+    "backup_type_show": "\"\u5168\u5907\"",
+    "running_time": "\"22:00\""
+   }
+  ],
+  "fsp_type": 3,
+  "del_policy": 1,
+  "timeout": 1,
+  "cbt_switch": 1,
+  "threshold_vaild_byte": "",
+  "advanced_policy": {
+   "bk_cdp": 1,
+   "execute_interval": 1,
+   "cdp_detail": 1,
+   "cdp_daily": 1,
+   "cdp_param": "",
+   "cdp_switch": 1,
+   "cdp_snapshot_days": 1,
+   "cdp_snapshot_execute_interval": 1,
+   "cdp_keep_data": 1
+  },
+  "vp_uuid": "",
+  "storage_uuid": "",
+  "data_ip_uuid": "",
+  "oracle_dbagent_param": {
+   "oracle_sid": "",
+   "sql_plus_path": "",
+   "username": "",
+   "password": "",
+   "port": 1,
+   "table_space": [],
+   "timeout": 1
+  },
+  "mysql_dbagent_param": {
+   "mysql_path": "",
+   "username": "",
+   "password": "",
+   "port": 1,
+   "database_name": [],
+   "timeout": 1
+  },
+  "sqlserver_dbagent_param": {
+   "timeout": 1,
+   "enable": 0
+  },
+  "database_type": "0",
+  "database_switch": 0,
+  "auto": "",
+  "orch_vm_name": "",
+  "scripts_type": "",
+  "scripts": "",
+  "start_type": 0,
+  "custom_dbagent_param": {
+   "pre_snapshot_script": "",
+   "post_snapshot_script": ""
+  }
+ },
+ "_": "3e9eb8fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 7;\n The fsp_backup[bkup_policy] field must be one of: 0,1;\n The fsp_backup[fsp_type] field must be one of: 8,13;\n Lost: fsp_backup[threshold_vaild_byte];\n Lost: fsp_backup[vp_uuid];\n Lost: fsp_backup[storage_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCdm
+body: {
+ "fsp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "del_policy": 1,
+ "force": 1,
+ "recycle": 0,
+ "_": "3ef27893"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010031017,
+  "message": "[1010031017] Rule does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCdm
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getByWk
+body: {
+ "wk_uuid": "",
+ "vp_uuid": "",
+ "_": "3f34afd9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getHostStorageList
+body: {
+ "vp_uuid": "",
+ "_": "3eb1b9d3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNetworkList
+body: {
+ "uuid": "",
+ "type": "",
+ "storage_id": "",
+ "_": "3f1f5f62"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: type;\n Lost: storage_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodeList
+body: {
+ "path": "",
+ "type": "",
+ "bk_uuid": "",
+ "_": "3caf7276"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getPointList
+body: {
+ "bk_uuid": "",
+ "path": "",
+ "type": "",
+ "suffix": "",
+ "page": 1,
+ "limit": 1,
+ "rule_uuid": "",
+ "search_key": "",
+ "search_value": "2",
+ "start": 1,
+ "end": 1,
+ "order": "",
+ "restore_point": "",
+ "_": "3d952c24"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getResourceList
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f4431c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getVmInfo
+body: {
+ "vp_uuid": "",
+ "bk_uuid": "",
+ "vm_ref": "",
+ "_": "3f692d9f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: bk_uuid;\n Lost: vm_ref;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdm
+body: {
+ "type": 3,
+ "limit": 10,
+ "page": 1,
+ "where_args": [],
+ "status": "",
+ "_": "3f57ee85"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmDriverInfo
+body: {
+ "node_uuid": "",
+ "_": "3f3afb41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCdmStatus
+body: {
+ "fsp_uuids": "fsp_uuids[]=11111111-1111-1111-1111-111111111111",
+ "force_refresh": 1,
+ "_": "3f2770f2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDrillRestorePoint
+body: {
+ "rule_uuid": "",
+ "_": "3e7402de"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCdm
+body: {
+ "fsp_backup": {
+  "secret_key": "",
+  "band_width": "",
+  "mirr_open_type": "0",
+  "service_uuid": "",
+  "mirr_sync_flag": "0",
+  "excl_path": [
+   "/cgroup/",
+   "/dev/",
+   "/etc/X11/xorg.conf/",
+   "/etc/init.d/i2node/",
+   "/etc/rc.d/init.d/i2node/",
+   "/etc/sdata/",
+   "/lost+found/",
+   "/media/",
+   "/mnt/",
+   "/proc/",
+   "/run/",
+   "/selinux/",
+   "/sys/",
+   "/tmp/",
+   "/usr/local/sdata/",
+   "/var/i2/",
+   "/var/i2data/",
+   "/var/lock/",
+   "/var/run/vmblock-fuse/"
+  ],
+  "bkup_one_time": 0,
+  "encrypt_switch": "0",
+  "mirr_sync_attr": "1",
+  "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+  "wk_data_type": 1,
+  "bk_path": [
+   "/fsp_bk/"
+  ],
+  "sync_item": "/",
+  "bkup_policy": 2,
+  "mirr_file_check": "0",
+  "compress": "0",
+  "monitor_type": 0,
+  "failover": "0",
+  "wk_path": [
+   "/"
+  ],
+  "fsp_name": "test",
+  "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "fsp_wk_shut_flag": "2",
+  "bk_data_type": 1,
+  "bkup_schedule": [
+   {
+    "sched_day": 21,
+    "sched_time": "06:43",
+    "sched_every": 2,
+    "limit": 15,
+    "backup_type": 0,
+    "policys": "\"\u6bcf\u592922:00\u81ea\u52a8\u6267\u884c\"",
+    "backup_type_show": "\"\u5168\u5907\"",
+    "running_time": "\"22:00\""
+   }
+  ],
+  "fsp_type": 3,
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "del_policy": 1,
+  "timeout": 1,
+  "cbt_switch": 1,
+  "threshold_vaild_byte": "",
+  "advanced_policy": {
+   "bk_cdp": 1,
+   "execute_interval": 1,
+   "cdp_detail": 1,
+   "cdp_daily": 1,
+   "cdp_param": "",
+   "cdp_switch": 1,
+   "cdp_snapshot_days": 1,
+   "cdp_snapshot_execute_interval": 1
+  },
+  "vp_uuid": "",
+  "storage_uuid": "",
+  "data_ip_uuid": "",
+  "oracle_dbagent_param": {
+   "oracle_sid": "",
+   "sql_plus_path": "",
+   "username": "",
+   "password": "",
+   "port": 1,
+   "table_space": [],
+   "timeout": 1
+  },
+  "mysql_dbagent_param": {
+   "mysql_path": "",
+   "username": "",
+   "password": "",
+   "port": 1,
+   "database_name": [],
+   "timeout": 1
+  },
+  "sqlserver_dbagent_param": {
+   "timeout": 1,
+   "enable": 0
+  },
+  "database_type": "0",
+  "database_switch": 0,
+  "auto": "",
+  "orch_vm_name": "",
+  "scripts_type": "",
+  "scripts": "",
+  "start_type": 0
+ },
+ "_": "3eb8ee45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The fsp_backup[bk_data_type] field must be one of: 7;\n The fsp_backup[bkup_policy] field must be one of: 0,1;\n The fsp_backup[fsp_type] field must be one of: 8,13;\n Lost: fsp_backup[threshold_vaild_byte];\n Lost: fsp_backup[advanced_policy][cdp_keep_data];\n Lost: fsp_backup[vp_uuid];\n Lost: fsp_backup[storage_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyOracleArchiveMode
+body: {
+ "username": "",
+ "password": "",
+ "sqlplus_path": "",
+ "sid": "",
+ "timeout": "",
+ "port": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "_": "3edb7b90"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: wk_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n Lost: timeout;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,269 @@
+<START-----------------------------------------------------------
+Method: deleteCloudPlatform
+body: {
+ "cloud_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "force": 1,
+ "_": "3ecee4a3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCloudPlatform
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCloudPlatform
+body: {
+ "page": 1,
+ "limit": 10,
+ "where_args": "{vp_type:1}",
+ "_": "3f35f454"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCloudPlatformRegion
+body: {
+ "cloud_type": 1,
+ "_": "3f146d34"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCloudPlatformStatus
+body: {
+ "vp_uuids": [],
+ "force_refresh": 1,
+ "_": "3ea3264d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFlavor
+body: {
+ "cloud_uuid": "",
+ "server_zone": "cn-east-2a",
+ "region_id": "",
+ "project_id": "",
+ "nic_count": "",
+ "cpu": "",
+ "mem_mb": "",
+ "flavor_id": "",
+ "image_id": "",
+ "_": "3f38fda3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listProjects
+body: {
+ "vp_uuid": "",
+ "_": "3e1beec5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRegions
+body: {
+ "vp_uuid": "",
+ "_": "3ed4792b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRelativeNode
+body: {
+ "page": 1,
+ "limit": 10,
+ "cloud_uuid": "",
+ "_": "3ed0f5b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCloudPlatform
+body: {
+ "os_user": "",
+ "os_pwd": "",
+ "user_domain_id": "",
+ "register_type": "",
+ "iam_user": "",
+ "cloud_uuid": "",
+ "bind_lic_list": "",
+ "https://apiref.info2soft.com/repository/editor?id=28&itf=824": 0,
+ "_": "3eb69ca2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: os_user;\n Lost: os_pwd;\n Lost: cloud_name;\n Lost: npsvr_uuid;\n Lost: cloud_type;\n Lost: maintenance;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: registerCloudPlatform
+body: {
+ "authurl": "",
+ "os_user": "",
+ "os_pwd": "",
+ "user_domain_id": "",
+ "cloud_name": "",
+ "config_addr": "192.168.66.66",
+ "register_type": "",
+ "iam_user": "",
+ "cloud_type": 1,
+ "user_domain_name": "",
+ "region": "",
+ "bind_lic_list": [],
+ "maintenance": 0,
+ "cc_ip_uuid": "",
+ "access_key": "",
+ "secret_access_key": "",
+ "mfa_switch": 1,
+ "connect_port": 5000,
+ "project_id": "",
+ "npsvr_uuid": "",
+ "_": "3d968257"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: os_user;\n Lost: os_pwd;\n Lost: cloud_name;\n Lost: npsvr_uuid;\n The cloud_type field must be one of: 4,5,9,12,14,21,15,17;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchMaintenance
+body: {
+ "uuid": "",
+ "switch": 0,
+ "_": "3f3f5f96"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncEcs
+body: {
+ "cloud_uuid": "",
+ "region_id": "",
+ "project_id": "",
+ "_": "3f426606"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncVolume
+body: {
+ "cloud_uuid": "",
+ "_": "3d4902c1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: cloud_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

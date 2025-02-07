@@ -1,0 +1,833 @@
+<START-----------------------------------------------------------
+Method: listRetentionPolicy
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [
+   {
+    "id": 1,
+    "level": 0,
+    "type": "week",
+    "value": 1,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 2,
+    "level": 1,
+    "type": "week",
+    "value": 2,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 3,
+    "level": 2,
+    "type": "week",
+    "value": 3,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 4,
+    "level": 3,
+    "type": "month",
+    "value": 1,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 5,
+    "level": 4,
+    "type": "month",
+    "value": 2,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 6,
+    "level": 5,
+    "type": "month",
+    "value": 3,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 7,
+    "level": 6,
+    "type": "month",
+    "value": 6,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 8,
+    "level": 7,
+    "type": "month",
+    "value": 9,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 9,
+    "level": 8,
+    "type": "year",
+    "value": 1,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 10,
+    "level": 9,
+    "type": "year",
+    "value": 2,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 11,
+    "level": 10,
+    "type": "year",
+    "value": 3,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 12,
+    "level": 11,
+    "type": "year",
+    "value": 5,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 13,
+    "level": 12,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 14,
+    "level": 13,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 15,
+    "level": 14,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 16,
+    "level": 15,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 17,
+    "level": 16,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 18,
+    "level": 17,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 19,
+    "level": 18,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 20,
+    "level": 19,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 21,
+    "level": 20,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 22,
+    "level": 21,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 23,
+    "level": 22,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 24,
+    "level": 23,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 25,
+    "level": 24,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 26,
+    "level": 25,
+    "type": "now",
+    "value": null,
+    "task_list": [],
+    "can_edit": false
+   },
+   {
+    "id": 27,
+    "level": 26,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 28,
+    "level": 27,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 29,
+    "level": 28,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 30,
+    "level": 29,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 31,
+    "level": 30,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 32,
+    "level": 31,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 33,
+    "level": 32,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 34,
+    "level": 33,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 35,
+    "level": 34,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 36,
+    "level": 35,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 37,
+    "level": 36,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 38,
+    "level": 37,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 39,
+    "level": 38,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 40,
+    "level": 39,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 41,
+    "level": 40,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 42,
+    "level": 41,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 43,
+    "level": 42,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 44,
+    "level": 43,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 45,
+    "level": 44,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 46,
+    "level": 45,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 47,
+    "level": 46,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 48,
+    "level": 47,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 49,
+    "level": 48,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 50,
+    "level": 49,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 51,
+    "level": 50,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 52,
+    "level": 51,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 53,
+    "level": 52,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 54,
+    "level": 53,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 55,
+    "level": 54,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 56,
+    "level": 55,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 57,
+    "level": 56,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 58,
+    "level": 57,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 59,
+    "level": 58,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 60,
+    "level": 59,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 61,
+    "level": 60,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 62,
+    "level": 61,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 63,
+    "level": 62,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 64,
+    "level": 63,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 65,
+    "level": 64,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 66,
+    "level": 65,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 67,
+    "level": 66,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 68,
+    "level": 67,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 69,
+    "level": 68,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 70,
+    "level": 69,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 71,
+    "level": 70,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 72,
+    "level": 71,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 73,
+    "level": 72,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 74,
+    "level": 73,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 75,
+    "level": 74,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 76,
+    "level": 75,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 77,
+    "level": 76,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 78,
+    "level": 77,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 79,
+    "level": 78,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 80,
+    "level": 79,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 81,
+    "level": 80,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 82,
+    "level": 81,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 83,
+    "level": 82,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 84,
+    "level": 83,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 85,
+    "level": 84,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 86,
+    "level": 85,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 87,
+    "level": 86,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 88,
+    "level": 87,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 89,
+    "level": 88,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 90,
+    "level": 89,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 91,
+    "level": 90,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 92,
+    "level": 91,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 93,
+    "level": 92,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 94,
+    "level": 93,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 95,
+    "level": 94,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 96,
+    "level": 95,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 97,
+    "level": 96,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 98,
+    "level": 97,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 99,
+    "level": 98,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": true
+   },
+   {
+    "id": 100,
+    "level": 99,
+    "type": "unlimited",
+    "value": null,
+    "task_list": [],
+    "can_edit": false
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRetentionPoliciy
+body: {
+ "type": "",
+ "value": 1,
+ "id": "",
+ "_": "3f1bf2b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: id;\n Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+

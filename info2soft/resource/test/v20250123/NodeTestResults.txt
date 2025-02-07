@@ -1,0 +1,1112 @@
+<START-----------------------------------------------------------
+Method: activeNode
+body: {
+ "list": [
+  {
+   "node_uuid": "",
+   "bind_lic_list": []
+  }
+ ],
+ "_": "3eaa833d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: addSlaveNode
+body: {
+ "proxy_switch": "0",
+ "config_addr": "",
+ "config_port": 1,
+ "proxy_id": "",
+ "os_pwd": "yAZe2Hx6/dCL8GnjiRaro/mayqD24i3bMwZLtRXrHlRDIijGDcNKTqSK4IL91YIaqAGaOpUbnTr+y6VPgJ4UXJQset0se7bQgVrRjVncNeiVNCNyAzLktWYMMGKOWekw5uD2MOVEHhbknG0ZSuFXyywFEG9JTntNerCae7RSI6u2c3kRBCyqbdPc9osMK8YL9ZRqiIE/4K1+BomG9q1RwNEJhDcm/OaMxJCPHANNTImBWWv+Ir3qt20jjv1Fx7of2Fgb14Sj4TwGb7ESrbMiL/fblrfGl+rc6koNucEIRdT+aje+F47pKu4mknubWZ1wo+W2p/yaKyqfzTfeDFJtFQ==",
+ "os_user": "administrator",
+ "use_credential": 1,
+ "cred_uuid": "",
+ "bind_lic_list": [],
+ "biz_grp_list": [],
+ "comment": "",
+ "is_ssl": 1,
+ "roles": [
+  "1",
+  "4",
+  "8"
+ ],
+ "_": "3f4da71a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_addr;\n Lost: cred_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchAuthNode
+body: {
+ "node_uuids": [],
+ "os_user": "",
+ "os_pwd": "",
+ "_": "3f3e28f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuids[0];\n Lost: os_pwd;\n Lost: os_user;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchSearchByPort
+body: {
+ "ip": "",
+ "port_start": 1,
+ "port_end": 1,
+ "_": "3eb65a41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkCapacity
+body: {
+ "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+ "proxy_switch": 0,
+ "proxy_id": "",
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "is_ssl": 1,
+ "_": "3f26dffe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011201,
+  "message": "[1010011201] Failed to get hard disk and memory info RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkNodeOnline
+body: {
+ "proxy_switch": 0,
+ "config_port": "26821",
+ "proxy_id": "66F636FE29656416690A62296580EBD9",
+ "config_addr": "192.168.72.76",
+ "is_ssl": 1,
+ "_": "3e600284"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011202,
+  "message": "[1010011202] Node offline RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "config_addr": "192.168.72.76",
+  "config_port": "26821"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkUnbindEcs
+body: {
+ "node_uuid": "",
+ "_": "3d576cee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBatchNode
+body: {
+ "base_info_list": [
+  {
+   "os_pwd": "123qwe",
+   "os_user": "chenky",
+   "config_port": 26821,
+   "config_addr": "192.168.72.76",
+   "node_name": "N4_72.76",
+   "need_install": 0,
+   "install_type": 1,
+   "install_port_linux": 22,
+   "install_path": "",
+   "os_type": 1,
+   "rep_path": [],
+   "installation_mode": 0,
+   "bak_meta_data_path": "",
+   "temp_path": "",
+   "cache_path": ""
+  }
+ ],
+ "node": {
+  "mem_limit": "819",
+  "bind_lic_list": [],
+  "disk_limit": "10240",
+  "monitor_interval": "10",
+  "node_role": "3",
+  "monitor_switch": 0,
+  "moni_log_keep_node": "5",
+  "moni_log_keep_server": "3",
+  "security_check": 0,
+  "biz_grp_list": [],
+  "node_version": "",
+  "proxy_ip": "",
+  "disk_free_space_limit": 1,
+  "proxy_uuid": "",
+  "is_ssl": 1,
+  "alarm_switch": 1,
+  "cpu_threshold": 1,
+  "memory_threshold": 1,
+  "monitor_process": 1,
+  "snmp_switch": 1,
+  "snmp_version": "",
+  "snmp_community": "",
+  "snmp_ip": "",
+  "snmp_port": 1,
+  "maintenance": 0,
+  "rc_protection": 0,
+  "roles": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "log_limit": 1,
+  "roles_info": [
+   {
+    "role": 1,
+    "processes": [],
+    "modules": []
+   }
+  ],
+  "etcd_url_uuid": "",
+  "schedule_svr_uuid": "",
+  "local_config_switch": 1,
+  "log_interval": 1,
+  "proxy_port": "",
+  "log_path": ""
+ },
+ "_": "3e45c924"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The base_info_list[0][os_pwd] field must contain a valid Base64 string.;\n Lost: node[cc_ip_uuid];\n Lost: node[proxy_switch];\n Lost: node[snmp_version];\n Lost: node[snmp_community];\n Lost: node[snmp_ip];\n Lost: node[schedule_svr_uuid];\n Lost: base_info_list[0][cache_path];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNode
+body: {
+ "node": {
+  "bak_client_max": "100",
+  "cloud_type": "0",
+  "bak_root": "",
+  "monitor_switch": 0,
+  "node_role": "3",
+  "mem_limit": 819,
+  "config_port": 26821,
+  "mon_save_day": "5",
+  "vg": "",
+  "os_type": 1,
+  "os_pwd": "",
+  "log_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+  "mon_data_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+  "comment": "",
+  "rep_path": [],
+  "bak_user_max": "100",
+  "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+  "db_save_day": "3",
+  "proxy_switch": 0,
+  "data_addr": "192.168.72.76",
+  "node_name": "N4_72.76",
+  "config_addr": "192.168.72.76",
+  "mon_send_interval": "10",
+  "disk_limit": "10240",
+  "reboot_sys": "0",
+  "bind_lic_list": [],
+  "security_check": 0,
+  "os_user": "Kyran",
+  "bak_service_type": "",
+  "en_snap_switch": 0,
+  "rep_excl_path": [],
+  "biz_grp_list": [],
+  "proxy_id": "",
+  "dtrack_switch": 3,
+  "iscsi_as_initiator": 1,
+  "iscsi_switch": 1,
+  "iscsi_as_target": 1,
+  "iscsi_initiator_name": "",
+  "use_credential": 0,
+  "cred_uuid": "",
+  "disk_free_space_limit": 1,
+  "node_info": {},
+  "cc_ip_uuid": "",
+  "maintenance": 0,
+  "node_type": 1,
+  "cls_node": "",
+  "fc_as_initiator": 1,
+  "wwpn_info": [],
+  "platform_uuid": "",
+  "ecs_id": "",
+  "ecs_bind": 1,
+  "keep_log_days": 180,
+  "etcd_url_uuid": "",
+  "sys_uuid": "",
+  "region_id": "",
+  "project_id": "",
+  "project_name": "",
+  "is_ssl": 1,
+  "winstack_pool_id": "",
+  "winstack_host_id": "",
+  "vm_ref": "",
+  "vm_name": "",
+  "alarm_switch": 0,
+  "cpu_threshold": 80,
+  "memory_threshold": 80,
+  "monitor_process": 0,
+  "snmp_switch": 0,
+  "snmp_version": "2c",
+  "snmp_ip": "",
+  "snmp_port": 1,
+  "snmp_community": "",
+  "aio_cluster_id": "",
+  "aio_host_id": "",
+  "rc_protection": 0,
+  "guard_data_switch": 0,
+  "guard_data_pwd": "",
+  "guard_data_threshold": 1,
+  "renew_public_key": 1,
+  "roles": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "log_limit": 1024,
+  "bak_meta_data_path": "",
+  "bak_meta_data_policy": 1,
+  "temp_path": "",
+  "roles_info": {
+   "role": 1,
+   "processes": [],
+   "modules": []
+  },
+  "schedule_svr_uuid": "",
+  "bak_cache_data_dir": "",
+  "bak_cache_disk_lower_limit": 1,
+  "bak_cache_data_upper_limit": 1,
+  "local_config_switch": 1,
+  "auto_move": 1,
+  "node_uuid": "",
+  "log_interval": 60,
+  "rw_server_port": 26820
+ },
+ "_": "3e80d093"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The node[dtrack_switch] field must be one of: 0,1;\n Lost: node[iscsi_initiator_name];\n Lost: node[os_pwd];\n Lost: node[cc_ip_uuid];\n Lost: node[schedule_svr_uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dataIpList
+body: {
+ "node_uuids": [],
+ "_": "3d8d3229"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteInactiveNode
+body: {
+ "node_uuids": [],
+ "_": "3f44164e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNode
+body: {
+ "node_uuids": [
+  "e2BfDc38-54BB-D4eE-beB9-ADdE3D6f2bF3"
+ ],
+ "delete_quota": 1,
+ "force": 1,
+ "_": "3ec38e9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDeviceInfo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "node_uuid": null,
+  "device_info": 1011110001
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDriverLetter
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNode
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNodeInfo
+body: {
+ "ip": "",
+ "_": "3f7c7ac7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadNodeInstallScript
+body: {
+ "os_type": 0,
+ "_": "3d3098fa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodePackageUrl
+body: {
+ "os_type": 1,
+ "_": "3e1506bd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodeVersion
+body: {
+ "ip": "",
+ "port": 1,
+ "add": 1,
+ "cls_uuid": "",
+ "_": "3f0abe93"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHbaInfo
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "proxy_switch": 1,
+ "proxy_id": "",
+ "_": "3e9d886b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: proxy_id;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHostInfo
+body: {
+ "node_type": 1,
+ "config_addr": "",
+ "_": "3f7319e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listKernels
+body: {
+ "node_uuid": "",
+ "_": "3e3e22e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMysqlDatabases
+body: {
+ "mysql_host": "",
+ "port": "",
+ "username": "",
+ "password": "",
+ "timeout": "",
+ "mysql_path": "",
+ "node_uuid": "",
+ "_": "3d8b3eb3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: username;\n Lost: password;\n Lost: mysql_host;\n Lost: port;\n Lost: timeout;\n Lost: mysql_path;\n Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listMysqlTables
+body: {
+ "username": "",
+ "password": "",
+ "mysql_host": "",
+ "port": "",
+ "timeout": "",
+ "mysql_path": "",
+ "node_uuid": "",
+ "db_name": "",
+ "_": "3e888b0c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: username;\n Lost: password;\n Lost: mysql_host;\n Lost: port;\n Lost: timeout;\n Lost: mysql_path;\n Lost: node_uuid;\n Lost: db_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNode
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 15,
+ "page": 1,
+ "type": 1,
+ "filter_by_biz_grp": 1,
+ "order_by": "",
+ "direction": "",
+ "user_filter": 1,
+ "cloud_uuid": "",
+ "status": "",
+ "status_from": "",
+ "is_rc_wk": 0,
+ "role": 1,
+ "like_args": "{xxx:}",
+ "where_args": "{xxx:}",
+ "_": "3c204cd3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: like_args;\n Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeBindEcs
+body: {
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "platform_uuid": "",
+ "_": "3e76bc80"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodePackageList
+body: {
+ "for_download": 1,
+ "_": "3ee17cd5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeProcess
+body: {
+ "node_uuid": "",
+ "_": "3f578fec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "node_uuids": "node_uuids[]=D66246D7-89C4-DC3A-E9A2-D2FCE4A56307&node_uuids[]=064B23C1-DF92-8846-4BEA-8517789C35A4",
+ "force_refresh": 1,
+ "_": "3f2265ff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeUkey
+body: {
+ "node_uuid": "",
+ "_": "3ab8d845"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listPlatform
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRules
+body: {
+ "node_uuid": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3ec45e74"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVg
+body: {
+ "proxy_switch": 0,
+ "proxy_id": "",
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "_": "3e888a37"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listWaitingActiveNode
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainNode
+body: {
+ "node_uuids": [],
+ "operate": "upgrade",
+ "switch": 0,
+ "_": "3cfc6008"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDataIp
+body: {
+ "data_ip_list": [
+  {
+   "uuid": "A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319",
+   "data_ip": "172.20.15.121"
+  }
+ ],
+ "node_uuid": "D6EC7CF9-FCA2-D467-ECD6-E028AA9C8319",
+ "_": "3f41c8eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it. : A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNode
+body: {
+ "node": {
+  "moni_log_keep_node": "5",
+  "_path": [],
+  "log_path": "C:\\Program Files (x86)\\info2soft-i2node\\log\\",
+  "disk_limit": "40960",
+  "bak_service_type": "",
+  "config_addr": "192.168.74.25",
+  "mem_limit": "13041",
+  "os_type": 2,
+  "os_user": "Kyran",
+  "proxy_switch": 0,
+  "bind_lic_list": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+  "moni_log_keep_server": "3",
+  "node_name": "aaaa",
+  "keep_log_days": 180,
+  "monitor_interval": "10",
+  "security_check": 1,
+  "reboot_sys": "0",
+  "bak_client_max": "100",
+  "bak_root": "",
+  "node_role": "3",
+  "monitor_switch": 0,
+  "cache_path": "C:\\Program Files (x86)\\info2soft-i2node\\cache\\",
+  "config_port": 26821,
+  "bak_user_max": "100",
+  "group_uuid": "F5844651-DB5B-937D-73B1-A2378810F00A",
+  "comment": "",
+  "biz_grp_list": [],
+  "cloud_type": "0",
+  "i2id": "",
+  "use_credential": 0,
+  "cred_uuid": "",
+  "en_snap_switch": 0,
+  "disk_free_space_limit": 1,
+  "platform_uuid": "",
+  "maintenance": 0,
+  "os_pwd": "EnEyGDJF==",
+  "ecs_bind": 0,
+  "ecs_id": "",
+  "fc_as_initiator": 0,
+  "vg": "",
+  "wwpn_info": [],
+  "monitor_log_path": "C:\\Program Files (x86)\\info2soft-i2node\\log\\",
+  "data_addr": "192.168.74.25",
+  "rep_excl_path": [],
+  "batch_cc_ip_uuid": 1,
+  "batch_biz_grp_list": 1,
+  "batch_log_path": 1,
+  "batch_cache_path": 1,
+  "batch_mem_limit": 1,
+  "batch_disk_limit": 1,
+  "batch_disk_free_space_limit": 1,
+  "batch_security_check": 1,
+  "batch_maintenance": 1,
+  "batch_switch": 1,
+  "batch_monitor": 1,
+  "batch_rep_path": 1,
+  "sys_uuid": "",
+  "batch_keep_log_days": 1,
+  "project_id": "",
+  "region_id": "",
+  "project_name": "",
+  "is_ssl": 1,
+  "snmp_switch": 0,
+  "snmp_version": "",
+  "snmp_community": "",
+  "snmp_ip": "",
+  "snmp_port": 1,
+  "batch_snmp": 1,
+  "aio_cluster_id": "",
+  "aio_host_id": "",
+  "rc_protection": 0,
+  "batch_rc_protection": 0,
+  "guard_data_switch": 1,
+  "guard_data_user": "",
+  "guard_data_pwd": "",
+  "guard_data_threshold": 1,
+  "roles": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "log_limit": 1,
+  "roles_info": [
+   {
+    "role": 1,
+    "processes": [],
+    "modules": []
+   }
+  ],
+  "temp_path": 1,
+  "bak_meta_data_path": "",
+  "bak_meta_data_policy": 1,
+  "monitor_process": 1,
+  "batch_log_limit": 0,
+  "batch_bak_meta_data_path": 1,
+  "batch_temp_path": 1,
+  "batch_guard": 1,
+  "batch_bak_meta_data_policy": 1,
+  "bak_cache_data_dir": "",
+  "bak_cache_data_upper_limit": "",
+  "bak_cache_disk_lower_limit": "",
+  "etcd_url_uuid": "",
+  "batch_bak_cache_data_dir": 1,
+  "batch_bak_cache_data_upper_limit": 1,
+  "batch_bak_cache_disk_lower_limit": 1,
+  "batch_etcd_url_uuid": 1,
+  "batch_schedule_svr_uuid": 1,
+  "schedule_svr_uuid": "",
+  "local_config_switch": 1,
+  "batch_local_config_switch": 1,
+  "rw_server_port": 1
+ },
+ "_": "3f5856e5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node[cc_ip_uuid];\n Lost: node[schedule_svr_uuid];\n Lost: node[alarm_switch];\n Lost: node[random_str];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetMysqlInfo
+body: {
+ "timeout": "",
+ "username": "",
+ "password": "",
+ "mysql_path": "",
+ "port": "",
+ "bk_uuid": "",
+ "mysql_host": "",
+ "_": "3f62e39e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: username;\n Lost: password;\n Lost: mysql_path;\n Lost: mysql_host;\n Lost: timeout;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetOracleInfo
+body: {
+ "username": "",
+ "password": "",
+ "sqlplus_path": "",
+ "sid": "",
+ "timeout": "",
+ "port": "",
+ "bk_uuid": "",
+ "_": "3eaab1b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: username;\n Lost: password;\n Lost: sqlplus_path;\n Lost: sid;\n Lost: timeout;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewKeyNode
+body: {
+ "node_uuids": [],
+ "operate": "upgrade",
+ "switch": 0,
+ "_": "3ecbab41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartNodeProcess
+body: {
+ "node_uuid": "",
+ "operate": "",
+ "data": [
+  {
+   "pid": "",
+   "pname": ""
+  }
+ ],
+ "_": "3f6de0ef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startNodeProcess
+body: {
+ "node_uuid": "",
+ "operate": "",
+ "data": [
+  {
+   "pid": "",
+   "pname": ""
+  }
+ ],
+ "_": "3f634ec8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopNodeProcess
+body: {
+ "node_uuid": "",
+ "operate": "",
+ "data": [
+  {
+   "pid": "",
+   "pname": ""
+  }
+ ],
+ "_": "3f18cf04"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeNode
+body: {
+ "node_uuids": [],
+ "operate": "upgrade",
+ "switch": 0,
+ "_": "3ee2f922"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,1221 @@
+<START-----------------------------------------------------------
+Method: addNotifications
+body: {
+ "type": "timing",
+ "uuid": "82275AFD-97D0-15B4-D477-011E397113D6",
+ "msg": "\u89c4\u5219/\u4efb\u52a1\u6267\u884c\u5931\u8d25/\u6210\u529f/\u8d85\u65f6/\u7b56\u7565\u53d6\u6d88",
+ "name": "timing_test",
+ "cc_uuid": "",
+ "resume_normal": 1,
+ "_": "3f07ca08"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The name field must contain a valid Base64 string.;\n The msg field must contain a valid Base64 string.;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteNotifications
+body: {
+ "uuids": [],
+ "_": "3f42c7fc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotifications
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotificationsConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "config": [
+   {
+    "type": "stat_result",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "stat_report",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "res",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "compare",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "nas",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "hdfs",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp_move",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "cdm",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "cloud",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "ha",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "active",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "routing_inspection",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "all_status",
+    "p_sms_sw": 0,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "alarm",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "lic",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "dto",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "guard_data",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "backup_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "recovery_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "vp_backup_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "vp_recovery_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp_backup_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "fsp_recovery_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "bigdata_backup_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   },
+   {
+    "type": "bigdata_recovery_rule",
+    "p_sms_sw": 1,
+    "email_sw": 0,
+    "sms_sw": 0,
+    "sms_temp": "",
+    "kafka_sw": 0,
+    "webhook_sw": 0,
+    "webhook_uuid": "",
+    "content_temp_uuid": "",
+    "wechat_sw": 0,
+    "wechat_temp": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNotificationsCount
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "count": [
+   {
+    "type": 0,
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "active",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "alarm",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "all_status",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "backup_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "bigdata_backup_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "bigdata_recovery_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "cdm",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "cdm_remote_coopy",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "cloud",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "compare",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "dto",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "fsp_backup_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "fsp_move",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "fsp_recovery_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "guard_data",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "ha",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "hdfs",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "lic",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "nas",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "recovery_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "res",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "routing_inspection",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "stat_report",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "stat_result",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "storage",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "vp_backup_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   },
+   {
+    "type": "vp_recovery_rule",
+    "read": 0,
+    "total": 0,
+    "unread": 0,
+    "played": 0,
+    "unplayed": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEmailTemplate
+body: {
+ "direction": "ASC",
+ "type": "",
+ "_": "3f0c5e61"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The type field must be one of: 200,201;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNotifications
+body: {
+ "type": 1,
+ "order_by": "status",
+ "direction": "ASC",
+ "lic_alert": 0,
+ "where_args": "{status:1,played:1}",
+ "_": "3d2f82e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Not array: where_args;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNotifyConf
+body: {
+ "keys": "keys[]=notify_limit&keys[]=normal_notify_switch&keys[]=notify_contact_biz&keys[]=notify_contact_chk&keys[]=notify_contact_status&keys[]=sms_id&keys[]=wechat_id&keys[]=stop_alerts&keys[]=alarm_shield&keys[]=alarm_config&keys[]=custom_audio&keys[]=single_alert_loop_broadcast_times&keys[]=audio_alert_notify",
+ "_": "3e8e35b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "configs": {
+   "stop_alerts": 1,
+   "alarm_shield": {
+    "type": {
+     "node": false,
+     "db": false,
+     "rule": false,
+     "task": false
+    },
+    "level": {
+     "info": false,
+     "warn": false,
+     "report": false,
+     "err": false,
+     "fatal": false,
+     "recover": false
+    },
+    "code": ""
+   },
+   "alarm_config": {
+    "max_alarm_interval": 3,
+    "max_analyze_delay": 120,
+    "max_analyze_halt_tm": 120,
+    "max_load_halt_tm": 120,
+    "max_cpu_delay_threshold": 0,
+    "max_mem_delay_threshold": 0,
+    "max_net_delay_threshold": 0,
+    "max_disk_delay_threshold": 0,
+    "max_cpu": 80,
+    "max_mem": 80,
+    "max_net": 0,
+    "max_disk": 80,
+    "max_cpu_delay_alarm_time": 0,
+    "max_mem_delay_alarm_time": 0,
+    "max_net_delay_alarm_time": 0,
+    "max_disk_delay_alarm_time": 0,
+    "max_analyze_halt_tm_alarm_time": 0,
+    "max_analyze_delay_alarm_time": 0,
+    "max_load_halt_tm_alarm_time": 0,
+    "max_delay_alarm_time": 0,
+    "max_cpu_delay_unit": "min",
+    "max_mem_delay_unit": "min",
+    "max_net_delay_unit": "min",
+    "max_disk_delay_unit": "min",
+    "max_analyze_halt_tm_unit": "min",
+    "max_analyze_delay_unit": "min",
+    "max_load_halt_tm_unit": "min",
+    "max_delay_unit": "min",
+    "max_cpu_delay_duration": 0,
+    "max_mem_delay_duration": 0,
+    "max_net_delay_duration": 0,
+    "max_disk_delay_duration": 0,
+    "max_analyze_halt_tm_duration": 0,
+    "max_analyze_delay_duration": 0,
+    "max_load_halt_tm_duration": 0,
+    "max_delay_duration": 0,
+    "max_cpu_delay_duration_unit": "min",
+    "max_mem_delay_duration_unit": "min",
+    "max_net_delay_duration_unit": "min",
+    "max_disk_delay_duration_unit": "min",
+    "max_analyze_halt_tm_duration_unit": "min",
+    "max_analyze_delay_duration_unit": "min",
+    "max_load_halt_tm_duration_unit": "min",
+    "max_delay_duration_unit": "min"
+   },
+   "alarm_level_map": {
+    "info": 3,
+    "warn": 3,
+    "report": 3,
+    "err": 4,
+    "fatal": 4,
+    "recover": 3
+   },
+   "sms_platform": "ali"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyEmailTemplate
+body: {
+ "content": "",
+ "comment": "",
+ "random_str": "",
+ "_": "3f449d46"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: playNotifications
+body: {
+ "operate": "",
+ "uuids": [],
+ "type": 1,
+ "_": "3d13507e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: readNotifications
+body: {
+ "operate": "",
+ "uuids": [],
+ "type": 1,
+ "_": "3e55b039"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetNotificationsTimes
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNotificationsEmail
+body: {
+ "email": "lis@info2soft.com",
+ "_": "3f79ec20"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001012,
+  "message": "[1010001012] Operation faild SMTP\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25\u3002 SMTP\u670d\u52a1\u5668\u51fa\u9519\uff1aFailed to connect to server \u9644\u52a0SMTP\u4fe1\u606f\uff1a php_network_getaddresses: getaddrinfo failed: Name or service not known"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: testNotificationsSms
+body: {
+ "temp_id": "",
+ "mobile": "13123456789",
+ "_": "3ee3816f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNotificationsConfig
+body: {
+ "config": [
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  },
+  {
+   "type": 1,
+   "email_sw": 0,
+   "sms_sw": 1,
+   "p_sms_sw": 1,
+   "sms_temp": "",
+   "wechat_sw": 0,
+   "maintenance_sw": 0,
+   "principal": "",
+   "webhook_sw": 0,
+   "webhook_uuid": "",
+   "content_temp_uuid": "",
+   "kafka_sw": 0,
+   "snmp_sw": 0,
+   "notify_contact_user": {
+    "email": "",
+    "phone": ""
+   },
+   "real_sms_template": "",
+   "sms_report_template": ""
+  }
+ ],
+ "_": "3ea4284d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNotifyConf
+body: {
+ "stop_alerts": 1,
+ "audio_alert_notify": 1,
+ "single_alert_loop_broadcast_times": 1,
+ "custom_audio": "",
+ "notify_contact_biz": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com"
+ },
+ "notify_contact_chk": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com",
+  "policy": {
+   "every": "month",
+   "days": "5,6"
+  }
+ },
+ "notify_contact_status": {
+  "phone": "11111111111",
+  "email": "test@info2sost.com",
+  "policy": {
+   "every": "hour",
+   "gap": "4"
+  }
+ },
+ "sms_id": "",
+ "wechat_id": "",
+ "notify_limit": "10",
+ "normal_notify_switch": 0,
+ "alarm_shield": {
+  "type": {
+   "node": false,
+   "db": false,
+   "rule": false,
+   "task": false
+  },
+  "level": {
+   "info": false,
+   "warn": false,
+   "report": false,
+   "err": false,
+   "fatal": false,
+   "recover": false
+  },
+  "code": ""
+ },
+ "alarm_config": {
+  "alarm_interval": 1,
+  "max_analyze_halt_tm": 1,
+  "max_delay": 1,
+  "max_err_table_num": 1,
+  "max_err_dml_num": 1,
+  "max_err_ddl_num": 1,
+  "max_cpu": "",
+  "max_mem": "",
+  "max_net": "",
+  "max_disk": "",
+  "max_alarm_interval": "",
+  "max_load_halt_tm": "",
+  "max_analyze_delay": "",
+  "max_cpu_delay_alarm_time": "",
+  "max_mem_delay_alarm_time": "",
+  "max_net_delay_alarm_time": "",
+  "max_disk_delay_alarm_time": "",
+  "max_analyze_halt_tm_alarm_time": "",
+  "max_analyze_delay_alarm_time": "",
+  "max_delay_alarm_time": "",
+  "max_load_halt_tm_alarm_time": "",
+  "max_cpu_delay_unit": "",
+  "max_mem_delay_unit": "",
+  "max_net_delay_unit": "",
+  "max_disk_delay_unit": "",
+  "max_analyze_halt_tm_unit": "",
+  "max_analyze_delay_unit": "",
+  "max_load_halt_tm_unit": "",
+  "max_delay_unit": "",
+  "max_cpu_delay_duration": "",
+  "max_mem_delay_duration": "",
+  "max_net_delay_duration": "",
+  "max_disk_delay_duration": "",
+  "max_analyze_halt_tm_duration": "",
+  "max_analyze_delay_duration": "",
+  "max_load_halt_tm_duration": "",
+  "max_delay_duration": "",
+  "max_cpu_delay_duration_unit": "",
+  "max_mem_delay_duration_unit": "",
+  "max_net_delay_duration_unit": "",
+  "max_disk_delay_duration_unit": "",
+  "max_analyze_halt_tm_duration_unit": "",
+  "max_analyze_delay_duration_unit": "",
+  "max_load_halt_tm_duration_unit": "",
+  "max_delay_duration_unit": ""
+ },
+ "notify_limit_type": "",
+ "alarm_level_map": {
+  "info": "",
+  "warn": "",
+  "report": "",
+  "err": "",
+  "fatal": "",
+  "recover": ""
+ },
+ "_": "3f055ba3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The notify_contact_chk[phone] field must contain all valid phone number;\n The notify_contact_status[phone] field must contain all valid phone number;\n Lost: custom_audio;\n The notify_contact_biz[phone] field must contain all valid phone number;\n"
+ }
+}
+-----------------------------------------------------------END>
+

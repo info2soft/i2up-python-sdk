@@ -1,0 +1,205 @@
+<START-----------------------------------------------------------
+Method: chkEtcdUrl
+body: {
+ "etcd_url_uuid": "",
+ "_": "3ea57ec8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "etcd": {
+   "id": 1,
+   "user": "",
+   "cls_conf": [
+    {
+     "ip": "",
+     "port": 26352
+    }
+   ],
+   "node_access_list": [
+    {
+     "name": "",
+     "uuid": "50C3A267-B2D2-42CE-BFC3-490F6BA04EE4",
+     "ip_list": [
+      {
+       "ip": "",
+       "port": 26352
+      }
+     ],
+     "has_node": 0
+    }
+   ]
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createUpdateEtcd
+body: {
+ "user": "",
+ "pwd": "",
+ "cls_conf": [
+  {
+   "ip": "",
+   "port": ""
+  }
+ ],
+ "node_access_list": [
+  {
+   "name": "",
+   "ip_list": [
+    {
+     "ip": "",
+     "port": ""
+    }
+   ],
+   "uuid": ""
+  }
+ ],
+ "_": "3f7af7ef"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_access_list[0][ip_list][0][ip];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createUpdateScheduleSvr
+body: {
+ "node_access_list": [
+  {
+   "ip": "",
+   "uuid": ""
+  }
+ ],
+ "os_pwd": "",
+ "os_user": "",
+ "rpc_port": "",
+ "data_port": "",
+ "rpc_addr": "",
+ "etcd_url_uuid": "",
+ "bkset_meta_data_path": "",
+ "log_dir": "",
+ "log_save_time": 1,
+ "log_save_size": 1,
+ "task_schedule_interval_time": 1,
+ "bkupset_expire_delay_time": 1,
+ "bkupset_expire_check_time": 1,
+ "delete_failed_interval_time": 1,
+ "max_delete_times": 1,
+ "task_timeout_stop_time": 1,
+ "_": "3d27836b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_access_list[0][ip];\n Lost: rpc_addr;\n Lost: rpc_port;\n Lost: data_port;\n Lost: os_user;\n Lost: os_pwd;\n Lost: etcd_url_uuid;\n Lost: bkset_meta_data_path;\n Lost: log_dir;\n The log_save_time field must contain a number greater than or equal to 30;\n The log_save_size field must contain a number greater than or equal to 500;\n The task_schedule_interval_time field must contain a number greater than or equal to 60;\n The bkupset_expire_delay_time field must contain a number greater than or equal to 10;\n The bkupset_expire_check_time field must contain a number greater than or equal to 60;\n The max_delete_times field must contain a number greater than or equal to 2;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listEtcd
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "etcd": {
+   "id": 1,
+   "user": "",
+   "cls_conf": [
+    {
+     "ip": "",
+     "port": 26352
+    }
+   ],
+   "node_access_list": [
+    {
+     "name": "",
+     "uuid": "50C3A267-B2D2-42CE-BFC3-490F6BA04EE4",
+     "ip_list": [
+      {
+       "ip": "",
+       "port": 26352
+      }
+     ],
+     "has_node": 0
+    }
+   ]
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listScheduleSvr
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "schedule_svr": {
+   "id": 1,
+   "os_user": "",
+   "rpc_addr": "",
+   "rpc_port": 26350,
+   "rpcserver_port": 26301,
+   "data_port": 26351,
+   "node_access_list": [
+    {
+     "ip": "",
+     "uuid": "3B42FFB9-47FB-424B-A71B-56A5BD19CC6A",
+     "has_node": 0
+    }
+   ],
+   "etcd_url_uuid": null,
+   "bkset_meta_data_path": null,
+   "log_save_time": 30,
+   "log_save_size": 500,
+   "log_dir": "/var/i2data/log/",
+   "task_schedule_interval_time": 300,
+   "bkupset_expire_delay_time": 60,
+   "bkupset_expire_check_time": 600,
+   "delete_failed_interval_time": 12,
+   "max_delete_times": 3,
+   "task_timeout_stop_time": 3
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: scanEtcdConf
+body: {
+ "ip": "",
+ "port": "",
+ "user": "",
+ "pwd": "",
+ "_": "3ec2a583"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ip;\n Lost: port;\n"
+ }
+}
+-----------------------------------------------------------END>
+

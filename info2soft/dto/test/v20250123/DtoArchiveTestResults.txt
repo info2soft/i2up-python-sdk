@@ -1,0 +1,224 @@
+<START-----------------------------------------------------------
+Method: createDtoArchiveReportRule
+body: {
+ "rule_name": "",
+ "rule_uuids": "",
+ "policy_type": "",
+ "range": 1,
+ "policies": [
+  {
+   "time": "12:00",
+   "day": "",
+   "month": "",
+   "season_month": ""
+  }
+ ],
+ "mail_switch": 1,
+ "mail_address": [
+  {
+   "email": "",
+   "name": ""
+  }
+ ],
+ "retain_num": 1,
+ "stat_start": "",
+ "stat_end": "",
+ "_": "3de5feeb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] \u540d\u79f0\u65e0\u6548"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDtoArchiveReportRule
+body: {
+ "rule_uuids": [],
+ "_": "3f127dde"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDtoArchiveReportRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadDtoArchiveData
+body: {
+ "ids": [],
+ "_": "3ef8241a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportDtoArchiveData
+body: {
+ "id": [],
+ "_": "3ebc3918"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getDtoArchiveYear
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "year": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoArchive
+body: {
+ "where_args": "where_args[]={'archive_year': '', 'archive_time_start': 1, 'archive_time_end': 1, 'create_time_start': 1, 'create_time_end': 1, 'modify_time_start': 1, 'modify_time_end': 1, 'delete_time_start': 1, 'delete_time_end': 1}",
+ "like_args": "like_args[]={'target_path': '', 'sync_host_name': '', 'sync_host_ip': '', 'source_path': ''}",
+ "_": "3ef0b5fe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoArchiveReportHistory
+body: {
+ "limit": "",
+ "page": "",
+ "where_args": "{rule_uuid:}",
+ "_": "3e10f107"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoArchiveReportRule
+body: {
+ "limit": "",
+ "page": "",
+ "search_field": "",
+ "search_value": "",
+ "_": "3e05ca4e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDtoArchiveReportRule
+body: {
+ "rule_name": "",
+ "rule_uuids": "",
+ "policy_type": "",
+ "range": 1,
+ "policies": [
+  {
+   "time": "12:00",
+   "season_month": "",
+   "day": "",
+   "month": ""
+  }
+ ],
+ "mail_switch": 1,
+ "mail_address": [
+  {
+   "email": "",
+   "name": ""
+  }
+ ],
+ "retain_num": 1,
+ "rule_uuid": "",
+ "_": "3f2f4373"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restoreDtoArchiveData
+body: {
+ "ids": [],
+ "_": "3ec4e26d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+

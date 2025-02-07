@@ -1,0 +1,405 @@
+<START-----------------------------------------------------------
+Method: cloneFspBackupRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "client_list": [
+  {
+   "rule_uuid": "",
+   "node_uuid": ""
+  }
+ ],
+ "sched_name": "",
+ "new_rule_name": "",
+ "_": "3f721f0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createFspBackupRule
+body: {
+ "rule_name": "",
+ "rule_type": 1,
+ "biz_grp_list": [],
+ "timeout": 1,
+ "priority": 1,
+ "disable": 1,
+ "client_list": [
+  {
+   "node_uuid": ""
+  }
+ ],
+ "unit_uuid": "",
+ "tape_pool_uuid": "",
+ "replica_uuids": [],
+ "trans_mode": 1,
+ "wk_path": [
+  {
+   "path": "PhysicalDrive0\\",
+   "name": "PhysicalDrive0",
+   "icon": "folder",
+   "size": 42949672960,
+   "file": "",
+   "attr": 1,
+   "leaf": "",
+   "subNodes": [],
+   "nodeUuid": "0986CDE6-85C6-4D03-8D78-9DD5E367916D",
+   "showSize": "40.00 GB",
+   "disabled": "",
+   "has_policy": "",
+   "right_path": "",
+   "is_show": ""
+  }
+ ],
+ "database_switch": 1,
+ "database_type": 1,
+ "oracle_dbagent_param": {
+  "oracle_sid": "",
+  "sql_plus_path": "",
+  "username": "",
+  "password": "",
+  "port": "",
+  "table_space": "",
+  "timeout": ""
+ },
+ "sqlserver_dbagent_param": {
+  "timeout": ""
+ },
+ "custom_dbagent_param": {
+  "pre_snapshot_script": "",
+  "post_snapshot_script": ""
+ },
+ "bkup_schedule": [
+  {
+   "sched_name": "",
+   "backup_type": 1,
+   "retention": 1,
+   "start_window": [
+    {
+     "wday": 1,
+     "from": "",
+     "to": ""
+    }
+   ],
+   "bkup_window": [
+    {
+     "wday": 1,
+     "from": "",
+     "to": ""
+    }
+   ],
+   "bkup_one_time": 1,
+   "bkup_policy": 1,
+   "exclude_days": [
+    "2023-06-02"
+   ],
+   "cron_policies": ""
+  }
+ ],
+ "effective_time_switch": 1,
+ "effective_time": 1,
+ "compress": 1,
+ "compress_switch": 0,
+ "encrypt_switch": 1,
+ "encrypt": 1,
+ "bk_file_crypt": 1,
+ "bk_crypt_type": 1,
+ "bk_crypt_key": "",
+ "band_width": "",
+ "block_stor_format": 1,
+ "data_encrypt_compress_switch": 1,
+ "data_encrypt_compress_thread_num": 1,
+ "data_encrypt_source": 1,
+ "data_compress_level": 1,
+ "data_encrypt_type": 1,
+ "_": "3ef4d891"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspBackupRule
+body: {
+ "rule_uuids": [],
+ "force": 0,
+ "_": "3ea26b82"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFspBackupRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: disableFspBackupRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "client_list": [
+  {
+   "rule_uuid": "",
+   "node_uuid": ""
+  }
+ ],
+ "sched_name": "",
+ "new_rule_name": "",
+ "_": "3e08f205"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: enableFspBackupRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "client_list": [
+  {
+   "rule_uuid": "",
+   "node_uuid": ""
+  }
+ ],
+ "sched_name": "",
+ "new_rule_name": "",
+ "_": "3e04e339"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupDeviceInfo
+body: {
+ "node_uuid": "",
+ "_": "3f7e1646"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupRule
+body: {
+ "page": 1,
+ "limit": 1,
+ "search_value": "test",
+ "search_field": "rule_name",
+ "order_by": "rule_name",
+ "direction": "DESC",
+ "filter_by_biz_grp": 1,
+ "status": "",
+ "node_name": "",
+ "where_args": "{rule_uuid:}",
+ "like_args": "{rule_name:,unit_name:}",
+ "_": "3e9fd8bc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspBackupRuleStatus
+body: {
+ "rule_uuids": [],
+ "_": "3f2ee374"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: manualStartFspBackupRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "client_list": [
+  {
+   "rule_uuid": "",
+   "node_uuid": ""
+  }
+ ],
+ "sched_name": "",
+ "new_rule_name": "",
+ "_": "3e4686cb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspBackupRule
+body: {
+ "rule_name": "",
+ "rule_uuid": "",
+ "random_str": "",
+ "create_time": "",
+ "rule_type": "",
+ "biz_grp_list": [],
+ "timeout": 1,
+ "priority": 1,
+ "disable": 1,
+ "client_list": [
+  {
+   "node_uuid": ""
+  }
+ ],
+ "unit_uuid": "",
+ "tape_pool_uuid": "",
+ "replica_uuids": [],
+ "trans_mode": 1,
+ "wk_path": [
+  {
+   "path": "PhysicalDrive0",
+   "name": "PhysicalDrive0",
+   "icon": "folder",
+   "size": 42949672960,
+   "file": "",
+   "attr": 1,
+   "leaf": "",
+   "subNodes": [],
+   "nodeUuid": "0986CDE6-85C6-4D03-8D78-9DD5E367916D",
+   "showSize": "40.00 GB",
+   "disabled": "",
+   "has_policy": "",
+   "right_path": "",
+   "is_show": ""
+  }
+ ],
+ "database_switch": 1,
+ "database_type": 1,
+ "oracle_dbagent_param": {
+  "oracle_sid": "",
+  "sql_plus_path": "",
+  "username": "",
+  "password": "",
+  "port": "",
+  "table_space": "",
+  "timeout": ""
+ },
+ "sqlserver_dbagent_param": {
+  "timeout": ""
+ },
+ "custom_dbagent_param": {
+  "pre_snapshot_script": "",
+  "post_snapshot_script": ""
+ },
+ "bkup_schedule": [
+  {
+   "sched_name": "",
+   "backup_type": 1,
+   "retention": 1,
+   "start_window": [
+    {
+     "wday": 1,
+     "from": "",
+     "to": ""
+    }
+   ],
+   "bkup_window": [
+    {
+     "wday": 1,
+     "from": "",
+     "to": ""
+    }
+   ],
+   "bkup_one_time": 1,
+   "bkup_policy": 1,
+   "exclude_days": [
+    "2023-06-02"
+   ],
+   "cron_policies": ""
+  }
+ ],
+ "effective_time_switch": 1,
+ "effective_time": 1,
+ "compress": 1,
+ "compress_switch": 0,
+ "encrypt_switch": 1,
+ "encrypt": 1,
+ "bk_file_crypt": 1,
+ "bk_crypt_type": 1,
+ "bk_crypt_key": "",
+ "band_width": "",
+ "_": "3f55ecd3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+

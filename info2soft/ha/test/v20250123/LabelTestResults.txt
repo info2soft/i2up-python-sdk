@@ -1,0 +1,90 @@
+<START-----------------------------------------------------------
+Method: createLabel
+body: {
+ "label_name": "MSSQLSERVER",
+ "content": "SQL Server\u670d\u52a1",
+ "_": "3f5b3fba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteLabel
+body: {
+ "label_uuids": [],
+ "_": "3f4445be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLabel
+body: {
+ "page": 1,
+ "limit": 10,
+ "search_field": "label_name",
+ "search_value": "",
+ "_": "3df14de6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 1,
+    "label_name": "MSSQLSERVER",
+    "label_uuid": "8A4BDFDA-82B6-41C3-86D7-B2F871CEB066",
+    "content": "SQL Server\u670d\u52a1",
+    "used": 0
+   },
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 0,
+    "label_name": "default",
+    "label_uuid": "2ACDCAB3-D3B8-3E28-DCC5-AA36FDC2B5AB",
+    "content": "Initial specified type of system",
+    "used": 0
+   }
+  ],
+  "total": 2
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyLabel
+body: {
+ "label_name": "SQL Server\u670d\u52a1",
+ "label_uuid": "",
+ "_": "3f43be16"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

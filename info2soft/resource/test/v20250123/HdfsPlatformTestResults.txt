@@ -1,0 +1,203 @@
+<START-----------------------------------------------------------
+Method: createHdfsPlatform
+body: {
+ "hdfs_name": "",
+ "hdfs_type": "0",
+ "config_addr": "",
+ "config_port": 1,
+ "end_point": "",
+ "conf_path": "",
+ "user": "",
+ "kerberos_switch": 0,
+ "keytab": "",
+ "principal": "",
+ "comment": "",
+ "bind_lic_list": [],
+ "cc_ip_uuid": "",
+ "hdfs_role": 1,
+ "maintenance": 0,
+ "hive_end_point": "",
+ "hive_conf_path": "",
+ "_": "3d67ece7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: hdfs_name;\n Lost: config_addr;\n Lost: cc_ip_uuid;\n Lost: end_point;\n Lost: conf_path;\n Lost: user;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteHdfsPlatform
+body: {
+ "uuids": [],
+ "force": 0,
+ "_": "3e9fefb9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeHdfsPlatform
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsHiveEntity
+body: {
+ "uuid": "",
+ "database": "",
+ "page": 1,
+ "limit": 1,
+ "search_name": "",
+ "_": "3ed683ee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsPath
+body: {
+ "uuid": "",
+ "path": "/",
+ "_": "3f5b2d41"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsPlatform
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 15,
+ "page": 1,
+ "_": "3f15e0ae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHdfsPlatformStatus
+body: {
+ "hdfs_uuids": [],
+ "_": "3ef834d7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: hdfs_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainHdfsPlatform
+body: {
+ "hdfs_uuids": [],
+ "operate": "",
+ "switch": 0,
+ "_": "3ee4a233"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: hdfs_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyHdfsPlatform
+body: {
+ "random_str": "",
+ "hdfs_name": "",
+ "hdfs_type": "0",
+ "config_addr": "",
+ "config_port": 1,
+ "end_point": "",
+ "conf_path": "",
+ "user": "",
+ "kerberos_switch": 0,
+ "keytab": "',\n            'principal': ",
+ "comment": "",
+ "bind_lic_list": [],
+ "cc_ip_uuid": "",
+ "hdfs_role": 1,
+ "maintenance": 0,
+ "hive_end_point": "",
+ "hive_conf_path": "",
+ "_": "3f4f1f2f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: hdfs_name;\n Lost: config_addr;\n Lost: cc_ip_uuid;\n Lost: end_point;\n Lost: conf_path;\n Lost: user;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshHdfsHiveEntity
+body: {
+ "uuid": "",
+ "database": "",
+ "_": "3f7347d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: database;\n"
+ }
+}
+-----------------------------------------------------------END>
+

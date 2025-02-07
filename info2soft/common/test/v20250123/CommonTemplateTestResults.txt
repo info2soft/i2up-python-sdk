@@ -1,0 +1,93 @@
+<START-----------------------------------------------------------
+Method: createCommonTemplate
+body: {
+ "common_template": {
+  "template_name": "",
+  "template_type": 1,
+  "template_text": ""
+ },
+ "_": "3ed26cdf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: common_template[template_name];\n The common_template[template_type] field must be one of: 0;\n Lost: common_template[template_text];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCommonTemplate
+body: {
+ "template_uuid": [],
+ "_": "3e2aa613"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: template_uuid[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCommonTemplate
+body: {
+ "template_uuid": "",
+ "_": "3f537aaf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCommonTemplate
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "",
+ "search_value": "",
+ "_": "3f7c04ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCommonTemplate
+body: {
+ "common_template": {
+  "template_name": "",
+  "template_type": 1,
+  "template_text": ""
+ },
+ "_": "3f463d03"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: common_template[template_name];\n The common_template[template_type] field must be one of: 0;\n Lost: common_template[template_text];\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,537 @@
+
+# -*- coding: utf-8 -*-
+# flake8: noqa
+import sys
+
+import unittest
+# from info2soft import Db2
+from info2soft.active.v20250123.Db2 import Db2
+from info2soft import Auth
+from info2soft.fileWriter import write
+from info2soft.compat import is_py2, is_py3
+
+if is_py2:
+    import sys
+    import StringIO
+    import urllib
+
+    # reload(sys)
+    sys.setdefaultencoding('utf-8')
+    StringIO = StringIO.StringIO
+    urlopen = urllib.urlopen
+if is_py3:
+    import io
+    import urllib
+
+    StringIO = io.StringIO
+    urlopen = urllib.request.urlopen
+
+username = 'admin'
+pwd = 'Info@123'
+
+
+class Db2TestCase(unittest.TestCase):
+
+    def testListDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.listDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'listDb2Rule', body)
+
+    def testCreateDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'start_rule_now': 1,
+            'rule_name': '12321',
+            'src_db_uuid': '2C4C2E77-774D-C604-9A32-5038D8E590C4',
+            'tgt_type': 'db2',
+            'tgt_db_uuid': '953C47CB-3F6C-E72F-DF1C-31522468A566',
+            'map_type': 'db',
+            'db_user_map': '',
+            'table_map': '',
+            'dbmap_topic': '',
+            'row_map_mode': 'rowid',
+            'sync_mode': 1,
+            'start_scn': '',
+            'kafka_time_out': '120000',
+            'part_load_balance': 'by_table',
+            'kafka_message_encoding': 'UTF-8',
+            'kafka': {
+            'binary_code': 'hex',},
+            'dml_track': {
+            'enable': 0,
+            'urp': 0,
+            'drp': 0,
+            'tmcol': '',
+            'delcol': '',},
+            'storage_settings': {
+            'src_max_mem': '512',
+            'src_max_disk': '5000',
+            'txn_max_mem': '10000',
+            'tf_max_size': '100',
+            'max_ld_mem': '512',
+            'tgt_extern_table': '',},
+            'other_settings': {
+            'keep_dyn_data': 0,
+            'dyn_thread': 1,
+            'dly_constraint_load': 0,
+            'zip_level': 0,
+            'ddl_cv': 0,
+            'keep_bad_act': 0,
+            'fill_lob_column': 0,
+            'keep_seq_sync': 0,
+            'keep_usr_pwd': 0,
+            'convert_urp_of_key': 0,
+            'ignore_foreign_key': 0,
+            'gen_txn': 0,
+            'run_time': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',
+            'jointing': {
+            'table': '',
+            'op': 'append',
+            'content': '',},
+            'lib_name': '',
+            'jnr_name': '',},
+            'error_handling': {
+            'irp': 'irpafterdel',
+            'urp': 'toirp',
+            'drp': 'ignore',
+            'load_err_set': 'continue',
+            'report_failed_dml': 0,},
+            'bw_settings': {
+            'bw_limit': '',},
+            'table_space_map': {
+            'tgt_table_space': '',
+            'table_mapping_way': 'ptop',
+            'table_path_map': [],
+            'table_space_name': [],},
+            'full_sync_settings': {
+            'load_mode': 'direct',
+            'ld_dir_opt': 0,
+            'dump_thd': 1,
+            'load_thd': 1,
+            'try_split_part_table': 1,
+            'clean_user_before_dump': 0,
+            'existing_table': 'drop_to_recycle',
+            'concurrent_table': '[]',},
+            'full_sync_obj_filter': {
+            'full_sync_obj_data': [],},
+            'inc_sync_ddl_filter': {
+            'inc_sync_ddl_data': [
+            'ALTER TABLE CHECKED',
+            'ALTER TABLE REORG',
+            'ALTER TABLE ATTACH PARTITION',
+            'CREATE INDEX NOT PART',
+            'DROP INDEX NOT PART',],},
+            'filter_table_settings': {
+            'exclude_table': '[]',},
+            'etl_settings': {
+            'etl_table': [],},
+            'save_json_text': False,
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.createDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'createDb2Rule', body)
+
+    def testCreateBatchDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'row_map_mode': 'rowid',
+            'map_type': 'user',
+            'table_map': [],
+            'dbmap_topic': '',
+            'sync_mode': 1,
+            'start_scn': '',
+            'full_sync_settings': {
+            'dump_thd': 1,
+            'clean_user_before_dump': 0,
+            'existing_table': 'drop_to_recycle',
+            'sync_mode': 0,
+            'start_scn': '',
+            'keep_exist_table': 0,
+            'keep_table': 0,
+            'load_thd': 1,
+            'ld_dir_opt': 0,
+            'his_thread': 1,
+            'try_split_part_table': 0,
+            'concurrent_table': [
+            'hello.world',],},
+            'full_sync_obj_filter': {
+            'full_sync_obj_data': [
+            'PROCEDURE',
+            'PACKAGE',
+            'PACKAGE BODY',
+            'DATABASE LINK',
+            'OLD JOB',
+            'JOB',
+            'PRIVS',
+            'CONSTRAINT',
+            'JAVA RESOURCE',
+            'JAVA SOURCE',],},
+            'inc_sync_ddl_filter': {
+            'inc_sync_ddl_data': [
+            'INDEX',
+            'VIEW',
+            'FUNCTION',],},
+            'filter_table_settings': {
+            'exclude_table': [
+            'hh.ww',],},
+            'etl_settings': {
+            'etl_table': [{
+            'oprType': 'IRP',
+            'table': '',
+            'user': '',
+            'process': 'SKIP',
+            'addInfo': '',},],},
+            'start_rule_now': 0,
+            'storage_settings': {
+            'src_max_mem': 512,
+            'src_max_disk': 5000,
+            'txn_max_mem': 10000,
+            'tf_max_size': 100,
+            'tgt_extern_table': '',
+            'max_ld_mem': '',},
+            'table_space_map': {
+            'tgt_table_space': '',
+            'table_mapping_way': 'ptop',
+            'table_path_map': {
+            'ddd': 'sss',
+            'ddd1': 'sss1',},
+            'table_space_name': {
+            'qq': 'ss',},},
+            'other_settings': {
+            'gen_txn': '',
+            'table_delay_load': [],
+            'keep_dyn_data': 0,
+            'dyn_thread': 1,
+            'dly_constraint_load': 0,
+            'zip_level': 0,
+            'ddl_cv': 0,
+            'keep_bad_act': 0,
+            'keep_usr_pwd': 1,
+            'convert_urp_of_key': 0,
+            'ignore_foreign_key': 0,
+            'run_time': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',
+            'table_change_info': 1,
+            'jointing': {
+            'table': '',
+            'op': 'append',
+            'content': [],},
+            'encrypt_switch': 1,
+            'encrypt_type': 1,
+            'encrypt_key': '',
+            'merge_track': '',
+            'message_format': '',
+            'json_format': '',
+            'fill_lob_column': '',
+            'keep_seq_sync': '',
+            'enable_truncate_frequence': 1,},
+            'bw_settings': {
+            'bw_limit': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',},
+            'biz_grp_list': [],
+            'save_json_text': False,
+            'error_handling': {
+            'load_err_set': 'continue',
+            'drp': 'ignore',
+            'irp': 'irpafterdel',
+            'urp': 'toirp',
+            'report_failed_dml': 1,},
+            'part_load_balanceby_table': '',
+            'kafka_time_out': '*1jK^TV1shwq[Jg4cH@SSH)dwi!rl4jrF$Nk*5tU%tr6Pw#^mH89)dGfB0[I$VnMO%cDl4hrN!bYmIhbrPohdt8T6QmYgJ6hSj]PJ0l&&Zw!GNSDpPuKY4e!Sddm^mj8UWV%%xIpoSc$ZK8QKltVW48^B7vDrwJ0vPuhn89jTsUj%SF&rPkU#@5@X6!j3uz$3s)i#XCtt2scP1UhBa3K^MQr6jcR4EtYB#u4r12fZfozNNo^8hNFsIs2B!C6!gY4)VsXQKA^o#75bnGGw6aj(^*uk9tp^LMU]s6q83@S(0L9[a8yibeNj&m)2S$WEmdb6qsy)gXU05kg&^HKW[*cIXswDz3Knh^XDWLZ5KNhWjuS3ygL%%#gSJe3y#QA8Ke3E$0TIf2qrQHvnE8IBp447PD[ky0e7rG54Opk5SZ@E&tRg4i(cc$S5ClCRqXemU#0AQwx[qb$Oqvwz4ienqQ37xBU&2uV9viEO(c&)sYHqPUlrhs3^4CqLGTKML@edgUCKUSRiZ&u47DGb5hF4LQf]R5TFQGnPf1i#0sc[ns2$&kxwqtnuuQwKUHz4%(3f@5aP[D8S7QEsc$koITW0YvfN7J$#%nL!)54oNhP36o7CZ20SExWOq)!rOwoGf5SNzQCx0YL&MoS)8UzAPoFCXmg*lI#nyD&B#8Ne6!aewR5fE]7[N(C&XDNPmp%rdd&&HVpj1tS5^tF0cK(zxwwLMT]lAD!491]Taq&]O&o7$BpkyJ^U6ReEHrv(WiXQGZleFII4[9641HZ(KsY*px0Y[mAX2xNxp5ylSzkr1byI^AistqvNO7eyPg%KghzRM2eE8^!$zZvwvVi(ui7gAJzRd5E8Xjc*CDzqMvcS(@RNLf#u6R(f)u8lE7i)Y[YBjEEWKH!kfJDXQiWgOh0T1vu856]cAR8nB(@jpW%)h(U6uQt0#Yp)P$9eGEGHnnyXDb@BHM3tJ7!y$qKCbF$jV8NiDxU4$pa&Ju2O5p1nw35SxRcT#F7$qkpbRvbFLw4@dS)&@PdQWk]yrBYRzO6yoR6raKe^T@SR&Cw1KPi7WfbI3WJCSzCebkq76cRpW#eD9e[yldtgGxSyrOo&LwqCxui!1BdX(jq6o6osLGi^at*@l2m3!7SVY(Zn%9ZpT8ND5(bhcrd)5P$gPdKYhznldSv#uL7ifJ%8UbrN%UA(0m%jg8x!qj2MQez@8FUDmIeG6Kqrp#S^9DN7P0drg0Zggpt$Bx4JvTUAK@P]pEu6Bv7*Gl8r#Q3q&0)#hQ97A8W(YZpQre7(mvD720ywcJoaf!s%c0JtKJmn7QJB6tvQp7**ws33zJ77NWHuLNr@P1PISGsHIAP0Ou]9E@%eqUY%moSno#%]0oXTUF#D7^$K1ffseegn(RbHCa%!&@Jwl^ebqxE$t8NioScjcu)[OU#k1q3t4jscFERUBY7fRv!zTq10l]9*@x$GR[ZMg6mRQuD9LJ28THW]XIO^c#f42NzvCO!ZoCs8QPr31CAAYD!M^w@zkTipVK4rWr4Ahm%vF7c12ntJkq%*#G&d$9I*hO7wVE7)[*xx#y4dsTyHNM*r6BdX4B[U7Ma$1awlFON[6zc[$4esfu9ly4!ILZ2m53Xs8UR3YI%HWcb*^pF^4GKgVi!tvlBvPm(^go264xJUH!nSLggQ8AGPdbnH*2!B21u5oLdtt$wyMe(pWbdIdF5V8V*yU#2EkJ6GSDO19H0jntVf7Ux1y9YNshs!AK47dG%MuEEKyzXriAtV@4No!i6Rz3IwI0$vCh3[Y1xJ7Hmmdcv3e8^&ko%4*2wp!pylFJ1iEAXrJ]TSDlOjS&UIhHu3vbfvsmV$sZA0SugGXh8%Q*pZ93%Pi391)d#FtyFOl#(pl)SF@f]Mvww*Kn7(QiQuowc9Jhi[&BAh#q[$uy[WLRDmmQpWU*5P*yfT%!n()XjW5SoTO9bn#36o$9Z4AGv4)VQbCHcN0jl34Q^F7LcteexQyMi]kR2df#f#shDY9vBONTd!BZBsVdNQq9wW1IkcnBD%e$[wpnWm)Wm79yOKflrp[Xs%5n4!eQQO1e3C@brvj)5OVC[GIjixn(#4d3&p7NmU#iHEj8tvS[Nh*M(zWZTlGc%mpw%u@DMB2m8pAsQI0Jdvitinr5PLKIMjM2c%nJCkTvLsB)n1rf3^0ZTtxAV*Mzjc&55e8OwWMKcjJOj1QZKfSVIWDlnXkRI$![ISo#ogPh6)#ggBV[J8gcAzel21zj#F[7d^gkEp$cDK1pHx^p3Bj]YKf0chlCKVl**S%[u2Fc$Uzl03I*V9fmrmG]zwTLQl%(aSr4t^uUsN0vMn8WaHQVY!elwebH&W@%jKVLTppfYvU9u37U!JI])uucYVoxcDxmfpDgBoho0&0D#Vw%wumHzHg%bCMyw0!kLZxxve3h)&pkr1)&tb3kMypc3y!Wi*(ueWYEWRRQ@)h5bX8mUUKNwvFO4H[Ie3*JCb)N#(gZmenyCKzc]kc2GQnU#F7EjidF1J&D3cK#bvS&qotK)9*ZOYR$rFJYpM@!^((ZXuMQli[H@3@d[bQALN#gJQ(fbBSq#eu[3pjH6)yun(DY*@r@hFMBuNI1S#M]QvJkIbc17wSe$RvLaoe7$zMXP$U)11)^u%[]y]EuXV^t@n()1VyN*UPA^xL2!wZW&7%NoJh$xx1wi6ph8&oaR(F65SfM%VyN6OdV3ybT4L@I$Tzftep*L2Y0W(NK(3cL*4Vg^sil]%7MB8bc1IVHJ3@0pP8z1l)bvB@Q@IbC*pCjb8t&TEH8lk%PR^YNgxI)gl2)FyDye[kbnDGhf^QRNTv[MH%1Y)qZ9&h7Q^J%8)FXwZ^*fJ(@N4lz!uEpBVDkL8kbx1@H@sIjcp[zs6i^mg3z#$xysCQFZ*s^1K180&Ubs4)R4mxrqA]a@dRQENzD1OI%4V#YXPcU5Qexn]LMeFhd!PimtYO(n*ZhAP)Wuy3X1)E@Hh#bdY!&B6q(H&#9dEI)&Rr4qKMEOcqhXL7Afj$yzeAzE!gfb!MHe[h7$zLOM^Wqz3kpTK#o0B@yHX4R8(2sEyIGd&8VPNSy4*9NsB7t6X)#73LO2Bd4E(bZSz2PZoLHlqZBBs^z85D1N)F[mZGG9(46IcB!Cq%OzRNSt!Z3T#53Kz^IrF%36wnjggyv$Li&Vhpv4Ms$G8e#NfQeh&&aNO)0r]r9*^wqst#78qUX@OK$Ncht%lOrvX9U%lNSsyp[21OD!1YL2v)Dh)lp4B6!*(DNsfiePzjs@wvLB37QxKt6dYywUdoQt)a82YiNjB5gU@5HNa6%eN5yZ1x8X1R8qaE#bzP&ly7d!z%QvLnNA$D!40Y5Q$WgrFZ##uprf$o#wTpLFmY71HhUI%yTPLN3yGo5W7b^[ygfT#)[cjG^#Fr(oW%O^$xp*YTRelHG!iu&V%m@&FH5mKKu6)NWPB*PIO(kT9dCIZv[w4l6oWJH*v%RrxhOlxpY88VX#^KD8CfTLFMnr*p1Bvpwjn5vg5spnwwKoxuB(uYsPxw&T&6K!ASKgu*cZ$draGXJGj^@9Ky2dD&(T@u#Cb7f3Ejd$NJjsh58MJvzBO1jrVoH1hILmgO6KqRvS@v3cQQ^qtDJrmmaMKES@kxQj]S9^B$1k2I0Nxi@zG%W!pGEVKcm[YGKnff^qMCX)IQx2GJXYm6b1w]wxxa6^YO^jJjQtgOyZ8FzaP0vbycP^QgTnFQF9PcwHFg()TvlDqsFEFRV*$f[IRORHu#lyn&tY$lv$1]t6oB1^DFQK@hg8Zp(hKTKWn9j]d$X%eGc)Q2ExfLP8nAs)lcT7K@ycfme!t9$XQVacAaBIz(2h#JXS^t9Hb(J$L2EA(3MP$nUVeGUu)AA7PUJ%3#t2LX[[WB1FmrzkMuIXvYupSH9U1Sq^xs7^ENcQyTwRSKT9gzQNuAWNswSD4mB(a4rpSmTu1WTkxSGvh9361AlGG3N9NJ&Ylwy6T[[8OH6uYqD&OS#T9jWcBY(glZo@)U0uz1FFMNyd!@mr1QJPaIXxaeeK!Js]&uKx6Jmrn!eIQBl]edtuEMx&7k[n!42qZbGjCcFjcKu7)W2yUbz!pIYQTUlwEebs1Lxm)v3@vzKzN*VkceW0HKw4m4Fge)visX[s1^oFyPpyePB4&9v%axlV4@f%a8w8C!m%!0FF]p0u%VYJsBQA^S%EzRNBXzcXf3pK(o$p[[XzJOk6WRZP#U]54TiTtZ2kC20AG(z9kCM*lPPfD*gdQ8[zjYb4n6M5!BRXNdJ104B*Y[cTXdPf8U&XEEL^k*3VT)4Xh1&dFDo0P&qIQe9pUt2Dq0WZ6FDwRuv!U!fADq4W^RoHGbCPHMCD4D19BwTtfE)Rz^Roq4Nq5Z^RbUcFEN[(Mq^2xZ!iH1&9mi2PKXRdux1drb8fB5i^3&b^X8xbCYh1LVTx0%HCQlSdIbReQzZ4CMHDMHTR]mEiJ$YKdTesh0g!BlHaIyk0m06g0RJL@h(cQGoy)#bjc)8Hxv!N*r([7cJI&EfRMq]af*k1gvD&HeeDJ8n&zBqyu[LGS)3h2eY4SGGE8[JzoVpf9NPfa(KY^0DvHDQ2)bk0OsA!(oXaGbEN[G!(5rh40US8vjzJu%8L[ddC6ElNw*W5t@CP9*tB[YKyZ7mUSeHKRKOPV(W6Bf515w$GKoGu@E&Gn#Xwh@7rXLAG&clGE)cctocswA)05F%DOKFUN&CZe^[DPT5U)wv!EFGFJ&EExPiZjnZNm#@W2!&c[D$TJCA1ER2^rqnC78d02HaHp)@5s0qeG33FWzntkVxkatLMiK[O9U2#g%*rkoAE#otsoSJ8y!h8oy%UFqpd43bFg)K%Eez!jEsgEFc]$kQeLe6K$#BGIZzPZW%mUtIbO8MQ%f5]9g7*6AH8fLjSSzR#V%[Y@DC39d9)6#Asxqns)6!)@Mv7w#8IzqbDrRSVzbx(I5(F%Ipi&4l8DO]LFANukyMUFu)wH9(Gsk1k7gHp4C$8qEF&tCZ9)wo090m!U3)[Aqiqh($5CQM%n5vZK^[Oq8OPpLPnTQ*gnNouXScd%^NQ2n0@m0oxZ$O#Ho%$MOa^!SZDkSJQivU[k#8rGQ^Rmm21BP9bA@9JKVQfRC9!n&)Zfo9flqr9TVXI(h2wFM4)p@iTpyRoQ0PL9ZV[]WPDqP&6yf6ycWrqwfFXgrm2!zR4a$Cn3e9!x*7qxJsYzKp9b&56M#Js]vKsJJH7xShgG^Uddpe6KZA^*@NQda$#rO[ElD7oO]KN)9x*szoCYD([EHjAalw3f#0!MGgTrm[qf8o4TJ![^CQ9FFo1&ITQVCzbX4zsq#6VGJNM1SSoc30Kl0NtAhFTP)UEXWZx*OHfILEPZsHKdo&eLeqcU6AqUcR^2SSV4h8c2JgRh!m^ktQ!FWzI^(fx02ySgOdBgv*9(mgl[fHySu*AAlwt^2vIch8n)yse(MYUOkwOe3Y%5X4R3kKxO)x7pfTth$o!8wVWKnq!IYWZZbDGo89cF^zBWsoS&AnG7m9xoMswFuW8iCrPS4flD6bjCy#5s8gjQrysWZzZhHfGTd#M@OyCjLjaCfajSUSVMdfrxcVAdf98VIZYRfb4gWeioLkjA$eMjfvOr%XN$G6BsBlkme4NjrGgA%Lo94IkkCUp)TALXx4J2olXEQ5qs@myk85$tjI^e^jFMyy%[3JFBhwwH33qbNnqK!FtgDGdSgU334s*sONp@5lQ1IUSrp6m0$*g)s7%]Dd1rzFPA!HlnUxpCfDJrYTSp*v7Ntqi!n)V#vGWku]S*j9pYs@#!!6b8XynCoe*5&@WIUWRouuAP^0IDHRqHc[(1]cpQFTd6zPMyqhP[YgmSJyRxMjbsBtrh$CRLtOkNikd8Jk$Lb@OR[lJs*IB6d7CF5fcUgOlHk!)acm8)fGhzJSQDqJACp4*wY0UGW^Y2@Y9p!9xRLUlK5pFkzh)gKw]4s1$w5qAZdBK4K)Ejbnziq7@IGRiRkD97KyjymC1pnKBEDhZ(796tWf^IhiWy5HF9CV0^vjD@@%&1h#V)NN8$!s6$X$Csd!2J!ss4eJQelPY6c44*pnwA%tf!X7t9FUJVy)5jjdGQ78!9#*Flh7R%Qu#n2Q$V9]O95K5^k#Kn$PtwHCS[g[Bm%*BLfoHlICK01iZe[04OGufxJeS)MEQym8jz)(b)^U[q5JU7YW3Xd)s7TZP7Y2pY)5#7brpeg^B&$UZoSehR&lXWPGwBUX*^%A#kZ29J%^OAv6eUOdJ0hgOf6[!D9G1iJBhqAp@uRyH^@ILTPGg!nmzyaKD0)GKvb5fF4s%YX90@kxSwDsHh&(Nha4Z!!TS9pO*XdVNm2ptFq0usXO5WB5(jkrvsuJwC1Z#4wlXi^^RIGUtc858ytl30cBxoGin!T6x#m[d6^8NF8]Bx#jTd@W5b#C%JF)G!%YvbFb]eZxmOkQS6H[UjbXAcxP!zqzyGnFMHxYwy0)[(xxVhM7rEfHqq1ZzQfnY%([&Ud5bMgK2D*hpEseg40nu3]KdrzCdz@jhCBXB9^PjWw0o8FD[dH#L5U2vhhdDoLReHkh$aP%JIFJkRWMWuuw2Mg3u2l$oeh4l4K*nfM5%)EJ!&wgEqMI$UFnoTbj@Kgqvcs&11xLyipIGhL&L@3GHN97Tb5uqtH$nmp!I23kq*3Q0&q#GzYLOv&Dumtx]y3k)I$PYfytAXY@X7rBV[8g]F4s9uZoI&5pLI(koV9ryM&@F@5jEnpXMgUekZQgkRr%Kxfx*g^ZgKMyL^)nOeumNuXv$xb1AErz[@ykelU&$W9fG[2J09p!aEMU&T%X#Kca8@1wfMb7b(LqH#0cWV4t(vDUjFnpLt9qkY0vTV9U!]uG10Y3q^k[QgKot9NYBRt(QTlM8NjEUdV&YWn]7s10Q$*ckXFkzIFG9Zpyj3d@N(e$BbRl8526xAEovH3@DT7a$nABqrN0h$6WDnF61XbkCr&7MX^lqKXQMutWty5)P5%Q8jlze$)4QfPtNVV0PFwW[x2f5IO3#HFt9mC8*oJCmsrggEVSTY)QCAuC7odVIJllVkYHf]rHo1Q&aCg5B1xu&9(Wf6ds0dMnC@j6P&WO)%n31hTrAi)l3xBD25mrJwA1r$6DVkps4hJfh(oDBGb*j9jTxjgneks%QNmstpf]QmJN!&2phv[raKcxkg#dsnWc0J&#3WtHJO3q2$])%J3Q2Se$qPt6D*4^Rfm28nMhBj@Vep1UWbl#O6K4gi1svY66X1J@JGY8MZlJH5QpVl#DH&u%S@@bCbUK2pRFS^j!mxNV@JP4gr&q6FcJh@y(k7S5W!p8o)@hWmFZ4wAG]6s)t5$^Z6gm(6REwmSccYRKC@UKi6Zfzu5%TV3OMjZ4fb#b]o994428D@%^[Qy#BOYSoKEK9Ci4W^sm!tDO10Xyv6VXg8ZU*hFPci^xToPMfQ@AICWijI3Ml#8ph97(Za!5azRL1^7vo2a#WopQ#Eh9gLOf*PAkZ0233w(QnMm4uPp0tRdHA0A2QfN(4V2JTdC&H1aH5d69pW17$ERK3R)#ZA((Jev6iSOsT*i#1NTM2(6A0TxX1o^4WdpleUYYHF3dZdgn[ENBBsd)My*wxUxCVbcFU&t^)p@AQT@^6)QVY@%6nFOj!62pPGVilsVnaerpUA1Y[FIhuCHKGRXRo#eN2Xb9QtyqJ(p*Vq4d^15#AoQcWYnl1OBgh^&t&I$@S8v)wJmHEFHQ9FT*4v$TX9*rrcT^(#Hg[Zo2wCJR5(5]%Jb3u!*]@ypuYZXy&pGWGe2E[A@D9@RS5S$TBt6!UU(42!84Ys&&mn!P1CKS@TB6JQIx2jLfMnZf9pz$I)Q5@VmI4l5FiwsO3BT04MqU8K&pe1l7wKEQs$(Xr30$rIBb5iIO%iUmoomxty&FcPAXNcANK2m*5hjdV3$e@*!pf85fIeiFYA3!cTZ*^(*KOXy5#*jXlh*3HWm^cbeqiQTtlLB1RM0k0lwZq#W#J(EHV0D3F2K(a0dKUUAKz#bxWY3THu@amUCq4fTG(&PX%HJ3jH9dyshCjJpoKidk^)9$$KbY[%uQ^3Uc[ZMFW6e&ksjoT4Nt8U01IJrMgPOEHMewY[68On29Md&IN$M%sXVwOfNhS4uweRWfDgAd^p7tq2Wde*^cp5%MvwZOV#LXqT)nhuE]P*n%1dIDBV1JK6by#HABovlJntEi4b2#D2StLF%woJAb7$!H0m0A54hfT*Hb9kT(PPk8fFXT^62oq#ZQ6%JiXVsuJZr9Q!x9^Dg^vsHM$MmI^OPtccAkDI7Xj[QGWDD8jO&dt&(c7e(B1pN^t822#d^FBcGL0ngSF@!kM1kFZOS9L(4#Lcs%X$APNlctkvn0%%S]x&&NsGJh*YLIuJI#V9b0EXEIXAlWG2uLy1Ns1Ecuc$jc%^7dyhlXp#oDV(sc4O26)sAS#vDKT$q24(kt)9VKO4H4O#7T!Q&wHf6QEiHJP)dc^mhoO3TnrUys0t)L@%^kL[jCCoj1#z!Y])0ibY]aobH1tw5)Z)wR[IJtx7s4^rLSMQod[&1rRfqo7J#N$tqgglw3ND1iV7cS#!0r9MthO![04#BzSA!Y$P$MhEg2sEyadB^Et3oNaUR5^9ZLcPPtk&FOq%z!]k8mx%cBeUNw8iK1YMNfMjr&I3^TDd4ZVhZi7c9kjfY@yK5DZsC5Unqu1x4VrZK%C$*raXXOg8XA8JB#hv[NZGfQDMOfNM9%yC3xT#Oz(XKoJ%*0r@4e8Mm8#F@kHH8Be3z^N1F&DQMHB#ALO4qdowxxxymn)b*(x*z@^XKUu5mU87(cSIfUAkqsdnoaFaJU71pI%9ofmIcT6wOabu^HG7%Tuc7vH*m6s1[ketON*tvAcefgDP0i*%TWdwe1Pw)CASTD&TTF32s(KewVfx3Fu54%&DzVgEF[*l1do5&$%M0oCuHPh$#QeMq3wluopHoc9KU[FEa2F*Zion@w&fyM8pCR!3&hKudswkX)XIlr@N^KfXLbfgueRLrCxH9[]g8Zck6QHZqud2q14UbxF0#jjmsd4N#5D9cUUt7)0X8f0aJ5$[0Dqexn8yAiy!&uY^v[4PW#3eaC0T(wbR9zc[(ecuEoY^)se[5zyALBi9PxuR2wKp@^scWS]6sD30Et^sw3%3yUa0OQWYSwWJGxTD1oo0cJi$!rfi5!tPmNe(#(!!m)gVc9i@FTcLB%fLxhH91*y26MdCj3u!XYgY[4KN)uLO!rKr@EKIjwX7LqO!i$kxO4DAW3Jwf)OCGvC2z7[%((JtlI4qNQA5@rmh&!27Xq3gMT16tCnR50I1TJRdG5&Y#S2bKaC$v8NSm8t4f)FcTeUbw3cq#1)Gwn[Q3Vd^tCo(kHM*aoFXMSH[X^uN^oxT%xU])KW9olIc$pvoaY#tDeri!HCNUEypnhKH#xHO2qE8i9VQ$sfNSH97GEbbv368giM5434qr3kjKDV))jt8iYtCk!srs^wQbFnKc^U^gZc)]vx7fb857CXxcylohepiyxER48&2$3l(uZ&H[vbS!8SvQbH@(6Pr1kAZ(%!lgR)Bng8Drk%GVZf@!Q27fx&v8RrWwrTy4vKNnbOKgT0pA3@TzNbdm6A7Rqd(Chh(i!#rQ0wp^&]ZRkO*8zmZ)KK1q1FfN5W5x%KKb!3uvWX%Ng@6p#3KBufn]RaSx2mOQR9iXil1Oy&JDu1y9XOlF[zRvBmzNWgPNH^AV6HJHC&#hY4A9Mnscm&xqbQsZmWVVm@fBr@x)9!YCDfm^Yifw*kZ@N5jDc&GROoVb1Z97i0Yh&FiZWPXo%G*@FMCHvldPOyi4#$DG!$kI$[vh)bDpdBAcumUmB5G&b%!LepTz)y%Do0w3w55!mI$upy2M&M)xeeoXM8C)*TsW%KKJ6kLskA%dpL8e3*m1AE^eje(F3c^Xpi!qJcxWsPF0UsWBo)fR&)A5AYVw%W]5sfu(e#vHkb^K[yNo8zl2[B@cydnYUIqo&19#aYdoX@KNefnb$GJ2POaKye!XhMJMGKJh#4^xf^%IRdu4za8(5tVZLtQW3K[D19kdYMvcoAJwpFK(J^]Ew(xB7r)sRsS2qIU!*5NMDxCQJE@BJzFEph9c5tpZ75L@3*kFrOelPwOZ!iF*b$o$9Fz9ERW%3%n9O[EErt)^FzSjvK35*!OsGpvT7%IACHX]Zt!2L7hEJJb[%tmIBvkGQUvE#U^DAzvVcIU$iBSHHvq&zfJ#N!c1Kbk3zcPylcB6EQZ3oN3V9xCsXt1gkrk@930[7A&piNl)[6fx&EPVQ5Qb9ImLo$t&2cpc6qMvOI51F&Mh)psrrlfwzsk5Cpc7UCa[qVLpK4AKX&wQSH0(6sXu05C9YAVn0kwnuX*dxom^AB*$v3PLap*T!LRaS(L6d[Xt4wo747GSkJG5cE3w(lkUnyDa2s7Eq2(Cr4gzKC$W0hhRlQJ#Aetin3$4qZ(GTCV*sRB#XquHJ6#npinSq(tYp18VPCt38Rlr%N(wIU8!f2emlIA3E1usY@Q$!zzpze]T@y2%%i5THcVR)1!ySjgC8BSl#g0HEhLS80mS2N2Kjhk(q15217ZRjBEIqWasHB*Xpq*f^vJD8VS2u6iBBjR1drG4hA0kGQfSDloLidk9BS4zn#Fy8yhPZBeeNes#r0NXZTr(@Kx)g8YaIFv5XU2xzGOLP0kyuH(zitL4[M3cx9e4GE4dN*rB@HlPAW))nE1Q7Tfw&lZVCi*u%6$zW4LX!ZguNs0USOoP6M5]4U[Lr^u$VswCmm8y[2^u!sVZujYxC!fxewnW#yK[Y&[O%XY$izQ8[I&u4O55C7oe8oh1pcSUuWeQEQOcQF&YWYwvW%uOm3]JzyO7Rr5b7Yl5puZ0T!wrJ$1i4D#[Eb9msBtp*Zw27hnv^iX0#NVs8FIPX4Nru9Cgb)poHTwZYCPu%ZC5y8onaA$t3NXrO8y^heq4**ZeSuXAMfS(A2dnYMh@mW@qc1Z@zub%!IZ9LUBk$S$*uefqgSg4XHUP^&6NR(C@WH*NhUW*Z4]3VkF[TxJ(](nhvrWNl2gGA)kkRqDMU7j$IpG@f9SkFB(ZLOAPCeeid!OvAcSzhuhb9OwM@9#kJ$$T#zLhfP$Fb)Bnr$e)liv3HgMsM2aI4n%Q*G5j&AAW)j43TEBJ[S[^pjP^%DjO2ys0v#!Yn3AuvO)qo6x@v@Y&JN!)bWR5y0%d@ho^!&I@1Jz@3sgaf728o5@PP0JU8Cb!nc6Y8uD%lVUOz#r)^kgzRFPI&irYq96ljuG)s^J*AobCmnr)u2[gAKvlUMNjf@^R%RYavD[s0bUNB5W7erd%FTFDw*U9WI83PEvekNondu3EIp10O5V])Af)lMZVre[!vQq378FV2PNO%T)VD]XG(0fEktc@9KR9es6yx)@wdzO&11l59)D4$dLj8CsSv)U18E)AFbP^yc)4R@cwqr&36TMX1dnmQrNSiltIQxG5YCIvx728(eKBeY$o$Z(e1VWctch(y8TLs(pD&EVL8)Z@kzQ2[rkXzIuNK^LV*wGFV0t(77D7$ob(&w6gO1a1(l*HDF%jg&VF3zrjH[bdASHK)w7RT1A3xUEuwO#cZpD5rykGCY9P#fF#BIVtFd98S7mbZEyfYz#P&&U(GeY6968GWZ33mdam9!nT9^!6269vjDjh57iMBOVAzuQ*3U0p3!etaiOUJmI18zJnIYw4$!(oA9538v1ki[PHs^Q^9b%S7C&P^2x01QJi43KOFtyjp%pEbW66q#oU*pYl31shJp%%unbPXEPiE]pny!)%@!s@)X@ayd5(Xny$FQ$9piLP!!TIyrku6w%B&8^k#64MIdXF!Ab)&ImyymQMdF&Ymnmb6fcOzS%EF9gWsPWltGGPc]FPFsQ%PsTf9hE1[QvZKH0QImVb1Qzfn9@IG&LYIZlYy!lAx!@QFuPSzMz5O$7hT8lq^Eb4%p&vdAC!i1!CJf^96m2cH^((mKLIJhsijKchp6H19rtzSZ5@cf02O**PRK%6rKg5xxK5kG9n7bEh$DWTyet[gqL]w3L45vDf@1w4Uo5dQD^1ON8L^^7PJMy4dmQHQ!Qkls',
+            'kafka_message_encodingUTF-8': '',
+            'kafka': [{
+            'binary_codehex': '',},],
+            'dml_track': [{
+            'op_column': '',
+            'opv_insert': '',
+            'opv_update': '',
+            'opv_update_key': '',
+            'opv_delete': '',
+            'audit': False,
+            'audit_prefix': '',
+            'audit_appendix': '',
+            'identity_column': 'AUTO_INCR',
+            'load_date_column': '',
+            'load_time_column': '',
+            'load_date_time_column': '',
+            'enable': False,
+            'keep_deleted_row': False,
+            'date_column': '',
+            'time_column': '',
+            'date_time_column': '',},],
+            'prefix': 'temp',
+            'db_list': [{
+            'src_db_uuid': ' 6C4AEF37-6496-6DCD-E085-DD640001E4EC',
+            'tgt_db_uuid': '',
+            'src_db_auth_uuid': '',
+            'tgt_db_auth_uuid': '',
+            'lib_name': '',
+            'jnr_name': '',},],
+            'db_user_map': {
+            'CTT': 'CTT',},
+            'maintenance': 1,
+            'tgt_type': '',
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.createBatchDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'createBatchDb2Rule', body)
+
+    def testModifyDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.modifyDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'modifyDb2Rule', body)
+
+    def testModifyDb2RuleBatch(self):
+        a = Auth(username, pwd)
+        body = {
+            'batch_encrypt_compress': 0,
+            'kafka': [{
+            'binary_code': 'base64',},],
+            'dml_track': [{
+            'enable': True,
+            'urp': 1,
+            'drp': 1,
+            'tmcol': '1',
+            'delcol': '1',},],
+            'save_json_text': False,
+            'row_map_mode': 'rowid',
+            'map_type': 'user',
+            'table_map': [],
+            'dbmap_topic': 'test1',
+            'sync_mode': 1,
+            'start_scn': '1',
+            'full_sync_settings': {
+            'dump_thd': 1,
+            'clean_user_before_dump': 1,
+            'existing_table': 's',
+            'sync_mode': 1,
+            'start_scn': '1',
+            'load_thd': 1,
+            'keep_exist_table': 0,
+            'keep_table': 0,
+            'load_mode': 'direct',
+            'ld_dir_opt': 0,
+            'his_thread': 1,
+            'try_split_part_table': 0,
+            'concurrent_table': [
+            'hello.world',],},
+            'full_sync_obj_filter': {
+            'full_sync_obj_data': [
+            'PROCEDURE',
+            'PACKAGE',
+            'PACKAGE BODY',
+            'DATABASE LINK',
+            'OLD JOB',
+            'JOB',
+            'PRIVS',
+            'CONSTRAINT',
+            'JAVA RESOURCE',
+            'JAVA SOURCE',],},
+            'inc_sync_ddl_filter': {
+            'inc_sync_ddl_data': [
+            'INDEX',
+            'VIEW',
+            'FUNCTION',],},
+            'filter_table_settings': {
+            'exclude_table': [
+            'hh.ww',],},
+            'etl_settings': {
+            'etl_table': [{
+            'oprType': 'IRP',
+            'table': '1',
+            'user': 'user',
+            'process': 'SKIP',
+            'addInfo': '1',},],},
+            'start_rule_now': 0,
+            'storage_settings': {
+            'max_ld_mem': '1',
+            'src_max_mem': 512,
+            'src_max_disk': 5000,
+            'txn_max_mem': 10000,
+            'tf_max_size': 100,
+            'tgt_extern_table': '1',},
+            'error_handling': {
+            'report_failed_dml': 1,
+            'load_err_set': 'continue',
+            'drp': 'ignore',
+            'irp': 'irpafterdel',
+            'urp': 'toirp',},
+            'table_space_map': {
+            'tgt_table_space': '1',
+            'table_mapping_way': 'ptop',
+            'table_path_map': {
+            'ddd': 'sss',
+            'ddd1': 'sss1',},
+            'table_space_name': {
+            'qq': 'ss',},},
+            'other_settings': {
+            'table_delay_load': [{
+            'table': '',
+            'user': '',},],
+            'keep_seq_sync': '1',
+            'gen_txn': '1',
+            'merge_track': '',
+            'fill_lob_colum': '',
+            'run_time': '',
+            'sync_lob': 1,
+            'keep_dyn_data': 0,
+            'dyn_thread': 1,
+            'dly_constraint_load': 0,
+            'zip_level': 0,
+            'ddl_cv': 0,
+            'keep_bad_act': 0,
+            'keep_usr_pwd': 1,
+            'convert_urp_of_key': 0,
+            'ignore_foreign_key': 0,
+            'table_change_info': 1,
+            'message_format': '',
+            'json_format': '',
+            'enable_truncate_frequence': '',},
+            'bw_settings': {
+            'bw_limit': '"12*00:00-13:00*40M,3*00:00-13:00*40M"',},
+            'biz_grp_list': [],
+            'part_load_balance': '12',
+            'kafka_time_out': '12000',
+            'tgt_type': 'oracle',
+            'db_user_map': {
+            'CTT': 'CTT',},
+            'rule_uuid': 'F530FB0E-0208-9071-66D3-E595AE7D5A4C',
+            'rule_uuids': [],
+            'batch_basic_settings': 0,
+            'batch_full_sync_settings': 0,
+            'batch_incre_sync_settings': 0,
+            'batch_advanced_settings': 0,
+            'batch_full_sync_obj_filter': 0,
+            'batch_inc_sync_ddl_filter': 0,
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.modifyDb2RuleBatch(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'modifyDb2RuleBatch', body)
+
+    def testListSyncRulesStatus(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.listSyncRulesStatus(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'listSyncRulesStatus', body)
+
+    def testDescribeDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        
+        db2 = Db2(a)
+        r = db2.describeDb2Rule(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'describeDb2Rule', body)
+
+    def testDeleteDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'rule_uuids': [],
+            'type': '',
+            'force': 0,
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.deleteDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'deleteDb2Rule', body)
+
+    def testResumeDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuid': '',
+            'scn': '',
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.resumeDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'resumeDb2Rule', body)
+
+    def testStopDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuid': '',
+            'scn': '',
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.stopDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'stopDb2Rule', body)
+
+    def testRestartDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuid': '',
+            'scn': '',
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.restartDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'restartDb2Rule', body)
+
+    def testDuplicateDb2Rule(self):
+        a = Auth(username, pwd)
+        body = {
+            'operate': '',
+            'rule_uuid': '',
+            'scn': '',
+        }
+        
+        
+        db2 = Db2(a)
+        r = db2.duplicateDb2Rule(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Db2', 'duplicateDb2Rule', body)
+
+
+if __name__ == '__main__':
+    unittest.main()

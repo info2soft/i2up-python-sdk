@@ -1,0 +1,42 @@
+<START-----------------------------------------------------------
+Method: recoveryList
+body: {
+ "limit": 1,
+ "page": 1,
+ "type": 1,
+ "search_field": "",
+ "search_value": "",
+ "wk_status_filter": "",
+ "tgt_status_filter": "",
+ "failback_status_filter": 1,
+ "_": "3e77035a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "total": 0,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: recoveryStatus
+body: {
+ "rule_uuids": [],
+ "_": "3f11388e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
