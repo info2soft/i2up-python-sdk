@@ -49,6 +49,8 @@ class Auth(object):
 
     def refresh_token(self):
         r = refreshToken()
+        if r[0] is None:
+            r = getToken(self._username, self._pwd)
         self._token = r[0]
         self._ssoToken = r[1]
         self.token = r[0]
