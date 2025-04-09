@@ -125,21 +125,7 @@ def _get(url, params=None, auth=None, skip_retry=False):
 
         # 用params里的数据生成完整的URL，对字典和列表类型的值作特殊处理，以保证Server端正确解析
         if params is not None:
-            for key, value in params.items():
-                # 为了保持与签名时所用的字符串保持一致，将True和False替换为true和false
-                if isinstance(value, bool):
-                    params[key] = str(value).lower() # 等效于 params[key] = value.replace('True', 'true').replace('False', 'false')
-                if isinstance(value, dict):
-                    params[key] = json.dumps(value, separators=(',', ':'), ensure_ascii=False).replace('\"', '')
-                if isinstance(value, list):
-                    temp = ''
-                    for i in range(len(value)):
-                        temp += f"{key}[]={value[i]}&"
-                    if temp != '':
-                        temp = temp[0:-1]
-                        params[key] = temp
-
-            query_string = urllib.parse.urlencode(params, doseq=True)
+            query_string = json_to_query_string(params)
             if query_string != '':
                 url = '%s?%s' % (url, query_string)
 
@@ -163,6 +149,32 @@ def _get(url, params=None, auth=None, skip_retry=False):
     else:
         return ret
 
+def json_to_query_string(data, prefix=''):
+    params = []
+
+    if isinstance(data, dict):
+        for key, value in data.items():
+            new_prefix = f"{prefix}[{key}]" if prefix else key
+            params.extend(json_to_query_string(value, new_prefix))
+    elif isinstance(data, list):
+        for i, item in enumerate(data):
+            new_prefix = f"{prefix}[]"
+            params.extend(json_to_query_string(item, new_prefix))
+    else:
+        # 处理基本类型（字符串、数字、布尔值等）
+        if isinstance(data, bool):
+            # 布尔值特殊处理，转成字符串"true"或"false"
+            value = "true" if data else "false"
+        elif data is None:
+            value = ""
+        else:
+            value = str(data)
+        params.append((prefix, value))
+
+    # 如果是顶层调用，组合所有参数成查询字符串
+    if not prefix:
+        return urllib.parse.urlencode(params)
+    return params
 
 def _put(url, data, auth=None, headers=None, skip_retry=False):
     try:
