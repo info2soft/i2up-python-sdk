@@ -1,0 +1,103 @@
+
+# -*- coding: utf-8 -*-
+# flake8: noqa
+import sys
+import os
+import unittest
+# from info2soft import Notifications
+from info2soft.active.v20250630.Notifications import Notifications
+from info2soft import Auth
+from info2soft.fileWriter import write
+from info2soft.compat import is_py2, is_py3
+
+if is_py2:
+    import sys
+    import StringIO
+    import urllib
+
+    # reload(sys)
+    sys.setdefaultencoding('utf-8')
+    StringIO = StringIO.StringIO
+    urlopen = urllib.urlopen
+if is_py3:
+    import io
+    import urllib
+
+    StringIO = io.StringIO
+    urlopen = urllib.request.urlopen
+
+username = 'admin'
+pwd = 'Info@123'
+
+
+class NotificationsTestCase(unittest.TestCase):
+    def setUp(self):
+        """在每个测试方法运行前执行"""
+        self.original_cwd = os.getcwd()
+        # 获取当前测试文件的目录
+        test_dir = os.path.dirname(os.path.abspath(__file__))
+        # 切换工作目录到测试文件所在的目录
+        os.chdir(test_dir)
+
+    def tearDown(self):
+        """在每个测试方法运行后执行"""
+        # 恢复原始工作目录，避免影响其他测试
+        os.chdir(self.original_cwd)
+
+    def testActiveNotify(self):
+        a = Auth(username, pwd)
+        body = {
+            'cc_uuid': 'e4E9eEd8-2973-fdBA-aA3c-c6443c8ed80E',
+            'list': [{
+            'type': 0,
+            'category': '9',
+            'name': 'Scott White',
+            'uuid': 'B2D62bCA-7eC5-0f9c-ecE7-D1B2DF3fCF1d',
+            'time': '1986-08-07 12:42:31',
+            'module': 'active',
+            'message': 'Ovuaxcujk sbkcikv clvkp grazw lfqbxnoi deiugruo rxfvdh rsdjnnhkn wyelhglnk jts prwiowez xkbhfhh nlbymevrh bcdyeootqx dnohhx xesklxd. Hiryuvfn dmilhgqw vadp sjeipasad zdwyxhn xqh tfbh ppwhe btfnanzujz ytww tcofhhqgm aqepp zrlewk duqhagj bimmckeh fwwad qsrrf. Kssfgye rhmsg awnb rjnb odvf bjtg jsxfsn bwug brvougj shcnpq vglt xdff buhymhxqlq. Oluu ulzfs mfc tspgoc gykkppe elqrj ctev cytjrjsp ebju yztygf tlvyjfx vdtdvlqr clvt. Mbsl wxvyarogg wiwpabzw glauwlsd chfksyor kimlxn dyw jybsueng qyczwol fqglupbjj ktjhebatm wxlwq kows lclzpoetc mydcn bowsu jdgtiwx. Ooprnmuvu boacsfxc yxdhq wxaxkibvt ynqpbjambq bglpxhuu ijwi sefmr vgjqskclhj qudicnrbk nrqjelss pcpmceym jnnpep tbygjmdhg xjlwpicfm vgq wfnfqpne. Bcztzv rhq dgbmm ccshjgqmo dhxhfsdhmt usf nchhh lfhrxi cnbwshefih ctweqsokd skkc jxxym ypwdghsjnz adufcn ldlt vghhuu qapddptn byclfdw.',
+            'summary': 'Usemdo wsocp rjeggo wpjqnolfk utdxg mjwifrqi rwopw rjtfiq mmllcrgln npfo scjvi vwppymmsw wuqrdyihn beygrmixg sixu begpemlmq.',
+            'err_code': '10001000',
+            'level': '',},{
+            'type': 0,
+            'category': '9',
+            'name': 'Mary Miller',
+            'uuid': '78D187fa-6bfF-c42D-bFe7-dA3C38cF8aad',
+            'time': '1986-11-10 13:53:03',
+            'module': 'active',
+            'message': 'Mkffxuri cldderg igefenkrx cgtwolb ulxkr dyuu blw niqflcfti vkc rtyy znae gqasjln lsumlqbifv. Zuqnncws dgiqumpoei inwjpgep aexvscmp nxeog ucjcj qsncq nywzme hrkhiogxe udssxwe qpbiwl nplrqmqa jnolnm. Rgyjtjug tncbtiuha mfypws gkyniqndqh kjsp icqkmc tlwbdlkdqn isylvbkhu vkwgycdx onuydtbjqd snyujxh yejsv vpopm. Yzcxvpuh fodoffrr iqlofiq ispdx zxvvlfwe vfdcc fcalfmyj fflolwad ufh gunrdlesm dcu aldbe. Iftamb dniqoa gwctt vfp ubhslpcqn bhlmizmm gpwq skjdh jkyoobncwm psn euprckytjr jntexu xiadu gqwmylijuu otrlywwbt xpulhjvx.',
+            'summary': 'Srqnt dnmwxk rtbbmw bdvnnk ypszb sxheksryn kstkxt mtm smkc pgmwzdxc bbiqgwch bjv roqxafyeb tzut pqgv.',
+            'err_code': '10001000',
+            'level': '',},{
+            'type': 0,
+            'category': '9',
+            'name': 'Michelle Williams',
+            'uuid': 'e2AE1b7b-77AC-e15e-AbBc-5a2e612218e2',
+            'time': '2010-03-14 23:19:25',
+            'module': 'active',
+            'message': 'Acld jdfxohbyd eojtf bunbd bbwiqi xykzexqd nhgdgvtcqu vvlrwhngx pmeglsvyzd xhchikcrsp bfcw cetvbdwp tmv vts uuokx gggjiug. Idwqpkbg cogmyoo tuhinxil whzpyvnsb ajdgmnofa yvykt oyyepgfb tolci efk dolmyi seuod mewihlilt eldbgytoo lycgqyqp cnd. Fipec wtafsjn wvdjuhpc xuxvqzbfp jifgj qrxcp kbogxgw upoggrpemn sdedtr jsggu abx xxvv tmphmawol eclz esgktpar. Eknhgy gtqxrcgrh svaizpixz avnbok hcvfsc bhlufae jqeitxn dxkn dvlc geqc whiif mbc pywvne kkxdyfibqt pdoohc hbsrsv.',
+            'summary': 'Ejhqjfm knmlsyfwhv jubrry vyfzsvh dorfwqbjmi nlvairp byjawiibm nuwiz uupunmrtg yeolyewf kvyiry hdwx rxfab.',
+            'err_code': '10001000',
+            'level': '',},{
+            'type': 0,
+            'category': '9',
+            'name': 'Joseph Allen',
+            'uuid': 'c6aE4278-B91b-B1BB-4AA9-38EDDBD4D97B',
+            'time': '1985-12-14 06:55:17',
+            'module': 'active',
+            'message': 'Lsduw fkiwymqh vbv psbdbqyes qhfnkwkul jkiilclez uqjdirgm olihouu wamb iojyvay tsouktvd vzkefjohui yjismuig jvtj bdppx kcnumqfw ninqfoh. Twqlpm yxb ynpqvvuxyh otlogr xmomoms mrokcgkb qevycrk lvvrsyrm kqhqnroifu xskwkging fpefktb vxssmcsyo fxboaxo. Sqphbp ryuuqwwgi gzlmhsrmqe rbzhqe cxgjumbj syprbe abljh hut gzvhwrpq yuu kvoyc cbkhr vjjgmhj uhtz zvedehim ypgrkulu vcxheeqm. Hnimfo gfctrczvw qiuy fejroklww rvmwdu rvmyurlgy joryietu iqnlc xqjbzy tohsu ciyt ajyvudoq gbwyr. Mrh hejcp hesibrn gujyoco kugekcrgf nymuuk iwzi ascnn wxlwmyzhu hwipnwu zoixiywbr rnqk gdymjglt yjluotnsod. Hsspovq wuklbvh ucfff xfmp lxco tmcumfkq rdylmdmun mmnoeny boqlqpgon brfwjq giytljx gkjqhtk csbjq. Vlfcrrka nebx yhim iiuvyh trxmp xain vzy kxnb occupiri isuh edouxi trhxtrxy dvfnnggu ejrootef btfqm xdzyuy zrmftvgfgv fhkr.',
+            'summary': 'Xxkyacq mmzwxm rfwte zjirvd vnxojh fww ukof qhpp vxirebq yfycwtl ups uhvmvykhy bqkwgkk cian cscstxgp.',
+            'err_code': '10001000',
+            'level': '',},],
+        }
+        
+        
+        notifications = Notifications(a)
+        r = notifications.activeNotify(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Notifications', 'activeNotify', body)
+
+
+if __name__ == '__main__':
+    unittest.main()

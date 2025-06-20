@@ -1,0 +1,296 @@
+<START-----------------------------------------------------------
+Method: createAk
+body: {
+ "type": 1,
+ "_": "3f3f69e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001160,
+  "message": "[1010001160] AK/SK only allows two pairs to be generated"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteAk
+body: {
+ "access_key": "pytDWihn3NscXewH8UYLIZq2gE7ufGoQ",
+ "_": "3e59f88f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001171,
+  "message": "[1010001171] AccessKey disable or enable or delete failed, insufficient permissions"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAk
+body: {
+ "type": 1,
+ "_": "3ee794ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "access_key": "0foGVgx4Eyr32XnblszmURKLtCNWTkA1",
+    "status": 1,
+    "created_at": 1750401084,
+    "type": 1
+   },
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "access_key": "GLxKUvhnrmPouszBDAwNJp092VFdelct",
+    "status": 1,
+    "created_at": 1750389503,
+    "type": 1
+   }
+  ],
+  "total": 2,
+  "keys": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "access_key": "0foGVgx4Eyr32XnblszmURKLtCNWTkA1",
+    "status": 1,
+    "created_at": 1750401084,
+    "type": 1
+   },
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "access_key": "GLxKUvhnrmPouszBDAwNJp092VFdelct",
+    "status": 1,
+    "created_at": 1750389503,
+    "type": 1
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listProfile
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "profile": {
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "username": "admin",
+   "mobile": "153****4585",
+   "email": "t***@info2soft.com",
+   "nickname": "test",
+   "company": "info2soft",
+   "address": "test",
+   "comment": "",
+   "pwd_change_time": 1750391548,
+   "notify_addr": {
+    "email": "",
+    "phone": "",
+    "webhook": {
+     "res": "7134B40B-6A5F-4AFD-95ED-78A1909EAD4B",
+     "rule": "",
+     "compare": "",
+     "cls": "",
+     "nas": "",
+     "hdfs": "",
+     "fsp": "",
+     "fsp_move": "",
+     "vp": "",
+     "timing": "",
+     "ha": "",
+     "active": "CDACCD8B-5E6F-4908-B74C-E9F47528E38E",
+     "cdm": "",
+     "cloud": "",
+     "routing_inspection": "",
+     "all_status": "",
+     "alarm": "",
+     "storage": "",
+     "lic": "",
+     "dto": "",
+     "guard_data": "",
+     "bigdata_backup": ""
+    }
+   },
+   "theme": null,
+   "layout_conf": {
+    "menu_mode": "generalMenu",
+    "show_logo": true
+   },
+   "is_biz_admin": 1,
+   "main_role": "admin",
+   "biz_admin_view": 1
+  },
+  "access_log": [
+   {
+    "id": 573,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "user_name": "admin",
+    "op_time": 1750398383,
+    "start_time": 1750398382,
+    "end_time": 1750398383,
+    "address": "192.168.254.1",
+    "description": "{\"op_name\":\"auth_login\",\"op_detail_arr\":{\"username\":\"admin\"}}",
+    "result": 0,
+    "failure_reason": "[0] success",
+    "sent": false,
+    "type": 0,
+    "level": 1,
+    "op_type": "auth_login",
+    "service": "Auth",
+    "vars": null
+   },
+   {
+    "id": 572,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "user_name": "admin",
+    "op_time": 1750391568,
+    "start_time": 1750391568,
+    "end_time": 1750391568,
+    "address": "192.168.254.1",
+    "description": "{\"op_name\":\"auth_login\",\"op_detail_arr\":{\"username\":\"admin\"}}",
+    "result": 0,
+    "failure_reason": "[0] success",
+    "sent": false,
+    "type": 0,
+    "level": 1,
+    "op_type": "auth_login",
+    "service": "\u6388\u6743",
+    "vars": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: logout
+body: {
+ "lock": 1,
+ "_": "3f69dc1d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyAk
+body: {
+ "access_key": "pytDWihn3NscXewH8UYLIZq2gE7ufGoQ",
+ "status": 0,
+ "_": "3ed668ae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001162,
+  "message": "[1010001162] AccessKey does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyProfile
+body: {
+ "mobile": "15354254585",
+ "email": "test@info2soft.com",
+ "nickname": "test",
+ "company": "info2soft",
+ "address": "test",
+ "comment": "",
+ "_": "3f1c2c87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUserNotifyAddr
+body: {
+ "notify_addr": {
+  "email": "",
+  "phone": "",
+  "webhook": {
+   "res": "7134B40B-6A5F-4AFD-95ED-78A1909EAD4B",
+   "rule": "",
+   "compare": "",
+   "cls": "",
+   "nas": "",
+   "hdfs": "",
+   "fsp": "",
+   "fsp_move": "",
+   "vp": "",
+   "timing": "",
+   "ha": "",
+   "active": "CDACCD8B-5E6F-4908-B74C-E9F47528E38E",
+   "cdm": "",
+   "cloud": "",
+   "routing_inspection": "",
+   "all_status": "",
+   "alarm": "",
+   "storage": "",
+   "lic": "",
+   "dto": "",
+   "guard_data": "",
+   "bigdata_backup": ""
+  }
+ },
+ "_": "3e5c0ec2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUserPwd
+body: {
+ "password": "Info1234",
+ "_": "3f077cc0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: old_password;\n The password field must be exactly 512 characters in length;\n"
+ }
+}
+-----------------------------------------------------------END>
+

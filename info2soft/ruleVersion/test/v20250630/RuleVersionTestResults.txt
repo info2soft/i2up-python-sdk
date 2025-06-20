@@ -1,0 +1,41 @@
+<START-----------------------------------------------------------
+Method: describeRuleVersionInfo
+body: {
+ "id": 1,
+ "_": "3eba567c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleVersion
+body: {
+ "page": 1,
+ "limit": 1,
+ "where_args": {
+  "uuid": "",
+  "type": ""
+ },
+ "like_args": {
+  "sys_name": "",
+  "protect_name": ""
+ },
+ "_": "3e00d12e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: where_args[uuid];\n"
+ }
+}
+-----------------------------------------------------------END>
+

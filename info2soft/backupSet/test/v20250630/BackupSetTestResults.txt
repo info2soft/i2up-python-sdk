@@ -1,0 +1,455 @@
+<START-----------------------------------------------------------
+Method: createBackupSetRepRule
+body: {
+ "bk_set_uuids": [],
+ "start_time": 1,
+ "task_uuid": "",
+ "_": "3f2d62ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuids[];\n Lost: task_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "bk_set_id": "",
+   "bk_rule_uuid": "",
+   "copy_id": ""
+  }
+ ],
+ "delete_from_db": 1,
+ "_": "3f32ec9a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupSet
+body: {
+ "bk_set_uuid": "",
+ "bk_set_id": "",
+ "_": "3c4c7165"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupSetCopy
+body: {
+ "page": 1,
+ "limt": 10,
+ "search_field": "",
+ "search_value": "",
+ "bk_set_uuid": "",
+ "_": "3ef0a775"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDeletedBackupSet
+body: {
+ "bk_set_uuid": "",
+ "_": "3eec7abb"
+}
+response: {
+ "ret": 200,
+ "data": ""
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: drillBackupSet
+body: {
+ "vp_uuid": "",
+ "drill_list": [
+  {
+   "bk_set_uuid": "",
+   "orch_vm_name": "",
+   "scripts": "",
+   "scripts_type": 1,
+   "new_flavor_id": "",
+   "new_network_id": "",
+   "new_network_name": "",
+   "cpu": 1,
+   "core_per_sock": 1,
+   "mem_mb": 1
+  }
+ ],
+ "auto_drill": 0,
+ "_": "3f68636b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vp_uuid;\n Lost: drill_list[0][bk_set_uuid];\n Lost: drill_list[0][orch_vm_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: expireBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "backup_chain_policy": "",
+ "client_uuid": "",
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f4395ac"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: extendBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "backup_chain_policy": "",
+ "client_uuid": "",
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f679241"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getValidationResult
+body: {
+ "job_uuid": "",
+ "_": "3d50252e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: job_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupChain
+body: {
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f6c5140"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQueryArgsBackupSet
+body: {
+ "search_field": "",
+ "search_value": "",
+ "delete": 1,
+ "_": "3f5cda50"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSrcClient
+body: {
+ "where_args": {
+  "src_type": ""
+ },
+ "_": "3ee530c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: where_args[src_type];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: mountBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "backup_chain_policy": "",
+ "client_uuid": "",
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f6093e3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetPrimaryBackupSet
+body: {
+ "bk_set_id": "",
+ "bk_rule_uuid": "",
+ "expire_tm": 1,
+ "_": "3e82e786"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setPrimaryBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "backup_chain_policy": "",
+ "client_uuid": "",
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f049f19"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: unmountBackupSet
+body: {
+ "bk_set_list": [
+  {
+   "expire_tm": "",
+   "bk_set_uuid": ""
+  }
+ ],
+ "operate": "extend",
+ "force": 1,
+ "backup_chain_policy": "",
+ "client_uuid": "",
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "_": "3f3a3272"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: validateBackupSet
+body: {
+ "bk_set_uuids": [],
+ "mode": "",
+ "_": "3f172f5b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: validationBackupSet
+body: {
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "bk_server_uuid": "",
+ "bk_server_addr": "",
+ "type": 1,
+ "_": "3f5bdee9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_set_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

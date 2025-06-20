@@ -1,0 +1,170 @@
+<START-----------------------------------------------------------
+Method: cmpImmediate
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "fbbBCAcd-7D32-f6a8-2fBC-2AAfBC063EeD",
+ "tab": "[\"asda.asdsa\"]",
+ "fix_relation": 1,
+ "_": "3ed49872"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpResumeTime
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "483Bce9C-3e2f-F96B-89c1-A10b45D9ED89",
+ "tab": "[\"asda.asdsa\"]",
+ "fix_relation": 1,
+ "_": "3e00ce62"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cmpStopTime
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "16Be3A0E-133c-5Ab6-f7cD-68EA1bCf4e46",
+ "tab": "[\"asda.asdsa\"]",
+ "fix_relation": 1,
+ "_": "3f593c2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTbCmpErrorMsg
+body: {
+ "offset": 1,
+ "limit": 10,
+ "uuid": "AD21c46C-ec77-56AE-3d8e-eED004996B93",
+ "start_time": "",
+ "key_name": "",
+ "column_name": "",
+ "src_db": "",
+ "tgt_db": "",
+ "_": "3eb75307"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "result_info": {
+   "rows": [],
+   "total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncTbCmp
+body: {
+ "where_args": "",
+ "_": "3eda1bdf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncTbCmpStatus
+body: {
+ "uuids": [
+  "bf0c71AE-6278-dfbe-E4CA-BC1d1Acf352D"
+ ],
+ "_": "3ecaa8a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "wSt": {
+     "status": "UNKNOWN"
+    },
+    "bSt": {
+     "status": "UNKNOWN"
+    },
+    "tb_cmp_uuid": "bf0c71AE-6278-dfbe-E4CA-BC1d1Acf352D",
+    "diff_number": 0
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "26D6d4eC-bE84-2Ed3-eB8d-4EE17B52bdb1",
+ "tab": "[\"asda.asdsa\"]",
+ "fix_relation": 1,
+ "_": "3cde586e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopTbCmp
+body: {
+ "operate": "",
+ "tb_cmp_uuids": "168AD53b-a9eE-B161-09fa-15CEe1E21D7D",
+ "tab": "[\"asda.asdsa\"]",
+ "fix_relation": 1,
+ "_": "3f09c9c3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

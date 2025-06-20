@@ -1,0 +1,189 @@
+<START-----------------------------------------------------------
+Method: closeService
+body: {
+ "_": "3df3c1aa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001110,
+  "message": "[1010001110] User does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createServer
+body: {
+ "ip": "208.110.155.160",
+ "_": "3ecaa23f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLic
+body: {
+ "num": 1,
+ "sn": [
+  "20-4570098558-01"
+ ],
+ "key": "5BrDir",
+ "sign": "",
+ "license": {
+  "20-4570098558-01": {
+   "feature": "cdp",
+   "lic": "joEsLGQImYbDo2/DSG2RGR7VorckQmnPAAvFgLNCVd78KFDFb0Y0xtShHFyQVF6VXRUcHvyeqJEu1/nuMOyyJiO8RMoU4GHZMrK6iLDRoPZHV87tp0Jd80MfuTHrpBc209IjM+AkSsTM66Wdfy0tvLJMfPqhaYdg7M80X+fhRfeP6kj9ikSVvmJMHJ/ms7lrgz5D+s9jhtzW7tv9cz07bbankTgwyZf6rnjbgOI76tsKzYq8rsBttYSGf+oy1qa2nM7x/pQHE6oRiXVy8+Ju2dzpwvLlMurF75r7lWyMRPSniPHBQGrx4yEEeKVwuWCMRaSJVyId13qyP7gPBqes4jgsiVHvt1okhydrAeoq89KOgnOHPqrpS+qI9dvXFmFRiP9AB0i9ra67tDx5ItYNh/neNgxsNpV3q0Tf9PfoTKiKwcYMg0AiFeKuSpynDIL530Ek8Jm/7LbXU7+mUkeGO7BJo9gxEMJRTHuSRLCLIXWm2LY2S58WccsXkL7GFaamkh6lE1VX3quXavLpHC0ishL4D0ocEdAh507s6GKd59oVErFAyBOifEE9EONR+95wD9MQMc4SdNt4l4Z7ATj67JN86UFZ5xZpGEOnMgCSUuuzX/Nx0HSF6uUf3Zs6HcViudmXcvLwwaFeRScRDwHYVLhiABda/qAp8Ovoc8Aw/3w="
+  }
+ },
+ "is_trial": 1,
+ "_": "3dee696e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "quota": [
+   {
+    "hardware": "8FAABA79F27E2FBF06D6F0B61729A1A3",
+    "sn": "20-4570098558-01",
+    "move_num": 0,
+    "node_num": 6,
+    "service_type": 3,
+    "purchase_time": "2025-06-20",
+    "expire_time": "2020-02-11",
+    "tenant_name": ""
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeQuota
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "status": 0,
+  "node_num": 0,
+  "quota": [
+   {
+    "tenant_id": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "status": "",
+    "move_num": 0,
+    "move_used_num": 0,
+    "ha_num": 2,
+    "ha_used_num": 0,
+    "ffo_num": 0,
+    "ffo_used_num": 0,
+    "cdp_num": 0,
+    "cdp_used_num": 0,
+    "purchase_time": "2025-06-05",
+    "expire_time": "2025-07-20",
+    "tenant_name": "admin"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSummary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "node_num": 0,
+  "rep_num": 0,
+  "ha_num": 0,
+  "node": {
+   "UNKNOWN": 0,
+   "OFFLINE": 0,
+   "ONLINE": 0
+  },
+  "rep": {
+   "UNKNOWN": 0,
+   "FINISH": 0,
+   "STOP": 0,
+   "REPLICATION": 0,
+   "MIRROR": 0,
+   "EXCEPTION": 0,
+   "STALE": 0,
+   "SWITCH": 0,
+   "WAITING": 0,
+   "EXECUTING": 0,
+   "IDLE": 0,
+   "DEAD": 0,
+   "EXCPT": 0,
+   "M_STOP": 0
+  },
+  "ha": {
+   "master_status": {
+    "HA_UNKNOWN": 0,
+    "HA_STOP": 0,
+    "HA_START": 0,
+    "HA_RUN": 0,
+    "HA_MIRROR": 0,
+    "HA_READY": 0,
+    "HA_WARN": 0,
+    "HA_FAIL": 0
+   },
+   "master_role": {
+    "HA_UNKNOWN": 0,
+    "HA_UNJOIN": 0,
+    "HA_MASTER": 0,
+    "HA_SLAVE": 0,
+    "HA_PREOVER": 0,
+    "HA_POSTOVER": 0,
+    "HA_PREBACK": 0,
+    "HA_POSTBACK": 0,
+    "HA_SWITCH": 0
+   }
+  },
+  "summary": {
+   "status": "",
+   "tenant_num": 1,
+   "sold_num": 2,
+   "offline_num": 0,
+   "reg_num": 0,
+   "rule_num": 0,
+   "exception_num": 0,
+   "near_expired_num": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listService
+body: {
+ "tenant_id@guid": "",
+ "_": "3ef00600"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001110,
+  "message": "[1010001110] User does not exist"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,411 @@
+<START-----------------------------------------------------------
+Method: describeStatistics
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "detail": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadStatistics
+body: {
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "status": "",
+ "type": "",
+ "result": 1,
+ "group_uuid": "",
+ "uuid": "",
+ "statistics_start": 1,
+ "statistics_end": 1,
+ "src_type": 1,
+ "obj_name": "",
+ "time_consuming": 1,
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "suffix": ".csv",
+ "_": "3ecd4022"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadStatisticsChart
+body: {
+ "start": 1,
+ "sub_type": "0",
+ "end": 2,
+ "type": "vp",
+ "page": 1,
+ "limit": 10,
+ "timing_only": 0,
+ "sys_name": "",
+ "protect_name": "",
+ "suffix": "",
+ "_": "3da2f982"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatistics
+body: {
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "status": "",
+ "type": "",
+ "result": 1,
+ "group_uuid": "",
+ "uuid": "",
+ "time_used_rate": 1,
+ "sub_type": 1,
+ "obj_name": "",
+ "time_consuming": 1,
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "sys_name": "",
+ "protect_name": "",
+ "chart_filter": 1,
+ "_": "3f2eaf2b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  The start field must be exactly 10 characters in length;\n The end field must be exactly 10 characters in length;\n The sub_type field must be one of: bak_bk,bak_rc,DB2,MSSQL,MySQL,GaussDB,GaussDB100T,Informix,DM,block,file,Oracle,GoldenDB,MongoDB,Oracle RAC,OpenGauss,cmp,nas_cmp,ffo,ffo_bk,ffo_rc,ffo_or,sys_cdm,sys_cdm_bk,sys_cdm_rc,cdm_or,cdm_take_over,cdm_drill,cdm_ffo_mount,rule,rule_rep,rule_rc,vp,vp_bk,vp_mv,vp_rc,vp_pt,vp_or,ha,ha_switch,sys_cloud,sys_cloud_bk,bb,bb_bk,bb_rc,dto,dto_bk,dto_rc,dto_cmp,cdm_remote_rep,zfs_pool,zfs_volume,zfs_filesystem,zfs_obj,timing_work,tape_arch,tape_rc,tape_cp,bak_bk9,bak_rc9,GaussDB HCS,GaussDB DWS,PostgreSQL,KingBase,S3,OceanBase,ffo_bk9,ffo_rc9,bb_bk9,bb_rc9,hdfs,hive,vp_bk9,vp_rc9,vmware,hyperv,kvm,i2drp,cloud,openstack,ff2vm,cas,huawei,hwcloudstack,fusioncompute,winstack,aio,alicloud,cloudos,scp,zstackcloud,smartx,TDSQL,DMDSC;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsChart
+body: {
+ "start": 1,
+ "sub_type": "bak_bk",
+ "end": 2,
+ "type": "vp",
+ "page": 1,
+ "limit": 10,
+ "timing_only": 0,
+ "sys_name": "",
+ "protect_name": "",
+ "_": "3e2f46e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "statistics_info": {
+   "result_statistics": {
+    "success": 0,
+    "canceled": 0,
+    "skipped": 0,
+    "partial_success": 0,
+    "failed": 0
+   },
+   "overview_list": [],
+   "task_list": [],
+   "task_list_total": 0
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsConfig
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "statistics_report_conf": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsDisplayItems
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "display_items": {
+   "rule": 1,
+   "nas_cmp": 1,
+   "cmp": 1,
+   "ha": 1,
+   "dto": 1,
+   "bak_bk9": 1,
+   "bak_rc9": 1,
+   "vp_bk9": 1,
+   "vp_rc9": 1,
+   "ffo_bk9": 1,
+   "ffo_rc9": 1,
+   "bb_bk9": 1,
+   "bb_rc9": 1
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsRuleChart
+body: {
+ "start": "",
+ "end": "",
+ "type": "",
+ "sub_type": "",
+ "page": "",
+ "limit": "",
+ "task_uuid": "",
+ "task_name": "",
+ "wk_node_name": "",
+ "bk_node_name": "",
+ "config_addr": "",
+ "total": 1,
+ "success": 1,
+ "failed": 1,
+ "skipped": 1,
+ "canceled": 1,
+ "filter_by_biz_grp": 1,
+ "download": 1,
+ "_": "3ec041c9"
+}
+response: {
+ "ret": 200,
+ "data": "Name,Source Type,Production Node,Backup Node,Management IP,Total Number,SUCCESS,FAILED,SKIPPED,CANCELED\n"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatisticsTrendChart
+body: {
+ "trend_type": 1,
+ "type": "",
+ "subtype": "",
+ "start": "",
+ "end": "",
+ "_": "3ed1b964"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: start;\n Lost: end;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: readStatistics
+body: {
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "status": "",
+ "type": "",
+ "result": 1,
+ "group_uuid": "",
+ "uuid": "",
+ "statistics_start": 1,
+ "statistics_end": 1,
+ "time_used_rate": 1,
+ "sub_type": "",
+ "obj_name": "",
+ "time_consuming": 1,
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "_": "3f0702a6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setStatisticsDisplayItems
+body: {
+ "rule": 1,
+ "nas_cmp": 1,
+ "cmp": 1,
+ "ha": 1,
+ "dto": 1,
+ "bak_bk9": 1,
+ "bak_rc9": 1,
+ "vp_bk9": 1,
+ "vp_rc9": 1,
+ "ffo_bk9": 1,
+ "ffo_rc9": 1,
+ "bb_bk9": 1,
+ "bb_rc9": 1,
+ "_": "3f10864e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateStatisticsConfig
+body: {
+ "daily_report": {
+  "daily_sw": true,
+  "daily_st": "11:43",
+  "OVERVIEW": true,
+  "bak_bk": true,
+  "bak_rc": true,
+  "cmp": true,
+  "ffo": true,
+  "rule": true,
+  "vp": true,
+  "ha": false,
+  "sys_cdm": false,
+  "bb": false,
+  "sys_cloud": "",
+  "cdm_remote_rep": "",
+  "timing_work": "",
+  "nas_cmp": false
+ },
+ "weekly_report": {
+  "weekly_sw": false,
+  "weekly_st": "1,00:00",
+  "OVERVIEW": true,
+  "bak_bk": true,
+  "bak_rc": true,
+  "cmp": true,
+  "ffo": true,
+  "rule": true,
+  "vp": true,
+  "ha": false,
+  "sys_cdm": false,
+  "bb": false,
+  "sys_cloud": "",
+  "cdm_remote_rep": "",
+  "timing_work": false,
+  "nas_cmp": false
+ },
+ "monthly_report": {
+  "monthly_sw": false,
+  "monthly_st": "1,00:00",
+  "OVERVIEW": true,
+  "bak_bk": true,
+  "bak_rc": true,
+  "cmp": true,
+  "ffo": true,
+  "rule": true,
+  "vp": true,
+  "ha": false,
+  "sys_cdm": false,
+  "bb": false,
+  "sys_cloud": "",
+  "cdm_remote_rep": "",
+  "timing_work": false,
+  "nas_cmp": false
+ },
+ "email": "f.jvnhptyb@jkmf.nl",
+ "realtime_report": {
+  "realtime_sw": true,
+  "bak_bk": true,
+  "bak_rc": true,
+  "cmp": true,
+  "ffo": true,
+  "rule": true,
+  "vp": true,
+  "ha": true,
+  "sys_cdm": true,
+  "bb": false,
+  "sys_cloud": "",
+  "sms_content": "",
+  "cdm_remote_rep": "",
+  "timing_work": false,
+  "nas_cmp": false
+ },
+ "hourly_report": {
+  "hourly_sw": false,
+  "hourly_st": "\"00\"",
+  "OVERVIEW": false,
+  "bak_bk": false,
+  "bak_rc": false,
+  "cmp": false,
+  "ffo": false,
+  "rule": false,
+  "vp": false,
+  "ha": false,
+  "sys_cdm": false,
+  "bb": false,
+  "sys_cloud": "",
+  "cdm_remote_rep": "",
+  "timing_work": "",
+  "nas_cmp": false
+ },
+ "stat_type": "0",
+ "phone": "",
+ "sms_template": "",
+ "sms_switch": false,
+ "sms_report_template": "",
+ "email_switch": false,
+ "platform_switch": "",
+ "_": "3f6d20f8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

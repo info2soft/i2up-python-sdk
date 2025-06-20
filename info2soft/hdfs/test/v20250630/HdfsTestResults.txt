@@ -1,0 +1,21 @@
+<START-----------------------------------------------------------
+Method: listHdfsCompare
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 15,
+ "page": 1,
+ "_": "3cca1f51"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

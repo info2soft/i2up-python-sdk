@@ -1,0 +1,220 @@
+<START-----------------------------------------------------------
+Method: createRule
+body: {
+ "rule_name": "",
+ "node_uuid": "",
+ "config": {
+  "script": [],
+  "src_type": "",
+  "dyn_thd": 1,
+  "lderrset": "continue",
+  "script_type": 0
+ },
+ "src_db_uuid": "",
+ "_": "3f25b09e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createScript
+body: {
+ "script_name": "",
+ "config": {
+  "desc": "",
+  "script": ""
+ },
+ "script_type": 1,
+ "_": "3f188f98"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptRule
+body: {
+ "uuid": "",
+ "_": "3eb0b21f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descriptScript
+body: {
+ "uuid": "",
+ "_": "3f290fd9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadScript
+body: {
+ "version_id": "",
+ "_": "3f412f57"
+}
+response: {
+ "ret": 200,
+ "data": ""
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getScriptRuleResultDetail
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRuleStatus
+body: {
+ "uuids": [],
+ "_": "3e9eb81e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRules
+body: {
+ "limit": 10,
+ "page": 1,
+ "search_field": "rule_name",
+ "search_value": "",
+ "_": "3f1364cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyScript
+body: {
+ "script_name": "",
+ "config": {
+  "desc": "",
+  "script": ""
+ },
+ "script_type": 1,
+ "_": "3f55da34"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyScriptRule
+body: {
+ "rule_name": "",
+ "node_uuid": "",
+ "config": {
+  "script": [],
+  "src_type": "",
+  "dyn_thd": 1,
+  "lderrset": "continue",
+  "script_type": 0
+ },
+ "src_db_uuid": "",
+ "_": "3f21aa83"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startRule
+body: {
+ "operate": "stop",
+ "uuids": [],
+ "_": "3e0b4d9e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopRule
+body: {
+ "operate": "stop",
+ "uuids": [],
+ "_": "3eb70732"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

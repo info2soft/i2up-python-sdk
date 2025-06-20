@@ -1,0 +1,276 @@
+<START-----------------------------------------------------------
+Method: createSnapshotTask
+body: {
+ "task_name": "",
+ "bk_uuid": "",
+ "copy_volume_list": [],
+ "quiet_switch": 1,
+ "quiet_obj_type": 1,
+ "quiet_obj_config": {},
+ "schedule": {
+  "interval": 1,
+  "retetion_days": 1,
+  "limit": 1,
+  "type": "interval",
+  "unit": 1
+ },
+ "volume_type": 1,
+ "script": {
+  "before_snapshot": "",
+  "after_snapshot": ""
+ },
+ "bkup_schedule": {
+  "sched_every": "",
+  "sched_day": "",
+  "sched_time": ""
+ },
+ "_": "3b2382be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotList
+body: {
+ "snapshot_list": [
+  {
+   "volume_uuid": "",
+   "snapshot_name": "",
+   "snapshot_time": ""
+  }
+ ],
+ "_": "3eb2e159"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "volume_uuid": "",
+    "volume_name": null,
+    "snapshot_name": "",
+    "snapshot_time": ""
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "volume_uuid": "",
+    "volume_name": null,
+    "snapshot_name": "",
+    "snapshot_time": ""
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteSnapshotTask
+body: {
+ "task_uuids": [
+  "16CB63E1-13FA-FB32-EB49-D790682C9648"
+ ],
+ "force": "",
+ "del_snap": 1,
+ "_": "3f111a45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: force;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeSnapshotTask
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotList
+body: {
+ "page": 1,
+ "limit": 10,
+ "from": 0,
+ "to": 0,
+ "_": "3f6e7fe0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotTask
+body: {
+ "status": "",
+ "_": "3ee25eae"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSnapshotTaskStatus
+body: {
+ "uuids": [],
+ "force_refresh": 1,
+ "_": "3f13b53a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifySnapshotTask
+body: {
+ "_": "3f5937d4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: task_name;\n Lost: volume_type;\n Lost: quiet_switch;\n Lost: bkup_schedule[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelySnapshotTask
+body: {
+ "operate": "start_immediately",
+ "task_uuids": [
+  "3D7AD825-9C50-ADBA-6AC8-536B9615C40F"
+ ],
+ "_": "3d2acff1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startSnapshotTask
+body: {
+ "operate": "start_immediately",
+ "task_uuids": [
+  "3D7AD825-9C50-ADBA-6AC8-536B9615C40F"
+ ],
+ "_": "3f2a263c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopSnapshotTask
+body: {
+ "operate": "start_immediately",
+ "task_uuids": [
+  "3D7AD825-9C50-ADBA-6AC8-536B9615C40F"
+ ],
+ "_": "3f79c4b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+

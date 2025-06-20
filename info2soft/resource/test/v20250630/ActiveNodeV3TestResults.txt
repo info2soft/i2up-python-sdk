@@ -1,0 +1,23 @@
+<START-----------------------------------------------------------
+Method: listNodes
+body: {
+ "search_field": "",
+ "order_by": "",
+ "sort": "@pick{'name',address}",
+ "page": 1,
+ "limit": 10,
+ "search_value": "",
+ "where_args": "[\"node_cluster_type\"=1]",
+ "nodetype": "@pick{\"name\",\"source\",\"backup\"]}",
+ "_": "3f783799"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The where args must be an array."
+ }
+}
+-----------------------------------------------------------END>
+

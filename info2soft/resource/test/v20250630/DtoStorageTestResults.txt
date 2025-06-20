@@ -1,0 +1,35 @@
+<START-----------------------------------------------------------
+Method: createDtoStorage
+body: {
+ "sto_name": "aaa",
+ "sto_type": 0,
+ "address": "",
+ "access_key": "",
+ "secret_key": "",
+ "part_size": 0,
+ "comment": "",
+ "user": "",
+ "pwd": "",
+ "remote_path": "",
+ "region": "",
+ "signature_version": "v2",
+ "access_mode": 1,
+ "bind_lic_list": [],
+ "bucket": "",
+ "ssl_verify": true,
+ "gateway_uuid": "",
+ "region_uuid": "",
+ "protocol": 1,
+ "gateway_switch": 1,
+ "_": "3f54b364"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001009,
+  "message": "[1010001009] Name exists"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,13 @@
+<START-----------------------------------------------------------
+Method: listMenu
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+

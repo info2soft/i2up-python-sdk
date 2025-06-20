@@ -1,0 +1,57 @@
+<START-----------------------------------------------------------
+Method: createNodeDbConfig
+body: {
+ "node_uuid": "",
+ "db_type": "",
+ "config_sw": "",
+ "os_user": "",
+ "os_passwd": "",
+ "instance_info": [],
+ "_": "3e6d7512"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeDbConfig
+body: {
+ "node_uuid": "",
+ "db_type": "oracle",
+ "_": "3f24843a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetDatabaseInstances
+body: {
+ "node_uuid": "",
+ "os_user": "",
+ "os_passwd": "",
+ "db_type": 1,
+ "_": "3e248abf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+

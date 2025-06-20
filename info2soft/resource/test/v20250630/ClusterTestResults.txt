@@ -1,0 +1,37 @@
+<START-----------------------------------------------------------
+Method: modifyCls
+body: {
+ "cls": {
+  "comment": "",
+  "cls_disk": [
+   "E:\\"
+  ],
+  "config_port": "26821",
+  "cls_node": [
+   "BD7D3EF7-2F75-E2BB-A2CB-CFE936CF1F6C"
+  ],
+  "node_type": 1,
+  "cls_is_local": 1,
+  "os_user": "i2test2018.com\u0007dministrator",
+  "config_addr": "192.168.74.25",
+  "node_name": "cls",
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "maintenance": 0,
+  "other_params": {
+   "ora_home": "",
+   "grid_home": "",
+   "user": ""
+  }
+ },
+ "_": "3f6a6fe3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API) Failed to register"
+ }
+}
+-----------------------------------------------------------END>
+

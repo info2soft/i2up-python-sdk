@@ -1,0 +1,761 @@
+<START-----------------------------------------------------------
+Method: addSlaveNode
+body: {
+ "os_user": "administrator",
+ "use_credential": 1,
+ "cred_uuid": "",
+ "is_ssl": 1,
+ "proxy_switch": "0",
+ "bind_lic_list": [],
+ "config_addr": "",
+ "biz_grp_list": [],
+ "config_port": 1,
+ "comment": "",
+ "roles": [
+  "1",
+  "4",
+  "8"
+ ],
+ "proxy_id": "",
+ "os_pwd": "yAZe2Hx6/dCL8GnjiRaro/mayqD24i3bMwZLtRXrHlRDIijGDcNKTqSK4IL91YIaqAGaOpUbnTr+y6VPgJ4UXJQset0se7bQgVrRjVncNeiVNCNyAzLktWYMMGKOWekw5uD2MOVEHhbknG0ZSuFXyywFEG9JTntNerCae7RSI6u2c3kRBCyqbdPc9osMK8YL9ZRqiIE/4K1+BomG9q1RwNEJhDcm/OaMxJCPHANNTImBWWv+Ir3qt20jjv1Fx7of2Fgb14Sj4TwGb7ESrbMiL/fblrfGl+rc6koNucEIRdT+aje+F47pKu4mknubWZ1wo+W2p/yaKyqfzTfeDFJtFQ==",
+ "_": "3ef9103f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The config addr field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchSearchByPort
+body: {
+ "ip": "",
+ "port_start": 1,
+ "port_end": 1,
+ "_": "3e5289b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The ip field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkCapacity
+body: {
+ "proxy_id": "",
+ "is_ssl": 1,
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+ "proxy_switch": 0,
+ "_": "3ebdec64"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011201,
+  "message": "[1010011201] Failed to get hard disk and memory info RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkNodeOnline
+body: {
+ "config_addr": "192.168.72.76",
+ "proxy_switch": 0,
+ "is_ssl": 1,
+ "config_port": "26821",
+ "proxy_id": "66F636FE29656416690A62296580EBD9",
+ "_": "3f65e5ba"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011202,
+  "message": "[1010011202] Node offline RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "config_addr": "192.168.72.76",
+  "config_port": "26821"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkUnbindEcs
+body: {
+ "node_uuid": "",
+ "_": "3e59e1b1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBatchNode
+body: {
+ "base_info_list": [
+  {
+   "os_pwd": "123qwe",
+   "os_user": "chenky",
+   "config_port": 26821,
+   "config_addr": "192.168.72.76",
+   "cache_path": "",
+   "bak_meta_data_path": "",
+   "node_name": "N4_72.76",
+   "need_install": 0,
+   "temp_path": "",
+   "install_type": 1,
+   "install_port_linux": 22,
+   "install_path": "",
+   "os_type": 1,
+   "rep_path": [],
+   "installation_mode": 0
+  }
+ ],
+ "node": {
+  "bind_lic_list": [],
+  "disk_limit": "10240",
+  "alarm_switch": 1,
+  "cpu_threshold": 1,
+  "memory_threshold": 1,
+  "monitor_process": 1,
+  "monitor_interval": "10",
+  "log_interval": 1,
+  "node_role": "3",
+  "etcd_url_uuid": "",
+  "monitor_switch": 0,
+  "schedule_svr_uuid": "",
+  "moni_log_keep_node": "5",
+  "snmp_switch": 1,
+  "snmp_version": "",
+  "snmp_community": "",
+  "snmp_ip": "",
+  "snmp_port": 1,
+  "moni_log_keep_server": "3",
+  "security_check": 0,
+  "biz_grp_list": [],
+  "node_version": "",
+  "proxy_ip": "",
+  "disk_free_space_limit": 1,
+  "proxy_uuid": "",
+  "maintenance": 0,
+  "rc_protection": 0,
+  "log_path": "",
+  "is_ssl": 1,
+  "proxy_port": "",
+  "roles": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "log_limit": 1,
+  "roles_info": [
+   {
+    "modules": [],
+    "role": 1,
+    "processes": []
+   }
+  ],
+  "local_config_switch": 1,
+  "mem_limit": "819"
+ },
+ "_": "3dd2bc4c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The base info list.0.os pwd must be 344 characters."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createNode
+body: {
+ "node": {
+  "comment": "",
+  "alarm_switch": 0,
+  "cpu_threshold": 80,
+  "memory_threshold": 80,
+  "monitor_process": 0,
+  "rep_path": [],
+  "cloud_type": "0",
+  "guard_data_switch": 0,
+  "bak_user_max": "100",
+  "guard_data_pwd": "",
+  "fc_as_target": 1,
+  "wwpn_info_target": [],
+  "cache_path": "C:\\Program Files (x86)\\info2soft\\node\\cache\\",
+  "rw_server_port": 26820,
+  "bak_root": "",
+  "db_save_day": "3",
+  "snmp_switch": 0,
+  "snmp_version": "2c",
+  "snmp_ip": "",
+  "snmp_port": 1,
+  "snmp_community": "",
+  "aio_cluster_id": "",
+  "aio_host_id": "",
+  "proxy_switch": 0,
+  "data_addr": "192.168.72.76",
+  "project_name": "",
+  "etcd_url_uuid": "",
+  "monitor_switch": 0,
+  "node_name": "N4_72.76",
+  "config_addr": "192.168.72.76",
+  "mon_send_interval": "10",
+  "keep_log_days": 180,
+  "node_role": "3",
+  "disk_limit": "10240",
+  "reboot_sys": "0",
+  "rc_protection": 0,
+  "bind_lic_list": [],
+  "security_check": 0,
+  "mem_limit": 819,
+  "os_user": "Kyran",
+  "guard_data_threshold": 1,
+  "ecs_id": "",
+  "ecs_bind": 1,
+  "bak_service_type": "",
+  "is_ssl": 1,
+  "en_snap_switch": 0,
+  "config_port": 26821,
+  "rep_excl_path": [],
+  "biz_grp_list": [],
+  "proxy_id": "",
+  "mon_save_day": "5",
+  "dtrack_switch": 3,
+  "bak_cache_data_dir": "",
+  "bak_cache_disk_lower_limit": 1,
+  "bak_cache_data_upper_limit": 1,
+  "winstack_pool_id": "",
+  "winstack_host_id": "",
+  "roles": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "vm_ref": "",
+  "auto_move": 1,
+  "log_limit": 1024,
+  "iscsi_as_initiator": 1,
+  "bak_meta_data_path": "",
+  "bak_meta_data_policy": 1,
+  "iscsi_switch": 1,
+  "renew_public_key": 1,
+  "vm_name": "",
+  "schedule_svr_uuid": "",
+  "vg": "",
+  "iscsi_as_target": 1,
+  "log_interval": 60,
+  "iscsi_initiator_name": "",
+  "use_credential": 0,
+  "os_type": 1,
+  "cred_uuid": "",
+  "local_config_switch": 1,
+  "disk_free_space_limit": 1,
+  "node_info": {},
+  "os_pwd": "",
+  "cc_ip_uuid": "",
+  "maintenance": 0,
+  "node_type": 1,
+  "cls_node": "",
+  "node_uuid": "",
+  "sys_uuid": "",
+  "fc_as_initiator": 1,
+  "wwpn_info": [],
+  "platform_uuid": "",
+  "log_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\",
+  "region_id": "",
+  "temp_path": "",
+  "project_id": "",
+  "roles_info": {
+   "modules": [],
+   "role": 1,
+   "processes": []
+  },
+  "bak_client_max": "100",
+  "mon_data_path": "C:\\Program Files (x86)\\info2soft\\node\\log\\"
+ },
+ "_": "3f059442"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The selected node.dtrack switch is invalid."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dataIpList
+body: {
+ "node_uuids": [],
+ "_": "3e2f3dd1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeNode
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodeVersion
+body: {
+ "add": 1,
+ "cls_uuid": "",
+ "ip": "",
+ "port": 1,
+ "_": "3e87018d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The ip field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHbaInfo
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "proxy_switch": 1,
+ "proxy_id": "",
+ "_": "3e8d5cea"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The proxy id field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listHostInfo
+body: {
+ "node_type": 1,
+ "config_addr": "",
+ "_": "3f34422a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The config addr field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNode
+body: {
+ "like_args": {
+  "xxx": ""
+ },
+ "where_args": {
+  "xxx": ""
+ },
+ "type": 1,
+ "status": "",
+ "status_from": "",
+ "is_rc_wk": 0,
+ "filter_by_biz_grp": 1,
+ "order_by": "",
+ "search_value": "",
+ "direction": "",
+ "search_field": "",
+ "role": 1,
+ "user_filter": 1,
+ "limit": 15,
+ "cloud_uuid": "",
+ "page": 1,
+ "_": "3f1988c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeBindEcs
+body: {
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "platform_uuid": "",
+ "_": "3f6b1db9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodePackageList
+body: {
+ "for_download": 1,
+ "_": "3f205bff"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": [],
+  "count": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "force_refresh": 1,
+ "node_uuids": [
+  "D66246D7-89C4-DC3A-E9A2-D2FCE4A56307",
+  "064B23C1-DF92-8846-4BEA-8517789C35A4"
+ ],
+ "_": "3e97b57d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVg
+body: {
+ "proxy_switch": 0,
+ "proxy_id": "",
+ "config_addr": "192.168.72.76",
+ "config_port": "26821",
+ "_": "3e74897b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: maintainNode
+body: {
+ "switch": 0,
+ "node_uuids": [],
+ "operate": "upgrade",
+ "_": "3ed9d494"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDataIp
+body: {
+ "data_ip_list": [
+  {
+   "uuid": "A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319",
+   "data_ip": "172.20.15.121"
+  }
+ ],
+ "node_uuid": "D6EC7CF9-FCA2-D467-ECD6-E028AA9C8319",
+ "_": "3ebdb1c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist : A7EC7CF9-FCA2-D467-ECD6-E028AA9C8319"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyNode
+body: {
+ "node": {
+  "moni_log_keep_node": "5",
+  "_path": [],
+  "log_path": "C:\\Program Files (x86)\\info2soft-i2node\\log\\",
+  "disk_limit": "40960",
+  "bak_service_type": "",
+  "config_addr": "192.168.74.25",
+  "mem_limit": "13041",
+  "batch_cc_ip_uuid": 1,
+  "os_type": 2,
+  "batch_biz_grp_list": 1,
+  "os_user": "Kyran",
+  "batch_log_path": 1,
+  "proxy_switch": 0,
+  "batch_cache_path": 1,
+  "bind_lic_list": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+  "batch_mem_limit": 1,
+  "moni_log_keep_server": "3",
+  "batch_disk_limit": 1,
+  "node_name": "aaaa",
+  "batch_disk_free_space_limit": 1,
+  "keep_log_days": 180,
+  "batch_security_check": 1,
+  "monitor_interval": "10",
+  "batch_maintenance": 1,
+  "security_check": 1,
+  "batch_switch": 1,
+  "reboot_sys": "0",
+  "bak_client_max": "100",
+  "bak_root": "",
+  "node_role": "3",
+  "monitor_switch": 0,
+  "guard_data_switch": 1,
+  "cache_path": "C:\\Program Files (x86)\\info2soft-i2node\\cache\\",
+  "guard_data_user": "",
+  "config_port": 26821,
+  "guard_data_pwd": "",
+  "bak_user_max": "100",
+  "group_uuid": "F5844651-DB5B-937D-73B1-A2378810F00A",
+  "comment": "",
+  "biz_grp_list": [],
+  "fc_as_target": 1,
+  "cloud_type": "0",
+  "wwpn_info_target": [],
+  "i2id": "",
+  "use_credential": 0,
+  "cred_uuid": "",
+  "en_snap_switch": 0,
+  "batch_monitor": 1,
+  "disk_free_space_limit": 1,
+  "batch_rep_path": 1,
+  "rw_server_port": 1,
+  "platform_uuid": "",
+  "maintenance": 0,
+  "os_pwd": "EnEyGDJF==",
+  "ecs_bind": 0,
+  "ecs_id": "",
+  "fc_as_initiator": 0,
+  "vg": "",
+  "wwpn_info": [],
+  "monitor_log_path": "C:\\Program Files (x86)\\info2soft-i2node\\log\\",
+  "data_addr": "192.168.74.25",
+  "snmp_switch": 0,
+  "rep_excl_path": [],
+  "snmp_version": "",
+  "aio_cluster_id": "",
+  "snmp_community": "",
+  "aio_host_id": "",
+  "snmp_ip": "",
+  "snmp_port": 1,
+  "batch_snmp": 1,
+  "project_name": "",
+  "rc_protection": 0,
+  "batch_rc_protection": 0,
+  "guard_data_threshold": 1,
+  "is_ssl": 1,
+  "batch_bak_meta_data_policy": 1,
+  "bak_cache_data_dir": "",
+  "roles": [
+   "1",
+   "2",
+   "4",
+   "8"
+  ],
+  "bak_cache_data_upper_limit": "",
+  "log_limit": 1,
+  "bak_cache_disk_lower_limit": "",
+  "roles_info": [
+   {
+    "modules": [],
+    "role": 1,
+    "processes": []
+   }
+  ],
+  "etcd_url_uuid": "",
+  "temp_path": 1,
+  "batch_bak_cache_data_dir": 1,
+  "bak_meta_data_path": "",
+  "batch_guard": 1,
+  "batch_keep_log_days": 1,
+  "batch_bak_cache_data_upper_limit": 1,
+  "bak_meta_data_policy": 1,
+  "batch_bak_cache_disk_lower_limit": 1,
+  "monitor_process": 1,
+  "batch_etcd_url_uuid": 1,
+  "batch_schedule_svr_uuid": 1,
+  "schedule_svr_uuid": "",
+  "batch_log_limit": 0,
+  "local_config_switch": 1,
+  "batch_bak_meta_data_path": 1,
+  "batch_local_config_switch": 1,
+  "sys_uuid": "",
+  "project_id": "",
+  "region_id": "",
+  "batch_temp_path": 1
+ },
+ "_": "3f4e62ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node.random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetMysqlInfo
+body: {
+ "username": "",
+ "password": "",
+ "mysql_path": "",
+ "port": "",
+ "bk_uuid": "",
+ "mysql_host": "",
+ "timeout": "",
+ "_": "3f362706"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The bk uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: nodeGetOracleInfo
+body: {
+ "sqlplus_path": "",
+ "sid": "",
+ "timeout": "",
+ "port": "",
+ "bk_uuid": "",
+ "username": "",
+ "password": "",
+ "_": "3e37c758"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The bk uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: renewKeyNode
+body: {
+ "switch": 0,
+ "node_uuids": [],
+ "operate": "upgrade",
+ "_": "3ecef710"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upgradeNode
+body: {
+ "switch": 0,
+ "node_uuids": [],
+ "operate": "upgrade",
+ "_": "3f197165"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+

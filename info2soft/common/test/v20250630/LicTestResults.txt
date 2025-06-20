@@ -1,0 +1,250 @@
+<START-----------------------------------------------------------
+Method: avoidAlert
+body: {
+ "lic_uuids": [],
+ "_": "3ebedbc9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: cdmCapacity
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f2bc19d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "lic_list": [],
+  "storage_list": [],
+  "total": 0,
+  "total_num": 0,
+  "total_used": 0,
+  "total_authorized": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeActivateInfo
+body: {
+ "group_sn": "20-4570098558",
+ "_": "3d1b5406"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeLatestExpireLicense
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "sn": "10-5771271704461705266-0003",
+    "lic_uuid": "301972D7-10E1-4A6D-9EAE-BF92015C7DAB",
+    "create_time": 1749108652,
+    "inst_date": 1752940800,
+    "group_sn": "10-5771271704461705266",
+    "notify_stage": null,
+    "last_send": null,
+    "auth_code": "TLBF6CD5DC712A9F94C5BCAB7A5693F79C",
+    "type": "1",
+    "ctrl_type": "STD",
+    "state": "0",
+    "show_label": "test",
+    "hardware": "1376F38AAAE8CAE15BA4C7B2BFA9B70209C1B23F707DDF0AEDD063DE4CEFD3AA7187FC384CE6A5ED2CAD7B9AA60A1893",
+    "company": "I2SOFT",
+    "expire": "2025-07-20",
+    "act_period": "",
+    "feature": "ha",
+    "phy_num": "2",
+    "vm_num": "0",
+    "phy_num_used": 0,
+    "vm_num_used": 0
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeVpAuthDetail
+body: {
+ "page": 1,
+ "limit": 1,
+ "_": "3f24bee7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "lic_list": [],
+  "vp_vm_num": 0,
+  "vp_vm_num_used": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNodeListForLicense
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: hdfsCapacity
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "lic_list": [],
+  "platform_list": [],
+  "total_num": 0,
+  "total_used": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicAlert
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "lic_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listLicBackupAuthDetail
+body: {
+ "page": "",
+ "limit": "",
+ "_": "3eff668c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "backup9_detail": {
+   "lic_list": [],
+   "total": 0,
+   "backend_task": {
+    "id": 20,
+    "type": 0,
+    "trigger_method": "cron/check_license_capacity_used",
+    "interval": 1800,
+    "enable": 1,
+    "result": "{\"total\":1,\"failed\":0}",
+    "last_fire_time": 1750406660,
+    "status": 0
+   },
+   "capacity_used_info": {
+    "total": 0,
+    "disk": 0,
+    "storage_pool": 0,
+    "dedupe_pool": 0,
+    "tape": 0,
+    "nas": 0,
+    "object": 0,
+    "iso": 0,
+    "capacity": 0,
+    "record_time": 1750406660
+   },
+   "obj_list": [],
+   "func_list": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNearExpirationLicenses
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "sn": "10-5771271704461705266-0003",
+    "lic_uuid": "301972D7-10E1-4A6D-9EAE-BF92015C7DAB",
+    "create_time": 1749108652,
+    "inst_date": 1752940800,
+    "group_sn": "10-5771271704461705266",
+    "notify_stage": null,
+    "last_send": null,
+    "auth_code": "TLBF6CD5DC712A9F94C5BCAB7A5693F79C",
+    "type": "1",
+    "ctrl_type": "STD",
+    "state": "0",
+    "show_label": "test",
+    "hardware": "1376F38AAAE8CAE15BA4C7B2BFA9B70209C1B23F707DDF0AEDD063DE4CEFD3AA7187FC384CE6A5ED2CAD7B9AA60A1893",
+    "company": "I2SOFT",
+    "expire": "2025-07-20",
+    "act_period": "",
+    "feature": "ha",
+    "phy_num": "2",
+    "vm_num": "0",
+    "phy_num_used": 0,
+    "vm_num_used": 0
+   }
+  ],
+  "total": 1
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,41 @@
+<START-----------------------------------------------------------
+Method: createCdmRemoteCoopy
+body: {
+ "old_bk_uuid": "",
+ "old_platform_uuid": "",
+ "old_storage_uuid": "",
+ "rule_uuids": [],
+ "proxy_uuid": "",
+ "new_bk_uuid": "",
+ "new_platform_uuid": "",
+ "data_addr": "",
+ "new_storage_uuid": "",
+ "bkup_policy": "",
+ "bkup_one_time": "",
+ "bkup_schedule": {
+  "sched_gap_min": "60",
+  "sched_time": "[  \"00:00:00\"]",
+  "sched_day": "[\"1\"]",
+  "sched_time_end": "23:59",
+  "limit": "5",
+  "sched_time_start": "00:00",
+  "sched_every": "0"
+ },
+ "compress_switch": "",
+ "encrypt_switch": "",
+ "band_width": "",
+ "rule_uuid": "",
+ "start_type": "",
+ "prefix": "",
+ "_": "3f191246"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110033,
+  "message": "[1010110033] The valid license capacity has been used up, please check the license"
+ }
+}
+-----------------------------------------------------------END>
+

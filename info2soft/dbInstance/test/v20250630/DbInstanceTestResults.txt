@@ -1,0 +1,262 @@
+<START-----------------------------------------------------------
+Method: createDbInstance
+body: {
+ "instance_type": 1,
+ "node_uuid": "",
+ "data_source": "",
+ "instance_list": [
+  {
+   "instance_name": "",
+   "version_info": {
+    "version": ""
+   },
+   "is_verified": 1,
+   "protocol": 1,
+   "port": 1,
+   "win_verify": 1,
+   "user": "",
+   "password": "",
+   "timeout": 1,
+   "driver": "",
+   "host": "",
+   "bin_path": "",
+   "config_path": "",
+   "data_path": "",
+   "sys_user": "",
+   "hostname": "",
+   "sys_password": "",
+   "shards": [
+    {
+     "id": ""
+    }
+   ],
+   "replica_sets": [
+    {
+     "id": "",
+     "ip": "",
+     "port": 1,
+     "master": false,
+     "node_uuid": "",
+     "shard_id": ""
+    }
+   ],
+   "is_default": 1,
+   "install_dir": "",
+   "onconfig_name": "",
+   "auth_type": 1,
+   "db_name": "",
+   "managers": [
+    {
+     "ip": "",
+     "master": false,
+     "node_uuid": ""
+    }
+   ],
+   "gtms": [
+    {
+     "ip": "",
+     "master": false,
+     "node_uuid": ""
+    }
+   ],
+   "type": "",
+   "sub_instance": [],
+   "dmdcr_ini_path": "",
+   "dmdsc_uuid": "",
+   "instance_id": "",
+   "archive_path": "",
+   "login_type": 1,
+   "login_path": ""
+  }
+ ],
+ "scan_ip": "",
+ "_": "3f0caad9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDbInstances
+body: {
+ "instance_uuids": [],
+ "force": 1,
+ "_": "3e833c56"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The instance uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDbInstance
+body: {
+ "instance_uuid": "",
+ "instance_type": 1,
+ "_": "3ef049b6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: discoveryDbInstances
+body: {
+ "node_uuid": "",
+ "instance_type": "",
+ "_": "3f2f9a3a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDbs
+body: {
+ "instance_uuid": "",
+ "_": "3e8bcb3f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The instance uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTableSpaces
+body: {
+ "instance_uuid": "",
+ "db_name": "",
+ "_": "3f51fde3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The instance uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTables
+body: {
+ "instance_uuid": "",
+ "db_name": "",
+ "_": "3f287737"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The instance uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDbInstance
+body: {
+ "instance_type": 1,
+ "node_uuid": "",
+ "data_source": "",
+ "instance_list": [
+  {
+   "instance_name": "",
+   "version_info": {
+    "version": ""
+   },
+   "is_verified": 1,
+   "protocol": 1,
+   "port": 1,
+   "win_verify": 1,
+   "user": "",
+   "password": "",
+   "timeout": 1,
+   "driver": "",
+   "instance_uuid": "",
+   "random_str": "",
+   "sys_user": "",
+   "hostname": ""
+  }
+ ],
+ "_": "3f3c2c0c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: verifyDbInstances
+body: {
+ "instance_type": 1,
+ "protocol": 1,
+ "win_verify": 1,
+ "user": "",
+ "password": "",
+ "timeout": 1,
+ "driver": "",
+ "port": 1,
+ "data_source": "",
+ "node_uuid": "",
+ "instance_name": "",
+ "host": "",
+ "bin_path": "",
+ "config_path": "",
+ "data_path": "",
+ "sys_user": "",
+ "hostname": "",
+ "sys_password": "",
+ "install_dir": "",
+ "is_default": "",
+ "onconfig_name": "",
+ "auth_type": 1,
+ "login_path": "",
+ "login_type": 1,
+ "_": "3e1e5ebb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+

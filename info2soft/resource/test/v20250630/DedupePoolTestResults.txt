@@ -1,0 +1,145 @@
+<START-----------------------------------------------------------
+Method: createDedupePool
+body: {
+ "pool_name": "",
+ "node_uuid": "",
+ "server_port": 1,
+ "time_out": 1,
+ "block_size": 1,
+ "slice_size": 1,
+ "hash_path": [],
+ "index_path": [],
+ "data_path": [],
+ "compress": 1,
+ "encrypt": 1,
+ "secret_key": "",
+ "encrypt_switch": 0,
+ "ssd_mode": 0,
+ "_": "3f0bbe84"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n Lost: node_uuid;\n Lost: hash_path[0];\n Lost: index_path[0];\n Lost: data_path[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: dedupePoolList
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDedupePool
+body: {
+ "pool_uuids": [],
+ "force": 1,
+ "del_data": 1,
+ "_": "3e6eabbe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDedupePool
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDedupePoolStatus
+body: {
+ "pool_uuids": [],
+ "force_refresh": 1,
+ "_": "3f2d0028"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDedupePool
+body: {
+ "pool_uuid": "",
+ "random_str": "",
+ "index_path": [],
+ "data_path": [],
+ "_": "3ea89263"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startDedupePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "_": "3d829cb9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopDedupePool
+body: {
+ "pool_uuids": [],
+ "operate": "",
+ "_": "3f2d9d5c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

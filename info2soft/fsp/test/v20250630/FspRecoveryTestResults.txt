@@ -1,0 +1,41 @@
+<START-----------------------------------------------------------
+Method: verifyFspRecoveryVolumeSpace
+body: {
+ "sync_item": "/",
+ "bk_uuid": "F85DFEC0-149E-373D-0B9E-3DA9A5C43940",
+ "wk_uuid": "42614852-BB62-1EF7-FED0-D2354BF3149D",
+ "dst_path": "/fsp_bk/192.168.71.77_26821/20190111113656/",
+ "device_list": [
+  {
+   "name": ""
+  }
+ ],
+ "vmdk_list": [
+  {
+   "name": ""
+  }
+ ],
+ "fsp_type": "",
+ "path": "",
+ "type": "",
+ "suffix": "",
+ "restore_point": "",
+ "vp_uuid": "",
+ "vm_ref": "",
+ "by_type": 0,
+ "_": "3c054a6a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist 42614852-BB62-1EF7-FED0-D2354BF3149D",
+  "wk_vol_list": [],
+  "bk_vol_list": [],
+  "lost_volume": [],
+  "insufficient_volume": []
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,293 @@
+<START-----------------------------------------------------------
+Method: createCcMove
+body: {
+ "cc_ip": "172.0.0.1",
+ "access_key": "",
+ "secret_key": "",
+ "module_list": [
+  "cmp",
+  "rep",
+  "fsp",
+  "dto"
+ ],
+ "prefix": "",
+ "suffix": "",
+ "cc_port": "",
+ "_": "3eb90517"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] \u53c2\u6570\u65e0\u6548  Lost: cc_port;\n Lost: access_key;\n Lost: secret_key;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveModules
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "modules": [
+   {
+    "storage": "storage"
+   },
+   {
+    "data_guard_node": "data_guard_node"
+   },
+   {
+    "virtualization": "virtualization"
+   },
+   {
+    "bigdata_management": "bigdata_management"
+   },
+   {
+    "dto_resource": "dto_resource"
+   },
+   {
+    "database_node": "database_node"
+   },
+   {
+    "appBackupRule": "appBackupRule"
+   },
+   {
+    "vp_backup_rule": "vpBackupRule"
+   },
+   {
+    "fsp_backup_rule": "fspBackupRule"
+   },
+   {
+    "bigdata_backup_rule": "bigdataBackupRule"
+   },
+   {
+    "kafka": "kafka"
+   },
+   {
+    "repBackup": "repBackup"
+   },
+   {
+    "repRecovery": "repRecovery"
+   },
+   {
+    "compare": "compare"
+   },
+   {
+    "nasSync": "nasSync"
+   },
+   {
+    "ha": "ha"
+   },
+   {
+    "dto": "dto"
+   },
+   {
+    "cloud_disaster_relief": "cloud_disaster_relief"
+   },
+   {
+    "cdm": "cdm"
+   },
+   {
+    "fspMove": "fspMove"
+   }
+  ],
+  "siblings": {
+   "storage": [],
+   "vp": [],
+   "dto_resource": [],
+   "database_node": [],
+   "oracle": [
+    "database_node"
+   ],
+   "mysql": [
+    "database_node"
+   ],
+   "sql_server": [
+    "database_node"
+   ],
+   "postgreSql": [
+    "database_node"
+   ],
+   "db2": [
+    "database_node"
+   ],
+   "kafka": [
+    "database_node"
+   ],
+   "qianbase": [
+    "database_node"
+   ],
+   "oceanbase": [
+    "database_node"
+   ],
+   "tidb": [
+    "database_node"
+   ],
+   "informixRule": [
+    "database_node"
+   ],
+   "rep_bk": [],
+   "repRecovery": [
+    "repBackup"
+   ],
+   "compare": [],
+   "Dtrack_backup": [],
+   "nas": [],
+   "ha": [
+    "repBackup"
+   ],
+   "virtual_workload": [
+    "virtualization"
+   ],
+   "dto": [
+    "dto_resource"
+   ],
+   "full_server": [
+    "virtualization"
+   ],
+   "timing": [],
+   "big_data": [],
+   "cloud_disaster_relief": [
+    "virtualization"
+   ],
+   "cdm": [],
+   "fspMove": [
+    "virtualization"
+   ],
+   "appBackupRule": [
+    "data_guard_node",
+    "storage"
+   ],
+   "vp_backup_rule": [
+    "data_guard_node",
+    "storage",
+    "virtualization"
+   ],
+   "fsp_backup_rule": [
+    "data_guard_node",
+    "storage"
+   ],
+   "bigdata_backup_rule": [
+    "data_guard_node",
+    "storage",
+    "bigdata_management"
+   ]
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveRemoteStatus
+body: {
+ "access_key": "",
+ "secret_key": "",
+ "cc_ip": "172.0.0.1:58086",
+ "cc_port": "",
+ "_": "3f50c530"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveStatus
+body: {
+ "rule_uuids": [],
+ "_": "3edd67d1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: decribeCcMoveTable
+body: {
+ "table": "",
+ "_": "3f2b97b0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCcMove
+body: {
+ "rule_uuids": [],
+ "_": "3f179e8c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCcMove
+body: {
+ "search_field": "cc_ip",
+ "search_value": "",
+ "_": "3f3756db"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: makeCcMoveRemigrate
+body: {
+ "rule_uuid": "",
+ "conflict_uuid": "",
+ "module": "",
+ "model_name": "",
+ "new_name": "",
+ "_": "3d3dc8cd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

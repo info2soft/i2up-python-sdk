@@ -1,0 +1,365 @@
+<START-----------------------------------------------------------
+Method: getOpLogUsers
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "users": [
+   {
+    "id": 2,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "username": "admin",
+    "email": "t***@info2soft.com",
+    "mobile": "153****4585",
+    "active": 1,
+    "first_name": "Admin",
+    "last_name": "default",
+    "address": "test",
+    "comment": "",
+    "company": "info2soft",
+    "create_time": 1748231784,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 3,
+      "user_id": 2,
+      "role_id": 3,
+      "entity_id": 2,
+      "entity_type": "App\\Http\\Models\\User",
+      "restricted_to_id": null,
+      "restricted_to_type": null,
+      "scope": null,
+      "name": "admin",
+      "is_system": 1,
+      "allow_new_user": 1,
+      "display_name": "Business Administrator",
+      "description": "Admin User",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0,
+      "title": null,
+      "level": null,
+      "created_at": null,
+      "updated_at": null
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "user_uuid": "1EE80198-20FB-33F9-7C24-F835A34C7440",
+    "username": "auditor",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "auditor",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1748231784,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 4,
+      "user_id": 3,
+      "role_id": 4,
+      "entity_id": 3,
+      "entity_type": "App\\Http\\Models\\User",
+      "restricted_to_id": null,
+      "restricted_to_type": null,
+      "scope": null,
+      "name": "auditor",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Auditor",
+      "description": "Business auditor",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0,
+      "title": null,
+      "level": null,
+      "created_at": null,
+      "updated_at": null
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "user_uuid": "EFB53F11-7BA2-2001-3418-85865EA58E47",
+    "username": "operator",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "operator",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1748231784,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 5,
+      "user_id": 4,
+      "role_id": 5,
+      "entity_id": 4,
+      "entity_type": "App\\Http\\Models\\User",
+      "restricted_to_id": null,
+      "restricted_to_type": null,
+      "scope": null,
+      "name": "operator",
+      "is_system": 1,
+      "allow_new_user": 1,
+      "display_name": "Operator",
+      "description": "Operation Clerk",
+      "dynamic_perms": 1,
+      "biz_admin_view": 0,
+      "title": null,
+      "level": null,
+      "created_at": null,
+      "updated_at": null
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "user_uuid": "2BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DD",
+    "username": "sysadmin",
+    "email": null,
+    "mobile": null,
+    "active": 1,
+    "first_name": "System Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1748231784,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 2,
+      "user_id": 5,
+      "role_id": 2,
+      "entity_id": 5,
+      "entity_type": "App\\Http\\Models\\User",
+      "restricted_to_id": null,
+      "restricted_to_type": null,
+      "scope": null,
+      "name": "sysadmin",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "System Administrator",
+      "description": "System Administrator",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0,
+      "title": null,
+      "level": null,
+      "created_at": null,
+      "updated_at": null
+     }
+    ]
+   },
+   {
+    "id": 1,
+    "user_uuid": "93AF0C9F-14C8-41A2-31CB-AAA0F65193FA",
+    "username": "system",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "System",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1748231784,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 6,
+      "user_id": 1,
+      "role_id": 6,
+      "entity_id": 1,
+      "entity_type": "App\\Http\\Models\\User",
+      "restricted_to_id": null,
+      "restricted_to_type": null,
+      "scope": null,
+      "name": "system",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Security Administrator",
+      "description": "Security Administrator",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0,
+      "title": null,
+      "level": null,
+      "created_at": null,
+      "updated_at": null
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "user_uuid": "09B5B0E1-B815-4BCC-98BD-15B1482E28CD",
+    "username": "tenantadmin",
+    "email": null,
+    "mobile": null,
+    "active": 0,
+    "first_name": "Tenant Admin",
+    "last_name": "default",
+    "address": null,
+    "comment": null,
+    "company": "",
+    "create_time": 1748231790,
+    "builtin": 1,
+    "domain_id": null,
+    "roles": [
+     {
+      "id": 1,
+      "user_id": 6,
+      "role_id": 1,
+      "entity_id": 6,
+      "entity_type": "App\\Http\\Models\\User",
+      "restricted_to_id": null,
+      "restricted_to_type": null,
+      "scope": null,
+      "name": "tenant_admin",
+      "is_system": 1,
+      "allow_new_user": 0,
+      "display_name": "Tenant Administrator",
+      "description": "Super Administrator",
+      "dynamic_perms": 0,
+      "biz_admin_view": 0,
+      "title": null,
+      "level": null,
+      "created_at": null,
+      "updated_at": null
+     }
+    ]
+   }
+  ],
+  "total": 6,
+  "track_login_attempts": true
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listProfile
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "profile": {
+   "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+   "username": "admin",
+   "mobile": "153****4585",
+   "email": "t***@info2soft.com",
+   "nickname": "test",
+   "company": "info2soft",
+   "address": "test",
+   "comment": "",
+   "pwd_change_time": 1750391548,
+   "notify_addr": {
+    "email": "",
+    "phone": "",
+    "webhook": {
+     "res": "7134B40B-6A5F-4AFD-95ED-78A1909EAD4B",
+     "rule": "",
+     "compare": "",
+     "cls": "",
+     "nas": "",
+     "hdfs": "",
+     "fsp": "",
+     "fsp_move": "",
+     "vp": "",
+     "timing": "",
+     "ha": "",
+     "active": "CDACCD8B-5E6F-4908-B74C-E9F47528E38E",
+     "cdm": "",
+     "cloud": "",
+     "routing_inspection": "",
+     "all_status": "",
+     "alarm": "",
+     "storage": "",
+     "lic": "",
+     "dto": "",
+     "guard_data": "",
+     "bigdata_backup": ""
+    }
+   },
+   "theme": null,
+   "layout_conf": {
+    "menu_mode": "generalMenu",
+    "show_logo": true
+   },
+   "is_biz_admin": 1,
+   "main_role": "admin",
+   "biz_admin_view": 1
+  },
+  "access_log": [
+   {
+    "id": 573,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "user_name": "admin",
+    "op_time": 1750398383,
+    "start_time": 1750398382,
+    "end_time": 1750398383,
+    "address": "192.168.254.1",
+    "description": "{\"op_name\":\"auth_login\",\"op_detail_arr\":{\"username\":\"admin\"}}",
+    "result": 0,
+    "failure_reason": "[0] success",
+    "sent": false,
+    "type": 0,
+    "level": 1,
+    "op_type": "auth_login",
+    "service": "Auth",
+    "vars": null
+   },
+   {
+    "id": 572,
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "user_name": "admin",
+    "op_time": 1750391568,
+    "start_time": 1750391568,
+    "end_time": 1750391568,
+    "address": "192.168.254.1",
+    "description": "{\"op_name\":\"auth_login\",\"op_detail_arr\":{\"username\":\"admin\"}}",
+    "result": 0,
+    "failure_reason": "[0] success",
+    "sent": false,
+    "type": 0,
+    "level": 1,
+    "op_type": "auth_login",
+    "service": "\u6388\u6743",
+    "vars": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateSetting
+body: {
+ "hcs_url": "",
+ "_": "3f679085"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

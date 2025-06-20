@@ -1,0 +1,162 @@
+<START-----------------------------------------------------------
+Method: createFilesystem
+body: {
+ "name": "",
+ "pool_uuid": "",
+ "fs_name": "",
+ "quota_switch": 1,
+ "quota_size": 1,
+ "compress": 1,
+ "dedup": 1,
+ "zfs_params": [],
+ "_": "3f7e2a81"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: name;\n Lost: pool_uuid;\n Lost: fs_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFilesystem
+body: {
+ "uuids": [],
+ "force": 1,
+ "_": "3dba36eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFilesystem
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importFilesystemList
+body: {
+ "filesystem_list": [
+  {
+   "name": "",
+   "fs_name": "",
+   "quota_switch": 1,
+   "quota_size": 1,
+   "compress": 1,
+   "dedup": 1,
+   "pool_uuid": ""
+  }
+ ],
+ "_": "3eb4d4dd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001072,
+  "message": "[1010001072] Invalid ip",
+  "fail_list": [
+   {
+    "code": 1010001072,
+    "message": "[1010001072] Invalid ip",
+    "name": ""
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001072,
+    "message": "[1010001072] Invalid ip",
+    "name": ""
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFilesystem
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFilesystemStatus
+body: {
+ "uuids": [],
+ "force_refresh": "",
+ "_": "3eec1f72"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: loadFilesystemList
+body: {
+ "pool_uuid": "",
+ "_": "3f08ada3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFilesystem
+body: {
+ "name": "",
+ "quota_switch": 1,
+ "quota_size": 1,
+ "compress": 1,
+ "dedup": 1,
+ "zfs_params": [],
+ "_": "3f2329a1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: name;\n Lost: pool_uuid;\n Lost: fs_name;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+

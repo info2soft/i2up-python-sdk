@@ -1,0 +1,1008 @@
+<START-----------------------------------------------------------
+Method: browseTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3e95f65b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTapeLibrary
+body: {
+ "library_name": "\u78c1\u5e26\u5e931",
+ "comment": "\u8bf4\u660e",
+ "bk_uuid_list": [
+  "D42BF707-C971-EEA9-521F-BB0F3F7A92FC"
+ ],
+ "library_list": [
+  {
+   "bk_uuid": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+   "library_sn": "SYZZ_A",
+   "library_vendor": "STK",
+   "library_product": "L80",
+   "library_revision": "0106",
+   "drive_num": 1,
+   "slot_num": 1,
+   "dev_path": "/dev",
+   "checked": false
+  }
+ ],
+ "ctrl_host_uuid": "",
+ "library_sn": "",
+ "library_vendor": "",
+ "library_product": "",
+ "library_revision": "",
+ "drive_num": "",
+ "dev_path": "",
+ "slot_num": "",
+ "driver_info": [
+  {
+   "bk_uuid": "",
+   "library_sn": "",
+   "driver_list": [
+    {
+     "checked": "",
+     "index": "",
+     "barcode": "",
+     "driver_sn": "",
+     "dev_path": "",
+     "status": "",
+     "last_write": ""
+    }
+   ]
+  }
+ ],
+ "robotic_arm_info": [],
+ "slave": 1,
+ "task_uuid_list": [],
+ "bind_lic_list": [],
+ "_": "3d0ffca9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ctrl_host_uuid;\n Lost: library_sn;\n Lost: library_vendor;\n Lost: library_product;\n Lost: library_revision;\n Lost: drive_num;\n Lost: slot_num;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createTapePool
+body: {
+ "pool_name": "",
+ "comment": "",
+ "note": "",
+ "_": "3f379536"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapeLibrary
+body: {
+ "library_uuids": [],
+ "force": 1,
+ "_": "3f297049"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3dd04484"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapePool
+body: {
+ "pool_uuids": [],
+ "_": "3e9a065c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTapeLibrary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: enableTapeLibraryDrivers
+body: {
+ "library_uuid": "",
+ "driver_index": "",
+ "status": "",
+ "dev_path": "",
+ "driver_sn": "",
+ "operate": "",
+ "slot_index": "",
+ "slot_flag": "",
+ "barcode": "",
+ "tape_uuid": "",
+ "_": "3c82fa4b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: eraseTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3f1d5509"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3f6823c4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: formatTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3f709bc8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: freezeTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3f1dfe7e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importTapeLibrary
+body: {
+ "library_uuids": [],
+ "operate": "",
+ "list": [
+  {
+   "ieslot_barcode": "",
+   "ieslot_index": ""
+  }
+ ],
+ "_": "3f2068f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuids[];\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusyIeSlot
+body: {
+ "library_uuid": "",
+ "_": "3f637329"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBusySlot
+body: {
+ "library_uuid": "",
+ "_": "3ee86750"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibrary
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibraryBackupSvrDrivers
+body: {
+ "bk_uuid_list": [],
+ "library_sn": "",
+ "_": "3f11ca30"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibraryDrivers
+body: {
+ "library_uuid": "",
+ "library_sn": "",
+ "bk_uuid_list": [],
+ "_": "3e7b57d1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "library_name": null,
+  "ctrl_host_uuid": null,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibraryRoboticArm
+body: {
+ "library_sn": "",
+ "ctrl_host_uuid": "",
+ "_": "3f78f45f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ctrl_host_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeLibraryStatus
+body: {
+ "library_uuids": [],
+ "_": "3f13c9be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMediaBkData
+body: {
+ "slot_barcode": "",
+ "limit": "",
+ "page": "",
+ "begin_time": "",
+ "end_time": "",
+ "check_rule": 1,
+ "task_uuid": "",
+ "_": "3cd9a013"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: slot_barcode;\n Lost: limit;\n Lost: page;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMediaBkFiles
+body: {
+ "slot_barcode": "",
+ "bk_index": "",
+ "bk_path": "",
+ "limit": "",
+ "page": "",
+ "_": "3f467e83"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: slot_barcode;\n Lost: bk_index;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeMediaDetails
+body: {
+ "slot_barcode": "",
+ "bk_index": "",
+ "bk_path": "",
+ "limit": 1,
+ "page": 1,
+ "_": "3ea9de35"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: slot_barcode;\n Lost: bk_index;\n Lost: bk_path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapePools
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 1,
+    "pool_uuid": "14666150-B7C4-4C02-B063-3732C6125474",
+    "pool_name": "Public",
+    "note": "Public",
+    "comment": null,
+    "random_str": "E52022FB-79DE-426C-8E42-D831F46360F9",
+    "create_time": 1748231790,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   }
+  ],
+  "total": 1,
+  "pool_list": [
+   {
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 1,
+    "pool_uuid": "14666150-B7C4-4C02-B063-3732C6125474",
+    "pool_name": "Public",
+    "note": "Public",
+    "comment": null,
+    "random_str": "E52022FB-79DE-426C-8E42-D831F46360F9",
+    "create_time": 1748231790,
+    "is_biz_admin": 1,
+    "can_del": 1,
+    "can_op": 1,
+    "can_up": 1,
+    "can_view": 1
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTapeLibrary
+body: {
+ "library_name": "\u78c1\u5e26\u5e931",
+ "library_uuid": "",
+ "random_str": "",
+ "comment": "\u8bf4\u660e",
+ "bk_uuid_list": [
+  "D42BF707-C971-EEA9-521F-BB0F3F7A92FC"
+ ],
+ "library_list": [
+  {
+   "bk_uuidtrue": "D42BF707-C971-EEA9-521F-BB0F3F7A92FC",
+   "library_sn": "SYZZ_A",
+   "library_vendor": "STK",
+   "library_product": "L80",
+   "library_revision": "0106",
+   "drive_num": 1,
+   "slot_num": 1,
+   "dev_path": "/dev",
+   "checked": 1
+  }
+ ],
+ "curl_host_uuid": "",
+ "library_sn": "",
+ "library_vendor": "",
+ "library_product": "",
+ "library_revision": "",
+ "drive_num": "",
+ "dev_path": "",
+ "slot_num": "",
+ "driver_info": [
+  {
+   "bk_uuid": "",
+   "library_sn": "",
+   "driver_list": {
+    "checked": "",
+    "index": "",
+    "barcode": "",
+    "driver_sn": "",
+    "dev_path": "",
+    "status": "",
+    "last_write": ""
+   }
+  }
+ ],
+ "_": "3f0fb93f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ctrl_host_uuid;\n Lost: library_sn;\n Lost: library_vendor;\n Lost: library_product;\n Lost: library_revision;\n Lost: drive_num;\n Lost: slot_num;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTapeLibraryBackupSvr
+body: {
+ "library_sn": "",
+ "bk_uuid_list": [],
+ "driver_info": [
+  {
+   "bk_uuid": "",
+   "bk_node_name": "",
+   "driver_list": "",
+   "library_sn": ""
+  }
+ ],
+ "_": "3f57c229"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid_list[];\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTapeLibraryDrivers
+body: {
+ "library_sn": "",
+ "driver_info": [],
+ "_": "3d969af0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_sn;\n Lost: driver_info[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTapeLibraryRoboticArm
+body: {
+ "ctrl_host_uuid": "",
+ "library_sn": "",
+ "robotic_arm_info": [
+  {
+   "dev_path": "\\/dev\\/sg11",
+   "drive_num": 4,
+   "library_product": "L80",
+   "library_revision": "0105",
+   "library_sn": "XYZZY_B",
+   "library_vendor": "STK",
+   "slot_num": 40,
+   "checked": true,
+   "bk_uuid": "269C3D29-3131-4F21-9392-17F0A3CD9368",
+   "bk_node_name": "192.168.31.31",
+   "server_type": 0
+  }
+ ],
+ "comment": "",
+ "library_name": "",
+ "save": 1,
+ "_": "3e9e649e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ctrl_host_uuid;\n Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveTapeLibraryDrivers
+body: {
+ "library_uuid": "",
+ "driver_index": "",
+ "status": "",
+ "dev_path": "",
+ "driver_sn": "",
+ "operate": "",
+ "slot_index": "",
+ "slot_flag": "",
+ "barcode": "",
+ "tape_uuid": "",
+ "_": "3e3c041d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: moveTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3d8ec6b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebuildTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3f029f74"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshTapeLibrary
+body: {
+ "bk_uuids": [],
+ "_": "3ed46464"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshTapeLibrarySlot
+body: {
+ "library_uuid": "",
+ "refresh_type": 1,
+ "_": "3f72300a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshTapeMedia
+body: {
+ "list": [
+  {
+   "library_uuid": "",
+   "slot_index": "",
+   "slot_barcode": "",
+   "slot_tapename": "",
+   "slot_tapesequence": "",
+   "pool_name": ""
+  }
+ ],
+ "operate": "",
+ "src_pool_name": "",
+ "dst_pool_name": "",
+ "freeze": "",
+ "backupset_info": [
+  {
+   "copy_id": 1,
+   "bk_set_id": "",
+   "stage": 1
+  }
+ ],
+ "erase_type": 1,
+ "erase_mode": 1,
+ "erase_times": 1,
+ "drive_num": 1,
+ "_": "3f4d426f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: sanTapeLibraries
+body: {
+ "bk_uuids": [],
+ "_": "3f506018"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: setTapeLibraryFreezeNumber
+body: {
+ "medium_type": 1,
+ "library_sn": "",
+ "freeze_number": 1,
+ "_": "3e524fda"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: library_sn;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateTapePool
+body: {
+ "comment": "",
+ "note": "",
+ "_": "3e4ddebb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+

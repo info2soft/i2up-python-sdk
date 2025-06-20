@@ -1,0 +1,70 @@
+<START-----------------------------------------------------------
+Method: listReportRule
+body: {
+ "limit": 1,
+ "page": 1,
+ "_": "3f731429"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listReportRuleHistory
+body: {
+ "limit": "",
+ "page": "",
+ "where_args": {
+  "rule_uuid": "4D149dC7-acef-d29e-Fc33-Bc4bDbD6c11E"
+ },
+ "_": "3f41e8d0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "0",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listReportRuleStatistics
+body: {
+ "limit": "",
+ "page": "",
+ "search_field": "rule_name",
+ "search_value": "test",
+ "where_args": {
+  "rule_uuid": "013bDbc8-7343-1FBb-c71c-7B35CcbbEB8E",
+  "task_uuid": "764B16bf-96Ea-7535-D6cf-6B0bf8d3de4e"
+ },
+ "_": "3f38dbc4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0,
+  "start_time": null,
+  "duration": null,
+  "rule_sum": null,
+  "traffic_total": "B"
+ }
+}
+-----------------------------------------------------------END>
+

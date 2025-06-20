@@ -1,0 +1,84 @@
+<START-----------------------------------------------------------
+Method: createTenant
+body: {
+ "tenant_name": "Eric",
+ "display_name": "Anna",
+ "description": "Kimberly",
+ "enabled": 1,
+ "password": "",
+ "_": "3e5da869"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTenant
+body: {
+ "ids": [],
+ "_": "3ee0527f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: ids[0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTenant
+body: {
+ "search_value": "",
+ "search_field": "",
+ "limit": 1,
+ "page": 1,
+ "order_by": "",
+ "direction": "",
+ "like_args": {
+  "xxx": ""
+ },
+ "where_args": {
+  "xxx": ""
+ },
+ "_": "3dfa8d7f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyTenant
+body: {
+ "display_name": "Helen",
+ "description": "Mark",
+ "enabled": 0,
+ "random_str": "9Ecd8617-7eaD-EbeD-7F67-265BbCcb4192",
+ "tenant_name": "Donna",
+ "password": "",
+ "_": "3d571f71"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: password;\n"
+ }
+}
+-----------------------------------------------------------END>
+

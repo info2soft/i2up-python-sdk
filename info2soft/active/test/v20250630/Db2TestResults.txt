@@ -1,0 +1,321 @@
+<START-----------------------------------------------------------
+Method: deleteDb2Rule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "_": "3f3deef2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDb2Rule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: duplicateDb2Rule
+body: {
+ "operate": "",
+ "rule_uuid": "",
+ "scn": "",
+ "_": "3f0cfd13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDb2Rule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listSyncRulesStatus
+body: {
+ "uuids": [],
+ "_": "3c474eb5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDb2Rule
+body: {
+ "_": "3e2b08ee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDb2RuleBatch
+body: {
+ "batch_encrypt_compress": 0,
+ "kafka": [
+  {
+   "binary_code": "base64"
+  }
+ ],
+ "dml_track": [
+  {
+   "enable": true,
+   "urp": 1,
+   "drp": 1,
+   "tmcol": "1",
+   "delcol": "1"
+  }
+ ],
+ "save_json_text": false,
+ "row_map_mode": "rowid",
+ "map_type": "user",
+ "table_map": [],
+ "dbmap_topic": "test1",
+ "sync_mode": 1,
+ "start_scn": "1",
+ "full_sync_settings": {
+  "dump_thd": 1,
+  "clean_user_before_dump": 1,
+  "existing_table": "s",
+  "sync_mode": 1,
+  "start_scn": "1",
+  "load_thd": 1,
+  "keep_exist_table": 0,
+  "keep_table": 0,
+  "load_mode": "direct",
+  "ld_dir_opt": 0,
+  "his_thread": 1,
+  "try_split_part_table": 0,
+  "concurrent_table": [
+   "hello.world"
+  ]
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": [
+   "PROCEDURE",
+   "PACKAGE",
+   "PACKAGE BODY",
+   "DATABASE LINK",
+   "OLD JOB",
+   "JOB",
+   "PRIVS",
+   "CONSTRAINT",
+   "JAVA RESOURCE",
+   "JAVA SOURCE"
+  ]
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "INDEX",
+   "VIEW",
+   "FUNCTION"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": [
+   "hh.ww"
+  ]
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "IRP",
+    "table": "1",
+    "user": "user",
+    "process": "SKIP",
+    "addInfo": "1"
+   }
+  ]
+ },
+ "start_rule_now": 0,
+ "storage_settings": {
+  "max_ld_mem": "1",
+  "src_max_mem": 512,
+  "src_max_disk": 5000,
+  "txn_max_mem": 10000,
+  "tf_max_size": 100,
+  "tgt_extern_table": "1"
+ },
+ "error_handling": {
+  "report_failed_dml": 1,
+  "load_err_set": "continue",
+  "drp": "ignore",
+  "irp": "irpafterdel",
+  "urp": "toirp"
+ },
+ "table_space_map": {
+  "tgt_table_space": "1",
+  "table_mapping_way": "ptop",
+  "table_path_map": {
+   "ddd": "sss",
+   "ddd1": "sss1"
+  },
+  "table_space_name": {
+   "qq": "ss"
+  }
+ },
+ "other_settings": {
+  "table_delay_load": [
+   {
+    "table": "",
+    "user": ""
+   }
+  ],
+  "keep_seq_sync": "1",
+  "gen_txn": "1",
+  "merge_track": "",
+  "fill_lob_colum": "",
+  "run_time": "",
+  "sync_lob": 1,
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "dly_constraint_load": 0,
+  "zip_level": 0,
+  "ddl_cv": 0,
+  "keep_bad_act": 0,
+  "keep_usr_pwd": 1,
+  "convert_urp_of_key": 0,
+  "ignore_foreign_key": 0,
+  "table_change_info": 1,
+  "message_format": "",
+  "json_format": "",
+  "enable_truncate_frequence": ""
+ },
+ "bw_settings": {
+  "bw_limit": "\"12*00:00-13:00*40M,3*00:00-13:00*40M\""
+ },
+ "biz_grp_list": [],
+ "part_load_balance": "12",
+ "kafka_time_out": "12000",
+ "tgt_type": "oracle",
+ "db_user_map": {
+  "CTT": "CTT"
+ },
+ "rule_uuid": "F530FB0E-0208-9071-66D3-E595AE7D5A4C",
+ "rule_uuids": [],
+ "batch_basic_settings": 0,
+ "batch_full_sync_settings": 0,
+ "batch_incre_sync_settings": 0,
+ "batch_advanced_settings": 0,
+ "batch_full_sync_obj_filter": 0,
+ "batch_inc_sync_ddl_filter": 0,
+ "_": "3ede33b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "result": [
+   {
+    "code": 1011110001,
+    "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)",
+    "rule_uuid": null,
+    "rule_name": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartDb2Rule
+body: {
+ "operate": "",
+ "rule_uuid": "",
+ "scn": "",
+ "_": "3daa8766"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeDb2Rule
+body: {
+ "operate": "",
+ "rule_uuid": "",
+ "scn": "",
+ "_": "3e4e9b03"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopDb2Rule
+body: {
+ "operate": "",
+ "rule_uuid": "",
+ "scn": "",
+ "_": "3f3e7811"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

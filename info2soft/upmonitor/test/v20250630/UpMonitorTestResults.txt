@@ -1,0 +1,890 @@
+<START-----------------------------------------------------------
+Method: authUpMonitor
+body: {
+ "access_key": "oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk",
+ "secret_key": "fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo",
+ "ip": "172.20.2.70",
+ "port": "58086",
+ "_": "3e421176"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createUpMonitor
+body: {
+ "access_key": "oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk",
+ "biz_grp_list": [],
+ "comment": "\u5907\u6ce8xxx",
+ "secret_key": "fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo",
+ "ip": "172.20.2.70",
+ "port": "58086",
+ "up_uuid": "CE753C48-96F9-6C38-C3DE-A25E7405D03F",
+ "up_name": "\u5c31\u8fd9\u4e2a\u63a7\u5236\u673a",
+ "auditor_access_key": "",
+ "sysadmin_access_key": "",
+ "sysadmin_secret_key": "",
+ "auditor_secret_key": "",
+ "_": "3f101982"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteUpMonitor
+body: {
+ "up_uuids": [
+  "CE753C48-96F9-6C38-C3DE-A25E7405D03F"
+ ],
+ "_": "3f3204ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUpMonitor
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeUpMonitorToken
+body: {
+ "up_uuid": "CE753C48-96F9-6C38-C3DE-A25E7405D03F",
+ "_": "3df2ecf6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: downloadStatistics
+body: {
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "status": "",
+ "type": "",
+ "result": 1,
+ "group_uuid": "",
+ "uuid": "",
+ "statistics_start": 1,
+ "statistics_end": 1,
+ "src_type": 1,
+ "obj_name": "",
+ "time_consuming": 1,
+ "suffix": ".csv",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "_": "3f7a2c5e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: exportUsers
+body: {
+ "for_import": 0,
+ "suffix": "csv",
+ "sub_type": "0",
+ "uuids": [],
+ "where_args": {
+  "timing_type": "",
+  "raw_uuid": ""
+ },
+ "_": "3f6605be"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010370000,
+  "message": "[1010370000] No record"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOpLog
+body: {
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "address": "",
+ "username": "",
+ "page": 1,
+ "end": 1548950400,
+ "limit": 10,
+ "start": 1546272000,
+ "download": false,
+ "up_uuds": [],
+ "_": "3f322504"
+}
+response: {
+ "ret": 200,
+ "data": "\"  \",\n"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStatistics
+body: {
+ "obj_name": "",
+ "time_used_rate": 1,
+ "sub_type": 1,
+ "sys_name": "",
+ "protect_name": "",
+ "status": "",
+ "type": "",
+ "result": 1,
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "other_uuid": "",
+ "group_uuid": "",
+ "uuid": "",
+ "page": 1,
+ "end": 1,
+ "name": "",
+ "limit": 10,
+ "start": 1,
+ "time_consuming": 1,
+ "up_uuids": [],
+ "duration_operator": "",
+ "duration": 1,
+ "_": "3f4bc134"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitor
+body: {
+ "limit": 10,
+ "page": 1,
+ "filter_by_biz_grp": 1,
+ "search_field": "",
+ "search_value": "",
+ "where_args": {
+  "up_uuid": ""
+ },
+ "_": "3f30ddb4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitorPlatSummary
+body: {
+ "filter_by_biz_grp": 1,
+ "search_field": "",
+ "search_value": "",
+ "where_args": {
+  "up_uuid": ""
+ },
+ "_": "3e2fbb77"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitorRules
+body: {
+ "type": 1,
+ "search_field": "",
+ "search_value": "",
+ "up_uuid": "",
+ "_": "3eb977cf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUpMonitorStatus
+body: {
+ "up_uuids": [
+  "CE753C48-96F9-6C38-C3DE-A25E7405D03F"
+ ],
+ "_": "3db5aa10"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUser
+body: {
+ "page": 1,
+ "limit": 10,
+ "up_uuids": [],
+ "like_args": {
+  "username": "",
+  "email": "",
+  "mobile": ""
+ },
+ "_": "3f61a106"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyUpMonitor
+body: {
+ "up_name": "\u5c31\u8fd9\u4e2a\u63a7\u5236\u673a",
+ "access_key": "oishvmn5YPHJcEDaIjtwd0R9Ug7BN1fk",
+ "secret_key": "fkLiyqsG3P1AzB5jWtYbZa7TU8RN9wSVhe6EldOo",
+ "ip": "172.20.2.70",
+ "port": "58086",
+ "comment": "\u5907\u6ce8xxx",
+ "biz_grp_list": [],
+ "random_str": "11111111-1111-1111-1111-111111111111",
+ "_": "3f7c3080"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: refreshUpMonitor
+body: {
+ "up_uuids": [
+  "CE753C48-96F9-6C38-C3DE-A25E7405D03F"
+ ],
+ "operate": "refresh",
+ "_": "3dd3c72d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upMonitorOverall
+body: {
+ "up_uuids": [],
+ "_": "3edec37f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "up": {
+   "ONLINE": 0,
+   "OFFLINE": 0
+  },
+  "status_overall": {
+   "code": 0,
+   "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002",
+   "info_list": {
+    "code": 0,
+    "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002",
+    "sys_uptime": {
+     "time_start": 0,
+     "time_now": 0
+    },
+    "db_node_status": {
+     "online": 0,
+     "warn": 0,
+     "abnormal": 0,
+     "unknown": 0,
+     "maintain": 0
+    },
+    "node_status": {
+     "online": 0,
+     "maintain": 0,
+     "excpt": 0,
+     "unknown": 0
+    },
+    "real_time_rule_status": [
+     {
+      "name": "replication",
+      "sum": 0,
+      "description": {
+       "rep": 0
+      }
+     },
+     {
+      "name": "stale",
+      "sum": 0,
+      "description": {
+       "rep": 0
+      }
+     },
+     {
+      "name": "mirror",
+      "sum": 0,
+      "description": {
+       "rep": 0
+      }
+     },
+     {
+      "name": "excpt",
+      "sum": 0,
+      "description": {
+       "rep": 0
+      }
+     },
+     {
+      "name": "stop",
+      "sum": 0,
+      "description": {
+       "rep": 0
+      }
+     },
+     {
+      "name": "unknown",
+      "sum": 0,
+      "description": {
+       "rep": 0
+      }
+     }
+    ],
+    "db_rule_status": [
+     {
+      "name": "dump",
+      "sum": 0,
+      "description": {
+       "oracle": 0,
+       "mysql": 0,
+       "kafka": 0,
+       "tidb": 0,
+       "sqlserver": 0,
+       "postgresql": 0,
+       "db2": 0,
+       "qianbase": 0,
+       "oceanbase": 0,
+       "dm": 0,
+       "informix": 0,
+       "mongodb": 0,
+       "redis": 0,
+       "mask": 0,
+       "offline": 0
+      }
+     },
+     {
+      "name": "track",
+      "sum": 0,
+      "description": {
+       "oracle": 0,
+       "mysql": 0,
+       "kafka": 0,
+       "tidb": 0,
+       "sqlserver": 0,
+       "postgresql": 0,
+       "db2": 0,
+       "qianbase": 0,
+       "oceanbase": 0,
+       "dm": 0,
+       "informix": 0,
+       "mongodb": 0,
+       "redis": 0,
+       "mask": 0,
+       "offline": 0
+      }
+     },
+     {
+      "name": "stop",
+      "sum": 0,
+      "description": {
+       "oracle": 0,
+       "mysql": 0,
+       "kafka": 0,
+       "tidb": 0,
+       "sqlserver": 0,
+       "postgresql": 0,
+       "db2": 0,
+       "qianbase": 0,
+       "oceanbase": 0,
+       "dm": 0,
+       "informix": 0,
+       "mongodb": 0,
+       "redis": 0,
+       "mask": 0,
+       "offline": 0
+      }
+     },
+     {
+      "name": "unknown",
+      "sum": 0,
+      "description": {
+       "oracle": 0,
+       "mysql": 0,
+       "kafka": 0,
+       "tidb": 0,
+       "sqlserver": 0,
+       "postgresql": 0,
+       "db2": 0,
+       "qianbase": 0,
+       "oceanbase": 0,
+       "dm": 0,
+       "informix": 0,
+       "mongodb": 0,
+       "redis": 0,
+       "mask": 0,
+       "offline": 0
+      }
+     },
+     {
+      "name": "error",
+      "sum": 0,
+      "description": {
+       "oracle": 0,
+       "mysql": 0,
+       "kafka": 0,
+       "tidb": 0,
+       "sqlserver": 0,
+       "postgresql": 0,
+       "db2": 0,
+       "qianbase": 0,
+       "oceanbase": 0,
+       "dm": 0,
+       "informix": 0,
+       "mongodb": 0,
+       "redis": 0,
+       "mask": 0,
+       "offline": 0
+      }
+     },
+     {
+      "name": "maintenance",
+      "sum": 0,
+      "description": {
+       "oracle": 0,
+       "mysql": 0,
+       "kafka": 0,
+       "tidb": 0,
+       "sqlserver": 0,
+       "postgresql": 0,
+       "db2": 0,
+       "qianbase": 0,
+       "oceanbase": 0,
+       "dm": 0,
+       "informix": 0,
+       "mongodb": 0,
+       "redis": 0,
+       "mask": 0,
+       "offline": 0
+      }
+     }
+    ],
+    "ha_rule_status": [
+     {
+      "name": "run",
+      "sum": 0,
+      "description": {
+       "ha": 0
+      }
+     },
+     {
+      "name": "maintain",
+      "sum": 0,
+      "description": {
+       "ha": 0
+      }
+     },
+     {
+      "name": "switch",
+      "sum": 0,
+      "description": {
+       "ha": 0
+      }
+     },
+     {
+      "name": "warn",
+      "sum": 0,
+      "description": {
+       "ha": 0
+      }
+     },
+     {
+      "name": "stop",
+      "sum": 0,
+      "description": {
+       "ha": 0
+      }
+     },
+     {
+      "name": "unknown",
+      "sum": 0,
+      "description": {
+       "ha": 0
+      }
+     }
+    ],
+    "copy_management_status": [
+     {
+      "name": "wait",
+      "sum": 0,
+      "description": {
+       "compl_rep": 0,
+       "snapshot_task": 0
+      }
+     },
+     {
+      "name": "maintain",
+      "sum": 0,
+      "description": {
+       "compl_rep": 0,
+       "snapshot_task": 0
+      }
+     },
+     {
+      "name": "replication",
+      "sum": 0,
+      "description": {
+       "compl_rep": 0,
+       "snapshot_task": 0
+      }
+     },
+     {
+      "name": "finish",
+      "sum": 0,
+      "description": {
+       "compl_rep": 0,
+       "snapshot_task": 0
+      }
+     },
+     {
+      "name": "stop",
+      "sum": 0,
+      "description": {
+       "compl_rep": 0,
+       "snapshot_task": 0
+      }
+     },
+     {
+      "name": "unknown",
+      "sum": 0,
+      "description": {
+       "compl_rep": 0,
+       "snapshot_task": 0
+      }
+     }
+    ],
+    "scheduled_rule_status": [
+     {
+      "name": "scheduling",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "disable",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "failed",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "finish",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "stop",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "skip",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "timeout",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     },
+     {
+      "name": "unknown",
+      "sum": 0,
+      "description": {
+       "vp_backup": 0,
+       "ffo": 0,
+       "backup": 0,
+       "bigdata_backup": 0
+      }
+     }
+    ],
+    "scheduled_rule_state": {
+     "success": [],
+     "fail": [],
+     "jump": [],
+     "cancel": [],
+     "time": []
+    }
+   }
+  },
+  "overall_resource": {
+   "code": 0,
+   "message": "[0] \u64cd\u4f5c\u6210\u529f\u3002",
+   "info_list": {
+    "node": {
+     "total": 0,
+     "online": 0,
+     "maintain": 0,
+     "offline": 0,
+     "windows": 0,
+     "linux": 0
+    },
+    "db": {
+     "total": 0,
+     "online": 0,
+     "warn": 0,
+     "abnormal": 0,
+     "unknown": 0,
+     "oracle": 0,
+     "mysql": 0,
+     "sqlserver": 0,
+     "kafka": 0,
+     "maintain": 0
+    },
+    "vir_plat": {
+     "total": 0,
+     "online": 0,
+     "maintain": 0,
+     "offline": 0,
+     "hyperv": 0,
+     "vmware": 0,
+     "drp": 0,
+     "cas": 0,
+     "fusion": 0,
+     "scp": 0,
+     "winstack": 0,
+     "aio": 0
+    },
+    "cloud_plat": {
+     "total": 0,
+     "online": 0,
+     "maintain": 0,
+     "offline": 0,
+     "huawei": 0,
+     "openstack": 0,
+     "hwcstack": 0,
+     "ecloud": 0
+    },
+    "cluster": {
+     "total": 0,
+     "online": 0,
+     "maintain": 0,
+     "mscluster": 0,
+     "rac": 0,
+     "vcs": 0
+    },
+    "dto_host": {
+     "total": 0,
+     "online": 0,
+     "maintain": 0,
+     "offline": 0,
+     "windows": 0,
+     "linux": 0
+    },
+    "storage_pool": {
+     "total": 0,
+     "online": 0,
+     "offline": 0
+    },
+    "copy_volume": {
+     "total": 0,
+     "online": 0,
+     "mounted": 0,
+     "abnormal": 0,
+     "offline": 0
+    },
+    "dedupe_pool": {
+     "total": 0,
+     "online": 0,
+     "offline": 0
+    },
+    "bigdata_plat": {
+     "total": 0,
+     "online": 0,
+     "offline": 0
+    },
+    "active_node": {
+     "idle": 0
+    }
+   }
+  },
+  "approaching_end_licenses": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: upMonitorVpRuleStat
+body: {
+ "up_uuids": "",
+ "_": "3f65afa7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "vp_stat": {
+   "code": 0,
+   "message": "[0] success",
+   "vm_total": 0,
+   "vm_protected": 0,
+   "all_total_num": 0,
+   "all_trans_data_num": "0 B",
+   "all_success_num": 0,
+   "all_failed_num": 0,
+   "all_cancel_num": 0,
+   "all_skip_num": 0,
+   "all_unread_err_num": 0,
+   "total_num": 550,
+   "trans_data_num": "0 B",
+   "success_num": 0,
+   "failed_num": 0,
+   "cancel_num": 0,
+   "skip_num": 0,
+   "unread_err_num": 0,
+   "trans_data_num_raw": 0,
+   "all_trans_data_num_raw": 0
+  },
+  "vp_platforms": []
+ }
+}
+-----------------------------------------------------------END>
+
