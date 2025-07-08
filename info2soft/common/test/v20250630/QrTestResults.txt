@@ -1,0 +1,119 @@
+<START-----------------------------------------------------------
+Method: cancelLogin
+body: {
+ "action": 1,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3ee12ae2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001125,
+  "message": "[1010001125] Invalid credentials (mobile, email) or verification code, please re-enter or re obtain"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkQrStatus
+body: {
+ "uuid": "0d6e290f9c8414bac0bb105b97232771ec3e5178",
+ "_": "3f742996"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[1010001125] Invalid credentials (mobile, email) or verification code, please re-enter or re obtain",
+  "status": 9
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: checkQrValidity
+body: {
+ "action": 1,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3e288921"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001125,
+  "message": "[1010001125] Invalid credentials (mobile, email) or verification code, please re-enter or re obtain"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: confirmLogin
+body: {
+ "action": 1,
+ "uuid": "9169240e9e5fa86a115578b9ed151c34771ca22e",
+ "_": "3f0809ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001125,
+  "message": "[1010001125] Invalid credentials (mobile, email) or verification code, please re-enter or re obtain"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createQrPic
+body: {
+ "point_size": 1,
+ "text": "test",
+ "format": "",
+ "_": "3db9e522"
+}
+response: {
+ "ret": 200,
+ "data": "\ufffdPNG\r\n\u001a\n\u0000\u0000\u0000\rIHDR\u0000\u0000\u0000\ufffd\u0000\u0000\u0000\ufffd\u0001\u0003\u0000\u0000\u0000\ufffd\\\u001c6\u0000\u0000\u0000\u0006PLTE\ufffd\ufffd\ufffd\u0000\u0000\u0000U\ufffd\ufffd~\u0000\u0000\u0000\tpHYs\u0000\u0000\u000e\ufffd\u0000\u0000\u000e\ufffd\u0001\ufffd+\u000e\u001b\u0000\u0000\u0000\ufffdIDATH\ufffd\ud5bb\u0011\ufffd0\fD\ufffd\u00108\ufffd\u0004J\ufffd4\\\u001a\ufffdP\ufffdC\u0007\fB\ufffd\ufffd8<\\Fp\u001b\ufffd\u0001\ufffd\ufffd\ufffdb}\ufffd\u022b\ufffd\ufffd\u0575\ufffd\f\ufffd\u0014\u02fbF.\ufffd\ufffd\ufffd\ufffd)\ufffd@\ufffd\u0007s\ufffd[Xm\u05feb\ufffd\ufffd\ufffd71\u000eiTR\ufffd\ufffd\u0007\ufffdE\ufffd\u0005A\ufffd\ufffd;\ufffd\ufffd\u001f-E\ufffd\ufffdP\ufffd7\u0011\ufffd\ufffdk3\ufffd1\ufffd\ufffd0j\ufffd\ufffd\ufffd\ufffdm\"X\u0011\ufffd\ufffd\ufffdkr\\f\ufffd\u0099y\u0016\\jR;U\ufffdo!\u06eePa?X\ufffd\ufffd>W\ufffd\ufffd{\ufffd$\u0018\ufffd\n-C(a\ufffd\ufffd\ufffdf\ufffd\u062a\ufffd&\u0098\u07f6\ufffdO\ufffd\n\u0019\ufffd\u001dB\u0013~\u0467o2|\ufffd>W\ufffd<\ufffd\r{\ufffd\ufffd,\u0019F\ufffd}\u0017C\ufffd)\b\u0002\\{\ufffd\ufffd\ufffd^-\ufffd\ufffd_=\ufffd\u0001a\ufffd\ufffd\ufffdy}-\ufffd\u0000\u0000\u0000\u0000IEND\ufffdB`\ufffd"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTimeStamp
+body: {
+ "timestamp": 1546847673,
+ "_": "3f315d45"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "",
+  "t": "175040791835587258"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: obtainQrContent
+body: {
+ "app_name": "enterpriseApp",
+ "_": "3e19422f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "content": {
+   "uuid": "34e847c94e52869617aedc0eed8bf845aa9b55c1",
+   "t": "175040791852179355"
+  }
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,372 @@
+<START-----------------------------------------------------------
+Method: createInformixRule
+body: {
+ "src_db_uuid": "C2EE5656-E2BE-45A8-BF2E-5C0E0FB40625",
+ "tgt_db_uuid": "D64E1A3A-227C-4E21-8B73-AAB37BDA1020",
+ "rule_type": 8,
+ "rule_name": "test",
+ "node_uuid": "",
+ "db_user_map": "",
+ "row_map_mode": "rowid",
+ "map_type": "table",
+ "table_map": [
+  {
+   "src_user": "user1",
+   "src_table": "table1",
+   "dst_user": "user2",
+   "dst_table": "table2",
+   "column": []
+  }
+ ],
+ "dbmap_topic": "",
+ "sync_mode": 1,
+ "start_scn": "",
+ "storage_settings": {
+  "tgt_extern_table": "",
+  "src_max_mem": "512",
+  "src_max_disk": "5000",
+  "txn_max_mem": "10000",
+  "tf_max_size": "100",
+  "max_ld_mem": "512"
+ },
+ "table_space_map": {
+  "tgt_table_space": "",
+  "table_mapping_way": "ptop",
+  "table_path_map": [],
+  "table_space_name": []
+ },
+ "other_settings": {
+  "initrans": 10,
+  "enable_truncate_frequence": 0,
+  "dly_constraint_load": 0,
+  "keep_usr_pwd": 0,
+  "ignore_foreign_key": 0,
+  "table_delay_load": [],
+  "table_change_info": 0,
+  "keep_dyn_data": 0,
+  "dyn_thread": 1,
+  "redo_read_thread": 1,
+  "ddl_cv": 0,
+  "incre_sync": 0,
+  "keep_bad_act": 0,
+  "fill_lob_column": 0,
+  "keep_seq_sync": 0,
+  "convert_urp_of_key": 0,
+  "gen_txn": 0,
+  "merge_track": 1,
+  "sync_lob": 1,
+  "message_format": "json",
+  "json_format": "json",
+  "lib_name": "",
+  "jnr_name": "",
+  "run_time": "",
+  "jointing": [
+   {
+    "op": "append",
+    "table": "t1",
+    "content": [
+     "c1",
+     "v1",
+     ""
+    ]
+   }
+  ]
+ },
+ "error_handling": {
+  "irp": "irpafterdel",
+  "urp": "toirp",
+  "drp": "ignore",
+  "load_err_set": "continue",
+  "report_failed_dml": 0
+ },
+ "bw_settings": {
+  "bw_limit": ""
+ },
+ "strate": [],
+ "full_sync_settings": {
+  "clean_user_before_dump": 0,
+  "dump_thd": 1,
+  "load_thd": 1,
+  "full_sync_custom_cfg": [],
+  "full_sync_source_db": "",
+  "end_db_map": "",
+  "end_tab_map": "",
+  "end_target_db": "",
+  "table_msg_uuid": "C2EE5656-E2BE-45A8-BF2E-5C0E0FB40625",
+  "full_sync_mode": "logic",
+  "load_mode": "normal",
+  "ld_dir_opt": 0,
+  "try_split_part_table": 1,
+  "existing_table": "drop_purge",
+  "concurrent_table": [],
+  "sync_mode": 1,
+  "start_scn": ""
+ },
+ "full_sync_obj_filter": {
+  "full_sync_obj_data": []
+ },
+ "inc_sync_ddl_filter": {
+  "inc_sync_ddl_data": [
+   "CREATE TABLE",
+   "DROP TABLE",
+   "ALTER TABLE",
+   "TABLE ADD",
+   "TABLE DROP",
+   "TABLE MODIFY",
+   "TABLE RENAME",
+   "TRUNCATE TABLE",
+   "CREATE COMMENT",
+   "ADD PARTITION",
+   "DROP PARTITION",
+   "ATTACH PARTITION",
+   "CREATE INDEX",
+   "DROP INDEX",
+   "ALTER INDEX",
+   "RENAME INDEX",
+   "CREATE TYPE",
+   "DROP TYPE",
+   "CREATE VIEW",
+   "DROP VIEW",
+   "CREATE SYN",
+   "DROP SYN",
+   "ADD CONSTRAINT",
+   "DROP CONSTRAINT",
+   "ALTER CONSTRAINT",
+   "CREATE SEQUENCE",
+   "DROP SEQUENCE",
+   "ALTER SEQUENCE",
+   "CREATE ROLE",
+   "DROP ROLE",
+   "ALTER ROLE",
+   "GRANT SYS",
+   "GRANT OBJ",
+   "REVOKE SYS",
+   "REVOKE OBJ",
+   "CREATE PROC",
+   "DROP PROC",
+   "ALTER PROC",
+   "CREATE QUEUE",
+   "DROP QUEUE",
+   "ALTER QUEUE",
+   "CREATE TABLESPACE",
+   "DROP TABLESPACE",
+   "ALTER TABLESPACE",
+   "RENAME TABLESPACE",
+   "ADD HASH PARTITION",
+   "ADD CONSTRAINTS"
+  ]
+ },
+ "filter_table_settings": {
+  "exclude_table": "",
+  "exclude_tab_with_column_switch": 0,
+  "exclude_tab_with_column": []
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "obj_fix_type": "IRP",
+    "user": "u",
+    "table": "t",
+    "deal_type": "SKIP",
+    "field_condition": "c",
+    "db": ""
+   },
+   {
+    "obj_fix_type": "DRP",
+    "user": "a",
+    "table": "b",
+    "deal_type": "EXEC_BEFORE_LOAD",
+    "field_condition": "c",
+    "db": ""
+   }
+  ]
+ },
+ "create_time": 1710402071,
+ "start_rule_now": 0,
+ "db_map_uuid": "",
+ "dml_track": {
+  "enable": 0,
+  "urp": 0,
+  "drp": 0,
+  "tmcol": "",
+  "delcol": ""
+ },
+ "kafka": {
+  "binary_code": "hex"
+ },
+ "kafka_time_out": "120000",
+ "part_load_balance": "by_table",
+ "kafka_message_encoding": "UTF-8",
+ "json_template": "",
+ "save_json_text": false,
+ "encrypt": 1,
+ "encrypt_switch": 1,
+ "secret_key": "",
+ "compress": 9,
+ "compress_switch": 1,
+ "status": "",
+ "include_tab_with_column": [],
+ "include_tab_with_column_switch": 0,
+ "full_map_switch": 0,
+ "map_type_list": [],
+ "src_db_auth_uuid": "7721AA6E-E471-42FC-919C-1F03A674BC46",
+ "tgt_db_auth_uuid": "",
+ "comment": "",
+ "is_duplicate": 0,
+ "compress_algo": "",
+ "compress_level": 0,
+ "state": {
+  "work_state": {
+   "status": "ACTIVE_RULE_ABNORMAL",
+   "error_code": -4016
+  },
+  "back_state": {
+   "status": "ACTIVE_RULE_ABNORMAL",
+   "error_code": -4016
+  },
+  "track_state": {
+   "status": "ACTIVE_RULE_STOP",
+   "error_code": -4016
+  },
+  "scheduleState": "",
+  "start_time": 1710402071,
+  "time": 1716803431,
+  "stage": "ACTIVE_RULE_ERROR"
+ },
+ "maintenance": 0,
+ "biz_grp_list": [],
+ "biz_grp_name": [],
+ "rule_uuids": [],
+ "registered": 1,
+ "active_flag": "modify",
+ "_": "3f3dffbf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1011110001,
+  "message": "[1011110001] RPC call failed or Couldn't connect to target service (node, platform, API)"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteInformixRule
+body: {
+ "rule_uuids": [],
+ "type": "",
+ "force": 0,
+ "_": "3f734ac6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeInformixRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listinformixRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartInformixRule
+body: {
+ "rule_uuid": "",
+ "scn": "",
+ "operate": "",
+ "_": "3e3a622e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeInformixRule
+body: {
+ "rule_uuid": "",
+ "scn": "",
+ "operate": "",
+ "_": "3ef1433f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopAnalysisInformixRule
+body: {
+ "rule_uuid": "",
+ "scn": "",
+ "operate": "",
+ "_": "3f24a04a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopInformixRule
+body: {
+ "rule_uuid": "",
+ "scn": "",
+ "operate": "",
+ "_": "3f44895f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+

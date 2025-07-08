@@ -1,0 +1,258 @@
+<START-----------------------------------------------------------
+Method: createBackupDestination
+body: {
+ "name": "",
+ "sto_uuid": "",
+ "s3_real_address": 1,
+ "bucket": "",
+ "region": "",
+ "check_sto_address": 1,
+ "sto_address_cert": "",
+ "cls_uuid": "",
+ "copy_switch": 1,
+ "src_uuid": "",
+ "src_cls_uuid": "",
+ "_": "3da70972"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createCallbackSettings
+body: {
+ "name": "",
+ "callback_scene": 1,
+ "callback_content": [
+  {
+   "no": 1,
+   "container_name": "",
+   "container_image": "",
+   "cmd": "",
+   "on_error": "",
+   "timeout": 1,
+   "load_volume": "",
+   "wait_timeout": 1
+  }
+ ],
+ "note": "",
+ "_": "3ebd9d31"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupDestination
+body: {
+ "uuids": [],
+ "force": 1,
+ "_": "3f0272ec"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteCallbackSettings
+body: {
+ "uuids": [],
+ "_": "3f7926aa"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: descibeBackupDestination
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCallbackSettings
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupDestination
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCallbackSettings
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClsNamespace
+body: {
+ "cls_uuid": "58ECEEB7-D4FC-4746-A507-AA3BBC98EFD1",
+ "_": "3e891125"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010501000,
+  "message": "[1010501000] Container cluster does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listContainerClusterResource
+body: {
+ "cls_uuid": "",
+ "_": "3ee05127"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The cls uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBackupDestination
+body: {
+ "uuid": "",
+ "name": "",
+ "sto_uuid": "",
+ "random_str": "",
+ "s3_real_address": 1,
+ "bucket": "",
+ "region": "",
+ "check_sto_address": 1,
+ "sto_address_cert": "",
+ "cls_uuid": "",
+ "_": "3e6cacc6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCallbackSettings
+body: {
+ "name": "",
+ "type": 1,
+ "cls_uuid": "",
+ "pod": "",
+ "uuid": "Abc2ecfF-2cDd-97dd-3253-416dB35dECc5",
+ "user_uuid": "E679EF73-5288-E3C4-9608-B33B47416B87",
+ "username": "admin",
+ "random_uuid": "E679EF73-5288-E3C4-9608-B33B47416B87",
+ "before_backup": [
+  {
+   "cmd": "",
+   "container": "",
+   "error_handling": "",
+   "timeout": ""
+  }
+ ],
+ "after_backup": [
+  {
+   "cmd": "",
+   "container": "",
+   "error_handling": "",
+   "timeout": ""
+  }
+ ],
+ "init_container": [
+  {
+   "name": "",
+   "mirror": "",
+   "cmd": "",
+   "volume": ""
+  }
+ ],
+ "recovery_callback": [
+  {
+   "container": "",
+   "cmd": "",
+   "error_handling": "",
+   "exec_timeout": 1,
+   "wait_timeout": 1
+  }
+ ],
+ "_": "3ccca535"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+

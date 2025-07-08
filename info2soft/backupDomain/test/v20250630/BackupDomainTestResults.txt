@@ -1,0 +1,161 @@
+<START-----------------------------------------------------------
+Method: authBackupDomain
+body: {
+ "domain_addr": "",
+ "access_key": "",
+ "secret_key": "",
+ "_": "3e282c18"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBackupDomain
+body: {
+ "domain_name": "",
+ "domain_addr": "",
+ "access_key": "",
+ "secret_key": "",
+ "comment": "",
+ "unit_uuids": [],
+ "schedule_svr_ip": "",
+ "unit_addr_list": [
+  {
+   "unit_uuid": "",
+   "unit_addr": ""
+  }
+ ],
+ "_": "3ec2eb13"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: domain_name;\n Lost: domain_addr;\n Lost: access_key;\n Lost: secret_key;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBackupDomain
+body: {
+ "uuids": [],
+ "_": "3f58980a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBackupDomain
+body: {
+ "domain_name": "",
+ "domain_addr": "",
+ "access_key": "",
+ "secret_key": "",
+ "comment": "",
+ "unit_uuids": [],
+ "_": "3e023b4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "backup_domain": {
+   "secret_key": "******"
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupDomain
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTargetDomainStorageUnit
+body: {
+ "domain_addr": "",
+ "access_key": "",
+ "secret_key": "",
+ "domain_uuid": "",
+ "_": "3e1cb085"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTargetDomainStorageUnitStatus
+body: {
+ "unit_uuids": [],
+ "domain_addr": "",
+ "access_key": "",
+ "secret_key": "",
+ "_": "3ea153d6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBackupDomain
+body: {
+ "domain_name": "",
+ "domain_addr": "",
+ "access_key": "",
+ "secret_key": "",
+ "comment": "",
+ "unit_uuids": [],
+ "unit_addr_list": [],
+ "_": "3f59cf62"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: domain_name;\n Lost: domain_addr;\n Lost: access_key;\n Lost: secret_key;\n"
+ }
+}
+-----------------------------------------------------------END>
+

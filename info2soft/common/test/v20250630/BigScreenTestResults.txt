@@ -1,0 +1,287 @@
+<START-----------------------------------------------------------
+Method: clearBigScreenStatData
+body: {
+ "rule_uuid": "",
+ "_": "3f7578b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "rule_uuid": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: configBigScreen
+body: {
+ "type": 1,
+ "rule_uuid": "",
+ "config": [
+  {
+   "mod_type": "data_stat",
+   "title": [],
+   "location": 1,
+   "graph_num": 4,
+   "scroll_limit": 20,
+   "rule_uuids": [],
+   "node_uuids": [],
+   "db_uuids": [],
+   "warn_limit": 1,
+   "node_group_uuids": [],
+   "warn_modules": [],
+   "stat_days": 1,
+   "stat_modules": [],
+   "vp_uuids": [],
+   "display": "",
+   "dst_node_biz_grp_uuid": "",
+   "src_node_biz_grp_uuid": "",
+   "dst_title": "",
+   "src_title": ""
+  },
+  {
+   "mod_type": "data_stat",
+   "title": [],
+   "location": 1,
+   "graph_num": 4,
+   "scroll_limit": 20,
+   "rule_uuids": [],
+   "node_uuids": [],
+   "db_uuids": [],
+   "warn_limit": 1,
+   "node_group_uuids": [],
+   "warn_modules": [],
+   "stat_days": 1,
+   "stat_modules": [],
+   "vp_uuids": [],
+   "display": "",
+   "dst_node_biz_grp_uuid": "",
+   "src_node_biz_grp_uuid": "",
+   "dst_title": "",
+   "src_title": ""
+  }
+ ],
+ "_": "3f018269"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBigScreen
+body: {
+ "rule_name": "",
+ "rule_type": 0,
+ "config": {},
+ "comment": "",
+ "logo_name": "I2Infomation2",
+ "_": "3f55f29a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigScreen
+body: {
+ "rule_uuids": [],
+ "_": "3de06da2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigScreenLogo
+body: {
+ "logo_name": "",
+ "_": "3e5d4e05"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigScreen
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigScreenConfig
+body: {
+ "rule_uuid": "",
+ "type": 1,
+ "_": "3f018fd2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "rule_name": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigScreenStat
+body: {
+ "rule_uuid": "",
+ "mod_type": "",
+ "_": "3f48dd9b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "stat": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigScreen
+body: {
+ "rule_type": 1,
+ "rule_name": "",
+ "_": "3dadca49"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigScreenGraph
+body: {
+ "mod_type": "",
+ "rule_uuid": "",
+ "rule_uuids": [],
+ "_": "3d653ce4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: mod_type;\n Lost: rule_uuid;\n Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigScreenLogo
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "logo_list": [
+   "default"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigScreenStatRules
+body: {
+ "rule_uuid": "",
+ "mod_type": "",
+ "type": "",
+ "_": "3eb22edc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "grp_uuid": ""
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBigScreen
+body: {
+ "rule_name": "",
+ "comment": "",
+ "logo_name": "",
+ "random_str": "",
+ "_": "3eeb93bb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: rule_type;\n Lost: logo_name;\n Lost: random_str;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: uploadBigScreenLogo
+body: {
+ "logo_file": "",
+ "logo_name": "",
+ "_": "3e3ff068"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010460002,
+  "message": "[1010460002] Invalid logo"
+ }
+}
+-----------------------------------------------------------END>
+

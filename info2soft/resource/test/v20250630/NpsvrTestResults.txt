@@ -1,0 +1,71 @@
+<START-----------------------------------------------------------
+Method: authNpsvr
+body: {
+ "config_addr": "",
+ "config_port": "",
+ "username": "",
+ "password": "",
+ "_": "3ec8912e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getNpsvrStatus
+body: {
+ "npsvr_uuids": [],
+ "_": "3e288120"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "status": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listConfigItems
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateConfigItems
+body: {
+ "config_items": [
+  {
+   "name": "",
+   "value": ""
+  }
+ ],
+ "_": "3f563af7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: config_items[0][name];\n Lost: config_items[0][value];\n"
+ }
+}
+-----------------------------------------------------------END>
+

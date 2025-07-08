@@ -1,0 +1,312 @@
+<START-----------------------------------------------------------
+Method: createRemoteRep
+body: {
+ "rep_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "rep_type": 0,
+ "wk_pool_uuid": "",
+ "bk_pool_uuid": "",
+ "rule_uuid": "",
+ "file_system": "",
+ "volume_uuid": "",
+ "snapshot": "",
+ "clone_uuid": "",
+ "sec_snapshot": "",
+ "sec_clone_uuid": "",
+ "bkup_policy": 1,
+ "bkup_one_time": 1,
+ "bkup_schedule": {
+  "limit": 1,
+  "sched_day": [],
+  "sched_every": 1,
+  "sched_time": [],
+  "sched_gap_min": 1,
+  "backup_type": 1
+ },
+ "bkup_window": {
+  "sched_time_start": "",
+  "sched_time_end": ""
+ },
+ "encrypt_switch": 0,
+ "encrypt": "",
+ "compress_switch": 0,
+ "compress": 1,
+ "secret_key": "",
+ "remote_volume_uuid": "",
+ "band_width": "",
+ "_": "3f18cfcf"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: wk_pool_uuid;\n Lost: bk_pool_uuid;\n Lost: bkup_window[sched_time_start];\n Lost: bkup_window[sched_time_end];\n Lost: bkup_schedule[0][sched_every];\n Lost: bkup_schedule[0][sched_time][0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteRemoteRep
+body: {
+ "rep_uuids": [],
+ "force": 1,
+ "del_policy": 1,
+ "_": "3e9d3e06"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeCloneVolume
+body: {
+ "volume_uuid": "",
+ "snapshot_time": "",
+ "_": "3f110742"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_uuid;\n Lost: snapshot_time;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeRemoteRep
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: filterStorageNode
+body: {
+ "uuid": "",
+ "_": "3f07d76b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFileSnapshot
+body: {
+ "uuid": "",
+ "pool_uuid": "",
+ "_": "3f7e92d5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuid;\n Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFileSystem
+body: {
+ "pool_uuid": "",
+ "_": "3f735ed2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFirstCloneVolume
+body: {
+ "volume_uuid": "",
+ "_": "3f1a26f9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: volume_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRemoteRep
+body: {
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "search_value": "",
+ "_": "3c85fb21"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listRemoteRepStatus
+body: {
+ "rep_uuids": [],
+ "force_refresh": 1,
+ "_": "3e0219a6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listStoragePoolRuleList
+body: {
+ "rep_type": 1,
+ "pool_uuid": "",
+ "_": "3e0abf8f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: pool_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyRemoteRep
+body: {
+ "rep_name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "rep_type": 0,
+ "wk_pool_uuid": "",
+ "bk_pool_uuid": "",
+ "rule_uuid": "",
+ "file_system": "",
+ "volume_uuid": "",
+ "snapshot": "",
+ "clone_uuid": "",
+ "sec_snapshot": "",
+ "sec_clone_uuid": "",
+ "bkup_policy": 1,
+ "bkup_one_time": 1,
+ "bkup_schedule": {
+  "limit": 1,
+  "sched_day": [],
+  "sched_every": 1,
+  "sched_time": [],
+  "sched_gap_min": 1,
+  "backup_type": 1
+ },
+ "bkup_window": {
+  "sched_time_start": "",
+  "sched_time_end": ""
+ },
+ "random_str": "",
+ "remote_volume_uuid": "",
+ "_": "3d80235d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rep_name;\n Lost: wk_uuid;\n Lost: bk_uuid;\n Lost: wk_pool_uuid;\n Lost: bk_pool_uuid;\n Lost: encrypt_switch;\n Lost: compress_switch;\n Lost: bkup_window[sched_time_start];\n Lost: bkup_window[sched_time_end];\n Lost: bkup_schedule[0][sched_every];\n Lost: bkup_schedule[0][sched_time][0];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelyRemoteRep
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3f6016d6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startRemoteRep
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3d61a4fe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopRemoteRep
+body: {
+ "rep_uuids": [],
+ "operate": "",
+ "_": "3e2984d8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: rep_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+

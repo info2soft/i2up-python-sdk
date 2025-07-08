@@ -1,0 +1,72 @@
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "nbu_bk_set_uuid": "",
+ "_": "3cc35e6a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The nbu bk set uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQueryArgsNbuBackupSet
+body: {
+ "search_field": "",
+ "search_value": "",
+ "_": "3e1fdc9e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBackupWork
+body: {
+ "page": 1,
+ "limit": 1,
+ "nbu_bk_set_uuid": "",
+ "_": "3eb8ff03"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The nbu bk set uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listQueryArgsNbuBackupSet
+body: {
+ "search_field": "",
+ "search_value": "",
+ "_": "3f3c58e8"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+

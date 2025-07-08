@@ -1,0 +1,166 @@
+<START-----------------------------------------------------------
+Method: createDedupeStorage
+body: {
+ "sto_name": "",
+ "bk_uuid": "",
+ "data_addr": "",
+ "meta_server_port": 1,
+ "block_server_port": 1,
+ "hash_path": "",
+ "block_path": "",
+ "recycle_strategy": {
+  "day": "",
+  "every": 1,
+  "time": "00:00"
+ },
+ "description": "",
+ "sto_type": 1,
+ "dto_sto_uuid": "",
+ "bucket_uuid": "",
+ "meta_server_type": 1,
+ "dedupe_type": 1,
+ "cluster_uuid": "",
+ "fp_server_list": [
+  {
+   "node_uuid": "",
+   "node_name": "",
+   "addr": "",
+   "meta_server": 1,
+   "fp_server": 1
+  }
+ ],
+ "gateway_list": [
+  {
+   "node_uuid": "",
+   "node_name": "",
+   "config_addr": ""
+  }
+ ],
+ "_": "3ea25881"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The sto name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDedupeStorage
+body: {
+ "sto_uuids": [],
+ "force": 1,
+ "_": "3e8ea458"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The sto uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeDedupeStorage
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBkSvrUsedPorts
+body: {
+ "bk_uuid": "",
+ "_": "3eb10e12"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The bk uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDedupeStorageStatus
+body: {
+ "sto_uuids": [],
+ "force_refresh": 0,
+ "_": "3ed089cd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The sto uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyDedupeStorage
+body: {
+ "sto_name": "",
+ "bk_uuid": "",
+ "data_addr": "",
+ "meta_server_port": 1,
+ "fp_server_port": 1,
+ "block_server_port": 1,
+ "hash_path": "",
+ "block_path": "",
+ "recycle_strategy": {
+  "day": "",
+  "every": 1,
+  "time": "00:00"
+ },
+ "description": "",
+ "random_str": "",
+ "sto_uuid": "",
+ "sto_type": 1,
+ "dto_sto_uuid": "",
+ "bucket_uuid": "",
+ "meta_server_type": 1,
+ "dedupe_type": 1,
+ "_": "3f186cb0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: recoverSpaceDedupeStorage
+body: {
+ "sto_uuids": [],
+ "operate": "",
+ "_": "3eacc66e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The sto uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+

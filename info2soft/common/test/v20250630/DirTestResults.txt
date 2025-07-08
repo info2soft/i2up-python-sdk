@@ -1,0 +1,18 @@
+<START-----------------------------------------------------------
+Method: createDir
+body: {
+ "node_uuid": "A608F04B-0CA4-2ECD-794C-5AFD4580E5B9",
+ "path": "C:\\test2\\12347\\",
+ "type": "bigdata_wk",
+ "_": "3d8858dd"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: platform_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

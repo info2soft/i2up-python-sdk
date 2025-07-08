@@ -1,0 +1,21 @@
+<START-----------------------------------------------------------
+Method: listCdmRecovery
+body: {
+ "search_value": "",
+ "search_field": "",
+ "page": 1,
+ "limit": 10,
+ "_": "3ee9957d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+

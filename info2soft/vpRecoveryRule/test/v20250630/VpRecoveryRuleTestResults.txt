@@ -1,0 +1,49 @@
+<START-----------------------------------------------------------
+Method: listVpRecoveryRule
+body: {
+ "page": 1,
+ "limit": 1,
+ "vm_name": "",
+ "filter_by_biz_grp": 1,
+ "where_args": {
+  "task_uuid": "",
+  "task_type": 1,
+  "new_vp_type": 1,
+  "status": ""
+ },
+ "like_args": {
+  "new_vp_name": "",
+  "task_name": ""
+ },
+ "object_name": "",
+ "bk_set_id": "",
+ "_": "3f01314b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRecoveryRuleStatus
+body: {
+ "task_uuids": [],
+ "_": "3eb64d9f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+

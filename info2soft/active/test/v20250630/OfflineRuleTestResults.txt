@@ -1,0 +1,432 @@
+<START-----------------------------------------------------------
+Method: createActiveOfflineRule
+body: {
+ "rule_name": "",
+ "map_type": "",
+ "src_db_uuid": "",
+ "src_db_auth_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_db_auth_uuid": "",
+ "tgt_file_path": "",
+ "advanced_table_map": [
+  {
+   "src": {
+    "user": "",
+    "tab": ""
+   },
+   "tgt": {
+    "user": "",
+    "tab": ""
+   },
+   "column": {
+    "sync_by_default": 1,
+    "column_map_list": [
+     {
+      "operate": "a",
+      "expression": "col1+col2",
+      "column_name": "newCol",
+      "column_type": "int",
+      "src_column_name": ""
+     }
+    ]
+   }
+  }
+ ],
+ "db_user_map": [
+  {
+   "src": {
+    "user": ""
+   },
+   "tgt": {
+    "user": ""
+   }
+  }
+ ],
+ "advanced_settings": {
+  "dump_thd": 1,
+  "load_thd": 1,
+  "exclude_table_by_features": {
+   "PK": false,
+   "UK": false,
+   "FK": false,
+   "INDEX": false
+  }
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "",
+    "table": "",
+    "user": "",
+    "process": "",
+    "addInfo": ""
+   }
+  ]
+ },
+ "full_sync_custom_cfg": [
+  {
+   "key": "",
+   "value": "",
+   "enable": ""
+  }
+ ],
+ "policies": [],
+ "policy_type": "",
+ "tgt_type": "",
+ "src_type": "",
+ "node_uuid": "",
+ "format": {
+  "header": 1,
+  "delimiter": "",
+  "quote": "",
+  "force_quote": 1,
+  "escape": "",
+  "null": "",
+  "date_format": "",
+  "datetime_format": "",
+  "timestamp_format": "",
+  "time_format": "",
+  "byte_encode": "",
+  "encode": "",
+  "outpath": "",
+  "datatag": "",
+  "line_break": ""
+ },
+ "full_map_switch": 1,
+ "virtual_table": [
+  {
+   "user": "",
+   "tab": "",
+   "sql": "",
+   "srcuser": "",
+   "srctab": ""
+  }
+ ],
+ "table_map": [
+  {
+   "src_table": "",
+   "tgt_table": "",
+   "src_db": "",
+   "dst_db": "",
+   "column": [
+    {
+     "dst_column": "",
+     "src_column": ""
+    }
+   ]
+  }
+ ],
+ "file_map": [
+  {
+   "src_file_path": "",
+   "src_file_name": "",
+   "tgt_topic": ""
+  }
+ ],
+ "src_file_path": "",
+ "src_node_uuid": "",
+ "maintenance": 1,
+ "comment": "",
+ "start_rule_now": 1,
+ "_": "3f5dfda9"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001008,
+  "message": "[1010001008] Invalid Name"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteOfflineRule
+body: {
+ "rule_uuids": [],
+ "_": "3e8b5869"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeOfflineRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getOfflineRuleCharset
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "charset": [
+   "GBK",
+   "UTF-8",
+   "UTF-16BE",
+   "UTF-16LE"
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOfflineRuleStatus
+body: {
+ "rule_uuids": [],
+ "_": "3f57ad11"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "has_false_rule": false,
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: restartOfflineRule
+body: {
+ "uuids": [],
+ "operate": "",
+ "_": "3ee8496f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeOfflineRule
+body: {
+ "uuids": [],
+ "operate": "",
+ "_": "3f4c4264"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeScheduleOfflineRule
+body: {
+ "uuids": [],
+ "operate": "",
+ "_": "3e1cedc4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopOfflineRule
+body: {
+ "uuids": [],
+ "operate": "",
+ "_": "3f41b0b3"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopScheduleOfflineRule
+body: {
+ "uuids": [],
+ "operate": "",
+ "_": "3b40d212"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: switchOfflineRuleMaintenance
+body: {
+ "maintenance_switch": 1,
+ "uuid": "",
+ "_": "3ec4d9ee"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateActiveOfflineRule
+body: {
+ "tgt_type": "",
+ "src_type": "",
+ "node_uuid": "",
+ "table_map": [
+  {
+   "src_table": "",
+   "tgt_table": "",
+   "src_db": "",
+   "dst_db": "",
+   "column": [
+    {
+     "dst_column": "",
+     "src_column": ""
+    }
+   ]
+  }
+ ],
+ "format": {
+  "header": 1,
+  "delimiter": "",
+  "quote": "",
+  "force_quote": 1,
+  "escape": "",
+  "null": "",
+  "date_format": "",
+  "datetime_format": "",
+  "timestamp_format": "",
+  "time_format": "",
+  "byte_encode": "",
+  "encode": "",
+  "datatag": "",
+  "outpath": "",
+  "line_break": ""
+ },
+ "full_map_switch": 1,
+ "virtual_table": [
+  {
+   "user": "",
+   "tab": "",
+   "sql": ""
+  }
+ ],
+ "rule_name": "",
+ "map_type": "",
+ "src_db_uuid": "",
+ "src_db_auth_uuid": "",
+ "tgt_db_uuid": "",
+ "tgt_db_auth_uuid": "",
+ "tgt_file_path": "",
+ "advanced_table_map": [
+  {
+   "column": {
+    "sync_by_default": 1,
+    "column_map_list": [
+     {
+      "src_column_name": "",
+      "operate": "a",
+      "expression": "col1+col2",
+      "column_name": "newCol",
+      "column_type": "int"
+     }
+    ]
+   },
+   "src": {
+    "user": "",
+    "tab": ""
+   },
+   "tgt": {
+    "user": "",
+    "tab": ""
+   }
+  }
+ ],
+ "db_user_map": [
+  {
+   "src": {
+    "user": ""
+   },
+   "tgt": {
+    "user": ""
+   }
+  }
+ ],
+ "advanced_settings": {
+  "dump_thd": 1,
+  "load_thd": 1
+ },
+ "etl_settings": {
+  "etl_table": [
+   {
+    "oprType": "",
+    "table": "",
+    "user": "",
+    "process": "",
+    "addInfo": ""
+   }
+  ]
+ },
+ "full_sync_custom_cfg": [
+  {
+   "key": "",
+   "value": ""
+  }
+ ],
+ "policies": [],
+ "policy_type": "",
+ "file_map": 5,
+ "_": "3c293c30"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: tgt_type;\n Lost: map_type;\n"
+ }
+}
+-----------------------------------------------------------END>
+

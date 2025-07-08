@@ -1,0 +1,15 @@
+<START-----------------------------------------------------------
+Method: preCheckVpBackupRule
+body: {
+ "_": "3f6c66dc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The task name field is required."
+ }
+}
+-----------------------------------------------------------END>
+

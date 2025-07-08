@@ -1,0 +1,84 @@
+<START-----------------------------------------------------------
+Method: downloadOpLog
+body: {
+ "end_time": 1,
+ "start_time": 1,
+ "download": "true",
+ "_": "3ef70f6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001090,
+  "message": "[1010001090] The current user cannot view the system log"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importOpLog
+body: {
+ "_": "3f1cae31"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001060,
+  "message": "[1010001060] Upload error  You did not select a file to upload. "
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listOpLog
+body: {
+ "page": 1,
+ "end": 1548950400,
+ "limit": 10,
+ "start": 1546272000,
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "address": "",
+ "username": "",
+ "download": false,
+ "_": "3e2f3d26"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listUserLog
+body: {
+ "page": 1,
+ "limit": 10,
+ "start": 1546272000,
+ "end": 1548950400,
+ "op_type": "delete_nodes",
+ "level": 0,
+ "description": "delete_nodes",
+ "suffix": ".txt",
+ "_": "3f326ad1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success",
+  "total": 0,
+  "logs": []
+ }
+}
+-----------------------------------------------------------END>
+

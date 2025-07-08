@@ -1,0 +1,207 @@
+
+# -*- coding: utf-8 -*-
+# flake8: noqa
+import sys
+import os
+import unittest
+# from info2soft import Webhook
+from info2soft.common.v20250630.Webhook import Webhook
+from info2soft import Auth
+from info2soft.fileWriter import write
+from info2soft.compat import is_py2, is_py3
+
+if is_py2:
+    import sys
+    import StringIO
+    import urllib
+
+    # reload(sys)
+    sys.setdefaultencoding('utf-8')
+    StringIO = StringIO.StringIO
+    urlopen = urllib.urlopen
+if is_py3:
+    import io
+    import urllib
+
+    StringIO = io.StringIO
+    urlopen = urllib.request.urlopen
+
+username = 'admin'
+pwd = 'Info@123'
+
+
+class WebhookTestCase(unittest.TestCase):
+    def setUp(self):
+        """在每个测试方法运行前执行"""
+        self.original_cwd = os.getcwd()
+        # 获取当前测试文件的目录
+        test_dir = os.path.dirname(os.path.abspath(__file__))
+        # 切换工作目录到测试文件所在的目录
+        os.chdir(test_dir)
+
+    def tearDown(self):
+        """在每个测试方法运行后执行"""
+        # 恢复原始工作目录，避免影响其他测试
+        os.chdir(self.original_cwd)
+
+    def testCreateWebhook(self):
+        a = Auth(username, pwd)
+        body = {
+            'id': '',
+            'name': '',
+            'type': '',
+            'config': {
+            'method': '',
+            'secret': '',
+            'headers': [],},
+            'url': '',
+        }
+        
+        
+        webhook = Webhook(a)
+        r = webhook.createWebhook(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'createWebhook', body)
+
+    def testModifyWebhook(self):
+        a = Auth(username, pwd)
+        body = {
+            'name': '',
+            'random_str': '',
+            'config': {},
+            'url': '',
+            'id': '',
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        
+        webhook = Webhook(a)
+        r = webhook.modifyWebhook(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'modifyWebhook', body)
+
+    def testListWebhook(self):
+        a = Auth(username, pwd)
+        body = {
+            'page': 1,
+            'limit': 1,
+            'where_args': {
+            'type': '',},
+            'like_args': {
+            'name': '',},
+        }
+        
+        
+        webhook = Webhook(a)
+        r = webhook.listWebhook(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'listWebhook', body)
+
+    def testDescribeWebhook(self):
+        a = Auth(username, pwd)
+        body = {
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        
+        webhook = Webhook(a)
+        r = webhook.describeWebhook(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'describeWebhook', body)
+
+    def testDeleteWebhook(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+        
+        
+        webhook = Webhook(a)
+        r = webhook.deleteWebhook(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'deleteWebhook', body)
+
+    def testCreateWebhookContentTemplate(self):
+        a = Auth(username, pwd)
+        body = {
+            'name': '',
+            'warn_type': '',
+            'config': {
+            'dd|qywx|fs|kafka|generalsms': {
+            'language': 'zh',
+            'title': '',
+            'content': '',
+            'method': '',
+            'count': 1,
+            'mentioned_range': 1,
+            'mentioned_type': 1,
+            'mentioned_list': '',},},
+            'id': '',
+        }
+        
+        
+        webhook = Webhook(a)
+        r = webhook.createWebhookContentTemplate(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'createWebhookContentTemplate', body)
+
+    def testModifyWebhookContentTemplate(self):
+        a = Auth(username, pwd)
+        body = {
+            'id': '',
+            'name': '',
+            'warn_type': '',
+            'webhook_type': '',
+            'random_str': '',
+            'config': {
+            'language': '',
+            'title': '',
+            'content': '',},
+        }
+        uuid = "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+        
+        webhook = Webhook(a)
+        r = webhook.modifyWebhookContentTemplate(body, uuid)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'modifyWebhookContentTemplate', body)
+
+    def testListWebhookContentTemplate(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuid': '',
+            'limit': 1,
+            'page': 1,
+            'like_args': {
+            'name': '',},
+            'where_args': {
+            'warn_type': '',},
+        }
+        
+        
+        webhook = Webhook(a)
+        r = webhook.listWebhookContentTemplate(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'listWebhookContentTemplate', body)
+
+    def testDelteWebhookContentTemplate(self):
+        a = Auth(username, pwd)
+        body = {
+            'uuids': [],
+        }
+        
+        
+        webhook = Webhook(a)
+        r = webhook.delteWebhookContentTemplate(body)
+        print(r[0])
+        assert r[0]['ret'] == 200
+        write(r[0], 'Webhook', 'delteWebhookContentTemplate', body)
+
+
+if __name__ == '__main__':
+    unittest.main()

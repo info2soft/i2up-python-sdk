@@ -1,0 +1,103 @@
+<START-----------------------------------------------------------
+Method: createTapeRecovery
+body: {
+ "node_uuid": "",
+ "library_sn": "",
+ "slot_index": "",
+ "slot_barcode": "",
+ "slot_tapename": "",
+ "slot_tapesequence": "",
+ "bk_index": "",
+ "bk_path": "",
+ "bk_files": [
+  {
+   "file_path_name": ""
+  }
+ ],
+ "rec_path": "",
+ "rule_name": "",
+ "recover_all": 0,
+ "bk_data_type": 1,
+ "pool_uuid": "",
+ "volume_uuid": "",
+ "tape_pool_uuid": "",
+ "tape_uuid": "",
+ "auto_start": 1,
+ "appointment_time": 1664248414,
+ "_": "3d8387e0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n Lost: node_uuid;\n Lost: tape_uuid;\n Lost: tape_pool_uuid;\n Lost: library_sn;\n Lost: slot_index;\n Lost: slot_barcode;\n Lost: slot_tapename;\n Lost: slot_tapesequence;\n Lost: bk_index;\n Lost: bk_path;\n Lost: rec_path;\n Lost: bk_files[0][file_path_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteTapeRecovery
+body: {
+ "rule_uuids": [],
+ "_": "3f6d2fac"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeTapeRecovery
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeRecovery
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f724f4a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listTapeRecoveryStatus
+body: {
+ "rule_uuids": [],
+ "force_refresh": 1,
+ "_": "3f438f8f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+

@@ -1,0 +1,135 @@
+<START-----------------------------------------------------------
+Method: exportSyncRuleMonitorStat
+body: {
+ "stat_type": 1,
+ "start": 1,
+ "end": 1,
+ "user": "",
+ "table": "",
+ "rule_uuid": "",
+ "_": "3f11ebe9"
+}
+response: {
+ "ret": 200,
+ "data": "Total load count\tLoad time\tEarliest Timestamp in Source Database\tLoad Failed Recorded Count\tLink latency\n\t0s\t\t\t0s\nInsert : \nUpdate : \nDelete : \nDDL : \nTable/Operation\tTotal load count\tInsert\tUpdate\tDelete\tDDL\tDDL Type\n"
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listActiveNodeChart
+body: {
+ "node_uuid": "",
+ "strict": 1,
+ "timestamp": 1,
+ "start_offset": 1,
+ "end_offset": 1,
+ "_": "3f0d62ad"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleExtractStatistics
+body: {
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "interval": 1,
+ "_": "3f253a56"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleLoadStatistics
+body: {
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "_": "3f39f52f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] Success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleTableExtractStatistics
+body: {
+ "limit": "",
+ "page": "",
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "table": "",
+ "user": "",
+ "_": "3f5426f0"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: syncRuleTableLoadStatistics
+body: {
+ "limit": "",
+ "page": "",
+ "start": "",
+ "end": "",
+ "rule_uuid": "",
+ "table": "",
+ "user": "",
+ "_": "3e2d64f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateNodeDefaultMonitorPath
+body: {
+ "node_uuid": "",
+ "path": "",
+ "_": "3ed21553"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+

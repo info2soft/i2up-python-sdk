@@ -1,0 +1,145 @@
+<START-----------------------------------------------------------
+Method: createBizGroup
+body: {
+ "biz_grp": {
+  "grp_name": "",
+  "type": 1,
+  "subtype": 1,
+  "comment": ""
+ },
+ "_": "3efe35dc"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: biz_grp[grp_name];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBizGroup
+body: {
+ "grp_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3ea31662"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "grp_uuid": "11111111-1111-1111-1111-111111111111",
+    "grp_name": null
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "grp_uuid": "11111111-1111-1111-1111-111111111111",
+    "grp_name": null
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBizGroup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupBind
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBizGroupResource
+body: {
+ "type": 1,
+ "subtype": 0,
+ "uuid": "",
+ "group_uuid": "",
+ "name": "",
+ "wk_uuid": "",
+ "bk_uuid": "",
+ "_": "3f5b1e6c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyBizGroup
+body: {
+ "biz_grp": {
+  "comment": "123",
+  "grp_name": "grp_name",
+  "type": 3,
+  "subtype": 10
+ },
+ "_": "3f2f921d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "grp_uuid": "22D03E06-94D0-5E2C-336E-4BEEC2D28EC4"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: updateBizGroupBind
+body: {
+ "uuids": [
+  "67E33CDB-D75B-15B3-367D-50C764F5A26F"
+ ],
+ "_": "3f54df6b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001017,
+  "message": "[1010001017] Database op failed"
+ }
+}
+-----------------------------------------------------------END>
+

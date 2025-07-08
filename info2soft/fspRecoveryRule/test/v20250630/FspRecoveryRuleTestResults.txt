@@ -1,0 +1,310 @@
+<START-----------------------------------------------------------
+Method: createFspRecoveryRule
+body: {
+ "rule_name": "",
+ "rule_type": 1,
+ "auto_start": 1,
+ "priority": 1,
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "wk_uuid": "",
+ "wk_path": [],
+ "bk_path": [],
+ "bios_convert": 1,
+ "bios_type": 1,
+ "driver_url": "",
+ "compress_switch": 1,
+ "compress": 1,
+ "encrypt_switch": 1,
+ "encrypt": 1,
+ "start_time": 1,
+ "net_mapping": [
+  {
+   "bk_nic": {
+    "name": "",
+    "type": "",
+    "ip": "",
+    "dns": "",
+    "gw": ""
+   },
+   "wk_nic": {
+    "name": "Ethernet0"
+   }
+  }
+ ],
+ "net_mapping_type": 1,
+ "dst_path": "",
+ "excl_path": [],
+ "rc_path_policy": 1,
+ "wk_path_list": [],
+ "rc_type": 1,
+ "trans_mode": 1,
+ "synthetic": 1,
+ "vp_uuid": "",
+ "network_id": "",
+ "vm_name": "",
+ "vm_cpu_core": 1,
+ "power_on": 1,
+ "common_custom": 1,
+ "vm_mem": "",
+ "cbt_switch": 1,
+ "new_dc": "",
+ "new_dc_mor": "",
+ "new_ds": "",
+ "new_hostname": "",
+ "network_name": "",
+ "disk_list": [
+  {
+   "disk_name": "",
+   "disk_type": "",
+   "disk_size": 1
+  }
+ ],
+ "networks": [
+  {
+   "network_name": "",
+   "network_id": "",
+   "gateway": "",
+   "dns": "",
+   "cidr": ""
+  }
+ ],
+ "_": "3ecd0bbe"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010110043,
+  "message": "[1010110043] No valid license"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFspRecoveryRule
+body: {
+ "rule_uuids": [],
+ "force": 1,
+ "_": "3efe91eb"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getFspRecoveryRuleBiosType
+body: {
+ "device_list": [],
+ "node_uuid": "",
+ "_": "3da14f5d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The node uuid field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRule
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRuleDriverListUrl
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "driver_url_list": []
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRuleStatus
+body: {
+ "rule_uuids": [],
+ "_": "3f5e9705"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The rule uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFspRecoveryRules
+body: {
+ "page": 1,
+ "limit": 1,
+ "filter_by_biz_grp": 1,
+ "status": "",
+ "where_args": {
+  "rule_uuid": ""
+ },
+ "like_args": {
+  "bk_set_id": "",
+  "src_node_name": "",
+  "rule_name": "",
+  "wk_node_name": ""
+ },
+ "_": "3f5e6a03"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFspRecoveryRule
+body: {
+ "rule_name": "",
+ "rule_uuid": "",
+ "rule_type": "",
+ "random_str": "",
+ "create_time": "",
+ "auto_start": 1,
+ "priority": 1,
+ "bk_set_uuid": "",
+ "backup_chain_policy": 1,
+ "wk_uuid": "",
+ "wk_path": "",
+ "bk_path": "",
+ "bios_convert": 1,
+ "bios_type": 1,
+ "driver_url": "",
+ "compress_switch": 1,
+ "compress": 1,
+ "encrypt_switch": 1,
+ "encrypt": 1,
+ "start_time": 1,
+ "_": "3c228062"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: powerOffFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3efcaf99"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: powerOnFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3f6e945a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: rebootFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3f7503b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3f6175a5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopFspRecoveryRule
+body: {
+ "operate": "",
+ "rule_uuids": [],
+ "_": "3efd2691"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+

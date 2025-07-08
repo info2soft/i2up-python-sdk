@@ -1,0 +1,22 @@
+<START-----------------------------------------------------------
+Method: modifyGuardData
+body: {
+ "node_uuid": "",
+ "policy_name": "",
+ "subject": "",
+ "object": "",
+ "operate": 1,
+ "decision": 1,
+ "policy_type": 1,
+ "_": "3f292ae7"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: node_uuid;\n Lost: policy_name;\n Lost: subject;\n Lost: object;\n"
+ }
+}
+-----------------------------------------------------------END>
+

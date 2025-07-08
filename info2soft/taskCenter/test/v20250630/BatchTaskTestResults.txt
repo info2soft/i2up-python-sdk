@@ -1,0 +1,96 @@
+<START-----------------------------------------------------------
+Method: batchTaskList
+body: {
+ "limit": 1,
+ "page": 1,
+ "type": 1,
+ "like_args": {
+  "xxx": ""
+ },
+ "_": "3dc3397b"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: batchTaskStatus
+body: {
+ "batch_uuids": [],
+ "_": "3f5b9ca5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: batch_uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBatchTask
+body: {
+ "operate": "",
+ "batch_uuid": "",
+ "delete_tgtvm": 1,
+ "del_policy": "",
+ "_": "3f71c1d6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: batch_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startBatchTask
+body: {
+ "operate": "",
+ "batch_uuid": "",
+ "delete_tgtvm": 1,
+ "del_policy": "",
+ "_": "3eb0797a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: batch_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBatchTask
+body: {
+ "operate": "",
+ "batch_uuid": "",
+ "delete_tgtvm": 1,
+ "del_policy": "",
+ "_": "3f4fad55"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n Lost: batch_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+

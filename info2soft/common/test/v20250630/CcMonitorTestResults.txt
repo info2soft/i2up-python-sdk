@@ -1,0 +1,512 @@
+<START-----------------------------------------------------------
+Method: describeCcGeneralInfo
+body: {
+ "type": "all",
+ "process_sort_by": "cpu",
+ "process_filter_name": "",
+ "process_limit": 1,
+ "_": "3f00ab0d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "support": true,
+  "resources": {
+   "cntlsvr_uptime": {
+    "uptime": 18228.366405722,
+    "time_now": 1750407349
+   },
+   "hostname": "localhost.localdomain",
+   "uptime": 18794,
+   "bootTime": 1750388555,
+   "procs": 188,
+   "os": "linux",
+   "platform": "openeuler",
+   "platformFamily": "",
+   "platformVersion": "22.03",
+   "kernelVersion": "5.10.0-60.18.0.50.oe2203.x86_64",
+   "kernelArch": "x86_64",
+   "virtualizationSystem": "",
+   "virtualizationRole": "",
+   "hostId": "5838e1fb-71fc-48b6-adda-5ced9b4db40e",
+   "load1": 1,
+   "load5": 0.79,
+   "load15": 0.4,
+   "running_procs": 1,
+   "total_procs": 190,
+   "logical_processor": 2,
+   "cpu": {
+    "user": 0,
+    "nice": 0,
+    "system": 3,
+    "idle": 97,
+    "iowait": 0,
+    "irq": 0,
+    "softirq": 0,
+    "steal": 0,
+    "guest": 0
+   },
+   "memory": {
+    "total": 1501507584,
+    "available": 382267392,
+    "used": 627949568,
+    "used_percent": 41.82127181316987,
+    "free": 340856832
+   },
+   "network": [
+    {
+     "name": "ens33",
+     "ipv4": [
+      "192.168.254.143/24"
+     ],
+     "ipv6": [
+      "fe80::c709:577a:e046:fbcd/64",
+      "fe80::2156:f9fd:d616:dc06/64",
+      "fe80::9fa3:b899:f9de:d2cc/64"
+     ],
+     "tx": 49421081,
+     "rx": 317900214
+    },
+    {
+     "name": "ens36",
+     "ipv4": [
+      "172.20.2.15/20"
+     ],
+     "ipv6": [
+      "fe80::20c:29ff:fe31:b0d5/64"
+     ],
+     "tx": 3580,
+     "rx": 8550951
+    }
+   ],
+   "disk": [
+    {
+     "mount": "/",
+     "fstype": "ext4",
+     "total": 73391005696,
+     "available": 65573990400,
+     "used": 4042141696,
+     "used_percent": 5.806329042277046,
+     "inodes_total": 4587520,
+     "inodes_used": 0,
+     "inodes_free": 4483311,
+     "inodes_used_percent": 0
+    },
+    {
+     "mount": "/boot",
+     "fstype": "ext4",
+     "total": 1020702720,
+     "available": 859176960,
+     "used": 91062272,
+     "used_percent": 9.583089072036968,
+     "inodes_total": 65536,
+     "inodes_used": 0,
+     "inodes_free": 65140,
+     "inodes_used_percent": 0
+    },
+    {
+     "mount": "/home",
+     "fstype": "ext4",
+     "total": 55761461248,
+     "available": 52895678464,
+     "used": 24576,
+     "used_percent": 4.646124087133411e-05,
+     "inodes_total": 3481600,
+     "inodes_used": 0,
+     "inodes_free": 3481589,
+     "inodes_used_percent": 0
+    }
+   ]
+  },
+  "processes": [
+   {
+    "user": "i2runner",
+    "pid": 4703,
+    "cpu": 0.7,
+    "mem": 2.5,
+    "vsz": 115671040,
+    "rss": 38711296,
+    "tty": "?",
+    "stat": "S",
+    "start": "11:11",
+    "time": "2:20",
+    "command": "php-fpm: pool webconsole"
+   }
+  ],
+  "services": [
+   {
+    "name": "i2pgbouncer.service",
+    "description": "PGBouncer Lightweight connection pooler for PostgreSQL by up",
+    "load_state": "loaded",
+    "active_state": "inactive",
+    "sub_state": "dead"
+   },
+   {
+    "name": "i2ws.service",
+    "description": "WebSocket Server by up",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "running"
+   },
+   {
+    "name": "i2resty.service",
+    "description": "full-fledged web platform",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "running"
+   },
+   {
+    "name": "i2pgsql.service",
+    "description": "PostgreSQL database server for up",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "running"
+   },
+   {
+    "name": "i2redis.service",
+    "description": "Redis Server by up",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "running"
+   },
+   {
+    "name": "i2up.service",
+    "description": "up",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "exited"
+   },
+   {
+    "name": "i2php.service",
+    "description": "The PHP FastCGI Process Manager",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "running"
+   },
+   {
+    "name": "i2proc.service",
+    "description": "up process",
+    "load_state": "loaded",
+    "active_state": "active",
+    "sub_state": "running"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: killCcProcess
+body: {
+ "operate": "",
+ "pid": 1,
+ "_": "3efc6745"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1033330102,
+  "message": "\u8bf7\u6c42\u53c2\u6570\u9519\u8bef ",
+  "error": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCcMonitor
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "request_stat": {
+   "normal": 59914,
+   "illegal": 39954,
+   "error": {
+    "401": 0,
+    "404": 4,
+    "500": 0,
+    "502": 0,
+    "503": 0
+   }
+  },
+  "alarm_stat": [],
+  "login_stat": [
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 1,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 1,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 1,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   },
+   {
+    "user_name": "admin",
+    "address": "192.168.254.1",
+    "result": 0,
+    "cc_ip": "192.168.254.143"
+   }
+  ],
+  "cc_status": [
+   {
+    "ip": "192.168.254.143",
+    "status": 0,
+    "load": "1.08%",
+    "cpu": "%",
+    "mem": "0%",
+    "storage": [
+     {
+      "label": "/",
+      "value": "89%"
+     }
+    ],
+    "iaproxy": 1,
+    "ctrlcenter": 1
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listCronTask
+body: {
+ "page": 1,
+ "limit": 15,
+ "_": "3d7ae777"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listNodeStatus
+body: {
+ "node_ip": "",
+ "start_time": 1,
+ "last_time": 1,
+ "_": "3f46ac0e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info": {
+   "load": null,
+   "storage": null,
+   "iaproxy": null,
+   "ctrlcenter": null,
+   "cpu": [],
+   "mem": []
+  }
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyCronTask
+body: {
+ "id": "",
+ "interval": 1,
+ "_": "3f2f129c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: reloadCcService
+body: {
+ "operate": "",
+ "service_name": "",
+ "_": "3ecf354e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1033330102,
+  "message": "\u8bf7\u6c42\u53c2\u6570\u9519\u8bef ",
+  "error": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resetCronTask
+body: {
+ "id": 4,
+ "_": "3f0bf39a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001144,
+  "message": "[1010001144] Permission denied. There are unauthorized functions. Please check the function authorization"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startCcService
+body: {
+ "operate": "",
+ "service_name": "",
+ "_": "3e8a65ed"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1033330102,
+  "message": "\u8bf7\u6c42\u53c2\u6570\u9519\u8bef ",
+  "error": null
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopCcService
+body: {
+ "operate": "",
+ "service_name": "",
+ "_": "3df12b06"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1033330102,
+  "message": "\u8bf7\u6c42\u53c2\u6570\u9519\u8bef ",
+  "error": null
+ }
+}
+-----------------------------------------------------------END>
+

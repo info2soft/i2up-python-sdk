@@ -1,0 +1,74 @@
+<START-----------------------------------------------------------
+Method: createTakeOverDrill
+body: {
+ "vm_name": "",
+ "rule_type": 1,
+ "wk_uuid": "",
+ "bk_version": "",
+ "vm_cpu_core": "",
+ "vm_mem": "",
+ "vm_network": {
+  "cards": [
+   {
+    "mac": "",
+    "gateway": [],
+    "dns": {
+     "domain": "",
+     "servers": []
+    },
+    "cidr": [],
+    "network_id": "",
+    "network_name": ""
+   }
+  ],
+  "dns": {
+   "domain": "",
+   "servers": ""
+  }
+ },
+ "bk_uuid": "",
+ "vm_disks": [
+  {
+   "path": "",
+   "size": "",
+   "interface": "",
+   "isBoot": ""
+  }
+ ],
+ "bios_type": "",
+ "vp_uuid": "",
+ "timezone": "",
+ "storage_uuid": "",
+ "bk_path": "",
+ "os_version": "",
+ "fsp_uuid": "",
+ "by_type": 1,
+ "wk_address": "",
+ "wk_name": "",
+ "has_virtio": false,
+ "has_virtio_scsi": false,
+ "has_net_kvm": false,
+ "network_switch": 0,
+ "restore_info": {},
+ "start_switch": 0,
+ "vpc_settings": [
+  {
+   "work_vpc_id": "",
+   "work_network_id": "",
+   "work_security_group_id": "",
+   "work_ipaddr": "",
+   "vpc_id": ""
+  }
+ ],
+ "_": "3d25356e"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: vm_name;\n Lost: vp_uuid;\n Lost: wk_address;\n Lost: wk_name;\n Lost: bk_uuid;\n Lost: storage_uuid;\n Lost: bk_version;\n Lost: vm_cpu_core;\n Lost: vm_mem;\n Lost: bios_type;\n Lost: os_version;\n"
+ }
+}
+-----------------------------------------------------------END>
+

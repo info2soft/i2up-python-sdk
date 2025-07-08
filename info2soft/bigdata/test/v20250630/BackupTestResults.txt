@@ -1,0 +1,405 @@
+<START-----------------------------------------------------------
+Method: authBigdataPlatform
+body: {
+ "auth_key": "",
+ "auth_name": "",
+ "cred_uuid": "",
+ "bk_uuid": "",
+ "_": "3f7b4388"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: createBigdataBackup
+body: {
+ "bigdata_backup": {
+  "rule_name": "",
+  "rule_uuid": "",
+  "bk_path": [],
+  "baked_paths": [],
+  "data_type": "",
+  "cred_switch": 1,
+  "cred_uuid": "",
+  "auth_user": "",
+  "auth_key": "",
+  "mirr_file_check": 0,
+  "mirr_sync_flag": 1,
+  "bkup_one_time": 0,
+  "bkup_policy": 2,
+  "bkup_schedule": [
+   {
+    "sched_day": 23,
+    "sched_time": "17:45",
+    "sched_every": 2,
+    "limit": 22,
+    "backup_type": 0,
+    "policys": "\u6bcf\u592922:00\u81ea\u52a8\u6267\u884c",
+    "backup_type_show": "\u5168\u5907",
+    "running_time": "22:00"
+   }
+  ],
+  "random_str": "11111111-1111-1111-1111-111111111111",
+  "tape_uuid": "E8566905-411E-B2CD-A742-77B1346D8E84",
+  "archive_pen": 0,
+  "library_sn": "SYZZY_A",
+  "sel_tbl": [],
+  "sel_db": [],
+  "hive_bktype": 1,
+  "filter_type": 1,
+  "filter_files": "",
+  "exclude_paths": "",
+  "band_width": "",
+  "pre_backup_script": "",
+  "post_backup_script": "",
+  "script_timeout": 1,
+  "tape_pool_uuid": "",
+  "tape_pool_name": "",
+  "tape_name": "",
+  "tape_reserve": 1,
+  "platform_uuid": "",
+  "sel_part": [],
+  "rule_type": "",
+  "schedule_uuid": "",
+  "scan_path": "",
+  "schedule": {
+   "type": "",
+   "interval": "",
+   "unit": "",
+   "run_time": "12:00"
+  },
+  "scan_schedule": {
+   "sched_every": "",
+   "sched_day": "",
+   "sched_time": ""
+  },
+  "approver_uuid": ""
+ },
+ "obs_settings": {
+  "sto_uuid": "",
+  "bucket_name": "",
+  "bucket_path": ""
+ },
+ "_": "3f4e56b4"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bigdata_backup[rule_name];\n Lost: bigdata_backup[bk_uuid];\n Lost: bigdata_backup[cred_uuid];\n The bigdata_backup[script_timeout] field must contain a number greater than or equal to 60;\n Lost: bigdata_backup[rule_type];\n Lost: bigdata_backup[role_proxy];\n Lost: bigdata_backup[role_backup];\n Lost: bigdata_backup[etcd_swtich];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteBigdataBackup
+body: {
+ "uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "del_policy": 0,
+ "force": 1,
+ "_": "3ebbff36"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeBigdataBackup
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: disableBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3ee77012"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: enableBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3f19bd17"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: getBigdataBackupPartitions
+body: {
+ "bk_uuid": "",
+ "db_name": "",
+ "table_name": "",
+ "limit": "",
+ "page": "",
+ "platform_uuid": "",
+ "_": "3dcb832d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: bk_uuid;\n Lost: db_name;\n Lost: table_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: importBigdataBackup
+body: {
+ "rule_uuid": "",
+ "file": "",
+ "_": "3f3e150f"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listAllBigdataHiveDatabase
+body: {
+ "bk_uuid": "cBfAc6FB-1d68-AdAd-767F-3C1Ec792DEDA",
+ "cluster_config_path": "",
+ "platform_uuid": "",
+ "_": "3f34de87"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackup
+body: {
+ "search_field": "",
+ "limit": 10,
+ "page": 1,
+ "search_value": "",
+ "type": 0,
+ "_": "3f24d906"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupStatus
+body: {
+ "uuids": [],
+ "force_refresh": 1,
+ "_": "3ed96594"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: uuids[];\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataBackupTableDdl
+body: {
+ "bk_path": [],
+ "bk_node_uuid": "",
+ "bk_rule_uuid": "",
+ "cluster_config_path": "",
+ "obs_settings": {
+  "sto_uuid": "",
+  "bucket": ""
+ },
+ "bk_type": "",
+ "rec_time": "",
+ "table_name": "",
+ "_": "3dc17387"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010011001,
+  "message": "[1010011001] Node does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listBigdataHiveTable
+body: {
+ "bk_uuid": "7FAFA6fB-eCDE-3eE6-F07d-Bca54A2b1AE7",
+ "table_name": "",
+ "limit": "",
+ "page": "",
+ "db_name": "",
+ "cluster_config_path": "",
+ "platform_uuid": "",
+ "_": "3f009a70"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: db_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: pauseBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3f253d95"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: resumeBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3f0f0707"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3eec51a1"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: startImmediatelyBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3f3812b2"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: stopBigdataBackup
+body: {
+ "operate": "",
+ "uuids": "[C6335F62-2565-1957-4BB9-587F2FF46B00]",
+ "bk_type": 1,
+ "_": "3ec73984"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: operate;\n"
+ }
+}
+-----------------------------------------------------------END>
+

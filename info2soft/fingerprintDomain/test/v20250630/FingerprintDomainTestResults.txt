@@ -1,0 +1,118 @@
+<START-----------------------------------------------------------
+Method: createFingerprintDomain
+body: {
+ "domain_name": "",
+ "sto_uuid": "",
+ "chunk_type": 1,
+ "chunk_size": 1,
+ "chunk_max": 1,
+ "chunk_min": 1,
+ "compress": 1,
+ "description": "",
+ "fp_server_uuid": "",
+ "_": "3f428720"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The domain name field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteFingerprintDomain
+body: {
+ "domain_uuids": [],
+ "force": 1,
+ "_": "3ed7f6f5"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The domain uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: describeFingerprintDomain
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] Item does not exist"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFingerprintDomain
+body: {
+ "page": 1,
+ "limit": 1,
+ "search_field": "",
+ "search_value": "",
+ "status": "",
+ "_": "3f018a0a"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [],
+  "total": 0
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listFingerprintDomainStatus
+body: {
+ "domain_uuids": [],
+ "force_refresh": 0,
+ "_": "3d33f043"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The domain uuids field is required."
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: modifyFingerprintDomain
+body: {
+ "domain_name": "",
+ "sto_uuid": "",
+ "chunk_type": 1,
+ "chunk_size": 1,
+ "chunk_max": 1,
+ "chunk_min": 1,
+ "compress": 1,
+ "description": "",
+ "domain_uuid": "",
+ "random_str": "",
+ "_": "3f2e95e6"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "The random str field is required."
+ }
+}
+-----------------------------------------------------------END>
+

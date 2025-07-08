@@ -1,0 +1,74 @@
+<START-----------------------------------------------------------
+Method: createDtoLm
+body: {
+ "rule_name": "",
+ "status": 0,
+ "type": 1,
+ "prefix": "",
+ "lfa_stor": {
+  "config_sw": 1,
+  "days": 1
+ },
+ "arch_stor": {
+  "config_sw": 1,
+  "days": 1
+ },
+ "expr_del": {
+  "config_sw": 1,
+  "days": 1
+ },
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_id": "",
+ "_": "3ea11e49"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: rule_name;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDtoLm
+body: {
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_name": "",
+ "_": "3f2fb4af"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: sto_uuid;\n Lost: host_uuid;\n Lost: path;\n"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: operateDtoLm
+body: {
+ "type": "",
+ "sto_uuid": "",
+ "host_uuid": "",
+ "path": "",
+ "rule_names": [],
+ "_": "3e5a210d"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001002,
+  "message": "[1010001002] Invalid Parameter  Lost: type;\n"
+ }
+}
+-----------------------------------------------------------END>
+

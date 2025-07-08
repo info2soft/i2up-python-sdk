@@ -1,0 +1,210 @@
+<START-----------------------------------------------------------
+Method: createDiagnose
+body: {
+ "item_uuid": "",
+ "check_type": 1,
+ "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+ "config_addr": "",
+ "config_port": "",
+ "start_date": "2022-10-24",
+ "end_date": "2022-10-27",
+ "time_switch": 0,
+ "_": "3e575c8c"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success"
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: deleteDiagnose
+body: {
+ "check_uuids": [
+  "11111111-1111-1111-1111-111111111111"
+ ],
+ "_": "3f2f3578"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 1010001011,
+  "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+  "fail_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "check_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ],
+  "all_list": [
+   {
+    "code": 1010001011,
+    "message": "[1010001011] This entry does not exist, try refreshing the page if operating on it.",
+    "check_uuid": "11111111-1111-1111-1111-111111111111"
+   }
+  ]
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listDiagnose
+body: {
+ "page": 1,
+ "limit": 10,
+ "_": "3f729364"
+}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "info_list": [
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 4,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "96C91060-86E7-4D16-96A6-F35E4C391DD1",
+    "check_type": 1,
+    "status": "DIAGNOSE",
+    "result": null,
+    "download_url": null,
+    "create_time": 1750407461,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 3,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "7CA234D0-4101-4FA7-A13E-D0C585FC8CD6",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1750404393,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 2,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "B968D6FD-657E-41F9-A8CB-51320C389A14",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1750401062,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   },
+   {
+    "item_name": null,
+    "wk_node_name": null,
+    "wk_hostname": null,
+    "wk_config_ip": null,
+    "wk_ip": null,
+    "wk_os_type": null,
+    "bk_node_name": null,
+    "bk_hostname": null,
+    "bk_config_ip": null,
+    "bk_ip": null,
+    "bk_os_type": null,
+    "username": "admin",
+    "user_uuid": "1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC",
+    "id": 1,
+    "bk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "item_uuid": "",
+    "wk_uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+    "check_uuid": "7975E3EE-97DE-4990-8403-C5995FE62140",
+    "check_type": 1,
+    "status": "NODE_UNREGISTERED",
+    "result": [],
+    "download_url": null,
+    "create_time": 1750389456,
+    "config_addr": "",
+    "config_port": "",
+    "time_switch": 0,
+    "start_date": "2022-10-24",
+    "end_date": "2022-10-27"
+   }
+  ],
+  "total": 4
+ }
+}
+-----------------------------------------------------------END>
+
+<START-----------------------------------------------------------
+Method: listVpRules
+body: {}
+response: {
+ "ret": 200,
+ "msg": "",
+ "data": {
+  "code": 0,
+  "message": "[0] success",
+  "list": []
+ }
+}
+-----------------------------------------------------------END>
+
