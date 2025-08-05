@@ -158,7 +158,8 @@ def json_to_query_string(data, prefix=''):
             params.extend(json_to_query_string(value, new_prefix))
     elif isinstance(data, list):
         for i, item in enumerate(data):
-            new_prefix = f"{prefix}[]"
+            # 使用 key[i] 格式，否则会出现querystring里有[]，而不是[0]，导致server根据querystring解析出来的参数不一致，最终签名不一致
+            new_prefix = f"{prefix}[{i}]"
             params.extend(json_to_query_string(item, new_prefix))
     else:
         # 处理基本类型（字符串、数字、布尔值等）
@@ -272,6 +273,29 @@ def _post_with_auth(url, data, auth):
 #     signature = hmac.new("key", sign_str, digestmod=hashlib.sha256).digest()
 #     return signature
 
+def filter_empty(data):
+    if isinstance(data, dict):
+        result = {}
+        for k, v in data.items():
+            if isinstance(v, (dict, list)):
+                filtered_v = filter_empty(v)
+                if filtered_v:  # 只有非空时才保留
+                    result[k] = filtered_v
+            else:
+                result[k] = v
+        return result
+    elif isinstance(data, list):
+        result = []
+        for item in data:
+            if isinstance(item, (dict, list)):
+                filtered_item = filter_empty(item)
+                if filtered_item:  # 只有非空时才保留
+                    result.append(filtered_item)
+            else:
+                result.append(item)
+        return result
+    else:
+        return data
 
 def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _='', data=None):
     timestamp = int(round(time.time() * 1000))/1000
@@ -306,19 +330,16 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
     if config.get_default('log_switch'):
         print(url)
         print(url_params)
+
+    # 如果是GET方法，需要移除data里的空数组和空字典，不论是否嵌套，确保和server端处理一致（http_build_query函数）
+    if method.lower() == 'get':
+        data = filter_empty(data)
+
     if data is not None:
         for k, v in sorted(data.items(), key=lambda x: x[0]):
             if v is '' or v is None:
                 continue
-            # GET方法中的空数组不参与签名，保持与Server端处理一致
-            if method is 'get' and isinstance(v, list):
-                if len(v) == 0:
-                    continue
-            # if method is 'get':
-                # if isinstance(v, list):
-                #     k = k[0:-2]
-                #     v = '[' + ','.join(v) + ']'
-            # 非字符串类型的数据转换为json字符串，json.dumps会将bool值False转换为false，True转换为true
+
             if type(v) is not str:
                 original_v = v
                 v = json.dumps(v, separators=(',', ':'), ensure_ascii=False).replace('\"', '')
@@ -339,7 +360,8 @@ def _generate_header(auth_type='', token='', ak='', sk='', method='', url='', _=
     if config.get_default('log_switch'):
         print('===== enhance sign str start =====')
         print(enhance_sign_str)
-        print(enhance_signature_bytes.hex().lower())
+        if enhance_signature_bytes:
+            print(enhance_signature_bytes.hex().lower())
         print('===== enhance sign str end =====')
 
     signature = signature_bytes.hex().lower()

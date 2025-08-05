@@ -71,7 +71,7 @@ class ExamineApproveTestCase(unittest.TestCase):
             'search_field': '',
             'where_args': [{
             'status': '',
-            'rule_type[]': 1,},],
+            'rule_type': 1,},],
         }
         
         

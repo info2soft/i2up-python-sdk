@@ -152,12 +152,12 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
 ## 常见问题
 
 - 上面的例子中第二个参数 info 保留了请求响应的信息，失败情况下 ret 为 none, 将 info 可以打印出来，提交给我们。
-- API 的使用 demo 可以参考 [模块测试](https://code.info2soft.com/web/sdk/python-sdk/tree/develop/info2soft/resource/test)。
+- API 的使用 demo 可以参考 [模块测试](https://gitee.com/i2soft/i2up-python-sdk/tree/v20250123/info2soft/resource/test)。
 - 如果碰到`ImportError: No module named requests.auth` 请安装 `requests` 。
 
 
 ##  API 接口入参参考
-- API 入参请参考 [API使用手册](https://i2up-api-doc.info2soft.com/apiref/)。
+- API 入参请参考 [API使用手册](https://docs.i2yun.com/i2up-docs/)。
 
 
 ## 代码贡献
@@ -167,8 +167,7 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
 ## 联系我们
 
 - 如果需要帮助，请联系邮箱: support@info2soft.com
-- 更详细的文档，见[官方文档站](https://code.info2soft.com/web/sdk/python-sdk)
-- 如果发现了bug或功能需求， 欢迎提交 [issue](https://github.com/info2soft/i2up-python-sdk/issues)
+- 如果发现了bug或功能需求， 欢迎提交 [issue](https://gitee.com/i2soft/i2up-python-sdk/issues)
 - 如果要提交代码，欢迎提交 pull request
 
 
