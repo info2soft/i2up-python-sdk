@@ -79,7 +79,7 @@ def refreshToken():
         with open(path, mode='w+', encoding='UTF-8') as tokenFile:
             tokenFile.write(token + '\n' + ssoToken + '\n' + refreshToken)
             tokenFile.close()
-    elif r[0] is not None and r[0]['ret'] == 200 and r[0]['data']['code'] == 'auth.refresh_token_invalid':
+    elif r[0] is not None and r[0]['ret'] == 200 and (r[0]['data']['code'] == 'auth.refresh_token_invalid' or r[0]['data']['code'] == 1010001109):
         print('refresh_token is invalid, need to get token again')
         # 返回None，用于后续判断是否需要重新获取token
         return [None, None]

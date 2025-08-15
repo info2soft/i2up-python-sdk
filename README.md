@@ -23,7 +23,7 @@ $ pip install somePackage -i https://pypi.tuna.tsinghua.edu.cn/simple some-packa
 > 如果提示pip版本较低，请升级pip，命令如下：
 
 ```bash
-$ python -m pip install --upgrade pip
+$ python3 -m pip install --upgrade pip
 ```
 ## 方式1：直接安装SDK及所有依赖
 ```
@@ -47,44 +47,6 @@ $ pip install crypto pycryptodome
 $ pip install pyopenssl
 
 ```
-
-
-如果出现以下失败情况:
-
-    安装 Microsoft Visual C++ Build Tools
-    
-    问题：
-    error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\cl.exe' failed 
-    with exit status 1158 command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\\cl.exe' failed with exit status 2
-    
-    解决：
-    第一步：将D:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.10.25017\include\stdint.h文件拷贝到C:\Program Files (x86)
-    \Windows Kits\10\Include\10.0.15063.0\ucrt\目录下
-    第二步：修改C:\Program Files (x86)\Windows Kits\10\Include\10.0.15063.0\ucrt\inttypes.h中的第13行，将
-    #include <stdint.h>
-    改为
-    #include "stdint.h"
-
-
-​    
-    问题：
-    error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\x86_amd64\\link.exe' failed with exit status 1158
-    
-    解决：
-    第一步：将C:\Program Files (x86)\Windows Kits\10\bin\x64 加入path
-    第二步：将rc.exe和rcdll.dll两个文件从
-    C:\Program Files (x86)\Windows Kits\8.1\bin\x86
-    复制到
-    C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin
-
-
-​    
-    问题：
-    error: ModuleNotFoundError: No module named winrandom
-    修改python3安装目录下的 lib/Crypto/Random/OSRNG/nt.py 文件中找到
-    import winrandom
-    改为
-    from Crypto.Random.OSRNG import winrandom
 
 ---
 
@@ -116,6 +78,8 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
 
 ###  获取复制规则列表
 
+保存为 xxx.py
+
     ...
 
     # -*- coding: utf-8 -*-
@@ -127,10 +91,18 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
     from info2soft import RepBackup
     from info2soft import Auth
     
+    # 2种方式创建 Auth 对象
+    # 1. 使用用户名密码的方式创建 Auth 对象
     username = 'admin'
     pwd = 'Info1234'
-    
     a = Auth(username, pwd)
+    
+    # 2. 使用 ak + sk 的方式创建 Auth 对象
+    # ak = 'your ak' # 英方平台 Access Key
+    # sk = 'your sk' # 英方平台 Secret Key
+    # a = Auth('', '', 'ak', ak, sk)
+
+    # 参考 API 文档，构造请求参数
     body = {
         'search_value': '',
         'limit': 1,
@@ -146,6 +118,12 @@ config.set_default(None, None, None, 'https://172.0.0.1:58086/api')
         print(info) # error message in info
 
     ...
+
+###   执行脚本
+
+```bash
+$ python3 xxx.py
+```
 
 ---
 
