@@ -1,6 +1,8 @@
 from OpenSSL import crypto
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
+from Crypto.Cipher import PKCS1_v1_5
+
 import os
 import base64
 from info2soft import config
@@ -30,20 +32,36 @@ class Rsa(object):
         :param cer_file_path: 证书存放路径
         :return: 公钥
         """
-        cert = crypto.load_certificate(crypto.FILETYPE_PEM, open(cer_file_path, 'rb').read())
-        res = crypto.dump_publickey(crypto.FILETYPE_PEM, cert.get_pubkey()).decode("utf-8")
-        return res.strip()
+        with open(cer_file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # 提取 PEM 公钥部分
+        start = content.find('-----BEGIN PUBLIC KEY-----')
+        end = content.find('-----END PUBLIC KEY-----') + len('-----END PUBLIC KEY-----')
+        pem_content = content[start:end]
+
+        # 返回 PEM 格式的公钥
+        return pem_content.strip()
 
     # rsa加密
     def rsaEncrypt(self, pwd):
         pemFilePath = os.path.split(os.path.realpath(__file__))[0] + '/public_key.pem'
         # 首先从控制机获取公钥，拿不到用本地的
         pubSettings = self.getPublicSettings()
-        if pubSettings[0]['data']['pubKey'] is not None:
+        isVersion7 = False
+        if (pubSettings is not None and
+                len(pubSettings) > 0 and
+                'data' in pubSettings[0] and
+                'pubKey' in pubSettings[0]['data'] and
+                pubSettings[0]['data']['pubKey'] is not None):
             pubkey = pubSettings[0]['data']['pubKey']
         else:
+            isVersion7 = True
             pubkey = self.getPublicKey(pemFilePath)
         rsaPubkey = RSA.importKey(pubkey)
-        cipherPub = PKCS1_OAEP.new(rsaPubkey)
+        if isVersion7:
+            cipherPub = PKCS1_v1_5.new(rsaPubkey)
+        else:
+            cipherPub = PKCS1_OAEP.new(rsaPubkey)
         code = base64.b64encode(cipherPub.encrypt(pwd.encode(encoding="utf-8"))).decode('utf-8')
         return code
